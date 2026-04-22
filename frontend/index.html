@@ -768,6 +768,7 @@
     <div class="gallery-tabs" id="gallery-tabs" role="tablist" aria-label="图库筛选">
       <button class="gallery-tab active" data-tab="all" type="button">全部</button>
       <button class="gallery-tab favorites-tab" data-tab="favorites" type="button">收藏 <span class="count"></span></button>
+      <button class="gallery-tab" data-tab="generations" type="button">我的作品 <span class="count"></span></button>
     </div>
     <div class="categories" id="cats"></div>
     <div class="sort-control">
@@ -1018,6 +1019,28 @@ function normalizeImage(img) {
   };
 }
 
+function normalizeGeneration(gen) {
+  const subject = gen.subject || '我的作品';
+  return {
+    id: String(gen.id || ''),
+    title: subject,
+    en: subject,
+    authorModel: 'prompt-atlas',
+    imageModel: 'generated',
+    img: gen.image_url || '',
+    aspect: '1/1',
+    aspectLabel: '1:1',
+    likes: 0,
+    cat: '海报',
+    tags: ['generated'],
+    prompt: 'N/A',
+    style: 'generated',
+    atoms: { subject, source_image_id: gen.source_image_id || '' },
+    sourceImageId: gen.source_image_id || '',
+    ts: Number(gen.ts) || 0,
+  };
+}
+
 async function loadImages() {
   const res = await fetch('/api/images');
   if (!res.ok) throw new Error(`/api/images ${res.status}`);
@@ -1087,6 +1110,42 @@ function resetSignals() {
 // Favorites · localStorage schema:string[]
 // ========================================================
 const FAVORITES_KEY = 'promptatlas.favorites';
+const GENERATIONS_KEY = 'promptatlas.generations';
+
+function getGenerations() {
+  try {
+    const raw = localStorage.getItem(GENERATIONS_KEY);
+    const list = raw ? JSON.parse(raw) : [];
+    if (!Array.isArray(list)) return [];
+    return list.filter(item => item && item.id && item.image_url);
+  } catch (err) {
+    console.warn('localStorage blocked', err);
+    return [];
+  }
+}
+function getGenerationImages() {
+  return getGenerations()
+    .map(normalizeGeneration)
+    .sort((a, b) => (b.ts || 0) - (a.ts || 0));
+}
+function saveGeneration({ source_image_id, subject, image_url }) {
+  try {
+    const list = JSON.parse(localStorage.getItem(GENERATIONS_KEY) || '[]');
+    const safeList = Array.isArray(list) ? list : [];
+    const ts = Date.now();
+    safeList.push({ id: 'gen-' + ts, source_image_id, subject, image_url, ts });
+    localStorage.setItem(GENERATIONS_KEY, JSON.stringify(safeList));
+    updateFavoriteControls();
+    if (activeTab === 'generations') renderGallery();
+  } catch (err) {
+    console.warn('localStorage blocked', err);
+  }
+}
+
+function findCardById(id) {
+  const sid = String(id || '');
+  return CARDS.find(c => c.id === sid) || getGenerationImages().find(c => c.id === sid);
+}
 
 function getFavorites() {
   try {
@@ -1118,7 +1177,7 @@ function toggleFavorite(id) {
   saveFavorites(next);
   syncFavoriteUI(sid);
   updateFavoriteControls();
-  if (activeTab === 'favorites') filterGallery(activeTab);
+  if (activeTab === 'favorites' || activeTab === 'generations') filterGallery(activeTab);
   return next.includes(sid);
 }
 function pulseFavoriteButton(btn) {
@@ -1204,7 +1263,7 @@ class PromptCard extends HTMLElement {
   }
   connectedCallback() {
     const id = this.getAttribute('data-id');
-    const data = CARDS.find(c => c.id === id);
+    const data = findCardById(id);
     if (!data) return;
 
     const authorMeta = AUTHOR_MODELS[data.authorModel] || { label: data.authorModel, hue: 270 };
@@ -1754,7 +1813,7 @@ class PromptModal extends HTMLElement {
   }
 
   open(id) {
-    const data = CARDS.find(c => c.id === id);
+    const data = findCardById(id);
     if (!data) return;
     this.current = data;
     const aMeta = AUTHOR_MODELS[data.authorModel] || { label: data.authorModel };
@@ -1837,7 +1896,7 @@ function atomRow(label, value) {
   return value ? `<dt>${label}</dt><dd>${value}</dd>` : '';
 }
 function openDetail(id) {
-  const data = CARDS.find(c => c.id === id);
+  const data = findCardById(id);
   if (!data) return;
 
   const modal = document.getElementById('detail-modal');
@@ -1954,14 +2013,16 @@ const remixRegen = document.getElementById('remix-regen');
 const remixDownload = document.getElementById('remix-download');
 let remixPollTimer = null;
 let remixDownloadUrl = '';
+let CURRENT_REMIX = { imageId: '', subject: '' };
 
 function openRemix(imageId) {
-  const data = CARDS.find(c => c.id === imageId);
+  const data = findCardById(imageId);
   if (!data) return;
   clearInterval(remixPollTimer);
   remixPollTimer = null;
   remixDownloadUrl = '';
-  remixModal.dataset.currentId = data.id;
+  remixModal.dataset.currentId = data.sourceImageId || data.id;
+  CURRENT_REMIX = { imageId: remixModal.dataset.currentId, subject: '' };
   remixModal.querySelector('[data-remix-style]').textContent = data.style || data.tags?.[0] || data.title;
   remixSubject.value = '';
   remixStatus.textContent = '';
@@ -2002,6 +2063,7 @@ function showRemixError(message) {
 
 function showRemixResult(imageUrl) {
   remixDownloadUrl = imageUrl;
+  saveGeneration({ source_image_id: CURRENT_REMIX.imageId, subject: CURRENT_REMIX.subject, image_url: imageUrl });
   remixResult.src = imageUrl;
   remixResult.hidden = false;
   remixStatus.className = 'remix-status success';
@@ -2019,6 +2081,7 @@ async function startRemix(imageId, subject) {
     showRemixError('先输入你想生成的主题');
     return;
   }
+  CURRENT_REMIX = { imageId, subject: cleanSubject };
   setRemixLoading('提交生成任务中');
   remixResult.hidden = true;
   remixDownload.hidden = true;
@@ -2155,7 +2218,9 @@ const sortSelect = document.getElementById('sort-select');
 const filterCount = document.getElementById('filter-count');
 const clearFilterBtn = document.querySelector('.clear-filter-btn');
 let activeCat = '推荐';
-let activeTab = (URL_PARAMS.get('tab') === 'favorites' || location.hash === '#favorites') ? 'favorites' : 'all';
+let activeTab = ['favorites', 'generations'].includes(URL_PARAMS.get('tab'))
+  ? URL_PARAMS.get('tab')
+  : (location.hash === '#favorites' ? 'favorites' : 'all');
 const SORT_BY_OPTIONS = new Set(['recommend', 'latest', 'hot']);
 const HAS_URL_SORT_BY = URL_PARAMS.has('sortBy') || URL_PARAMS.has('sort');
 function normalizeSortBy(value) {
@@ -2190,14 +2255,19 @@ function renderCats() {
 
 function updateFavoriteControls() {
   const count = getFavorites().length;
+  const generationCount = getGenerations().length;
   const isFavorites = activeTab === 'favorites';
+  const isGenerations = activeTab === 'generations';
   tabsEl.querySelector('[data-tab="favorites"] .count').textContent = count;
+  tabsEl.querySelector('[data-tab="generations"] .count').textContent = generationCount;
   tabsEl.querySelectorAll('[data-tab]').forEach(tab => {
     tab.classList.toggle('active', tab.dataset.tab === activeTab);
   });
-  favToolbar.classList.toggle('visible', isFavorites);
+  favToolbar.classList.toggle('visible', isFavorites || isGenerations);
+  favToolbar.querySelector('.export-btn').hidden = isGenerations;
   favToolbar.querySelector('.export-btn').disabled = count === 0;
-  favToolbar.querySelector('.clear-btn').disabled = count === 0;
+  favToolbar.querySelector('.clear-btn').textContent = isGenerations ? '清空我的作品' : '清空';
+  favToolbar.querySelector('.clear-btn').disabled = isGenerations ? generationCount === 0 : count === 0;
 }
 function exportFavorites() {
   const favorites = getFavorites();
@@ -2222,6 +2292,14 @@ function clearFavorites() {
     localStorage.removeItem(FAVORITES_KEY);
     syncFavoriteUI();
     filterGallery(activeTab);
+  }
+}
+function clearGenerations() {
+  const list = getGenerations();
+  if (!list.length) return;
+  if (confirm(`确定清空 ${list.length} 件作品? 不可撤销`)) {
+    localStorage.removeItem(GENERATIONS_KEY);
+    renderGallery();
   }
 }
 function selectedValues(name) {
@@ -2305,6 +2383,7 @@ function syncURL() {
   if (aspect.length) params.set('aspect', aspect.join(','));
   params.set('sortBy', FILTER_STATE.sortBy);
   if (FILTER_STATE.tab === 'favorites') params.set('tab', 'favorites');
+  if (FILTER_STATE.tab === 'generations') params.set('tab', 'generations');
   const query = params.toString();
   const hash = location.hash && location.hash !== '#favorites' ? location.hash : '';
   history.replaceState(null, '', `${location.pathname}${query ? `?${query}` : ''}${hash}`);
@@ -2314,13 +2393,20 @@ function updateFilterCount(visible, total) {
 }
 function renderFiltered(visible) {
   wf.innerHTML = visible.map(c => `<prompt-card data-id="${c.id}"></prompt-card>`).join('');
-  favoritesEmpty.hidden = !(activeTab === 'favorites' && visible.length === 0);
+  favoritesEmpty.textContent = activeTab === 'generations'
+    ? '还没生成过作品 · 点一键复刻试试'
+    : '还没收藏任何图 · 去逛逛瀑布流吧 →';
+  favoritesEmpty.hidden = !((activeTab === 'favorites' || activeTab === 'generations') && visible.length === 0);
   updateFavoriteControls();
 }
 function applyFilter() {
   const q = FILTER_STATE.q.trim().toLowerCase();
-  const filtered = allImages.filter(img => {
+  const sourceImages = FILTER_STATE.tab === 'generations'
+    ? getGenerationImages()
+    : (FILTER_STATE.tab === 'favorites' ? allImages.concat(getGenerationImages()) : allImages);
+  const filtered = sourceImages.filter(img => {
     if (FILTER_STATE.tab === 'favorites' && !isFavorite(img.id)) return false;
+    if (FILTER_STATE.tab === 'generations') return true;
     if (activeCat !== '推荐' && img.cat !== activeCat) return false;
     if (q && !(
       (img.title || '').toLowerCase().includes(q) ||
@@ -2333,17 +2419,22 @@ function applyFilter() {
     if (FILTER_STATE.aspect.size && !FILTER_STATE.aspect.has(img.aspect)) return false;
     return true;
   });
-  const sorted = sortImages(filtered, FILTER_STATE.sortBy);
-  activeTab = FILTER_STATE.tab === 'favorites' ? 'favorites' : 'all';
+  const sorted = FILTER_STATE.tab === 'generations'
+    ? filtered.sort((a, b) => (b.ts || 0) - (a.ts || 0))
+    : sortImages(filtered, FILTER_STATE.sortBy);
+  activeTab = ['favorites', 'generations'].includes(FILTER_STATE.tab) ? FILTER_STATE.tab : 'all';
   renderFiltered(sorted);
-  updateFilterCount(sorted.length, allImages.length);
+  updateFilterCount(sorted.length, sourceImages.length);
   syncURL();
 }
 function renderWaterfall() {
   applyFilter();
 }
+function renderGallery() {
+  applyFilter();
+}
 function filterGallery(tab = activeTab) {
-  activeTab = tab === 'favorites' ? 'favorites' : 'all';
+  activeTab = ['favorites', 'generations'].includes(tab) ? tab : 'all';
   FILTER_STATE.tab = activeTab;
   applyFilter();
 }
@@ -2448,7 +2539,10 @@ sortSelect.addEventListener('change', () => {
 window.addEventListener('resize', syncFilterDetailsMode);
 
 favToolbar.querySelector('.export-btn').addEventListener('click', exportFavorites);
-favToolbar.querySelector('.clear-btn').addEventListener('click', clearFavorites);
+favToolbar.querySelector('.clear-btn').addEventListener('click', () => {
+  if (activeTab === 'generations') clearGenerations();
+  else clearFavorites();
+});
 
 // ── 语言下拉 ──
 const langDd     = document.getElementById('lang-dd');
