@@ -79,6 +79,13 @@ curl -sS http://127.0.0.1:3000/ | grep -cE 'navigator\.clipboard'              #
 curl -sS http://127.0.0.1:3000/ | grep -cE 'promptatlas\.click_history'        # 点击 localStorage key · 预期 ≥ 2
 # 手测: 浏览器打开 localhost:3000 · 点卡弹 modal · 点复制 → 粘贴验 · Esc/遮罩/X 关 · DevTools 看 promptatlas.click_history
 
+# v0.4+ 收藏夹 · 静态 grep 验证
+curl -sS http://127.0.0.1:3000/ | grep -cE 'favorite-btn|favorite'              # 爱心 DOM · 预期 ≥ 10(每卡一个 + modal)
+curl -sS http://127.0.0.1:3000/ | grep -cE 'toggleFavorite|FAVORITES_KEY'       # 切换 JS · 预期 ≥ 2
+curl -sS http://127.0.0.1:3000/ | grep -cE 'data-tab="favorites"'               # 收藏 tab · 预期 ≥ 1
+curl -sS http://127.0.0.1:3000/ | grep -cE 'createObjectURL|promptatlas-favorites'  # 导出 JSON · 预期 ≥ 2
+# 手测: 点卡爱心收藏 · 切收藏 tab 看过滤 · 导出 JSON 下载 · 清空 confirm 弹
+
 # 数据抽取(一次性 · 改 content/examples/*.md 后重跑)
 node tools/build-images-json.js                                       # 扫 content/examples/ → 产 data/images.json
 

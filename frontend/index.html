@@ -48,6 +48,36 @@
   .topbar-cats {
     max-width: 1600px; margin: 0 auto;
     padding: 2px 28px 14px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .gallery-tabs {
+    display: flex; align-items: center; gap: 4px;
+    flex-shrink: 0;
+    padding-right: 8px;
+    border-right: 1px solid var(--border);
+  }
+  .gallery-tab {
+    padding: 8px 16px; border-radius: 999px;
+    background: transparent; color: var(--text-mid);
+    font-size: 14px; font-weight: 500;
+    border: none; cursor: pointer;
+    white-space: nowrap;
+    font-family: inherit;
+    transition: all 0.18s ease;
+  }
+  .gallery-tab:hover { color: var(--text); background: rgba(255,255,255,0.05); }
+  .gallery-tab.active {
+    color: #fff; background: rgba(255,255,255,0.1);
+    font-weight: 700;
+  }
+  .gallery-tab .count {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-width: 18px; height: 18px;
+    margin-left: 4px; padding: 0 5px;
+    border-radius: 999px;
+    background: rgba(255,46,81,0.18);
+    color: var(--accent-2);
+    font-size: 11px; font-weight: 700;
   }
 
   .brand {
@@ -82,6 +112,7 @@
   /* 分类条(独立行) */
   .categories {
     display: flex; gap: 4px;
+    flex: 1; min-width: 0;
     overflow-x: auto;
     scrollbar-width: none;
   }
@@ -189,11 +220,49 @@
   @media (max-width: 780px) {
     .waterfall { column-width: 170px; column-gap: 10px; padding: 16px 14px 60px; }
     .topbar-main { padding: 10px 14px 8px; gap: 12px; grid-template-columns: auto 1fr auto; }
-    .topbar-cats { padding: 0 14px 10px; }
+    .topbar-cats { padding: 0 14px 10px; flex-wrap: wrap; gap: 8px; }
+    .gallery-tabs { width: 100%; border-right: 0; padding-right: 0; }
     .search-box { max-width: none; padding: 8px 14px; font-size: 13px; }
     .lang-dd-btn .lang-label { display: none; }
     .top-icon-link { display: none; }
   }
+
+  .fav-toolbar {
+    max-width: 1720px;
+    margin: 0 auto;
+    padding: 18px 24px 0;
+    display: none;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  .fav-toolbar.visible { display: flex; }
+  .export-btn,
+  .clear-btn {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 9px 14px;
+    background: var(--bg-elev);
+    color: var(--text);
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    transition: background 0.16s ease, border-color 0.16s ease, opacity 0.16s ease;
+  }
+  .export-btn:hover,
+  .clear-btn:hover { background: var(--card-hover); border-color: rgba(255,255,255,0.16); }
+  .export-btn:disabled,
+  .clear-btn:disabled { opacity: 0.45; cursor: not-allowed; }
+  .empty-state {
+    max-width: 1720px;
+    margin: 0 auto;
+    padding: 44px 24px 92px;
+    color: var(--text-mid);
+    text-align: center;
+    font-size: 15px;
+  }
+  .empty-state[hidden] { display: none; }
 
   prompt-card {
     display: block;
@@ -270,6 +339,30 @@
     cursor: pointer;
   }
   .modal-close:hover { background: var(--card-hover); }
+  .modal-favorite {
+    position: absolute; top: 12px; right: 56px; z-index: 1;
+    width: 34px; height: 34px; border-radius: 999px;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid var(--border);
+    color: var(--text);
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.16s ease, background 0.16s ease, transform 0.16s ease;
+  }
+  .modal-favorite:hover { opacity: 1; background: var(--card-hover); }
+  .modal-favorite svg {
+    width: 17px; height: 17px;
+    fill: none; stroke: currentColor;
+  }
+  .modal-favorite.is-favorite { color: var(--accent); opacity: 1; }
+  .modal-favorite.is-favorite svg { fill: var(--accent); stroke: var(--accent); }
+  .modal-favorite.pop svg { animation: favorite-pop 180ms ease; }
+  @keyframes favorite-pop {
+    0% { transform: scale(1); }
+    55% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
   .modal-hero {
     width: 100%;
     overflow: hidden;
@@ -407,12 +500,22 @@
   </div>
   <!-- Row 2 · categories -->
   <div class="topbar-cats">
+    <div class="gallery-tabs" id="gallery-tabs" role="tablist" aria-label="图库筛选">
+      <button class="gallery-tab active" data-tab="all" type="button">全部</button>
+      <button class="gallery-tab favorites-tab" data-tab="favorites" type="button">收藏 <span class="count"></span></button>
+    </div>
     <div class="categories" id="cats"></div>
   </div>
 </div>
 
+<div class="fav-toolbar" id="fav-toolbar">
+  <button class="export-btn" type="button">导出 JSON</button>
+  <button class="clear-btn" type="button">清空</button>
+</div>
+
 <!-- ============ WATERFALL ============ -->
 <div class="waterfall" id="waterfall"></div>
+<div class="empty-state" id="favorites-empty" hidden>还没收藏任何图 · 去逛逛瀑布流吧 →</div>
 
 <div class="foot-tip" data-i18n="foot">✨ 设计图 · gallery.html · 更多风格持续加入 · GPT Image 2 Hub © 2026</div>
 
@@ -421,6 +524,9 @@
   <div class="modal-overlay" data-role="overlay"></div>
   <div class="modal-card">
     <button class="modal-close" data-role="close" aria-label="关闭">×</button>
+    <button class="modal-favorite favorite-btn" data-role="favorite" aria-label="收藏" aria-pressed="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+    </button>
     <div class="modal-hero"></div>
     <div class="modal-body">
       <h2 class="modal-title"></h2>
@@ -556,6 +662,7 @@ function t(key) {
 }
 
 let CARDS = [];
+let RAW_IMAGES = [];
 
 function aspectToCss(aspect) {
   const value = String(aspect || '3:4').trim();
@@ -596,7 +703,8 @@ async function loadImages() {
   const res = await fetch('/api/images');
   if (!res.ok) throw new Error(`/api/images ${res.status}`);
   const data = await res.json();
-  CARDS = Array.isArray(data.images) ? data.images.map(normalizeImage) : [];
+  RAW_IMAGES = Array.isArray(data.images) ? data.images : [];
+  CARDS = RAW_IMAGES.map(normalizeImage);
 }
 
 function escapeHtml(value) {
@@ -653,6 +761,68 @@ function markNotInterested(id, cat) {
 function resetSignals() {
   Object.assign(SIG, { seen:[], viewed:[], liked:[], copied:[], notInterested:[], affinity:{}, sessionStart: Date.now() });
   saveSignals();
+}
+
+// ========================================================
+// Favorites · localStorage schema:string[]
+// ========================================================
+const FAVORITES_KEY = 'promptatlas.favorites';
+
+function getFavorites() {
+  try {
+    const raw = localStorage.getItem(FAVORITES_KEY);
+    const list = raw ? JSON.parse(raw) : [];
+    if (!Array.isArray(list)) return [];
+    return Array.from(new Set(list.map(id => String(id)).filter(Boolean)));
+  } catch (err) {
+    console.warn('localStorage blocked', err);
+    return [];
+  }
+}
+function saveFavorites(ids) {
+  try {
+    localStorage.setItem(FAVORITES_KEY, JSON.stringify(Array.from(new Set(ids.map(id => String(id)).filter(Boolean)))));
+  } catch (err) {
+    console.warn('localStorage blocked', err);
+  }
+}
+function isFavorite(id) {
+  return getFavorites().includes(String(id));
+}
+function toggleFavorite(id) {
+  const sid = String(id);
+  const favorites = getFavorites();
+  const next = favorites.includes(sid)
+    ? favorites.filter(item => item !== sid)
+    : favorites.concat(sid);
+  saveFavorites(next);
+  syncFavoriteUI(sid);
+  updateFavoriteControls();
+  if (activeTab === 'favorites') filterGallery(activeTab);
+  return next.includes(sid);
+}
+function pulseFavoriteButton(btn) {
+  if (!btn) return;
+  btn.classList.remove('pop');
+  void btn.offsetWidth;
+  btn.classList.add('pop');
+}
+function syncFavoriteButton(btn, id) {
+  if (!btn) return;
+  const on = isFavorite(id);
+  btn.classList.toggle('is-favorite', on);
+  btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+  btn.setAttribute('title', on ? '取消收藏' : '收藏');
+}
+function syncFavoriteUI(id) {
+  document.querySelectorAll('prompt-card').forEach(card => {
+    if (!id || card.getAttribute('data-id') === id) card.syncFavorite?.();
+  });
+  const modal = document.getElementById('detail-modal');
+  if (!modal || !modal.dataset.currentId) return;
+  if (!id || modal.dataset.currentId === id) {
+    syncFavoriteButton(modal.querySelector('[data-role="favorite"]'), modal.dataset.currentId);
+  }
 }
 
 // —— 排序 ——
@@ -725,9 +895,7 @@ class PromptCard extends HTMLElement {
     const secondaryTitle = isZh ? data.en    : data.title;
     const catLabel       = isZh ? data.cat    : (CAT_EN[data.cat] || data.cat);
 
-    const likedKey = `liked-${id}`;
-    const liked = localStorage.getItem(likedKey) === '1';
-    const displayLikes = data.likes + (liked ? 1 : 0);
+    const favorited = isFavorite(id);
 
     this.shadowRoot.innerHTML = `
       <style>
@@ -772,6 +940,31 @@ class PromptCard extends HTMLElement {
           background: rgba(0,0,0,0.55); backdrop-filter: blur(8px);
           color: #fff; font-size: 11px; font-weight: 600;
           letter-spacing: 0.02em;
+        }
+        .favorite-btn {
+          position: absolute; top: 10px; right: 10px;
+          width: 34px; height: 34px; border-radius: 999px;
+          display: flex; align-items: center; justify-content: center;
+          background: rgba(0,0,0,0.48);
+          border: 1px solid rgba(255,255,255,0.14);
+          color: #fff;
+          cursor: pointer;
+          opacity: 0.7;
+          transition: opacity 0.16s ease, background 0.16s ease, transform 0.16s ease;
+          z-index: 2;
+        }
+        .favorite-btn:hover { opacity: 1; background: rgba(0,0,0,0.68); }
+        .favorite-btn svg {
+          width: 17px; height: 17px;
+          fill: none; stroke: currentColor;
+        }
+        .favorite-btn.is-favorite { color: var(--accent); opacity: 1; }
+        .favorite-btn.is-favorite svg { fill: var(--accent); stroke: var(--accent); }
+        .favorite-btn.pop svg { animation: favorite-pop 180ms ease; }
+        @keyframes favorite-pop {
+          0% { transform: scale(1); }
+          55% { transform: scale(1.2); }
+          100% { transform: scale(1); }
         }
         .meta {
           padding: 10px 12px 12px;
@@ -852,11 +1045,6 @@ class PromptCard extends HTMLElement {
         .action-btn:hover { color: #fff; background: rgba(255,255,255,0.06); }
         .action-btn svg { width: 14px; height: 14px; }
 
-        .like-btn.liked { color: #ff2e51; }
-        .like-btn.liked svg { fill: #ff2e51; stroke: #ff2e51; }
-        .like-btn.pulse svg { animation: pulse 0.4s ease; }
-        @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.35); } }
-
         .copy-btn:hover { color: #a78bfa; }
       </style>
 
@@ -866,6 +1054,9 @@ class PromptCard extends HTMLElement {
                onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"/>` : ''}
           <div class="cover-fallback" style="${data.img ? 'display:none;' : 'display:flex;'}">🎨</div>
           <div class="tag-pill">${escapeHtml(catLabel)}</div>
+          <button class="favorite-btn ${favorited ? 'is-favorite' : ''}" title="${favorited ? '取消收藏' : '收藏'}" aria-label="收藏" aria-pressed="${favorited ? 'true' : 'false'}">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
         </div>
         <div class="meta">
           <div class="title">${escapeHtml(primaryTitle)}</div>
@@ -881,16 +1072,12 @@ class PromptCard extends HTMLElement {
             </span>
           </div>
 
-          <!-- Row 2 · 比例(左) + 点心 / 复制(右) -->
+          <!-- Row 2 · 比例(左) + 复制(右) -->
           <div class="action-row">
             <span class="aspect-mini" title="${isZh ? '长宽比' : 'Aspect'}">${escapeHtml(data.aspectLabel || data.aspect.replace('/', ':'))}</span>
             <div class="actions">
               <button class="action-btn copy-btn" title="${t('modal.copy')}" aria-label="copy">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-              </button>
-              <button class="action-btn like-btn ${liked?'liked':''}" title="like" aria-label="like">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-                <span class="num">${formatK(displayLikes)}</span>
               </button>
             </div>
           </div>
@@ -900,7 +1087,7 @@ class PromptCard extends HTMLElement {
 
     // events
     const card = this.shadowRoot.querySelector('.card');
-    const likeBtn = this.shadowRoot.querySelector('.like-btn');
+    const favoriteBtn = this.shadowRoot.querySelector('.favorite-btn');
     const copyBtn = this.shadowRoot.querySelector('.copy-btn');
 
     card.addEventListener('click', (e) => {
@@ -908,18 +1095,21 @@ class PromptCard extends HTMLElement {
       openDetail(id);
     });
 
-    likeBtn.addEventListener('click', (e) => {
+    favoriteBtn.addEventListener('click', (e) => {
       e.stopPropagation();
-      const on = likeBtn.classList.toggle('liked');
-      likeBtn.classList.remove('pulse'); void likeBtn.offsetWidth; likeBtn.classList.add('pulse');
-      localStorage.setItem(likedKey, on ? '1' : '0');
-      likeBtn.querySelector('.num').textContent = formatK(data.likes + (on ? 1 : 0));
+      toggleFavorite(id);
+      pulseFavoriteButton(favoriteBtn);
     });
 
     copyBtn.addEventListener('click', (e) => {
       e.stopPropagation();
       copyPrompt(data.prompt);
     });
+  }
+
+  syncFavorite() {
+    const id = this.getAttribute('data-id');
+    syncFavoriteButton(this.shadowRoot.querySelector('.favorite-btn'), id);
   }
 }
 customElements.define('prompt-card', PromptCard);
@@ -1216,13 +1406,9 @@ class PromptModal extends HTMLElement {
     this.shadowRoot.getElementById('m-like').addEventListener('click', (e) => {
       if (!this.current) return;
       const btn = e.currentTarget;
-      btn.classList.toggle('liked');
-      const on = btn.classList.contains('liked');
-      localStorage.setItem(`liked-${this.current.id}`, on ? '1' : '0');
+      const on = toggleFavorite(this.current.id);
+      btn.classList.toggle('liked', on);
       this.shadowRoot.getElementById('m-like-num').textContent = formatK(this.current.likes + (on ? 1 : 0));
-      // also sync back card
-      const card = document.querySelector(`prompt-card[data-id="${this.current.id}"]`);
-      if (card) card.shadowRoot.querySelector('.like-btn').classList.toggle('liked', on);
     });
   }
 
@@ -1281,7 +1467,7 @@ class PromptModal extends HTMLElement {
     openEl.setAttribute('href', data.img || '#');
 
     // 点心
-    const liked = localStorage.getItem(`liked-${id}`) === '1';
+    const liked = isFavorite(id);
     const likeBtn = this.shadowRoot.getElementById('m-like');
     likeBtn.classList.toggle('liked', liked);
     this.shadowRoot.getElementById('m-like-num').textContent = formatK(data.likes + (liked ? 1 : 0));
@@ -1315,8 +1501,10 @@ function openDetail(id) {
 
   const modal = document.getElementById('detail-modal');
   const isZh = (window.LANG || 'zh') === 'zh';
+  modal.dataset.currentId = data.id;
   modal.querySelector('.modal-title').textContent = isZh ? data.title : data.en;
   modal.querySelector('.modal-prompt').textContent = data.prompt;
+  syncFavoriteButton(modal.querySelector('[data-role="favorite"]'), data.id);
 
   const copyBtn = modal.querySelector('.modal-copy');
   clearTimeout(modalCopyTimer);
@@ -1365,6 +1553,7 @@ function closeDetail() {
   if (!modal) return;
   modal.classList.add('hidden');
   modal.setAttribute('aria-hidden', 'true');
+  delete modal.dataset.currentId;
 }
 function recordClick(id) {
   try {
@@ -1381,6 +1570,13 @@ function recordClick(id) {
 const detailModal = document.getElementById('detail-modal');
 detailModal.querySelector('[data-role="overlay"]').addEventListener('click', closeDetail);
 detailModal.querySelector('[data-role="close"]').addEventListener('click', closeDetail);
+detailModal.querySelector('[data-role="favorite"]').addEventListener('click', (e) => {
+  e.stopPropagation();
+  const id = detailModal.dataset.currentId;
+  if (!id) return;
+  toggleFavorite(id);
+  pulseFavoriteButton(e.currentTarget);
+});
 detailModal.querySelector('[data-role="copy"]').addEventListener('click', async () => {
   const text = detailModal.querySelector('.modal-prompt').textContent;
   const btn = detailModal.querySelector('.modal-copy');
@@ -1439,9 +1635,13 @@ function showToast(msg) {
 const URL_PARAMS = new URLSearchParams(location.search);
 window.LANG = URL_PARAMS.get('lang') || localStorage.getItem('pa-lang') || 'zh';
 
+const tabsEl = document.getElementById('gallery-tabs');
 const catsEl = document.getElementById('cats');
 const wf     = document.getElementById('waterfall');
+const favToolbar = document.getElementById('fav-toolbar');
+const favoritesEmpty = document.getElementById('favorites-empty');
 let activeCat = '推荐';
+let activeTab = (URL_PARAMS.get('tab') === 'favorites' || location.hash === '#favorites') ? 'favorites' : 'all';
 
 function applyI18n() {
   document.querySelectorAll('[data-i18n]').forEach(el => el.textContent = t(el.dataset.i18n));
@@ -1459,18 +1659,90 @@ function renderCats() {
   }).join('');
 }
 
+function updateTabUrl(tab) {
+  const url = new URL(location.href);
+  if (tab === 'favorites') {
+    url.searchParams.set('tab', 'favorites');
+    if (url.hash === '#favorites') url.hash = '';
+  } else {
+    url.searchParams.delete('tab');
+    if (url.hash === '#favorites') url.hash = '';
+  }
+  history.replaceState(null, '', url);
+}
+function updateFavoriteControls() {
+  const count = getFavorites().length;
+  const isFavorites = activeTab === 'favorites';
+  tabsEl.querySelector('[data-tab="favorites"] .count').textContent = count;
+  tabsEl.querySelectorAll('[data-tab]').forEach(tab => {
+    tab.classList.toggle('active', tab.dataset.tab === activeTab);
+  });
+  favToolbar.classList.toggle('visible', isFavorites);
+  favToolbar.querySelector('.export-btn').disabled = count === 0;
+  favToolbar.querySelector('.clear-btn').disabled = count === 0;
+}
+function favoriteCards() {
+  const favorites = getFavorites();
+  return CARDS.filter(c => favorites.includes(c.id));
+}
+function exportFavorites() {
+  const favorites = getFavorites();
+  if (!favorites.length) return;
+  const favSet = new Set(favorites);
+  const payload = RAW_IMAGES.filter(img => favSet.has(String(img.id || '')));
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const today = new Date().toISOString().slice(0, 10);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = `promptatlas-favorites-${today}.json`;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
+}
+function clearFavorites() {
+  const n = getFavorites().length;
+  if (!n) return;
+  if (confirm(`确定清空 ${n} 条收藏吗?不可撤销 · 建议先导出 JSON 备份`)) {
+    localStorage.removeItem(FAVORITES_KEY);
+    syncFavoriteUI();
+    filterGallery(activeTab);
+  }
+}
+function visibleCards() {
+  if (activeTab === 'favorites') return favoriteCards();
+  return activeCat === '推荐' ? CARDS : CARDS.filter(c => c.cat === activeCat);
+}
 function renderWaterfall() {
-  const visible = activeCat === '推荐' ? CARDS : CARDS.filter(c => c.cat === activeCat);
+  const visible = visibleCards();
   wf.innerHTML = visible.map(c => `<prompt-card data-id="${c.id}"></prompt-card>`).join('');
+  favoritesEmpty.hidden = !(activeTab === 'favorites' && visible.length === 0);
+  updateFavoriteControls();
+}
+function filterGallery(tab = activeTab) {
+  activeTab = tab === 'favorites' ? 'favorites' : 'all';
+  updateTabUrl(activeTab);
+  renderWaterfall();
 }
 
+tabsEl.addEventListener('click', (e) => {
+  const b = e.target.closest('[data-tab]');
+  if (!b) return;
+  filterGallery(b.dataset.tab);
+});
 catsEl.addEventListener('click', (e) => {
   const b = e.target.closest('.category');
   if (!b) return;
   activeCat = b.dataset.cat;
+  activeTab = 'all';
+  updateTabUrl(activeTab);
   catsEl.querySelectorAll('.category').forEach(x => x.classList.toggle('active', x === b));
   renderWaterfall();
 });
+
+favToolbar.querySelector('.export-btn').addEventListener('click', exportFavorites);
+favToolbar.querySelector('.clear-btn').addEventListener('click', clearFavorites);
 
 // ── 语言下拉 ──
 const langDd     = document.getElementById('lang-dd');
@@ -1524,6 +1796,7 @@ async function initGallery() {
   syncLangLabel();
   renderLangMenu();
   renderCats();
+  updateFavoriteControls();
 
   try {
     await loadImages();
