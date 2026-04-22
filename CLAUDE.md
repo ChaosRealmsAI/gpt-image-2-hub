@@ -73,6 +73,12 @@ curl -sS -o /dev/null -w '%{http_code}\n' http://127.0.0.1:3000/image-styles-atl
 curl -sS -o /dev/null -w '%{http_code}\n' http://127.0.0.1:3000/assets/samples/cat-sunset-watercolor.png  # → 200 (v0.2+ /assets 路由)
 curl -sS -o /dev/null -w 'status=%{http_code} size=%{size_download}\n' http://127.0.0.1:3000/
 
+# v0.3+ 详情 modal / 复制 / 点击记录 · 静态 grep 验证
+curl -sS http://127.0.0.1:3000/ | grep -cE 'detail-modal|class="modal'         # modal DOM · 预期 ≥ 1
+curl -sS http://127.0.0.1:3000/ | grep -cE 'navigator\.clipboard'              # 复制 API · 预期 ≥ 1
+curl -sS http://127.0.0.1:3000/ | grep -cE 'promptatlas\.click_history'        # 点击 localStorage key · 预期 ≥ 2
+# 手测: 浏览器打开 localhost:3000 · 点卡弹 modal · 点复制 → 粘贴验 · Esc/遮罩/X 关 · DevTools 看 promptatlas.click_history
+
 # 数据抽取(一次性 · 改 content/examples/*.md 后重跑)
 node tools/build-images-json.js                                       # 扫 content/examples/ → 产 data/images.json
 
