@@ -236,6 +236,25 @@
     color: #fff; background: rgba(255,255,255,0.1);
     font-weight: 700;
   }
+  .sort-control {
+    flex-shrink: 0;
+  }
+  .sort-control select {
+    min-width: 92px;
+    padding: 8px 30px 8px 12px;
+    border-radius: 999px;
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+  }
+  .sort-control select:focus {
+    border-color: rgba(167,139,250,0.5);
+  }
 
   /* 顶部右区:github + x + 语言 */
   .top-right {
@@ -361,6 +380,7 @@
     .topbar-main { padding: 10px 14px 8px; gap: 12px; grid-template-columns: auto 1fr auto; }
     .topbar-cats { padding: 0 14px 10px; flex-wrap: wrap; gap: 8px; }
     .gallery-tabs { width: 100%; border-right: 0; padding-right: 0; }
+    .sort-control { margin-left: auto; }
     .search-box { max-width: none; padding: 8px 14px; font-size: 13px; }
     .lang-dd-btn .lang-label { display: none; }
     .top-icon-link { display: none; }
@@ -644,6 +664,13 @@
       <button class="gallery-tab favorites-tab" data-tab="favorites" type="button">收藏 <span class="count"></span></button>
     </div>
     <div class="categories" id="cats"></div>
+    <div class="sort-control">
+      <select id="sort-select" data-sort aria-label="排序">
+        <option value="recommend">推荐</option>
+        <option value="latest">最新</option>
+        <option value="hot">最热</option>
+      </select>
+    </div>
   </div>
 </div>
 
@@ -1818,16 +1845,24 @@ const favoritesEmpty = document.getElementById('favorites-empty');
 const filterBar = document.getElementById('filter-bar');
 const filterDetails = document.getElementById('filter-details');
 const searchInput = document.getElementById('search-input');
+const sortSelect = document.getElementById('sort-select');
 const filterCount = document.getElementById('filter-count');
 const clearFilterBtn = document.querySelector('.clear-filter-btn');
 let activeCat = '推荐';
 let activeTab = (URL_PARAMS.get('tab') === 'favorites' || location.hash === '#favorites') ? 'favorites' : 'all';
+const SORT_BY_OPTIONS = new Set(['recommend', 'latest', 'hot']);
+const HAS_URL_SORT_BY = URL_PARAMS.has('sortBy') || URL_PARAMS.has('sort');
+function normalizeSortBy(value) {
+  const sortBy = String(value || '').trim();
+  return SORT_BY_OPTIONS.has(sortBy) ? sortBy : 'recommend';
+}
 const FILTER_STATE = {
   q: URL_PARAMS.get('q') || '',
   tags: new Set(splitFilterParam('tags')),
   style: new Set(splitFilterParam('style')),
   aspect: new Set(splitFilterParam('aspect')),
   tab: activeTab,
+  sortBy: normalizeSortBy(URL_PARAMS.get('sortBy') || URL_PARAMS.get('sort')),
 };
 let searchDebounceTimer = null;
 
@@ -1886,6 +1921,72 @@ function clearFavorites() {
 function selectedValues(name) {
   return Array.from(FILTER_STATE[name]).sort((a, b) => a.localeCompare(b));
 }
+function countBy(items, key) {
+  const counts = new Map();
+  if (!Array.isArray(items)) return counts;
+  items.forEach(item => {
+    const value = item?.[key];
+    if (value === undefined || value === null || value === '') return;
+    const id = String(value);
+    counts.set(id, (counts.get(id) || 0) + 1);
+  });
+  return counts;
+}
+function buildUserProfile() {
+  let clicks = [];
+  let favIds = [];
+  try {
+    const rawClicks = JSON.parse(localStorage.getItem('promptatlas.click_history') || '[]');
+    const rawFavs = JSON.parse(localStorage.getItem('promptatlas.favorites') || '[]');
+    clicks = Array.isArray(rawClicks) ? rawClicks : [];
+    favIds = Array.isArray(rawFavs) ? rawFavs.map(id => String(id)).filter(Boolean) : [];
+  } catch (err) {
+    console.warn('localStorage blocked', err);
+  }
+
+  const favs = new Set(favIds);
+  const tagWeights = new Map();
+  for (const entry of clicks) {
+    const id = entry?.id;
+    const img = allImages.find(i => i.id === String(id));
+    (img?.tags || []).forEach(t => tagWeights.set(t, (tagWeights.get(t) || 0) + 1));
+  }
+  for (const id of favs) {
+    const img = allImages.find(i => i.id === id);
+    (img?.tags || []).forEach(t => tagWeights.set(t, (tagWeights.get(t) || 0) + 3));
+  }
+  return { tagWeights, favSet: favs, clickCount: countBy(clicks, 'id') };
+}
+function computeScore(img, profile) {
+  let score = 0;
+  for (const tag of (img.tags || [])) {
+    score += profile.tagWeights.get(tag) || 0;
+  }
+  if (profile.favSet.has(img.id)) score += 10;
+  score += profile.clickCount.get(img.id) || 0;
+  return score;
+}
+function isColdStart(profile) {
+  return profile.tagWeights.size === 0 && profile.favSet.size === 0;
+}
+function defaultSortBy() {
+  return isColdStart(buildUserProfile()) ? 'latest' : 'recommend';
+}
+function sortImages(arr, sortBy) {
+  if (sortBy === 'latest') {
+    return [...arr].sort((a, b) => (b.id || '').localeCompare(a.id || ''));
+  }
+  if (sortBy === 'hot') {
+    return [...arr].sort((a, b) => (b.likes || 0) - (a.likes || 0));
+  }
+  const profile = buildUserProfile();
+  if (isColdStart(profile)) {
+    return [...arr].sort((a, b) => (b.likes || 0) - (a.likes || 0));
+  }
+  return [...arr].map(img => ({ img, score: computeScore(img, profile) }))
+    .sort((a, b) => b.score - a.score)
+    .map(x => x.img);
+}
 function syncURL() {
   const params = new URLSearchParams();
   const q = FILTER_STATE.q.trim();
@@ -1896,6 +1997,7 @@ function syncURL() {
   if (tags.length) params.set('tags', tags.join(','));
   if (style.length) params.set('style', style.join(','));
   if (aspect.length) params.set('aspect', aspect.join(','));
+  params.set('sortBy', FILTER_STATE.sortBy);
   if (FILTER_STATE.tab === 'favorites') params.set('tab', 'favorites');
   const query = params.toString();
   const hash = location.hash && location.hash !== '#favorites' ? location.hash : '';
@@ -1925,9 +2027,10 @@ function applyFilter() {
     if (FILTER_STATE.aspect.size && !FILTER_STATE.aspect.has(img.aspect)) return false;
     return true;
   });
+  const sorted = sortImages(filtered, FILTER_STATE.sortBy);
   activeTab = FILTER_STATE.tab === 'favorites' ? 'favorites' : 'all';
-  renderFiltered(filtered);
-  updateFilterCount(filtered.length, allImages.length);
+  renderFiltered(sorted);
+  updateFilterCount(sorted.length, allImages.length);
   syncURL();
 }
 function renderWaterfall() {
@@ -1972,6 +2075,7 @@ function renderFilterOptions() {
 }
 function syncFilterInputs() {
   searchInput.value = FILTER_STATE.q;
+  sortSelect.value = FILTER_STATE.sortBy;
   filterBar.querySelectorAll('input[type="checkbox"][data-filter-group]').forEach(input => {
     const group = input.dataset.filterGroup;
     input.checked = FILTER_STATE[group]?.has(input.value) || false;
@@ -1983,6 +2087,7 @@ function clearFilters() {
   FILTER_STATE.style.clear();
   FILTER_STATE.aspect.clear();
   FILTER_STATE.tab = 'all';
+  FILTER_STATE.sortBy = defaultSortBy();
   activeTab = 'all';
   activeCat = '推荐';
   renderCats();
@@ -2030,6 +2135,10 @@ searchInput.addEventListener('keydown', (e) => {
   applyFilter();
 });
 clearFilterBtn.addEventListener('click', clearFilters);
+sortSelect.addEventListener('change', () => {
+  FILTER_STATE.sortBy = normalizeSortBy(sortSelect.value);
+  applyFilter();
+});
 window.addEventListener('resize', syncFilterDetailsMode);
 
 favToolbar.querySelector('.export-btn').addEventListener('click', exportFavorites);
@@ -2093,6 +2202,7 @@ async function initGallery() {
 
   try {
     await loadImages();
+    if (!HAS_URL_SORT_BY) FILTER_STATE.sortBy = defaultSortBy();
     renderFilterOptions();
     syncFilterInputs();
     applyFilter();
