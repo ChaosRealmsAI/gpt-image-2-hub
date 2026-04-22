@@ -1,0 +1,5311 @@
+{
+  "title": "GPT Image 2 Hub · Frontier Challenge Atlas",
+  "description": "只收录极难、复杂、以前人类做成本高且别的模型难稳定完成的 GPT Image 2 能力上限炫技题。",
+  "date": "2026-04-22",
+  "reference_doc": "docs/research/gpt-image-2-48h-brief.html",
+  "schema": {
+    "id": "Tier + 序号(S-01 / A-02 ...)",
+    "name": "玩法名",
+    "dimension": "自然语言能力维度说明",
+    "capabilities": "string[] · 标准化能力标签，如 text-rendering / multi-image-reference / structured-layout",
+    "example": "典型场景 / prompt 思路(一句)",
+    "uniqueness": "为什么非俗套、为什么别的模型或旧工作流难做",
+    "frontier_claim": {
+      "human_complexity": "人类制作为什么复杂、要哪些工种/工具/时间",
+      "model_gap": "别的模型/旧工作流为什么做不好或不稳",
+      "why_gpt_image_2_may_solve": "gpt-image-2 哪些能力可能让它成为突破点"
+    },
+    "success_criteria": "string[] · 跑图后判断是否真的成功的验收标准",
+    "research_value": "1-5 · 对模型能力边界调研的价值",
+    "spectacle_score": "1-5 · 一眼炫技/传播惊艳程度",
+    "difficulty": "1-5 · prompt 工艺复杂度",
+    "business_value": "high / mid / low",
+    "viral_potential": "high / mid / low · 社交传播度",
+    "source": "idea/research source metadata",
+    "evaluation": "跑图后填写的评分和结论",
+    "status": "todo / claimed / done / abandoned",
+    "type": "single | series · 开工时定",
+    "total_shots": "int · 系列 N 张 / 单图 1",
+    "owner_session": "UUID · claimed 时写",
+    "claimed_at": "ISO · claimed 时写",
+    "done_at": "ISO · done 时写",
+    "output_dir": "assets/{tier}/{id}-{slug}/ · claimed 时写",
+    "metadata_path": "output_dir + metadata.json · done 时写"
+  },
+  "tiers": [
+    {
+      "tier": "S · 独家能力(必做 · 别的模型做不了)",
+      "items": [
+        {
+          "id": "S-01",
+          "name": "Thinking mode · 联网实时数据插画",
+          "dimension": "推理 + web search + 版式",
+          "capabilities": [
+            "structured-layout",
+            "reasoning-composition",
+            "style-transfer",
+            "editing-workflow"
+          ],
+          "example": "今日科技股走势 → The New Yorker 风长条编辑插画 · 每股一个角色跑在趋势山 · 手绘边注",
+          "uniqueness": "需要模型具备 web search + 推理 + 版式 三合一 · 生图变可视化记者",
+          "frontier_claim": {
+            "human_complexity": "复杂版式/多面板内容过去需要插画、排版和后期合成协作",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "复杂结构化视觉和多面板构图能力"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "版式层级清楚，多区域/多面板不互相打架"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "high",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "S-02",
+          "name": "8 图一致性元叙事漫画",
+          "dimension": "Thinking mode 8 图一致性",
+          "capabilities": [
+            "multi-image-reference",
+            "structured-layout",
+            "reasoning-composition",
+            "commercial-mockup"
+          ],
+          "example": "产品发布用日漫 8 格呈现 · 主角举 'GPT-IMAGE-2' glow 球 · 拟声词 · 对白框 · 跨格角色服装一致",
+          "uniqueness": "Thinking mode 独占 · Nano Banana / MJ / Flux 都只能手动拼",
+          "frontier_claim": {
+            "human_complexity": "多参考图/身份一致性过去通常要人工挑片、局部重绘或 ControlNet/LoRA 串联；复杂版式/多面板内容过去需要插画、排版和后期合成协作",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "多图参考和身份/风格保持能力；复杂结构化视觉和多面板构图能力"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "主体身份/外观/关键元素在多图或多视角中保持一致",
+            "版式层级清楚，多区域/多面板不互相打架"
+          ],
+          "research_value": 5,
+          "spectacle_score": 5,
+          "difficulty": 5,
+          "business_value": "high",
+          "viral_potential": "mid",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "S-03",
+          "name": "16 参考图融合 · 你在吉卜力",
+          "dimension": "多图 ref 融合",
+          "capabilities": [
+            "multi-image-reference"
+          ],
+          "example": "自拍 + 吉卜力美术 + 后海老街 3 张 ref → 你在吉卜力世界散步一张图",
+          "uniqueness": "16 张 ref 独家 · DALL-E 1 张 · MJ --cref 只人脸",
+          "frontier_claim": {
+            "human_complexity": "多参考图/身份一致性过去通常要人工挑片、局部重绘或 ControlNet/LoRA 串联",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "多图参考和身份/风格保持能力"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "主体身份/外观/关键元素在多图或多视角中保持一致"
+          ],
+          "research_value": 3,
+          "spectacle_score": 4,
+          "difficulty": 3,
+          "business_value": "mid",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "S-04",
+          "name": "虚拟试衣 · 身份零漂移",
+          "dimension": "参考图 + 硬约束锁身份",
+          "capabilities": [
+            "multi-image-reference",
+            "editing-workflow"
+          ],
+          "example": "一模特照 + prompt 硬锁'不改脸 / 五官 / 肤色 / 体型' · 只换 10 套衣服一次出",
+          "uniqueness": "prompt 硬约束能传到生成层 · DALL-E / MJ 换衣必变脸",
+          "frontier_claim": {
+            "human_complexity": "多参考图/身份一致性过去通常要人工挑片、局部重绘或 ControlNet/LoRA 串联",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "多图参考和身份/风格保持能力"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "主体身份/外观/关键元素在多图或多视角中保持一致"
+          ],
+          "research_value": 4,
+          "spectacle_score": 3,
+          "difficulty": 3,
+          "business_value": "high",
+          "viral_potential": "mid",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "S-05",
+          "name": "图内翻译 · 保 typography 只换文字",
+          "dimension": "多轮编辑 + typography 保留",
+          "capabilities": [
+            "text-rendering",
+            "reasoning-composition",
+            "editing-workflow"
+          ],
+          "example": "给英文 infographic · 只翻文字到日文 · 字号 / 间距 / 图标位置全不动",
+          "uniqueness": "杀手级 L10n workflow · Figma 需手动换每文本框",
+          "frontier_claim": {
+            "human_complexity": "可读文字、字体和位置过去常需要设计软件二次排版",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "更强图中文字渲染与版式跟随"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "所有关键文字可读、无多余字符、位置和字体符合要求"
+          ],
+          "research_value": 4,
+          "spectacle_score": 3,
+          "difficulty": 3,
+          "business_value": "high",
+          "viral_potential": "low",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "S-06",
+          "name": "多脚本同屏海报(4-9 语言)",
+          "dimension": "非拉丁文字 99%",
+          "capabilities": [
+            "multi-image-reference",
+            "text-rendering",
+            "structured-layout"
+          ],
+          "example": "中 + 日 + 韩 + 阿拉伯 + 印地 + 梵文 同屏菜单 / 联合国议程海报 / 国际机场指示",
+          "uniqueness": "独家能力 · Firefly 单脚本已是天花板 · 国产模型也做不过",
+          "frontier_claim": {
+            "human_complexity": "多参考图/身份一致性过去通常要人工挑片、局部重绘或 ControlNet/LoRA 串联；可读文字、字体和位置过去常需要设计软件二次排版；复杂版式/多面板内容过去需要插画、排版和后期合成协作",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "更强图中文字渲染与版式跟随；多图参考和身份/风格保持能力；复杂结构化视觉和多面板构图能力"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "所有关键文字可读、无多余字符、位置和字体符合要求",
+            "主体身份/外观/关键元素在多图或多视角中保持一致",
+            "版式层级清楚，多区域/多面板不互相打架"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "high",
+          "viral_potential": "mid",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "S-07",
+          "name": "米粒级微缩刻字 · Jewelry 定制",
+          "dimension": "像素级定位 + 微观文字",
+          "capabilities": [
+            "text-rendering"
+          ],
+          "example": "一堆米粒 · 只在其中一粒刻上用户名 / 戒指内壁刻字 / 邮票齿孔隐藏文字",
+          "uniqueness": "Altman 发布会同款 · 商用级 C 端情感附加值",
+          "frontier_claim": {
+            "human_complexity": "可读文字、字体和位置过去常需要设计软件二次排版",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "更强图中文字渲染与版式跟随"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "所有关键文字可读、无多余字符、位置和字体符合要求"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 3,
+          "business_value": "high",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "done",
+          "type": "single",
+          "total_shots": 1,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": "2026-04-22T14:00:00Z",
+          "output_dir": "assets/S/S-07-micro-engraving/",
+          "metadata_path": "assets/S/S-07-micro-engraving/metadata.json"
+        },
+        {
+          "id": "S-08",
+          "name": "360° Equirectangular VR 全景",
+          "dimension": "3:1 极端画幅",
+          "capabilities": [
+            "structured-layout",
+            "extreme-aspect-ratio",
+            "style-transfer"
+          ],
+          "example": "Ghibli 风悬浮天空村落 · 2:1 等距矩形 · 扔进 VR 头显可站入",
+          "uniqueness": "AI 原生 VR 场景 · 可上传 YouTube 360",
+          "frontier_claim": {
+            "human_complexity": "复杂版式/多面板内容过去需要插画、排版和后期合成协作；极端画幅和高密度连续叙事过去容易失控或只能人工长图拼接",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "复杂结构化视觉和多面板构图能力"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "版式层级清楚，多区域/多面板不互相打架",
+            "极端画幅稳定，局部叙事密度足够且不糊成纹理"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "mid",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "S-09",
+          "name": "1:3 超长竖卷画(清明上河图级)",
+          "dimension": "1:3 极端画幅 + 叙事密度",
+          "capabilities": [
+            "structured-layout",
+            "extreme-aspect-ratio",
+            "world-knowledge",
+            "reasoning-composition"
+          ],
+          "example": "老北京胡同展开 / 现代版清明上河图 / 长城立体地图 / 一生时间轴",
+          "uniqueness": "DALL-E 3 MJ 做不到 · 小红书详情页 / 长卷画 / 挂轴",
+          "frontier_claim": {
+            "human_complexity": "复杂版式/多面板内容过去需要插画、排版和后期合成协作；极端画幅和高密度连续叙事过去容易失控或只能人工长图拼接；真实世界知识和视觉还原过去需要资料搜集、人工考据和多轮修正",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "复杂结构化视觉和多面板构图能力；真实世界知识与场景推理能力"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "版式层级清楚，多区域/多面板不互相打架",
+            "极端画幅稳定，局部叙事密度足够且不糊成纹理",
+            "文化、场景或真实世界细节没有明显常识错误"
+          ],
+          "research_value": 5,
+          "spectacle_score": 5,
+          "difficulty": 5,
+          "business_value": "mid",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "S-10",
+          "name": "草图 → 写实一键渲染",
+          "dimension": "参考图 + 保布局忠诚",
+          "capabilities": [
+            "multi-image-reference",
+            "photorealism",
+            "world-knowledge",
+            "editing-workflow"
+          ],
+          "example": "铅笔手绘建筑草图 → 照片级效果图 · 保地平线 / 比例 / 窗户位置 · 不乱加元素",
+          "uniqueness": "以前需 SD ControlNet 多模型串 · 单模一步",
+          "frontier_claim": {
+            "human_complexity": "多参考图/身份一致性过去通常要人工挑片、局部重绘或 ControlNet/LoRA 串联；真实世界知识和视觉还原过去需要资料搜集、人工考据和多轮修正",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "多图参考和身份/风格保持能力；高保真写实、自然光照和材质表现；真实世界知识与场景推理能力"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "主体身份/外观/关键元素在多图或多视角中保持一致",
+            "文化、场景或真实世界细节没有明显常识错误"
+          ],
+          "research_value": 4,
+          "spectacle_score": 3,
+          "difficulty": 3,
+          "business_value": "high",
+          "viral_potential": "mid",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "S-11",
+          "name": "World Knowledge 场景还原",
+          "dimension": "真实品牌 / 建筑 / UI 精准度",
+          "capabilities": [
+            "structured-layout",
+            "photorealism",
+            "world-knowledge",
+            "style-transfer",
+            "commercial-mockup"
+          ],
+          "example": "IKEA 夜店招建筑师级精准 / Windows UI 像素级 / 日本便利店内部 / Minecraft 世界",
+          "uniqueness": "模型'知道'真实世界 · 不是风格化猜测",
+          "frontier_claim": {
+            "human_complexity": "复杂版式/多面板内容过去需要插画、排版和后期合成协作；真实世界知识和视觉还原过去需要资料搜集、人工考据和多轮修正",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "复杂结构化视觉和多面板构图能力；高保真写实、自然光照和材质表现；真实世界知识与场景推理能力"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "版式层级清楚，多区域/多面板不互相打架",
+            "文化、场景或真实世界细节没有明显常识错误"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 3,
+          "business_value": "high",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "S-12",
+          "name": "多轮对话式编辑工作流",
+          "dimension": "免 mask 多轮 edit",
+          "capabilities": [
+            "reasoning-composition",
+            "editing-workflow"
+          ],
+          "example": "'换黄昏 → 去掉左人 → 字变大 → 颜色冷一点' · 5 轮迭代保其他元素",
+          "uniqueness": "传统 inpainting 需蒙版 · 这里理解整体意图自动分割",
+          "frontier_claim": {
+            "human_complexity": "过去需要跨创意、设计、摄影/3D/后期的复杂工作流，单模型难以一次完成",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "把语义理解、构图、风格和细节渲染压进一次生成"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示"
+          ],
+          "research_value": 4,
+          "spectacle_score": 3,
+          "difficulty": 3,
+          "business_value": "high",
+          "viral_potential": "low",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "S-13",
+          "name": "Ambigram 双向字 · 旋转 180° 可读",
+          "dimension": "字形工程 · typography 巅峰",
+          "capabilities": [
+            "text-rendering",
+            "optical-illusion-geometry"
+          ],
+          "example": "'GPT-IMAGE-2' 六字母 · 正读一行 · 倒过来还能读出另一单词 / 同单词 · 哥特字体烫金",
+          "uniqueness": "字形设计师毕生挑战 · 手工做 1 周 · gpt-image-2 一次出 · 纹身 / 戒指 / logo 级",
+          "frontier_claim": {
+            "human_complexity": "可读文字、字体和位置过去常需要设计软件二次排版；视觉错觉和几何构造过去需要数学、透视和手工校正",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "更强图中文字渲染与版式跟随；几何、透视和风格约束的一体化生成"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "所有关键文字可读、无多余字符、位置和字体符合要求",
+            "几何/错觉/对称规则可被肉眼验证"
+          ],
+          "research_value": 5,
+          "spectacle_score": 5,
+          "difficulty": 5,
+          "business_value": "low",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "claimed",
+          "type": "single",
+          "total_shots": 1,
+          "owner_session": "codex-20260422T233657Z",
+          "claimed_at": "2026-04-22T23:36:57Z",
+          "done_at": null,
+          "output_dir": "assets/S/S-13-ambigram-angel-devil/",
+          "metadata_path": null
+        },
+        {
+          "id": "S-14",
+          "name": "Anamorphic 变形艺术 · 特定角度现形",
+          "dimension": "透视变形 + 视觉欺骗",
+          "capabilities": [
+            "optical-illusion-geometry"
+          ],
+          "example": "俯视某街道画面 · 只有正对某楼顶露台望下看时 · 变形图案拼成 '完整 logo / 标语'",
+          "uniqueness": "达芬奇时代至今街头艺术家耗时数月 · 单模一次生成",
+          "frontier_claim": {
+            "human_complexity": "视觉错觉和几何构造过去需要数学、透视和手工校正",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "几何、透视和风格约束的一体化生成"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "几何/错觉/对称规则可被肉眼验证"
+          ],
+          "research_value": 5,
+          "spectacle_score": 5,
+          "difficulty": 5,
+          "business_value": "mid",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "S-15",
+          "name": "Tessellation 无缝拼贴 · Escher 鱼变鸟",
+          "dimension": "数学几何 · 形变渐变",
+          "capabilities": [
+            "optical-illusion-geometry"
+          ],
+          "example": "左侧鱼群 · 中央鱼鸟互嵌 · 右侧鸟群 · 每块完整 · 无空隙 · 可四方连续",
+          "uniqueness": "Escher 级数学美学 · 手工需几何知识 + 耐心 · 可用作壁纸 / 布料纹",
+          "frontier_claim": {
+            "human_complexity": "视觉错觉和几何构造过去需要数学、透视和手工校正",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "几何、透视和风格约束的一体化生成"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "几何/错觉/对称规则可被肉眼验证"
+          ],
+          "research_value": 5,
+          "spectacle_score": 5,
+          "difficulty": 5,
+          "business_value": "mid",
+          "viral_potential": "mid",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "S-16",
+          "name": "高速摄影级定格 · 百万分之一秒",
+          "dimension": "时间凝固 · Edgerton 风",
+          "capabilities": [
+            "photorealism",
+            "editing-workflow",
+            "commercial-mockup"
+          ],
+          "example": "子弹穿苹果飞溅 / 水滴皇冠 / 玻璃碎裂瞬间 / 火柴点燃 / 气球爆破 · 黑背景 + 顶光 + 极致清晰",
+          "uniqueness": "传统要高速闪光 + 专业实验室 · 单模模拟 1/1000000s 瞬间 · 科普 / 商业广告级",
+          "frontier_claim": {
+            "human_complexity": "过去需要跨创意、设计、摄影/3D/后期的复杂工作流，单模型难以一次完成",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "高保真写实、自然光照和材质表现"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "mid",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "S-17",
+          "name": "Stereoscope / Magic Eye 立体视差",
+          "dimension": "视觉神经学 · 双目视差",
+          "capabilities": [
+            "physics-materials",
+            "optical-illusion-geometry"
+          ],
+          "example": "左右并排近似图(斜视对齐成 3D)/ 单图重复纹理藏 3D 图案(发散看) / 红蓝 anaglyph 需 3D 眼镜",
+          "uniqueness": "神经视觉机制级实验 · 手工需计算视差位移 · 70-80s 民用 retro 感",
+          "frontier_claim": {
+            "human_complexity": "物理/材质/光学效果过去依赖 3D、仿真、摄影棚或专业后期；视觉错觉和几何构造过去需要数学、透视和手工校正",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "对材质、光学和动态瞬间的综合视觉推断；几何、透视和风格约束的一体化生成"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "材质、光照、阴影或物理瞬间可信",
+            "几何/错觉/对称规则可被肉眼验证"
+          ],
+          "research_value": 5,
+          "spectacle_score": 5,
+          "difficulty": 5,
+          "business_value": "low",
+          "viral_potential": "mid",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "S-18",
+          "name": "美国专利申请技术图 · USPTO 规格",
+          "dimension": "工业制图 · 白底黑线 非艺术",
+          "capabilities": [
+            "text-rendering",
+            "structured-layout",
+            "technical-diagram",
+            "world-knowledge",
+            "style-transfer"
+          ],
+          "example": "风格:纯白底 + 黑色细线稿 + 虚线(可选部分)+ 数字编号引用(10, 10a, 10b)+ FIG.1 FIG.2 多视图 + Arial 字体注释 · 例:Bluetooth 耳机 3 视图拆解 + 权利要求清单",
+          "uniqueness": "USPTO 官方规格 · 不许着色 / 不许渲染 / 只许线稿 · 工程师律师联合绝活",
+          "frontier_claim": {
+            "human_complexity": "可读文字、字体和位置过去常需要设计软件二次排版；复杂版式/多面板内容过去需要插画、排版和后期合成协作；工业制图和标注过去需要工程理解、矢量绘图和严格版式控制；真实世界知识和视觉还原过去需要资料搜集、人工考据和多轮修正",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "更强图中文字渲染与版式跟随；复杂结构化视觉和多面板构图能力；可同时处理线稿、标注、技术图和信息层级；真实世界知识与场景推理能力"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "所有关键文字可读、无多余字符、位置和字体符合要求",
+            "版式层级清楚，多区域/多面板不互相打架",
+            "线条、标注、结构拆解或工程视图有专业感",
+            "文化、场景或真实世界细节没有明显常识错误"
+          ],
+          "research_value": 5,
+          "spectacle_score": 5,
+          "difficulty": 5,
+          "business_value": "high",
+          "viral_potential": "low",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "S-19",
+          "name": "SEM 电子显微镜显微摄影",
+          "dimension": "科学真实显微 · 灰阶 / 假彩色",
+          "capabilities": [
+            "structured-layout",
+            "photorealism",
+            "style-transfer"
+          ],
+          "example": "风格:真实 SEM 扫描电镜拍摄质感 · 纯灰阶或后期假彩色 + 左下比例尺(1μm)+ 仪器信息栏 · 例:蝴蝶翅膀鳞粉 / 花粉粒 / 蚊子口器 / 雪花六角 / 红细胞",
+          "uniqueness": "电子显微镜级真实感 · 非插画 · 博物馆 / 科普期刊 / 教材独占",
+          "frontier_claim": {
+            "human_complexity": "复杂版式/多面板内容过去需要插画、排版和后期合成协作",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "复杂结构化视觉和多面板构图能力；高保真写实、自然光照和材质表现"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "版式层级清楚，多区域/多面板不互相打架"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "mid",
+          "viral_potential": "mid",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        }
+      ],
+      "tier_intent": "模型独家/极限能力验证，优先证明“别的模型难做”。"
+    },
+    {
+      "tier": "A · 高概念创意(传播级 + 艺术价值)",
+      "items": [
+        {
+          "id": "A-01",
+          "name": "Silhouette Universe · 剪影宇宙",
+          "dimension": "象征性构图",
+          "capabilities": [
+            "structured-layout",
+            "reasoning-composition"
+          ],
+          "example": "黑色剪影(塔 / 门 / 骷髅)里塞入完整叙事世界 · 城市 / 河流 / 人物 / 天气分层",
+          "uniqueness": "轮廓成容器而非边界 · poster 级视觉冲击",
+          "frontier_claim": {
+            "human_complexity": "复杂版式/多面板内容过去需要插画、排版和后期合成协作",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "复杂结构化视觉和多面板构图能力"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "版式层级清楚，多区域/多面板不互相打架"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "high",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "A-02",
+          "name": "宋朝朋友圈 · Song Dynasty Social Feed",
+          "dimension": "UI 精准 + 文化对撞",
+          "capabilities": [
+            "structured-layout",
+            "world-knowledge"
+          ],
+          "example": "苏轼发朋友圈文言九宫格 · 王安石评论 · iOS 时间戳点赞 · 古代文人现代 UI",
+          "uniqueness": "UI 元素精准渲染 + 时代错位 · 中文圈顶级传播",
+          "frontier_claim": {
+            "human_complexity": "复杂版式/多面板内容过去需要插画、排版和后期合成协作；真实世界知识和视觉还原过去需要资料搜集、人工考据和多轮修正",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "复杂结构化视觉和多面板构图能力；真实世界知识与场景推理能力"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "版式层级清楚，多区域/多面板不互相打架",
+            "文化、场景或真实世界细节没有明显常识错误"
+          ],
+          "research_value": 5,
+          "spectacle_score": 5,
+          "difficulty": 5,
+          "business_value": "mid",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "A-03",
+          "name": "Crystal Ball Narrative · 水晶球叙事",
+          "dimension": "容器 + 压缩叙事",
+          "capabilities": [
+            "reasoning-composition"
+          ],
+          "example": "整部《红楼梦》/《三体》压进水晶球 · 底部关键场景 · 光折射聚焦顶点",
+          "uniqueness": "球体即叙事节拍器 · 高概念艺术级",
+          "frontier_claim": {
+            "human_complexity": "过去需要跨创意、设计、摄影/3D/后期的复杂工作流，单模型难以一次完成",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "把语义理解、构图、风格和细节渲染压进一次生成"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "mid",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "A-04",
+          "name": "名画人物 OOTD · 穿搭九宫格",
+          "dimension": "风格反串 + 身份保留",
+          "capabilities": [
+            "multi-image-reference",
+            "structured-layout",
+            "style-transfer",
+            "editing-workflow"
+          ],
+          "example": "蒙娜丽莎穿 Acne + NB 550 拍 OOTD · 油画头保留 · 换现代穿搭 · Instagram 九宫格 UI",
+          "uniqueness": "跨 500 年 + UI 精准 + 保脸",
+          "frontier_claim": {
+            "human_complexity": "多参考图/身份一致性过去通常要人工挑片、局部重绘或 ControlNet/LoRA 串联；复杂版式/多面板内容过去需要插画、排版和后期合成协作",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "多图参考和身份/风格保持能力；复杂结构化视觉和多面板构图能力"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "主体身份/外观/关键元素在多图或多视角中保持一致",
+            "版式层级清楚，多区域/多面板不互相打架"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "mid",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "A-05",
+          "name": "2D 手绘 × 3D 实拍碰撞",
+          "dimension": "同画面双渲染层",
+          "capabilities": [
+            "multi-image-reference",
+            "physics-materials"
+          ],
+          "example": "儿童蜡笔画 stick figure 举 8K 实拍苹果 · 苹果投真阴影到纸上",
+          "uniqueness": "两种渲染层精确隔离 · 次元融合",
+          "frontier_claim": {
+            "human_complexity": "多参考图/身份一致性过去通常要人工挑片、局部重绘或 ControlNet/LoRA 串联；物理/材质/光学效果过去依赖 3D、仿真、摄影棚或专业后期",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "多图参考和身份/风格保持能力；对材质、光学和动态瞬间的综合视觉推断"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "主体身份/外观/关键元素在多图或多视角中保持一致",
+            "材质、光照、阴影或物理瞬间可信"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "low",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "A-06",
+          "name": "Museum Exploded View · 文物拆解图鉴",
+          "dimension": "技术制图 + 标注",
+          "capabilities": [
+            "structured-layout",
+            "physics-materials",
+            "technical-diagram"
+          ],
+          "example": "青铜鼎拆成爆炸图 · 材料 / 工艺 / 年代 / 编号标注 · 中英双语",
+          "uniqueness": "文物学变宜家说明书 · 博物馆 / 教材级",
+          "frontier_claim": {
+            "human_complexity": "复杂版式/多面板内容过去需要插画、排版和后期合成协作；物理/材质/光学效果过去依赖 3D、仿真、摄影棚或专业后期；工业制图和标注过去需要工程理解、矢量绘图和严格版式控制",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "复杂结构化视觉和多面板构图能力；对材质、光学和动态瞬间的综合视觉推断；可同时处理线稿、标注、技术图和信息层级"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "版式层级清楚，多区域/多面板不互相打架",
+            "材质、光照、阴影或物理瞬间可信",
+            "线条、标注、结构拆解或工程视图有专业感"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "high",
+          "viral_potential": "mid",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "A-07",
+          "name": "Hyperreal Diorama Cube · 剖面立方",
+          "dimension": "多面剖视",
+          "capabilities": [
+            "structured-layout"
+          ],
+          "example": "立方体顶面京都屋顶 · 四侧地层 / 树根 / 含水层 / 恐龙化石 / 熔岩腔剖面",
+          "uniqueness": "一图多层信息 · 科学 + 盲盒审美",
+          "frontier_claim": {
+            "human_complexity": "复杂版式/多面板内容过去需要插画、排版和后期合成协作",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "复杂结构化视觉和多面板构图能力"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "版式层级清楚，多区域/多面板不互相打架"
+          ],
+          "research_value": 5,
+          "spectacle_score": 5,
+          "difficulty": 5,
+          "business_value": "mid",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "done",
+          "type": "single",
+          "total_shots": 1,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": "2026-04-22T23:17:30Z",
+          "output_dir": "assets/A/A-07-geological-diorama/",
+          "metadata_path": "assets/A/A-07-geological-diorama/metadata.json"
+        },
+        {
+          "id": "A-08",
+          "name": "Google Maps → 羊皮纸藏宝图",
+          "dimension": "数据格式换壳",
+          "capabilities": [
+            "physics-materials",
+            "world-knowledge",
+            "editing-workflow"
+          ],
+          "example": "北京胡同 Maps 截图 → 15 世纪羊皮纸 · 风玫瑰 + Here Be Dragons + 蜡封",
+          "uniqueness": "保留现代路网拓扑 · 换古代材质 · 实用于房产 / 旅游纪念品",
+          "frontier_claim": {
+            "human_complexity": "物理/材质/光学效果过去依赖 3D、仿真、摄影棚或专业后期；真实世界知识和视觉还原过去需要资料搜集、人工考据和多轮修正",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "对材质、光学和动态瞬间的综合视觉推断；真实世界知识与场景推理能力"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "材质、光照、阴影或物理瞬间可信",
+            "文化、场景或真实世界细节没有明显常识错误"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "high",
+          "viral_potential": "mid",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "done",
+          "type": "series",
+          "total_shots": 3,
+          "owner_session": "371bffb0-d6a0-4929-9c41-40f5ffbbabba",
+          "claimed_at": "2026-04-22T15:38:54Z",
+          "done_at": "2026-04-22T15:44:12Z",
+          "output_dir": "assets/A/A-08-treasure-map/",
+          "metadata_path": "assets/A/A-08-treasure-map/metadata.json"
+        },
+        {
+          "id": "A-09",
+          "name": "IKEA 万物化说明书",
+          "dimension": "幽默 + 信息设计",
+          "capabilities": [
+            "structured-layout",
+            "technical-diagram",
+            "commercial-mockup"
+          ],
+          "example": "'一生 50 年'/'一段感情'/'一碗酸辣汤' 画成宜家手册 · 六角扳手 / 步骤箭头 / 小人表情",
+          "uniqueness": "抽象 × 宜家视觉系统 · 幽默教科书",
+          "frontier_claim": {
+            "human_complexity": "复杂版式/多面板内容过去需要插画、排版和后期合成协作；工业制图和标注过去需要工程理解、矢量绘图和严格版式控制",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "复杂结构化视觉和多面板构图能力；可同时处理线稿、标注、技术图和信息层级"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "版式层级清楚，多区域/多面板不互相打架",
+            "线条、标注、结构拆解或工程视图有专业感"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "mid",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "A-10",
+          "name": "JSON 名片 · Code as Object",
+          "dimension": "代码 × 实体印刷",
+          "capabilities": [
+            "text-rendering",
+            "commercial-mockup"
+          ],
+          "example": "烫金名片内容 = JSON 代码块 · 语法高亮 = 烫金排版 · VS Code chrome 做装饰",
+          "uniqueness": "极客圈自嘲神器 · 开发者社区必转",
+          "frontier_claim": {
+            "human_complexity": "可读文字、字体和位置过去常需要设计软件二次排版",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "更强图中文字渲染与版式跟随"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "所有关键文字可读、无多余字符、位置和字体符合要求"
+          ],
+          "research_value": 3,
+          "spectacle_score": 4,
+          "difficulty": 3,
+          "business_value": "mid",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "done",
+          "type": "single",
+          "total_shots": 1,
+          "owner_session": "371bffb0-d6a0-4929-9c41-40f5ffbbabba",
+          "claimed_at": "2026-04-22T15:38:21Z",
+          "done_at": "2026-04-22T15:40:41Z",
+          "output_dir": "assets/A/A-10-json-business-card/",
+          "metadata_path": "assets/A/A-10-json-business-card/metadata.json"
+        },
+        {
+          "id": "A-11",
+          "name": "Hitman 关卡 · 办公室游戏化",
+          "dimension": "俯视 + UI 叠层",
+          "capabilities": [
+            "multi-image-reference",
+            "structured-layout",
+            "reasoning-composition"
+          ],
+          "example": "俯视公司办公室 · NPC 巡逻路径 + 任务目标 UI + HUD 消音枪 · 'STEAL GPT-6'",
+          "uniqueness": "新闻空间 + 游戏设计融合 · 公司玩梗 / HR 招聘",
+          "frontier_claim": {
+            "human_complexity": "多参考图/身份一致性过去通常要人工挑片、局部重绘或 ControlNet/LoRA 串联；复杂版式/多面板内容过去需要插画、排版和后期合成协作",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "多图参考和身份/风格保持能力；复杂结构化视觉和多面板构图能力"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "主体身份/外观/关键元素在多图或多视角中保持一致",
+            "版式层级清楚，多区域/多面板不互相打架"
+          ],
+          "research_value": 5,
+          "spectacle_score": 5,
+          "difficulty": 5,
+          "business_value": "mid",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "A-12",
+          "name": "Glowing Anatomy Overlay · 霓虹解剖",
+          "dimension": "实拍 + 数据层叠加",
+          "capabilities": [
+            "technical-diagram",
+            "commercial-mockup"
+          ],
+          "example": "跑者实拍 + 红色心率 + 青色呼吸 + 绿色肌肉 + 橙色关节应力 · 数据标注",
+          "uniqueness": "Apple Watch 广告级 · 科普 + 体育赞助 BTL",
+          "frontier_claim": {
+            "human_complexity": "工业制图和标注过去需要工程理解、矢量绘图和严格版式控制",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "可同时处理线稿、标注、技术图和信息层级"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "线条、标注、结构拆解或工程视图有专业感"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "high",
+          "viral_potential": "mid",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "A-13",
+          "name": "Mirror Worlds · 同角色跨时空同框",
+          "dimension": "8 图一致性 + 时空拼接",
+          "capabilities": [
+            "multi-image-reference",
+            "reasoning-composition"
+          ],
+          "example": "同一个人 8 格 · 从小到老同时出现在同一客厅不同角落",
+          "uniqueness": "Thinking mode 一致性独家 + 概念艺术",
+          "frontier_claim": {
+            "human_complexity": "多参考图/身份一致性过去通常要人工挑片、局部重绘或 ControlNet/LoRA 串联",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "多图参考和身份/风格保持能力"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "主体身份/外观/关键元素在多图或多视角中保持一致"
+          ],
+          "research_value": 5,
+          "spectacle_score": 5,
+          "difficulty": 5,
+          "business_value": "low",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "A-14",
+          "name": "时空错位反差",
+          "dimension": "历史 + 现代融合",
+          "capabilities": [
+            "multi-image-reference",
+            "extreme-aspect-ratio",
+            "photorealism",
+            "world-knowledge",
+            "reasoning-composition"
+          ],
+          "example": "古代书生手拿 iPhone / 清代太太戴 VR / 李白打王者荣耀 · 考究服饰 + 现代科技",
+          "uniqueness": "反差萌顶流 · 文化对撞",
+          "frontier_claim": {
+            "human_complexity": "多参考图/身份一致性过去通常要人工挑片、局部重绘或 ControlNet/LoRA 串联；极端画幅和高密度连续叙事过去容易失控或只能人工长图拼接；真实世界知识和视觉还原过去需要资料搜集、人工考据和多轮修正",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "多图参考和身份/风格保持能力；高保真写实、自然光照和材质表现；真实世界知识与场景推理能力"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "主体身份/外观/关键元素在多图或多视角中保持一致",
+            "极端画幅稳定，局部叙事密度足够且不糊成纹理",
+            "文化、场景或真实世界细节没有明显常识错误"
+          ],
+          "research_value": 3,
+          "spectacle_score": 4,
+          "difficulty": 3,
+          "business_value": "mid",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "A-15",
+          "name": "物体拟人化开会",
+          "dimension": "高概念物理 + 拟人",
+          "capabilities": [
+            "photorealism",
+            "physics-materials",
+            "commercial-mockup"
+          ],
+          "example": "一杯咖啡 / 一根雪茄 / 一只钢笔穿西装坐会议桌 · 非卡通写实拟人",
+          "uniqueness": "高级幽默 · 广告级概念",
+          "frontier_claim": {
+            "human_complexity": "物理/材质/光学效果过去依赖 3D、仿真、摄影棚或专业后期",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "高保真写实、自然光照和材质表现；对材质、光学和动态瞬间的综合视觉推断"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "材质、光照、阴影或物理瞬间可信"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "high",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "A-16",
+          "name": "微观 × 宏观对比信息图",
+          "dimension": "科普 + 构图",
+          "capabilities": [
+            "structured-layout",
+            "photorealism",
+            "physics-materials",
+            "reasoning-composition"
+          ],
+          "example": "左显微镜细胞 · 右银河星系 · 揭示相似纹理 · 哲学感 infographic",
+          "uniqueness": "尺度对比 · 科普级内容",
+          "frontier_claim": {
+            "human_complexity": "复杂版式/多面板内容过去需要插画、排版和后期合成协作；物理/材质/光学效果过去依赖 3D、仿真、摄影棚或专业后期",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "复杂结构化视觉和多面板构图能力；高保真写实、自然光照和材质表现；对材质、光学和动态瞬间的综合视觉推断"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "版式层级清楚，多区域/多面板不互相打架",
+            "材质、光照、阴影或物理瞬间可信"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "mid",
+          "viral_potential": "mid",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "A-17",
+          "name": "材质错位",
+          "dimension": "材质理解",
+          "capabilities": [
+            "physics-materials"
+          ],
+          "example": "黄油雕故宫 / 玻璃做玫瑰 / 毛线编洋房 / 蕾丝建教堂",
+          "uniqueness": "物理引擎级材质理解 · 高级手艺美学",
+          "frontier_claim": {
+            "human_complexity": "物理/材质/光学效果过去依赖 3D、仿真、摄影棚或专业后期",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "对材质、光学和动态瞬间的综合视觉推断"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "材质、光照、阴影或物理瞬间可信"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "mid",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "A-18",
+          "name": "神经网络自解释图 · AI 画自己",
+          "dimension": "元 meme + 技术科普",
+          "capabilities": [
+            "photorealism",
+            "reasoning-composition"
+          ],
+          "example": "Transformer self-attention 流程 / 反向传播图解 / Diffusion 去噪流程 · 节点连线 + 数据流 + 注释 · 学术级",
+          "uniqueness": "AI 解释自己的原理 · 天然 meta meme · 开发者社区 + ML Twitter 必转 · 真实爆款(20 likes ja)",
+          "frontier_claim": {
+            "human_complexity": "过去需要跨创意、设计、摄影/3D/后期的复杂工作流，单模型难以一次完成",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "高保真写实、自然光照和材质表现"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "mid",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "A-19",
+          "name": "新中式水墨极简海报",
+          "dimension": "东方极简 + 大留白",
+          "capabilities": [
+            "text-rendering",
+            "structured-layout",
+            "extreme-aspect-ratio",
+            "style-transfer",
+            "commercial-mockup"
+          ],
+          "example": "9:16 竖版 · 奇峻群山 + 中间湖面 · 留白 60% · 春日青绿/雾蓝/淡墨/浅灰 · 低饱和 · 奢华感",
+          "uniqueness": "现代 minimal × 传统水墨 · 跟 S-09 长卷互补 · 地产 / 茶 / 文创品牌首选 · 爆款(46 likes zh)",
+          "frontier_claim": {
+            "human_complexity": "可读文字、字体和位置过去常需要设计软件二次排版；复杂版式/多面板内容过去需要插画、排版和后期合成协作；极端画幅和高密度连续叙事过去容易失控或只能人工长图拼接",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "更强图中文字渲染与版式跟随；复杂结构化视觉和多面板构图能力"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "所有关键文字可读、无多余字符、位置和字体符合要求",
+            "版式层级清楚，多区域/多面板不互相打架",
+            "极端画幅稳定，局部叙事密度足够且不糊成纹理"
+          ],
+          "research_value": 4,
+          "spectacle_score": 3,
+          "difficulty": 3,
+          "business_value": "high",
+          "viral_potential": "mid",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "done",
+          "type": "single",
+          "total_shots": 1,
+          "owner_session": "codex-20260422T232859Z",
+          "claimed_at": "2026-04-22T23:28:59Z",
+          "done_at": "2026-04-22T23:31:47Z",
+          "output_dir": "assets/A/A-19-modern-ink-minimal-poster/",
+          "metadata_path": "assets/A/A-19-modern-ink-minimal-poster/metadata.json"
+        },
+        {
+          "id": "A-20",
+          "name": "架空 IP 电影 / 动漫海报",
+          "dimension": "虚构作品发布级伪真实",
+          "capabilities": [
+            "text-rendering",
+            "structured-layout",
+            "photorealism"
+          ],
+          "example": "'即将上映' 虚构动漫 / 科幻片 · 标题字体 + 演员阵容 + 上映日期 + 制片厂 logo · 看起来像真海报",
+          "uniqueness": "Typography + 电影美学综合 · Sora / MJ 做不到海报层级字体 · 爆款(98 likes ja)",
+          "frontier_claim": {
+            "human_complexity": "可读文字、字体和位置过去常需要设计软件二次排版；复杂版式/多面板内容过去需要插画、排版和后期合成协作",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "更强图中文字渲染与版式跟随；复杂结构化视觉和多面板构图能力；高保真写实、自然光照和材质表现"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "所有关键文字可读、无多余字符、位置和字体符合要求",
+            "版式层级清楚，多区域/多面板不互相打架"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "mid",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "A-21",
+          "name": "伪真实文档 · 票据 / 护照 / 药方 / 字帖",
+          "dimension": "文档级精度 + 材质真实感",
+          "capabilities": [
+            "text-rendering",
+            "photorealism",
+            "physics-materials",
+            "commercial-mockup"
+          ],
+          "example": "登机牌(条码/航班号/gate 乱真)· 护照入境印章 · 中医手写药方 · 书法临摹字帖 · 手相鉴定书 · 任一都可成产品",
+          "uniqueness": "金融 / 旅游 / 中医 / 教育文创级 · 纸张 / 印刷 / 钢印 细节独家",
+          "frontier_claim": {
+            "human_complexity": "可读文字、字体和位置过去常需要设计软件二次排版；物理/材质/光学效果过去依赖 3D、仿真、摄影棚或专业后期",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "更强图中文字渲染与版式跟随；高保真写实、自然光照和材质表现；对材质、光学和动态瞬间的综合视觉推断"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "所有关键文字可读、无多余字符、位置和字体符合要求",
+            "材质、光照、阴影或物理瞬间可信"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "high",
+          "viral_potential": "mid",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "A-22",
+          "name": "名人虚构 snapshot · 伪 iPhone 偷拍",
+          "dimension": "以假乱真 + 名人场景",
+          "capabilities": [
+            "photorealism",
+            "reasoning-composition"
+          ],
+          "example": "Sam Altman 滑板 / Jobs 在便利店买烟 / 马斯克蹲地溜娃 · 看似随手偷拍但不存在此事件",
+          "uniqueness": "比 A-14 时空错位更狠 · 挑战 '照片即真相' · 真实社区爆款(EvoLink JSON 多条)",
+          "frontier_claim": {
+            "human_complexity": "过去需要跨创意、设计、摄影/3D/后期的复杂工作流，单模型难以一次完成",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "高保真写实、自然光照和材质表现"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示"
+          ],
+          "research_value": 3,
+          "spectacle_score": 4,
+          "difficulty": 3,
+          "business_value": "low",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "A-23",
+          "name": "3x3 九宫格多表情写真",
+          "dimension": "同主体一致性 · 静态写真",
+          "capabilities": [
+            "multi-image-reference",
+            "structured-layout",
+            "reasoning-composition"
+          ],
+          "example": "9:16 · 3×3 = 9 格 · 同一人 9 种表情 / pose / 服装 · 脸保持不变 · Korean idol 写真集 / 家族相册",
+          "uniqueness": "Thinking mode 一致性静态应用 · 跟 S-02 叙事漫画区分 · 顶流爆款(406 likes en)",
+          "frontier_claim": {
+            "human_complexity": "多参考图/身份一致性过去通常要人工挑片、局部重绘或 ControlNet/LoRA 串联；复杂版式/多面板内容过去需要插画、排版和后期合成协作",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "多图参考和身份/风格保持能力；复杂结构化视觉和多面板构图能力"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "主体身份/外观/关键元素在多图或多视角中保持一致",
+            "版式层级清楚，多区域/多面板不互相打架"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "mid",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "A-24",
+          "name": "Wes Anderson × 一切 · 导演视觉语言",
+          "dimension": "导演美学体系迁移",
+          "capabilities": [
+            "text-rendering",
+            "structured-layout",
+            "style-transfer",
+            "optical-illusion-geometry",
+            "commercial-mockup"
+          ],
+          "example": "对称构图 + 中轴 + pastel 糖色 + 中央人物正视镜头 × 任何主题(医院候诊 / 中国春运 / SpaceX 发射)",
+          "uniqueness": "导演作者性语言精准复刻 · 单图 = 电影海报 · 跨项目品牌统一",
+          "frontier_claim": {
+            "human_complexity": "可读文字、字体和位置过去常需要设计软件二次排版；复杂版式/多面板内容过去需要插画、排版和后期合成协作；视觉错觉和几何构造过去需要数学、透视和手工校正",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "更强图中文字渲染与版式跟随；复杂结构化视觉和多面板构图能力；几何、透视和风格约束的一体化生成"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "所有关键文字可读、无多余字符、位置和字体符合要求",
+            "版式层级清楚，多区域/多面板不互相打架",
+            "几何/错觉/对称规则可被肉眼验证"
+          ],
+          "research_value": 3,
+          "spectacle_score": 4,
+          "difficulty": 3,
+          "business_value": "mid",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "A-25",
+          "name": "Ghibli 反题材 · 硬核科幻 × 吉卜力",
+          "dimension": "风格 × 题材强对撞",
+          "capabilities": [
+            "style-transfer"
+          ],
+          "example": "Ghibli 柔糖水彩画末日废墟 / Cyberpunk 2077 NPC / SpaceX 火箭发射 / 华尔街 trading floor",
+          "uniqueness": "风格反串顶流 · 跟 S-03 '你在吉卜力' 不同(S-03 是把人融入 · 这是把硬核题材 Ghibli 化)",
+          "frontier_claim": {
+            "human_complexity": "过去需要跨创意、设计、摄影/3D/后期的复杂工作流，单模型难以一次完成",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "把语义理解、构图、风格和细节渲染压进一次生成"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示"
+          ],
+          "research_value": 3,
+          "spectacle_score": 4,
+          "difficulty": 3,
+          "business_value": "mid",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "A-26",
+          "name": "品牌 × 艺术家跨界联名 mockup",
+          "dimension": "联名装帧 · 虚构合作",
+          "capabilities": [
+            "text-rendering",
+            "structured-layout",
+            "style-transfer",
+            "commercial-mockup"
+          ],
+          "example": "Nike × 奈良美智 / 可口可乐 × Banksy / 苹果 × 草间弥生 / Jordan × 宫崎骏 · 产品 + 包装 + 广告海报三件套",
+          "uniqueness": "联名产品几百万签约费 · 单模 mockup 一次出 · 设计师提案神器",
+          "frontier_claim": {
+            "human_complexity": "可读文字、字体和位置过去常需要设计软件二次排版；复杂版式/多面板内容过去需要插画、排版和后期合成协作",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "更强图中文字渲染与版式跟随；复杂结构化视觉和多面板构图能力"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "所有关键文字可读、无多余字符、位置和字体符合要求",
+            "版式层级清楚，多区域/多面板不互相打架"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "high",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "A-27",
+          "name": "Escher 不可能几何 · 永恒楼梯",
+          "dimension": "数学艺术 · 视觉悖论",
+          "capabilities": [
+            "optical-illusion-geometry"
+          ],
+          "example": "彭罗斯三角 / 永恒上升楼梯 / 瀑布循环 / 相对性空间(两个方向都是下楼)· M.C. Escher 黑白线雕风",
+          "uniqueness": "手工绘制需透视学 + 几何知识 · 单模生成 · Gallery 级艺术品",
+          "frontier_claim": {
+            "human_complexity": "视觉错觉和几何构造过去需要数学、透视和手工校正",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "几何、透视和风格约束的一体化生成"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "几何/错觉/对称规则可被肉眼验证"
+          ],
+          "research_value": 5,
+          "spectacle_score": 5,
+          "difficulty": 5,
+          "business_value": "low",
+          "viral_potential": "mid",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "A-28",
+          "name": "X 主题地铁路线图",
+          "dimension": "信息抽象 · 关系可视化",
+          "capabilities": [
+            "structured-layout",
+            "technical-diagram",
+            "reasoning-composition",
+            "commercial-mockup"
+          ],
+          "example": "莎士比亚戏剧以地铁线串联 / 哲学史人物地铁图 / AI 发展史 1950-2026 / 中国朝代更替",
+          "uniqueness": "伦敦地铁图视觉语言 × 任意知识图谱 · 教育产品刚需 · 独立艺术品",
+          "frontier_claim": {
+            "human_complexity": "复杂版式/多面板内容过去需要插画、排版和后期合成协作；工业制图和标注过去需要工程理解、矢量绘图和严格版式控制",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "复杂结构化视觉和多面板构图能力；可同时处理线稿、标注、技术图和信息层级"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "版式层级清楚，多区域/多面板不互相打架",
+            "线条、标注、结构拆解或工程视图有专业感"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "mid",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "A-29",
+          "name": "多时代 Album Cover 专辑封面合集",
+          "dimension": "音乐视觉 · 时代风格",
+          "capabilities": [
+            "style-transfer",
+            "commercial-mockup"
+          ],
+          "example": "一组 6 张 · 1960s 民谣 / 1970s 摇滚 / 1980s synthwave / 1990s grunge / 2000s emo / 2020s hyperpop · 同主题不同时代演绎",
+          "uniqueness": "音乐视觉史浓缩 · 独立音乐人 / 品牌传播用",
+          "frontier_claim": {
+            "human_complexity": "过去需要跨创意、设计、摄影/3D/后期的复杂工作流，单模型难以一次完成",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "把语义理解、构图、风格和细节渲染压进一次生成"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "mid",
+          "viral_potential": "mid",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "A-30",
+          "name": "Risograph 丝网错版印刷",
+          "dimension": "印刷工艺 · 2-3 色套印",
+          "capabilities": [
+            "structured-layout",
+            "photorealism",
+            "physics-materials",
+            "style-transfer"
+          ],
+          "example": "荧光粉 + 钴蓝 + 黑 三色分版 · 故意错位 1-2mm · 颗粒 halftone · 80 年代 zine / 独立漫画感",
+          "uniqueness": "印刷物理特性模拟 · 小众设计圈图腾 · 区别于胶片(C-09)是印刷 vs 摄影",
+          "frontier_claim": {
+            "human_complexity": "复杂版式/多面板内容过去需要插画、排版和后期合成协作；物理/材质/光学效果过去依赖 3D、仿真、摄影棚或专业后期",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "复杂结构化视觉和多面板构图能力；高保真写实、自然光照和材质表现；对材质、光学和动态瞬间的综合视觉推断"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "版式层级清楚，多区域/多面板不互相打架",
+            "材质、光照、阴影或物理瞬间可信"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "mid",
+          "viral_potential": "mid",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "A-31",
+          "name": "电影 Storyboard 分镜 6-12 帧",
+          "dimension": "电影工业 · 镜头语言",
+          "capabilities": [
+            "structured-layout",
+            "physics-materials",
+            "technical-diagram",
+            "commercial-mockup"
+          ],
+          "example": "一个场景 · 6 帧 · 每帧标镜号(SC12-A)+ 运动箭头(PAN/ZOOM/DOLLY)+ 时长(3.2s)+ 台词气泡 · 铅笔手稿感",
+          "uniqueness": "影视工业标准产物 · 导演 / 编剧 / 广告公司刚需 · 省 storyboard artist 1 周工时",
+          "frontier_claim": {
+            "human_complexity": "复杂版式/多面板内容过去需要插画、排版和后期合成协作；物理/材质/光学效果过去依赖 3D、仿真、摄影棚或专业后期；工业制图和标注过去需要工程理解、矢量绘图和严格版式控制",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "复杂结构化视觉和多面板构图能力；对材质、光学和动态瞬间的综合视觉推断；可同时处理线稿、标注、技术图和信息层级"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "版式层级清楚，多区域/多面板不互相打架",
+            "材质、光照、阴影或物理瞬间可信",
+            "线条、标注、结构拆解或工程视图有专业感"
+          ],
+          "research_value": 5,
+          "spectacle_score": 5,
+          "difficulty": 5,
+          "business_value": "high",
+          "viral_potential": "low",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "A-32",
+          "name": "Character Turnaround 角色四视图",
+          "dimension": "游戏 / 动画工业 pipeline",
+          "capabilities": [
+            "multi-image-reference",
+            "technical-diagram",
+            "reasoning-composition",
+            "editing-workflow"
+          ],
+          "example": "同一角色 · 正 / 45° / 90° 侧 / 背 四视图 · T-pose · 身高标尺 · concept art sheet 风",
+          "uniqueness": "游戏 / 动画公司设计 pipeline 标准 · 通常原画师 1-2 天 · 单模一次出 · 替代 DALL-E + ControlNet 复杂链",
+          "frontier_claim": {
+            "human_complexity": "多参考图/身份一致性过去通常要人工挑片、局部重绘或 ControlNet/LoRA 串联；工业制图和标注过去需要工程理解、矢量绘图和严格版式控制",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "多图参考和身份/风格保持能力；可同时处理线稿、标注、技术图和信息层级"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "主体身份/外观/关键元素在多图或多视角中保持一致",
+            "线条、标注、结构拆解或工程视图有专业感"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "high",
+          "viral_potential": "low",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "A-33",
+          "name": "Y2K / Vaporwave / CRT 时代美学",
+          "dimension": "时代风格 · 数字怀旧",
+          "capabilities": [
+            "physics-materials",
+            "style-transfer"
+          ],
+          "example": "Y2K iridescent 金属 + chrome 气泡 / Vaporwave 日文汉字 + 希腊雕塑 + 棕榈 + 粉紫 / CRT 扫描线 + RGB 色散 + glitch",
+          "uniqueness": "互联网时代美学考古 · Gen-Z 传播密码 · Tumblr / Instagram / 抖音顶流",
+          "frontier_claim": {
+            "human_complexity": "物理/材质/光学效果过去依赖 3D、仿真、摄影棚或专业后期",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "对材质、光学和动态瞬间的综合视觉推断"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "材质、光照、阴影或物理瞬间可信"
+          ],
+          "research_value": 3,
+          "spectacle_score": 4,
+          "difficulty": 3,
+          "business_value": "mid",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "A-34",
+          "name": "The New Yorker editorial illustration",
+          "dimension": "杂志叙事插画 · 暗寓符号",
+          "capabilities": [
+            "structured-layout",
+            "reasoning-composition",
+            "style-transfer",
+            "editing-workflow",
+            "commercial-mockup"
+          ],
+          "example": "纽约客风 · 手绘线条 + 水彩填色 + 装饰花边 · 双关隐喻主题(AI 时代劳动 / 社交网络孤独 / 气候变化)",
+          "uniqueness": "编辑插画顶尖杂志语言 · 插画师职业生涯巅峰 · 品牌 / 媒体内容级",
+          "frontier_claim": {
+            "human_complexity": "复杂版式/多面板内容过去需要插画、排版和后期合成协作",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "复杂结构化视觉和多面板构图能力"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "版式层级清楚，多区域/多面板不互相打架"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "mid",
+          "viral_potential": "mid",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "A-35",
+          "name": "曼荼罗 Mandala · 精密对称几何",
+          "dimension": "宗教几何 · 同心对称",
+          "capabilities": [
+            "world-knowledge",
+            "optical-illusion-geometry"
+          ],
+          "example": "藏传佛教 8 层曼荼罗 / 伊斯兰几何星形 / Kandinsky 抽象几何 · 圆形 / 放射对称 · 手绘金箔感",
+          "uniqueness": "僧侣数周手绘 · 几何精度要求极高 · 疗愈 / 冥想 / 文化级 · 一秒可辨的东方美学",
+          "frontier_claim": {
+            "human_complexity": "视觉错觉和几何构造过去需要数学、透视和手工校正；真实世界知识和视觉还原过去需要资料搜集、人工考据和多轮修正",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "真实世界知识与场景推理能力；几何、透视和风格约束的一体化生成"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "几何/错觉/对称规则可被肉眼验证",
+            "文化、场景或真实世界细节没有明显常识错误"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "mid",
+          "viral_potential": "mid",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "A-36",
+          "name": "抽象表现主义 · Pollock 滴画 / Rothko 色域",
+          "dimension": "抽象艺术语言",
+          "capabilities": [
+            "style-transfer"
+          ],
+          "example": "Pollock 滴溅混沌线条 / Rothko 大色块渐变叠加 / de Kooning 女性碎片 / Kline 黑白书法笔",
+          "uniqueness": "MoMA 级美术史语言 · 不是随意涂鸦 · 精确还原某位大师技法",
+          "frontier_claim": {
+            "human_complexity": "过去需要跨创意、设计、摄影/3D/后期的复杂工作流，单模型难以一次完成",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "把语义理解、构图、风格和细节渲染压进一次生成"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "low",
+          "viral_potential": "low",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "A-37",
+          "name": "政治宣传海报艺术史",
+          "dimension": "政治视觉 · 时代印记",
+          "capabilities": [
+            "text-rendering",
+            "structured-layout",
+            "world-knowledge",
+            "style-transfer"
+          ],
+          "example": "苏联 Rodchenko 构成主义 / 中国文革大跃进 / 二战 Uncle Sam / 古巴 Che 头像 / 北朝鲜 socialist realism",
+          "uniqueness": "视觉设计史一大主线 · 集合了极端视觉冲击力 · 平面设计 / 历史教学用",
+          "frontier_claim": {
+            "human_complexity": "可读文字、字体和位置过去常需要设计软件二次排版；复杂版式/多面板内容过去需要插画、排版和后期合成协作；真实世界知识和视觉还原过去需要资料搜集、人工考据和多轮修正",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "更强图中文字渲染与版式跟随；复杂结构化视觉和多面板构图能力；真实世界知识与场景推理能力"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "所有关键文字可读、无多余字符、位置和字体符合要求",
+            "版式层级清楚，多区域/多面板不互相打架",
+            "文化、场景或真实世界细节没有明显常识错误"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "low",
+          "viral_potential": "mid",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "A-38",
+          "name": "Banksy 街头讽刺 · stencil 涂鸦",
+          "dimension": "街头艺术 · 社会评论",
+          "capabilities": [
+            "reasoning-composition",
+            "style-transfer"
+          ],
+          "example": "气球女孩 / 抗议者掷花 / 猩猩议员 · 黑色 stencil + 红色重点 + 砖墙实景 + 社会隐喻",
+          "uniqueness": "Banksy 全球现象级 · 视觉 + 叙事 + 反叛精神三合一",
+          "frontier_claim": {
+            "human_complexity": "过去需要跨创意、设计、摄影/3D/后期的复杂工作流，单模型难以一次完成",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "把语义理解、构图、风格和细节渲染压进一次生成"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示"
+          ],
+          "research_value": 3,
+          "spectacle_score": 4,
+          "difficulty": 3,
+          "business_value": "mid",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "A-39",
+          "name": "Art Nouveau · Mucha 装饰女性 + 花卉",
+          "dimension": "新艺术运动 · 19 世纪末",
+          "capabilities": [
+            "text-rendering",
+            "structured-layout",
+            "style-transfer",
+            "commercial-mockup"
+          ],
+          "example": "Alphonse Mucha 风 · 飘发女子 + 星形光环 + 百合藤蔓 + 书法 typography · 广告海报(香槟 / 火车 / 烟草)",
+          "uniqueness": "装饰艺术巅峰 · 石版印刷工艺黄金年代 · 现代品牌高级感挪用",
+          "frontier_claim": {
+            "human_complexity": "可读文字、字体和位置过去常需要设计软件二次排版；复杂版式/多面板内容过去需要插画、排版和后期合成协作",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "更强图中文字渲染与版式跟随；复杂结构化视觉和多面板构图能力"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "所有关键文字可读、无多余字符、位置和字体符合要求",
+            "版式层级清楚，多区域/多面板不互相打架"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "high",
+          "viral_potential": "mid",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "A-40",
+          "name": "虚构古文字 / 符号系统",
+          "dimension": "语言考古 · 自创符号",
+          "capabilities": [
+            "text-rendering"
+          ],
+          "example": "自创魔幻文字(类 Tolkien 精灵文)/ 仿甲骨文刻玉 / 仿玛雅圆石 / 仿卢恩文 rune · 附'对照表'伪解码页",
+          "uniqueness": "视觉 × 语言学 × 虚构世界观 · 影视 / 游戏 / 小说级美术产物",
+          "frontier_claim": {
+            "human_complexity": "可读文字、字体和位置过去常需要设计软件二次排版",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "更强图中文字渲染与版式跟随"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "所有关键文字可读、无多余字符、位置和字体符合要求"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "low",
+          "viral_potential": "mid",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "A-41",
+          "name": "米其林餐盘 Hero Shot",
+          "dimension": "专业食物摄影 · fine dining",
+          "capabilities": [
+            "photorealism",
+            "world-knowledge",
+            "style-transfer",
+            "commercial-mockup"
+          ],
+          "example": "风格:黑色大理石底 + 顶光或 45° 侧光 + 纯白瓷盘 · 极简构图 · 4K 商业级 · 例:鱼子酱 + 食用花瓣 + 酱汁点缀 + 金箔 · 俯视",
+          "uniqueness": "三星主厨 + 食物摄影师一小时出一张 · 顶级餐厅 Instagram 营销命根子",
+          "frontier_claim": {
+            "human_complexity": "真实世界知识和视觉还原过去需要资料搜集、人工考据和多轮修正",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "高保真写实、自然光照和材质表现；真实世界知识与场景推理能力"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "文化、场景或真实世界细节没有明显常识错误"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "high",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "A-42",
+          "name": "刺青 Flash Sheet 设计纸",
+          "dimension": "刺青工作室标准 · 平面排布",
+          "capabilities": [
+            "style-transfer"
+          ],
+          "example": "风格:一张白纸 + 10-20 个独立图案 + 编号 + 尺寸 · old school 彩色或纯黑线描 · 例:玫瑰 / 燕子 / 船锚 / 匕首 / 心形 / 骷髅 · 传统 American traditional 风",
+          "uniqueness": "刺青师工作室挂墙 · 客户选款 · 不是古典手绘 · 现代商业刺青语言",
+          "frontier_claim": {
+            "human_complexity": "过去需要跨创意、设计、摄影/3D/后期的复杂工作流，单模型难以一次完成",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "把语义理解、构图、风格和细节渲染压进一次生成"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示"
+          ],
+          "research_value": 4,
+          "spectacle_score": 3,
+          "difficulty": 3,
+          "business_value": "high",
+          "viral_potential": "mid",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "A-43",
+          "name": "珠宝设计 CAD + 3D + 佩戴 三合一",
+          "dimension": "珠宝设计师提案",
+          "capabilities": [
+            "photorealism",
+            "physics-materials",
+            "technical-diagram",
+            "style-transfer",
+            "commercial-mockup"
+          ],
+          "example": "风格:三栏布局 · 左 CAD 线框 + 尺寸标注 + 右 Octane 渲染实物 + 再右 真人佩戴 iPhone 摄 · 例:订婚戒指 / 项链 / 耳钉",
+          "uniqueness": "Tiffany / Cartier 设计师给客户提案标准 · 多种技术语言拼在一张",
+          "frontier_claim": {
+            "human_complexity": "物理/材质/光学效果过去依赖 3D、仿真、摄影棚或专业后期；工业制图和标注过去需要工程理解、矢量绘图和严格版式控制",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "高保真写实、自然光照和材质表现；对材质、光学和动态瞬间的综合视觉推断；可同时处理线稿、标注、技术图和信息层级"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "材质、光照、阴影或物理瞬间可信",
+            "线条、标注、结构拆解或工程视图有专业感"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "high",
+          "viral_potential": "mid",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "A-44",
+          "name": "汽车 Concept Art · 设计工作室级",
+          "dimension": "数码板绘 + 渲染 · 工业设计",
+          "capabilities": [
+            "technical-diagram",
+            "style-transfer",
+            "commercial-mockup"
+          ],
+          "example": "风格:碳笔草图 + 马克笔快速上色 · 3/4 侧面 + 前视 + 侧视 + 俯视 4 视图 · 铅笔网格辅助线 · 例:概念跑车 / 月球车 / 蒸汽朋克机车",
+          "uniqueness": "Pininfarina / BMW / Hyundai 设计工作室 concept 标准 · 专业硬核",
+          "frontier_claim": {
+            "human_complexity": "工业制图和标注过去需要工程理解、矢量绘图和严格版式控制",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "可同时处理线稿、标注、技术图和信息层级"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "线条、标注、结构拆解或工程视图有专业感"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "high",
+          "viral_potential": "mid",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "A-45",
+          "name": "法庭画家速写",
+          "dimension": "新闻现场画作 · 禁摄影替代",
+          "capabilities": [
+            "photorealism",
+            "world-knowledge",
+            "style-transfer"
+          ],
+          "example": "风格:彩色铅笔 + 水彩淡彩 + 速写纸 · 法官 / 被告 / 律师 / 陪审团表情捕捉 · 例:世纪审判瞬间 + 报纸报道配图级",
+          "uniqueness": "美国联邦法院禁拍 · 画家独占视角 · 历史档案级",
+          "frontier_claim": {
+            "human_complexity": "真实世界知识和视觉还原过去需要资料搜集、人工考据和多轮修正",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "高保真写实、自然光照和材质表现；真实世界知识与场景推理能力"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "文化、场景或真实世界细节没有明显常识错误"
+          ],
+          "research_value": 3,
+          "spectacle_score": 3,
+          "difficulty": 3,
+          "business_value": "low",
+          "viral_potential": "low",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "A-46",
+          "name": "化妆 4 阶段演变 · 美妆博主",
+          "dimension": "高清前摄自拍 · 真实感",
+          "capabilities": [
+            "structured-layout",
+            "photorealism",
+            "style-transfer",
+            "commercial-mockup"
+          ],
+          "example": "风格:iPhone 前摄高清 + 美妆博主自拍构图 · 4 格或九宫格 · 素颜 → 底妆 → 眼妆 → 完妆 · 小红书 / 抖音风",
+          "uniqueness": "Sephora / MAC 级专业 + 素人化妆博主美学 · 商业级化妆 case study",
+          "frontier_claim": {
+            "human_complexity": "复杂版式/多面板内容过去需要插画、排版和后期合成协作",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "复杂结构化视觉和多面板构图能力；高保真写实、自然光照和材质表现"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "版式层级清楚，多区域/多面板不互相打架"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 3,
+          "business_value": "high",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "A-47",
+          "name": "咖啡拉花图鉴 · Latte Art",
+          "dimension": "顶视摄影 · 咖啡杯口",
+          "capabilities": [
+            "structured-layout",
+            "photorealism",
+            "style-transfer",
+            "commercial-mockup"
+          ],
+          "example": "风格:纯顶视 · 深咖啡底 + 白奶泡拉花 + 咖啡杯边缘清晰 · 例:9 种拉花对照 · 心 / 玫瑰 / 天鹅 / 郁金香 / 蕨叶 / 月桂",
+          "uniqueness": "咖啡师比赛 latte art 标准 · 俯视构图 · 摄影语言非手绘",
+          "frontier_claim": {
+            "human_complexity": "复杂版式/多面板内容过去需要插画、排版和后期合成协作",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "复杂结构化视觉和多面板构图能力；高保真写实、自然光照和材质表现"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "版式层级清楚，多区域/多面板不互相打架"
+          ],
+          "research_value": 3,
+          "spectacle_score": 4,
+          "difficulty": 3,
+          "business_value": "mid",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        }
+      ],
+      "tier_intent": "高概念传播级创意，优先证明“人类做很复杂但一眼惊艳”。"
+    },
+    {
+      "tier": "B · 高难 3D / 物理 / 材质",
+      "items": [
+        {
+          "id": "B-01",
+          "name": "Octane / Keyshot 级产品渲染",
+          "dimension": "写实 3D 质感",
+          "capabilities": [
+            "photorealism",
+            "physics-materials",
+            "editing-workflow",
+            "commercial-mockup"
+          ],
+          "example": "高级香水瓶 · 玻璃折射 + 金属盖反光 + 液体漂浮 + 无缝灰色背景 · 商业拍摄级",
+          "uniqueness": "单模替代 3D 建模 + 渲染 workflow",
+          "frontier_claim": {
+            "human_complexity": "物理/材质/光学效果过去依赖 3D、仿真、摄影棚或专业后期",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "高保真写实、自然光照和材质表现；对材质、光学和动态瞬间的综合视觉推断"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "材质、光照、阴影或物理瞬间可信"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "high",
+          "viral_potential": "mid",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "B-02",
+          "name": "流体 · 烟雾 · 爆炸",
+          "dimension": "物理模拟级",
+          "capabilities": [
+            "physics-materials",
+            "commercial-mockup"
+          ],
+          "example": "咖啡倒进杯子一瞬 · 奶花旋起 · 慢动作 · 毫秒级",
+          "uniqueness": "物理引擎级动态瞬间",
+          "frontier_claim": {
+            "human_complexity": "物理/材质/光学效果过去依赖 3D、仿真、摄影棚或专业后期",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "对材质、光学和动态瞬间的综合视觉推断"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "材质、光照、阴影或物理瞬间可信"
+          ],
+          "research_value": 5,
+          "spectacle_score": 5,
+          "difficulty": 5,
+          "business_value": "mid",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "B-03",
+          "name": "精密机械爆炸图",
+          "dimension": "技术制图 + 标注",
+          "capabilities": [
+            "multi-image-reference",
+            "physics-materials",
+            "technical-diagram",
+            "commercial-mockup"
+          ],
+          "example": "机械表拆解 · 300 个零件 exploded view + 数字标注 + 装配箭头",
+          "uniqueness": "技术艺术融合 · 可做钟表品牌宣传",
+          "frontier_claim": {
+            "human_complexity": "多参考图/身份一致性过去通常要人工挑片、局部重绘或 ControlNet/LoRA 串联；物理/材质/光学效果过去依赖 3D、仿真、摄影棚或专业后期；工业制图和标注过去需要工程理解、矢量绘图和严格版式控制",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "多图参考和身份/风格保持能力；对材质、光学和动态瞬间的综合视觉推断；可同时处理线稿、标注、技术图和信息层级"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "主体身份/外观/关键元素在多图或多视角中保持一致",
+            "材质、光照、阴影或物理瞬间可信",
+            "线条、标注、结构拆解或工程视图有专业感"
+          ],
+          "research_value": 5,
+          "spectacle_score": 5,
+          "difficulty": 5,
+          "business_value": "high",
+          "viral_potential": "mid",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "B-04",
+          "name": "微距真实纹理",
+          "dimension": "极限细节",
+          "capabilities": [
+            "photorealism",
+            "physics-materials"
+          ],
+          "example": "蝴蝶翅膀鳞粉 / 雪花六角结晶 / 水滴表面张力 · 微距镜头感",
+          "uniqueness": "极限放大 · 摄影比赛级",
+          "frontier_claim": {
+            "human_complexity": "物理/材质/光学效果过去依赖 3D、仿真、摄影棚或专业后期",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "高保真写实、自然光照和材质表现；对材质、光学和动态瞬间的综合视觉推断"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "材质、光照、阴影或物理瞬间可信"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "mid",
+          "viral_potential": "mid",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "B-05",
+          "name": "复杂光学 · caustics / subsurface",
+          "dimension": "光线物理",
+          "capabilities": [
+            "photorealism",
+            "physics-materials",
+            "reasoning-composition"
+          ],
+          "example": "水波折射到水底光斑(焦散)/ 蜡烛照脸皮肤透光(次表面散射)/ 钻石多面反射",
+          "uniqueness": "光线物理真实 · 渲染挑战天花板",
+          "frontier_claim": {
+            "human_complexity": "物理/材质/光学效果过去依赖 3D、仿真、摄影棚或专业后期",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "高保真写实、自然光照和材质表现；对材质、光学和动态瞬间的综合视觉推断"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "材质、光照、阴影或物理瞬间可信"
+          ],
+          "research_value": 5,
+          "spectacle_score": 5,
+          "difficulty": 5,
+          "business_value": "mid",
+          "viral_potential": "low",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "B-06",
+          "name": "3D 手办盲盒级可爱",
+          "dimension": "3D 立体 + 商品质感",
+          "capabilities": [
+            "physics-materials",
+            "style-transfer"
+          ],
+          "example": "POP MART 风 · 站在透明塑料底座上 · 哑光 PVC 材质 · studio 棚拍 · 背后光晕",
+          "uniqueness": "潮玩审美 · 年轻人爆款",
+          "frontier_claim": {
+            "human_complexity": "物理/材质/光学效果过去依赖 3D、仿真、摄影棚或专业后期",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "对材质、光学和动态瞬间的综合视觉推断"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "材质、光照、阴影或物理瞬间可信"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 3,
+          "business_value": "high",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "B-07",
+          "name": "黏土 claymation 风",
+          "dimension": "材质一致性",
+          "capabilities": [
+            "multi-image-reference",
+            "physics-materials",
+            "style-transfer"
+          ],
+          "example": "整个人 / 动物 / 场景都是黏土捏成 · 有捏痕 · 粘土反光 · stop motion 感",
+          "uniqueness": "萌系小众 · 儿童内容 / 绘本",
+          "frontier_claim": {
+            "human_complexity": "多参考图/身份一致性过去通常要人工挑片、局部重绘或 ControlNet/LoRA 串联；物理/材质/光学效果过去依赖 3D、仿真、摄影棚或专业后期",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "多图参考和身份/风格保持能力；对材质、光学和动态瞬间的综合视觉推断"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "主体身份/外观/关键元素在多图或多视角中保持一致",
+            "材质、光照、阴影或物理瞬间可信"
+          ],
+          "research_value": 3,
+          "spectacle_score": 3,
+          "difficulty": 3,
+          "business_value": "mid",
+          "viral_potential": "mid",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "B-08",
+          "name": "Lego / 积木全场景重构",
+          "dimension": "IP 材质转化",
+          "capabilities": [
+            "physics-materials",
+            "style-transfer",
+            "commercial-mockup"
+          ],
+          "example": "故宫 / 蒸汽朋克街区 / Minecraft 世界 / 星球大战场景 乐高化 · 每块可见 · 玩具盒拍照感 · studio 光",
+          "uniqueness": "IP × 乐高美学 · 品牌 × 怀旧合作场景 · 跟 B-06 POP MART 手办不同(单品 vs 全场景)",
+          "frontier_claim": {
+            "human_complexity": "物理/材质/光学效果过去依赖 3D、仿真、摄影棚或专业后期",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "对材质、光学和动态瞬间的综合视觉推断"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "材质、光照、阴影或物理瞬间可信"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 3,
+          "business_value": "high",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "B-09",
+          "name": "移轴微缩迷你世界 · tilt-shift",
+          "dimension": "镜头语言 · 微距错觉",
+          "capabilities": [
+            "photorealism",
+            "physics-materials",
+            "style-transfer"
+          ],
+          "example": "俯视城市 / 工地 / 游园会 / 足球场 · tilt-shift 前后模糊 · 人车变玩具感 · 景深仿微距",
+          "uniqueness": "镜头美学独立类 · 跟 B-06 手办(单体 3D)不同 · 爆款风格 'mini cyberpunk'",
+          "frontier_claim": {
+            "human_complexity": "物理/材质/光学效果过去依赖 3D、仿真、摄影棚或专业后期",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "高保真写实、自然光照和材质表现；对材质、光学和动态瞬间的综合视觉推断"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "材质、光照、阴影或物理瞬间可信"
+          ],
+          "research_value": 3,
+          "spectacle_score": 4,
+          "difficulty": 3,
+          "business_value": "mid",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "B-10",
+          "name": "长曝光 Light Painting · 星轨 / 光迹",
+          "dimension": "摄影工艺 · 长时间曝光",
+          "capabilities": [
+            "photorealism"
+          ],
+          "example": "车流光迹 / 星轨同心圆 / 烟花绽放 / silky 瀑布 / 钢丝绒火花旋转 · 快门 10s-30min 模拟",
+          "uniqueness": "野外蹲点数小时等天时 · 单模一次出 · 摄影赛级",
+          "frontier_claim": {
+            "human_complexity": "过去需要跨创意、设计、摄影/3D/后期的复杂工作流，单模型难以一次完成",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "高保真写实、自然光照和材质表现"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "mid",
+          "viral_potential": "mid",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "B-11",
+          "name": "水下摄影 · 气泡光刀",
+          "dimension": "水下光学 · 散射",
+          "capabilities": [
+            "photorealism",
+            "physics-materials"
+          ],
+          "example": "潜水员逆光剪影 · 鱼群穿过光柱 · 珊瑚荧光 · 水面波纹折射光刀 · 蓝绿色调主导",
+          "uniqueness": "水下摄影需潜水证 + 专业装备 + 碰运气 · 单模稳定出",
+          "frontier_claim": {
+            "human_complexity": "物理/材质/光学效果过去依赖 3D、仿真、摄影棚或专业后期",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "高保真写实、自然光照和材质表现；对材质、光学和动态瞬间的综合视觉推断"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "材质、光照、阴影或物理瞬间可信"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "mid",
+          "viral_potential": "mid",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "B-12",
+          "name": "建筑摄影 · 对称广角 HDR",
+          "dimension": "建筑美学 · 对称构图",
+          "capabilities": [
+            "photorealism",
+            "world-knowledge",
+            "optical-illusion-geometry",
+            "commercial-mockup"
+          ],
+          "example": "万神殿穹顶仰视对称 / Apple Park 俯视同心圆 / 梵蒂冈圣彼得广场 / 北京中轴线 · 极对称 + 消点透视 + HDR 层次",
+          "uniqueness": "建筑摄影需专业 tilt-shift 镜头 + 蹲点蓝调时刻 · 单模一次出 · 房地产 / 旅游品牌",
+          "frontier_claim": {
+            "human_complexity": "视觉错觉和几何构造过去需要数学、透视和手工校正；真实世界知识和视觉还原过去需要资料搜集、人工考据和多轮修正",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "高保真写实、自然光照和材质表现；真实世界知识与场景推理能力；几何、透视和风格约束的一体化生成"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "几何/错觉/对称规则可被肉眼验证",
+            "文化、场景或真实世界细节没有明显常识错误"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "high",
+          "viral_potential": "mid",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "B-13",
+          "name": "自然奇观摄影",
+          "dimension": "地球极致时刻",
+          "capabilities": [
+            "photorealism"
+          ],
+          "example": "极光 Aurora 北欧夜空 / 火山熔岩喷发 / 闪电击树瞬间 / 冰川蓝洞 / 沙漠星空银河 / 钟乳石洞",
+          "uniqueness": "BBC Planet Earth 级画面 · 需等天时地利 + 专业装备 · 单模稳定出",
+          "frontier_claim": {
+            "human_complexity": "过去需要跨创意、设计、摄影/3D/后期的复杂工作流，单模型难以一次完成",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "高保真写实、自然光照和材质表现"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "mid",
+          "viral_potential": "mid",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "B-14",
+          "name": "天文望远镜风 · 星云星系",
+          "dimension": "深空天文 · 假彩色合成",
+          "capabilities": [
+            "photorealism",
+            "world-knowledge"
+          ],
+          "example": "哈勃 Pillars of Creation / JWST 韦伯深空场 / 黑洞吸积盘 / 超新星残骸 / 红巨星爆发 · 假彩色 + 星尘噪点",
+          "uniqueness": "JWST 工程级产物 · NASA 年度视觉 · 教育 / 科普 / 墙纸刚需",
+          "frontier_claim": {
+            "human_complexity": "真实世界知识和视觉还原过去需要资料搜集、人工考据和多轮修正",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "高保真写实、自然光照和材质表现；真实世界知识与场景推理能力"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "文化、场景或真实世界细节没有明显常识错误"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "mid",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "B-15",
+          "name": "Fractal / Generative 算法艺术",
+          "dimension": "数学可视化 · 生成艺术",
+          "capabilities": [
+            "frontier-creative-composition"
+          ],
+          "example": "Mandelbrot 分形 / Voronoi 泰森多边形 / Flow field 流场 / Reaction-diffusion 反应扩散 / L-system 植物",
+          "uniqueness": "Processing / P5.js 社群数十年累积 · 数学 × 视觉 · 无限放大仍有细节",
+          "frontier_claim": {
+            "human_complexity": "过去需要跨创意、设计、摄影/3D/后期的复杂工作流，单模型难以一次完成",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "把语义理解、构图、风格和细节渲染压进一次生成"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示"
+          ],
+          "research_value": 5,
+          "spectacle_score": 5,
+          "difficulty": 5,
+          "business_value": "low",
+          "viral_potential": "mid",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "B-16",
+          "name": "X 光艺术摄影 · Nick Veasey 风",
+          "dimension": "X 射线成像 · 透视结构",
+          "capabilities": [
+            "photorealism",
+            "style-transfer",
+            "optical-illusion-geometry"
+          ],
+          "example": "风格:纯黑底 + 半透明白影 · 骨骼 / 金属 / 电线清晰 · 软组织淡影 · 例:花束 X 光 / iPhone 内部 / 运动鞋 / 行李箱 / 人手骨",
+          "uniqueness": "Nick Veasey 级艺术摄影 · 需真 X 光机或 CT · 独占 '透视视觉' 美学",
+          "frontier_claim": {
+            "human_complexity": "视觉错觉和几何构造过去需要数学、透视和手工校正",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "高保真写实、自然光照和材质表现；几何、透视和风格约束的一体化生成"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "几何/错觉/对称规则可被肉眼验证"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "mid",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "B-17",
+          "name": "ISS / 卫星俯视地球 · 太空摄影",
+          "dimension": "轨道视角 · 地球曲率",
+          "capabilities": [
+            "photorealism",
+            "world-knowledge",
+            "style-transfer",
+            "editing-workflow"
+          ],
+          "example": "风格:真 NASA ISS 拍摄感 · 曲率地平线 + 大气层蓝色 + 星空背景 · 例:夜晚城市灯光链 / 飓风眼 / 极光带 / 撒哈拉沙丘",
+          "uniqueness": "宇航员 / 卫星独占视角 · NASA APOD 级 · 教育 / 气候议题 / 地理刚需",
+          "frontier_claim": {
+            "human_complexity": "真实世界知识和视觉还原过去需要资料搜集、人工考据和多轮修正",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "高保真写实、自然光照和材质表现；真实世界知识与场景推理能力"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "文化、场景或真实世界细节没有明显常识错误"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "mid",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        }
+      ],
+      "tier_intent": "3D、物理、摄影、材质等硬核视觉工艺验证。"
+    },
+    {
+      "tier": "C · 信息设计 / 编辑级",
+      "items": [
+        {
+          "id": "C-01",
+          "name": "科学论文配图",
+          "dimension": "精密排版 + 化学/物理",
+          "capabilities": [
+            "physics-materials",
+            "commercial-mockup"
+          ],
+          "example": "分子结构式 + 反应链 + 数据图 · Nature / Science 封面级",
+          "uniqueness": "期刊级严谨 + 视觉美",
+          "frontier_claim": {
+            "human_complexity": "物理/材质/光学效果过去依赖 3D、仿真、摄影棚或专业后期",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "对材质、光学和动态瞬间的综合视觉推断"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "材质、光照、阴影或物理瞬间可信"
+          ],
+          "research_value": 5,
+          "spectacle_score": 5,
+          "difficulty": 5,
+          "business_value": "high",
+          "viral_potential": "low",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "C-02",
+          "name": "1920s 老报纸头版",
+          "dimension": "版式 + 时代字体",
+          "capabilities": [
+            "text-rendering",
+            "structured-layout",
+            "commercial-mockup"
+          ],
+          "example": "大标 + 3 栏文章 + 复古广告 + 天气栏 + 汇率表 · 发黄纸张",
+          "uniqueness": "密集排版 + 时代感一次成",
+          "frontier_claim": {
+            "human_complexity": "可读文字、字体和位置过去常需要设计软件二次排版；复杂版式/多面板内容过去需要插画、排版和后期合成协作",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "更强图中文字渲染与版式跟随；复杂结构化视觉和多面板构图能力"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "所有关键文字可读、无多余字符、位置和字体符合要求",
+            "版式层级清楚，多区域/多面板不互相打架"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "mid",
+          "viral_potential": "mid",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "C-03",
+          "name": "多页杂志 spread",
+          "dimension": "8 图一致性 + 版式",
+          "capabilities": [
+            "multi-image-reference",
+            "structured-layout",
+            "commercial-mockup"
+          ],
+          "example": "Wired / Vogue 风 · 封面 + 目录 + 特稿 + 视觉大图 · 8 页连贯",
+          "uniqueness": "一套 vs 单页的商业价值差距",
+          "frontier_claim": {
+            "human_complexity": "多参考图/身份一致性过去通常要人工挑片、局部重绘或 ControlNet/LoRA 串联；复杂版式/多面板内容过去需要插画、排版和后期合成协作",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "多图参考和身份/风格保持能力；复杂结构化视觉和多面板构图能力"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "主体身份/外观/关键元素在多图或多视角中保持一致",
+            "版式层级清楚，多区域/多面板不互相打架"
+          ],
+          "research_value": 5,
+          "spectacle_score": 5,
+          "difficulty": 5,
+          "business_value": "high",
+          "viral_potential": "low",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "C-04",
+          "name": "古籍复原 · 对照页",
+          "dimension": "历史准确 + 编辑设计",
+          "capabilities": [
+            "world-knowledge",
+            "editing-workflow"
+          ],
+          "example": "《永乐大典》残页 + 现代复原 + 注释 + 年代对照",
+          "uniqueness": "文化遗产数字化场景",
+          "frontier_claim": {
+            "human_complexity": "真实世界知识和视觉还原过去需要资料搜集、人工考据和多轮修正",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "真实世界知识与场景推理能力"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "文化、场景或真实世界细节没有明显常识错误"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "mid",
+          "viral_potential": "low",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "C-05",
+          "name": "建筑制图 · 平/立/剖 同屏",
+          "dimension": "技术制图",
+          "capabilities": [
+            "photorealism",
+            "physics-materials",
+            "technical-diagram",
+            "world-knowledge"
+          ],
+          "example": "一栋楼 · 平面图 + 正立面 + 侧剖面 + 总轴测 同屏 · 建筑师级",
+          "uniqueness": "单模替代 CAD 工作流",
+          "frontier_claim": {
+            "human_complexity": "物理/材质/光学效果过去依赖 3D、仿真、摄影棚或专业后期；工业制图和标注过去需要工程理解、矢量绘图和严格版式控制；真实世界知识和视觉还原过去需要资料搜集、人工考据和多轮修正",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "高保真写实、自然光照和材质表现；对材质、光学和动态瞬间的综合视觉推断；可同时处理线稿、标注、技术图和信息层级；真实世界知识与场景推理能力"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "材质、光照、阴影或物理瞬间可信",
+            "线条、标注、结构拆解或工程视图有专业感",
+            "文化、场景或真实世界细节没有明显常识错误"
+          ],
+          "research_value": 5,
+          "spectacle_score": 5,
+          "difficulty": 5,
+          "business_value": "high",
+          "viral_potential": "low",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "C-06",
+          "name": "地图 + 信息标注",
+          "dimension": "地理 + 信息图",
+          "capabilities": [
+            "structured-layout",
+            "photorealism",
+            "technical-diagram",
+            "world-knowledge",
+            "reasoning-composition"
+          ],
+          "example": "古代丝绸之路 + 贸易货品 + 年代标注 · 手绘风但地理准",
+          "uniqueness": "Thinking mode 查真实地理",
+          "frontier_claim": {
+            "human_complexity": "复杂版式/多面板内容过去需要插画、排版和后期合成协作；工业制图和标注过去需要工程理解、矢量绘图和严格版式控制；真实世界知识和视觉还原过去需要资料搜集、人工考据和多轮修正",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "复杂结构化视觉和多面板构图能力；高保真写实、自然光照和材质表现；可同时处理线稿、标注、技术图和信息层级；真实世界知识与场景推理能力"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "版式层级清楚，多区域/多面板不互相打架",
+            "线条、标注、结构拆解或工程视图有专业感",
+            "文化、场景或真实世界细节没有明显常识错误"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "high",
+          "viral_potential": "mid",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "C-07",
+          "name": "UI 截图级原型",
+          "dimension": "界面精确",
+          "capabilities": [
+            "structured-layout",
+            "style-transfer"
+          ],
+          "example": "iOS app 7 个界面 · onboarding 流程 · 风格一致 · 可当高保真原型",
+          "uniqueness": "PM 甩图 → Claude Code 照图写前端新范式",
+          "frontier_claim": {
+            "human_complexity": "复杂版式/多面板内容过去需要插画、排版和后期合成协作",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "复杂结构化视觉和多面板构图能力"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "版式层级清楚，多区域/多面板不互相打架"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "high",
+          "viral_potential": "mid",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "C-08",
+          "name": "博物图鉴科普竖版信息图",
+          "dimension": "模块化信息图 · 高级博物图鉴感",
+          "capabilities": [
+            "structured-layout"
+          ],
+          "example": "主题 X(蘑菇 / 恐龙 / 茶叶 / 乐器 / 深海鱼)· 9:16 竖版 · 顶部大标题 + 4-6 模块卡(品种/产地/年代/特点)+ 底部收藏编号 · 博物百科感",
+          "uniqueness": "Top 爆款模板(411 likes zh · EvoLink 榜首)· 信息密度 + 审美高级 · 小红书 / 公众号详情页刚需",
+          "frontier_claim": {
+            "human_complexity": "复杂版式/多面板内容过去需要插画、排版和后期合成协作",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "复杂结构化视觉和多面板构图能力"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "版式层级清楚，多区域/多面板不互相打架"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "high",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "C-09",
+          "name": "胶片摄影美学多风格图鉴",
+          "dimension": "摄影工艺 · 风格化模拟",
+          "capabilities": [
+            "structured-layout",
+            "photorealism",
+            "style-transfer"
+          ],
+          "example": "35mm / Fujifilm Pro 400H / Kodak Portra / CCD 硬闪 / Polaroid 拍立得 / Cyanotype 蓝晒 · 5-6 风格对照",
+          "uniqueness": "摄影工艺级模拟 · 粒子 / 色偏 / 溢光 全控 · 真实高 likes(363+42 en)· 摄影圈 + 小红书爆款",
+          "frontier_claim": {
+            "human_complexity": "复杂版式/多面板内容过去需要插画、排版和后期合成协作",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "复杂结构化视觉和多面板构图能力；高保真写实、自然光照和材质表现"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "版式层级清楚，多区域/多面板不互相打架"
+          ],
+          "research_value": 3,
+          "spectacle_score": 4,
+          "difficulty": 3,
+          "business_value": "mid",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "C-10",
+          "name": "品牌 Identity 全套 mockup",
+          "dimension": "VI 视觉识别系统",
+          "capabilities": [
+            "text-rendering",
+            "structured-layout",
+            "commercial-mockup"
+          ],
+          "example": "一套 8 件:logo (彩/黑白/白底)+ 名片 + 信封 + T恤 + 马克杯 + 帆布袋 + 社交封面 + 包装盒 · 品牌色贯穿",
+          "uniqueness": "设计工作室 VI 提案 1-2 周工时 · 单模一次出 · 中小品牌营销爆款",
+          "frontier_claim": {
+            "human_complexity": "可读文字、字体和位置过去常需要设计软件二次排版；复杂版式/多面板内容过去需要插画、排版和后期合成协作",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "更强图中文字渲染与版式跟随；复杂结构化视觉和多面板构图能力"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "所有关键文字可读、无多余字符、位置和字体符合要求",
+            "版式层级清楚，多区域/多面板不互相打架"
+          ],
+          "research_value": 5,
+          "spectacle_score": 5,
+          "difficulty": 5,
+          "business_value": "high",
+          "viral_potential": "mid",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "C-11",
+          "name": "书籍装帧系列 · 丛书",
+          "dimension": "出版设计 · 系列统一",
+          "capabilities": [
+            "text-rendering",
+            "structured-layout",
+            "style-transfer",
+            "commercial-mockup"
+          ],
+          "example": "一套 6-10 本丛书封面(主题:世界文学 / 哲学经典 / 科幻十大)· 风格统一 · 配色 / 字体 / 装饰一致但各自主题 · 书脊排成一排成图案",
+          "uniqueness": "出版社封面设计师个人品牌 · 单模一套出 · 替代 Penguin Classics 工作流",
+          "frontier_claim": {
+            "human_complexity": "可读文字、字体和位置过去常需要设计软件二次排版；复杂版式/多面板内容过去需要插画、排版和后期合成协作",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "更强图中文字渲染与版式跟随；复杂结构化视觉和多面板构图能力"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "所有关键文字可读、无多余字符、位置和字体符合要求",
+            "版式层级清楚，多区域/多面板不互相打架"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "high",
+          "viral_potential": "low",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "C-12",
+          "name": "产品包装立体棚拍 mockup",
+          "dimension": "包装设计 + 商业摄影",
+          "capabilities": [
+            "photorealism",
+            "physics-materials",
+            "editing-workflow",
+            "commercial-mockup"
+          ],
+          "example": "咖啡袋 / 化妆品瓶 / 饮料罐 / 冰淇淋盒 · studio 光 + 深灰无缝背景 + 阴影反光真实 · 包装平面图转立体",
+          "uniqueness": "品牌发布会 key visual 场景 · 平面 + 3D 打印包装 + 摄影棚 三合一",
+          "frontier_claim": {
+            "human_complexity": "物理/材质/光学效果过去依赖 3D、仿真、摄影棚或专业后期",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "高保真写实、自然光照和材质表现；对材质、光学和动态瞬间的综合视觉推断"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "材质、光照、阴影或物理瞬间可信"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "high",
+          "viral_potential": "mid",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "C-13",
+          "name": "Type Specimen 字体样册",
+          "dimension": "字体设计 · 展示页",
+          "capabilities": [
+            "text-rendering"
+          ],
+          "example": "一款字体 · 所有字形(ABC...)+ 不同字重(Light/Regular/Bold/Black)+ 段落示范 + 数字符号 + 应用场景举例 · 独立页",
+          "uniqueness": "字体设计师必做展示文档 · 设计学科级专业产出",
+          "frontier_claim": {
+            "human_complexity": "可读文字、字体和位置过去常需要设计软件二次排版",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "更强图中文字渲染与版式跟随"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "所有关键文字可读、无多余字符、位置和字体符合要求"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "mid",
+          "viral_potential": "low",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "C-14",
+          "name": "数据可视化 Dashboard 静帧",
+          "dimension": "数据 UX · 图表密集",
+          "capabilities": [
+            "structured-layout",
+            "technical-diagram",
+            "reasoning-composition"
+          ],
+          "example": "金融(股票 K 线 + 雷达 + 热力图)/ 气候(全球温度 + 海平面 + CO2)/ 健康(心率 + 睡眠 + 运动)· 深色 UI + 10+ 图表共存 + 侧边栏",
+          "uniqueness": "Bloomberg / Figma / Grafana 级复杂仪表盘 · 数据科学家 / 设计师两周工时 · 单图出高保真",
+          "frontier_claim": {
+            "human_complexity": "复杂版式/多面板内容过去需要插画、排版和后期合成协作；工业制图和标注过去需要工程理解、矢量绘图和严格版式控制",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "复杂结构化视觉和多面板构图能力；可同时处理线稿、标注、技术图和信息层级"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "版式层级清楚，多区域/多面板不互相打架",
+            "线条、标注、结构拆解或工程视图有专业感"
+          ],
+          "research_value": 5,
+          "spectacle_score": 5,
+          "difficulty": 5,
+          "business_value": "high",
+          "viral_potential": "low",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "C-15",
+          "name": "虚构世界手绘地图 · DnD 级",
+          "dimension": "奇幻地图 · 叙事地理",
+          "capabilities": [
+            "structured-layout",
+            "photorealism",
+            "world-knowledge",
+            "reasoning-composition"
+          ],
+          "example": "自创奇幻大陆 · 山脉 / 森林 / 河流 / 城邦 · 地名拉丁感 · 风玫瑰 + 比例尺 + 装饰边框 + 航线虚线 + Here Be Dragons",
+          "uniqueness": "桌游 / 小说 / 游戏世界观核心资产 · 跟 A-08 真实 Maps 藏宝图不同(这是从零虚构)",
+          "frontier_claim": {
+            "human_complexity": "复杂版式/多面板内容过去需要插画、排版和后期合成协作；真实世界知识和视觉还原过去需要资料搜集、人工考据和多轮修正",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "复杂结构化视觉和多面板构图能力；高保真写实、自然光照和材质表现；真实世界知识与场景推理能力"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "版式层级清楚，多区域/多面板不互相打架",
+            "文化、场景或真实世界细节没有明显常识错误"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "mid",
+          "viral_potential": "mid",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "C-16",
+          "name": "食物横截面图鉴 · Food cross-section",
+          "dimension": "食物信息图 · 剖视",
+          "capabilities": [
+            "structured-layout",
+            "photorealism",
+            "technical-diagram",
+            "commercial-mockup"
+          ],
+          "example": "汉堡 7 层剖面标注 / 寿司卷横切材料图 / 拉面一碗成分拆解 / 分子料理演绎卡 / 粽子 / 月饼剖开",
+          "uniqueness": "Bon Appétit / 日食漫画 级食物信息图 · 餐饮品牌 / 菜谱 / 社交爆款",
+          "frontier_claim": {
+            "human_complexity": "复杂版式/多面板内容过去需要插画、排版和后期合成协作；工业制图和标注过去需要工程理解、矢量绘图和严格版式控制",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "复杂结构化视觉和多面板构图能力；高保真写实、自然光照和材质表现；可同时处理线稿、标注、技术图和信息层级"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "版式层级清楚，多区域/多面板不互相打架",
+            "线条、标注、结构拆解或工程视图有专业感"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "high",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "C-17",
+          "name": "塔罗牌全套 78 张 · 系列卡",
+          "dimension": "神秘学 + 一致性卡牌",
+          "capabilities": [
+            "multi-image-reference"
+          ],
+          "example": "大阿卡纳 22 + 小阿卡纳 56 · 同一画风贯穿 · 边框装饰一致 · 编号 + 名称 + 罗马数字",
+          "uniqueness": "塔罗牌设计师 6 个月工作量 · AI 一套出 · 独立 brand / 占卜 app 刚需",
+          "frontier_claim": {
+            "human_complexity": "多参考图/身份一致性过去通常要人工挑片、局部重绘或 ControlNet/LoRA 串联",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "多图参考和身份/风格保持能力"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "主体身份/外观/关键元素在多图或多视角中保持一致"
+          ],
+          "research_value": 5,
+          "spectacle_score": 5,
+          "difficulty": 5,
+          "business_value": "mid",
+          "viral_potential": "high",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "C-18",
+          "name": "Audubon 风生物图谱 · 昆虫 / 鸟类标本盒",
+          "dimension": "博物学插画 · 科学水彩",
+          "capabilities": [
+            "structured-layout",
+            "technical-diagram"
+          ],
+          "example": "John James Audubon 鸟类图鉴风 / Maria Sibylla Merian 昆虫变态图 / 大英博物馆昆虫标本盒整面",
+          "uniqueness": "19 世纪博物学黄金时代语言 · 手绘水彩 + 学名 + 解剖标注 · 跟 C-08 博物图鉴不同(这是科学插画美学 vs 信息图模块)",
+          "frontier_claim": {
+            "human_complexity": "复杂版式/多面板内容过去需要插画、排版和后期合成协作；工业制图和标注过去需要工程理解、矢量绘图和严格版式控制",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "复杂结构化视觉和多面板构图能力；可同时处理线稿、标注、技术图和信息层级"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "版式层级清楚，多区域/多面板不互相打架",
+            "线条、标注、结构拆解或工程视图有专业感"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "mid",
+          "viral_potential": "mid",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "C-19",
+          "name": "档案美学 · Wanted / 指纹卡 / 档案页",
+          "dimension": "档案文档 · 密集信息",
+          "capabilities": [
+            "text-rendering",
+            "structured-layout"
+          ],
+          "example": "Old West Wanted 通缉令 + 悬赏 + 罪状 / FBI 档案页 + 指纹 + 侧面照 / 学生档案卡 + 照片 + 成绩",
+          "uniqueness": "档案美学独立语言 · 影视 / 游戏 / 悬疑内容刚需 · 跟 A-21 票据不同(这是信息档案 vs 交易票证)",
+          "frontier_claim": {
+            "human_complexity": "可读文字、字体和位置过去常需要设计软件二次排版；复杂版式/多面板内容过去需要插画、排版和后期合成协作",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "更强图中文字渲染与版式跟随；复杂结构化视觉和多面板构图能力"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "所有关键文字可读、无多余字符、位置和字体符合要求",
+            "版式层级清楚，多区域/多面板不互相打架"
+          ],
+          "research_value": 3,
+          "spectacle_score": 3,
+          "difficulty": 3,
+          "business_value": "low",
+          "viral_potential": "mid",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "C-20",
+          "name": "医学解剖插画 · Netter 级",
+          "dimension": "专业医学水彩 · 现代教科书",
+          "capabilities": [
+            "structured-layout",
+            "technical-diagram",
+            "style-transfer"
+          ],
+          "example": "风格:Frank Netter 风 · 柔和水彩 + 精准解剖 + 彩色分层(骨白 / 肌红 / 神经黄 / 血管蓝红)+ 标注箭头 + Latin 学名 · 例:心脏横截面 / 膝关节 / 脑部神经束",
+          "uniqueness": "医学教科书黄金标准 · 一张 Netter 画需数周 · 医学生 / 医院 / 科普刚需 · 跟古董博物图鉴风完全不同(现代医用)",
+          "frontier_claim": {
+            "human_complexity": "复杂版式/多面板内容过去需要插画、排版和后期合成协作；工业制图和标注过去需要工程理解、矢量绘图和严格版式控制",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "复杂结构化视觉和多面板构图能力；可同时处理线稿、标注、技术图和信息层级"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "版式层级清楚，多区域/多面板不互相打架",
+            "线条、标注、结构拆解或工程视图有专业感"
+          ],
+          "research_value": 5,
+          "spectacle_score": 5,
+          "difficulty": 5,
+          "business_value": "high",
+          "viral_potential": "low",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "C-21",
+          "name": "PCB 电路板设计版图",
+          "dimension": "硬件工程图 · 现代制造",
+          "capabilities": [
+            "structured-layout",
+            "photorealism",
+            "style-transfer",
+            "commercial-mockup"
+          ],
+          "example": "风格:经典绿色 PCB 底板 + 金色铜线走线 + 白色丝印 + 贴片元件(电阻 / 电容 / 芯片) · 微距摄影级 · 或 白底工程线稿 schematic · 例:Arduino 板 / 耳机 PCB / 主板局部",
+          "uniqueness": "硬件工程师 EDA 软件产物 · 纯工程美学 · 非艺术 · 硬件创业 / 教学 / 产品发布刚需",
+          "frontier_claim": {
+            "human_complexity": "复杂版式/多面板内容过去需要插画、排版和后期合成协作",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "复杂结构化视觉和多面板构图能力；高保真写实、自然光照和材质表现"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "版式层级清楚，多区域/多面板不互相打架"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "mid",
+          "viral_potential": "low",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        },
+        {
+          "id": "C-22",
+          "name": "法医犯罪现场重建图",
+          "dimension": "刑侦视觉 · 证据档案",
+          "capabilities": [
+            "physics-materials",
+            "reasoning-composition",
+            "style-transfer"
+          ],
+          "example": "风格:俯视图 + 白色尸体轮廓线 + 红色证据编号 1,2,3 + 测量标尺 + 黑白对比照 · 或 3D 等距重建 · 例:室内犯罪现场 + 证物分布 + 轨迹分析",
+          "uniqueness": "CSI 刑侦档案视觉 · 法医 / 律政内容刚需 · 完全不是艺术风 · 严谨工程级",
+          "frontier_claim": {
+            "human_complexity": "物理/材质/光学效果过去依赖 3D、仿真、摄影棚或专业后期",
+            "model_gap": "传统文生图模型常在文字、版式、一致性、极端画幅、物理材质或真实知识上失稳；通常需要多模型、多轮筛选和人工后期。",
+            "why_gpt_image_2_may_solve": "对材质、光学和动态瞬间的综合视觉推断"
+          },
+          "success_criteria": [
+            "一眼能看出这是高难度炫技主题，不像普通模板图",
+            "核心创意和画面结构无需解释即可成立",
+            "输出不依赖大量后期修补即可用于展示",
+            "材质、光照、阴影或物理瞬间可信"
+          ],
+          "research_value": 4,
+          "spectacle_score": 4,
+          "difficulty": 4,
+          "business_value": "mid",
+          "viral_potential": "mid",
+          "source": {
+            "type": "curated_frontier_research",
+            "ref": "docs/research/gpt-image-2-48h-brief.html"
+          },
+          "evaluation": {
+            "visual_quality": null,
+            "instruction_following": null,
+            "text_accuracy": null,
+            "consistency": null,
+            "novelty": null,
+            "frontier_verdict": null,
+            "notes": null
+          },
+          "status": "todo",
+          "type": null,
+          "total_shots": null,
+          "owner_session": null,
+          "claimed_at": null,
+          "done_at": null,
+          "output_dir": null,
+          "metadata_path": null
+        }
+      ],
+      "tier_intent": "信息设计、编辑视觉、结构化图文表达验证。"
+    }
+  ],
+  "stats": {
+    "total": 105,
+    "by_tier": {
+      "S · 独家能力": 19,
+      "A · 高概念创意": 47,
+      "B · 高难 3D/物理": 17,
+      "C · 信息设计编辑级": 22
+    },
+    "by_viral": {
+      "high": 44,
+      "mid": 45,
+      "low": 16
+    },
+    "by_business_value": {
+      "high": 39,
+      "mid": 52,
+      "low": 14
+    },
+    "by_research_value": {
+      "3": 14,
+      "4": 67,
+      "5": 24
+    },
+    "by_spectacle_score": {
+      "3": 9,
+      "4": 72,
+      "5": 24
+    }
+  },
+  "suggested_pipeline": {
+    "phase_1_poc": [
+      "S-07 米粒刻字",
+      "S-11 World Knowledge",
+      "A-09 IKEA 万物化",
+      "A-02 宋朝朋友圈"
+    ],
+    "phase_2_expand": [
+      "S-02 8 图漫画",
+      "A-01 剪影宇宙",
+      "A-04 名画 OOTD",
+      "B-06 手办盲盒"
+    ],
+    "phase_3_scale": "按 tier S 独家能力做成 skill 配方 · 每个配 5-10 variant · 作为 GPT Image 2 Hub 核心内容库",
+    "selection_rule": "优先做 research_value=5 且 spectacle_score=5 的题；同分时优先 S tier、文字/多图/极端画幅/几何错觉/技术图这些可验证能力。",
+    "evaluation_rule": "每次跑图后必须按 success_criteria 写 evaluation；不能只凭好看标 done。"
+  },
+  "version": "frontier-v2",
+  "core_principle": {
+    "one_sentence": "只收录很难、很复杂、以前需要多工种/多工具/长时间才能完成，且别的模型通常做不稳的 GPT Image 2 炫技题。",
+    "include_if": [
+      "人类制作成本高: 需要摄影棚、3D、工程制图、排版、插画、后期、考据或数学/透视知识",
+      "模型能力边界强: 考验文字、版式、多图一致性、极端画幅、物理材质、真实知识、几何错觉或复杂编辑",
+      "别的模型弱: DALL-E 3 / Midjourney / Flux / SDXL 工作流通常需要多轮、外挂或后期才能接近",
+      "结果有炫技感: 一眼能看出不是普通文生图模板，而是“以前不好做”的视觉任务"
+    ],
+    "exclude_if": [
+      "普通电商海报、小说封面、泛游戏角色、泛赛博街景、泛梦幻少女等成熟模板题",
+      "只靠审美风格好看但不考验模型能力边界",
+      "没有明确成功标准，无法判断是否真的突破能力上限",
+      "纯噱头但商业/传播/研究价值都很低"
+    ]
+  },
+  "capability_taxonomy": {
+    "text-rendering": "图中文字、非拉丁文字、字体、标注、微缩字、排版文字",
+    "multi-image-reference": "多参考图融合、身份一致性、多视角/系列一致性",
+    "structured-layout": "UI、信息图、多面板、九宫格、漫画、海报层级、长图排版",
+    "extreme-aspect-ratio": "1:3 / 3:1 / 360 全景等非普通画幅",
+    "photorealism": "真实摄影、自然光、食物/建筑/人物/显微/天文等真实质感",
+    "physics-materials": "流体、烟雾、爆炸、光学、材质、微距纹理、3D 渲染",
+    "technical-diagram": "专利图、机械爆炸图、CAD、路线图、标注图、工程图",
+    "world-knowledge": "真实文化、地点、品牌/界面、历史、科学知识还原",
+    "reasoning-composition": "复杂叙事、关系可视化、推理构图、元叙事",
+    "style-transfer": "艺术家/导演/时代/印刷工艺/品牌语言迁移",
+    "optical-illusion-geometry": "视觉错觉、几何悖论、双目视差、对称、镶嵌",
+    "editing-workflow": "免 mask、多轮、局部替换、保留不变项的编辑链",
+    "commercial-mockup": "真实商业提案、产品、广告、品牌、包装、珠宝、工业设计"
+  }
+}
