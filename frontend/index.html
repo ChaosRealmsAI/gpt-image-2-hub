@@ -28,6 +28,15 @@
   html, body { background: var(--bg); color: var(--text); font-family: var(--fsn); font-size: var(--fs); }
   body { min-height: 100vh; overflow-x: hidden; }
   img { max-width: 100%; display: block; }
+  .skeleton, .card-img.skeleton {
+    background: linear-gradient(90deg, #1a1a1d 0%, #2a2a2d 50%, #1a1a1d 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+  @keyframes shimmer {
+    0%   { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
 
   /* ============ HEADER (2-row sticky) ============ */
   .topbar {
@@ -346,10 +355,11 @@
     max-width: none;
     padding: 0;
   }
-  @media (max-width: 780px) {
+  @media (max-width: 900px) {
     .gallery-shell { display: block; padding: 16px 14px 60px; }
     .filter-bar {
       position: static;
+      width: 100%;
       max-height: none;
       overflow: visible;
       padding: 0;
@@ -457,6 +467,13 @@
   }
   .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
   .toast svg { width: 16px; height: 16px; color: var(--purple); }
+  .toast.error-toast {
+    top: 84px;
+    bottom: auto;
+    border-color: rgba(255,143,168,0.42);
+    background: rgba(35,12,18,0.96);
+  }
+  .toast.error-toast svg { color: #ff8fa8; }
 
   /* footer tip */
   .foot-tip { text-align: center; color: var(--text-dim); font-size: 12px; padding: 14px 0 30px; }
@@ -1302,6 +1319,18 @@ class PromptCard extends HTMLElement {
           background: linear-gradient(135deg, #1a1a1d, #2a2a30);
           position: relative;
         }
+        .skeleton, .card-img.skeleton {
+          background: linear-gradient(90deg, #1a1a1d 0%, #2a2a2d 50%, #1a1a1d 100%);
+          background-size: 200% 100%;
+          animation: shimmer 1.5s infinite;
+        }
+        @keyframes shimmer {
+          0%   { background-position: 200% 0; }
+          100% { background-position: -200% 0; }
+        }
+        .card-img.error-state {
+          background: #1a1a1d;
+        }
         .cover {
           width: 100%; height: 100%;
           object-fit: cover;
@@ -1442,9 +1471,10 @@ class PromptCard extends HTMLElement {
       </style>
 
       <div class="card" part="card" style="--ar:${data.aspect}; --h:${hashHue(data.title)};">
-        <div class="cover-wrap">
-          ${data.img ? `<img class="cover" src="${escapeHtml(data.img)}" alt="${escapeHtml(data.title)}"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"/>` : ''}
+        <div class="cover-wrap card-img${data.img ? ' skeleton' : ''}">
+          ${data.img ? `<img class="cover" src="${escapeHtml(data.img)}" alt="${escapeHtml(data.title)}" loading="lazy" decoding="async"
+               onload="this.parentElement.classList.remove('skeleton')"
+               onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NDAiIGhlaWdodD0iNDgwIiB2aWV3Qm94PSIwIDAgNjQwIDQ4MCI+PHJlY3Qgd2lkdGg9IjY0MCIgaGVpZ2h0PSI0ODAiIGZpbGw9IiMxYTFhMWQiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2ZmZmZmZiIgZmlsbC1vcGFjaXR5PSIwLjYyIiBmb250LXNpemU9IjM2IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiPuWKoOi9veWksei0pTwvdGV4dD48L3N2Zz4='; this.parentElement.classList.add('error-state')"/>` : ''}
           <div class="cover-fallback" style="${data.img ? 'display:none;' : 'display:flex;'}">🎨</div>
           <div class="tag-pill">${escapeHtml(catLabel)}</div>
           <button class="favorite-btn ${favorited ? 'is-favorite' : ''}" title="${favorited ? '取消收藏' : '收藏'}" aria-label="收藏" aria-pressed="${favorited ? 'true' : 'false'}">
@@ -2055,7 +2085,7 @@ function setRemixLoading(message) {
 
 function showRemixError(message) {
   remixStatus.className = 'remix-status error';
-  remixStatus.textContent = message || '生成失败 · 换个词试试';
+  remixStatus.textContent = message || '生成失败 · 再试一次';
   remixSubmit.disabled = false;
   remixRegen.disabled = false;
   remixRegen.hidden = false;
@@ -2091,19 +2121,23 @@ async function startRemix(imageId, subject) {
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({image_id: imageId, subject: cleanSubject})
     });
+    if (!r.ok) {
+      showRemixError('生成失败 · 再试一次');
+      return;
+    }
     const data = await r.json();
     if (data.friendly_message) {
       showRemixError(data.friendly_message);
       return;
     }
     if (!data.task_id) {
-      showRemixError('生成任务创建失败 · 换个词试试');
+      showRemixError('生成失败 · 再试一次');
       return;
     }
     pollRemix(data.task_id);
   } catch (err) {
     console.error('remix submit failed', err);
-    showRemixError('生成服务连接失败 · 稍后再试');
+    showRemixError('生成失败 · 再试一次');
   }
 }
 
@@ -2120,6 +2154,12 @@ function pollRemix(taskId) {
     }
     try {
       const r = await fetch('/api/remix/' + encodeURIComponent(taskId));
+      if (!r.ok) {
+        clearInterval(remixPollTimer);
+        remixPollTimer = null;
+        showRemixError('生成失败 · 再试一次');
+        return;
+      }
       const s = await r.json();
       if (s.status === 'completed') {
         clearInterval(remixPollTimer);
@@ -2137,7 +2177,7 @@ function pollRemix(taskId) {
       clearInterval(remixPollTimer);
       remixPollTimer = null;
       console.error('remix poll failed', err);
-      showRemixError('生成状态查询失败 · 稍后再试');
+      showRemixError('生成失败 · 再试一次');
     }
   }, 3000);
 }
@@ -2188,9 +2228,19 @@ async function copyPrompt(text) {
 function showToast(msg) {
   const t = document.getElementById('toast');
   document.getElementById('toast-text').textContent = msg;
+  t.classList.remove('error-toast');
   t.classList.add('show');
   clearTimeout(window._toast_t);
   window._toast_t = setTimeout(() => t.classList.remove('show'), 2200);
+}
+function showErrorToast(msg) {
+  const toast = document.getElementById('toast');
+  document.getElementById('toast-text').textContent = msg;
+  toast.classList.add('error-toast', 'show');
+  clearTimeout(window._toast_t);
+  window._toast_t = setTimeout(() => {
+    toast.classList.remove('show', 'error-toast');
+  }, 3000);
 }
 
 // ========================================================
@@ -2608,6 +2658,7 @@ async function initGallery() {
     applyFilter();
   } catch (err) {
     console.error('failed to load gallery data', err);
+    showErrorToast('图鉴加载失败 · 检查网络');
   }
 
   // URL hash 自动开 modal(测试 / 分享链接用):#m-01
