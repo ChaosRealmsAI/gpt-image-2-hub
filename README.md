@@ -83,7 +83,7 @@ curl http://127.0.0.1:3000/api/health
 - `api/`: APIMART 图像生成 Node CLI。
 - `content/`: prompt 内容源、atlas todo、批量 prompt 样例。
 - `assets/`: 前端 demo 图、参考样图和 atlas 作品沉淀。
-- `docs/`: 部署、架构、规划 HTML、调研 brief。
+- `docs/`: 部署、架构、规划 HTML、调研 brief；研究资料索引见 `docs/research/README.md`。
 - `spec/`: 独立 git 仓, 不随主仓提交。
 
 大体积历史材料已移出主仓: `/Users/Zhuanz/workspace/prompt-atlas-archive/`。
