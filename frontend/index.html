@@ -594,6 +594,19 @@
   }
   .modal-copy:hover { background: var(--accent-2); transform: translateY(-1px); }
   .modal-copy.copied { background: #10a37f; }
+  .remix-btn {
+    border: 0;
+    border-radius: 8px;
+    padding: 10px 14px;
+    background: linear-gradient(135deg, #34d9a9, #0d8b68);
+    color: #04120e;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: transform 0.16s ease, filter 0.16s ease;
+  }
+  .remix-btn:hover { filter: brightness(1.08); transform: translateY(-1px); }
   .modal-atoms {
     display: grid;
     gap: 6px;
@@ -617,6 +630,99 @@
     margin-right: 6px;
     vertical-align: -2px;
     border: 1px solid var(--border);
+  }
+  .remix-card {
+    max-width: 560px;
+  }
+  .remix-title {
+    padding-right: 38px;
+    margin-bottom: 16px;
+    color: var(--text);
+    font-size: 22px;
+    line-height: 1.28;
+  }
+  .remix-field {
+    width: 100%;
+    min-height: 44px;
+    padding: 11px 14px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: #0f0f12;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+  }
+  .remix-field:focus {
+    border-color: rgba(52,217,169,0.5);
+    box-shadow: 0 0 0 3px rgba(52,217,169,0.08);
+  }
+  .remix-status {
+    min-height: 24px;
+    margin: 14px 0;
+    color: var(--text-mid);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .remix-status.error { color: #ff8fa8; }
+  .remix-status.success { color: #34d9a9; }
+  .remix-status.loading::before {
+    content: "";
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 8px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.18);
+    border-top-color: #34d9a9;
+    vertical-align: -2px;
+    animation: remix-spin 0.8s linear infinite;
+  }
+  @keyframes remix-spin { to { transform: rotate(360deg); } }
+  #remix-result {
+    width: 100%;
+    max-height: 48vh;
+    object-fit: contain;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: #050506;
+  }
+  .remix-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+  }
+  .remix-actions button {
+    position: static;
+    width: auto;
+    height: auto;
+    min-height: 40px;
+    padding: 9px 14px;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+  .remix-actions .modal-close {
+    background: rgba(255,255,255,0.06);
+    color: var(--text);
+    border: 1px solid var(--border);
+  }
+  .remix-actions #remix-submit,
+  .remix-actions #remix-regen {
+    background: linear-gradient(135deg, #34d9a9, #0d8b68);
+    color: #04120e;
+    border: 0;
+  }
+  .remix-actions #remix-download {
+    background: var(--accent);
+    color: #fff;
+    border: 0;
+  }
+  .remix-actions button:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
   }
   @media (max-width: 780px) {
     .modal { padding: 14px; align-items: flex-start; }
@@ -728,11 +834,30 @@
         <div class="modal-section-title">Prompt</div>
         <pre class="modal-prompt"></pre>
         <button class="modal-copy" data-role="copy">复制 prompt</button>
+        <button class="remix-btn" data-role="remix" type="button">用这个风格做我的</button>
       </div>
       <div class="modal-section">
         <div class="modal-section-title">原子拆解 · Atoms</div>
         <dl class="modal-atoms"></dl>
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ REMIX MODAL ============ -->
+<div id="remix-modal" class="modal hidden" role="dialog" aria-hidden="true">
+  <div class="modal-overlay" data-remix-close></div>
+  <div class="modal-card remix-card">
+    <button class="modal-close" data-remix-close aria-label="关闭">×</button>
+    <h2 class="remix-title">用 <span data-remix-style></span> 风格做我的</h2>
+    <input id="remix-subject" class="remix-field" placeholder="输入主题 · 如'一只橘猫' / '我的咖啡店开业'" maxlength="50">
+    <div class="remix-status" id="remix-status"></div>
+    <img id="remix-result" hidden alt="remix result">
+    <div class="remix-actions">
+      <button id="remix-submit" type="button">生成</button>
+      <button id="remix-regen" type="button" hidden>再生一张</button>
+      <button id="remix-download" type="button" hidden>下载</button>
+      <button class="modal-close" data-remix-close type="button">关闭</button>
     </div>
   </div>
 </div>
@@ -1228,7 +1353,7 @@ class PromptCard extends HTMLElement {
           letter-spacing: 0.04em;
           font-variant-numeric: tabular-nums;
         }
-        .actions { display: flex; align-items: center; gap: 2px; flex-shrink: 0; }
+        .actions { display: flex; align-items: center; gap: 5px; flex-shrink: 0; }
         .action-btn {
           background: transparent; border: none; cursor: pointer;
           padding: 4px 6px; border-radius: 6px;
@@ -1241,6 +1366,20 @@ class PromptCard extends HTMLElement {
         .action-btn svg { width: 14px; height: 14px; }
 
         .copy-btn:hover { color: #a78bfa; }
+        .remix-btn {
+          max-width: 118px;
+          padding: 6px 9px;
+          background: linear-gradient(135deg, #34d9a9, #0d8b68);
+          color: #04120e;
+          font-size: 11px;
+          font-weight: 800;
+          line-height: 1.15;
+          text-align: center;
+        }
+        .remix-btn:hover {
+          color: #04120e;
+          background: linear-gradient(135deg, #4ee2b7, #14a77e);
+        }
       </style>
 
       <div class="card" part="card" style="--ar:${data.aspect}; --h:${hashHue(data.title)};">
@@ -1274,6 +1413,7 @@ class PromptCard extends HTMLElement {
               <button class="action-btn copy-btn" title="${t('modal.copy')}" aria-label="copy">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
               </button>
+              <button class="action-btn remix-btn" title="用这个风格做我的" aria-label="用这个风格做我的">用这个风格做我的</button>
             </div>
           </div>
         </div>
@@ -1284,6 +1424,7 @@ class PromptCard extends HTMLElement {
     const card = this.shadowRoot.querySelector('.card');
     const favoriteBtn = this.shadowRoot.querySelector('.favorite-btn');
     const copyBtn = this.shadowRoot.querySelector('.copy-btn');
+    const remixBtn = this.shadowRoot.querySelector('.remix-btn');
 
     card.addEventListener('click', (e) => {
       if (e.target.closest('button')) return;
@@ -1299,6 +1440,11 @@ class PromptCard extends HTMLElement {
     copyBtn.addEventListener('click', (e) => {
       e.stopPropagation();
       copyPrompt(data.prompt);
+    });
+
+    remixBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      openRemix(id);
     });
   }
 
@@ -1788,8 +1934,168 @@ detailModal.querySelector('[data-role="copy"]').addEventListener('click', async 
     console.error('copy failed', err);
   }
 });
+detailModal.querySelector('[data-role="remix"]').addEventListener('click', (e) => {
+  e.stopPropagation();
+  const id = detailModal.dataset.currentId;
+  if (!id) return;
+  closeDetail();
+  openRemix(id);
+});
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeDetail();
+});
+
+const remixModal = document.getElementById('remix-modal');
+const remixSubject = document.getElementById('remix-subject');
+const remixStatus = document.getElementById('remix-status');
+const remixResult = document.getElementById('remix-result');
+const remixSubmit = document.getElementById('remix-submit');
+const remixRegen = document.getElementById('remix-regen');
+const remixDownload = document.getElementById('remix-download');
+let remixPollTimer = null;
+let remixDownloadUrl = '';
+
+function openRemix(imageId) {
+  const data = CARDS.find(c => c.id === imageId);
+  if (!data) return;
+  clearInterval(remixPollTimer);
+  remixPollTimer = null;
+  remixDownloadUrl = '';
+  remixModal.dataset.currentId = data.id;
+  remixModal.querySelector('[data-remix-style]').textContent = data.style || data.tags?.[0] || data.title;
+  remixSubject.value = '';
+  remixStatus.textContent = '';
+  remixStatus.className = 'remix-status';
+  remixResult.hidden = true;
+  remixResult.removeAttribute('src');
+  remixSubmit.disabled = false;
+  remixSubmit.hidden = false;
+  remixRegen.hidden = true;
+  remixDownload.hidden = true;
+  remixModal.classList.remove('hidden');
+  remixModal.setAttribute('aria-hidden', 'false');
+  requestAnimationFrame(() => remixSubject.focus());
+}
+
+function closeRemix() {
+  clearInterval(remixPollTimer);
+  remixPollTimer = null;
+  remixModal.classList.add('hidden');
+  remixModal.setAttribute('aria-hidden', 'true');
+  delete remixModal.dataset.currentId;
+}
+
+function setRemixLoading(message) {
+  remixStatus.className = 'remix-status loading';
+  remixStatus.textContent = message;
+  remixSubmit.disabled = true;
+  remixRegen.disabled = true;
+}
+
+function showRemixError(message) {
+  remixStatus.className = 'remix-status error';
+  remixStatus.textContent = message || '生成失败 · 换个词试试';
+  remixSubmit.disabled = false;
+  remixRegen.disabled = false;
+  remixRegen.hidden = false;
+}
+
+function showRemixResult(imageUrl) {
+  remixDownloadUrl = imageUrl;
+  remixResult.src = imageUrl;
+  remixResult.hidden = false;
+  remixStatus.className = 'remix-status success';
+  remixStatus.textContent = '生成完成';
+  remixSubmit.disabled = false;
+  remixSubmit.hidden = true;
+  remixRegen.disabled = false;
+  remixRegen.hidden = false;
+  remixDownload.hidden = false;
+}
+
+async function startRemix(imageId, subject) {
+  const cleanSubject = subject.trim();
+  if (!cleanSubject) {
+    showRemixError('先输入你想生成的主题');
+    return;
+  }
+  setRemixLoading('提交生成任务中');
+  remixResult.hidden = true;
+  remixDownload.hidden = true;
+  try {
+    const r = await fetch('/api/remix', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({image_id: imageId, subject: cleanSubject})
+    });
+    const data = await r.json();
+    if (data.friendly_message) {
+      showRemixError(data.friendly_message);
+      return;
+    }
+    if (!data.task_id) {
+      showRemixError('生成任务创建失败 · 换个词试试');
+      return;
+    }
+    pollRemix(data.task_id);
+  } catch (err) {
+    console.error('remix submit failed', err);
+    showRemixError('生成服务连接失败 · 稍后再试');
+  }
+}
+
+function pollRemix(taskId) {
+  clearInterval(remixPollTimer);
+  const start = Date.now();
+  setRemixLoading('生成中 · 通常需要几十秒');
+  remixPollTimer = setInterval(async () => {
+    if (Date.now() - start > 90000) {
+      clearInterval(remixPollTimer);
+      remixPollTimer = null;
+      showRemixError('生成超时 · 再试一次?');
+      return;
+    }
+    try {
+      const r = await fetch('/api/remix/' + encodeURIComponent(taskId));
+      const s = await r.json();
+      if (s.status === 'completed') {
+        clearInterval(remixPollTimer);
+        remixPollTimer = null;
+        if (s.image_url) showRemixResult(s.image_url);
+        else showRemixError('生成完成但没有返回图片 · 再试一次');
+      } else if (s.status === 'failed') {
+        clearInterval(remixPollTimer);
+        remixPollTimer = null;
+        showRemixError(s.friendly_message || '生成失败 · 换个词试试');
+      } else {
+        setRemixLoading('生成中 · 正在排队或渲染');
+      }
+    } catch (err) {
+      clearInterval(remixPollTimer);
+      remixPollTimer = null;
+      console.error('remix poll failed', err);
+      showRemixError('生成状态查询失败 · 稍后再试');
+    }
+  }, 3000);
+}
+
+remixSubmit.addEventListener('click', () => startRemix(remixModal.dataset.currentId, remixSubject.value));
+remixRegen.addEventListener('click', () => startRemix(remixModal.dataset.currentId, remixSubject.value));
+remixSubject.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') startRemix(remixModal.dataset.currentId, remixSubject.value);
+});
+remixDownload.addEventListener('click', () => {
+  if (!remixDownloadUrl) return;
+  const link = document.createElement('a');
+  link.href = remixDownloadUrl;
+  link.download = `prompt-atlas-remix-${Date.now()}.png`;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+});
+remixModal.querySelectorAll('[data-remix-close]').forEach(el => el.addEventListener('click', closeRemix));
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeRemix();
 });
 
 function formatK(n) {
