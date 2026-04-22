@@ -1,6 +1,6 @@
 ---
 name: image2-prompt-writer
-description: 写 GPT Image 2 提示词(给 ChatGPT / apimart / 任何走 gpt-image-2 的入口)· 核心思路:发挥模型能力 + 从各维度描述不遗漏 + 引号锁文字 + 做完自检 + 3 条避坑。不填原子表 · 不走思维链。ALWAYS invoke when 用户说"写提示词 / 帮我做一张 X 图 / 画 X 海报 / 做人像 / 做漫画 / 做角色立绘 / 按 Prompt Atlas 写 / 做 skill 配方"· 或需给 apimart `gpt-image-2` 批量 prompt · 或要往 `content/examples/` 加新示例。本 skill 只管 prompt 工艺 · 不管 CLI — 调用走 `apimart-image-gen` skill 或项目 `api/README.md`。
+description: 写 GPT Image 2 提示词(给 ChatGPT / apimart / 任何走 gpt-image-2 的入口)· 核心思路:发挥模型能力 + 从各维度描述不遗漏 + 引号锁文字 + 做完自检 + 3 条避坑。不填原子表 · 不走思维链。ALWAYS invoke when 用户说"写提示词 / 帮我做一张 X 图 / 画 X 海报 / 做人像 / 做漫画 / 做角色立绘 / 按 GPT Image 2 Hub 写 / 做 skill 配方"· 或需给 apimart `gpt-image-2` 批量 prompt · 或要往 `content/examples/` 加新示例。本 skill 只管 prompt 工艺 · 不管 CLI — 调用走 `apimart-image-gen` skill 或项目 `api/README.md`。
 ---
 
 # Image 2 Prompt Writer · GPT Image 2 提示词工艺
@@ -82,11 +82,18 @@ Intended use:     用途定基调
 
 ---
 
-## 📝 3 个核心工艺(必须做)
+## 📝 4 个核心工艺(必须做)
 
-1. **引号锁文字** · 所有精确文字用 `"xxx"` 双引号锁 · 不是描述性 `saying xxx`。
-2. **画幅说 2 次** · 开头 + 收尾各 1 次(`Aspect ratio 2:3 vertical`)。
-3. **用途要写** · 一句 intended use 让模型定基调(海报级 / 杂志级 / 广告级)。
+1. **主体用英文 prompt**(默认) · 模型指令跟随最稳 · 国际化 · SEO 友好
+2. **引号内精确文字 = 目标地区语言**(用 gpt-image-2 独家非拉丁 99% 能力):
+   - 中国市场 → `"图灵观察" / "和菓子" / "欢迎光临"`
+   - 日本市场 → `"ようこそ" / "本日の特選"`
+   - 韩国市场 → `"서울 · 2026"`
+   - 中东市场 → `"مرحبا"`(阿拉伯 RTL 支持)
+   - 印度市场 → `"स्वागत है"`(Hindi)或 `"স্বাগতম"`(Bengali)
+   - 单图可混多语言(官方 demo 支持 9 种同屏)
+3. **画幅说 2 次** · 开头 + 收尾各 1 次(`Aspect ratio 2:3 vertical`)
+4. **用途要写** · 一句 intended use 让模型定基调(editorial poster / UI mockup / product shot)
 
 hex 色值 vs 形容词 color:**都行**(实测都能出彩) · 按需。
 
@@ -103,7 +110,10 @@ hex 色值 vs 形容词 color:**都行**(实测都能出彩) · 按需。
 ✅ 改法:**整段删**。实在要写 · 抽象 1 句:`Avoid any branded or commercial elements.`
 
 ### 坑 2 · 英文 + 人像 + 动作 > 800 字符 易挂
-实测临界 · 压到 500 字符安全 · 或 **改写中文**(中文几乎免疫)。
+**默认英文 prompt**(规则 1)· 但遇**人像 + 具体动作**场景:
+- 优先压到 ≤ 500 字符英文 · 姿态极简化(不写 "sleeves rolled up / sits at desk / subsurface")
+- 还挂 → **退到中文全写**(中文 moderation 几乎免疫)
+- 再挂 → 去掉人物 · 改纯场景
 
 ### 坑 3 · 别用方括号原子标注 `[01 Subject = ...]`
 实测模型被方括号干扰 · 文字渲染漏处最多。原子清单是**脑里的思考** · 不是 prompt 里的语法。
@@ -114,7 +124,8 @@ hex 色值 vs 形容词 color:**都行**(实测都能出彩) · 按需。
 
 - [ ] **想象落图**:读一遍 prompt · 脑里能"看到"图吗?看不到就补维度
 - [ ] **维度齐**:场景 / 主体 / 光 / 色 / 构图 / 风格 / 文字 / 用途 · 相关的都写了吗
-- [ ] **引号精准**:要渲染的文字都用 `"xxx"` 锁了吗?字符对吗
+- [ ] **英文主体 + 引号本地化**:prompt 主体英文 · 要渲染文字按目标地区写(中 / 日 / 韩 / 阿 / 印)
+- [ ] **引号精准**:字符对吗 · 字体描述 + 位置 + 颜色齐吗
 - [ ] **触发词扫**:Constraints 没写 "No X" 列表吗?英文人像有没超 800 字符
 
 任一 ❌ → 回改再跑。
@@ -179,4 +190,5 @@ Self-check 4 条过一遍
 - **模型很强** · 别把它当小学生教 · 别堆方法论词
 - **自然语言就够** · YAML / JSON / 方括号标注都是画蛇添足
 - **先写再精** · 一段写出来 · 自检改 · 跑了再迭代
-- **中文非常好用** · 除非目标用户非中文 · 优先中文写(实测更宽松 + 国人概念表达更准)
+- **默认英文 prompt + 引号里写目标地区语言** · 这是 gpt-image-2 独家强项的最优搭配(详见工艺 2)
+- **人像挂了才退到中文**(非必要不用中文全写 · 中文 prompt 虽稳但国际化 / SEO 弱)

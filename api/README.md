@@ -1,4 +1,4 @@
-# Prompt Atlas · apimart 图像生成 CLI
+# GPT Image 2 Hub · apimart 图像生成 CLI
 
 用 `apimart.ai` 的 `gpt-image-2` 模型 · 全链路 **submit → poll → 自动下载** 一条命令搞定。
 

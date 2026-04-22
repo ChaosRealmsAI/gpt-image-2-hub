@@ -32,7 +32,7 @@ status:        "draft | ready | deprecated"
 
 # —— 品牌 / 水印 ——
 watermark:     "integrated | disabled"
-watermark_text: "Prompt Atlas · 2026"
+watermark_text: "GPT Image 2 Hub · 2026"
 
 # —— 血缘 (可选 · 派生自哪个 · 派生出哪些) ——
 derived_from:  null                               # 父 skill id · 如果是 variant

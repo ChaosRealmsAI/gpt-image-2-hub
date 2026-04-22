@@ -1,4 +1,4 @@
-# Prompt Atlas · 提示词最终写法指南
+# GPT Image 2 Hub · 提示词最终写法指南
 
 **更新**:2026-04-22 晚
 **来源**:OpenAI 官方规范 + devlog 今日实测(6 个旗帜 skill + 17 组对照测试)+ apimart 现场验证

@@ -1,7 +1,7 @@
 {
   "name": "prompt-atlas",
   "version": "0.1.0",
-  "description": "Prompt Atlas · AI 生图原子库 + apimart client",
+  "description": "GPT Image 2 Hub · AI 生图原子库 + apimart client",
   "type": "module",
   "private": true,
   "scripts": {

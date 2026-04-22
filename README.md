@@ -1,4 +1,4 @@
-# Prompt Atlas
+# GPT Image 2 Hub
 
 AI 生图风格原子库 + 一键 CLI(调 apimart.ai / gpt-image-2)。
 

@@ -1,6 +1,27 @@
-# Prompt Atlas · CLAUDE.md
+# GPT Image 2 Hub · CLAUDE.md
+
+> **品牌名**: GPT Image 2 Hub · **域名**: gptimage2hub.com · **目录名**: `prompt-atlas/`(不动 · 保 git 历史 / 外部引用)
 
 AI 生图瀑布流真图库 + 一键复刻(Image 2 版 Lexica)· C 端小白 0 门槛生图。
+
+**SEO 定位**:抢 gpt-image-2 发布后 6 个月 SEO 窗口期 · 双流量词 "GPT Image 2" + "Hub"。
+
+## 🔑 核心做的是 · 提示词(prompt)
+
+本项目**所有内容的核心 = 给 gpt-image-2 的提示词**。
+前端瀑布流展示的是"真图 + 可复制 prompt" · skill 管 prompt 工艺 · batch CLI 跑 prompt → 出图 · 每个 `content/examples/NN.md` 都是一套 prompt 配方。
+
+### 📝 Prompt 默认写法(硬规则)
+
+1. **主体 prompt 写英文**(国际化 / SEO / 模型指令跟随更稳)
+2. **引号内精确文字 = 按目标国家语言**(用 gpt-image-2 独家非拉丁文字 99% 能力):
+   - 面向中国 → 引号里写中文: `"新店开业" / "图灵观察"`
+   - 面向日本 → 引号里写日文: `"ようこそ" / "和菓子"`
+   - 面向韩国 → 引号里写韩文: `"서울" / "환영합니다"`
+   - 面向中东 → 引号里写阿拉伯文: `"مرحبا"`
+   - 面向印度 → 引号里写印地 / 孟加拉文
+3. **长 prompt 人像场景**若挂 moderation · 再退到中文全写
+4. 详见 `.claude/skills/image2-prompt-writer/SKILL.md`
 
 ## 技术栈
 
@@ -44,7 +65,7 @@ pkill -f "target/debug/prompt-atlas"                                  # kill ser
 
 # HTTP 端点验证
 curl -sS http://127.0.0.1:3000/api/health                             # → {"status":"ok","version":"v0.1"}
-curl -sS http://127.0.0.1:3000/ | grep -c "Prompt Atlas"              # 首页 · 预期 > 0
+curl -sS http://127.0.0.1:3000/ | grep -c "GPT Image 2 Hub"              # 首页 · 预期 > 0
 curl -sS -o /dev/null -w '%{http_code}\n' http://127.0.0.1:3000/image-styles-atlas.html  # → 200
 curl -sS -o /dev/null -w 'status=%{http_code} size=%{size_download}\n' http://127.0.0.1:3000/  # 首页元信息
 
