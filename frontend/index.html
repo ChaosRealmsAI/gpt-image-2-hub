@@ -28,15 +28,6 @@
   html, body { background: var(--bg); color: var(--text); font-family: var(--fsn); font-size: var(--fs); }
   body { min-height: 100vh; overflow-x: hidden; }
   img { max-width: 100%; display: block; }
-  .skeleton, .card-img.skeleton {
-    background: linear-gradient(90deg, #1a1a1d 0%, #2a2a2d 50%, #1a1a1d 100%);
-    background-size: 200% 100%;
-    animation: shimmer 1.5s infinite;
-  }
-  @keyframes shimmer {
-    0%   { background-position: 200% 0; }
-    100% { background-position: -200% 0; }
-  }
 
   /* ============ HEADER (2-row sticky) ============ */
   .topbar {
@@ -57,36 +48,6 @@
   .topbar-cats {
     max-width: 1600px; margin: 0 auto;
     padding: 2px 28px 14px;
-    display: flex; align-items: center; gap: 12px;
-  }
-  .gallery-tabs {
-    display: flex; align-items: center; gap: 4px;
-    flex-shrink: 0;
-    padding-right: 8px;
-    border-right: 1px solid var(--border);
-  }
-  .gallery-tab {
-    padding: 8px 16px; border-radius: 999px;
-    background: transparent; color: var(--text-mid);
-    font-size: 14px; font-weight: 500;
-    border: none; cursor: pointer;
-    white-space: nowrap;
-    font-family: inherit;
-    transition: all 0.18s ease;
-  }
-  .gallery-tab:hover { color: var(--text); background: rgba(255,255,255,0.05); }
-  .gallery-tab.active {
-    color: #fff; background: rgba(255,255,255,0.1);
-    font-weight: 700;
-  }
-  .gallery-tab .count {
-    display: inline-flex; align-items: center; justify-content: center;
-    min-width: 18px; height: 18px;
-    margin-left: 4px; padding: 0 5px;
-    border-radius: 999px;
-    background: rgba(255,46,81,0.18);
-    color: var(--accent-2);
-    font-size: 11px; font-weight: 700;
   }
 
   .brand {
@@ -118,116 +79,9 @@
   .search-box input { flex: 1; background: transparent; border: none; color: var(--text); outline: none; font-family: inherit; font-size: 14px; }
   .search-box input::placeholder { color: var(--text-dim); }
 
-  /* 筛选栏 */
-  .gallery-shell {
-    max-width: 1720px;
-    margin: 0 auto;
-    padding: 20px 24px 80px;
-    display: grid;
-    grid-template-columns: 260px minmax(0, 1fr);
-    gap: 20px;
-    align-items: start;
-  }
-  .gallery-main { min-width: 0; }
-  .filter-bar {
-    position: sticky;
-    top: 116px;
-    max-height: calc(100vh - 136px);
-    overflow: auto;
-    padding: 16px;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    background: rgba(22,22,24,0.78);
-  }
-  .filter-details { display: block; }
-  .filter-summary {
-    display: none;
-    cursor: pointer;
-    color: var(--text);
-    font-weight: 700;
-    list-style: none;
-  }
-  .filter-summary::-webkit-details-marker { display: none; }
-  .filter-body { display: grid; gap: 18px; }
-  .filter-group h4 {
-    margin-bottom: 10px;
-    color: var(--text-mid);
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-  .filter-options {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-  .filter-chip {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    min-height: 30px;
-    padding: 5px 9px;
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    background: rgba(255,255,255,0.04);
-    color: var(--text-mid);
-    font-size: 12px;
-    cursor: pointer;
-    user-select: none;
-    transition: background 0.16s ease, border-color 0.16s ease, color 0.16s ease;
-  }
-  .filter-chip:hover {
-    color: var(--text);
-    background: rgba(255,255,255,0.07);
-    border-color: rgba(255,255,255,0.14);
-  }
-  .filter-chip input {
-    width: 13px;
-    height: 13px;
-    accent-color: var(--accent);
-    flex-shrink: 0;
-  }
-  .filter-chip:has(input:checked) {
-    color: #fff;
-    border-color: rgba(255,46,81,0.42);
-    background: rgba(255,46,81,0.14);
-  }
-  .filter-chip .count {
-    color: var(--text-dim);
-    font-size: 11px;
-  }
-  .filter-footer {
-    display: grid;
-    gap: 10px;
-    padding-top: 2px;
-  }
-  .filter-count {
-    color: var(--text-dim);
-    font-size: 12px;
-  }
-  .clear-filter-btn {
-    width: 100%;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 9px 12px;
-    background: var(--bg-elev);
-    color: var(--text);
-    cursor: pointer;
-    font-family: inherit;
-    font-size: 13px;
-    font-weight: 700;
-    transition: background 0.16s ease, border-color 0.16s ease;
-  }
-  .clear-filter-btn:hover {
-    background: var(--card-hover);
-    border-color: rgba(255,255,255,0.16);
-  }
-
   /* 分类条(独立行) */
   .categories {
     display: flex; gap: 4px;
-    flex: 1; min-width: 0;
     overflow-x: auto;
     scrollbar-width: none;
   }
@@ -244,25 +98,6 @@
   .category.active {
     color: #fff; background: rgba(255,255,255,0.1);
     font-weight: 700;
-  }
-  .sort-control {
-    flex-shrink: 0;
-  }
-  .sort-control select {
-    min-width: 92px;
-    padding: 8px 30px 8px 12px;
-    border-radius: 999px;
-    background: var(--bg-elev);
-    border: 1px solid var(--border);
-    color: var(--text);
-    font-family: inherit;
-    font-size: 13px;
-    font-weight: 700;
-    cursor: pointer;
-    outline: none;
-  }
-  .sort-control select:focus {
-    border-color: rgba(167,139,250,0.5);
   }
 
   /* 顶部右区:github + x + 语言 */
@@ -351,87 +186,14 @@
     column-width: 280px;   /* 🔴 固定卡宽 · 内容可控 */
     column-gap: 16px;
   }
-  .gallery-shell .waterfall {
-    max-width: none;
-    padding: 0;
-  }
-  @media (max-width: 900px) {
-    .gallery-shell { display: block; padding: 16px 14px 60px; }
-    .filter-bar {
-      position: static;
-      width: 100%;
-      max-height: none;
-      overflow: visible;
-      padding: 0;
-      margin-bottom: 12px;
-      border-radius: 10px;
-    }
-    .filter-details { padding: 0; }
-    .filter-summary {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 12px 14px;
-    }
-    .filter-summary::after {
-      content: "⌄";
-      color: var(--text-dim);
-      font-size: 16px;
-      transition: transform 0.16s ease;
-    }
-    .filter-details[open] .filter-summary::after { transform: rotate(180deg); }
-    .filter-body {
-      gap: 16px;
-      padding: 0 14px 14px;
-    }
-    .filter-options { gap: 7px; }
+  @media (max-width: 780px) {
     .waterfall { column-width: 170px; column-gap: 10px; padding: 16px 14px 60px; }
-    .gallery-shell .waterfall { padding: 0; }
     .topbar-main { padding: 10px 14px 8px; gap: 12px; grid-template-columns: auto 1fr auto; }
-    .topbar-cats { padding: 0 14px 10px; flex-wrap: wrap; gap: 8px; }
-    .gallery-tabs { width: 100%; border-right: 0; padding-right: 0; }
-    .sort-control { margin-left: auto; }
+    .topbar-cats { padding: 0 14px 10px; }
     .search-box { max-width: none; padding: 8px 14px; font-size: 13px; }
     .lang-dd-btn .lang-label { display: none; }
     .top-icon-link { display: none; }
   }
-
-  .fav-toolbar {
-    max-width: 1720px;
-    margin: 0 auto;
-    padding: 18px 24px 0;
-    display: none;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 10px;
-  }
-  .fav-toolbar.visible { display: flex; }
-  .export-btn,
-  .clear-btn {
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 9px 14px;
-    background: var(--bg-elev);
-    color: var(--text);
-    cursor: pointer;
-    font-family: inherit;
-    font-size: 13px;
-    font-weight: 700;
-    transition: background 0.16s ease, border-color 0.16s ease, opacity 0.16s ease;
-  }
-  .export-btn:hover,
-  .clear-btn:hover { background: var(--card-hover); border-color: rgba(255,255,255,0.16); }
-  .export-btn:disabled,
-  .clear-btn:disabled { opacity: 0.45; cursor: not-allowed; }
-  .empty-state {
-    max-width: 1720px;
-    margin: 0 auto;
-    padding: 44px 24px 92px;
-    color: var(--text-mid);
-    text-align: center;
-    font-size: 15px;
-  }
-  .empty-state[hidden] { display: none; }
 
   prompt-card {
     display: block;
@@ -467,286 +229,9 @@
   }
   .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
   .toast svg { width: 16px; height: 16px; color: var(--purple); }
-  .toast.error-toast {
-    top: 84px;
-    bottom: auto;
-    border-color: rgba(255,143,168,0.42);
-    background: rgba(35,12,18,0.96);
-  }
-  .toast.error-toast svg { color: #ff8fa8; }
 
   /* footer tip */
   .foot-tip { text-align: center; color: var(--text-dim); font-size: 12px; padding: 14px 0 30px; }
-
-  /* ============ DETAIL MODAL ============ */
-  .modal.hidden { display: none; }
-  .modal {
-    position: fixed; inset: 0; z-index: 9999;
-    display: flex; align-items: center; justify-content: center;
-    padding: 24px;
-  }
-  .modal-overlay {
-    position: absolute; inset: 0;
-    background: rgba(0,0,0,0.75);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-  }
-  .modal-card {
-    position: relative;
-    width: 92%;
-    max-width: 720px;
-    max-height: 88vh;
-    overflow: auto;
-    padding: 28px;
-    background: var(--bg-elev);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    box-shadow: var(--shadow-hover);
-    color: var(--text);
-  }
-  .modal-close {
-    position: absolute; top: 12px; right: 14px; z-index: 1;
-    width: 34px; height: 34px; border-radius: 999px;
-    display: flex; align-items: center; justify-content: center;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid var(--border);
-    color: var(--text);
-    font-size: 24px; line-height: 1;
-    cursor: pointer;
-  }
-  .modal-close:hover { background: var(--card-hover); }
-  .modal-favorite {
-    position: absolute; top: 12px; right: 56px; z-index: 1;
-    width: 34px; height: 34px; border-radius: 999px;
-    display: flex; align-items: center; justify-content: center;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid var(--border);
-    color: var(--text);
-    cursor: pointer;
-    opacity: 0.7;
-    transition: opacity 0.16s ease, background 0.16s ease, transform 0.16s ease;
-  }
-  .modal-favorite:hover { opacity: 1; background: var(--card-hover); }
-  .modal-favorite svg {
-    width: 17px; height: 17px;
-    fill: none; stroke: currentColor;
-  }
-  .modal-favorite.is-favorite { color: var(--accent); opacity: 1; }
-  .modal-favorite.is-favorite svg { fill: var(--accent); stroke: var(--accent); }
-  .modal-favorite.pop svg { animation: favorite-pop 180ms ease; }
-  @keyframes favorite-pop {
-    0% { transform: scale(1); }
-    55% { transform: scale(1.2); }
-    100% { transform: scale(1); }
-  }
-  .modal-hero {
-    width: 100%;
-    overflow: hidden;
-    border-radius: 12px;
-    background: var(--card);
-    border: 1px solid var(--border);
-  }
-  .modal-hero img { width: 100%; border-radius: 12px; }
-  .modal-hero-placeholder {
-    width: 100%;
-    min-height: 220px;
-    display: flex; align-items: center; justify-content: center;
-    color: var(--text-dim);
-    background: linear-gradient(135deg, var(--card), var(--bg));
-    font-size: 42px;
-  }
-  .modal-body { padding-top: 20px; }
-  .modal-title {
-    color: var(--text);
-    font-size: 24px;
-    line-height: 1.25;
-    margin-bottom: 12px;
-  }
-  .modal-tags {
-    display: flex; flex-wrap: wrap; gap: 8px;
-    margin-bottom: 18px;
-  }
-  .modal-tags .tag {
-    padding: 5px 10px;
-    border-radius: 999px;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid var(--border);
-    color: var(--text-mid);
-    font-size: 12px;
-  }
-  .modal-section { margin-top: 18px; }
-  .modal-section-title {
-    color: var(--text-mid);
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-  }
-  .modal-prompt {
-    background: #010409;
-    color: #c9d1d9;
-    padding: 16px;
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    font-family: "SF Mono", Menlo, Consolas, monospace;
-    font-size: 13px;
-    line-height: 1.6;
-    white-space: pre-wrap;
-    word-break: break-word;
-    max-height: 320px;
-    overflow-y: auto;
-  }
-  .modal-copy {
-    background: var(--accent);
-    color: #fff;
-    border: 0;
-    padding: 10px 18px;
-    border-radius: 8px;
-    font-weight: 600;
-    font-family: inherit;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background 0.16s ease, transform 0.16s ease;
-  }
-  .modal-copy:hover { background: var(--accent-2); transform: translateY(-1px); }
-  .modal-copy.copied { background: #10a37f; }
-  .remix-btn {
-    border: 0;
-    border-radius: 8px;
-    padding: 10px 14px;
-    background: linear-gradient(135deg, #34d9a9, #0d8b68);
-    color: #04120e;
-    font-family: inherit;
-    font-size: 13px;
-    font-weight: 800;
-    cursor: pointer;
-    transition: transform 0.16s ease, filter 0.16s ease;
-  }
-  .remix-btn:hover { filter: brightness(1.08); transform: translateY(-1px); }
-  .modal-atoms {
-    display: grid;
-    gap: 6px;
-    margin-top: 8px;
-  }
-  .modal-atoms dt {
-    color: var(--text-mid);
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-  }
-  .modal-atoms dd {
-    color: var(--text);
-    margin: 0 0 12px;
-    line-height: 1.55;
-  }
-  .modal-swatch {
-    display: inline-block;
-    width: 14px; height: 14px;
-    border-radius: 3px;
-    margin-right: 6px;
-    vertical-align: -2px;
-    border: 1px solid var(--border);
-  }
-  .remix-card {
-    max-width: 560px;
-  }
-  .remix-title {
-    padding-right: 38px;
-    margin-bottom: 16px;
-    color: var(--text);
-    font-size: 22px;
-    line-height: 1.28;
-  }
-  .remix-field {
-    width: 100%;
-    min-height: 44px;
-    padding: 11px 14px;
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    background: #0f0f12;
-    color: var(--text);
-    font-family: inherit;
-    font-size: 15px;
-    outline: none;
-  }
-  .remix-field:focus {
-    border-color: rgba(52,217,169,0.5);
-    box-shadow: 0 0 0 3px rgba(52,217,169,0.08);
-  }
-  .remix-status {
-    min-height: 24px;
-    margin: 14px 0;
-    color: var(--text-mid);
-    font-size: 14px;
-    line-height: 1.5;
-  }
-  .remix-status.error { color: #ff8fa8; }
-  .remix-status.success { color: #34d9a9; }
-  .remix-status.loading::before {
-    content: "";
-    display: inline-block;
-    width: 12px; height: 12px;
-    margin-right: 8px;
-    border-radius: 50%;
-    border: 2px solid rgba(255,255,255,0.18);
-    border-top-color: #34d9a9;
-    vertical-align: -2px;
-    animation: remix-spin 0.8s linear infinite;
-  }
-  @keyframes remix-spin { to { transform: rotate(360deg); } }
-  #remix-result {
-    width: 100%;
-    max-height: 48vh;
-    object-fit: contain;
-    border-radius: 12px;
-    border: 1px solid var(--border);
-    background: #050506;
-  }
-  .remix-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 16px;
-  }
-  .remix-actions button {
-    position: static;
-    width: auto;
-    height: auto;
-    min-height: 40px;
-    padding: 9px 14px;
-    border-radius: 8px;
-    font-family: inherit;
-    font-size: 13px;
-    font-weight: 800;
-    line-height: 1.2;
-  }
-  .remix-actions .modal-close {
-    background: rgba(255,255,255,0.06);
-    color: var(--text);
-    border: 1px solid var(--border);
-  }
-  .remix-actions #remix-submit,
-  .remix-actions #remix-regen {
-    background: linear-gradient(135deg, #34d9a9, #0d8b68);
-    color: #04120e;
-    border: 0;
-  }
-  .remix-actions #remix-download {
-    background: var(--accent);
-    color: #fff;
-    border: 0;
-  }
-  .remix-actions button:disabled {
-    cursor: not-allowed;
-    opacity: 0.55;
-  }
-  @media (max-width: 780px) {
-    .modal { padding: 14px; align-items: flex-start; }
-    .modal-card { width: 100%; max-height: 92vh; padding: 22px 18px; }
-    .modal-title { font-size: 20px; padding-right: 34px; }
-    .modal-hero-placeholder { min-height: 160px; }
-  }
 </style>
 </head>
 <body>
@@ -761,7 +246,7 @@
     </div>
     <div class="search-box">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
-      <input id="search-input" placeholder="搜 prompt / title / tag · 按回车或 300ms debounce"/>
+      <input data-i18n-ph="search.ph" placeholder="搜风格 / 题材 / 画师"/>
     </div>
     <div class="top-right">
       <a class="top-icon-link" href="https://github.com" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub">
@@ -782,103 +267,30 @@
   </div>
   <!-- Row 2 · categories -->
   <div class="topbar-cats">
-    <div class="gallery-tabs" id="gallery-tabs" role="tablist" aria-label="图库筛选">
-      <button class="gallery-tab active" data-tab="all" type="button">全部</button>
-      <button class="gallery-tab favorites-tab" data-tab="favorites" type="button">收藏 <span class="count"></span></button>
-      <button class="gallery-tab" data-tab="generations" type="button">我的作品 <span class="count"></span></button>
-    </div>
     <div class="categories" id="cats"></div>
-    <div class="sort-control">
-      <select id="sort-select" data-sort aria-label="排序">
-        <option value="recommend">推荐</option>
-        <option value="latest">最新</option>
-        <option value="hot">最热</option>
-      </select>
-    </div>
   </div>
-</div>
-
-<div class="fav-toolbar" id="fav-toolbar">
-  <button class="export-btn" type="button">导出 JSON</button>
-  <button class="clear-btn" type="button">清空</button>
 </div>
 
 <!-- ============ WATERFALL ============ -->
-<div class="gallery-shell">
-  <aside class="filter-bar" id="filter-bar">
-    <details class="filter-details" id="filter-details" open>
-      <summary class="filter-summary">筛选</summary>
-      <div class="filter-body">
-        <div class="filter-group" data-group="tags">
-          <h4>Tags</h4>
-          <div class="filter-options" data-options="tags"></div>
-        </div>
-        <div class="filter-group" data-group="style">
-          <h4>Style</h4>
-          <div class="filter-options" data-options="style"></div>
-        </div>
-        <div class="filter-group" data-group="aspect">
-          <h4>Aspect</h4>
-          <div class="filter-options" data-options="aspect"></div>
-        </div>
-        <div class="filter-footer">
-          <div class="filter-count" id="filter-count">显示 0 / 0 张</div>
-          <button class="clear-filter-btn" type="button">清空筛选</button>
-        </div>
-      </div>
-    </details>
-  </aside>
-  <main class="gallery-main">
-    <div class="waterfall" id="waterfall"></div>
-    <div class="empty-state" id="favorites-empty" hidden>还没收藏任何图 · 去逛逛瀑布流吧 →</div>
-  </main>
-</div>
+<div class="waterfall" id="waterfall"></div>
 
 <div class="foot-tip" data-i18n="foot">✨ 设计图 · gallery.html · 更多风格持续加入 · GPT Image 2 Hub © 2026</div>
 
-<!-- ============ DETAIL MODAL ============ -->
-<div id="detail-modal" class="modal hidden" role="dialog" aria-hidden="true">
-  <div class="modal-overlay" data-role="overlay"></div>
-  <div class="modal-card">
-    <button class="modal-close" data-role="close" aria-label="关闭">×</button>
-    <button class="modal-favorite favorite-btn" data-role="favorite" aria-label="收藏" aria-pressed="false">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-    </button>
-    <div class="modal-hero"></div>
-    <div class="modal-body">
-      <h2 class="modal-title"></h2>
-      <div class="modal-tags"></div>
-      <div class="modal-section">
-        <div class="modal-section-title">Prompt</div>
-        <pre class="modal-prompt"></pre>
-        <button class="modal-copy" data-role="copy">复制 prompt</button>
-        <button class="remix-btn" data-role="remix" type="button">用这个风格做我的</button>
-      </div>
-      <div class="modal-section">
-        <div class="modal-section-title">原子拆解 · Atoms</div>
-        <dl class="modal-atoms"></dl>
-      </div>
-    </div>
+<div id="detail-modal" class="hidden" role="dialog" style="position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;">
+  <div class="detail-overlay" style="position:absolute;inset:0;background:rgba(0,0,0,0.75);backdrop-filter:blur(14px);"></div>
+  <div class="detail-card" style="position:relative;max-width:720px;max-height:88vh;width:92%;background:var(--bg-elev,#161618);border:1px solid var(--border,rgba(255,255,255,0.08));border-radius:16px;overflow:auto;padding:28px;color:var(--text,#fff);">
+    <button class="detail-close" type="button" style="position:absolute;top:12px;right:14px;background:transparent;border:0;color:#fff;font-size:28px;cursor:pointer;">×</button>
+    <h2 class="detail-title" style="margin:0 0 12px;font-size:22px;"></h2>
+    <div class="detail-tags" style="margin-bottom:14px;"></div>
+    <div style="font-size:12px;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-mid,rgba(255,255,255,0.65));margin-bottom:6px;">Prompt</div>
+    <pre class="detail-prompt" style="background:#010409;color:#c9d1d9;padding:16px;border-radius:10px;font-family:'SF Mono',Menlo,monospace;font-size:13px;line-height:1.6;white-space:pre-wrap;word-break:break-word;max-height:260px;overflow-y:auto;margin:0 0 12px;"></pre>
+    <button class="detail-copy" type="button" style="background:var(--accent,#ff2e51);color:white;border:0;padding:10px 18px;border-radius:8px;font-weight:600;cursor:pointer;">复制 prompt</button>
+    <div class="detail-atoms" style="margin-top:18px;"></div>
   </div>
 </div>
 
-<!-- ============ REMIX MODAL ============ -->
-<div id="remix-modal" class="modal hidden" role="dialog" aria-hidden="true">
-  <div class="modal-overlay" data-remix-close></div>
-  <div class="modal-card remix-card">
-    <button class="modal-close" data-remix-close aria-label="关闭">×</button>
-    <h2 class="remix-title">用 <span data-remix-style></span> 风格做我的</h2>
-    <input id="remix-subject" class="remix-field" placeholder="输入主题 · 如'一只橘猫' / '我的咖啡店开业'" maxlength="50">
-    <div class="remix-status" id="remix-status"></div>
-    <img id="remix-result" hidden alt="remix result">
-    <div class="remix-actions">
-      <button id="remix-submit" type="button">生成</button>
-      <button id="remix-regen" type="button" hidden>再生一张</button>
-      <button id="remix-download" type="button" hidden>下载</button>
-      <button class="modal-close" data-remix-close type="button">关闭</button>
-    </div>
-  </div>
-</div>
+<!-- ============ MODAL (Web Component) ============ -->
+<prompt-modal></prompt-modal>
 
 <!-- ============ TOAST ============ -->
 <div class="toast" id="toast"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span id="toast-text">已复制</span></div>
@@ -890,7 +302,6 @@
 const CATS = ['推荐','人像','海报','漫画','环境','国风','复古','赛博','可爱','极简','经典','动物','美食','摄影'];
 
 const AUTHOR_MODELS = {
-  'prompt-atlas':   { label: 'Prompt Atlas',    icon: '●', hue: 145 },
   'claude-code':   { label: 'Claude Code',    icon: '◆', hue: 270 },
   'claude-opus':   { label: 'Opus 4.7',       icon: '◆', hue: 280 },
   'claude-sonnet': { label: 'Sonnet 4.6',     icon: '◆', hue: 260 },
@@ -906,7 +317,6 @@ const IMAGE_MODELS = {
 
 // 作者 AI 品牌形象(头像底色 + 字形)
 const MODEL_BRAND = {
-  'prompt-atlas':   { grad: 'linear-gradient(135deg, #34d9a9 0%, #0d8b68 100%)', glyph: '◉' },
   'claude-code':   { grad: 'linear-gradient(135deg, #e88a5c 0%, #d97757 100%)', glyph: '✱' },
   'claude-opus':   { grad: 'linear-gradient(135deg, #c470e8 0%, #8b5cf6 100%)', glyph: '✱' },
   'claude-sonnet': { grad: 'linear-gradient(135deg, #a78bfa 0%, #6366f1 100%)', glyph: '✱' },
@@ -920,6 +330,9 @@ const CAT_EN = {
   '国风':'Oriental','复古':'Vintage','赛博':'Cyber','可爱':'Kawaii','极简':'Minimal',
   '经典':'Classic','动物':'Animal','美食':'Food','摄影':'Photo'
 };
+CATS.push('收藏', '我的作品');
+CAT_EN['收藏'] = 'Favorites';
+CAT_EN['我的作品'] = 'My Works';
 
 const LANGS = [
   { id: 'zh', flag: '🇨🇳', native: '中文',     en: 'Chinese'  },
@@ -997,85 +410,165 @@ function t(key) {
   return d[key] || I18N.en[key] || I18N.zh[key] || key;
 }
 
+const FALLBACK_CARDS = [
+  { id:'01', title:'梦幻蝴蝶少女', en:'Vintage Butterfly',
+    authorModel:'claude-code', imageModel:'gpt-image-2',
+    img:'assets/generated/e2e-sunset-mountain.png', aspect:'3/4', likes:4989, cat:'人像',
+    tags:['复古','人像','蝴蝶','金色时光','水彩','painterly'],
+    prompt:`A full-body portrait of a beautiful young woman, rendered in photo-realistic digital painting with subtle painterly brushwork. She has long flowing hair in a brown gradient from warm chestnut to caramel, with two delicate emerald-green butterflies resting gently on her hair. Vintage beige cream dress with lace ruffled trim, pearl and jade jewelry. Warm vintage interior with golden-hour god rays filtering through a tall window, visible dust motes. Color palette: warm browns + cream beige + emerald green accents. Aspect ratio 3:4.` },
+
+  { id:'02', title:'深夜改 bug', en:'Deep Night Debug',
+    authorModel:'codex', imageModel:'gpt-image-2',
+    img:'assets/generated/synthwave.png', aspect:'3/4', likes:2518, cat:'漫画',
+    tags:['漫画','程序员','四格','段子','黑白','screentone'],
+    prompt:`A 4-panel Japanese manga strip titled "深夜改 bug", black and white screen-tone style, thick ink outlines, dot halftones. Panel 1: programmer at desk at 2am, coffee and energy drink cans piled up. Panel 2: close-up of confused face staring at red error wall. Panel 3: stack overflow tab open, relief gesture. Panel 4: sunrise through window, programmer asleep on keyboard. Aspect ratio 3:4.` },
+
+  { id:'03', title:'赛博茶馆', en:'Cyberpunk Teahouse',
+    authorModel:'claude-code', imageModel:'gpt-image-2',
+    img:'assets/generated/batch-cyberpunk-market.png', aspect:'16/9', likes:1267, cat:'赛博',
+    tags:['赛博','环境','霓虹','茶馆','雨夜','volumetric'],
+    prompt:`A poster-style environment illustration of a small cyberpunk teahouse in a rain-soaked East Asian back alley, painterly hand-printed style with analog grain and CRT scanline artifacts. Round wood table with gaiwan releasing steam, vintage CRT TV, ginger cat. Jade-green neon (#00b894) + amber lantern (#f39c12) + near-black base (#0d1b2a). Wet concrete reflections. Aspect 3:4.` },
+
+  { id:'04', title:'昭和和菓子店', en:'Showa Tea Shop',
+    authorModel:'claude-sonnet', imageModel:'gpt-image-2',
+    img:'assets/generated/batch-coffee-flat.png', aspect:'3/4', likes:744, cat:'国风',
+    tags:['国风','昭和','黄昏','手工','和菓子','复古海报'],
+    prompt:`A vertical retro poster illustration of a Japanese Showa-era tea and wagashi shop facade at dusk, painterly hand-printed with warm grain of vintage mid-century Japanese travel posters. Aged cedar planks, shoji screens glowing amber, noren curtain in indigo. Hand-brushed ink calligraphy reading 和菓子. Palette: #2c1810 + #e8a048 + #7a9e7e + #d4c4a0. Aspect 3:4.` },
+
+  { id:'05', title:'水彩橘猫看夕阳', en:'Watercolor Tabby',
+    authorModel:'gpt-5', imageModel:'gpt-image-2',
+    img:'assets/samples/cat-sunset-watercolor.png', aspect:'16/9', likes:8822, cat:'动物',
+    tags:['水彩','猫','治愈','黄昏','小确幸'],
+    prompt:`一只橘猫坐在窗台上看夕阳，水彩画风格，柔和笔触，暖色调，窗框木纹清晰，光线透过玻璃洒在猫毛上形成柔和高光，背景远处是模糊的城市剪影。色调：温暖橙黄 + 柔粉 + 淡蓝。aspect ratio 16:9.` },
+
+  { id:'06', title:'盲盒柯基', en:'Pixar Corgi',
+    authorModel:'claude-code', imageModel:'gpt-image-2',
+    img:'assets/generated/batch-corgi-pixar.png', aspect:'4/3', likes:3421, cat:'可爱',
+    tags:['皮克斯','3D','柯基','生日','手办','棚拍光'],
+    prompt:`a Pixar-style 3D render of a cute corgi wearing a birthday hat, studio lighting, soft fur detail, big sparkling eyes, shallow depth of field, pastel background with blurred confetti, hyperreal toy-like finish. Aspect 4:3.` },
+
+  { id:'07', title:'霓虹夜市', en:'Cyberpunk Night Market',
+    authorModel:'claude-opus', imageModel:'gpt-image-2',
+    img:'assets/generated/batch-cyberpunk-market.png', aspect:'16/9', likes:12876, cat:'赛博',
+    tags:['赛博','夜市','霓虹','电影感','Blade Runner','蒸汽'],
+    prompt:`cyberpunk street market at night, neon signs in jade + pink + gold, blade runner atmosphere, wet reflective pavement, steam from food stalls catching neon light, volumetric haze. Cinematic wide shot, aspect 16:9.` },
+
+  { id:'08', title:'水墨锦鲤', en:'Ink Wash Koi',
+    authorModel:'claude-sonnet', imageModel:'gpt-image-2',
+    img:'assets/generated/batch-koi-watercolor.png', aspect:'1/1', likes:5643, cat:'国风',
+    tags:['水墨','锦鲤','荷塘','禅意','国画','宣纸'],
+    prompt:`a watercolor painting of a koi fish swimming in a lotus pond, traditional Chinese ink wash style, minimal composition, visible brushwork and rice paper texture, subtle gold leaf accents. Aspect 1:1.` },
+
+  { id:'09', title:'极简咖啡', en:'Minimal Coffee',
+    authorModel:'claude-code', imageModel:'gpt-image-2',
+    img:'assets/generated/batch-coffee-flat.png', aspect:'3/4', likes:2109, cat:'极简',
+    tags:['极简','咖啡','晨光','木质','flat'],
+    prompt:`minimalist flat illustration of a coffee cup on a wooden desk, morning soft light through window, limited palette of warm beige + cream + subtle sage green, large negative space top-left for quote text. Aspect 3:4.` },
+
+  { id:'10', title:'日落山川', en:'Sunset Mountain',
+    authorModel:'codex', imageModel:'gpt-image-2',
+    img:'assets/generated/e2e-sunset-mountain.png', aspect:'16/9', likes:7332, cat:'海报',
+    tags:['风光','日落','极简','渐变','海报','背景图'],
+    prompt:`a minimalist mountain landscape with sunset gradient sky, flat illustration style, warm oranges and purples, subtle atmospheric haze, clean silhouetted ridgelines, poster-ready composition. Aspect 16:9.` },
+
+  { id:'11', title:'禅意石庭', en:'Zen Rock Garden',
+    authorModel:'claude-code', imageModel:'gpt-image-2',
+    img:'assets/generated/zen-garden.png', aspect:'1/1', likes:1891, cat:'国风',
+    tags:['禅意','日式','石庭','侘寂','冥想'],
+    prompt:`a serene Japanese zen rock garden at dawn, raked gravel patterns, single stone lantern, soft painterly watercolor, muted earth tones #d4c4a0 + #7a9e7e + #5c4033, golden hour light, aspect 1:1.` },
+
+  { id:'12', title:'赛博电子猫', en:'Cyber Cat',
+    authorModel:'claude-opus', imageModel:'gpt-image-2',
+    img:'assets/generated/cyber-cat.png', aspect:'16/9', likes:6540, cat:'赛博',
+    tags:['赛博','猫','霓虹','全息','屋顶','未来'],
+    prompt:`a cybernetic tabby cat on a futuristic rooftop, holographic collar with floating data glyphs, neon magenta + cyan signage in background, wet rain-slicked surfaces reflecting lights, cinematic depth of field. Aspect 16:9.` },
+
+  { id:'13', title:'蒸汽波日落', en:'Synthwave Sunset',
+    authorModel:'cursor', imageModel:'gpt-image-2',
+    img:'assets/generated/synthwave.png', aspect:'9/16', likes:4201, cat:'复古',
+    tags:['蒸汽波','Y2K','网格','紫粉','80s','CRT'],
+    prompt:`synthwave retro aesthetic, palm tree silhouettes in front of a purple-pink gradient grid horizon, chrome text glow, 80s VHS film grain, CRT scanline overlay. Aspect 9:16.` },
+];
 let CARDS = [];
-let RAW_IMAGES = [];
-let allImages = [];
+let allImages = CARDS;
+let RENDER_CARDS = [];
+let searchQuery = '';
 
-function aspectToCss(aspect) {
-  const value = String(aspect || '3:4').trim();
-  return value.includes(':') ? value.replace(':', '/') : value;
+const FAV_KEY = 'promptatlas.favorites';
+const GEN_KEY = 'promptatlas.generations';
+const HISTORY_KEY = 'promptatlas.click_history';
+
+function asArray(value) {
+  return Array.isArray(value) ? value : [];
 }
-function aspectToLabel(aspect) {
-  return String(aspect || '').trim().replace('/', ':');
-}
-function categoryFromImage(img) {
-  if (img.category) return img.category;
-  const tags = Array.isArray(img.tags) ? img.tags.join(' ') : '';
-  if (/manga|comic|webtoon|4-panel/i.test(tags)) return '漫画';
-  if (/portrait/i.test(tags)) return '人像';
-  if (/cyberpunk|neon|konbini|teahouse|environment/i.test(tags)) return '环境';
-  return '海报';
-}
-function normalizeImage(img) {
+
+function normalizeImage(img, index = 0) {
+  const tags = asArray(img.tags).map(String);
+  const title = img.title || img.title_en || img.style || `Image ${index + 1}`;
+  const prompt = img.prompt || '';
   return {
-    id: String(img.id || ''),
-    title: img.title || img.id || 'Untitled',
-    en: img.title_en || img.title || img.id || 'Untitled',
-    authorModel: img.author_model || 'prompt-atlas',
-    imageModel: img.model || 'gpt-image-2',
-    img: img.image_url || '',
-    aspect: aspectToCss(img.aspect),
-    aspectLabel: aspectToLabel(img.aspect),
-    likes: Number.isFinite(Number(img.likes)) ? Number(img.likes) : 0,
-    cat: categoryFromImage(img),
-    tags: Array.isArray(img.tags) ? img.tags : [],
-    prompt: img.prompt || '',
-    style: img.style || '',
+    id: String(img.id || `api-${index + 1}`),
+    title,
+    en: img.title_en || img.en || title,
+    authorModel: img.author_model || img.authorModel || 'prompt-atlas',
+    imageModel: img.model || img.imageModel || 'gpt-image-2',
+    img: img.image_url || img.imageUrl || img.img || '',
+    aspect: img.aspect || '3/4',
+    likes: Number(img.likes || 0),
+    cat: img.category || img.cat || img.style || '推荐',
+    tags,
+    prompt,
     atoms: img.atoms || {},
-    sourceMd: img.source_md || '',
+    style: img.style || '',
   };
 }
 
-function normalizeGeneration(gen) {
-  const subject = gen.subject || '我的作品';
-  return {
-    id: String(gen.id || ''),
-    title: subject,
-    en: subject,
-    authorModel: 'prompt-atlas',
-    imageModel: 'generated',
-    img: gen.image_url || '',
-    aspect: '1/1',
-    aspectLabel: '1:1',
-    likes: 0,
-    cat: '海报',
-    tags: ['generated'],
-    prompt: 'N/A',
-    style: 'generated',
-    atoms: { subject, source_image_id: gen.source_image_id || '' },
-    sourceImageId: gen.source_image_id || '',
-    ts: Number(gen.ts) || 0,
-  };
+function normalizeGeneration(img, index = 0) {
+  return normalizeImage({
+    ...img,
+    id: img.id || img.task_id || `generation-${index + 1}`,
+    title: img.title || img.subject || '我的作品',
+    title_en: img.title_en || img.title || img.subject || 'My Work',
+    image_url: img.image_url || img.imageUrl || img.url || img.img,
+    category: img.category || img.cat || '我的作品',
+    tags: img.tags || ['我的作品'],
+    prompt: img.prompt || img.final_prompt || img.subject || '',
+    model: img.model || 'gpt-image-2',
+    author_model: img.author_model || 'prompt-atlas',
+  }, index);
 }
 
-async function loadImages() {
-  const res = await fetch('/api/images');
-  if (!res.ok) throw new Error(`/api/images ${res.status}`);
-  const data = await res.json();
-  RAW_IMAGES = Array.isArray(data.images) ? data.images : [];
-  CARDS = RAW_IMAGES.map(normalizeImage);
-  allImages = CARDS;
+function getFavs() {
+  try { return new Set(JSON.parse(localStorage.getItem(FAV_KEY) || '[]').map(String)); }
+  catch { return new Set(); }
 }
 
-function escapeHtml(value) {
-  return String(value ?? '').replace(/[&<>"']/g, (ch) => ({
-    '&': '&amp;',
-    '<': '&lt;',
-    '>': '&gt;',
-    '"': '&quot;',
-    "'": '&#39;',
-  }[ch]));
+function saveFavs(favs) {
+  localStorage.setItem(FAV_KEY, JSON.stringify([...favs]));
 }
+
+function refreshFavHearts() {
+  document.querySelectorAll('prompt-card').forEach(card => {
+    const btn = card.shadowRoot && card.shadowRoot.querySelector('.fav-heart');
+    if (btn) btn.style.color = getFavs().has(btn.dataset.favId) ? '#ff2e51' : 'rgba(255,255,255,0.9)';
+  });
+}
+
+function toggleFav(id, btn) {
+  const favs = getFavs();
+  const key = String(id);
+  if (favs.has(key)) {
+    favs.delete(key);
+    if (btn) btn.style.color = 'rgba(255,255,255,0.9)';
+  } else {
+    favs.add(key);
+    if (btn) btn.style.color = '#ff2e51';
+  }
+  saveFavs(favs);
+  refreshFavHearts();
+  if (activeCat === '收藏') renderWaterfall();
+}
+window.toggleFav = toggleFav;
 
 // ========================================================
 // FeedEngine · 信号 + 排序 + 投喂(可 swap backend)
@@ -1121,104 +614,6 @@ function markNotInterested(id, cat) {
 function resetSignals() {
   Object.assign(SIG, { seen:[], viewed:[], liked:[], copied:[], notInterested:[], affinity:{}, sessionStart: Date.now() });
   saveSignals();
-}
-
-// ========================================================
-// Favorites · localStorage schema:string[]
-// ========================================================
-const FAVORITES_KEY = 'promptatlas.favorites';
-const GENERATIONS_KEY = 'promptatlas.generations';
-
-function getGenerations() {
-  try {
-    const raw = localStorage.getItem(GENERATIONS_KEY);
-    const list = raw ? JSON.parse(raw) : [];
-    if (!Array.isArray(list)) return [];
-    return list.filter(item => item && item.id && item.image_url);
-  } catch (err) {
-    console.warn('localStorage blocked', err);
-    return [];
-  }
-}
-function getGenerationImages() {
-  return getGenerations()
-    .map(normalizeGeneration)
-    .sort((a, b) => (b.ts || 0) - (a.ts || 0));
-}
-function saveGeneration({ source_image_id, subject, image_url }) {
-  try {
-    const list = JSON.parse(localStorage.getItem(GENERATIONS_KEY) || '[]');
-    const safeList = Array.isArray(list) ? list : [];
-    const ts = Date.now();
-    safeList.push({ id: 'gen-' + ts, source_image_id, subject, image_url, ts });
-    localStorage.setItem(GENERATIONS_KEY, JSON.stringify(safeList));
-    updateFavoriteControls();
-    if (activeTab === 'generations') renderGallery();
-  } catch (err) {
-    console.warn('localStorage blocked', err);
-  }
-}
-
-function findCardById(id) {
-  const sid = String(id || '');
-  return CARDS.find(c => c.id === sid) || getGenerationImages().find(c => c.id === sid);
-}
-
-function getFavorites() {
-  try {
-    const raw = localStorage.getItem(FAVORITES_KEY);
-    const list = raw ? JSON.parse(raw) : [];
-    if (!Array.isArray(list)) return [];
-    return Array.from(new Set(list.map(id => String(id)).filter(Boolean)));
-  } catch (err) {
-    console.warn('localStorage blocked', err);
-    return [];
-  }
-}
-function saveFavorites(ids) {
-  try {
-    localStorage.setItem(FAVORITES_KEY, JSON.stringify(Array.from(new Set(ids.map(id => String(id)).filter(Boolean)))));
-  } catch (err) {
-    console.warn('localStorage blocked', err);
-  }
-}
-function isFavorite(id) {
-  return getFavorites().includes(String(id));
-}
-function toggleFavorite(id) {
-  const sid = String(id);
-  const favorites = getFavorites();
-  const next = favorites.includes(sid)
-    ? favorites.filter(item => item !== sid)
-    : favorites.concat(sid);
-  saveFavorites(next);
-  syncFavoriteUI(sid);
-  updateFavoriteControls();
-  if (activeTab === 'favorites' || activeTab === 'generations') filterGallery(activeTab);
-  return next.includes(sid);
-}
-function pulseFavoriteButton(btn) {
-  if (!btn) return;
-  btn.classList.remove('pop');
-  void btn.offsetWidth;
-  btn.classList.add('pop');
-}
-function syncFavoriteButton(btn, id) {
-  if (!btn) return;
-  const on = isFavorite(id);
-  btn.classList.toggle('is-favorite', on);
-  btn.setAttribute('aria-pressed', on ? 'true' : 'false');
-  btn.setAttribute('title', on ? '取消收藏' : '收藏');
-}
-function syncFavoriteUI(id) {
-  document.querySelectorAll('prompt-card').forEach(card => {
-    if (!id || card.getAttribute('data-id') === id) card.syncFavorite?.();
-  });
-  const modal = document.getElementById('detail-modal');
-  if (!modal || !modal.dataset.currentId) return;
-  if (!id || modal.dataset.currentId === id) {
-    syncFavoriteButton(modal.querySelector('[data-role="favorite"]'), modal.dataset.currentId);
-  }
 }
 
 // —— 排序 ——
@@ -1280,7 +675,7 @@ class PromptCard extends HTMLElement {
   }
   connectedCallback() {
     const id = this.getAttribute('data-id');
-    const data = findCardById(id);
+    const data = RENDER_CARDS.find(c => c.id === id) || CARDS.find(c => c.id === id);
     if (!data) return;
 
     const authorMeta = AUTHOR_MODELS[data.authorModel] || { label: data.authorModel, hue: 270 };
@@ -1291,7 +686,11 @@ class PromptCard extends HTMLElement {
     const secondaryTitle = isZh ? data.en    : data.title;
     const catLabel       = isZh ? data.cat    : (CAT_EN[data.cat] || data.cat);
 
-    const favorited = isFavorite(id);
+    const likedKey = `liked-${id}`;
+    const liked = localStorage.getItem(likedKey) === '1';
+    const favColor = getFavs().has(id) ? '#ff2e51' : 'rgba(255,255,255,0.9)';
+    const displayLikes = data.likes + (liked ? 1 : 0);
+    const hasImage = Boolean(data.img);
 
     this.shadowRoot.innerHTML = `
       <style>
@@ -1319,18 +718,6 @@ class PromptCard extends HTMLElement {
           background: linear-gradient(135deg, #1a1a1d, #2a2a30);
           position: relative;
         }
-        .skeleton, .card-img.skeleton {
-          background: linear-gradient(90deg, #1a1a1d 0%, #2a2a2d 50%, #1a1a1d 100%);
-          background-size: 200% 100%;
-          animation: shimmer 1.5s infinite;
-        }
-        @keyframes shimmer {
-          0%   { background-position: 200% 0; }
-          100% { background-position: -200% 0; }
-        }
-        .card-img.error-state {
-          background: #1a1a1d;
-        }
         .cover {
           width: 100%; height: 100%;
           object-fit: cover;
@@ -1348,31 +735,6 @@ class PromptCard extends HTMLElement {
           background: rgba(0,0,0,0.55); backdrop-filter: blur(8px);
           color: #fff; font-size: 11px; font-weight: 600;
           letter-spacing: 0.02em;
-        }
-        .favorite-btn {
-          position: absolute; top: 10px; right: 10px;
-          width: 34px; height: 34px; border-radius: 999px;
-          display: flex; align-items: center; justify-content: center;
-          background: rgba(0,0,0,0.48);
-          border: 1px solid rgba(255,255,255,0.14);
-          color: #fff;
-          cursor: pointer;
-          opacity: 0.7;
-          transition: opacity 0.16s ease, background 0.16s ease, transform 0.16s ease;
-          z-index: 2;
-        }
-        .favorite-btn:hover { opacity: 1; background: rgba(0,0,0,0.68); }
-        .favorite-btn svg {
-          width: 17px; height: 17px;
-          fill: none; stroke: currentColor;
-        }
-        .favorite-btn.is-favorite { color: var(--accent); opacity: 1; }
-        .favorite-btn.is-favorite svg { fill: var(--accent); stroke: var(--accent); }
-        .favorite-btn.pop svg { animation: favorite-pop 180ms ease; }
-        @keyframes favorite-pop {
-          0% { transform: scale(1); }
-          55% { transform: scale(1.2); }
-          100% { transform: scale(1); }
         }
         .meta {
           padding: 10px 12px 12px;
@@ -1441,7 +803,7 @@ class PromptCard extends HTMLElement {
           letter-spacing: 0.04em;
           font-variant-numeric: tabular-nums;
         }
-        .actions { display: flex; align-items: center; gap: 5px; flex-shrink: 0; }
+        .actions { display: flex; align-items: center; gap: 2px; flex-shrink: 0; }
         .action-btn {
           background: transparent; border: none; cursor: pointer;
           padding: 4px 6px; border-radius: 6px;
@@ -1453,56 +815,47 @@ class PromptCard extends HTMLElement {
         .action-btn:hover { color: #fff; background: rgba(255,255,255,0.06); }
         .action-btn svg { width: 14px; height: 14px; }
 
+        .like-btn.liked { color: #ff2e51; }
+        .like-btn.liked svg { fill: #ff2e51; stroke: #ff2e51; }
+        .like-btn.pulse svg { animation: pulse 0.4s ease; }
+        @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.35); } }
+
         .copy-btn:hover { color: #a78bfa; }
-        .remix-btn {
-          max-width: 118px;
-          padding: 6px 9px;
-          background: linear-gradient(135deg, #34d9a9, #0d8b68);
-          color: #04120e;
-          font-size: 11px;
-          font-weight: 800;
-          line-height: 1.15;
-          text-align: center;
-        }
-        .remix-btn:hover {
-          color: #04120e;
-          background: linear-gradient(135deg, #4ee2b7, #14a77e);
-        }
       </style>
 
       <div class="card" part="card" style="--ar:${data.aspect}; --h:${hashHue(data.title)};">
-        <div class="cover-wrap card-img${data.img ? ' skeleton' : ''}">
-          ${data.img ? `<img class="cover" src="${escapeHtml(data.img)}" alt="${escapeHtml(data.title)}" loading="lazy" decoding="async"
-               onload="this.parentElement.classList.remove('skeleton')"
-               onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NDAiIGhlaWdodD0iNDgwIiB2aWV3Qm94PSIwIDAgNjQwIDQ4MCI+PHJlY3Qgd2lkdGg9IjY0MCIgaGVpZ2h0PSI0ODAiIGZpbGw9IiMxYTFhMWQiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2ZmZmZmZiIgZmlsbC1vcGFjaXR5PSIwLjYyIiBmb250LXNpemU9IjM2IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiPuWKoOi9veWksei0pTwvdGV4dD48L3N2Zz4='; this.parentElement.classList.add('error-state')"/>` : ''}
-          <div class="cover-fallback" style="${data.img ? 'display:none;' : 'display:flex;'}">🎨</div>
-          <div class="tag-pill">${escapeHtml(catLabel)}</div>
-          <button class="favorite-btn ${favorited ? 'is-favorite' : ''}" title="${favorited ? '取消收藏' : '收藏'}" aria-label="收藏" aria-pressed="${favorited ? 'true' : 'false'}">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </button>
+        <div class="cover-wrap">
+          <button class="fav-heart" data-fav-id="${data.id}" onclick="event.stopPropagation(); toggleFav('${data.id}', this);" style="position:absolute;top:8px;right:8px;width:32px;height:32px;border-radius:50%;background:rgba(0,0,0,0.6);border:0;color:${favColor};cursor:pointer;z-index:2;">♥</button>
+          <img class="cover" src="${data.img}" alt="${data.title}"
+               style="${hasImage ? '' : 'display:none;'}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"/>
+          <div class="cover-fallback" style="display:${hasImage ? 'none' : 'flex'};">🎨</div>
+          <div class="tag-pill">${catLabel}</div>
         </div>
         <div class="meta">
-          <div class="title">${escapeHtml(primaryTitle)}</div>
-          <div class="en">${escapeHtml(secondaryTitle)}</div>
+          <div class="title">${primaryTitle}</div>
+          <div class="en">${secondaryTitle}</div>
 
           <!-- Row 1 · 作者 + 模型(只 2 chip) -->
           <div class="meta-chips" style="--ahue:${authorMeta.hue};">
             <span class="chip chip-author" title="${isZh ? '写 prompt 的 AI' : 'Written by'}">
-              <span class="chip-k">${escapeHtml(t('label.author'))}</span><span class="chip-v">${escapeHtml(authorMeta.label)}</span>
+              <span class="chip-k">${t('label.author')}</span><span class="chip-v">${authorMeta.label}</span>
             </span>
             <span class="chip chip-image" title="${isZh ? '出图模型' : 'Image model'}">
-              <span class="chip-k">${escapeHtml(t('label.model'))}</span><span class="chip-v">${escapeHtml(imageMeta.label)}</span>
+              <span class="chip-k">${t('label.model')}</span><span class="chip-v">${imageMeta.label}</span>
             </span>
           </div>
 
-          <!-- Row 2 · 比例(左) + 复制(右) -->
+          <!-- Row 2 · 比例(左) + 点心 / 复制(右) -->
           <div class="action-row">
-            <span class="aspect-mini" title="${isZh ? '长宽比' : 'Aspect'}">${escapeHtml(data.aspectLabel || data.aspect.replace('/', ':'))}</span>
+            <span class="aspect-mini" title="${isZh ? '长宽比' : 'Aspect'}">${data.aspect.replace('/', ':')}</span>
             <div class="actions">
               <button class="action-btn copy-btn" title="${t('modal.copy')}" aria-label="copy">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
               </button>
-              <button class="action-btn remix-btn" title="用这个风格做我的" aria-label="用这个风格做我的">用这个风格做我的</button>
+              <button class="action-btn like-btn ${liked?'liked':''}" title="like" aria-label="like">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                <span class="num">${formatK(displayLikes)}</span>
+              </button>
             </div>
           </div>
         </div>
@@ -1511,35 +864,26 @@ class PromptCard extends HTMLElement {
 
     // events
     const card = this.shadowRoot.querySelector('.card');
-    const favoriteBtn = this.shadowRoot.querySelector('.favorite-btn');
+    const likeBtn = this.shadowRoot.querySelector('.like-btn');
     const copyBtn = this.shadowRoot.querySelector('.copy-btn');
-    const remixBtn = this.shadowRoot.querySelector('.remix-btn');
 
     card.addEventListener('click', (e) => {
       if (e.target.closest('button')) return;
-      openDetail(id);
+      openDetail(data);
     });
 
-    favoriteBtn.addEventListener('click', (e) => {
+    likeBtn.addEventListener('click', (e) => {
       e.stopPropagation();
-      toggleFavorite(id);
-      pulseFavoriteButton(favoriteBtn);
+      const on = likeBtn.classList.toggle('liked');
+      likeBtn.classList.remove('pulse'); void likeBtn.offsetWidth; likeBtn.classList.add('pulse');
+      localStorage.setItem(likedKey, on ? '1' : '0');
+      likeBtn.querySelector('.num').textContent = formatK(data.likes + (on ? 1 : 0));
     });
 
     copyBtn.addEventListener('click', (e) => {
       e.stopPropagation();
       copyPrompt(data.prompt);
     });
-
-    remixBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      openRemix(id);
-    });
-  }
-
-  syncFavorite() {
-    const id = this.getAttribute('data-id');
-    syncFavoriteButton(this.shadowRoot.querySelector('.favorite-btn'), id);
   }
 }
 customElements.define('prompt-card', PromptCard);
@@ -1836,14 +1180,18 @@ class PromptModal extends HTMLElement {
     this.shadowRoot.getElementById('m-like').addEventListener('click', (e) => {
       if (!this.current) return;
       const btn = e.currentTarget;
-      const on = toggleFavorite(this.current.id);
-      btn.classList.toggle('liked', on);
+      btn.classList.toggle('liked');
+      const on = btn.classList.contains('liked');
+      localStorage.setItem(`liked-${this.current.id}`, on ? '1' : '0');
       this.shadowRoot.getElementById('m-like-num').textContent = formatK(this.current.likes + (on ? 1 : 0));
+      // also sync back card
+      const card = document.querySelector(`prompt-card[data-id="${this.current.id}"]`);
+      if (card) card.shadowRoot.querySelector('.like-btn').classList.toggle('liked', on);
     });
   }
 
   open(id) {
-    const data = findCardById(id);
+    const data = CARDS.find(c => c.id === id);
     if (!data) return;
     this.current = data;
     const aMeta = AUTHOR_MODELS[data.authorModel] || { label: data.authorModel };
@@ -1852,16 +1200,7 @@ class PromptModal extends HTMLElement {
     const isZh  = (window.LANG || 'zh') === 'zh';
 
     // 主体
-    const imgEl = this.shadowRoot.getElementById('m-img');
-    if (data.img) {
-      imgEl.src = data.img;
-      imgEl.alt = data.title;
-      imgEl.style.display = 'block';
-    } else {
-      imgEl.removeAttribute('src');
-      imgEl.alt = '';
-      imgEl.style.display = 'none';
-    }
+    this.shadowRoot.getElementById('m-img').src = data.img;
     this.shadowRoot.getElementById('m-title').textContent = isZh ? data.title : data.en;
     this.shadowRoot.getElementById('m-en').textContent    = isZh ? data.en    : data.title;
     this.shadowRoot.getElementById('m-prompt').textContent = data.prompt;
@@ -1875,13 +1214,13 @@ class PromptModal extends HTMLElement {
 
     // meta pills:@作者 · via 模型 · aspect
     this.shadowRoot.getElementById('m-meta-pills').innerHTML = `
-      <span class="m-pill m-pill-author">@${escapeHtml(data.authorModel)}</span>
-      <span class="m-pill m-pill-image">${isZh ? '出图' : 'via'} · ${escapeHtml(iMeta.label)}</span>
-      <span class="m-pill m-pill-aspect">${escapeHtml(data.aspectLabel || data.aspect.replace('/', ':'))}</span>
+      <span class="m-pill m-pill-author">@${data.authorModel}</span>
+      <span class="m-pill m-pill-image">${isZh ? '出图' : 'via'} · ${iMeta.label}</span>
+      <span class="m-pill m-pill-aspect">${data.aspect.replace('/', ':')}</span>
     `;
 
     // 内容 tag
-    this.shadowRoot.getElementById('m-tags').innerHTML = data.tags.map(tag => `<span class="tag">#${escapeHtml(tag)}</span>`).join('');
+    this.shadowRoot.getElementById('m-tags').innerHTML = data.tags.map(tag => `<span class="tag">#${tag}</span>`).join('');
 
     // 文本标签
     this.shadowRoot.getElementById('m-prompt-label').textContent = t('modal.promptLabel');
@@ -1891,13 +1230,13 @@ class PromptModal extends HTMLElement {
     const slug = `prompt-atlas-${data.id}-${data.en.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}.png`;
     const dlEl = this.shadowRoot.getElementById('m-download');
     const openEl = this.shadowRoot.getElementById('m-open-new');
-    dlEl.setAttribute('href', data.img || '#');
+    dlEl.setAttribute('href', data.img);
     dlEl.setAttribute('download', slug);
     dlEl.setAttribute('title', t('modal.download'));
-    openEl.setAttribute('href', data.img || '#');
+    openEl.setAttribute('href', data.img);
 
     // 点心
-    const liked = isFavorite(id);
+    const liked = localStorage.getItem(`liked-${id}`) === '1';
     const likeBtn = this.shadowRoot.getElementById('m-like');
     likeBtn.classList.toggle('liked', liked);
     this.shadowRoot.getElementById('m-like-num').textContent = formatK(data.likes + (liked ? 1 : 0));
@@ -1915,292 +1254,6 @@ customElements.define('prompt-modal', PromptModal);
 // ========================================================
 // helpers
 // ========================================================
-const CLICK_KEY = 'promptatlas.click_history';
-let modalCopyTimer = null;
-
-function safeCssColor(value) {
-  const color = String(value || '').trim();
-  return /^#[0-9a-fA-F]{3,8}$/.test(color) ? color : 'transparent';
-}
-function atomRow(label, value) {
-  return value ? `<dt>${label}</dt><dd>${value}</dd>` : '';
-}
-function openDetail(id) {
-  const data = findCardById(id);
-  if (!data) return;
-
-  const modal = document.getElementById('detail-modal');
-  const isZh = (window.LANG || 'zh') === 'zh';
-  modal.dataset.currentId = data.id;
-  modal.querySelector('.modal-title').textContent = isZh ? data.title : data.en;
-  modal.querySelector('.modal-prompt').textContent = data.prompt;
-  syncFavoriteButton(modal.querySelector('[data-role="favorite"]'), data.id);
-
-  const copyBtn = modal.querySelector('.modal-copy');
-  clearTimeout(modalCopyTimer);
-  copyBtn.textContent = '复制 prompt';
-  copyBtn.classList.remove('copied');
-
-  modal.querySelector('.modal-tags').innerHTML = data.tags
-    .map(tag => `<span class="tag">${escapeHtml(tag)}</span>`)
-    .join('');
-
-  const heroEl = modal.querySelector('.modal-hero');
-  if (data.img) {
-    heroEl.innerHTML = `<img src="${escapeHtml(data.img)}" alt="${escapeHtml(data.title)}">`;
-  } else {
-    heroEl.innerHTML = `<div class="modal-hero-placeholder" style="aspect-ratio:${escapeHtml(data.aspect || '16/9')};">🎨</div>`;
-  }
-
-  const atoms = data.atoms || {};
-  const styleSignatures = Array.isArray(atoms.style_signatures) && atoms.style_signatures.length
-    ? atoms.style_signatures.map(escapeHtml).join(' · ')
-    : '';
-  const colorPalette = Array.isArray(atoms.color_palette) && atoms.color_palette.length
-    ? atoms.color_palette.map(color => {
-      const label = escapeHtml(color);
-      return `<span class="modal-swatch" style="background:${safeCssColor(color)}"></span>${label}`;
-    }).join(' ')
-    : '';
-  const exclude = Array.isArray(atoms.exclude) && atoms.exclude.length
-    ? atoms.exclude.map(escapeHtml).join(' · ')
-    : '';
-
-  modal.querySelector('.modal-atoms').innerHTML = [
-    atomRow('Subject', escapeHtml(atoms.subject || '')),
-    atomRow('Style Signatures', styleSignatures),
-    atomRow('Color Palette', colorPalette),
-    atomRow('Lighting', escapeHtml(atoms.lighting || '')),
-    atomRow('Exclude', exclude),
-  ].filter(Boolean).join('');
-
-  recordClick(data.id);
-  modal.classList.remove('hidden');
-  modal.setAttribute('aria-hidden', 'false');
-}
-function closeDetail() {
-  const modal = document.getElementById('detail-modal');
-  if (!modal) return;
-  modal.classList.add('hidden');
-  modal.setAttribute('aria-hidden', 'true');
-  delete modal.dataset.currentId;
-}
-function recordClick(id) {
-  try {
-    const raw = localStorage.getItem(CLICK_KEY) || '[]';
-    const list = JSON.parse(raw);
-    const history = Array.isArray(list) ? list : [];
-    history.push({ id: String(id), ts: Date.now() });
-    localStorage.setItem('promptatlas.click_history', JSON.stringify(history));
-  } catch (err) {
-    console.warn('localStorage blocked', err);
-  }
-}
-
-const detailModal = document.getElementById('detail-modal');
-detailModal.querySelector('[data-role="overlay"]').addEventListener('click', closeDetail);
-detailModal.querySelector('[data-role="close"]').addEventListener('click', closeDetail);
-detailModal.querySelector('[data-role="favorite"]').addEventListener('click', (e) => {
-  e.stopPropagation();
-  const id = detailModal.dataset.currentId;
-  if (!id) return;
-  toggleFavorite(id);
-  pulseFavoriteButton(e.currentTarget);
-});
-detailModal.querySelector('[data-role="copy"]').addEventListener('click', async () => {
-  const text = detailModal.querySelector('.modal-prompt').textContent;
-  const btn = detailModal.querySelector('.modal-copy');
-  try {
-    await navigator.clipboard.writeText(text);
-    btn.textContent = '已复制 ✓';
-    btn.classList.add('copied');
-    clearTimeout(modalCopyTimer);
-    modalCopyTimer = setTimeout(() => {
-      btn.textContent = '复制 prompt';
-      btn.classList.remove('copied');
-    }, 1500);
-  } catch (err) {
-    console.error('copy failed', err);
-  }
-});
-detailModal.querySelector('[data-role="remix"]').addEventListener('click', (e) => {
-  e.stopPropagation();
-  const id = detailModal.dataset.currentId;
-  if (!id) return;
-  closeDetail();
-  openRemix(id);
-});
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') closeDetail();
-});
-
-const remixModal = document.getElementById('remix-modal');
-const remixSubject = document.getElementById('remix-subject');
-const remixStatus = document.getElementById('remix-status');
-const remixResult = document.getElementById('remix-result');
-const remixSubmit = document.getElementById('remix-submit');
-const remixRegen = document.getElementById('remix-regen');
-const remixDownload = document.getElementById('remix-download');
-let remixPollTimer = null;
-let remixDownloadUrl = '';
-let CURRENT_REMIX = { imageId: '', subject: '' };
-
-function openRemix(imageId) {
-  const data = findCardById(imageId);
-  if (!data) return;
-  clearInterval(remixPollTimer);
-  remixPollTimer = null;
-  remixDownloadUrl = '';
-  remixModal.dataset.currentId = data.sourceImageId || data.id;
-  CURRENT_REMIX = { imageId: remixModal.dataset.currentId, subject: '' };
-  remixModal.querySelector('[data-remix-style]').textContent = data.style || data.tags?.[0] || data.title;
-  remixSubject.value = '';
-  remixStatus.textContent = '';
-  remixStatus.className = 'remix-status';
-  remixResult.hidden = true;
-  remixResult.removeAttribute('src');
-  remixSubmit.disabled = false;
-  remixSubmit.hidden = false;
-  remixRegen.hidden = true;
-  remixDownload.hidden = true;
-  remixModal.classList.remove('hidden');
-  remixModal.setAttribute('aria-hidden', 'false');
-  requestAnimationFrame(() => remixSubject.focus());
-}
-
-function closeRemix() {
-  clearInterval(remixPollTimer);
-  remixPollTimer = null;
-  remixModal.classList.add('hidden');
-  remixModal.setAttribute('aria-hidden', 'true');
-  delete remixModal.dataset.currentId;
-}
-
-function setRemixLoading(message) {
-  remixStatus.className = 'remix-status loading';
-  remixStatus.textContent = message;
-  remixSubmit.disabled = true;
-  remixRegen.disabled = true;
-}
-
-function showRemixError(message) {
-  remixStatus.className = 'remix-status error';
-  remixStatus.textContent = message || '生成失败 · 再试一次';
-  remixSubmit.disabled = false;
-  remixRegen.disabled = false;
-  remixRegen.hidden = false;
-}
-
-function showRemixResult(imageUrl) {
-  remixDownloadUrl = imageUrl;
-  saveGeneration({ source_image_id: CURRENT_REMIX.imageId, subject: CURRENT_REMIX.subject, image_url: imageUrl });
-  remixResult.src = imageUrl;
-  remixResult.hidden = false;
-  remixStatus.className = 'remix-status success';
-  remixStatus.textContent = '生成完成';
-  remixSubmit.disabled = false;
-  remixSubmit.hidden = true;
-  remixRegen.disabled = false;
-  remixRegen.hidden = false;
-  remixDownload.hidden = false;
-}
-
-async function startRemix(imageId, subject) {
-  const cleanSubject = subject.trim();
-  if (!cleanSubject) {
-    showRemixError('先输入你想生成的主题');
-    return;
-  }
-  CURRENT_REMIX = { imageId, subject: cleanSubject };
-  setRemixLoading('提交生成任务中');
-  remixResult.hidden = true;
-  remixDownload.hidden = true;
-  try {
-    const r = await fetch('/api/remix', {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({image_id: imageId, subject: cleanSubject})
-    });
-    if (!r.ok) {
-      showRemixError('生成失败 · 再试一次');
-      return;
-    }
-    const data = await r.json();
-    if (data.friendly_message) {
-      showRemixError(data.friendly_message);
-      return;
-    }
-    if (!data.task_id) {
-      showRemixError('生成失败 · 再试一次');
-      return;
-    }
-    pollRemix(data.task_id);
-  } catch (err) {
-    console.error('remix submit failed', err);
-    showRemixError('生成失败 · 再试一次');
-  }
-}
-
-function pollRemix(taskId) {
-  clearInterval(remixPollTimer);
-  const start = Date.now();
-  setRemixLoading('生成中 · 通常需要几十秒');
-  remixPollTimer = setInterval(async () => {
-    if (Date.now() - start > 90000) {
-      clearInterval(remixPollTimer);
-      remixPollTimer = null;
-      showRemixError('生成超时 · 再试一次?');
-      return;
-    }
-    try {
-      const r = await fetch('/api/remix/' + encodeURIComponent(taskId));
-      if (!r.ok) {
-        clearInterval(remixPollTimer);
-        remixPollTimer = null;
-        showRemixError('生成失败 · 再试一次');
-        return;
-      }
-      const s = await r.json();
-      if (s.status === 'completed') {
-        clearInterval(remixPollTimer);
-        remixPollTimer = null;
-        if (s.image_url) showRemixResult(s.image_url);
-        else showRemixError('生成完成但没有返回图片 · 再试一次');
-      } else if (s.status === 'failed') {
-        clearInterval(remixPollTimer);
-        remixPollTimer = null;
-        showRemixError(s.friendly_message || '生成失败 · 换个词试试');
-      } else {
-        setRemixLoading('生成中 · 正在排队或渲染');
-      }
-    } catch (err) {
-      clearInterval(remixPollTimer);
-      remixPollTimer = null;
-      console.error('remix poll failed', err);
-      showRemixError('生成失败 · 再试一次');
-    }
-  }, 3000);
-}
-
-remixSubmit.addEventListener('click', () => startRemix(remixModal.dataset.currentId, remixSubject.value));
-remixRegen.addEventListener('click', () => startRemix(remixModal.dataset.currentId, remixSubject.value));
-remixSubject.addEventListener('keydown', (e) => {
-  if (e.key === 'Enter') startRemix(remixModal.dataset.currentId, remixSubject.value);
-});
-remixDownload.addEventListener('click', () => {
-  if (!remixDownloadUrl) return;
-  const link = document.createElement('a');
-  link.href = remixDownloadUrl;
-  link.download = `prompt-atlas-remix-${Date.now()}.png`;
-  document.body.appendChild(link);
-  link.click();
-  link.remove();
-});
-remixModal.querySelectorAll('[data-remix-close]').forEach(el => el.addEventListener('click', closeRemix));
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') closeRemix();
-});
-
 function formatK(n) {
   if (n >= 10000) return (n / 10000).toFixed(1).replace(/\.0$/, '') + 'w';
   if (n >= 1000) return (n / 1000).toFixed(1).replace(/\.0$/, '') + 'k';
@@ -2216,7 +1269,6 @@ async function copyPrompt(text) {
     await navigator.clipboard.writeText(text);
     showToast(t('toast.copied'));
   } catch (e) {
-    console.error('copy failed', e);
     // fallback
     const ta = document.createElement('textarea');
     ta.value = text; document.body.appendChild(ta);
@@ -2228,20 +1280,49 @@ async function copyPrompt(text) {
 function showToast(msg) {
   const t = document.getElementById('toast');
   document.getElementById('toast-text').textContent = msg;
-  t.classList.remove('error-toast');
   t.classList.add('show');
   clearTimeout(window._toast_t);
   window._toast_t = setTimeout(() => t.classList.remove('show'), 2200);
 }
-function showErrorToast(msg) {
-  const toast = document.getElementById('toast');
-  document.getElementById('toast-text').textContent = msg;
-  toast.classList.add('error-toast', 'show');
-  clearTimeout(window._toast_t);
-  window._toast_t = setTimeout(() => {
-    toast.classList.remove('show', 'error-toast');
-  }, 3000);
+
+function escapeHtml(value) {
+  return String(value || '').replace(/[&<>"']/g, ch => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  }[ch]));
 }
+
+function openDetail(img) {
+  const modal = document.getElementById('detail-modal');
+  modal.querySelector('.detail-title').textContent = img.title || '';
+  modal.querySelector('.detail-prompt').textContent = img.prompt || '';
+  modal.querySelector('.detail-tags').innerHTML = asArray(img.tags).map(tag =>
+    `<span style="display:inline-block;margin:0 6px 6px 0;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);font-size:12px;color:var(--text-mid,rgba(255,255,255,0.65));">#${escapeHtml(tag)}</span>`
+  ).join('');
+  const atoms = img.atoms && typeof img.atoms === 'object' ? Object.entries(img.atoms) : [];
+  modal.querySelector('.detail-atoms').innerHTML = atoms.length ? atoms.map(([key, value]) =>
+    `<div style="margin-top:10px;"><div style="font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-dim,rgba(255,255,255,0.42));margin-bottom:4px;">${escapeHtml(key)}</div><div style="font-size:13px;line-height:1.5;color:var(--text-mid,rgba(255,255,255,0.65));">${escapeHtml(Array.isArray(value) ? value.join(' · ') : value)}</div></div>`
+  ).join('') : '';
+  modal.style.display = 'flex';
+  let h = [];
+  try { h = JSON.parse(localStorage.getItem(HISTORY_KEY) || '[]'); } catch {}
+  h.push({ id: img.id, ts: Date.now() });
+  localStorage.setItem(HISTORY_KEY, JSON.stringify(h));
+}
+
+function closeDetail() {
+  document.getElementById('detail-modal').style.display = 'none';
+}
+
+document.querySelector('#detail-modal .detail-overlay').addEventListener('click', closeDetail);
+document.querySelector('#detail-modal .detail-close').addEventListener('click', closeDetail);
+document.querySelector('#detail-modal .detail-copy').addEventListener('click', async () => {
+  const text = document.querySelector('#detail-modal .detail-prompt').textContent;
+  try {
+    await navigator.clipboard.writeText(text);
+    showToast('已复制');
+  } catch(e) {}
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDetail(); });
 
 // ========================================================
 // bootstrap
@@ -2249,43 +1330,9 @@ function showErrorToast(msg) {
 const URL_PARAMS = new URLSearchParams(location.search);
 window.LANG = URL_PARAMS.get('lang') || localStorage.getItem('pa-lang') || 'zh';
 
-function splitFilterParam(name) {
-  return (URL_PARAMS.get(name) || '')
-    .split(',')
-    .map(value => value.trim())
-    .filter(Boolean);
-}
-
-const tabsEl = document.getElementById('gallery-tabs');
 const catsEl = document.getElementById('cats');
 const wf     = document.getElementById('waterfall');
-const favToolbar = document.getElementById('fav-toolbar');
-const favoritesEmpty = document.getElementById('favorites-empty');
-const filterBar = document.getElementById('filter-bar');
-const filterDetails = document.getElementById('filter-details');
-const searchInput = document.getElementById('search-input');
-const sortSelect = document.getElementById('sort-select');
-const filterCount = document.getElementById('filter-count');
-const clearFilterBtn = document.querySelector('.clear-filter-btn');
 let activeCat = '推荐';
-let activeTab = ['favorites', 'generations'].includes(URL_PARAMS.get('tab'))
-  ? URL_PARAMS.get('tab')
-  : (location.hash === '#favorites' ? 'favorites' : 'all');
-const SORT_BY_OPTIONS = new Set(['recommend', 'latest', 'hot']);
-const HAS_URL_SORT_BY = URL_PARAMS.has('sortBy') || URL_PARAMS.has('sort');
-function normalizeSortBy(value) {
-  const sortBy = String(value || '').trim();
-  return SORT_BY_OPTIONS.has(sortBy) ? sortBy : 'recommend';
-}
-const FILTER_STATE = {
-  q: URL_PARAMS.get('q') || '',
-  tags: new Set(splitFilterParam('tags')),
-  style: new Set(splitFilterParam('style')),
-  aspect: new Set(splitFilterParam('aspect')),
-  tab: activeTab,
-  sortBy: normalizeSortBy(URL_PARAMS.get('sortBy') || URL_PARAMS.get('sort')),
-};
-let searchDebounceTimer = null;
 
 function applyI18n() {
   document.querySelectorAll('[data-i18n]').forEach(el => el.textContent = t(el.dataset.i18n));
@@ -2303,296 +1350,55 @@ function renderCats() {
   }).join('');
 }
 
-function updateFavoriteControls() {
-  const count = getFavorites().length;
-  const generationCount = getGenerations().length;
-  const isFavorites = activeTab === 'favorites';
-  const isGenerations = activeTab === 'generations';
-  tabsEl.querySelector('[data-tab="favorites"] .count').textContent = count;
-  tabsEl.querySelector('[data-tab="generations"] .count').textContent = generationCount;
-  tabsEl.querySelectorAll('[data-tab]').forEach(tab => {
-    tab.classList.toggle('active', tab.dataset.tab === activeTab);
-  });
-  favToolbar.classList.toggle('visible', isFavorites || isGenerations);
-  favToolbar.querySelector('.export-btn').hidden = isGenerations;
-  favToolbar.querySelector('.export-btn').disabled = count === 0;
-  favToolbar.querySelector('.clear-btn').textContent = isGenerations ? '清空我的作品' : '清空';
-  favToolbar.querySelector('.clear-btn').disabled = isGenerations ? generationCount === 0 : count === 0;
+function getGenerations() {
+  try { return JSON.parse(localStorage.getItem(GEN_KEY) || '[]').map(normalizeGeneration); }
+  catch { return []; }
 }
-function exportFavorites() {
-  const favorites = getFavorites();
-  if (!favorites.length) return;
-  const favSet = new Set(favorites);
-  const payload = RAW_IMAGES.filter(img => favSet.has(String(img.id || '')));
-  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
-  const url = URL.createObjectURL(blob);
-  const today = new Date().toISOString().slice(0, 10);
-  const link = document.createElement('a');
-  link.href = url;
-  link.download = `promptatlas-favorites-${today}.json`;
-  document.body.appendChild(link);
-  link.click();
-  link.remove();
-  URL.revokeObjectURL(url);
-}
-function clearFavorites() {
-  const n = getFavorites().length;
-  if (!n) return;
-  if (confirm(`确定清空 ${n} 条收藏吗?不可撤销 · 建议先导出 JSON 备份`)) {
-    localStorage.removeItem(FAVORITES_KEY);
-    syncFavoriteUI();
-    filterGallery(activeTab);
-  }
-}
-function clearGenerations() {
-  const list = getGenerations();
-  if (!list.length) return;
-  if (confirm(`确定清空 ${list.length} 件作品? 不可撤销`)) {
-    localStorage.removeItem(GENERATIONS_KEY);
-    renderGallery();
-  }
-}
-function selectedValues(name) {
-  return Array.from(FILTER_STATE[name]).sort((a, b) => a.localeCompare(b));
-}
-function countBy(items, key) {
-  const counts = new Map();
-  if (!Array.isArray(items)) return counts;
-  items.forEach(item => {
-    const value = item?.[key];
-    if (value === undefined || value === null || value === '') return;
-    const id = String(value);
-    counts.set(id, (counts.get(id) || 0) + 1);
-  });
-  return counts;
-}
-function buildUserProfile() {
-  let clicks = [];
-  let favIds = [];
-  try {
-    const rawClicks = JSON.parse(localStorage.getItem('promptatlas.click_history') || '[]');
-    const rawFavs = JSON.parse(localStorage.getItem('promptatlas.favorites') || '[]');
-    clicks = Array.isArray(rawClicks) ? rawClicks : [];
-    favIds = Array.isArray(rawFavs) ? rawFavs.map(id => String(id)).filter(Boolean) : [];
-  } catch (err) {
-    console.warn('localStorage blocked', err);
-  }
 
-  const favs = new Set(favIds);
-  const tagWeights = new Map();
-  for (const entry of clicks) {
-    const id = entry?.id;
-    const img = allImages.find(i => i.id === String(id));
-    (img?.tags || []).forEach(t => tagWeights.set(t, (tagWeights.get(t) || 0) + 1));
-  }
-  for (const id of favs) {
-    const img = allImages.find(i => i.id === id);
-    (img?.tags || []).forEach(t => tagWeights.set(t, (tagWeights.get(t) || 0) + 3));
-  }
-  return { tagWeights, favSet: favs, clickCount: countBy(clicks, 'id') };
-}
-function computeScore(img, profile) {
-  let score = 0;
-  for (const tag of (img.tags || [])) {
-    score += profile.tagWeights.get(tag) || 0;
-  }
-  if (profile.favSet.has(img.id)) score += 10;
-  score += profile.clickCount.get(img.id) || 0;
-  return score;
-}
-function isColdStart(profile) {
-  return profile.tagWeights.size === 0 && profile.favSet.size === 0;
-}
-function defaultSortBy() {
-  return isColdStart(buildUserProfile()) ? 'latest' : 'recommend';
-}
-function sortImages(arr, sortBy) {
-  if (sortBy === 'latest') {
-    return [...arr].sort((a, b) => (b.id || '').localeCompare(a.id || ''));
-  }
-  if (sortBy === 'hot') {
-    return [...arr].sort((a, b) => (b.likes || 0) - (a.likes || 0));
-  }
-  const profile = buildUserProfile();
-  if (isColdStart(profile)) {
-    return [...arr].sort((a, b) => (b.likes || 0) - (a.likes || 0));
-  }
-  return [...arr].map(img => ({ img, score: computeScore(img, profile) }))
-    .sort((a, b) => b.score - a.score)
-    .map(x => x.img);
-}
-function syncURL() {
-  const params = new URLSearchParams();
-  const q = FILTER_STATE.q.trim();
-  const tags = selectedValues('tags');
-  const style = selectedValues('style');
-  const aspect = selectedValues('aspect');
-  if (q) params.set('q', q);
-  if (tags.length) params.set('tags', tags.join(','));
-  if (style.length) params.set('style', style.join(','));
-  if (aspect.length) params.set('aspect', aspect.join(','));
-  params.set('sortBy', FILTER_STATE.sortBy);
-  if (FILTER_STATE.tab === 'favorites') params.set('tab', 'favorites');
-  if (FILTER_STATE.tab === 'generations') params.set('tab', 'generations');
-  const query = params.toString();
-  const hash = location.hash && location.hash !== '#favorites' ? location.hash : '';
-  history.replaceState(null, '', `${location.pathname}${query ? `?${query}` : ''}${hash}`);
-}
-function updateFilterCount(visible, total) {
-  filterCount.textContent = `显示 ${visible} / ${total} 张`;
-}
-function renderFiltered(visible) {
-  wf.innerHTML = visible.map(c => `<prompt-card data-id="${c.id}"></prompt-card>`).join('');
-  favoritesEmpty.textContent = activeTab === 'generations'
-    ? '还没生成过作品 · 点一键复刻试试'
-    : '还没收藏任何图 · 去逛逛瀑布流吧 →';
-  favoritesEmpty.hidden = !((activeTab === 'favorites' || activeTab === 'generations') && visible.length === 0);
-  updateFavoriteControls();
-}
-function applyFilter() {
-  const q = FILTER_STATE.q.trim().toLowerCase();
-  const sourceImages = FILTER_STATE.tab === 'generations'
-    ? getGenerationImages()
-    : (FILTER_STATE.tab === 'favorites' ? allImages.concat(getGenerationImages()) : allImages);
-  const filtered = sourceImages.filter(img => {
-    if (FILTER_STATE.tab === 'favorites' && !isFavorite(img.id)) return false;
-    if (FILTER_STATE.tab === 'generations') return true;
-    if (activeCat !== '推荐' && img.cat !== activeCat) return false;
-    if (q && !(
+function activeCards() {
+  const favs = getFavs();
+  if (searchQuery) {
+    const q = searchQuery.toLowerCase();
+    return allImages.filter(img =>
       (img.title || '').toLowerCase().includes(q) ||
       (img.en || '').toLowerCase().includes(q) ||
       (img.prompt || '').toLowerCase().includes(q) ||
-      (img.tags || []).some(t => String(t).toLowerCase().includes(q))
-    )) return false;
-    if (FILTER_STATE.tags.size && !Array.from(FILTER_STATE.tags).every(t => (img.tags || []).includes(t))) return false;
-    if (FILTER_STATE.style.size && !FILTER_STATE.style.has(img.style)) return false;
-    if (FILTER_STATE.aspect.size && !FILTER_STATE.aspect.has(img.aspect)) return false;
-    return true;
-  });
-  const sorted = FILTER_STATE.tab === 'generations'
-    ? filtered.sort((a, b) => (b.ts || 0) - (a.ts || 0))
-    : sortImages(filtered, FILTER_STATE.sortBy);
-  activeTab = ['favorites', 'generations'].includes(FILTER_STATE.tab) ? FILTER_STATE.tab : 'all';
-  renderFiltered(sorted);
-  updateFilterCount(sorted.length, sourceImages.length);
-  syncURL();
-}
-function renderWaterfall() {
-  applyFilter();
-}
-function renderGallery() {
-  applyFilter();
-}
-function filterGallery(tab = activeTab) {
-  activeTab = ['favorites', 'generations'].includes(tab) ? tab : 'all';
-  FILTER_STATE.tab = activeTab;
-  applyFilter();
-}
-function countValues(cards, getValues) {
-  const counts = new Map();
-  cards.forEach(card => {
-    getValues(card).forEach(value => {
-      if (!value) return;
-      counts.set(value, (counts.get(value) || 0) + 1);
-    });
-  });
-  return Array.from(counts.entries()).sort((a, b) => a[0].localeCompare(b[0]));
-}
-function renderFilterOptions() {
-  const aspectLabels = new Map(allImages.map(img => [img.aspect, img.aspectLabel || img.aspect.replace('/', ':')]));
-  const groups = [
-    { name: 'tags', values: countValues(allImages, img => img.tags || []), label: value => value },
-    { name: 'style', values: countValues(allImages, img => img.style ? [img.style] : []), label: value => value },
-    { name: 'aspect', values: countValues(allImages, img => img.aspect ? [img.aspect] : []), label: value => aspectLabels.get(value) || value.replace('/', ':') },
-  ];
-  groups.forEach(group => {
-    const el = filterBar.querySelector(`[data-options="${group.name}"]`);
-    if (!el) return;
-    el.innerHTML = group.values.map(([value, count]) => {
-      const checked = FILTER_STATE[group.name].has(value) ? ' checked' : '';
-      return `
-        <label class="filter-chip">
-          <input type="checkbox" data-filter-group="${group.name}" value="${escapeHtml(value)}"${checked} />
-          <span>${escapeHtml(group.label(value))}</span>
-          <span class="count">(${count})</span>
-        </label>
-      `;
-    }).join('');
-  });
-}
-function syncFilterInputs() {
-  searchInput.value = FILTER_STATE.q;
-  sortSelect.value = FILTER_STATE.sortBy;
-  filterBar.querySelectorAll('input[type="checkbox"][data-filter-group]').forEach(input => {
-    const group = input.dataset.filterGroup;
-    input.checked = FILTER_STATE[group]?.has(input.value) || false;
-  });
-}
-function clearFilters() {
-  FILTER_STATE.q = '';
-  FILTER_STATE.tags.clear();
-  FILTER_STATE.style.clear();
-  FILTER_STATE.aspect.clear();
-  FILTER_STATE.tab = 'all';
-  FILTER_STATE.sortBy = defaultSortBy();
-  activeTab = 'all';
-  activeCat = '推荐';
-  renderCats();
-  syncFilterInputs();
-  applyFilter();
-  history.replaceState(null, '', location.pathname);
-}
-function syncFilterDetailsMode() {
-  if (!filterDetails) return;
-  filterDetails.open = !window.matchMedia('(max-width: 780px)').matches;
+      asArray(img.tags).some(t => String(t).toLowerCase().includes(q))
+    );
+  }
+  if (activeCat === '收藏') return allImages.filter(img => favs.has(img.id));
+  if (activeCat === '我的作品') return getGenerations();
+  if (activeCat === '推荐') return getFeed('推荐', 0, Math.max(FEED.batchSize, allImages.length));
+  return allImages.filter(c => c.cat === activeCat);
 }
 
-tabsEl.addEventListener('click', (e) => {
-  const b = e.target.closest('[data-tab]');
-  if (!b) return;
-  filterGallery(b.dataset.tab);
-});
+function renderWaterfall(list) {
+  const visible = list || activeCards();
+  RENDER_CARDS = visible;
+  wf.innerHTML = visible.map(c => `<prompt-card data-id="${c.id}"></prompt-card>`).join('');
+  refreshFavHearts();
+}
+
 catsEl.addEventListener('click', (e) => {
   const b = e.target.closest('.category');
   if (!b) return;
   activeCat = b.dataset.cat;
-  activeTab = 'all';
-  FILTER_STATE.tab = 'all';
   catsEl.querySelectorAll('.category').forEach(x => x.classList.toggle('active', x === b));
-  applyFilter();
+  renderWaterfall();
 });
-filterBar.addEventListener('change', (e) => {
-  const input = e.target.closest('input[type="checkbox"][data-filter-group]');
-  if (!input) return;
-  const group = input.dataset.filterGroup;
-  if (!FILTER_STATE[group]) return;
-  if (input.checked) FILTER_STATE[group].add(input.value);
-  else FILTER_STATE[group].delete(input.value);
-  applyFilter();
-});
-searchInput.addEventListener('input', () => {
-  FILTER_STATE.q = searchInput.value;
-  clearTimeout(searchDebounceTimer);
-  searchDebounceTimer = setTimeout(() => applyFilter(), 300);
-});
-searchInput.addEventListener('keydown', (e) => {
-  if (e.key !== 'Enter') return;
-  clearTimeout(searchDebounceTimer);
-  FILTER_STATE.q = searchInput.value;
-  applyFilter();
-});
-clearFilterBtn.addEventListener('click', clearFilters);
-sortSelect.addEventListener('change', () => {
-  FILTER_STATE.sortBy = normalizeSortBy(sortSelect.value);
-  applyFilter();
-});
-window.addEventListener('resize', syncFilterDetailsMode);
 
-favToolbar.querySelector('.export-btn').addEventListener('click', exportFavorites);
-favToolbar.querySelector('.clear-btn').addEventListener('click', () => {
-  if (activeTab === 'generations') clearGenerations();
-  else clearFavorites();
-});
+const searchInput = document.querySelector('.search-box input') || document.getElementById('search-input');
+if (searchInput) {
+  searchInput.addEventListener('input', e => {
+    searchQuery = e.target.value.toLowerCase().trim();
+    const filtered = searchQuery ? allImages.filter(img =>
+      (img.title || '').toLowerCase().includes(searchQuery) ||
+      (img.prompt || '').toLowerCase().includes(searchQuery) ||
+      asArray(img.tags).some(t => String(t).toLowerCase().includes(searchQuery))
+    ) : activeCards();
+    renderWaterfall(filtered);
+  });
+}
 
 // ── 语言下拉 ──
 const langDd     = document.getElementById('lang-dd');
@@ -2640,39 +1446,37 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') toggleDd(false);
 });
 
-// ── 初始化 ──
-async function initGallery() {
-  applyI18n();
-  syncLangLabel();
-  renderLangMenu();
-  renderCats();
-  syncFilterDetailsMode();
-  syncFilterInputs();
-  updateFavoriteControls();
-
+async function loadImages() {
   try {
-    await loadImages();
-    if (!HAS_URL_SORT_BY) FILTER_STATE.sortBy = defaultSortBy();
-    renderFilterOptions();
-    syncFilterInputs();
-    applyFilter();
-  } catch (err) {
-    console.error('failed to load gallery data', err);
-    showErrorToast('图鉴加载失败 · 检查网络');
+    const r = await fetch('/api/images');
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    const data = await r.json();
+    CARDS = asArray(data.images).map(normalizeImage);
+  } catch (e) {
+    CARDS = FALLBACK_CARDS.map(normalizeImage);
   }
+  allImages = CARDS;
+}
+
+// ── 初始化 ──
+applyI18n();
+syncLangLabel();
+renderLangMenu();
+loadImages().then(() => {
+  renderCats();
+  renderWaterfall();
 
   // URL hash 自动开 modal(测试 / 分享链接用):#m-01
   if (location.hash.startsWith('#m-')) {
     const mid = location.hash.replace('#m-', '');
-    setTimeout(() => openDetail(mid), 200);
+    const img = allImages.find(c => c.id === mid);
+    if (img) setTimeout(() => openDetail(img), 200);
   }
-  // URL ?dd=1 自动开语言下拉(截图测试用)
-  if (URL_PARAMS.get('dd') === '1') {
-    setTimeout(() => toggleDd(true), 150);
-  }
+});
+// URL ?dd=1 自动开语言下拉(截图测试用)
+if (URL_PARAMS.get('dd') === '1') {
+  setTimeout(() => toggleDd(true), 150);
 }
-
-document.addEventListener('DOMContentLoaded', initGallery);
 </script>
 </body>
 </html>
