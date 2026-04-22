@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prompt Atlas · AI 生图灵感图鉴</title>
+<style>
+  :root {
+    --bg: #0a0a0b;
+    --bg-elev: #161618;
+    --card: #1a1a1d;
+    --card-hover: #222227;
+    --border: rgba(255,255,255,0.08);
+    --text: rgba(255,255,255,0.96);
+    --text-mid: rgba(255,255,255,0.65);
+    --text-dim: rgba(255,255,255,0.42);
+    --accent: #ff2e51;
+    --accent-2: #ff6b8a;
+    --purple: #a78bfa;
+    --shadow-card: 0 4px 20px rgba(0,0,0,0.4);
+    --shadow-hover: 0 12px 40px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.08);
+    --radius-card: 14px;
+    --fs: 15px;
+    --fsn: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", -apple-system, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--bg); color: var(--text); font-family: var(--fsn); font-size: var(--fs); }
+  body { min-height: 100vh; overflow-x: hidden; }
+  img { max-width: 100%; display: block; }
+
+  /* ============ HEADER (2-row sticky) ============ */
+  .topbar {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(10,10,11,0.85);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-bottom: 1px solid var(--border);
+  }
+  .topbar-main {
+    max-width: 1600px; margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 24px;
+    padding: 14px 28px 10px;
+  }
+  .topbar-cats {
+    max-width: 1600px; margin: 0 auto;
+    padding: 2px 28px 14px;
+  }
+
+  .brand {
+    display: flex; align-items: center; gap: 10px;
+    font-weight: 700; font-size: 18px; letter-spacing: -0.01em;
+    white-space: nowrap;
+  }
+  .brand-dot {
+    width: 26px; height: 26px; border-radius: 8px;
+    background: linear-gradient(135deg, #ff2e51, #a78bfa);
+    box-shadow: 0 4px 14px rgba(255,46,81,0.35);
+  }
+  .brand-name { background: linear-gradient(90deg, #fff, #a78bfa); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .brand-sub { display: none; }
+
+  /* 搜索(居中 · 宽) */
+  .search-box {
+    justify-self: center;
+    display: flex; align-items: center; gap: 10px;
+    padding: 10px 18px; border-radius: 999px;
+    background: var(--bg-elev); border: 1px solid var(--border);
+    color: var(--text-mid); font-size: 14px;
+    width: 100%;
+    max-width: 540px;
+    transition: border-color 0.18s ease, background 0.18s ease;
+  }
+  .search-box:focus-within { border-color: rgba(167,139,250,0.5); background: #1a1a20; }
+  .search-box svg { width: 16px; height: 16px; opacity: 0.55; flex-shrink: 0; }
+  .search-box input { flex: 1; background: transparent; border: none; color: var(--text); outline: none; font-family: inherit; font-size: 14px; }
+  .search-box input::placeholder { color: var(--text-dim); }
+
+  /* 分类条(独立行) */
+  .categories {
+    display: flex; gap: 4px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .categories::-webkit-scrollbar { display: none; }
+  .category {
+    padding: 8px 16px; border-radius: 999px;
+    background: transparent; color: var(--text-mid);
+    font-size: 14px; font-weight: 500;
+    border: none; cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.18s ease;
+  }
+  .category:hover { color: var(--text); background: rgba(255,255,255,0.05); }
+  .category.active {
+    color: #fff; background: rgba(255,255,255,0.1);
+    font-weight: 700;
+  }
+
+  /* 顶部右区:github + x + 语言 */
+  .top-right {
+    display: flex; align-items: center; gap: 6px;
+  }
+  .top-icon-link {
+    width: 36px; height: 36px; border-radius: 999px;
+    display: flex; align-items: center; justify-content: center;
+    background: transparent; border: 1px solid transparent;
+    color: var(--text-mid); cursor: pointer;
+    text-decoration: none;
+    transition: all 0.18s ease;
+  }
+  .top-icon-link:hover {
+    color: var(--text);
+    background: var(--bg-elev);
+    border-color: var(--border);
+  }
+  .top-icon-link svg { width: 18px; height: 18px; }
+
+  /* 语言下拉 */
+  .lang-dd { position: relative; flex-shrink: 0; }
+  .lang-dd-btn {
+    display: flex; align-items: center; gap: 6px;
+    padding: 8px 14px; border-radius: 999px;
+    background: var(--bg-elev); border: 1px solid var(--border);
+    color: var(--text-mid); font-size: 13px; font-weight: 600;
+    cursor: pointer; font-family: inherit;
+    transition: all 0.18s ease;
+  }
+  .lang-dd-btn:hover { color: var(--text); border-color: rgba(255,255,255,0.18); }
+  .lang-dd-btn .globe { width: 14px; height: 14px; opacity: 0.6; }
+  .lang-dd-btn .caret { width: 10px; height: 10px; opacity: 0.55; transition: transform 0.2s; }
+  .lang-dd.open .lang-dd-btn .caret { transform: rotate(180deg); }
+  .lang-dd.open .lang-dd-btn { border-color: rgba(167,139,250,0.4); color: var(--text); }
+
+  .lang-dd-menu {
+    position: absolute; right: 0; top: calc(100% + 8px);
+    min-width: 180px;
+    background: rgba(22,22,24,0.98);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+    padding: 6px;
+    z-index: 60;
+    display: none;
+  }
+  .lang-dd.open .lang-dd-menu { display: block; animation: dd-in 0.16s ease; }
+  @keyframes dd-in { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
+
+  .lang-opt {
+    display: flex; align-items: center; gap: 10px;
+    width: 100%; padding: 8px 12px;
+    background: transparent; border: none; cursor: pointer;
+    color: var(--text-mid); font-size: 13px; font-weight: 500;
+    font-family: inherit;
+    border-radius: 8px;
+    text-align: left;
+    transition: all 0.12s ease;
+  }
+  .lang-opt:hover { background: rgba(255,255,255,0.06); color: var(--text); }
+  .lang-opt.active {
+    background: linear-gradient(135deg, rgba(255,46,81,0.12), rgba(167,139,250,0.12));
+    color: #fff;
+  }
+  .lang-opt .flag {
+    font-size: 16px; line-height: 1;
+    filter: saturate(1.15);
+  }
+  .lang-opt .opt-native {
+    flex: 1;
+    font-weight: 600;
+  }
+  .lang-opt .opt-en {
+    font-size: 11px; color: var(--text-dim);
+    font-weight: 500;
+  }
+  .lang-opt.active .opt-en { color: rgba(255,255,255,0.5); }
+
+  /* ============ WATERFALL (卡宽固定 · 自动列数) ============ */
+  .waterfall {
+    max-width: 1720px; margin: 0 auto;
+    padding: 20px 24px 80px;
+    column-width: 280px;   /* 🔴 固定卡宽 · 内容可控 */
+    column-gap: 16px;
+  }
+  @media (max-width: 780px) {
+    .waterfall { column-width: 170px; column-gap: 10px; padding: 16px 14px 60px; }
+    .topbar-main { padding: 10px 14px 8px; gap: 12px; grid-template-columns: auto 1fr auto; }
+    .topbar-cats { padding: 0 14px 10px; }
+    .search-box { max-width: none; padding: 8px 14px; font-size: 13px; }
+    .lang-dd-btn .lang-label { display: none; }
+    .top-icon-link { display: none; }
+  }
+
+  prompt-card {
+    display: block;
+    break-inside: avoid;
+    margin-bottom: 16px;
+  }
+
+  /* ============ MODAL (LIGHT) ============ */
+  .modal-scrim {
+    position: fixed; inset: 0; z-index: 100;
+    background: rgba(0,0,0,0.78);
+    backdrop-filter: blur(6px);
+    display: none;
+    align-items: center; justify-content: center;
+    padding: 40px 20px;
+  }
+  .modal-scrim.open { display: flex; animation: scrim-in 0.2s ease; }
+  @keyframes scrim-in { from { opacity: 0; } to { opacity: 1; } }
+
+  /* toast */
+  .toast {
+    position: fixed; left: 50%; bottom: 40px;
+    transform: translateX(-50%) translateY(20px);
+    background: rgba(16,16,20,0.96);
+    color: #fff; font-size: 14px; font-weight: 500;
+    padding: 12px 22px; border-radius: 999px;
+    border: 1px solid rgba(167,139,250,0.3);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+    opacity: 0; pointer-events: none;
+    transition: all 0.25s ease;
+    z-index: 200;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+  .toast svg { width: 16px; height: 16px; color: var(--purple); }
+
+  /* footer tip */
+  .foot-tip { text-align: center; color: var(--text-dim); font-size: 12px; padding: 14px 0 30px; }
+</style>
+</head>
+<body>
+
+<!-- ============ TOP BAR (2-row sticky) ============ -->
+<div class="topbar">
+  <!-- Row 1 · logo + centered search + lang dropdown -->
+  <div class="topbar-main">
+    <div class="brand">
+      <div class="brand-dot"></div>
+      <span class="brand-name">Prompt Atlas</span>
+    </div>
+    <div class="search-box">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input data-i18n-ph="search.ph" placeholder="搜风格 / 题材 / 画师"/>
+    </div>
+    <div class="top-right">
+      <a class="top-icon-link" href="https://github.com" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.38 7.86 10.9.58.1.79-.25.79-.55 0-.28-.01-1.02-.02-2-3.2.69-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.76 2.69 1.25 3.34.95.1-.74.4-1.25.72-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.18A11 11 0 0 1 12 6.8c.98 0 1.97.13 2.89.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.73.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.41-5.27 5.69.41.36.78 1.06.78 2.14 0 1.55-.02 2.8-.02 3.18 0 .3.21.66.8.55A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+      </a>
+      <a class="top-icon-link" href="https://x.com" target="_blank" rel="noopener noreferrer" title="X (Twitter)" aria-label="X">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+      <div class="lang-dd" id="lang-dd">
+        <button class="lang-dd-btn" id="lang-dd-btn" aria-haspopup="listbox" aria-expanded="false">
+          <svg class="globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span class="lang-label" id="lang-cur">中文</span>
+          <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="lang-dd-menu" id="lang-dd-menu" role="listbox"></div>
+      </div>
+    </div>
+  </div>
+  <!-- Row 2 · categories -->
+  <div class="topbar-cats">
+    <div class="categories" id="cats"></div>
+  </div>
+</div>
+
+<!-- ============ WATERFALL ============ -->
+<div class="waterfall" id="waterfall"></div>
+
+<div class="foot-tip" data-i18n="foot">✨ 设计图 · gallery.html · 更多风格持续加入 · Prompt Atlas © 2026</div>
+
+<!-- ============ MODAL (Web Component) ============ -->
+<prompt-modal></prompt-modal>
+
+<!-- ============ TOAST ============ -->
+<div class="toast" id="toast"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span id="toast-text">已复制</span></div>
+
+<script>
+// ========================================================
+// DATA
+// ========================================================
+const CATS = ['推荐','人像','海报','漫画','环境','国风','复古','赛博','可爱','极简','经典','动物','美食','摄影'];
+
+const AUTHOR_MODELS = {
+  'claude-code':   { label: 'Claude Code',    icon: '◆', hue: 270 },
+  'claude-opus':   { label: 'Opus 4.7',       icon: '◆', hue: 280 },
+  'claude-sonnet': { label: 'Sonnet 4.6',     icon: '◆', hue: 260 },
+  'codex':         { label: 'Codex',          icon: '●', hue: 160 },
+  'gpt-5':         { label: 'GPT-5',          icon: '●', hue: 145 },
+  'cursor':        { label: 'Cursor',         icon: '▲', hue:  20 },
+};
+const IMAGE_MODELS = {
+  'gpt-image-2':  { label: 'gpt-image-2',   icon: '✦' },
+  'flux-1.1':     { label: 'Flux 1.1',      icon: '✦' },
+  'midjourney-7': { label: 'Midjourney v7', icon: '✦' },
+};
+
+// 作者 AI 品牌形象(头像底色 + 字形)
+const MODEL_BRAND = {
+  'claude-code':   { grad: 'linear-gradient(135deg, #e88a5c 0%, #d97757 100%)', glyph: '✱' },
+  'claude-opus':   { grad: 'linear-gradient(135deg, #c470e8 0%, #8b5cf6 100%)', glyph: '✱' },
+  'claude-sonnet': { grad: 'linear-gradient(135deg, #a78bfa 0%, #6366f1 100%)', glyph: '✱' },
+  'codex':         { grad: 'linear-gradient(135deg, #34d9a9 0%, #10a37f 100%)', glyph: '◉' },
+  'gpt-5':         { grad: 'linear-gradient(135deg, #34d9a9 0%, #0d8b68 100%)', glyph: '◉' },
+  'cursor':        { grad: 'linear-gradient(135deg, #3a3a3e 0%, #0a0a0a 100%)', glyph: '▶' },
+};
+
+const CAT_EN = {
+  '推荐':'For You','人像':'Portrait','海报':'Poster','漫画':'Manga','环境':'Scene',
+  '国风':'Oriental','复古':'Vintage','赛博':'Cyber','可爱':'Kawaii','极简':'Minimal',
+  '经典':'Classic','动物':'Animal','美食':'Food','摄影':'Photo'
+};
+
+const LANGS = [
+  { id: 'zh', flag: '🇨🇳', native: '中文',     en: 'Chinese'  },
+  { id: 'en', flag: '🇺🇸', native: 'English',  en: 'English'  },
+  { id: 'ja', flag: '🇯🇵', native: '日本語',   en: 'Japanese' },
+  { id: 'ko', flag: '🇰🇷', native: '한국어',    en: 'Korean'   },
+  { id: 'es', flag: '🇪🇸', native: 'Español',  en: 'Spanish'  },
+  { id: 'fr', flag: '🇫🇷', native: 'Français', en: 'French'   },
+];
+
+const I18N = {
+  zh: {
+    'search.ph': '搜风格 / 题材 / 画师',
+    'foot': '✨ Prompt Atlas © 2026 · AI 生图灵感图鉴',
+    'modal.promptLabel': '提示词',
+    'modal.copy': '复制',
+    'modal.download': '下载图片',
+    'toast.copied': '✨ 提示词已复制 · 粘贴 ChatGPT 即跑',
+    'author.hint': '作者',
+    'label.author': '作者', 'label.model': '模型',
+  },
+  en: {
+    'search.ph': 'Search style / subject / artist',
+    'foot': '✨ Prompt Atlas © 2026 · AI Image Gallery',
+    'modal.promptLabel': 'Prompt',
+    'modal.copy': 'Copy',
+    'modal.download': 'Download image',
+    'toast.copied': '✨ Prompt copied · paste to ChatGPT and go',
+    'author.hint': 'Author',
+    'label.author': 'by', 'label.model': 'via',
+  },
+  ja: {
+    'search.ph': 'スタイル / テーマ / 作者を検索',
+    'foot': '✨ Prompt Atlas © 2026',
+    'modal.promptLabel': 'プロンプト',
+    'modal.copy': 'コピー',
+    'modal.download': 'ダウンロード',
+    'toast.copied': '✨ コピーしました',
+    'author.hint': '作者',
+    'label.author': '作者', 'label.model': 'モデル',
+  },
+  ko: {
+    'search.ph': '스타일 / 주제 / 작가 검색',
+    'foot': '✨ Prompt Atlas © 2026',
+    'modal.promptLabel': '프롬프트',
+    'modal.copy': '복사',
+    'modal.download': '다운로드',
+    'toast.copied': '✨ 복사되었습니다',
+    'author.hint': '작가',
+    'label.author': '작가', 'label.model': '모델',
+  },
+  es: {
+    'search.ph': 'Buscar estilo / tema / autor',
+    'foot': '✨ Prompt Atlas © 2026',
+    'modal.promptLabel': 'Prompt',
+    'modal.copy': 'Copiar',
+    'modal.download': 'Descargar',
+    'toast.copied': '✨ Copiado',
+    'author.hint': 'Autor',
+    'label.author': 'autor', 'label.model': 'modelo',
+  },
+  fr: {
+    'search.ph': 'Rechercher style / sujet / auteur',
+    'foot': '✨ Prompt Atlas © 2026',
+    'modal.promptLabel': 'Prompt',
+    'modal.copy': 'Copier',
+    'modal.download': 'Télécharger',
+    'toast.copied': '✨ Copié',
+    'author.hint': 'Auteur',
+    'label.author': 'par', 'label.model': 'via',
+  },
+};
+function t(key) {
+  const d = I18N[window.LANG] || I18N.en;
+  return d[key] || I18N.en[key] || I18N.zh[key] || key;
+}
+
+const CARDS = [
+  { id:'01', title:'梦幻蝴蝶少女', en:'Vintage Butterfly',
+    authorModel:'claude-code', imageModel:'gpt-image-2',
+    img:'assets/generated/e2e-sunset-mountain.png', aspect:'3/4', likes:4989, cat:'人像',
+    tags:['复古','人像','蝴蝶','金色时光','水彩','painterly'],
+    prompt:`A full-body portrait of a beautiful young woman, rendered in photo-realistic digital painting with subtle painterly brushwork. She has long flowing hair in a brown gradient from warm chestnut to caramel, with two delicate emerald-green butterflies resting gently on her hair. Vintage beige cream dress with lace ruffled trim, pearl and jade jewelry. Warm vintage interior with golden-hour god rays filtering through a tall window, visible dust motes. Color palette: warm browns + cream beige + emerald green accents. Aspect ratio 3:4.` },
+
+  { id:'02', title:'深夜改 bug', en:'Deep Night Debug',
+    authorModel:'codex', imageModel:'gpt-image-2',
+    img:'assets/generated/synthwave.png', aspect:'3/4', likes:2518, cat:'漫画',
+    tags:['漫画','程序员','四格','段子','黑白','screentone'],
+    prompt:`A 4-panel Japanese manga strip titled "深夜改 bug", black and white screen-tone style, thick ink outlines, dot halftones. Panel 1: programmer at desk at 2am, coffee and energy drink cans piled up. Panel 2: close-up of confused face staring at red error wall. Panel 3: stack overflow tab open, relief gesture. Panel 4: sunrise through window, programmer asleep on keyboard. Aspect ratio 3:4.` },
+
+  { id:'03', title:'赛博茶馆', en:'Cyberpunk Teahouse',
+    authorModel:'claude-code', imageModel:'gpt-image-2',
+    img:'assets/generated/batch-cyberpunk-market.png', aspect:'16/9', likes:1267, cat:'赛博',
+    tags:['赛博','环境','霓虹','茶馆','雨夜','volumetric'],
+    prompt:`A poster-style environment illustration of a small cyberpunk teahouse in a rain-soaked East Asian back alley, painterly hand-printed style with analog grain and CRT scanline artifacts. Round wood table with gaiwan releasing steam, vintage CRT TV, ginger cat. Jade-green neon (#00b894) + amber lantern (#f39c12) + near-black base (#0d1b2a). Wet concrete reflections. Aspect 3:4.` },
+
+  { id:'04', title:'昭和和菓子店', en:'Showa Tea Shop',
+    authorModel:'claude-sonnet', imageModel:'gpt-image-2',
+    img:'assets/generated/batch-coffee-flat.png', aspect:'3/4', likes:744, cat:'国风',
+    tags:['国风','昭和','黄昏','手工','和菓子','复古海报'],
+    prompt:`A vertical retro poster illustration of a Japanese Showa-era tea and wagashi shop facade at dusk, painterly hand-printed with warm grain of vintage mid-century Japanese travel posters. Aged cedar planks, shoji screens glowing amber, noren curtain in indigo. Hand-brushed ink calligraphy reading 和菓子. Palette: #2c1810 + #e8a048 + #7a9e7e + #d4c4a0. Aspect 3:4.` },
+
+  { id:'05', title:'水彩橘猫看夕阳', en:'Watercolor Tabby',
+    authorModel:'gpt-5', imageModel:'gpt-image-2',
+    img:'assets/samples/cat-sunset-watercolor.png', aspect:'16/9', likes:8822, cat:'动物',
+    tags:['水彩','猫','治愈','黄昏','小确幸'],
+    prompt:`一只橘猫坐在窗台上看夕阳，水彩画风格，柔和笔触，暖色调，窗框木纹清晰，光线透过玻璃洒在猫毛上形成柔和高光，背景远处是模糊的城市剪影。色调：温暖橙黄 + 柔粉 + 淡蓝。aspect ratio 16:9.` },
+
+  { id:'06', title:'盲盒柯基', en:'Pixar Corgi',
+    authorModel:'claude-code', imageModel:'gpt-image-2',
+    img:'assets/generated/batch-corgi-pixar.png', aspect:'4/3', likes:3421, cat:'可爱',
+    tags:['皮克斯','3D','柯基','生日','手办','棚拍光'],
+    prompt:`a Pixar-style 3D render of a cute corgi wearing a birthday hat, studio lighting, soft fur detail, big sparkling eyes, shallow depth of field, pastel background with blurred confetti, hyperreal toy-like finish. Aspect 4:3.` },
+
+  { id:'07', title:'霓虹夜市', en:'Cyberpunk Night Market',
+    authorModel:'claude-opus', imageModel:'gpt-image-2',
+    img:'assets/generated/batch-cyberpunk-market.png', aspect:'16/9', likes:12876, cat:'赛博',
+    tags:['赛博','夜市','霓虹','电影感','Blade Runner','蒸汽'],
+    prompt:`cyberpunk street market at night, neon signs in jade + pink + gold, blade runner atmosphere, wet reflective pavement, steam from food stalls catching neon light, volumetric haze. Cinematic wide shot, aspect 16:9.` },
+
+  { id:'08', title:'水墨锦鲤', en:'Ink Wash Koi',
+    authorModel:'claude-sonnet', imageModel:'gpt-image-2',
+    img:'assets/generated/batch-koi-watercolor.png', aspect:'1/1', likes:5643, cat:'国风',
+    tags:['水墨','锦鲤','荷塘','禅意','国画','宣纸'],
+    prompt:`a watercolor painting of a koi fish swimming in a lotus pond, traditional Chinese ink wash style, minimal composition, visible brushwork and rice paper texture, subtle gold leaf accents. Aspect 1:1.` },
+
+  { id:'09', title:'极简咖啡', en:'Minimal Coffee',
+    authorModel:'claude-code', imageModel:'gpt-image-2',
+    img:'assets/generated/batch-coffee-flat.png', aspect:'3/4', likes:2109, cat:'极简',
+    tags:['极简','咖啡','晨光','木质','flat'],
+    prompt:`minimalist flat illustration of a coffee cup on a wooden desk, morning soft light through window, limited palette of warm beige + cream + subtle sage green, large negative space top-left for quote text. Aspect 3:4.` },
+
+  { id:'10', title:'日落山川', en:'Sunset Mountain',
+    authorModel:'codex', imageModel:'gpt-image-2',
+    img:'assets/generated/e2e-sunset-mountain.png', aspect:'16/9', likes:7332, cat:'海报',
+    tags:['风光','日落','极简','渐变','海报','背景图'],
+    prompt:`a minimalist mountain landscape with sunset gradient sky, flat illustration style, warm oranges and purples, subtle atmospheric haze, clean silhouetted ridgelines, poster-ready composition. Aspect 16:9.` },
+
+  { id:'11', title:'禅意石庭', en:'Zen Rock Garden',
+    authorModel:'claude-code', imageModel:'gpt-image-2',
+    img:'assets/generated/zen-garden.png', aspect:'1/1', likes:1891, cat:'国风',
+    tags:['禅意','日式','石庭','侘寂','冥想'],
+    prompt:`a serene Japanese zen rock garden at dawn, raked gravel patterns, single stone lantern, soft painterly watercolor, muted earth tones #d4c4a0 + #7a9e7e + #5c4033, golden hour light, aspect 1:1.` },
+
+  { id:'12', title:'赛博电子猫', en:'Cyber Cat',
+    authorModel:'claude-opus', imageModel:'gpt-image-2',
+    img:'assets/generated/cyber-cat.png', aspect:'16/9', likes:6540, cat:'赛博',
+    tags:['赛博','猫','霓虹','全息','屋顶','未来'],
+    prompt:`a cybernetic tabby cat on a futuristic rooftop, holographic collar with floating data glyphs, neon magenta + cyan signage in background, wet rain-slicked surfaces reflecting lights, cinematic depth of field. Aspect 16:9.` },
+
+  { id:'13', title:'蒸汽波日落', en:'Synthwave Sunset',
+    authorModel:'cursor', imageModel:'gpt-image-2',
+    img:'assets/generated/synthwave.png', aspect:'9/16', likes:4201, cat:'复古',
+    tags:['蒸汽波','Y2K','网格','紫粉','80s','CRT'],
+    prompt:`synthwave retro aesthetic, palm tree silhouettes in front of a purple-pink gradient grid horizon, chrome text glow, 80s VHS film grain, CRT scanline overlay. Aspect 9:16.` },
+];
+
+// ========================================================
+// FeedEngine · 信号 + 排序 + 投喂(可 swap backend)
+// ========================================================
+const ANON_ID_KEY = 'pa-anon-id';
+const SIG_KEY     = 'pa-signals-v1';
+
+function anonId() {
+  let id = localStorage.getItem(ANON_ID_KEY);
+  if (!id) {
+    id = 'a_' + Math.random().toString(36).slice(2, 10) + Date.now().toString(36);
+    localStorage.setItem(ANON_ID_KEY, id);
+  }
+  return id;
+}
+
+function loadSignals() {
+  try {
+    const raw = localStorage.getItem(SIG_KEY);
+    if (raw) return JSON.parse(raw);
+  } catch {}
+  return { seen:[], viewed:[], liked:[], copied:[], notInterested:[], affinity:{}, sessionStart: Date.now() };
+}
+const SIG = loadSignals();
+function saveSignals() { localStorage.setItem(SIG_KEY, JSON.stringify(SIG)); }
+
+function addUnique(arr, v) { if (!arr.includes(v)) arr.push(v); }
+function bumpAffinity(cat, delta) {
+  SIG.affinity[cat] = (SIG.affinity[cat] || 0) + delta;
+}
+
+// 信号记录(最强 → 最弱):copied > liked > viewed > seen
+function markSeen(id, cat)        { addUnique(SIG.seen, id);     saveSignals(); }
+function markViewed(id, cat)      { addUnique(SIG.viewed, id);   bumpAffinity(cat, 0.3); saveSignals(); }
+function markLiked(id, cat)       { addUnique(SIG.liked, id);    bumpAffinity(cat, 1.0); saveSignals(); }
+function markUnliked(id, cat)     { SIG.liked = SIG.liked.filter(x => x !== id); bumpAffinity(cat, -1.0); saveSignals(); }
+function markCopied(id, cat)      { addUnique(SIG.copied, id);   bumpAffinity(cat, 2.0); saveSignals(); }
+function markNotInterested(id, cat) {
+  addUnique(SIG.notInterested, id);
+  bumpAffinity(cat, -0.8);
+  saveSignals();
+}
+function resetSignals() {
+  Object.assign(SIG, { seen:[], viewed:[], liked:[], copied:[], notInterested:[], affinity:{}, sessionStart: Date.now() });
+  saveSignals();
+}
+
+// —— 排序 ——
+function seededRand(seed) {
+  let x = 0;
+  const s = String(seed);
+  for (let i = 0; i < s.length; i++) x = ((x * 1103515245) + s.charCodeAt(i) + 12345) & 0x7fffffff;
+  return (x % 10000) / 10000;
+}
+function scoreCard(card, seed) {
+  let s = 0;
+  // 基础 · 全局热度 normalized(0-1)
+  s += Math.min(card.likes / 15000, 1) * 1.0;
+  // 亲和 · 用户喜欢的 cat 加权
+  s += (SIG.affinity[card.cat] || 0) * 0.35;
+  // 去重衰减 · 看过强衰减
+  if (SIG.viewed.includes(card.id))      s -= 1.2;
+  else if (SIG.seen.includes(card.id))   s -= 0.5;
+  // 复制过不推(已用)· 但不完全隐藏
+  if (SIG.copied.includes(card.id))      s -= 0.4;
+  // 点心过适度降权(用户已收藏)
+  if (SIG.liked.includes(card.id))       s -= 0.2;
+  // 惊喜注入 · 防止完全一致排序
+  s += seededRand(card.id + '|' + seed) * 0.18;
+  return s;
+}
+
+// Feed 状态
+const FEED = {
+  seed: Date.now(),
+  batchSize: 20,
+  shown: 0,
+};
+function getFeed(cat = '推荐', from = 0, size = FEED.batchSize) {
+  const pool = CARDS.filter(c => !SIG.notInterested.includes(c.id));
+  const filtered = (cat === '推荐') ? pool : pool.filter(c => c.cat === cat);
+  const ranked = filtered
+    .map(c => ({ c, s: scoreCard(c, FEED.seed) }))
+    .sort((a, b) => b.s - a.s)
+    .map(x => x.c);
+  return ranked.slice(from, from + size);
+}
+function feedTotal(cat = '推荐') {
+  const pool = CARDS.filter(c => !SIG.notInterested.includes(c.id));
+  return (cat === '推荐') ? pool.length : pool.filter(c => c.cat === cat).length;
+}
+function reshuffle() {
+  FEED.seed = Date.now() + Math.random();
+  FEED.shown = 0;
+}
+
+// ========================================================
+// <prompt-card> Web Component
+// ========================================================
+class PromptCard extends HTMLElement {
+  constructor() {
+    super();
+    this.attachShadow({ mode: 'open' });
+  }
+  connectedCallback() {
+    const id = this.getAttribute('data-id');
+    const data = CARDS.find(c => c.id === id);
+    if (!data) return;
+
+    const authorMeta = AUTHOR_MODELS[data.authorModel] || { label: data.authorModel, hue: 270 };
+    const imageMeta  = IMAGE_MODELS[data.imageModel]   || { label: data.imageModel };
+
+    const isZh = (window.LANG || 'zh') === 'zh';
+    const primaryTitle   = isZh ? data.title : data.en;
+    const secondaryTitle = isZh ? data.en    : data.title;
+    const catLabel       = isZh ? data.cat    : (CAT_EN[data.cat] || data.cat);
+
+    const likedKey = `liked-${id}`;
+    const liked = localStorage.getItem(likedKey) === '1';
+    const displayLikes = data.likes + (liked ? 1 : 0);
+
+    this.shadowRoot.innerHTML = `
+      <style>
+        :host { display: block; }
+        .card {
+          position: relative;
+          background: var(--card);
+          border-radius: 14px;
+          overflow: hidden;
+          cursor: pointer;
+          box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+          transition: transform 0.25s ease, box-shadow 0.25s ease;
+          border: 1px solid rgba(255,255,255,0.04);
+        }
+        .card:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 12px 40px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.08);
+        }
+        .card:hover .cover { transform: scale(1.03); }
+
+        .cover-wrap {
+          width: 100%;
+          aspect-ratio: var(--ar, 3/4);
+          overflow: hidden;
+          background: linear-gradient(135deg, #1a1a1d, #2a2a30);
+          position: relative;
+        }
+        .cover {
+          width: 100%; height: 100%;
+          object-fit: cover;
+          transition: transform 0.4s ease;
+        }
+        .cover-fallback {
+          position: absolute; inset: 0;
+          display: flex; align-items: center; justify-content: center;
+          color: rgba(255,255,255,0.25); font-size: 40px;
+          background: linear-gradient(135deg, hsl(var(--h, 280), 40%, 18%), hsl(var(--h, 280), 30%, 12%));
+        }
+        .tag-pill {
+          position: absolute; top: 10px; left: 10px;
+          padding: 4px 10px; border-radius: 999px;
+          background: rgba(0,0,0,0.55); backdrop-filter: blur(8px);
+          color: #fff; font-size: 11px; font-weight: 600;
+          letter-spacing: 0.02em;
+        }
+        .meta {
+          padding: 10px 12px 12px;
+        }
+        .title {
+          font-size: 14px; font-weight: 600; color: #fff;
+          line-height: 1.35;
+          display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+        .en {
+          font-size: 11px; color: rgba(255,255,255,0.4);
+          margin-top: 2px; letter-spacing: 0.01em;
+        }
+        /* ── Row 1 · 模型信息链 ── */
+        .meta-chips {
+          display: flex; flex-wrap: wrap; gap: 5px;
+          margin-top: 9px;
+        }
+        .chip {
+          display: inline-flex; align-items: center; gap: 5px;
+          padding: 3px 9px; border-radius: 6px;
+          font-size: 11px; font-weight: 600;
+          letter-spacing: 0.01em;
+          white-space: nowrap;
+          line-height: 1.3;
+          max-width: 100%;
+          overflow: hidden;
+        }
+        .chip-k {
+          font-weight: 500;
+          opacity: 0.55;
+          font-size: 10px;
+          letter-spacing: 0.06em;
+          text-transform: uppercase;
+          flex-shrink: 0;
+        }
+        .chip-v {
+          font-family: "SF Mono", Menlo, Consolas, monospace;
+          font-size: 10.5px;
+          overflow: hidden; text-overflow: ellipsis;
+          min-width: 0;
+        }
+        .chip-author {
+          background: hsla(var(--ahue, 270), 70%, 60%, 0.14);
+          color: hsl(var(--ahue, 270), 85%, 78%);
+          border: 1px solid hsla(var(--ahue, 270), 70%, 60%, 0.18);
+        }
+        .chip-image {
+          background: rgba(255,107,138,0.1);
+          color: #ff8fa8;
+          border: 1px solid rgba(255,107,138,0.16);
+        }
+
+        /* ── Row 2 · 比例 + 操作(两端对齐) ── */
+        .action-row {
+          display: flex; align-items: center; justify-content: space-between;
+          margin-top: 10px;
+          padding-top: 10px;
+          border-top: 1px solid rgba(255,255,255,0.05);
+        }
+        .aspect-mini {
+          font-family: "SF Mono", Menlo, Consolas, monospace;
+          font-size: 11px; font-weight: 600;
+          color: rgba(255,255,255,0.45);
+          letter-spacing: 0.04em;
+          font-variant-numeric: tabular-nums;
+        }
+        .actions { display: flex; align-items: center; gap: 2px; flex-shrink: 0; }
+        .action-btn {
+          background: transparent; border: none; cursor: pointer;
+          padding: 4px 6px; border-radius: 6px;
+          color: rgba(255,255,255,0.55); font-size: 12px;
+          display: flex; align-items: center; gap: 3px;
+          font-family: inherit;
+          transition: all 0.15s ease;
+        }
+        .action-btn:hover { color: #fff; background: rgba(255,255,255,0.06); }
+        .action-btn svg { width: 14px; height: 14px; }
+
+        .like-btn.liked { color: #ff2e51; }
+        .like-btn.liked svg { fill: #ff2e51; stroke: #ff2e51; }
+        .like-btn.pulse svg { animation: pulse 0.4s ease; }
+        @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.35); } }
+
+        .copy-btn:hover { color: #a78bfa; }
+      </style>
+
+      <div class="card" part="card" style="--ar:${data.aspect}; --h:${hashHue(data.title)};">
+        <div class="cover-wrap">
+          <img class="cover" src="${data.img}" alt="${data.title}"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"/>
+          <div class="cover-fallback" style="display:none;">🎨</div>
+          <div class="tag-pill">${catLabel}</div>
+        </div>
+        <div class="meta">
+          <div class="title">${primaryTitle}</div>
+          <div class="en">${secondaryTitle}</div>
+
+          <!-- Row 1 · 作者 + 模型(只 2 chip) -->
+          <div class="meta-chips" style="--ahue:${authorMeta.hue};">
+            <span class="chip chip-author" title="${isZh ? '写 prompt 的 AI' : 'Written by'}">
+              <span class="chip-k">${t('label.author')}</span><span class="chip-v">${authorMeta.label}</span>
+            </span>
+            <span class="chip chip-image" title="${isZh ? '出图模型' : 'Image model'}">
+              <span class="chip-k">${t('label.model')}</span><span class="chip-v">${imageMeta.label}</span>
+            </span>
+          </div>
+
+          <!-- Row 2 · 比例(左) + 点心 / 复制(右) -->
+          <div class="action-row">
+            <span class="aspect-mini" title="${isZh ? '长宽比' : 'Aspect'}">${data.aspect.replace('/', ':')}</span>
+            <div class="actions">
+              <button class="action-btn copy-btn" title="${t('modal.copy')}" aria-label="copy">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              </button>
+              <button class="action-btn like-btn ${liked?'liked':''}" title="like" aria-label="like">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                <span class="num">${formatK(displayLikes)}</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+
+    // events
+    const card = this.shadowRoot.querySelector('.card');
+    const likeBtn = this.shadowRoot.querySelector('.like-btn');
+    const copyBtn = this.shadowRoot.querySelector('.copy-btn');
+
+    card.addEventListener('click', (e) => {
+      if (e.target.closest('button')) return;
+      document.querySelector('prompt-modal').open(id);
+    });
+
+    likeBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const on = likeBtn.classList.toggle('liked');
+      likeBtn.classList.remove('pulse'); void likeBtn.offsetWidth; likeBtn.classList.add('pulse');
+      localStorage.setItem(likedKey, on ? '1' : '0');
+      likeBtn.querySelector('.num').textContent = formatK(data.likes + (on ? 1 : 0));
+    });
+
+    copyBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      copyPrompt(data.prompt);
+    });
+  }
+}
+customElements.define('prompt-card', PromptCard);
+
+// ========================================================
+// <prompt-modal> Web Component
+// ========================================================
+class PromptModal extends HTMLElement {
+  constructor() {
+    super();
+    this.attachShadow({ mode: 'open' });
+    this.shadowRoot.innerHTML = `
+      <style>
+        :host { display: contents; }
+        .scrim {
+          position: fixed; inset: 0; z-index: 100;
+          background: rgba(0,0,0,0.82);
+          backdrop-filter: blur(8px);
+          display: none;
+          align-items: center; justify-content: center;
+          padding: 30px;
+        }
+        .scrim.open { display: flex; animation: in 0.22s ease; }
+        @keyframes in { from { opacity: 0; } to { opacity: 1; } }
+
+        .modal {
+          position: relative;
+          display: grid;
+          grid-template-columns: 1.2fr 0.8fr;
+          width: min(1280px, 96vw);
+          max-height: 92vh;
+          background: #101014;
+          border-radius: 18px;
+          overflow: hidden;
+          box-shadow: 0 30px 80px rgba(0,0,0,0.7);
+          border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .media {
+          background: #000;
+          display: flex; align-items: center; justify-content: center;
+          min-height: 300px; overflow: hidden;
+        }
+        .media img {
+          max-width: 100%; max-height: 92vh;
+          width: auto; height: auto;
+          object-fit: contain;
+        }
+
+        .side {
+          padding: 26px 28px;
+          display: flex; flex-direction: column;
+          overflow-y: auto;
+          max-height: 92vh;
+        }
+
+        /* ── head:品牌头像 + 作者 ── */
+        .head {
+          display: flex; align-items: center; gap: 12px;
+          margin-bottom: 18px;
+        }
+        .avatar {
+          width: 44px; height: 44px; border-radius: 12px;
+          flex-shrink: 0;
+          display: flex; align-items: center; justify-content: center;
+          color: #fff; font-size: 22px; font-weight: 700; line-height: 1;
+          box-shadow: 0 4px 18px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.22);
+        }
+        .author-stack { flex: 1; min-width: 0; }
+        .author-name {
+          font-size: 16px; font-weight: 700; color: #fff;
+          letter-spacing: -0.01em;
+        }
+        .author-hint {
+          font-size: 10.5px; color: rgba(255,255,255,0.42);
+          margin-top: 3px;
+          text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700;
+        }
+
+        .title {
+          font-size: 22px; font-weight: 700; color: #fff;
+          line-height: 1.25; letter-spacing: -0.015em;
+          margin-bottom: 4px;
+        }
+        .en {
+          color: rgba(255,255,255,0.42); font-size: 13px;
+          margin-bottom: 14px; font-weight: 500;
+        }
+
+        /* meta pills · @author · via model · aspect */
+        .meta-pills {
+          display: flex; flex-wrap: wrap; gap: 6px;
+          margin-bottom: 12px;
+        }
+        .m-pill {
+          display: inline-flex; align-items: center; gap: 5px;
+          padding: 4px 11px; border-radius: 999px;
+          font-size: 11.5px; font-weight: 600;
+          letter-spacing: 0.01em;
+          white-space: nowrap;
+          font-family: "SF Mono", Menlo, Consolas, monospace;
+          border: 1px solid transparent;
+        }
+        .m-pill-author {
+          background: linear-gradient(135deg, rgba(167,139,250,0.14), rgba(255,107,138,0.12));
+          color: #c4b5fd; border-color: rgba(167,139,250,0.22);
+        }
+        .m-pill-image {
+          background: rgba(52,217,169,0.1);
+          color: #34d9a9; border-color: rgba(52,217,169,0.22);
+        }
+        .m-pill-aspect {
+          background: rgba(255,255,255,0.05);
+          color: rgba(255,255,255,0.72); border-color: rgba(255,255,255,0.1);
+        }
+
+        .tags {
+          display: flex; flex-wrap: wrap; gap: 6px;
+          margin-bottom: 20px;
+        }
+        .tag {
+          padding: 4px 10px; border-radius: 999px;
+          background: rgba(255,255,255,0.05); color: rgba(255,255,255,0.7);
+          font-size: 12px; font-weight: 500;
+          border: 1px solid rgba(255,255,255,0.06);
+          transition: all 0.15s ease;
+        }
+        .tag:hover {
+          background: rgba(167,139,250,0.14);
+          color: #c4b5fd; border-color: rgba(167,139,250,0.25);
+        }
+
+        .prompt-block { margin-bottom: 88px; }  /* 留出水平 FAB 高度 */
+        .prompt-label {
+          display: flex; align-items: center; justify-content: space-between;
+          margin-bottom: 8px;
+        }
+        .prompt-label-text {
+          font-size: 11px; font-weight: 700; color: rgba(255,255,255,0.55);
+          letter-spacing: 0.12em; text-transform: uppercase;
+        }
+        .copy-big {
+          display: flex; align-items: center; gap: 6px;
+          padding: 7px 16px; border-radius: 999px;
+          background: linear-gradient(135deg, #ff2e51, #ff6b8a);
+          color: #fff; font-weight: 700; font-size: 13px;
+          border: none; cursor: pointer;
+          font-family: inherit;
+          box-shadow: 0 4px 14px rgba(255,46,81,0.32);
+          transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+        .copy-big:hover { transform: translateY(-1px); box-shadow: 0 8px 22px rgba(255,46,81,0.48); }
+        .copy-big:active { transform: translateY(0); }
+        .copy-big svg { width: 14px; height: 14px; }
+
+        .prompt-text {
+          background: #0a0a0c;
+          border: 1px solid rgba(255,255,255,0.07);
+          border-radius: 12px;
+          padding: 14px 16px;
+          font-family: "SF Mono", Menlo, Consolas, monospace;
+          font-size: 13px; line-height: 1.65;
+          color: rgba(255,255,255,0.85);
+          white-space: pre-wrap; word-break: break-word;
+          max-height: 260px; overflow-y: auto;
+        }
+        .prompt-text::-webkit-scrollbar { width: 8px; }
+        .prompt-text::-webkit-scrollbar-track { background: transparent; }
+        .prompt-text::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 4px; }
+
+        /* ── 浮动 FAB · 底部水平 · 顺序:跳转 / 下载 / 点赞 ── */
+        .fab-group {
+          position: absolute; right: 20px; bottom: 20px;
+          display: flex; flex-direction: row; gap: 10px;
+          z-index: 10;
+        }
+        .fab {
+          width: 52px; height: 52px; border-radius: 50%;
+          background: rgba(24,24,28,0.92);
+          backdrop-filter: blur(20px) saturate(180%);
+          -webkit-backdrop-filter: blur(20px) saturate(180%);
+          border: 1px solid rgba(255,255,255,0.12);
+          color: #fff;
+          display: flex; align-items: center; justify-content: center;
+          cursor: pointer; text-decoration: none;
+          transition: all 0.22s cubic-bezier(.3, 1, .4, 1);
+          box-shadow: 0 6px 22px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.06);
+          position: relative;
+          font-family: inherit;
+        }
+        .fab:hover {
+          background: rgba(40,40,46,0.95);
+          transform: translateY(-2px);
+          box-shadow: 0 14px 34px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.1);
+          border-color: rgba(255,255,255,0.22);
+        }
+        .fab:active { transform: translateY(0); }
+        .fab svg { width: 22px; height: 22px; }
+
+        .fab-like.liked {
+          background: linear-gradient(135deg, #ff2e51, #ff6b8a);
+          border-color: rgba(255,46,81,0.45);
+          box-shadow: 0 6px 22px rgba(255,46,81,0.4);
+        }
+        .fab-like.liked svg { fill: #fff; stroke: #fff; }
+        .fab-num {
+          position: absolute; right: -2px; top: -6px;
+          background: #fff; color: #0a0a0b;
+          font-size: 10px; font-weight: 700;
+          padding: 2px 6px; border-radius: 999px;
+          min-width: 22px; text-align: center;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+          font-family: "SF Mono", Menlo, Consolas, monospace;
+        }
+        .fab-like.liked .fab-num { background: #fff; color: #ff2e51; }
+
+        .close {
+          position: absolute; top: 16px; right: 16px; z-index: 10;
+          width: 36px; height: 36px; border-radius: 50%;
+          background: rgba(0,0,0,0.55); backdrop-filter: blur(10px);
+          border: 1px solid rgba(255,255,255,0.1);
+          color: #fff; cursor: pointer;
+          display: flex; align-items: center; justify-content: center;
+          transition: background 0.15s ease;
+        }
+        .close:hover { background: rgba(0,0,0,0.8); }
+
+        @media (max-width: 900px) {
+          .modal { grid-template-columns: 1fr; max-height: 94vh; }
+          .media { max-height: 50vh; }
+          .side { max-height: 44vh; padding: 20px; }
+          .fab-group { right: 14px; bottom: 14px; gap: 8px; }
+          .fab { width: 46px; height: 46px; }
+          .prompt-block { margin-bottom: 74px; }
+        }
+      </style>
+
+      <div class="scrim" id="scrim">
+        <div class="modal">
+          <button class="close" aria-label="关闭">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+          <div class="media"><img id="m-img" alt=""/></div>
+          <div class="side">
+            <div class="head">
+              <div class="avatar" id="m-avatar"><span id="m-avatar-glyph">✱</span></div>
+              <div class="author-stack">
+                <div class="author-name" id="m-author"></div>
+                <div class="author-hint" id="m-author-hint">Author</div>
+              </div>
+            </div>
+            <div class="title" id="m-title"></div>
+            <div class="en" id="m-en"></div>
+            <div class="meta-pills" id="m-meta-pills"></div>
+            <div class="tags" id="m-tags"></div>
+            <div class="prompt-block">
+              <div class="prompt-label">
+                <div class="prompt-label-text" id="m-prompt-label">提示词</div>
+                <button class="copy-big" id="m-copy">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                  <span id="m-copy-label">复制</span>
+                </button>
+              </div>
+              <div class="prompt-text" id="m-prompt"></div>
+            </div>
+          </div>
+          <!-- 浮动操作 · bottom-right -->
+          <div class="fab-group">
+            <a class="fab" id="m-open-new" href="#" target="_blank" rel="noopener" title="新窗口看原图" aria-label="open">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+            <a class="fab" id="m-download" download title="下载图片" aria-label="download">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            </a>
+            <button class="fab fab-like" id="m-like" title="点心" aria-label="like">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              <span class="fab-num" id="m-like-num">0</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    `;
+
+    this.scrim = this.shadowRoot.getElementById('scrim');
+    this.shadowRoot.querySelector('.close').addEventListener('click', () => this.close());
+    this.scrim.addEventListener('click', (e) => { if (e.target === this.scrim) this.close(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') this.close(); });
+
+    this.shadowRoot.getElementById('m-copy').addEventListener('click', () => {
+      if (!this.current) return;
+      copyPrompt(this.current.prompt);
+    });
+
+    this.shadowRoot.getElementById('m-like').addEventListener('click', (e) => {
+      if (!this.current) return;
+      const btn = e.currentTarget;
+      btn.classList.toggle('liked');
+      const on = btn.classList.contains('liked');
+      localStorage.setItem(`liked-${this.current.id}`, on ? '1' : '0');
+      this.shadowRoot.getElementById('m-like-num').textContent = formatK(this.current.likes + (on ? 1 : 0));
+      // also sync back card
+      const card = document.querySelector(`prompt-card[data-id="${this.current.id}"]`);
+      if (card) card.shadowRoot.querySelector('.like-btn').classList.toggle('liked', on);
+    });
+  }
+
+  open(id) {
+    const data = CARDS.find(c => c.id === id);
+    if (!data) return;
+    this.current = data;
+    const aMeta = AUTHOR_MODELS[data.authorModel] || { label: data.authorModel };
+    const iMeta = IMAGE_MODELS[data.imageModel]   || { label: data.imageModel };
+    const brand = MODEL_BRAND[data.authorModel]   || { grad: 'linear-gradient(135deg, #ff2e51, #a78bfa)', glyph: '◆' };
+    const isZh  = (window.LANG || 'zh') === 'zh';
+
+    // 主体
+    this.shadowRoot.getElementById('m-img').src = data.img;
+    this.shadowRoot.getElementById('m-title').textContent = isZh ? data.title : data.en;
+    this.shadowRoot.getElementById('m-en').textContent    = isZh ? data.en    : data.title;
+    this.shadowRoot.getElementById('m-prompt').textContent = data.prompt;
+
+    // 品牌头像
+    const avatarEl = this.shadowRoot.getElementById('m-avatar');
+    avatarEl.style.background = brand.grad;
+    this.shadowRoot.getElementById('m-avatar-glyph').textContent = brand.glyph;
+    this.shadowRoot.getElementById('m-author').textContent = aMeta.label;
+    this.shadowRoot.getElementById('m-author-hint').textContent = t('author.hint');
+
+    // meta pills:@作者 · via 模型 · aspect
+    this.shadowRoot.getElementById('m-meta-pills').innerHTML = `
+      <span class="m-pill m-pill-author">@${data.authorModel}</span>
+      <span class="m-pill m-pill-image">${isZh ? '出图' : 'via'} · ${iMeta.label}</span>
+      <span class="m-pill m-pill-aspect">${data.aspect.replace('/', ':')}</span>
+    `;
+
+    // 内容 tag
+    this.shadowRoot.getElementById('m-tags').innerHTML = data.tags.map(tag => `<span class="tag">#${tag}</span>`).join('');
+
+    // 文本标签
+    this.shadowRoot.getElementById('m-prompt-label').textContent = t('modal.promptLabel');
+    this.shadowRoot.getElementById('m-copy-label').textContent   = t('modal.copy');
+
+    // 下载 / 新窗口 链接
+    const slug = `prompt-atlas-${data.id}-${data.en.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}.png`;
+    const dlEl = this.shadowRoot.getElementById('m-download');
+    const openEl = this.shadowRoot.getElementById('m-open-new');
+    dlEl.setAttribute('href', data.img);
+    dlEl.setAttribute('download', slug);
+    dlEl.setAttribute('title', t('modal.download'));
+    openEl.setAttribute('href', data.img);
+
+    // 点心
+    const liked = localStorage.getItem(`liked-${id}`) === '1';
+    const likeBtn = this.shadowRoot.getElementById('m-like');
+    likeBtn.classList.toggle('liked', liked);
+    this.shadowRoot.getElementById('m-like-num').textContent = formatK(data.likes + (liked ? 1 : 0));
+
+    this.scrim.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  close() {
+    this.scrim.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+}
+customElements.define('prompt-modal', PromptModal);
+
+// ========================================================
+// helpers
+// ========================================================
+function formatK(n) {
+  if (n >= 10000) return (n / 10000).toFixed(1).replace(/\.0$/, '') + 'w';
+  if (n >= 1000) return (n / 1000).toFixed(1).replace(/\.0$/, '') + 'k';
+  return String(n);
+}
+function hashHue(s) {
+  let h = 0;
+  for (const c of s) h = (h * 31 + c.charCodeAt(0)) & 0xffff;
+  return h % 360;
+}
+async function copyPrompt(text) {
+  try {
+    await navigator.clipboard.writeText(text);
+    showToast(t('toast.copied'));
+  } catch (e) {
+    // fallback
+    const ta = document.createElement('textarea');
+    ta.value = text; document.body.appendChild(ta);
+    ta.select(); document.execCommand('copy');
+    document.body.removeChild(ta);
+    showToast(t('toast.copied'));
+  }
+}
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  document.getElementById('toast-text').textContent = msg;
+  t.classList.add('show');
+  clearTimeout(window._toast_t);
+  window._toast_t = setTimeout(() => t.classList.remove('show'), 2200);
+}
+
+// ========================================================
+// bootstrap
+// ========================================================
+const URL_PARAMS = new URLSearchParams(location.search);
+window.LANG = URL_PARAMS.get('lang') || localStorage.getItem('pa-lang') || 'zh';
+
+const catsEl = document.getElementById('cats');
+const wf     = document.getElementById('waterfall');
+let activeCat = '推荐';
+
+function applyI18n() {
+  document.querySelectorAll('[data-i18n]').forEach(el => el.textContent = t(el.dataset.i18n));
+  document.querySelectorAll('[data-i18n-html]').forEach(el => el.innerHTML = t(el.dataset.i18nHtml));
+  document.querySelectorAll('[data-i18n-ph]').forEach(el => el.placeholder = t(el.dataset.i18nPh));
+  document.documentElement.lang = window.LANG === 'en' ? 'en' : 'zh-CN';
+}
+
+function renderCats() {
+  const isEn = window.LANG === 'en';
+  catsEl.innerHTML = CATS.map(c => {
+    const label = isEn ? (CAT_EN[c] || c) : c;
+    const active = c === activeCat ? ' active' : '';
+    return `<button class="category${active}" data-cat="${c}">${label}</button>`;
+  }).join('');
+}
+
+function renderWaterfall() {
+  const visible = activeCat === '推荐' ? CARDS : CARDS.filter(c => c.cat === activeCat);
+  wf.innerHTML = visible.map(c => `<prompt-card data-id="${c.id}"></prompt-card>`).join('');
+}
+
+catsEl.addEventListener('click', (e) => {
+  const b = e.target.closest('.category');
+  if (!b) return;
+  activeCat = b.dataset.cat;
+  catsEl.querySelectorAll('.category').forEach(x => x.classList.toggle('active', x === b));
+  renderWaterfall();
+});
+
+// ── 语言下拉 ──
+const langDd     = document.getElementById('lang-dd');
+const langDdBtn  = document.getElementById('lang-dd-btn');
+const langDdMenu = document.getElementById('lang-dd-menu');
+const langCurEl  = document.getElementById('lang-cur');
+
+function renderLangMenu() {
+  langDdMenu.innerHTML = LANGS.map(l => `
+    <button class="lang-opt${l.id === window.LANG ? ' active' : ''}" data-lang="${l.id}" role="option">
+      <span class="flag">${l.flag}</span>
+      <span class="opt-native">${l.native}</span>
+      <span class="opt-en">${l.en}</span>
+    </button>
+  `).join('');
+}
+function syncLangLabel() {
+  const cur = LANGS.find(l => l.id === window.LANG) || LANGS[0];
+  langCurEl.textContent = cur.native;
+}
+function toggleDd(open) {
+  if (typeof open !== 'boolean') open = !langDd.classList.contains('open');
+  langDd.classList.toggle('open', open);
+  langDdBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+}
+langDdBtn.addEventListener('click', (e) => { e.stopPropagation(); toggleDd(); });
+langDdMenu.addEventListener('click', (e) => {
+  const b = e.target.closest('.lang-opt');
+  if (!b) return;
+  const newLang = b.dataset.lang;
+  toggleDd(false);
+  if (newLang === window.LANG) return;
+  window.LANG = newLang;
+  localStorage.setItem('pa-lang', window.LANG);
+  syncLangLabel();
+  renderLangMenu();
+  applyI18n();
+  renderCats();
+  renderWaterfall();
+});
+document.addEventListener('click', (e) => {
+  if (!langDd.contains(e.target)) toggleDd(false);
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') toggleDd(false);
+});
+
+// ── 初始化 ──
+applyI18n();
+syncLangLabel();
+renderLangMenu();
+renderCats();
+renderWaterfall();
+
+// URL hash 自动开 modal(测试 / 分享链接用):#m-01
+if (location.hash.startsWith('#m-')) {
+  const mid = location.hash.replace('#m-', '');
+  setTimeout(() => document.querySelector('prompt-modal').open(mid), 200);
+}
+// URL ?dd=1 自动开语言下拉(截图测试用)
+if (URL_PARAMS.get('dd') === '1') {
+  setTimeout(() => toggleDd(true), 150);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>文生图风格图鉴 · 14 类 130+ 风格</title>
+<style>
+:root {
+  --bg: #050507;
+  --bg-glass: rgba(0, 0, 0, 0.30);
+  --bg-elevated: rgba(255, 255, 255, 0.04);
+  --accent: #a78bfa;
+  --accent-strong: #8b5cf6;
+  --accent-12: rgba(167, 139, 250, 0.12);
+  --accent-20: rgba(167, 139, 250, 0.20);
+  --warm: #f97316;
+  --green: #34d399;
+  --red: #f87171;
+  --yellow: #fbbf24;
+  --blue: #38bdf8;
+  --pink: #f472b6;
+  --border: rgba(255, 255, 255, 0.13);
+  --border-soft: rgba(255, 255, 255, 0.06);
+  --text: rgba(255, 255, 255, 0.96);
+  --text-sub: rgba(255, 255, 255, 0.80);
+  --text-60: rgba(255, 255, 255, 0.60);
+  --text-40: rgba(255, 255, 255, 0.40);
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  background-image:
+    radial-gradient(ellipse 80% 25% at 50% 0%, rgba(139,92,246,0.22), transparent 60%),
+    radial-gradient(ellipse 50% 20% at 80% 0%, rgba(167,139,250,0.12), transparent 60%),
+    radial-gradient(ellipse 60% 20% at 50% 100%, rgba(124,58,237,0.10), transparent 60%),
+    radial-gradient(ellipse 40% 15% at 20% 100%, rgba(249,115,22,0.06), transparent 60%);
+  background-attachment: fixed;
+  color: var(--text-sub);
+  font: 18px/1.65 -apple-system, "PingFang SC", "Microsoft Yahei", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== Layout ===== */
+.shell { display: grid; grid-template-columns: 260px 1fr; gap: 32px; max-width: 1560px; margin: 0 auto; padding: 40px 32px 80px; }
+
+/* ===== Sidebar ===== */
+.sidebar { position: sticky; top: 40px; align-self: start; max-height: calc(100vh - 80px); overflow-y: auto;
+  background: var(--bg-glass); backdrop-filter: blur(40px) saturate(2.0); -webkit-backdrop-filter: blur(40px) saturate(2.0);
+  border: 1px solid var(--border); border-radius: 20px; padding: 20px 14px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.10), 0 8px 32px rgba(0,0,0,0.4); }
+.sidebar h3 { margin: 4px 10px 14px; font-size: 12px; letter-spacing: 0.14em; color: var(--text-40); font-weight: 700; text-transform: uppercase; }
+.nav-item { display: flex; align-items: center; gap: 12px; padding: 10px 12px; margin-bottom: 4px; border-radius: 12px;
+  color: var(--text-sub); text-decoration: none; font-size: 15px; cursor: pointer; transition: background .2s, color .2s; border: 1px solid transparent; }
+.nav-item:hover { background: var(--accent-12); color: var(--text); }
+.nav-item.active { background: var(--accent-12); color: var(--text); border-color: var(--accent-20); }
+.nav-item .emoji { font-size: 20px; }
+.nav-item .count { margin-left: auto; font-size: 12px; color: var(--text-40); font-variant-numeric: tabular-nums; }
+
+/* ===== Main ===== */
+.main { min-width: 0; }
+
+.hero { background: var(--bg-glass); backdrop-filter: blur(40px) saturate(2.0); -webkit-backdrop-filter: blur(40px) saturate(2.0);
+  border: 1px solid var(--border); border-radius: 24px; padding: 44px 40px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.10), 0 8px 32px rgba(0,0,0,0.4); margin-bottom: 32px; }
+.hero .eyebrow { font-size: 13px; color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 14px; }
+.hero h1 { font-size: 52px; font-weight: 800; letter-spacing: -0.03em; line-height: 1.08; color: var(--text); margin: 0 0 16px; }
+.hero .tagline { font-size: 20px; color: var(--text-sub); margin: 0 0 22px; }
+.hero .stats { display: flex; gap: 28px; flex-wrap: wrap; }
+.hero .stat { display: flex; flex-direction: column; gap: 2px; padding: 8px 18px; border-left: 3px solid var(--accent); background: var(--accent-12); border-radius: 0 10px 10px 0; }
+.hero .stat .num { font-size: 28px; font-weight: 700; color: var(--text); font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
+.hero .stat .lbl { font-size: 12px; color: var(--text-60); text-transform: uppercase; letter-spacing: 0.08em; }
+
+/* ===== Category Section ===== */
+.cat { margin-top: 56px; scroll-margin-top: 20px; }
+.cat-head { display: flex; align-items: baseline; gap: 16px; padding-bottom: 16px; margin-bottom: 24px; border-bottom: 1px solid var(--border-soft); }
+.cat-head .cat-emoji { font-size: 40px; line-height: 1; }
+.cat-head h2 { margin: 0; font-size: 32px; font-weight: 700; letter-spacing: -0.02em; color: var(--text); }
+.cat-head .cat-count { margin-left: auto; font-size: 14px; color: var(--text-40); font-variant-numeric: tabular-nums; padding: 4px 12px; background: var(--bg-elevated); border-radius: 999px; border: 1px solid var(--border-soft); }
+
+/* ===== Style Card ===== */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+.card { background: var(--bg-glass); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border); border-radius: 16px; overflow: hidden;
+  transition: transform .2s, border-color .2s, box-shadow .2s;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.06); display: flex; flex-direction: column; }
+.card:hover { transform: translateY(-3px); border-color: var(--accent-20); box-shadow: 0 12px 36px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1); }
+
+.swatch { height: 88px; display: flex; align-items: center; justify-content: center; font-size: 38px; position: relative; overflow: hidden; }
+.swatch::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.25)); pointer-events: none; }
+
+.card-body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.card-title { font-size: 17px; font-weight: 700; color: var(--text); line-height: 1.3; letter-spacing: -0.01em; }
+.card-en { font-size: 12px; color: var(--text-40); font-family: "SF Mono", Menlo, monospace; letter-spacing: 0.02em; margin-top: -4px; }
+.card-prompt { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 11.5px; color: var(--accent); background: var(--accent-12); border: 1px solid var(--accent-20);
+  padding: 6px 10px; border-radius: 7px; line-height: 1.4; word-break: break-word; margin-top: 4px; }
+.card-use { font-size: 12px; color: var(--text-60); display: inline-flex; align-items: center; gap: 6px; margin-top: auto; padding-top: 6px; }
+.card-use::before { content: '▸'; color: var(--accent); }
+
+/* ===== Swatch themes per category ===== */
+.sw-classical_art { background: linear-gradient(135deg, #8b5a2b, #d4a574 50%, #f4e5c2); }
+.sw-illustration  { background: linear-gradient(135deg, #f472b6, #fbbf24 50%, #34d399); }
+.sw-anime         { background: linear-gradient(135deg, #fda4af, #c084fc 50%, #93c5fd); }
+.sw-3d_render     { background: linear-gradient(135deg, #60a5fa, #c084fc 50%, #f472b6); }
+.sw-photography   { background: linear-gradient(135deg, #374151, #9ca3af 50%, #d1d5db); }
+.sw-digital_art   { background: linear-gradient(135deg, #7c3aed, #ec4899 50%, #06b6d4); }
+.sw-oriental      { background: linear-gradient(135deg, #7f1d1d, #dc2626 50%, #fbbf24); }
+.sw-cute_kawaii   { background: linear-gradient(135deg, #fbcfe8, #fecaca 50%, #fef3c7); }
+.sw-meme_funny    { background: linear-gradient(135deg, #fbbf24, #f97316 50%, #ef4444); }
+.sw-commercial    { background: linear-gradient(135deg, #ef4444, #ffffff 50%, #fbbf24); }
+.sw-materials     { background: linear-gradient(135deg, #e5e7eb, #60a5fa 50%, #a78bfa); }
+.sw-mood          { background: linear-gradient(135deg, #1e3a8a, #6366f1 50%, #a78bfa); }
+.sw-industry      { background: linear-gradient(135deg, #0f172a, #334155 50%, #64748b); }
+
+/* Scrollbar */
+.sidebar::-webkit-scrollbar { width: 6px; }
+.sidebar::-webkit-scrollbar-track { background: transparent; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+/* Footer */
+.foot { margin-top: 80px; padding: 28px; text-align: center; color: var(--text-40); font-size: 13px; border-top: 1px solid var(--border-soft); }
+.foot code { background: var(--bg-elevated); padding: 2px 6px; border-radius: 4px; color: var(--accent); }
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .shell { grid-template-columns: 1fr; }
+  .sidebar { position: static; max-height: none; }
+  .nav-item { display: inline-flex; }
+  .sidebar-list { display: flex; flex-wrap: wrap; gap: 6px; }
+  .hero h1 { font-size: 40px; }
+}
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h3>14 大分类</h3>
+    <div class="sidebar-list" id="nav"></div>
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="eyebrow">Prompt Atlas · 文生图风格图鉴</div>
+      <h1>130+ 种图片风格<br>一页看全</h1>
+      <p class="tagline">从经典油画到盲盒手办 · 从赛博朋克到敦煌飞天 · 每条都附英文 prompt 关键词</p>
+      <div class="stats">
+        <div class="stat"><span class="num">14</span><span class="lbl">大分类</span></div>
+        <div class="stat"><span class="num" id="total-count">—</span><span class="lbl">具体风格</span></div>
+        <div class="stat"><span class="num">100%</span><span class="lbl">可直接用的 prompt</span></div>
+      </div>
+    </section>
+
+    <div id="cats"></div>
+
+    <div class="foot">
+      ▸ 每张卡点击会复制 prompt · 直接粘到 Midjourney / SD / 即梦 / DALL-E<br>
+      ▸ 数据来源 · Adobe / Midjourney / Stable Diffusion / 小红书 / 知乎 / 即梦 AI 等网络调研
+    </div>
+  </main>
+</div>
+
+<script>
+const DATA = {
+  "categories": [
+    {
+      "id": "classical_art",
+      "name_zh": "经典艺术画风",
+      "emoji": "🎨",
+      "styles": [
+        {"zh": "油画厚涂", "en": "Oil painting, impasto", "prompt_hint": "oil painting, thick brush strokes, impasto", "use_case": "肖像 / 艺术装饰"},
+        {"zh": "水彩", "en": "Watercolor", "prompt_hint": "watercolor painting, wet on wet, soft edges", "use_case": "小清新插画"},
+        {"zh": "丙烯", "en": "Acrylic painting", "prompt_hint": "acrylic painting, vivid colors", "use_case": "现代艺术"},
+        {"zh": "素描", "en": "Pencil sketch", "prompt_hint": "pencil sketch, hatching, graphite", "use_case": "人物速写"},
+        {"zh": "炭笔", "en": "Charcoal drawing", "prompt_hint": "charcoal drawing, dramatic shading", "use_case": "黑白肖像"},
+        {"zh": "钢笔淡彩", "en": "Ink and light wash", "prompt_hint": "ink and light wash, line art with color", "use_case": "旅行手账"},
+        {"zh": "印象派", "en": "Impressionism", "prompt_hint": "impressionism, Monet style, soft light", "use_case": "风景氛围"},
+        {"zh": "梵高后印象", "en": "Van Gogh style", "prompt_hint": "van gogh style, swirling brushstrokes", "use_case": "艺术再创作"},
+        {"zh": "立体主义", "en": "Cubism", "prompt_hint": "cubism, Picasso, geometric fragments", "use_case": "艺术海报"},
+        {"zh": "波普艺术", "en": "Pop art", "prompt_hint": "pop art, Warhol, bold flat color", "use_case": "潮流海报"},
+        {"zh": "浮世绘", "en": "Ukiyo-e", "prompt_hint": "ukiyo-e, Hokusai, woodblock print", "use_case": "东方艺术"},
+        {"zh": "版画木刻", "en": "Woodblock print", "prompt_hint": "woodblock print, linocut, high contrast", "use_case": "复古海报"}
+      ]
+    },
+    {
+      "id": "illustration",
+      "name_zh": "插画风格",
+      "emoji": "🖌️",
+      "styles": [
+        {"zh": "扁平插画", "en": "Flat illustration", "prompt_hint": "flat illustration, vector, minimal shading", "use_case": "官网 / banner"},
+        {"zh": "MBE 风", "en": "MBE illustration", "prompt_hint": "MBE style, bold outline, flat color", "use_case": "app 引导页"},
+        {"zh": "儿童绘本", "en": "Children book illustration", "prompt_hint": "children book illustration, storybook", "use_case": "绘本 / 母婴"},
+        {"zh": "极简线稿", "en": "Minimal line art", "prompt_hint": "minimal line art, one line drawing", "use_case": "logo / 文艺"},
+        {"zh": "孟菲斯", "en": "Memphis design", "prompt_hint": "memphis design, 80s geometric", "use_case": "潮流设计"},
+        {"zh": "手绘涂鸦", "en": "Doodle style", "prompt_hint": "hand drawn doodle, sketchy, playful", "use_case": "社交贴图"},
+        {"zh": "新国潮插画", "en": "New Chinese chic", "prompt_hint": "new chinese illustration, modern oriental", "use_case": "国货品牌"},
+        {"zh": "写实插画", "en": "Realistic illustration", "prompt_hint": "realistic illustration, detailed, editorial", "use_case": "杂志配图"},
+        {"zh": "丝网印刷", "en": "Screen print", "prompt_hint": "screen print, risograph, limited palette", "use_case": "独立海报"},
+        {"zh": "剪影风", "en": "Silhouette", "prompt_hint": "silhouette art, negative space", "use_case": "品牌视觉"}
+      ]
+    },
+    {
+      "id": "anime",
+      "name_zh": "动漫二次元",
+      "emoji": "🌸",
+      "styles": [
+        {"zh": "日系赛璐璐", "en": "Anime cel-shaded", "prompt_hint": "anime style, cel shading, clean lineart", "use_case": "头像 / 同人"},
+        {"zh": "吉卜力风", "en": "Studio Ghibli", "prompt_hint": "ghibli style, Miyazaki, soft painterly", "use_case": "治愈壁纸"},
+        {"zh": "新海诚风", "en": "Makoto Shinkai", "prompt_hint": "Makoto Shinkai style, bloom sky, cinematic", "use_case": "青春场景"},
+        {"zh": "京阿尼风", "en": "Kyoto Animation", "prompt_hint": "KyoAni style, soft lighting, slice of life", "use_case": "日常番风"},
+        {"zh": "90 年代老番", "en": "90s retro anime", "prompt_hint": "1990s anime, VHS grain, retro cel", "use_case": "怀旧壁纸"},
+        {"zh": "Q 版奇比", "en": "Chibi", "prompt_hint": "chibi, super deformed, cute", "use_case": "表情 / 贴纸"},
+        {"zh": "美漫", "en": "American comics", "prompt_hint": "american comic book, Marvel style, ink", "use_case": "英雄海报"},
+        {"zh": "韩系网漫", "en": "Korean webtoon", "prompt_hint": "korean webtoon, manhwa style", "use_case": "都市甜宠"},
+        {"zh": "暗黑漫画", "en": "Dark manga", "prompt_hint": "dark seinen manga, heavy ink, gritty", "use_case": "暗黑题材"},
+        {"zh": "少女漫", "en": "Shoujo manga", "prompt_hint": "shoujo manga, sparkle eyes, pastel", "use_case": "言情插画"},
+        {"zh": "像素动漫", "en": "Pixel anime", "prompt_hint": "pixel art anime, 16bit, retro jrpg", "use_case": "怀旧游戏感"},
+        {"zh": "水彩二次元", "en": "Watercolor anime", "prompt_hint": "watercolor anime, soft wash, loose", "use_case": "插画本"}
+      ]
+    },
+    {
+      "id": "3d_render",
+      "name_zh": "3D 渲染",
+      "emoji": "🧱",
+      "styles": [
+        {"zh": "皮克斯风", "en": "Pixar style", "prompt_hint": "Pixar style, 3D animation, subsurface", "use_case": "卡通 IP"},
+        {"zh": "盲盒手办", "en": "Blind box figurine", "prompt_hint": "POP MART blind box, vinyl figure, 3D", "use_case": "潮玩 / IP 周边"},
+        {"zh": "3D 收藏摆件", "en": "Collectible figurine", "prompt_hint": "3D collectible figurine, blister pack", "use_case": "商品包装感"},
+        {"zh": "黏土风", "en": "Clay / Claymation", "prompt_hint": "claymation, plasticine, stop motion", "use_case": "萌系头像 / 贴纸"},
+        {"zh": "低多边形", "en": "Low poly", "prompt_hint": "low poly, flat shading, geometric", "use_case": "游戏 / UI 插画"},
+        {"zh": "等距 2.5D", "en": "Isometric 3D", "prompt_hint": "isometric 3D, C4D, clean render", "use_case": "产品页 / 数据图"},
+        {"zh": "C4D 质感", "en": "C4D / Octane", "prompt_hint": "C4D render, octane, studio lighting", "use_case": "电商 / 活动主图"},
+        {"zh": "Blender 写实", "en": "Blender render", "prompt_hint": "blender render, cycles, hyperreal", "use_case": "产品可视化"},
+        {"zh": "吹气充气", "en": "Inflatable 3D", "prompt_hint": "inflatable 3D, puffy, glossy", "use_case": "潮流海报"},
+        {"zh": "迪士尼 3D", "en": "Disney 3D", "prompt_hint": "Disney 3D, Frozen style, cute character", "use_case": "儿童 IP"},
+        {"zh": "机甲硬面", "en": "Mecha render", "prompt_hint": "mecha 3D render, hard surface", "use_case": "科幻角色"}
+      ]
+    },
+    {
+      "id": "photography",
+      "name_zh": "写实摄影",
+      "emoji": "📷",
+      "styles": [
+        {"zh": "电影感人像", "en": "Cinematic portrait", "prompt_hint": "cinematic portrait, 85mm, shallow dof", "use_case": "人像大片"},
+        {"zh": "35mm 胶片", "en": "35mm film", "prompt_hint": "35mm film photo, Kodak Portra, grain", "use_case": "生活纪实"},
+        {"zh": "宝丽来", "en": "Polaroid", "prompt_hint": "polaroid photo, vintage, light leak", "use_case": "怀旧拍立得"},
+        {"zh": "街拍", "en": "Street photography", "prompt_hint": "street photography, candid, Leica", "use_case": "都市纪实"},
+        {"zh": "风光大片", "en": "Landscape", "prompt_hint": "landscape photography, wide angle, golden hour", "use_case": "旅行 / 壁纸"},
+        {"zh": "商业产品图", "en": "Product photography", "prompt_hint": "product photography, studio lighting, white bg", "use_case": "电商主图"},
+        {"zh": "美食特写", "en": "Food photography", "prompt_hint": "food photography, overhead, appetizing", "use_case": "餐饮菜单"},
+        {"zh": "时装大片", "en": "Editorial fashion", "prompt_hint": "Vogue editorial, fashion shoot", "use_case": "品牌大片"},
+        {"zh": "微距", "en": "Macro", "prompt_hint": "macro photography, extreme close up", "use_case": "自然细节"},
+        {"zh": "黑白纪实", "en": "B&W documentary", "prompt_hint": "black and white documentary, high contrast", "use_case": "人文 / 新闻"},
+        {"zh": "HDR 超清", "en": "HDR ultra-sharp", "prompt_hint": "HDR photography, ultra detailed", "use_case": "地产 / 建筑"},
+        {"zh": "老电影胶片", "en": "Vintage film still", "prompt_hint": "vintage film still, 1970s, Technicolor", "use_case": "复古海报"}
+      ]
+    },
+    {
+      "id": "digital_art",
+      "name_zh": "数字艺术 / 亚文化",
+      "emoji": "💾",
+      "styles": [
+        {"zh": "赛博朋克", "en": "Cyberpunk", "prompt_hint": "cyberpunk, neon, rain, Blade Runner", "use_case": "科幻海报"},
+        {"zh": "蒸汽波", "en": "Vaporwave", "prompt_hint": "vaporwave, pink purple, 80s aesthetic", "use_case": "潮流封面"},
+        {"zh": "合成波", "en": "Synthwave", "prompt_hint": "synthwave, retro grid, sunset", "use_case": "电音封面"},
+        {"zh": "故障艺术", "en": "Glitch art", "prompt_hint": "glitch art, RGB shift, datamosh", "use_case": "亚文化视觉"},
+        {"zh": "像素艺术", "en": "Pixel art", "prompt_hint": "pixel art, 8bit, retro game", "use_case": "游戏 / 表情"},
+        {"zh": "ASCII", "en": "ASCII art", "prompt_hint": "ASCII art, monospace, text art", "use_case": "极客 / 代码感"},
+        {"zh": "Y2K 千禧", "en": "Y2K aesthetic", "prompt_hint": "Y2K aesthetic, chrome, bubble", "use_case": "潮流封面"},
+        {"zh": "暗黑未来", "en": "Dark futurism", "prompt_hint": "dark sci-fi, dystopia, moody", "use_case": "科幻封面"},
+        {"zh": "新怪诞", "en": "Weirdcore", "prompt_hint": "weirdcore, liminal space, surreal", "use_case": "亚文化贴图"},
+        {"zh": "梦核", "en": "Dreamcore", "prompt_hint": "dreamcore, nostalgic, hazy", "use_case": "氛围壁纸"}
+      ]
+    },
+    {
+      "id": "oriental",
+      "name_zh": "国风东方",
+      "emoji": "🏮",
+      "styles": [
+        {"zh": "水墨写意", "en": "Chinese ink wash", "prompt_hint": "chinese ink wash, sumi-e, minimal", "use_case": "茶品 / 文旅"},
+        {"zh": "工笔重彩", "en": "Gongbi painting", "prompt_hint": "gongbi painting, fine brush, detailed", "use_case": "古典人物"},
+        {"zh": "青绿山水", "en": "Blue-green landscape", "prompt_hint": "blue and green landscape, Song dynasty", "use_case": "古风海报"},
+        {"zh": "敦煌飞天", "en": "Dunhuang mural", "prompt_hint": "Dunhuang mural, flying apsara, gold", "use_case": "文化 IP"},
+        {"zh": "汉服写真", "en": "Hanfu portrait", "prompt_hint": "hanfu portrait, traditional chinese dress", "use_case": "国风人像"},
+        {"zh": "新中式插画", "en": "Modern oriental illust", "prompt_hint": "modern chinese illustration, minimal oriental", "use_case": "国货品牌"},
+        {"zh": "国潮海报", "en": "Guochao poster", "prompt_hint": "guochao poster, chinese retro, bold", "use_case": "节日营销"},
+        {"zh": "年画风", "en": "Nianhua folk print", "prompt_hint": "chinese nianhua, folk print", "use_case": "春节营销"},
+        {"zh": "剪纸窗花", "en": "Paper cut", "prompt_hint": "chinese paper cut, red, symmetrical", "use_case": "春节 / 喜庆"},
+        {"zh": "日式和风", "en": "Japanese wa style", "prompt_hint": "japanese wa style, cherry blossom, zen", "use_case": "日料 / 禅意"}
+      ]
+    },
+    {
+      "id": "cute_kawaii",
+      "name_zh": "可爱萌系",
+      "emoji": "🧸",
+      "styles": [
+        {"zh": "三丽鸥风", "en": "Sanrio style", "prompt_hint": "Sanrio style, Hello Kitty, pastel", "use_case": "少女头像"},
+        {"zh": "LINE FRIENDS", "en": "LINE Friends style", "prompt_hint": "LINE Friends mascot, cute IP", "use_case": "品牌 IP"},
+        {"zh": "Q 版头像", "en": "Kawaii avatar", "prompt_hint": "kawaii chibi avatar, big head", "use_case": "微信头像"},
+        {"zh": "毛绒玩偶", "en": "Plush toy", "prompt_hint": "plush toy, fluffy, soft fabric", "use_case": "礼品 / 周边"},
+        {"zh": "迪士尼公主", "en": "Disney princess", "prompt_hint": "Disney princess, dreamy, sparkle", "use_case": "女童向"},
+        {"zh": "软糖果色", "en": "Pastel candy", "prompt_hint": "pastel colors, candy, soft gradient", "use_case": "少女品牌"},
+        {"zh": "丑萌怪物", "en": "Ugly cute monster", "prompt_hint": "ugly cute monster, derp face", "use_case": "潮玩 / 贴纸"},
+        {"zh": "熊猫柴柴", "en": "Panda / Shiba IP", "prompt_hint": "cute panda IP character, shiba inu", "use_case": "社交贴纸"}
+      ]
+    },
+    {
+      "id": "meme_funny",
+      "name_zh": "搞笑梗图",
+      "emoji": "🤪",
+      "styles": [
+        {"zh": "表情包风", "en": "Meme sticker", "prompt_hint": "meme sticker, exaggerated expression", "use_case": "聊天表情"},
+        {"zh": "cursed 诡图", "en": "Cursed image", "prompt_hint": "cursed image, weird low quality", "use_case": "玩梗 / 社群"},
+        {"zh": "doodle 涂鸦", "en": "Scribble doodle", "prompt_hint": "scribble doodle, paint stick figure", "use_case": "弱智梗图"},
+        {"zh": "3D 丑萌", "en": "Ugly 3D meme", "prompt_hint": "ugly 3D render, derpy character", "use_case": "社交传播"},
+        {"zh": "古董广告", "en": "Retro ad parody", "prompt_hint": "1950s retro ad, kitsch", "use_case": "复古恶搞"},
+        {"zh": "恶搞历史画", "en": "Classical meme", "prompt_hint": "classical painting meme, Renaissance", "use_case": "知识梗"},
+        {"zh": "蜡笔手绘", "en": "Crayon kid drawing", "prompt_hint": "crayon drawing, kid style, childish", "use_case": "自嘲 / 童趣"},
+        {"zh": "炸裂滤镜", "en": "Deep-fried meme", "prompt_hint": "deep fried meme, oversaturated, jpeg", "use_case": "传播向"}
+      ]
+    },
+    {
+      "id": "commercial",
+      "name_zh": "商业营销",
+      "emoji": "📣",
+      "styles": [
+        {"zh": "电商主图", "en": "E-commerce hero", "prompt_hint": "e-commerce product, white bg, studio light", "use_case": "淘宝 / 天猫"},
+        {"zh": "小红书封面", "en": "Xiaohongshu cover", "prompt_hint": "xiaohongshu cover, bold title, lifestyle", "use_case": "种草笔记"},
+        {"zh": "公众号头图", "en": "WeChat article banner", "prompt_hint": "wechat banner, editorial style", "use_case": "文章配图"},
+        {"zh": "海报文字设计", "en": "Typography poster", "prompt_hint": "bold typography poster, layout design", "use_case": "活动海报"},
+        {"zh": "节日促销", "en": "Holiday sale", "prompt_hint": "holiday sale poster, festive, bold", "use_case": "双十一 / 节日"},
+        {"zh": "朋友圈九宫格", "en": "Instagram grid", "prompt_hint": "instagram grid, cohesive lifestyle", "use_case": "社交人设"},
+        {"zh": "信息图", "en": "Infographic", "prompt_hint": "infographic, data visualization, icons", "use_case": "科普 / 数据"},
+        {"zh": "品牌视觉", "en": "Brand key visual", "prompt_hint": "brand key visual, clean, hero shot", "use_case": "品牌发布"},
+        {"zh": "杂志封面", "en": "Magazine cover", "prompt_hint": "magazine cover, Vogue layout", "use_case": "时尚封面"},
+        {"zh": "UI 插画", "en": "UI illustration", "prompt_hint": "UI empty state illustration, flat", "use_case": "app 空状态"}
+      ]
+    },
+    {
+      "id": "materials",
+      "name_zh": "特殊材质",
+      "emoji": "💎",
+      "styles": [
+        {"zh": "玻璃质感", "en": "Glass material", "prompt_hint": "glass material, refraction, frosted", "use_case": "产品 / 质感图"},
+        {"zh": "液态金属", "en": "Liquid metal", "prompt_hint": "liquid metal, chrome, mercury", "use_case": "科技感"},
+        {"zh": "霓虹灯", "en": "Neon sign", "prompt_hint": "neon sign, glowing tube, dark bg", "use_case": "店招 / 氛围"},
+        {"zh": "刺绣补丁", "en": "Embroidery patch", "prompt_hint": "embroidery patch, thread texture", "use_case": "潮牌 / 贴章"},
+        {"zh": "毛绒材质", "en": "Fluffy fur", "prompt_hint": "fluffy fur texture, soft plush", "use_case": "萌系产品"},
+        {"zh": "乐高积木", "en": "LEGO blocks", "prompt_hint": "LEGO style, brick figure", "use_case": "童趣 / 活动"},
+        {"zh": "折纸", "en": "Origami", "prompt_hint": "origami, paper folding, geometric", "use_case": "简约品牌"},
+        {"zh": "剪纸拼贴", "en": "Paper collage", "prompt_hint": "paper cut collage, layered", "use_case": "绘本 / 文艺"},
+        {"zh": "3D 针织", "en": "Knitted yarn", "prompt_hint": "knitted yarn, woolen texture", "use_case": "温暖产品"},
+        {"zh": "冰雕水晶", "en": "Ice crystal", "prompt_hint": "ice sculpture, crystal, frozen", "use_case": "冬季主题"},
+        {"zh": "水墨渲染", "en": "Ink smoke", "prompt_hint": "ink smoke, fluid diffusion", "use_case": "艺术海报"}
+      ]
+    },
+    {
+      "id": "mood",
+      "name_zh": "氛围情绪",
+      "emoji": "🌙",
+      "styles": [
+        {"zh": "Lo-fi 氛围", "en": "Lo-fi aesthetic", "prompt_hint": "lo-fi aesthetic, study vibes, cozy", "use_case": "音乐封面"},
+        {"zh": "治愈系", "en": "Healing cozy", "prompt_hint": "healing cozy, warm light, calm", "use_case": "心理 / 日常"},
+        {"zh": "致郁系", "en": "Melancholic", "prompt_hint": "melancholic, muted, lonely atmosphere", "use_case": "情感表达"},
+        {"zh": "暗黑哥特", "en": "Dark gothic", "prompt_hint": "dark gothic, baroque, dramatic", "use_case": "暗黑海报"},
+        {"zh": "复古怀旧", "en": "Retro nostalgia", "prompt_hint": "retro nostalgia, 70s faded", "use_case": "怀旧营销"},
+        {"zh": "梦幻仙境", "en": "Ethereal dreamy", "prompt_hint": "ethereal dreamy, mist, godrays", "use_case": "梦幻场景"},
+        {"zh": "极简冷淡", "en": "Minimal cold", "prompt_hint": "minimal cold tone, negative space", "use_case": "高端品牌"},
+        {"zh": "丧文化", "en": "Grunge mood", "prompt_hint": "grunge, distressed, moody", "use_case": "亚文化"},
+        {"zh": "清晨雾感", "en": "Misty morning", "prompt_hint": "misty morning, soft fog, golden", "use_case": "文旅 / 禅意"},
+        {"zh": "夏日胶片", "en": "Summer film", "prompt_hint": "summer film, Fuji, vibrant pastel", "use_case": "青春回忆"}
+      ]
+    },
+    {
+      "id": "industry",
+      "name_zh": "行业专用",
+      "emoji": "🏗️",
+      "styles": [
+        {"zh": "建筑可视化", "en": "Archviz render", "prompt_hint": "archviz, Lumion, architectural render", "use_case": "地产 / 方案"},
+        {"zh": "室内设计", "en": "Interior design", "prompt_hint": "interior design render, modern, cozy", "use_case": "家装方案"},
+        {"zh": "工业产品渲染", "en": "Industrial design", "prompt_hint": "industrial design, Keyshot render", "use_case": "产品提案"},
+        {"zh": "游戏原画", "en": "Game concept art", "prompt_hint": "game concept art, AAA quality", "use_case": "游戏立项"},
+        {"zh": "角色设定图", "en": "Character sheet", "prompt_hint": "character turnaround sheet, T-pose", "use_case": "动画开发"},
+        {"zh": "分镜故事板", "en": "Storyboard", "prompt_hint": "storyboard, rough sketch panel", "use_case": "影视 / 广告"},
+        {"zh": "医学插画", "en": "Medical illustration", "prompt_hint": "medical illustration, anatomical", "use_case": "科普 / 教材"},
+        {"zh": "科学图解", "en": "Scientific diagram", "prompt_hint": "scientific diagram, cross section", "use_case": "教育"},
+        {"zh": "机械图纸", "en": "Blueprint", "prompt_hint": "blueprint, technical drawing", "use_case": "工业 / 科技感"},
+        {"zh": "时装效果图", "en": "Fashion sketch", "prompt_hint": "fashion sketch, runway illustration", "use_case": "服装设计"},
+        {"zh": "地图插画", "en": "Illustrated map", "prompt_hint": "illustrated map, isometric city", "use_case": "文旅 / 导览"}
+      ]
+    }
+  ]
+};
+
+/* ===== Render ===== */
+const nav = document.getElementById('nav');
+const cats = document.getElementById('cats');
+let total = 0;
+
+DATA.categories.forEach((cat, idx) => {
+  total += cat.styles.length;
+
+  // Nav
+  const link = document.createElement('a');
+  link.href = '#' + cat.id;
+  link.className = 'nav-item' + (idx === 0 ? ' active' : '');
+  link.dataset.target = cat.id;
+  link.innerHTML = `<span class="emoji">${cat.emoji}</span><span>${cat.name_zh}</span><span class="count">${cat.styles.length}</span>`;
+  nav.appendChild(link);
+
+  // Section
+  const sec = document.createElement('section');
+  sec.className = 'cat';
+  sec.id = cat.id;
+  sec.innerHTML = `
+    <div class="cat-head">
+      <span class="cat-emoji">${cat.emoji}</span>
+      <h2>${cat.name_zh}</h2>
+      <span class="cat-count">${cat.styles.length} 种</span>
+    </div>
+    <div class="grid"></div>
+  `;
+  const grid = sec.querySelector('.grid');
+  cat.styles.forEach(s => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.dataset.prompt = s.prompt_hint;
+    card.title = '点击复制 prompt';
+    card.innerHTML = `
+      <div class="swatch sw-${cat.id}">${cat.emoji}</div>
+      <div class="card-body">
+        <div class="card-title">${s.zh}</div>
+        <div class="card-en">${s.en}</div>
+        <div class="card-prompt">${s.prompt_hint}</div>
+        <div class="card-use">${s.use_case}</div>
+      </div>
+    `;
+    card.addEventListener('click', () => {
+      navigator.clipboard.writeText(s.prompt_hint).then(() => {
+        const orig = card.style.borderColor;
+        card.style.borderColor = 'var(--green)';
+        card.style.boxShadow = '0 0 0 2px var(--green), 0 12px 36px rgba(52,211,153,0.3)';
+        setTimeout(() => { card.style.borderColor = orig; card.style.boxShadow = ''; }, 800);
+      });
+    });
+    grid.appendChild(card);
+  });
+  cats.appendChild(sec);
+});
+
+document.getElementById('total-count').textContent = total;
+
+/* Nav scroll spy */
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+      const link = document.querySelector(`.nav-item[data-target="${e.target.id}"]`);
+      if (link) link.classList.add('active');
+    }
+  });
+}, { rootMargin: '-30% 0px -60% 0px' });
+document.querySelectorAll('.cat').forEach(c => observer.observe(c));
+
+/* Smooth scroll */
+nav.addEventListener('click', (e) => {
+  const link = e.target.closest('.nav-item');
+  if (!link) return;
+  e.preventDefault();
+  const t = document.getElementById(link.dataset.target);
+  if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+</script>
+</body>
+</html>
