@@ -1921,13 +1921,13 @@
           "difficulty": 4,
           "business_value": "mid",
           "viral_potential": "mid",
-          "status": "todo",
-          "type": null,
-          "total_shots": null,
-          "owner_session": null,
-          "claimed_at": null,
+          "status": "claimed",
+          "type": "single",
+          "total_shots": 1,
+          "owner_session": "codex-20260422T234530Z",
+          "claimed_at": "2026-04-22T23:45:30Z",
           "done_at": null,
-          "output_dir": null,
+          "output_dir": "assets/C/C-22-forensic-scene-reconstruction/",
           "metadata_path": null
         }
       ]
