@@ -1,136 +1,96 @@
 # GPT Image 2 Hub
 
-AI 生图风格原子库 + 一键 CLI(调 apimart.ai / gpt-image-2)。
+GPT Image 2 Hub 是一个面向创作者的 AI 生图灵感图鉴: 浏览风格样张, 一键复刻成自己的主题, 并把收藏与生成作品留在本地。
 
----
+```
+┌──────────────────────────────────────────────────────────────┐
+│ GPT Image 2 Hub                                               │
+│ Style Atlas · Remix Gallery · Personal Image Lab              │
+│ 130+ styles / APIMART + gpt-image-2 / Rust + static frontend  │
+└──────────────────────────────────────────────────────────────┘
+```
 
-## 快速开始
+## 5 大能力
 
-> ⚠️ **所有命令必须在项目根目录运行** · 即 `cd /path/to/prompt-atlas` 之后再跑(CLI 会从当前目录读 `.env`)。
+- 瀑布流: 首页按推荐、人像、海报、漫画、环境、国风、复古、赛博等频道展示风格卡片。
+- 一键复刻: 打开卡片后输入主题, 复用当前图片的风格原子生成新图。
+- 推荐: 基于浏览、点击和收藏信号在本地调整排序, 不需要登录。
+- 收藏: 喜欢的风格可一键收藏, 支持本地保留与导出 JSON。
+- 我的作品: 生成过的图片进入个人作品流, 方便回看、下载和继续复刻。
+
+## 一图速览
+
+```
+Browser
+  |
+  |  open /
+  v
+frontend/index.html --------------+
+  |                                |
+  | GET /api/images                | localStorage
+  v                                | favorites / clicks / generations
+Rust Axum server                   |
+  |                                |
+  | reads data/images.json         |
+  v                                |
+Gallery cards <-------------------+
+  |
+  | POST /api/remix
+  v
+APIMART gpt-image-2 task
+  |
+  | GET /api/remix/:task_id
+  v
+Generated image URL
+```
+
+## 本地运行 3 步
 
 ```bash
-# 1. 配 key
+# 1. 配置生成服务 key
 cp .env.example .env
-# 编辑 .env 填你的 APIMART_KEY(从 https://apimart.ai/keys 拿)
+# 编辑 .env, 填入 APIMART_KEY
 
-# 2. 生一张图(自动下载到 ./assets/generated/)
-npm run gen -- "一只橘猫看夕阳 水彩画" --size 16:9
-#            ^^
-#            两个横线必须写 · 告诉 npm "后面是传给脚本的参数"
-#            不想写 -- ? 直接用 node 调更干脆:
-#   node api/generate.js "一只橘猫看夕阳 水彩画" --size 16:9
+# 2. 启动本地服务
+cargo run
 
-# 3. 批量
-npm run batch -- prompts.json
-
-# 4. 一键自测
-npm test
+# 3. 打开图库
+open http://127.0.0.1:3000
+curl http://127.0.0.1:3000/api/health
 ```
 
----
+如果只使用 Node CLI 生成图片, 继续查看 [api/README.md](api/README.md)。
 
-## 目录
+## 部署到 Vercel
 
-```
-prompt-atlas/
-├── api/                       # apimart 图像生成 CLI + 封装
-│   ├── apimart.js             #   核心函数库(submit + poll + download + generate)
-│   ├── generate.js            #   CLI 入口 · node api/generate.js "prompt"
-│   ├── batch.js               #   批量 CLI · node api/batch.js prompts.json
-│   └── README.md              #   接口完整使用指南(必读)
-├── assets/
-│   ├── generated/             # CLI 自动下载产物(.gitignore)
-│   └── samples/               # 范例图
-├── content/                   # prompt 原子库内容模板
-├── planning/                  # 视觉规范 / 风格研究
-├── spec/                      # spec / devlog
-├── .env                       # API key(已 .gitignore · 不提交)
-├── .env.example               # 环境变量模板
-├── package.json               # 零依赖 · Node 18+
-└── image-styles-atlas.html    # 130+ 种图像风格图鉴(可视化)
-```
+仓库根目录提供了 `vercel.json`, 默认按纯静态前端发布 `frontend/`, 适合先完成 Vercel Import 和公开预览。
 
----
-
-## 全链路示意
-
-```
-你的 prompt
-    ↓
-[submit] POST /v1/images/generations    ← 1.3 秒
-    ↓ task_id
-[poll]   GET /v1/tasks/{task_id}         ← 30-60 秒(内置 12s 首延 + 4s 间隔)
-    ↓ status=completed · 拿 URL
-[download] fetch(URL) → 写本地           ← 1-3 秒 · 图 24h 过期
-    ↓
-./assets/generated/<name>.png            ✅ 本地可用
-```
-
----
-
-## 详细 API 使用 → `api/README.md`
-
-里面有:
-- 13 种 size 比例对照表
-- CLI 完整参数
-- 代码里调用(generate / submit / pollUntilDone / downloadImage)
-- 错误码对照
-- 轮询策略调优
-- 图生图 / 批量 / 自定义输出目录
-
----
+完整的线上生成能力需要把 Rust 后端改成 Vercel Rust serverless 目录结构, 或把后端部署到 Railway/Fly.io/VPS 后在前端接入独立 API 域名。步骤见 [docs/deploy.md](docs/deploy.md)。
 
 ## 技术栈
 
-**零依赖 Node.js 18+**(自带 fetch · 自带 ESM)· 无 npm install 需求 · clone 完配好 key 直接跑。
+- 前端: 原生 HTML/CSS/JavaScript, Web Components, localStorage。
+- 后端: Rust 2021, Axum, Tokio, tower-http。
+- 数据: `data/images.json` 驱动图库卡片, `content/examples/*.md` 作为内容源。
+- 生成: APIMART `gpt-image-2`, submit + poll 任务流。
+- CLI: Node.js 18+ ESM 脚本, 用于批量生成、下载和余额查询。
+- 部署: Vercel 静态前端优先; Rust serverless / 独立后端作为生产 API 方案。
 
----
+## 10 版演进
 
-## 本地 Rust 后端(v0.1+)
+| 版本 | 主题 | 结果 |
+| --- | --- | --- |
+| v0.1 | Rust 静态服务骨架 | Axum 服务 `frontend/` 与 `/api/health` |
+| v0.2 | 数据层 | `data/images.json` 驱动首页图卡 |
+| v0.3 | 瀑布流体验 | 多频道、筛选和响应式图库 |
+| v0.4 | 风格原子 | 从内容源抽取 prompt、标签和视觉属性 |
+| v0.5 | 详情弹窗 | 卡片详情、prompt 展示和操作入口 |
+| v0.6 | 收藏 | localStorage 收藏、收藏页和导出 |
+| v0.7 | 推荐 | 点击、收藏和浏览信号参与排序 |
+| v0.8 | 一键复刻 | `/api/remix` 调 APIMART 创建生成任务 |
+| v0.9 | 我的作品 | 生成结果进入本地作品流并可下载 |
+| v1.0 | 部署准备 | README、Vercel 配置和部署/架构文档齐备 |
 
-```bash
-# 一次性: 装 Rust(已装跳过)
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+## License
 
-# 跑 dev server
-cargo run
-
-# 另一窗口验证
-curl http://localhost:3000/api/health
-# → {"status":"ok","version":"v0.1"}
-
-open http://localhost:3000
-# → gallery 页加载
-
-open http://localhost:3000/image-styles-atlas.html
-# → 130+ 风格图鉴
-```
-
-架构:
-- `src/main.rs` · axum 静态服务 + /api/health
-- `frontend/` · 所有前端 HTML(v0.1 直接 serve gallery.html + image-styles-atlas.html)
-- `api/*.js` · apimart 图像生成 CLI(独立 Node 工具链 · 与 Rust 后端无耦合)
-
----
-
-## v0.2 数据层
-
-v0.2 起，首页图卡由 `data/images.json` 驱动:
-
-```bash
-node tools/build-images-json.js
-cargo run
-curl http://localhost:3000/api/images | jq '.images | length'
-open http://localhost:3000
-```
-
-数据来源:
-- `content/examples/*.md` 是只读内容源
-- `tools/build-images-json.js` 扫描示例 Markdown，抽取 frontmatter / 标题 / 标签 / Prompt code block
-- `data/images.json` 是前端和后端共同消费的数据产物
-
-后端路由:
-- `GET /api/images` 直接返回 `data/images.json`
-- `GET /assets/*path` 服务仓库根目录 `assets/`
-
-新增图片时只需要新增或更新 JSON 条目；前端瀑布流会通过 `/api/images` 自动渲染。
+TBD. 建议发布前明确为 MIT 或项目所有者指定的许可证。
