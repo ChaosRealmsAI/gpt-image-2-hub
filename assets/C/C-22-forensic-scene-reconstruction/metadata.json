@@ -1,0 +1,33 @@
+{
+  "id": "C-22",
+  "tier": "C",
+  "title": "Forensic Crime Scene Reconstruction Diagram · 法医犯罪现场重建图",
+  "type": "single",
+  "total_shots": 1,
+  "created_at": "2026-04-22T23:48:31Z",
+  "done_at": "2026-04-22T23:48:31Z",
+  "tags": [
+    "forensic",
+    "crime scene",
+    "evidence map",
+    "technical diagram",
+    "courtroom visual"
+  ],
+  "source_todo_ref": "atlas-todo.json#C-22",
+  "shots": [
+    {
+      "prompt": "# C-22 · Forensic Crime Scene Reconstruction Diagram\n\nScene:\nA rigorous forensic crime scene reconstruction board, designed like a CSI evidence archive sheet rather than an artwork. The image is a clean overhead plan view of a small apartment living room after investigators have cleared the scene. Use a technical documentation style: neutral grey floor plan, precise object outlines, evidence markers, measurement scales, trajectory lines, and inset reference photos.\n\nSubject:\nThe main panel is a top-down orthographic room diagram. It shows a sofa, coffee table, overturned chair, doorway, rug, side lamp, and scattered non-graphic evidence items. In the center-left of the room is a white chalk-style body outline only, no actual body and no gore. Red numbered evidence markers \"1\", \"2\", \"3\", \"4\", \"5\", \"6\" point to items such as a broken glass, shoe print, dropped key, phone, fabric fiber, and a small impact mark. Add thin yellow trajectory analysis lines and a black-and-white measurement ruler along two walls.\n\nImportant details:\nUse professional forensic visual language: red evidence tabs, black measurement annotations, white outline marks, grey blueprint grid, thin technical lines, and small monochrome inset photos at the right edge. Include readable labels only for forensic notation: \"FIG. 1\", \"EVIDENCE MAP\", \"N\", \"1\", \"2\", \"3\", \"4\", \"5\", \"6\", and scale ticks. The design should feel court-admissible, precise, dry, and documentary. Keep everything non-sensational.\n\nUse case:\nForensic science education, law / courtroom visual aid, true-crime documentary explainer, evidence distribution map, investigative training material.\n\nConstraints:\nSingle image only. Aspect ratio 4:3 landscape. No blood, no gore, no corpse, no wounds, no weapons in hand, no active violence, no people. Show only the white body outline and neutral evidence objects. Avoid cinematic lighting, horror mood, dramatic shadows, or artistic illustration. No police logos, no real agency badges, no case numbers that resemble real records, no watermark.",
+      "name": "main",
+      "size": "4:3",
+      "refs_used": [],
+      "task_id": "task_01KPVSD30057V0346X6V1VP5GB",
+      "url": "https://upload.apimart.ai/f/image/9998223098368253-d778855b-19d0-4743-9968-1609eb4ba8a6-gpt_image_2_backup_task_01KPVSEBR11F66QSHEFQ3VAWVW_0.png",
+      "expires_at": 1776988032,
+      "local_filename": "main.png",
+      "local_path": "/Users/Zhuanz/workspace/prompt-atlas/assets/C/C-22-forensic-scene-reconstruction/main.png",
+      "size_bytes": 1677644,
+      "actual_time_sec": 42,
+      "status": "done"
+    }
+  ]
+}
