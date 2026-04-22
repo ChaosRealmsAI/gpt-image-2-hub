@@ -83,3 +83,30 @@ prompt-atlas/
 ## 技术栈
 
 **零依赖 Node.js 18+**(自带 fetch · 自带 ESM)· 无 npm install 需求 · clone 完配好 key 直接跑。
+
+---
+
+## 本地 Rust 后端(v0.1+)
+
+```bash
+# 一次性: 装 Rust(已装跳过)
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+# 跑 dev server
+cargo run
+
+# 另一窗口验证
+curl http://localhost:3000/api/health
+# → {"status":"ok","version":"v0.1"}
+
+open http://localhost:3000
+# → gallery 页加载
+
+open http://localhost:3000/image-styles-atlas.html
+# → 130+ 风格图鉴
+```
+
+架构:
+- `src/main.rs` · axum 静态服务 + /api/health
+- `frontend/` · 所有前端 HTML(v0.1 直接 serve gallery.html + image-styles-atlas.html)
+- `api/*.js` · apimart 图像生成 CLI(独立 Node 工具链 · 与 Rust 后端无耦合)
