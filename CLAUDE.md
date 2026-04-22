@@ -65,11 +65,18 @@ pkill -f "target/debug/prompt-atlas"                                  # kill ser
 
 # HTTP 端点验证
 curl -sS http://127.0.0.1:3000/api/health                             # → {"status":"ok","version":"v0.1"}
-curl -sS http://127.0.0.1:3000/ | grep -c "GPT Image 2 Hub"              # 首页 · 预期 > 0
+curl -sS http://127.0.0.1:3000/ | grep -c "GPT Image 2 Hub"           # 首页 · 含品牌名 · 预期 > 0
+curl -sS http://127.0.0.1:3000/api/images | jq '.images | length'     # 图鉴条数 · 预期 ≥ 7 (v0.2+)
+curl -sS http://127.0.0.1:3000/api/images | jq '.images[0] | keys'    # 首条字段清单 (v0.2+)
+curl -sS http://127.0.0.1:3000/ | grep -c "fetch"                     # 首页 · 预期 ≥ 1 (v0.2+ fetch 驱动)
 curl -sS -o /dev/null -w '%{http_code}\n' http://127.0.0.1:3000/image-styles-atlas.html  # → 200
-curl -sS -o /dev/null -w 'status=%{http_code} size=%{size_download}\n' http://127.0.0.1:3000/  # 首页元信息
+curl -sS -o /dev/null -w '%{http_code}\n' http://127.0.0.1:3000/assets/samples/cat-sunset-watercolor.png  # → 200 (v0.2+ /assets 路由)
+curl -sS -o /dev/null -w 'status=%{http_code} size=%{size_download}\n' http://127.0.0.1:3000/
 
-# 图像生成(独立 Node 工具)
+# 数据抽取(一次性 · 改 content/examples/*.md 后重跑)
+node tools/build-images-json.js                                       # 扫 content/examples/ → 产 data/images.json
+
+# 图像生成(独立 Node 工具 · 与 Rust 后端解耦)
 node api/generate.js "prompt..." --size 16:9                          # 出图到 ./assets/generated/
 node api/batch.js prompts.json                                        # 批量
 node api/balance.js                                                   # 查余额

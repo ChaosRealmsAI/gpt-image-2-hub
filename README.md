@@ -110,3 +110,27 @@ open http://localhost:3000/image-styles-atlas.html
 - `src/main.rs` · axum 静态服务 + /api/health
 - `frontend/` · 所有前端 HTML(v0.1 直接 serve gallery.html + image-styles-atlas.html)
 - `api/*.js` · apimart 图像生成 CLI(独立 Node 工具链 · 与 Rust 后端无耦合)
+
+---
+
+## v0.2 数据层
+
+v0.2 起，首页图卡由 `data/images.json` 驱动:
+
+```bash
+node tools/build-images-json.js
+cargo run
+curl http://localhost:3000/api/images | jq '.images | length'
+open http://localhost:3000
+```
+
+数据来源:
+- `content/examples/*.md` 是只读内容源
+- `tools/build-images-json.js` 扫描示例 Markdown，抽取 frontmatter / 标题 / 标签 / Prompt code block
+- `data/images.json` 是前端和后端共同消费的数据产物
+
+后端路由:
+- `GET /api/images` 直接返回 `data/images.json`
+- `GET /assets/*path` 服务仓库根目录 `assets/`
+
+新增图片时只需要新增或更新 JSON 条目；前端瀑布流会通过 `/api/images` 自动渲染。
