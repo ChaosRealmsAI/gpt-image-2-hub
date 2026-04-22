@@ -705,14 +705,14 @@
           "difficulty": 3,
           "business_value": "high",
           "viral_potential": "mid",
-          "status": "claimed",
+          "status": "done",
           "type": "single",
           "total_shots": 1,
           "owner_session": "codex-20260422T232859Z",
           "claimed_at": "2026-04-22T23:28:59Z",
-          "done_at": null,
+          "done_at": "2026-04-22T23:31:47Z",
           "output_dir": "assets/A/A-19-modern-ink-minimal-poster/",
-          "metadata_path": null
+          "metadata_path": "assets/A/A-19-modern-ink-minimal-poster/metadata.json"
         },
         {
           "id": "A-20",
