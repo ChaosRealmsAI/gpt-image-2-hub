@@ -1,0 +1,17 @@
+{
+  "name": "prompt-atlas",
+  "version": "0.1.0",
+  "description": "Prompt Atlas · AI 生图原子库 + apimart client",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "gen": "node api/generate.js",
+    "batch": "node api/batch.js",
+    "redownload": "node api/redownload.js",
+    "balance": "node api/balance.js",
+    "test": "node api/generate.js \"一只橘猫坐在窗台上看夕阳 水彩画风格\" --size 16:9"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

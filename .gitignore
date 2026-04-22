@@ -1,0 +1,18 @@
+.env
+.env.local
+node_modules/
+assets/generated/
+assets/atom-tests/
+assets/method-test/
+assets/moderation-probe/
+assets/skill-test/
+assets/sonnet-blind-test/
+output/
+.DS_Store
+*.log
+target/
+.worktrees/
+
+# 🔴 spec 独立仓(按 commit-format rule 铁律)· 主代码仓不跟踪
+spec/
+

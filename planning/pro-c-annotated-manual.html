@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Fig. 01 — The Prompt Atlas Poster / Annotated Manual</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@200;400;700&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fafaf9; --ink:#0a0a0a; --hair:#d0d0d0; --mute:#6a6a6a;
+    --alert:#ff5b00; --data:#0052ff;
+    --g:4px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--bg);color:var(--ink);font-family:'Geist',sans-serif;font-weight:400;-webkit-font-smoothing:antialiased}
+  body{min-height:100vh;padding:28px 40px 72px;font-size:13px;line-height:1.45}
+  .mono{font-family:'Geist Mono',monospace}
+  .data{color:var(--data);font-family:'Geist Mono',monospace}
+  .alert{color:var(--alert)}
+
+  /* ========= MASTHEAD ========= */
+  .masthead{
+    border-top:1px solid var(--ink);
+    border-bottom:0.5px solid var(--hair);
+    padding:10px 0 12px;
+    display:grid;
+    grid-template-columns: 1.4fr repeat(5, 1fr);
+    gap:16px;
+    align-items:end;
+  }
+  .masthead .brand{font-weight:700;letter-spacing:-0.01em;font-size:14px}
+  .masthead .brand em{font-style:normal;color:var(--mute);font-weight:200}
+  .meta-cell{display:flex;flex-direction:column;gap:2px}
+  .meta-cell .k{font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--mute);font-family:'Geist Mono',monospace}
+  .meta-cell .v{font-size:11px;font-family:'Geist Mono',monospace}
+  .meta-cell .v.num{color:var(--data)}
+
+  .subhead{
+    display:flex;justify-content:space-between;align-items:baseline;
+    padding:10px 0 20px;border-bottom:0.5px solid var(--hair);
+    margin-bottom:28px;
+  }
+  .subhead h1{font-weight:200;font-size:34px;letter-spacing:-0.02em;line-height:1.05}
+  .subhead h1 b{font-weight:700}
+  .subhead .dek{color:var(--mute);font-weight:200;font-size:13px;max-width:320px;text-align:right}
+
+  /* ========= STAGE ========= */
+  .stage{
+    position:relative;
+    width:100%;
+    aspect-ratio: 16 / 11;
+    margin:0 auto;
+  }
+  .stage svg.leaders{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2}
+  .stage svg.leaders path{stroke:var(--ink);stroke-width:0.75;fill:none;stroke-dasharray:4 4;opacity:0.55;transition:stroke .2s,opacity .2s,stroke-dashoffset .6s}
+  .stage svg.leaders path.hot{stroke:var(--data);opacity:1;stroke-dasharray:4 4;animation:march 1.2s linear infinite}
+  @keyframes march{to{stroke-dashoffset:-32}}
+
+  /* crosshair */
+  .crosshair{position:absolute;pointer-events:none;z-index:3;opacity:0;transition:opacity .15s}
+  .crosshair.on{opacity:.5}
+  .crosshair .v,.crosshair .h{position:absolute;background:var(--data)}
+  .crosshair .v{width:1px;top:0;bottom:0}
+  .crosshair .h{height:1px;left:0;right:0}
+
+  /* image holder */
+  .imgwrap{
+    position:absolute; left:22.5%; top:10%; width:55%; height:80%;
+    z-index:1;
+  }
+  .imgwrap::before,.imgwrap::after{
+    content:""; position:absolute; left:-10px; right:-10px; height:10px;
+    background-image: repeating-linear-gradient(to right, var(--ink) 0 1px, transparent 1px 8px);
+    background-size: 8px 4px; background-repeat:repeat-x;
+    opacity:.55;
+  }
+  .imgwrap::before{top:-14px;background-position:top}
+  .imgwrap::after{bottom:-14px;background-position:bottom}
+  .imgwrap .rulerL,.imgwrap .rulerR{position:absolute;top:-10px;bottom:-10px;width:10px;
+    background-image: repeating-linear-gradient(to bottom, var(--ink) 0 1px, transparent 1px 8px);
+    background-size:4px 8px; opacity:.55;
+  }
+  .imgwrap .rulerL{left:-14px}
+  .imgwrap .rulerR{right:-14px}
+  .imgwrap img{
+    width:100%; height:100%; object-fit:cover;
+    border:0.5px solid var(--hair);
+    background:#e9e9e6;
+    filter:saturate(0.98);
+  }
+  .imgwrap .corner{position:absolute;width:10px;height:10px;border:0.75px solid var(--ink)}
+  .imgwrap .corner.tl{top:-5px;left:-5px;border-right:none;border-bottom:none}
+  .imgwrap .corner.tr{top:-5px;right:-5px;border-left:none;border-bottom:none}
+  .imgwrap .corner.bl{bottom:-5px;left:-5px;border-right:none;border-top:none}
+  .imgwrap .corner.br{bottom:-5px;right:-5px;border-left:none;border-top:none}
+  .imgwrap .stamp{position:absolute;right:6px;bottom:6px;background:rgba(250,250,249,.85);
+    padding:3px 6px;font-family:'Geist Mono',monospace;font-size:9px;letter-spacing:0.1em;
+    border:0.5px solid var(--hair);}
+
+  /* numbered dots ON image edge */
+  .dot{position:absolute;width:22px;height:22px;border-radius:50%;
+    background:var(--bg); border:0.75px solid var(--ink);
+    font-family:'Geist Mono',monospace; font-size:10px;
+    display:flex;align-items:center;justify-content:center; z-index:4;
+    transform:translate(-50%,-50%);
+    transition:transform .2s, border-color .2s, background .2s;
+  }
+  .dot::after{
+    content:""; position:absolute; inset:-6px; border-radius:50%;
+    border:0.75px solid var(--data); opacity:0; transform:scale(.6); transition:opacity .4s,transform .6s;
+  }
+  .dot.hot{background:var(--data);color:#fff;border-color:var(--data);transform:translate(-50%,-50%) scale(1.15)}
+  .dot.hot::after{opacity:.6;transform:scale(1)}
+
+  /* annotation cards */
+  .callout{position:absolute; width:180px; z-index:5;
+    padding-top:10px; cursor:default;
+  }
+  .callout::before{
+    content:""; position:absolute; top:0; left:0; width:36px; height:0.5px; background:var(--ink);
+    transition: background .2s, width .3s;
+  }
+  .callout.hot::before{background:var(--data); width:100%}
+  .callout .num{font-family:'Geist Mono',monospace;font-size:10px;color:var(--mute);letter-spacing:0.16em}
+  .callout .name{font-weight:700;font-size:12px;letter-spacing:0.04em;margin-top:2px;text-transform:uppercase}
+  .callout .val{font-family:'Geist Mono',monospace;font-size:11px;color:var(--data);margin-top:6px;line-height:1.5;word-break:break-word}
+  .callout .hint{font-size:10px;color:var(--mute);font-weight:200;margin-top:6px;line-height:1.45}
+
+  /* position each callout explicitly, precise grid */
+  .c1{left:1%;  top:4%;  text-align:left}
+  .c2{left:78%; top:4%;  text-align:left}
+  .c3{left:82%; top:38%; text-align:left}
+  .c4{left:78%; top:72%; text-align:left}
+  .c5{left:1%;  top:72%; text-align:left}
+  .c6{left:1%;  top:40%; text-align:left}
+
+  /* ========= TAGS ========= */
+  .tags-section{margin-top:56px;border-top:0.5px solid var(--hair);padding-top:18px}
+  .tags-label{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px}
+  .tags-label .k{font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:0.18em;color:var(--mute);text-transform:uppercase}
+  .tags-label .c{font-family:'Geist Mono',monospace;font-size:10px;color:var(--data)}
+  .tags{display:flex;flex-wrap:wrap;gap:8px}
+  .tag{
+    display:inline-flex;align-items:center;gap:6px;
+    padding:6px 12px; border:0.5px solid var(--ink);
+    border-radius:999px;
+    font-family:'Geist Mono',monospace;font-size:11px;
+    transition:background .2s,color .2s;
+  }
+  .tag:hover{background:var(--ink);color:var(--bg)}
+  .tag .i{font-size:9px;color:var(--mute)}
+  .tag:hover .i{color:var(--bg)}
+
+  /* ========= COPY BAR ========= */
+  .copybar{
+    margin-top:40px; height:48px; width:100%;
+    border-top:1px solid var(--ink);
+    border-bottom:1px solid var(--ink);
+    display:flex;align-items:center;justify-content:space-between;
+    padding:0 16px;
+    cursor:pointer;
+    transition:background .2s;
+  }
+  .copybar:hover{background:var(--ink);color:var(--bg)}
+  .copybar:hover .right span{color:var(--bg)}
+  .copybar .left{display:flex;align-items:center;gap:14px;font-weight:700;letter-spacing:0.02em;font-size:12px;text-transform:uppercase}
+  .copybar .left .n{font-family:'Geist Mono',monospace;font-weight:400;color:var(--mute);font-size:10px}
+  .copybar:hover .left .n{color:var(--bg);opacity:.6}
+  .copybar .right{display:flex;align-items:center;gap:14px;font-family:'Geist Mono',monospace;font-size:11px}
+  .copybar .right span{color:var(--mute)}
+  .copybar .arr{font-size:14px}
+
+  /* ========= FOOTER ========= */
+  .footbar{margin-top:18px;display:flex;justify-content:space-between;font-family:'Geist Mono',monospace;font-size:10px;color:var(--mute)}
+
+  /* ========= TOAST ========= */
+  .toast{
+    position:fixed;left:50%;bottom:32px;transform:translateX(-50%) translateY(20px);
+    background:var(--ink);color:var(--bg);
+    padding:10px 18px;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:0.08em;
+    opacity:0;pointer-events:none;transition:opacity .3s,transform .3s;z-index:50;
+  }
+  .toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+  .toast .dot{width:6px;height:6px;border-radius:50%;background:var(--alert);display:inline-block;margin-right:8px;vertical-align:middle;border:none;position:static;transform:none}
+
+  @media (max-width:1000px){
+    body{padding:18px}
+    .subhead h1{font-size:24px}
+    .callout{width:140px}
+    .c1,.c5,.c6{left:0}
+    .c2,.c3,.c4{left:72%}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ MASTHEAD ============ -->
+<header class="masthead">
+  <div class="brand">PROMPT ATLAS <em>/ annotated manual</em></div>
+  <div class="meta-cell"><span class="k">Fig.</span><span class="v num">01 / 06</span></div>
+  <div class="meta-cell"><span class="k">Version</span><span class="v num">v0.3.2</span></div>
+  <div class="meta-cell"><span class="k">Date</span><span class="v">2026.04.22</span></div>
+  <div class="meta-cell"><span class="k">Scale</span><span class="v">1 : 1.00</span></div>
+  <div class="meta-cell"><span class="k">Sheet</span><span class="v">A / laboratory</span></div>
+</header>
+
+<div class="subhead">
+  <h1>The Prompt Atlas <b>Poster</b>.</h1>
+  <p class="dek">A self-referential demonstration of atomic composition — six fields, one glyph, one manual page.</p>
+</div>
+
+<!-- ============ STAGE ============ -->
+<section class="stage" id="stage">
+
+  <!-- leader lines: hand-authored SVG, coords in percent of viewBox 1000x688 -->
+  <svg class="leaders" viewBox="0 0 1000 688" preserveAspectRatio="none">
+    <!-- 01 top-left callout at ~(110,75) to image corner ~(270,90) -->
+    <path data-for="c1" d="M 110 75  L 225 75  L 270 92"/>
+    <!-- 02 top-right callout at ~(880,75) to image ~(720,92) -->
+    <path data-for="c2" d="M 880 75  L 770 75  L 720 92"/>
+    <!-- 03 right callout at ~(900,295) to image ~(770,310) -->
+    <path data-for="c3" d="M 900 295 L 790 295 L 770 310"/>
+    <!-- 04 bottom-right callout ~(880,520) to image ~(720,560) -->
+    <path data-for="c4" d="M 880 520 L 770 520 L 720 560"/>
+    <!-- 05 bottom-left callout ~(110,520) to image ~(270,560) -->
+    <path data-for="c5" d="M 110 520 L 225 520 L 270 560"/>
+    <!-- 06 left callout ~(110,305) to image ~(230,320) -->
+    <path data-for="c6" d="M 110 305 L 210 305 L 230 320"/>
+  </svg>
+
+  <!-- crosshair -->
+  <div class="crosshair" id="crosshair"><div class="v"></div><div class="h"></div></div>
+
+  <!-- image -->
+  <div class="imgwrap" id="imgwrap">
+    <span class="rulerL"></span><span class="rulerR"></span>
+    <span class="corner tl"></span><span class="corner tr"></span>
+    <span class="corner bl"></span><span class="corner br"></span>
+    <img src="../assets/hero/poster.png" alt="The Prompt Atlas poster" onerror="this.style.background='linear-gradient(135deg,#e8e6e1,#c5c3bd)';this.removeAttribute('src');this.alt=''"/>
+    <div class="stamp">FIG.01 · POSTER.PNG</div>
+  </div>
+
+  <!-- numbered dots pinned to image edges -->
+  <!-- imgwrap is 22.5%..77.5% horizontal, 10%..90% vertical -->
+  <span class="dot" data-for="c1" style="left:27%;top:13%">01</span>
+  <span class="dot" data-for="c2" style="left:72%;top:13%">02</span>
+  <span class="dot" data-for="c3" style="left:77%;top:45%">03</span>
+  <span class="dot" data-for="c4" style="left:72%;top:81%">04</span>
+  <span class="dot" data-for="c5" style="left:27%;top:81%">05</span>
+  <span class="dot" data-for="c6" style="left:23%;top:46%">06</span>
+
+  <!-- callouts -->
+  <div class="callout c1" data-key="c1">
+    <div class="num">01 · INTENT</div>
+    <div class="name">Intent</div>
+    <div class="val">editorial&nbsp;poster</div>
+    <div class="hint">Self-referential artefact — the poster depicts the very poster you are reading.</div>
+  </div>
+
+  <div class="callout c2" data-key="c2">
+    <div class="num">02 · STYLE</div>
+    <div class="name">Style</div>
+    <div class="val">3d-render · soft&nbsp;studio · aurora&nbsp;bg</div>
+    <div class="hint">Crystal sphere, refractive caustics, museum lighting.</div>
+  </div>
+
+  <div class="callout c3" data-key="c3">
+    <div class="num">03 · TEXT</div>
+    <div class="name">Text</div>
+    <div class="val">"The&nbsp;Prompt&nbsp;Atlas"<br>"atomic&nbsp;composition"</div>
+    <div class="hint">Quoted strings are literal — rendered as typography inside the scene.</div>
+  </div>
+
+  <div class="callout c4" data-key="c4">
+    <div class="num">04 · COLOR</div>
+    <div class="name">Color</div>
+    <div class="val">#fafaf9 · #0a0a0a<br>accent&nbsp;#0052ff · #ff5b00</div>
+    <div class="hint">95 % neutral, 5 % accent — bolt orange for alert, cobalt for data.</div>
+  </div>
+
+  <div class="callout c5" data-key="c5">
+    <div class="num">05 · ASPECT</div>
+    <div class="name">Aspect</div>
+    <div class="val">16 : 9</div>
+    <div class="hint">Landscape editorial cover — 3840 × 2160 at 4K.</div>
+  </div>
+
+  <div class="callout c6" data-key="c6">
+    <div class="num">06 · WATERMARK</div>
+    <div class="name">Watermark</div>
+    <div class="val">prompt-atlas · 30&nbsp;%&nbsp;opacity</div>
+    <div class="hint">Integrated into lower-right; never cropped, never text-labelled.</div>
+  </div>
+
+</section>
+
+<!-- ============ TAGS ============ -->
+<section class="tags-section">
+  <div class="tags-label">
+    <span class="k">Auto-tags · derived from field signature</span>
+    <span class="c">7 tokens · signed 0x7A2F</span>
+  </div>
+  <div class="tags">
+    <span class="tag"><span class="i">#</span>editorial</span>
+    <span class="tag"><span class="i">#</span>3d-render</span>
+    <span class="tag"><span class="i">#</span>16:9</span>
+    <span class="tag"><span class="i">#</span>thinking-on</span>
+    <span class="tag"><span class="i">#</span>watermark-integrated</span>
+    <span class="tag"><span class="i">#</span>aurora-bg</span>
+    <span class="tag"><span class="i">#</span>cjk-ready</span>
+  </div>
+</section>
+
+<!-- ============ COPY BAR ============ -->
+<div class="copybar" id="copybar" role="button" tabindex="0">
+  <div class="left"><span class="n">◐ 00 · md</span>Copy full MD prompt</div>
+  <div class="right">
+    <span>986 chars · gpt-image-1</span>
+    <span class="arr">→</span>
+  </div>
+</div>
+
+<!-- ============ FOOT ============ -->
+<footer class="footbar">
+  <span>© prompt-atlas · laboratory sheet A</span>
+  <span>Hover a callout to trace · move over figure for crosshair</span>
+  <span class="data">0x7A2F · ed25519</span>
+</footer>
+
+<div class="toast" id="toast"><span class="dot"></span>MD PROMPT COPIED TO CLIPBOARD</div>
+
+<!-- ============ HIDDEN PROMPT ============ -->
+<script id="mdPrompt" type="text/markdown">
+# The Prompt Atlas — Poster
+
+**Intent**: editorial poster, self-referential artefact.
+
+**Composition**: a single pristine crystal sphere centered on a wide studio stage.
+Inside the sphere, a miniature version of this very poster is refracted — a recursive
+mise-en-abyme. Soft caustic light pools on the floor. Museum-grade specular highlights.
+
+**Style**: 3d-render, photoreal, editorial cover, aurora background (soft cyan-to-violet
+gradient sky, low saturation), thinking-on, CJK-ready typography grid.
+
+**Text (render these exact strings as typography inside the scene, quoted)**:
+- "The Prompt Atlas"
+- "atomic composition"
+
+No other text. No captions. No UI. No chrome.
+
+**Color**: 95% neutrals (#fafaf9 paper, #0a0a0a ink). 5% accents only —
+cobalt #0052ff for data glyphs, bolt orange #ff5b00 for a single alert mark.
+
+**Aspect**: 16:9 landscape, 3840×2160 (4K).
+
+**Watermark**: integrate the mark `prompt-atlas` at 30% opacity, lower-right quadrant.
+Never crop. Never label. Never add extra text beyond the two quoted strings above.
+
+**Negative**: no borders, no frames, no logos, no UI chrome, no captions, no additional
+typography, no people, no hands.
+</script>
+
+<script>
+  // ---------- hover wiring ----------
+  const stage = document.getElementById('stage');
+  const leaders = stage.querySelectorAll('svg.leaders path');
+  const dots = stage.querySelectorAll('.dot');
+  const callouts = stage.querySelectorAll('.callout');
+
+  function hot(key, on){
+    leaders.forEach(p => p.classList.toggle('hot', on && p.dataset.for === key));
+    dots.forEach(d => d.classList.toggle('hot', on && d.dataset.for === key));
+    callouts.forEach(c => c.classList.toggle('hot', on && c.dataset.key === key));
+  }
+  [...dots, ...callouts].forEach(el => {
+    const key = el.dataset.for || el.dataset.key;
+    el.addEventListener('mouseenter', () => hot(key, true));
+    el.addEventListener('mouseleave', () => hot(key, false));
+  });
+
+  // ---------- crosshair ----------
+  const imgwrap = document.getElementById('imgwrap');
+  const cross = document.getElementById('crosshair');
+  const stageRect = () => stage.getBoundingClientRect();
+  imgwrap.addEventListener('mouseenter', () => cross.classList.add('on'));
+  imgwrap.addEventListener('mouseleave', () => cross.classList.remove('on'));
+  imgwrap.addEventListener('mousemove', (e) => {
+    const r = stageRect();
+    const x = e.clientX - r.left;
+    const y = e.clientY - r.top;
+    cross.style.left = '0px'; cross.style.top = '0px';
+    cross.style.width = r.width + 'px'; cross.style.height = r.height + 'px';
+    const v = cross.querySelector('.v'); const h = cross.querySelector('.h');
+    v.style.left = x + 'px'; h.style.top = y + 'px';
+  });
+
+  // ---------- copy ----------
+  const copybar = document.getElementById('copybar');
+  const toast = document.getElementById('toast');
+  const md = document.getElementById('mdPrompt').textContent.trim();
+  function doCopy(){
+    const fire = () => { toast.classList.add('on'); setTimeout(() => toast.classList.remove('on'), 1800); };
+    if (navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(md).then(fire, fallback);
+    } else { fallback(); }
+    function fallback(){
+      const ta = document.createElement('textarea');
+      ta.value = md; document.body.appendChild(ta); ta.select();
+      try{ document.execCommand('copy'); }catch(_){}
+      document.body.removeChild(ta); fire();
+    }
+  }
+  copybar.addEventListener('click', doCopy);
+  copybar.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); doCopy(); }});
+</script>
+</body>
+</html>

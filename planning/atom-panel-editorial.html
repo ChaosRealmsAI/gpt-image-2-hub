@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>Prompt Atlas · Vol. I · No. 01</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:#faf6ee;
+  color:#1a1a1a;
+  font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size:15px;line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+/* ═════  Masthead  ═════ */
+.masthead{
+  padding:16px 48px;
+  border-top:4px solid #1a1a1a;
+  border-bottom:1px solid #1a1a1a;
+  display:flex;align-items:baseline;justify-content:space-between;
+  font-size:11px;letter-spacing:0.24em;text-transform:uppercase;
+  font-weight:600;position:relative;
+}
+.masthead::after{content:"";position:absolute;bottom:-5px;left:0;right:0;height:1px;background:#1a1a1a}
+.masthead .brand{font-family:Georgia,"Times New Roman",serif;font-weight:900;font-style:italic;font-size:18px;letter-spacing:0;text-transform:none}
+.masthead .meta{display:flex;gap:28px;color:#6b6b6b}
+.masthead .meta span:not(:last-child)::after{content:"·";margin-left:28px;color:#bbb}
+
+/* ═════  Spread layout  ═════ */
+.spread{
+  max-width:1480px;margin:0 auto;
+  padding:44px 48px 70px;
+  display:grid;grid-template-columns:1.15fr 1fr;gap:56px;
+}
+
+/* ═════  LEFT  ═════ */
+.kicker{
+  font-size:10px;letter-spacing:0.28em;text-transform:uppercase;
+  color:#b02020;font-weight:800;margin-bottom:14px;
+}
+h1.title{
+  font-family:Georgia,serif;
+  font-weight:900;font-size:64px;line-height:0.98;
+  letter-spacing:-0.02em;margin:0 0 14px;color:#1a1a1a;
+}
+.dek{
+  font-family:Georgia,serif;font-style:italic;font-weight:400;
+  font-size:21px;line-height:1.4;color:#6b6b6b;
+  margin:0 0 24px;max-width:48ch;
+}
+hr.rule{border:none;border-top:1px solid #1a1a1a;margin:22px 0 26px}
+figure.hero{margin:0;padding:0}
+figure.hero img{display:block;width:100%;height:auto;border:1px solid #1a1a1a}
+figcaption.hero{
+  font-size:10px;letter-spacing:0.18em;text-transform:uppercase;
+  color:#6b6b6b;padding:10px 0 0;font-weight:600;
+  border-top:1px solid rgba(0,0,0,0.12);margin-top:10px;
+}
+figcaption.hero b{color:#1a1a1a;font-weight:800}
+.pullquote{
+  margin:32px 0 0;padding:6px 0 6px 18px;
+  border-left:3px solid #b02020;
+  font-family:Georgia,serif;font-style:italic;
+  font-size:20px;line-height:1.45;color:#1a1a1a;max-width:40ch;
+}
+
+/* ═════  RIGHT  ═════ */
+.right{border-left:1px solid rgba(0,0,0,0.12);padding-left:48px}
+
+/* AUTO TAGS · 上置 · 显眼 */
+.tags-top{
+  border-top:4px solid #1a1a1a;
+  border-bottom:4px solid #1a1a1a;
+  padding:22px 0;margin-bottom:32px;
+}
+.tags-top .hdr{
+  display:flex;align-items:baseline;justify-content:space-between;
+  margin-bottom:10px;
+}
+.tags-top .hdr .l{
+  font-size:11px;letter-spacing:0.3em;text-transform:uppercase;
+  color:#1a1a1a;font-weight:800;
+}
+.tags-top .hdr .n{
+  font-size:10px;letter-spacing:0.15em;color:#b02020;font-weight:700;text-transform:uppercase;
+}
+.tags-top .note{
+  font-family:Georgia,serif;font-style:italic;
+  font-size:13px;color:#6b6b6b;margin:0 0 14px;
+}
+.tags-top ul{
+  list-style:none;padding:0;margin:0;
+  display:flex;flex-wrap:wrap;gap:6px;
+}
+.tags-top li{
+  font-size:11px;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;
+  padding:7px 12px;border:1px solid #1a1a1a;background:#fff;color:#1a1a1a;
+  cursor:pointer;transition:all .12s;
+}
+.tags-top li:hover{background:#1a1a1a;color:#faf6ee}
+.tags-top li.primary{background:#1a1a1a;color:#faf6ee}
+.tags-top li.primary:hover{background:#b02020}
+
+/* Filter */
+.filter{
+  display:flex;flex-wrap:wrap;gap:0;
+  border-top:1px solid #1a1a1a;border-bottom:1px solid #1a1a1a;
+  margin-bottom:24px;
+}
+.filter .f{
+  padding:11px 14px;font-size:10px;letter-spacing:0.18em;
+  text-transform:uppercase;font-weight:700;color:#6b6b6b;
+  cursor:pointer;transition:color .12s,background .12s;
+  border-right:1px solid rgba(0,0,0,0.12);
+}
+.filter .f:last-child{border-right:none}
+.filter .f:hover{color:#b02020}
+.filter .f.active{color:#b02020;background:rgba(176,32,32,0.06)}
+
+/* Atom sections */
+.atom{padding:14px 0 20px;border-bottom:1px solid rgba(0,0,0,0.12)}
+.atom:last-child{border-bottom:none}
+.atom .head{display:flex;align-items:baseline;gap:14px;margin-bottom:10px}
+.atom .num{
+  font-family:Georgia,serif;font-size:30px;font-weight:900;
+  color:#b02020;line-height:1;
+  font-variant-numeric:tabular-nums;min-width:46px;
+}
+.atom .name{
+  font-family:Georgia,serif;font-size:20px;font-weight:800;
+  letter-spacing:-0.005em;color:#1a1a1a;
+}
+.atom .sub{
+  font-size:10px;letter-spacing:0.18em;text-transform:uppercase;
+  color:#6b6b6b;font-weight:700;margin-left:auto;
+}
+.kv{
+  display:grid;grid-template-columns:96px 1fr;
+  row-gap:7px;column-gap:16px;padding-left:60px;margin:0;
+}
+.kv dt{
+  font-size:10px;letter-spacing:0.14em;text-transform:uppercase;
+  color:#6b6b6b;font-weight:700;padding-top:2px;
+}
+.kv dd{
+  margin:0;font-size:14px;line-height:1.5;color:#1a1a1a;
+}
+.kv dd b{font-weight:800}
+.kv dd code{
+  color:#b02020;
+  font-family:"SF Mono",Menlo,Consolas,monospace;
+  font-size:12.5px;background:transparent;padding:0;
+}
+
+.atom.text .kv dd b{color:#b02020}
+.atom.water{background:rgba(176,32,32,0.04);margin:0 -14px;padding:14px}
+.atom.water .num{color:#b02020}
+.atom.water .name::before{content:"💧 ";font-size:16px}
+.atom.neg .kv dt{color:#b02020}
+
+/* CTA */
+.cta{margin-top:36px;padding-top:24px;border-top:4px solid #1a1a1a}
+.copy{
+  width:100%;padding:18px;background:#1a1a1a;color:#faf6ee;border:none;
+  font-size:12px;letter-spacing:0.32em;text-transform:uppercase;font-weight:800;
+  cursor:pointer;font-family:inherit;transition:background .15s;
+}
+.copy:hover{background:#b02020}
+.copy.ok{background:#b02020}
+.cta .note{
+  font-family:Georgia,serif;font-style:italic;
+  font-size:12px;color:#6b6b6b;margin-top:10px;text-align:center;
+}
+
+/* Footer */
+footer{
+  padding:24px 48px 40px;border-top:4px solid #1a1a1a;
+  text-align:center;font-family:Georgia,serif;font-style:italic;
+  color:#6b6b6b;font-size:14px;margin-top:36px;
+}
+footer .line{border-top:1px solid rgba(0,0,0,0.12);width:60px;margin:0 auto 12px}
+
+/* Toast */
+.toast{
+  position:fixed;bottom:40px;left:50%;
+  transform:translateX(-50%) translateY(50px);
+  background:#1a1a1a;color:#faf6ee;border:1px solid #b02020;
+  padding:12px 24px;font-size:11px;letter-spacing:0.28em;
+  text-transform:uppercase;font-weight:800;
+  transition:transform .25s ease;z-index:100;
+}
+.toast.show{transform:translateX(-50%) translateY(0)}
+
+@media (max-width:1000px){
+  .spread{grid-template-columns:1fr;padding:24px;gap:40px}
+  .right{border-left:none;padding-left:0;margin-top:36px;border-top:4px solid #1a1a1a;padding-top:28px}
+  h1.title{font-size:44px}
+  .kv{grid-template-columns:80px 1fr;padding-left:0}
+  .masthead .meta{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ═════  MASTHEAD  ═════ -->
+<header class="masthead">
+  <div class="brand">Prompt Atlas</div>
+  <div class="meta">
+    <span>Vol. I</span>
+    <span>No. 01</span>
+    <span>22 April 2026</span>
+    <span>Structured</span>
+  </div>
+  <div>⌕ search</div>
+</header>
+
+<!-- ═════  SPREAD  ═════ -->
+<main class="spread">
+
+  <!-- LEFT · Gallery + Title -->
+  <article class="left">
+    <div class="kicker">N.01 · Editorial Poster · Showcase</div>
+    <h1 class="title">The Prompt<br>Atlas Poster</h1>
+    <p class="dek">A self-referential demonstration of atomic composition — the poster that contains its own manual.</p>
+
+    <hr class="rule">
+
+    <figure class="hero">
+      <img src="../assets/hero/poster.png" alt="Prompt Atlas poster sample">
+      <figcaption class="hero">
+        <b>FIG. 1</b> · Generated with GPT Image 2 (Thinking mode) · 16:9 Cinematic · 22 April 2026
+      </figcaption>
+    </figure>
+
+    <blockquote class="pullquote">
+      Each pixel maps to a field. Each field maps to an atom. Composition is no longer writing — it is selection.
+    </blockquote>
+  </article>
+
+  <!-- RIGHT · Structured Fields -->
+  <aside class="right">
+
+    <!-- ▶ AUTO TAGS · 上置显眼区 -->
+    <section class="tags-top">
+      <div class="hdr">
+        <span class="l">Auto Tags</span>
+        <span class="n">8 derived · not in MD</span>
+      </div>
+      <p class="note">派生自结构化字段 · 仅供界面搜索与筛选 · 复制 Prompt 时不含此层</p>
+      <ul>
+        <li class="primary">editorial</li>
+        <li class="primary">3d-render</li>
+        <li>aurora-bg</li>
+        <li>cjk-ready</li>
+        <li>chrome-text</li>
+        <li>16:9</li>
+        <li>thinking-on</li>
+        <li>watermark-integrated</li>
+      </ul>
+    </section>
+
+    <!-- Filter -->
+    <nav class="filter">
+      <span class="f active" data-f="all">All · 15</span>
+      <span class="f" data-f="core">Core</span>
+      <span class="f" data-f="style">Visual</span>
+      <span class="f" data-f="light">Light · Color</span>
+      <span class="f" data-f="text">Text</span>
+      <span class="f" data-f="water">Watermark</span>
+      <span class="f" data-f="tech">Tech</span>
+      <span class="f" data-f="neg">Constraints</span>
+    </nav>
+
+    <section class="atoms">
+
+      <div class="atom core" data-cat="core">
+        <div class="head"><span class="num">01</span><span class="name">Intent</span><span class="sub">1 field</span></div>
+        <dl class="kv"><dt>primary</dt><dd><b>Editorial magazine cover poster</b> · Wired-class · museum-grade</dd></dl>
+      </div>
+
+      <div class="atom core" data-cat="core">
+        <div class="head"><span class="num">02</span><span class="name">Medium</span><span class="sub">1 field</span></div>
+        <dl class="kv"><dt>primary</dt><dd>High-end <b>3D rendered editorial</b> · clean digital · no grain</dd></dl>
+      </div>
+
+      <div class="atom style" data-cat="style">
+        <div class="head"><span class="num">03</span><span class="name">Style</span><span class="sub">2 fields</span></div>
+        <dl class="kv">
+          <dt>anchor</dt><dd><b>Wired magazine editorial</b> + <b>futuristic glass morphism</b></dd>
+          <dt>era</dt><dd>Contemporary 2020s tech editorial</dd>
+        </dl>
+      </div>
+
+      <div class="atom core" data-cat="core">
+        <div class="head"><span class="num">04</span><span class="name">Subject</span><span class="sub">3 fields</span></div>
+        <dl class="kv">
+          <dt>center</dt><dd>Floating <b>crystal sphere</b> · glass morphism · volumetric</dd>
+          <dt>inside</dt><dd>Energy filaments connecting <b>periodic-table tiles</b> (H · O · N · C · Na · Ca · Fe · Cu · Al · S · K · Cl · P)</dd>
+          <dt>symbol</dt><dd>"Atoms of text-to-image can be composed"</dd>
+        </dl>
+      </div>
+
+      <div class="atom core" data-cat="core">
+        <div class="head"><span class="num">05</span><span class="name">Scene</span><span class="sub">2 fields</span></div>
+        <dl class="kv">
+          <dt>background</dt><dd><b>Deep purple void</b> + <b>aurora gradient</b> above</dd>
+          <dt>decor</dt><dd>Two slim metallic frame columns at far edges</dd>
+        </dl>
+      </div>
+
+      <div class="atom core" data-cat="core">
+        <div class="head"><span class="num">06</span><span class="name">Composition</span><span class="sub">3 fields</span></div>
+        <dl class="kv">
+          <dt>framing</dt><dd><b>16:9 landscape</b> · editorial breathing</dd>
+          <dt>layout</dt><dd>Sphere center-slightly-low · title top · subtitle below · corners sealed</dd>
+          <dt>balance</dt><dd>Strong central symmetry · generous negative space</dd>
+        </dl>
+      </div>
+
+      <div class="atom light" data-cat="light">
+        <div class="head"><span class="num">07</span><span class="name">Lighting</span><span class="sub">3 fields</span></div>
+        <dl class="kv">
+          <dt>primary</dt><dd>Self-emitted sphere light · volumetric filaments</dd>
+          <dt>ambient</dt><dd>Aurora diffuse from above</dd>
+          <dt>accent</dt><dd>Warm orange <b>rim light</b> + studio softbox overall</dd>
+        </dl>
+      </div>
+
+      <div class="atom light" data-cat="light">
+        <div class="head"><span class="num">08</span><span class="name">Color</span><span class="sub">4 fields</span></div>
+        <dl class="kv">
+          <dt>base</dt><dd><code>#2d1b4e</code> deep purple void</dd>
+          <dt>accent</dt><dd><code>#34d399</code> cyan-green filaments</dd>
+          <dt>highlight</dt><dd><code>#f97316</code> warm orange rim</dd>
+          <dt>bg</dt><dd>Multi-layered aurora gradient</dd>
+        </dl>
+      </div>
+
+      <div class="atom light" data-cat="light">
+        <div class="head"><span class="num">09</span><span class="name">Mood</span><span class="sub">2 fields</span></div>
+        <dl class="kv">
+          <dt>primary</dt><dd><b>Reverent tech editorial</b> · sacred · exploratory</dd>
+          <dt>feel</dt><dd>Premium product-launch aesthetic</dd>
+        </dl>
+      </div>
+
+      <div class="atom core" data-cat="core">
+        <div class="head"><span class="num">10</span><span class="name">Camera</span><span class="sub">2 fields</span></div>
+        <dl class="kv">
+          <dt>view</dt><dd>Product-shot front-facing · slight low angle</dd>
+          <dt>dof</dt><dd>Full-frame sharp · no bokeh</dd>
+        </dl>
+      </div>
+
+      <div class="atom text" data-cat="text">
+        <div class="head"><span class="num">11</span><span class="name">Text · quoted</span><span class="sub">5 elements</span></div>
+        <dl class="kv">
+          <dt>top title</dt><dd><b>"Prompt Atlas"</b> · chrome serif · large</dd>
+          <dt>zh sub</dt><dd><b>"提示词图谱"</b> · clean CJK serif · complete strokes</dd>
+          <dt>eng sub</dt><dd><b>"Compose Atoms · Generate Better Images"</b> · medium weight</dd>
+          <dt>corner</dt><dd><b>"Powered by GPT Image 2 · 2026"</b> · bottom-right small</dd>
+          <dt>seal</dt><dd><b>"v1.0 · beta"</b> · top-left circular badge</dd>
+        </dl>
+      </div>
+
+      <div class="atom water" data-cat="water">
+        <div class="head"><span class="num">12</span><span class="name">Watermark</span><span class="sub">new · 5 fields</span></div>
+        <dl class="kv">
+          <dt>text</dt><dd><b>"Prompt Atlas · 2026"</b></dd>
+          <dt>position</dt><dd>Lower-right · within frame · integrated</dd>
+          <dt>style</dt><dd>Matches medium · embossed metallic on glass base</dd>
+          <dt>opacity</dt><dd>~25–35% contrast · legible at 100% zoom</dd>
+          <dt>avoid</dt><dd>Overlay stamp · covering subject · saturated pop</dd>
+        </dl>
+      </div>
+
+      <div class="atom tech" data-cat="tech">
+        <div class="head"><span class="num">13</span><span class="name">Aspect Ratio</span><span class="sub">1 field</span></div>
+        <dl class="kv"><dt>value</dt><dd><code>16:9</code> landscape cinematic</dd></dl>
+      </div>
+
+      <div class="atom tech" data-cat="tech">
+        <div class="head"><span class="num">14</span><span class="name">Quality</span><span class="sub">3 fields</span></div>
+        <dl class="kv">
+          <dt>level</dt><dd><code>high</code> (dense text requires)</dd>
+          <dt>resolution</dt><dd><code>4K</code> ultra-detailed</dd>
+          <dt>typography</dt><dd>Sharp · zero-typo · print-ready</dd>
+        </dl>
+      </div>
+
+      <div class="atom neg" data-cat="neg">
+        <div class="head"><span class="num">15</span><span class="name">Constraints</span><span class="sub">5 exclusions</span></div>
+        <dl class="kv">
+          <dt>no extra</dt><dd>No unspecified decorative / lorem-ipsum text</dd>
+          <dt>no watermark</dt><dd>None other than the one in §12</dd>
+          <dt>no gold</dt><dd>No shiny metallic gold · no high-saturation glare</dd>
+          <dt>no clutter</dt><dd>Generous negative space required</dd>
+          <dt>preserve cjk</dt><dd>Chinese characters structurally complete</dd>
+        </dl>
+      </div>
+
+    </section>
+
+    <div class="cta">
+      <button class="copy" id="copyBtn">Copy Prompt (MD) ▶</button>
+      <div class="note">复制的是自然语言 MD · 不含 tags 与 schema · 直接粘 ChatGPT 跑</div>
+    </div>
+
+  </aside>
+</main>
+
+<footer>
+  <div class="line"></div>
+  Prompt Atlas · An Atomic Handbook for the GPT Image 2 Era · 2026
+</footer>
+
+<div class="toast" id="toast">✓ prompt copied · paste into chatgpt</div>
+
+<script type="text/plain" id="mdPrompt">
+Create a high-end editorial magazine cover poster in 16:9 cinematic landscape, in the style of a Wired magazine cover with futuristic glass morphism. The centerpiece is a luminous floating 3D crystal sphere, rendered with museum-grade detail, surrounded by subtle volumetric lighting. Inside the sphere, interlocking colored energy filaments weave through miniature periodic-table element tiles including H, O, N, C, Na, Ca, Fe, Cu, Al, S, K, Cl, and P — symbolizing that the atoms of text-to-image can be freely composed.
+
+At the top of the frame, in large chrome serif lettering, render exactly this text on line one: "Prompt Atlas". Directly beneath it on line two, in a clean CJK serif, render exactly: "提示词图谱" — every Chinese character must be complete, correct, and legible, with no missing strokes.
+
+Just beneath the central sphere, in medium-weight English serif, render exactly: "Compose Atoms · Generate Better Images".
+
+In the lower-right corner, render small text exactly: "Powered by GPT Image 2 · 2026". In the upper-left corner, inside a small circular seal badge, render exactly: "v1.0 · beta".
+
+Color palette: deep purple (#2d1b4e) base, accent cyan-green (#34d399) along the energy filaments, warm orange (#f97316) as rim light and side accents, with multi-layered purple-green aurora gradient in the background. Lighting combines internal volumetric glow from the sphere with soft studio ambient light and warm rim light. Mood: reverent tech editorial, sacred and exploratory, premium product-launch aesthetic.
+
+Composition: strong central symmetry, sphere occupies the vertical center slightly below midline, title at top quarter, subtitle directly below sphere, small seal top-left corner, credit bottom-right corner. Generous negative space frames all elements. Include two slim vertical metallic frame columns at the far edges as subtle decor only.
+
+Watermark: In the lower-right area, subtly integrate a small watermark rendering exactly: "Prompt Atlas · 2026". Style-match the watermark to the dominant visual language — render as embossed or etched metallic lettering on the glass base or an adjacent metallic element, same material family as the main scene, harmonious rather than stamped. Keep it subtle at roughly 25–35% of the main content contrast, still clearly readable at 100% zoom, never covering the central sphere or competing with the title. It must feel integrated, not overlaid.
+
+Hard constraints: render every quoted text string above exactly as specified, character-for-character. Do not invent any additional decorative text, lorem-ipsum fills, background writing, fake Russian or Latin filler, or unspecified lettering. Apart from the watermark specified above, no other watermarks, signatures, or copyright marks. No shiny bright yellow gold anywhere. Keep CJK characters structurally complete.
+
+Quality: 4K ultra-detailed, sharp print-ready typography, zero typos, aspect ratio 16:9. Output a single clean poster.
+</script>
+
+<script>
+document.querySelectorAll('.filter .f').forEach(f=>{
+  f.addEventListener('click',()=>{
+    document.querySelectorAll('.filter .f').forEach(x=>x.classList.remove('active'));
+    f.classList.add('active');
+    const v=f.dataset.f;
+    document.querySelectorAll('.atom').forEach(a=>{
+      a.style.display=(v==='all'||a.dataset.cat===v)?'':'none';
+    });
+  });
+});
+
+const btn=document.getElementById('copyBtn');
+const toast=document.getElementById('toast');
+const md=document.getElementById('mdPrompt').textContent.trim();
+
+btn.addEventListener('click',async()=>{
+  try{
+    await navigator.clipboard.writeText(md);
+    btn.textContent='✓ copied';
+    btn.classList.add('ok');
+    toast.classList.add('show');
+    setTimeout(()=>{
+      btn.textContent='Copy Prompt (MD) ▶';
+      btn.classList.remove('ok');
+      toast.classList.remove('show');
+    },2200);
+  }catch(e){alert('手动复制 script#mdPrompt 内容')}
+});
+
+document.querySelectorAll('.tags-top li').forEach(t=>{
+  t.addEventListener('click',()=>{
+    const was=t.classList.contains('primary');
+    t.classList.toggle('primary');
+  });
+});
+</script>
+
+</body>
+</html>

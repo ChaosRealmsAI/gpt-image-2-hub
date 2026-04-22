@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prompt Atlas — The Poster</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0c0c24; --ink:#f5f3ff; --mute:#8b8aa8;
+    --lav:#a78bfa; --coral:#ff8a80; --mint:#64ffda;
+    --serif:"Instrument Serif", serif;
+    --sans:"Inter Tight", system-ui, sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:var(--sans); font-weight:300;
+    min-height:100vh; overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+    letter-spacing:0.01em;
+  }
+  /* ambient color wash */
+  body::before{
+    content:""; position:fixed; inset:-20vh;
+    background:
+      radial-gradient(60vw 60vh at 12% 18%, rgba(167,139,250,.22), transparent 60%),
+      radial-gradient(55vw 55vh at 88% 72%, rgba(100,255,218,.14), transparent 60%),
+      radial-gradient(50vw 50vh at 50% 110%, rgba(255,138,128,.16), transparent 60%);
+    z-index:0; pointer-events:none; filter:blur(40px);
+  }
+  /* cursor spotlight */
+  .spot{
+    position:fixed; inset:0; z-index:2; pointer-events:none;
+    background:radial-gradient(360px 360px at var(--mx,50%) var(--my,50%), rgba(245,243,255,.08), transparent 65%);
+    mix-blend-mode:screen; transition:background .08s;
+  }
+  /* grain overlay */
+  .grain{
+    position:fixed; inset:0; z-index:3; pointer-events:none;
+    opacity:.22; mix-blend-mode:overlay;
+  }
+  section{position:relative; z-index:1}
+  .reveal{opacity:0; transform:translateY(36px) scale(.985); transition:opacity 1.1s cubic-bezier(.2,.7,.2,1), transform 1.1s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1; transform:none}
+  .label{
+    font-family:var(--sans); font-weight:500;
+    font-size:10px; letter-spacing:.3em; text-transform:uppercase;
+    color:var(--mute);
+  }
+  .swatch{display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:10px; vertical-align:middle}
+
+  /* ============ S1 HERO ============ */
+  .hero{
+    min-height:100vh; display:grid; grid-template-rows:auto 1fr auto;
+    padding:40px 48px 40px; overflow:hidden;
+  }
+  .hero-bg{
+    position:absolute; inset:0; z-index:0;
+    background:
+      linear-gradient(180deg, rgba(12,12,36,.55) 0%, rgba(12,12,36,.35) 40%, rgba(12,12,36,.92) 100%),
+      url('../assets/hero/poster.png') center/cover no-repeat;
+    filter:saturate(1.05) contrast(1.02);
+  }
+  .hero-bg::after{
+    content:""; position:absolute; inset:0;
+    background:radial-gradient(80vw 50vh at 50% 40%, transparent 0%, rgba(12,12,36,.4) 70%, rgba(12,12,36,.95) 100%);
+  }
+  .hero > *{position:relative; z-index:1}
+  .hero-top{display:flex; justify-content:space-between; align-items:center}
+  .brand{font-family:var(--serif); font-size:22px; letter-spacing:-.01em}
+  .brand em{font-style:italic; color:var(--lav)}
+  .hero-mid{display:grid; place-items:center; text-align:center; padding:8vh 0 10vh}
+  .kicker{
+    font-size:11px; letter-spacing:.42em; text-transform:uppercase;
+    color:var(--mint); margin-bottom:32px;
+  }
+  .kicker::before,.kicker::after{content:"—"; margin:0 14px; opacity:.5}
+  h1.display{
+    font-family:var(--serif); font-weight:400;
+    font-size:clamp(68px, 11vw, 188px); line-height:.92;
+    letter-spacing:-.035em; color:var(--ink);
+    text-shadow:0 30px 80px rgba(0,0,0,.55);
+  }
+  h1.display .it{font-style:italic; color:var(--lav)}
+  .dek{
+    margin-top:34px; max-width:620px;
+    font-size:18px; font-weight:300; line-height:1.55;
+    color:var(--mute);
+  }
+  .hero-bot{display:flex; justify-content:space-between; align-items:flex-end; font-size:11px; letter-spacing:.3em; text-transform:uppercase; color:var(--mute)}
+  .scroll-hint{display:flex; align-items:center; gap:12px}
+  .scroll-hint span{display:inline-block; width:1px; height:36px; background:linear-gradient(to bottom, var(--mute), transparent); animation:drop 2.2s ease-in-out infinite}
+  @keyframes drop{0%,100%{transform:scaleY(.2); transform-origin:top} 50%{transform:scaleY(1)}}
+
+  /* ============ S2 AUTO TAGS ============ */
+  .s-tags{padding:22vh 48px 22vh; display:grid; grid-template-columns:1fr 1.1fr; gap:80px; align-items:center}
+  .giant{
+    font-family:var(--serif); font-weight:400; font-style:italic;
+    font-size:clamp(260px, 38vw, 560px); line-height:.85;
+    letter-spacing:-.06em;
+    background:linear-gradient(180deg, var(--ink) 0%, var(--lav) 55%, rgba(167,139,250,.25) 100%);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+    filter:drop-shadow(0 40px 80px rgba(167,139,250,.25));
+    position:relative;
+  }
+  .giant sup{font-size:.16em; font-style:normal; font-family:var(--sans); font-weight:500; letter-spacing:.3em; color:var(--mute); vertical-align:top; margin-left:18px}
+  .tags-wrap .label{margin-bottom:24px; display:block}
+  .tags-wrap h2{font-family:var(--serif); font-size:44px; letter-spacing:-.02em; font-weight:400; line-height:1.15; margin-bottom:36px}
+  .tags-wrap h2 em{font-style:italic; color:var(--mint)}
+  .chips{display:flex; flex-wrap:wrap; gap:12px 14px; max-width:640px}
+  .chip{
+    font-size:13px; letter-spacing:.04em; font-weight:400;
+    padding:10px 18px; border-radius:999px;
+    color:var(--ink); background:rgba(245,243,255,.04);
+    border:1px solid rgba(245,243,255,.14);
+    backdrop-filter:blur(10px);
+    transition:all .4s ease;
+  }
+  .chip:hover{background:rgba(167,139,250,.14); border-color:var(--lav); transform:translateY(-2px)}
+  .chip:nth-child(1){color:var(--lav); border-color:rgba(167,139,250,.35)}
+  .chip:nth-child(4){color:var(--mint); border-color:rgba(100,255,218,.35)}
+  .chip:nth-child(7){color:var(--coral); border-color:rgba(255,138,128,.35)}
+
+  /* ============ S3-S5 FIELDS ============ */
+  .field{
+    padding:24vh 48px; display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center;
+    min-height:96vh;
+  }
+  .field.flip{grid-template-columns:1fr 1fr}
+  .field.flip .fname{order:2}
+  .fname{
+    font-family:var(--serif); font-style:italic; font-weight:400;
+    font-size:clamp(82px, 9.5vw, 148px); line-height:.95; letter-spacing:-.035em;
+    position:relative;
+  }
+  .fname::after{
+    content:""; position:absolute; left:0; bottom:-24px; width:56px; height:2px;
+    background:currentColor; opacity:.5;
+  }
+  .fvalue{font-size:22px; font-weight:300; line-height:1.55; color:var(--ink); max-width:520px}
+  .fvalue .num{font-family:var(--serif); font-style:italic; color:var(--mute); margin-right:18px; font-size:15px; letter-spacing:.2em}
+  .fvalue strong{font-weight:500}
+  .fmeta{margin-top:28px; font-size:12px; letter-spacing:.24em; text-transform:uppercase; color:var(--mute)}
+  .field.lav .fname{color:var(--lav)}
+  .field.mint .fname{color:var(--mint)}
+  .field.coral .fname{color:var(--coral)}
+  .field.pearl .fname{color:#e8e4ff}
+  .field.aurora .fname{background:linear-gradient(120deg, var(--lav), var(--mint) 50%, var(--coral)); -webkit-background-clip:text; background-clip:text; color:transparent}
+  .swatches{display:flex; gap:10px; margin-top:22px}
+  .sw{width:44px; height:44px; border-radius:50%; box-shadow:0 20px 60px rgba(0,0,0,.5), inset 0 0 0 1px rgba(255,255,255,.08)}
+  .quote-block{
+    margin-top:20px; padding:18px 22px; border-left:2px solid rgba(245,243,255,.2);
+    font-family:var(--serif); font-style:italic; font-size:19px; color:var(--mute);
+  }
+  .quote-block span{color:var(--ink)}
+
+  /* ============ S6 WATERMARK ============ */
+  .s-mark{
+    padding:28vh 48px; display:grid; place-items:center; text-align:center; min-height:90vh;
+  }
+  .s-mark .label{margin-bottom:40px}
+  .mark-quote{
+    font-family:var(--serif); font-style:italic; font-weight:400;
+    font-size:clamp(40px, 6vw, 84px); line-height:1.1; letter-spacing:-.02em;
+    max-width:1100px; color:var(--ink);
+  }
+  .mark-quote em{color:var(--coral); font-style:italic}
+  .mark-sig{margin-top:56px; font-size:11px; letter-spacing:.42em; text-transform:uppercase; color:var(--mute)}
+
+  /* ============ S7 COPY ============ */
+  .s-copy{
+    min-height:100vh; display:grid; place-items:center; padding:10vh 48px;
+    position:relative; overflow:hidden;
+  }
+  .s-copy::before{
+    content:""; position:absolute; inset:0;
+    background:radial-gradient(40vw 40vw at 50% 50%, rgba(167,139,250,.18), transparent 60%);
+  }
+  .copy-stage{position:relative; z-index:1; text-align:center}
+  .copy-stage .label{display:block; margin-bottom:40px}
+  .copy-btn{
+    width:260px; height:260px; border-radius:50%; border:none;
+    cursor:pointer; position:relative;
+    font-family:var(--serif); font-style:italic; font-weight:400;
+    font-size:34px; color:var(--bg);
+    background:linear-gradient(135deg, #f5f3ff 0%, #c8b8ff 55%, #a78bfa 100%);
+    box-shadow:
+      0 40px 120px rgba(167,139,250,.45),
+      0 0 0 1px rgba(255,255,255,.3) inset,
+      0 -20px 60px rgba(100,255,218,.25) inset;
+    transition:transform .4s cubic-bezier(.2,.7,.2,1), box-shadow .4s;
+  }
+  .copy-btn:hover{transform:scale(1.04); box-shadow:0 50px 150px rgba(167,139,250,.6), 0 0 0 1px rgba(255,255,255,.5) inset, 0 -20px 60px rgba(100,255,218,.35) inset}
+  .copy-btn::before{
+    content:""; position:absolute; inset:-18px; border-radius:50%;
+    border:1px solid rgba(167,139,250,.4);
+    animation:pulse 3s ease-in-out infinite;
+  }
+  .copy-btn::after{
+    content:""; position:absolute; inset:-36px; border-radius:50%;
+    border:1px solid rgba(167,139,250,.18);
+    animation:pulse 3s ease-in-out .6s infinite;
+  }
+  @keyframes pulse{0%,100%{transform:scale(1); opacity:.7} 50%{transform:scale(1.08); opacity:.2}}
+  .copy-hint{margin-top:42px; color:var(--mute); font-size:13px; letter-spacing:.2em; text-transform:uppercase}
+  .copy-hint code{font-family:var(--serif); font-style:italic; color:var(--ink); text-transform:none; letter-spacing:0; font-size:15px}
+
+  .toast{
+    position:fixed; left:50%; bottom:56px; transform:translate(-50%, 40px);
+    background:rgba(12,12,36,.92); backdrop-filter:blur(20px);
+    border:1px solid rgba(100,255,218,.4);
+    color:var(--ink); padding:18px 26px; border-radius:14px;
+    font-size:13px; letter-spacing:.14em; text-transform:uppercase;
+    box-shadow:0 30px 80px rgba(0,0,0,.6), 0 0 40px rgba(100,255,218,.18);
+    opacity:0; pointer-events:none; transition:all .5s cubic-bezier(.2,.7,.2,1);
+    z-index:99;
+  }
+  .toast.on{opacity:1; transform:translate(-50%, 0)}
+  .toast .dot{display:inline-block; width:7px; height:7px; border-radius:50%; background:var(--mint); margin-right:12px; vertical-align:middle; box-shadow:0 0 12px var(--mint)}
+
+  footer{padding:48px; text-align:center; color:var(--mute); font-size:11px; letter-spacing:.3em; text-transform:uppercase; position:relative; z-index:1}
+
+  @media(max-width:820px){
+    .hero{padding:28px 22px}
+    .s-tags, .field, .field.flip{grid-template-columns:1fr; gap:40px; padding:14vh 22px}
+    .field.flip .fname{order:0}
+    .s-mark, .s-copy{padding:14vh 22px}
+    .copy-btn{width:220px; height:220px; font-size:28px}
+  }
+</style>
+</head>
+<body>
+
+<!-- grain -->
+<svg class="grain" xmlns="http://www.w3.org/2000/svg">
+  <filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .5 0"/></filter>
+  <rect width="100%" height="100%" filter="url(#n)"/>
+</svg>
+<div class="spot" id="spot"></div>
+
+<!-- S1 HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-top reveal">
+    <div class="brand">Prompt <em>Atlas</em></div>
+    <div class="label">Vol. 01 · Composition</div>
+  </div>
+  <div class="hero-mid reveal">
+    <div class="kicker">A Cinematic Prompt Specimen</div>
+    <h1 class="display">The Prompt<br><span class="it">Atlas</span> Poster</h1>
+    <p class="dek">A self-referential demonstration of atomic composition — one prompt, seven signals, rendered as a single editorial frame.</p>
+  </div>
+  <div class="hero-bot reveal">
+    <div class="scroll-hint"><span></span>Scroll</div>
+    <div>№ 001 · 2026.04</div>
+  </div>
+</section>
+
+<!-- S2 AUTO TAGS -->
+<section class="s-tags">
+  <div class="giant reveal">7<sup>TAGS</sup></div>
+  <div class="tags-wrap reveal">
+    <span class="label">Auto Signals</span>
+    <h2>Seven atoms, <em>detected</em> automatically from the composition below.</h2>
+    <div class="chips">
+      <span class="chip">editorial</span>
+      <span class="chip">3d-render</span>
+      <span class="chip">16:9</span>
+      <span class="chip">thinking-on</span>
+      <span class="chip">watermark-integrated</span>
+      <span class="chip">aurora-bg</span>
+      <span class="chip">cjk-ready</span>
+    </div>
+  </div>
+</section>
+
+<!-- S3 INTENT -->
+<section class="field lav">
+  <div class="fname reveal">Intent.</div>
+  <div class="reveal">
+    <span class="label">Field 01 <span class="swatch" style="background:var(--lav)"></span></span>
+    <p class="fvalue" style="margin-top:18px"><span class="num">i.</span>An <strong>editorial magazine cover</strong> poster — self-referential, showing how atomic prompt parts compose into one deliberate image.</p>
+    <div class="fmeta">Primary axis · Editorial</div>
+  </div>
+</section>
+
+<!-- S4 STYLE -->
+<section class="field mint flip">
+  <div class="fname reveal">Style.</div>
+  <div class="reveal" style="text-align:right">
+    <span class="label">Field 02 <span class="swatch" style="background:var(--mint)"></span></span>
+    <p class="fvalue" style="margin-top:18px; margin-left:auto"><span class="num">ii.</span><strong>Wired editorial</strong> crossed with <strong>glass morphism</strong> — luminous surfaces, periodic-table tiles, sharp serif chrome.</p>
+    <div class="fmeta">Secondary axis · Glass</div>
+  </div>
+</section>
+
+<!-- S5 TEXT -->
+<section class="field pearl">
+  <div class="fname reveal">Text.</div>
+  <div class="reveal">
+    <span class="label">Field 03 <span class="swatch" style="background:#e8e4ff"></span></span>
+    <p class="fvalue" style="margin-top:18px">
+      <span class="num">iii.</span><strong>"Prompt Atlas"</strong><br>
+      <span style="font-family:var(--serif); font-style:italic; color:var(--mute)">提示词图谱</span><br>
+      <span style="color:var(--mute)">Compose Atoms · Generate Better Images</span>
+    </p>
+    <div class="quote-block">Three lines, three voices: <span>Latin chrome</span>, <span>CJK serif</span>, <span>tagline</span>.</div>
+  </div>
+</section>
+
+<!-- S6 COLOR -->
+<section class="field aurora flip">
+  <div class="fname reveal">Color.</div>
+  <div class="reveal" style="text-align:right">
+    <span class="label">Field 04 <span class="swatch" style="background:var(--lav)"></span></span>
+    <p class="fvalue" style="margin-top:18px; margin-left:auto"><span class="num">iv.</span>Deep purple grounding · cyan-green conducting · warm orange punctuating · aurora veiling the frame.</p>
+    <div class="swatches" style="justify-content:flex-end">
+      <div class="sw" style="background:#1a0f3a"></div>
+      <div class="sw" style="background:var(--lav)"></div>
+      <div class="sw" style="background:var(--mint)"></div>
+      <div class="sw" style="background:var(--coral)"></div>
+    </div>
+  </div>
+</section>
+
+<!-- S7 WATERMARK POETIC -->
+<section class="s-mark">
+  <span class="label reveal">Field 05 · Watermark</span>
+  <p class="mark-quote reveal">Signed into the glass, not stamped over it —<br><em>"Prompt Atlas · 2026"</em> at thirty percent, an honest breath.</p>
+  <div class="mark-sig reveal">Integrated · 30% opacity · never a sticker</div>
+</section>
+
+<!-- S8 COPY -->
+<section class="s-copy">
+  <div class="copy-stage">
+    <span class="label reveal">Take it with you</span>
+    <button class="copy-btn reveal" id="copyBtn" aria-label="Copy prompt">copy<br><em>prompt</em></button>
+    <div class="copy-hint reveal">Hands <code>the full prompt</code> to your clipboard</div>
+  </div>
+</section>
+
+<footer>Prompt Atlas · 2026 · Poster Specimen № 001</footer>
+
+<div class="toast" id="toast"><span class="dot"></span>Prompt copied to clipboard</div>
+
+<!-- hidden prompt payload -->
+<script type="text/plain" id="mdPrompt">Create a high-end editorial magazine cover poster in 16:9 cinematic landscape. A luminous floating 3D crystal sphere sits center, inside it periodic-table element tiles connected by colored energy filaments. Top chrome serif title renders exactly: "Prompt Atlas". Below it CJK serif renders exactly: "提示词图谱". Under the sphere renders exactly: "Compose Atoms · Generate Better Images". Watermark "Prompt Atlas · 2026" integrated on the glass base, 25-35% opacity. 4K, no extra text.</script>
+
+<script>
+  // IntersectionObserver reveal
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold:0.12, rootMargin:"0px 0px -8% 0px" });
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // Cursor spotlight
+  const spot = document.getElementById('spot');
+  window.addEventListener('pointermove', (e)=>{
+    spot.style.setProperty('--mx', e.clientX+'px');
+    spot.style.setProperty('--my', e.clientY+'px');
+  }, { passive:true });
+
+  // Copy
+  const btn = document.getElementById('copyBtn');
+  const toast = document.getElementById('toast');
+  const prompt = document.getElementById('mdPrompt').textContent.trim();
+  btn.addEventListener('click', async ()=>{
+    try{
+      await navigator.clipboard.writeText(prompt);
+      toast.classList.add('on');
+      btn.style.background = 'linear-gradient(135deg,#64ffda 0%, #a78bfa 100%)';
+      setTimeout(()=>{ toast.classList.remove('on'); btn.style.background=''; }, 2400);
+    }catch(err){
+      toast.textContent = 'Copy failed — select manually';
+      toast.classList.add('on');
+      setTimeout(()=>toast.classList.remove('on'), 2400);
+    }
+  });
+</script>
+</body>
+</html>
