@@ -1,0 +1,705 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GPT Image 2 · 72h 全景专题</title>
+<style>
+:root {
+  --bg: #050507;
+  --bg-glass: rgba(0, 0, 0, 0.30);
+  --bg-elev: rgba(255, 255, 255, 0.04);
+  --accent: #a78bfa;
+  --accent-strong: #8b5cf6;
+  --accent-12: rgba(167, 139, 250, 0.12);
+  --accent-20: rgba(167, 139, 250, 0.20);
+  --warm: #f97316;
+  --green: #34d399;
+  --red: #f87171;
+  --yellow: #fbbf24;
+  --blue: #38bdf8;
+  --pink: #f472b6;
+  --teal: #2dd4bf;
+  --border: rgba(255,255,255,0.13);
+  --border-soft: rgba(255,255,255,0.06);
+  --text: rgba(255,255,255,0.96);
+  --text-sub: rgba(255,255,255,0.80);
+  --text-60: rgba(255,255,255,0.60);
+  --text-40: rgba(255,255,255,0.40);
+}
+*{box-sizing:border-box} html,body{margin:0;padding:0}
+body{
+  background:var(--bg);
+  background-image:
+    radial-gradient(ellipse 80% 25% at 50% 0%, rgba(139,92,246,0.22), transparent 60%),
+    radial-gradient(ellipse 50% 20% at 80% 0%, rgba(167,139,250,0.12), transparent 60%),
+    radial-gradient(ellipse 60% 20% at 50% 100%, rgba(124,58,237,0.10), transparent 60%),
+    radial-gradient(ellipse 40% 15% at 20% 100%, rgba(249,115,22,0.06), transparent 60%);
+  background-attachment:fixed;
+  color:var(--text-sub); font:18px/1.65 -apple-system,"PingFang SC","Microsoft Yahei",sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+
+.shell{display:grid; grid-template-columns:260px 1fr; gap:32px; max-width:1560px; margin:0 auto; padding:40px 32px 80px}
+
+.nav{position:sticky; top:40px; align-self:start; max-height:calc(100vh - 80px); overflow-y:auto;
+  background:var(--bg-glass); backdrop-filter:blur(40px) saturate(2); -webkit-backdrop-filter:blur(40px) saturate(2);
+  border:1px solid var(--border); border-radius:20px; padding:20px 14px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.1), 0 8px 32px rgba(0,0,0,0.4);}
+.nav h3{margin:4px 10px 14px; font-size:12px; letter-spacing:0.14em; color:var(--text-40); font-weight:700; text-transform:uppercase}
+.nav-item{display:flex; align-items:center; gap:12px; padding:10px 12px; margin-bottom:4px; border-radius:12px;
+  color:var(--text-sub); text-decoration:none; font-size:15px; cursor:pointer; transition:background .2s, color .2s; border:1px solid transparent}
+.nav-item:hover{background:var(--accent-12); color:var(--text)}
+.nav-item.active{background:var(--accent-12); color:var(--text); border-color:var(--accent-20)}
+.nav-item .emoji{font-size:20px}
+.nav-item .count{margin-left:auto; font-size:12px; color:var(--text-40); font-variant-numeric:tabular-nums}
+
+.main{min-width:0}
+
+.hero{background:var(--bg-glass); backdrop-filter:blur(40px) saturate(2); -webkit-backdrop-filter:blur(40px) saturate(2);
+  border:1px solid var(--border); border-radius:24px; padding:44px 40px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.1), 0 8px 32px rgba(0,0,0,0.4); margin-bottom:32px}
+.hero .eyebrow{font-size:13px; color:var(--accent); font-weight:700; text-transform:uppercase; letter-spacing:0.14em; margin-bottom:14px}
+.hero h1{font-size:56px; font-weight:800; letter-spacing:-0.03em; line-height:1.05; color:var(--text); margin:0 0 14px}
+.hero .tagline{font-size:20px; color:var(--text-sub); margin:0 0 22px}
+.hero .stats{display:flex; gap:16px; flex-wrap:wrap}
+.hero .stat{padding:10px 18px; border-left:3px solid var(--accent); background:var(--accent-12); border-radius:0 10px 10px 0}
+.hero .stat .num{font-size:26px; font-weight:700; color:var(--text); display:block; line-height:1.1; font-variant-numeric:tabular-nums; letter-spacing:-0.02em}
+.hero .stat .lbl{font-size:11.5px; color:var(--text-60); text-transform:uppercase; letter-spacing:0.08em}
+
+.sec{margin-top:56px; scroll-margin-top:20px}
+.sec-head{display:flex; align-items:baseline; gap:16px; padding-bottom:16px; margin-bottom:24px; border-bottom:1px solid var(--border-soft)}
+.sec-head .emoji{font-size:40px; line-height:1}
+.sec-head h2{margin:0; font-size:32px; font-weight:700; letter-spacing:-0.02em; color:var(--text)}
+.sec-head .count{margin-left:auto; font-size:13px; color:var(--text-40); font-variant-numeric:tabular-nums; padding:4px 12px; background:var(--bg-elev); border-radius:999px; border:1px solid var(--border-soft)}
+
+.grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(340px, 1fr)); gap:16px}
+.card{background:var(--bg-glass); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px);
+  border:1px solid var(--border); border-radius:16px; padding:20px 22px; transition:transform .2s, border-color .2s, box-shadow .2s;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.06); display:flex; flex-direction:column; gap:10px}
+.card:hover{transform:translateY(-2px); border-color:var(--accent-20); box-shadow:0 12px 36px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1)}
+
+.card .tag-row{display:flex; flex-wrap:wrap; gap:6px; margin-bottom:2px}
+.tag{font-size:11px; padding:3px 9px; border-radius:999px; border:1px solid; font-weight:600; letter-spacing:0.02em}
+.t-official{color:var(--accent); background:var(--accent-12); border-color:var(--accent-20)}
+.t-viral{color:var(--pink); background:rgba(244,114,182,0.12); border-color:rgba(244,114,182,0.3)}
+.t-creative{color:var(--yellow); background:rgba(251,191,36,0.12); border-color:rgba(251,191,36,0.3)}
+.t-news{color:var(--blue); background:rgba(56,189,248,0.12); border-color:rgba(56,189,248,0.3)}
+.t-warn{color:var(--warm); background:rgba(249,115,22,0.12); border-color:rgba(249,115,22,0.3)}
+.t-global{color:var(--teal); background:rgba(45,212,191,0.12); border-color:rgba(45,212,191,0.3)}
+.t-resource{color:var(--green); background:rgba(52,211,153,0.12); border-color:rgba(52,211,153,0.3)}
+
+.card h3{margin:0; font-size:18px; font-weight:700; color:var(--text); letter-spacing:-0.01em; line-height:1.3}
+.card .big{font-size:28px; font-weight:800; color:var(--accent); font-variant-numeric:tabular-nums; letter-spacing:-0.02em; line-height:1.1}
+.card p{margin:0; font-size:14.5px; line-height:1.55; color:var(--text-sub)}
+.card .demo{font-size:13px; color:var(--text-60); background:var(--bg-elev); padding:10px 12px; border-radius:8px; border:1px solid var(--border-soft); line-height:1.5}
+.card .quote{font-size:13.5px; color:var(--text-60); font-style:italic; border-left:3px solid var(--accent-20); padding:6px 12px; margin:0}
+.card .src{margin-top:auto; padding-top:8px; border-top:1px dashed var(--border-soft); font-size:11.5px; color:var(--text-40)}
+.card .src a{color:var(--accent); text-decoration:none; border-bottom:1px dashed var(--accent-20)}
+.card .src a:hover{border-bottom-style:solid}
+
+.highlight{color:var(--yellow); font-weight:700}
+.metric{color:var(--accent); font-weight:700; font-variant-numeric:tabular-nums}
+.em-red{color:var(--red); font-weight:600}
+.em-pink{color:var(--pink); font-weight:600}
+
+.rec{background:linear-gradient(135deg, var(--accent-12), rgba(244,114,182,0.08));
+  border:1px solid var(--accent-20); border-radius:20px; padding:28px; margin:56px 0 0;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.1), 0 8px 32px rgba(0,0,0,0.4)}
+.rec h2{margin:0 0 14px; font-size:28px; color:var(--text); letter-spacing:-0.02em}
+.rec p{font-size:16px; color:var(--text-sub); margin:0 0 20px}
+.rec-items{display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:14px}
+.rec-item{padding:16px; background:var(--bg-glass); border:1px solid var(--border); border-radius:12px}
+.rec-item .rank{font-size:24px; font-weight:800; color:var(--accent); letter-spacing:-0.02em}
+.rec-item h4{margin:4px 0 6px; font-size:16px; color:var(--text); font-weight:700}
+.rec-item p{font-size:13.5px; color:var(--text-60); margin:0; line-height:1.5}
+
+.foot{margin-top:64px; padding:24px; text-align:center; color:var(--text-40); font-size:13px; border-top:1px solid var(--border-soft)}
+
+@media(max-width:1024px){
+  .shell{grid-template-columns:1fr}
+  .nav{position:static; max-height:none}
+  .hero h1{font-size:40px}
+}
+</style>
+</head>
+<body>
+<div class="shell">
+
+<aside class="nav">
+  <h3>7 大板块</h3>
+  <div id="nav-list"></div>
+</aside>
+
+<main class="main">
+
+<section class="hero">
+  <div class="eyebrow">GPT Image 2 Hub · 72h 全景调研 · 2026-04-22 · 10 路并行 subagent 调研</div>
+  <h1>GPT Image 2<br>72h 全景专题</h1>
+  <p class="tagline">Sam Altman 亲自主持 · 称"从 GPT-3 到 GPT-5 的跃迁" · LMArena 史上最大代差 +242 分 · 开局即王座</p>
+  <div class="stats">
+    <div class="stat"><span class="num">1512 Elo</span><span class="lbl">LMArena 7 类全 #1</span></div>
+    <div class="stat"><span class="num">+242</span><span class="lbl">史上最大 #1 vs #2 差距</span></div>
+    <div class="stat"><span class="num">#PresidentTest</span><span class="lbl">24h · 50 万提及</span></div>
+    <div class="stat"><span class="num">99%</span><span class="lbl">多语言文字准确率</span></div>
+    <div class="stat"><span class="num">2x · &lt;3s</span><span class="lbl">比上代速度</span></div>
+    <div class="stat"><span class="num">16</span><span class="lbl">参考图一次融合</span></div>
+    <div class="stat"><span class="num">32K</span><span class="lbl">字符 prompt(DALL-E 的 8x)</span></div>
+    <div class="stat"><span class="num">48+</span><span class="lbl">支持语言</span></div>
+  </div>
+</section>
+
+<!-- 1 · 模型能力 -->
+<section class="sec" id="capabilities">
+  <div class="sec-head"><span class="emoji">🔥</span><h2>模型能力 · 牛逼的</h2><span class="count">15 条</span></div>
+  <div class="grid">
+    <div class="card">
+      <div class="tag-row"><span class="tag t-official">独家</span><span class="tag t-official">架构</span></div>
+      <h3>Thinking Mode · 推理 + web search + 自检</h3>
+      <p>先推理 · 再画。写字前查拼写 · 画图前算数 · 画地图前查地理。<strong class="highlight">业界首个</strong>把 o1/o3 推理接到图像生成。一次出 8 张候选 · 模型 CoT 选最佳。</p>
+      <div class="src">Source: <a href="https://thenewstack.io/chatgpt-images-20-openai/" target="_blank">The New Stack</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-official">独家</span><span class="tag t-official">极限</span></div>
+      <h3>米粒级微缩刻字</h3>
+      <p>生成一堆米粒 · <strong class="highlight">只在其中一粒</strong>刻"GPT image 2"字样 · 其他保持空白。像素级定位 + 微观文字 + 选一个的语义。DALL-E 3 / MJ 全挂。</p>
+      <div class="src">Source: <a href="https://eu.36kr.com/en/p/3777221631150343" target="_blank">36kr · Altman 发布会</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-official">独家</span><span class="tag t-official">CJK</span></div>
+      <h3>99% 多语言 · 含 Hindi / Bengali</h3>
+      <p>CJK · Hindi · Bengali · Telugu · Devanagari · Cyrillic · Arabic · Greek — 同屏 <strong class="highlight">9 脚本共存不串不糊</strong>。Arena 文字子分类较上代暴涨 <span class="metric">+316 Elo</span>。</p>
+      <div class="src">Source: <a href="https://venturebeat.com/technology/openais-chatgpt-images-2-0-is-here-and-it-does-multilingual-text-full-infographics-slides-maps-even-manga-seemingly-flawlessly" target="_blank">VentureBeat</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-official">独家</span><span class="tag t-official">一致性</span></div>
+      <h3>一次出 8 张 · 角色跨帧一致</h3>
+      <p>Thinking mode 单请求 8 帧 · 角色 / 物品 / 风格全稳。8 连拍第 2 张起 <strong class="highlight">input cost 75% 折扣</strong>($8→$2)。portrait 子项 +296 Elo。</p>
+      <div class="src">Source: <a href="https://fal.ai/gpt-image-2" target="_blank">fal.ai Arena</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-official">独家</span><span class="tag t-official">编辑</span></div>
+      <h3>多轮编辑 · 免 mask 自动分割</h3>
+      <p>"换黄昏 → 去掉左边人 → 字变大" · 其他元素原样。传统 inpainting 要画蒙版。Arena single-edit 1513 · multi-edit 1464 · <strong class="highlight">edit 子项 Nano Banana +125</strong>。</p>
+      <div class="src">Source: <a href="https://officechai.com/ai/chatgpt-images-2-0-tops-arena-with-big-jump-over-nano-banana-2/" target="_blank">OfficeChai</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-official">独家</span></div>
+      <h3>16 张参考图联合编辑</h3>
+      <p>API 单次塞 16 张 ref · file_id / URL。<strong class="highlight">5 维组合</strong>(角色 + 场景 + 物件 + 风格 + 光源)。DALL-E 3 只 1 张 · MJ --cref 只人脸。</p>
+      <div class="src">Source: <a href="https://developers.openai.com/cookbook/examples/multimodal/image-gen-models-prompting-guide" target="_blank">OpenAI Cookbook</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-official">世界知识</span></div>
+      <h3>World Knowledge · 建筑 / 地理真准</h3>
+      <p>IKEA 夜景店招字体 / 立面灯光建筑师级精准;Windows UI 像素级可当真;Aztec/Maya/Inca 三帝国地图带 legend · <strong class="highlight">全市场仅 2 模型能做</strong>。</p>
+      <div class="src">Source: <a href="https://venturebeat.com/technology/openais-chatgpt-images-2-0-is-here-and-it-does-multilingual-text-full-infographics-slides-maps-even-manga-seemingly-flawlessly" target="_blank">VentureBeat</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-official">电商</span></div>
+      <h3>虚拟试衣 · 身份零漂移</h3>
+      <p>prompt 硬锁:"不改脸 / 五官 / 肤色 / 体型 / 姿态 / 身份 · 只换衣服"。电商头号痛点解决 — 以前 DALL-E 3 / MJ 换衣必变脸。</p>
+      <div class="src">Source: <a href="https://developers.openai.com/cookbook/examples/multimodal/image-gen-models-prompting-guide" target="_blank">OpenAI Cookbook</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-official">本地化</span></div>
+      <h3>图内翻译 · 保 typography 只改文字</h3>
+      <p>英文 infographic → 日文 · <strong class="highlight">字号 / 间距 / 层级 / 图标位置不动</strong>。Figma 手动换每文本框 · DALL-E 做不到。杀手级 L10n。</p>
+      <div class="src">Source: <a href="https://developers.openai.com/cookbook/examples/multimodal/image-gen-models-prompting-guide" target="_blank">OpenAI Cookbook</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-official">草图</span></div>
+      <h3>草图一键写实渲染</h3>
+      <p>铅笔草图 + "Turn this into photorealistic" · <strong class="highlight">保布局 / 地平线 / 比例</strong>。以前要 SD ControlNet 多模型串 · 这里单模一步到位。</p>
+      <div class="src">Source: <a href="https://fal.ai/learn/tools/prompting-gpt-image-2" target="_blank">fal.ai</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-official">画幅</span></div>
+      <h3>4K 分辨率 + 1:3 / 3:1 极端</h3>
+      <p>4096×4096 · 3:1 超宽(VR equirectangular)· 1:3 超长(手机故事 / 电梯海报)。DALL-E 3 封顶 1792×1024 · MJ 最大 2048。</p>
+      <div class="src">Source: <a href="https://startupfortune.com/openai-launches-gpt-image-2-with-near-perfect-text-rendering-and-twice-the-speed-of-its-predecessor/" target="_blank">Startup Fortune</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-official">版式</span></div>
+      <h3>Pitch Deck · UI · 信息图级版式</h3>
+      <p>"TAM: $42B / SAM: $8.7B / SOM: $340M"一次精确。PM 甩 screenshot · Claude Code 照图写前端 —— <strong class="highlight">图像生成成 coding agent 的 front-end</strong>。</p>
+      <div class="src">Source: <a href="https://www.latent.space/p/ainews-openai-launches-gpt-image" target="_blank">Latent Space</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-official">手写</span></div>
+      <h3>手写 · 书法 · 曲面透视文字</h3>
+      <p>医疗处方潦草 / 毛笔书法古籍 · 纸张纹理 + 墨色深浅 + <strong class="highlight">曲面/透视下不变形</strong>。"文字渲染地狱难度"被打下。</p>
+      <div class="src">Source: <a href="https://github.com/ZeroLu/awesome-gpt-image/" target="_blank">awesome-gpt-image</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-official">架构</span></div>
+      <h3>Single-pass 架构 · 2x 速度</h3>
+      <p>不再借 GPT-4o 二阶段 · 独立 single-pass · 彻底去除上代"暖黄色偏" · 推理 <strong class="highlight">&lt; 3 秒</strong>。可无限堆 text-heavy 场景(合同 / 证书 / 包装 / 标签)。</p>
+      <div class="src">Source: <a href="https://help.apiyi.com/en/gpt-image-2-leaked-features-release-guide-2026-en.html" target="_blank">Apiyi</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-official">长 prompt</span></div>
+      <h3>32K 字符 prompt · 8x DALL-E 3</h3>
+      <p>DALL-E 3 封顶 4K · GPT Image 2 支 32K · 实战 8K 内最稳。多元素叙事海报 / 复杂信息图都吃得下。</p>
+      <div class="src">Source: <a href="https://openai.com/index/introducing-chatgpt-images-2-0/" target="_blank">OpenAI 官方</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2 · 炫技爆款 -->
+<section class="sec" id="viral">
+  <div class="sec-head"><span class="emoji">🎯</span><h2>炫技爆款 · 72h viral</h2><span class="count">10 条</span></div>
+  <div class="grid">
+    <div class="card">
+      <div class="tag-row"><span class="tag t-viral">爆款</span><span class="tag t-warn">争议</span></div>
+      <h3>#PresidentTest</h3>
+      <div class="big">500,000+ 次提及</div>
+      <p>挑战生成虚构美国总统。24h X 爆款。Reddit r/ArtificialIntelligence 帖合计 <span class="metric">200 万浏览</span>。MJ / SD 被对比完败。</p>
+      <p class="demo em-red">Disinformation 研究者警告:2026 末选举季临近 · 合成媒体门槛突降。</p>
+      <div class="src">Source: <a href="https://startupfortune.com/openais-gpt-image-2-faces-its-sharpest-stress-test-yet-as-the-president-test-goes-viral/" target="_blank">Startup Fortune</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-viral">恐怖样本</span></div>
+      <h3>Satya Nadella 假截图 · "Not a Screenshot"</h3>
+      <p>OpenAI 预热期"This Is Not A Screenshot"成 teaser。发布后伪造 Nadella 举牌图广传 — 图表"Chrome 最常从 Edge 下载"。几乎无法和真实截图区分。</p>
+      <p class="quote">"把假新闻 / 假证据风险从理论变成可复现样本"</p>
+      <div class="src">Source: <a href="https://officechai.com/ai/this-is-not-a-screenshot-openai-teases-new-image-model-likely-gpt-image-2/" target="_blank">OfficeChai</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-viral">梗图</span></div>
+      <h3>Minecraft 假"Claude Opus 5 文档"</h3>
+      <div class="big">439,000 views</div>
+      <p>虚构的内部文档嵌在 Minecraft 世界内 · X 周末前爆破 43.9 万。小字文档 + 游戏 UI + world knowledge 三能力同时在线。</p>
+      <div class="src">Source: <a href="https://frontierbeat.com/2026/04/05/gpt-image-2-leaked-openai-2026/" target="_blank">Frontierbeat</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-viral">事件</span></div>
+      <h3>LMArena 三代号泄露</h3>
+      <p>发布前匿名 3 模型:<strong class="highlight">maskingtape-alpha</strong> / gaffertape-alpha / packingtape-alpha · 被网友逆推 = gpt-image-2 beta。Arena → X → Reddit/YouTube/TikTok 全线爆炸。</p>
+      <div class="src">Source: <a href="https://frontierbeat.com/2026/04/05/gpt-image-2-leaked-openai-2026/" target="_blank">Frontierbeat</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-viral">UI</span></div>
+      <h3>IKEA / Windows / YouTube 界面神还原</h3>
+      <p>IKEA 夜景店招字体 / 立面灯光 / 入口牌 建筑师级精准。Windows UI 像素级可当真截图。</p>
+      <p class="quote">Blake Robbins:"都是 AI 生成 · 但像真的 · mind-boggling"</p>
+      <div class="src">Source: <a href="https://www.latent.space/p/ainews-openai-launches-gpt-image" target="_blank">Latent Space</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-viral">官方 demo</span></div>
+      <h3>5 格中文连环漫画</h3>
+      <p>研究员 Chen Boyuan 现场生成。讲他优化 ChatGPT 中文渲染的故事:珍珠奶茶 / 香蕉贴墙 / 给 Altman 发消息 / <strong class="highlight">"稳稳接住你"自嘲 meme</strong>。中文对话气泡全准 · 跨 5 格角色一致。</p>
+      <div class="src">Source: <a href="https://venturebeat.com/technology/openais-chatgpt-images-2-0-is-here-and-it-does-multilingual-text-full-infographics-slides-maps-even-manga-seemingly-flawlessly" target="_blank">VentureBeat</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-viral">官方 demo</span></div>
+      <h3>印度 9 语言书店封面</h3>
+      <p>一张图 <strong class="highlight">9 种非拉丁脚本</strong>:Hindi / Bengali / Telugu / 梵文 / Gujarati / Arabic / Chinese 同屏 · 字形互不干扰。Adobe Firefly 也只能单脚本。</p>
+      <div class="src">Source: <a href="https://venturebeat.com/technology/openais-chatgpt-images-2-0-is-here-and-it-does-multilingual-text-full-infographics-slides-maps-even-manga-seemingly-flawlessly" target="_blank">VentureBeat</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-viral">benchmark</span></div>
+      <h3>Simon Willison 浣熊 + 火腿电台测试</h3>
+      <p>独立博主自创 Where's Waldo 变体。3840×2160 一张 ~$0.40。结论:gpt-image-1 挂 · Nano Banana 2 好 · gpt-image-2 <strong class="highlight">"从 Gemini 拿走皇冠"</strong>。彩蛋:模型自己找不到自己藏的浣熊(自我幻觉)。</p>
+      <div class="src">Source: <a href="https://simonwillison.net/2026/Apr/21/gpt-image-2/" target="_blank">Simon Willison</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-viral">早期 viral</span></div>
+      <h3>CHOI (@arrakis_ai) · "GPT Image 2 broke reality"</h3>
+      <p>最早一批 viral 样本:多语言 typography + 人像无瑕疵 · 与真照片难区分。</p>
+      <p class="quote">"HOLY: GPT Image 2 just broke reality" — 几小时内在设计师 Twitter 圈扩散</p>
+      <div class="src">Source: <a href="https://x.com/arrakis_ai/status/2045033963744633232" target="_blank">@arrakis_ai</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-viral">官方 demo</span></div>
+      <h3>日本面包店海报 · 印地菜单</h3>
+      <p>纯日文面包店海报字形无错。印地"Aloo Parata"菜单 · 多语同屏。验证 48+ 语言是真的 · 不是只支持英文改皮肤。</p>
+      <div class="src">Source: <a href="https://www.progressiverobot.com/2026/04/21/chatgpt-images-2-0-2/" target="_blank">Progressive Robot</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · 创意玩法 · 跨次元 -->
+<section class="sec" id="creative">
+  <div class="sec-head"><span class="emoji">🌀</span><h2>创意玩法 · 跨次元</h2><span class="count">17 条</span></div>
+  <div class="grid">
+    <div class="card">
+      <div class="tag-row"><span class="tag t-creative">顶级</span><span class="tag t-creative">象征</span></div>
+      <h3>Silhouette Universe · 剪影宇宙</h3>
+      <p>黑色剪影里塞入完整叙事世界 — 塔内一座城 / 门里一条时间河。<strong class="highlight">轮廓成容器而非边界</strong>。</p>
+      <p class="demo">@MrLarus · poster 级应用</p>
+      <div class="src">Source: <a href="https://github.com/ZeroLu/awesome-gpt-image" target="_blank">awesome-gpt-image</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-creative">顶级</span><span class="tag t-creative">反差</span></div>
+      <h3>宋朝朋友圈 · Song Dynasty Social Feed</h3>
+      <p>苏轼发朋友圈 · 王羲之晒书法九宫格 · 王安石留评论 · 时间戳 + 点赞数。<strong class="highlight">iOS UI 精准 + 文言 + 文化符号对撞</strong>。</p>
+      <p class="demo">@Panda20230902 · 中文圈二创爆款</p>
+      <div class="src">Source: <a href="https://github.com/ZeroLu/awesome-gpt-image" target="_blank">awesome-gpt-image</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-creative">顶级</span><span class="tag t-creative">叙事</span></div>
+      <h3>Crystal Ball Narrative · 水晶球叙事</h3>
+      <p>整部《红楼梦》/《三体》压进一颗球:底部关键场景 · 光折射聚焦顶点。<strong class="highlight">球体即叙事节拍器</strong>。</p>
+      <div class="src">Source: <a href="https://github.com/jamez-bondos/awesome-gpt4o-images" target="_blank">jamez-bondos · 7.7k ⭐</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-creative">顶级</span><span class="tag t-creative">反差</span></div>
+      <h3>名画人物 OOTD · 蒙娜丽莎小红书</h3>
+      <p>蒙娜丽莎穿 Acne Studios + NB 550 拍 OOTD 九宫格。<strong class="highlight">油画人物从画框进 Instagram</strong> · 保脸换现代造型。</p>
+      <p class="demo">@ZHO_ZHO_ZHO · 社交爆款</p>
+      <div class="src">Source: <a href="https://github.com/jamez-bondos/awesome-gpt4o-images" target="_blank">awesome-gpt4o-images</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-creative">信息</span></div>
+      <h3>Museum Catalog Disassembly · 文物拆解图鉴</h3>
+      <p>青铜鼎 / 唐三彩拆成 exploded view · 材料标注(青铜/锡比例)· 工艺编号 · 中英双语。<strong class="highlight">文物学变宜家手册</strong>。</p>
+      <div class="src">Source: <a href="https://github.com/ZeroLu/awesome-gpt-image" target="_blank">awesome-gpt-image</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-creative">高概念</span></div>
+      <h3>Hyperreal Diorama Cube · 地质剖面立方</h3>
+      <p>立方体:顶部京都樱花屋顶 · 四侧地层 / 树根 / 含水层 / 恐龙化石 / 熔岩腔 剖面。<strong class="highlight">每一面一层信息</strong>。</p>
+      <div class="src">Source: <a href="https://www.threads.com/@theaicontinuum/post/DJlZ7UhuUVf" target="_blank">@theaicontinuum</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-creative">跨次元</span></div>
+      <h3>Google Maps → 古代藏宝图</h3>
+      <p>保留卫星图路网拓扑 · 材质 / 标注 / 风玫瑰全换成 15 世纪羊皮纸。<strong class="highlight">"Here Be Dragons"涂鸦 + 火烧边 + 蜡封</strong>。</p>
+      <p class="demo">房地产营销 / 旅游纪念品 实用玩法</p>
+      <div class="src">Source: <a href="https://github.com/jamez-bondos/awesome-gpt4o-images" target="_blank">@umesh_ai</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-creative">反差</span></div>
+      <h3>2D 手绘 × 3D 实拍碰撞</h3>
+      <p>儿童蜡笔画的 stick figure 举着一个 <strong class="highlight">8K 实拍苹果</strong> · 苹果投真阴影到画纸上。两种渲染层精确隔离。</p>
+      <div class="src">Source: <a href="https://github.com/jamez-bondos/awesome-gpt4o-images" target="_blank">@umesh_ai</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-creative">企业</span></div>
+      <h3>8 格产品发布漫画 · 元叙事</h3>
+      <p>少年漫画 8 格分镜:主角举"GPT-IMAGE-2" glow 球 · 拟声词 · 对白框。<strong class="highlight">thinking mode 8 格一致性独占</strong>。B 端直接下单。</p>
+      <div class="src">Source: <a href="https://venturebeat.com/technology/openais-chatgpt-images-2-0-is-here" target="_blank">VentureBeat</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-creative">极客</span></div>
+      <h3>JSON 名片 · Code-as-Object</h3>
+      <p>烫金名片内容 = JSON 代码块:<code>{"name":"...","role":"CTO","skills":[...]}</code>。<strong class="highlight">语法高亮 = 烫金排版</strong>。开发者社区必转。</p>
+      <div class="src">Source: <a href="https://github.com/jamez-bondos/awesome-gpt4o-images" target="_blank">@umesh_ai</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-creative">玩梗</span></div>
+      <h3>Hitman 关卡 · 办公室游戏化</h3>
+      <p>俯视 OpenAI HQ · NPC 图标 + 巡逻路径 + 任务目标 UI。<strong class="highlight">"STEAL GPT-6"</strong> · 消音手枪 / 伪装衣橱 / 警戒表。</p>
+      <p class="demo">@flowersslop · 公司玩梗 / HR 招聘</p>
+      <div class="src">Source: <a href="https://github.com/ZeroLu/awesome-gpt-image" target="_blank">awesome-gpt-image</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-creative">VR</span></div>
+      <h3>360° Equirectangular 全景</h3>
+      <p>2:1 比例 · 直接生成 VR 头显可用的全景。<strong class="highlight">上传 YouTube 360 的 AI 原生场景</strong>。</p>
+      <p class="demo">@LexnLin · GPT Image 2 独家画幅</p>
+      <div class="src">Source: <a href="https://github.com/ZeroLu/awesome-gpt-image" target="_blank">awesome-gpt-image</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-creative">科普</span></div>
+      <h3>Glowing Anatomy Overlay · 霓虹解剖</h3>
+      <p>运动员跑步照叠发光数据层:红色心率 · 青色呼吸 · 绿色肌肉 · 橙色关节应力。<strong class="highlight">Apple Watch 广告级</strong>。</p>
+      <div class="src">Source: <a href="https://github.com/jamez-bondos/awesome-gpt4o-images" target="_blank">@umesh_ai</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-creative">商业</span></div>
+      <h3>Sybille Saint Louvent · Gucci 真实下单</h3>
+      <p>AI 艺术家做 Gucci / Balenciaga 虚构广告博粉 · 然后 <strong class="highlight">Gucci 真找她下单官方 AI campaign</strong>。定义新职业 AI Art Director。</p>
+      <div class="src">Source: <a href="https://futurists.in/10-best-advertising-campaigns-of-2026/" target="_blank">Futurists.in</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-creative">幽默</span></div>
+      <h3>IKEA 万物化说明书</h3>
+      <p>"一生五十年"/"一段感情"/"一碗酸辣汤" 画成宜家说明书。六角扳手 · 步骤箭头 · 小人表情全保留 · <strong class="highlight">装配的是抽象</strong>。</p>
+      <p class="demo">Ethan Mollick / udart · 幽默 + 信息设计教科书</p>
+      <div class="src">Source: <a href="https://udart.substack.com/p/now-the-ai-creates-fake-ikea-instructions" target="_blank">udart</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-creative">联网</span></div>
+      <h3>New Yorker 风实时数据插画</h3>
+      <p>"今天科技股走势" → 模型联网查真数据 · 画成 The New Yorker 长条编辑插图(每股一个小人跑在趋势山)。<strong class="highlight">生图 → 可视化记者</strong>。</p>
+      <div class="src">Source: <a href="https://cloud.google.com/blog/products/ai-machine-learning/ultimate-prompting-guide-for-nano-banana" target="_blank">Google Cloud</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-creative">独家</span></div>
+      <h3>多参考融合 · "你在吉卜力"</h3>
+      <p>自拍 + 吉卜力美术 + 后海老街 → <strong class="highlight">你在吉卜力世界散步</strong>。脸保真 + 画风迁移 + 场景合成三合一。16 张 ref 独家能力。</p>
+      <div class="src">Source: 社区 meme 趋势</div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · 最近热点 -->
+<section class="sec" id="news">
+  <div class="sec-head"><span class="emoji">📰</span><h2>最近热点 · 讨论</h2><span class="count">14 条</span></div>
+  <div class="grid">
+    <div class="card">
+      <div class="tag-row"><span class="tag t-news">发布</span></div>
+      <h3>Altman 直播 · "GPT-3 → GPT-5 级飞跃"</h3>
+      <p>2026-04-21 12PM PT · Altman + 6 研究员。API / ChatGPT / Azure Foundry 同日上线。Codex Labs 企业级编码同发 · <strong class="highlight">双产品齐发 · "OpenAI 攻势周"</strong>。</p>
+      <div class="src">Source: <a href="https://openai.com/index/introducing-chatgpt-images-2-0/" target="_blank">OpenAI</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-news">对比</span><span class="tag t-news">碾压</span></div>
+      <h3>LMArena +242 Elo 史上最大差距</h3>
+      <p>gpt-image-2 <span class="metric">1512</span> vs Nano Banana 2 <span class="metric">1271</span> · Arena 官方称"史上最大 #1 vs #2 gap"。Google 2 月刚发 Nano Banana 2(Elo 1360)以为稳坐 · <strong class="highlight">两个月被掀桌</strong>。</p>
+      <div class="src">Source: <a href="https://officechai.com/ai/chatgpt-images-2-0-tops-arena-with-big-jump-over-nano-banana-2/" target="_blank">OfficeChai</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-news">商业</span></div>
+      <h3>剑指 Google · B2B 战开打</h3>
+      <p>The Information 定性:gpt-image-2 是对 Gemini 图像线的 <strong class="highlight">直接狙击</strong>。Azure Foundry 同日集成 · 企业采购 24h 打开 · Microsoft Stack 一条龙。</p>
+      <div class="src">Source: <a href="https://www.theinformation.com/newsletters/ai-agenda/openai-takes-aim-google-new-image-model" target="_blank">The Information</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-news">股价</span></div>
+      <h3>Adobe +2% 反应 · 图库 Shutterstock 承压</h3>
+      <p>Adobe 当天发 CX Enterprise AI 平台反制 · 股价 premarket +2% · <strong class="highlight">已较峰值跌 46%</strong>。Shutterstock 图库经济临界点话题再起。</p>
+      <div class="src">Source: <a href="https://www.gurufocus.com/news/8803442/adobe-adbe-unveils-ai-platform-shares-rise-in-premarket-trading" target="_blank">GuruFocus</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-news">行业</span><span class="tag t-warn">焦虑</span></div>
+      <h3>设计师"失业 5 年内"大辩论</h3>
+      <p>CreativeBloq 头条 <em>"This is terrifying"</em>。部分设计师 <strong class="highlight">graphic design 岗 5 年 90% 替代</strong>。反方:AI 做不好 typography / 品牌一致性 / 创意策略。<span class="em-pink">执行被替代 · 策略 promoted</span>。</p>
+      <div class="src">Source: <a href="https://www.creativebloq.com/design/graphic-design/this-is-terrifying-graphic-designers-debate-the-threat-of-chat-gpts-image-generator" target="_blank">Creative Bloq</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-news">安全</span><span class="tag t-warn">监管</span></div>
+      <h3>C2PA + 三层分类器 · 水印争议</h3>
+      <p>OpenAI Deployment Safety Hub:强化真人 deepfake 防御 · <strong class="highlight">3 层分类器</strong>(输入 safety + 图像 safety + 生成后最终分析)· C2PA 元数据承诺。2 代专属水印技术细节 <span class="em-red">发布日缺席</span>。</p>
+      <div class="src">Source: <a href="https://deploymentsafety.openai.com/chatgpt-images-2-0" target="_blank">OpenAI Safety Hub</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-news">批评</span></div>
+      <h3>Gizmodo · "AI Slop 文艺复兴"</h3>
+      <p>标题:"OpenAI Unveils New Image Generator to Usher in an AI Slop 'Renaissance'"。<strong class="highlight">能力越强 · 低质内容污染互联网越快</strong>。</p>
+      <div class="src">Source: <a href="https://gizmodo.com/openai-unveils-new-image-generator-to-usher-in-an-ai-slop-renaissance-2000749159" target="_blank">Gizmodo</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-news">新范式</span></div>
+      <h3>图像生成 → coding agent 的 front-end</h3>
+      <p>Latent Space 引开发者观点:<strong class="highlight">PM 甩 UI 截图 · Claude Code 照图写前端</strong>。Figma to Code 新路径。OpenAI 同日 Codex Labs 双产品配合。</p>
+      <div class="src">Source: <a href="https://www.latent.space/p/ainews-openai-launches-gpt-image" target="_blank">Latent Space</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-news">价格</span></div>
+      <h3>API 定价争议 · Flux / Imagen 5-10x 便宜</h3>
+      <p>gpt-image-2 ~$0.21/张 · Flux 2 ~$0.03 · Imagen 4 Fast $0.02-0.06 · Nano Banana 2 $0.067 · <strong class="highlight">gpt-image-2 比上代贵 60%</strong>。</p>
+      <div class="src">Source: <a href="https://blog.laozhang.ai/en/posts/gpt-image-2-api-pricing" target="_blank">LaoZhang AI</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-news">生态</span></div>
+      <h3>Adobe × Figma × Canva × GoDaddy 全量集成</h3>
+      <p>Firefly / Express / Canva AI / GoDaddy Studio 内嵌 gpt-image-2。<strong class="highlight">"Firefly 单打独斗叙事终结"</strong>。</p>
+      <div class="src">Source: <a href="https://petapixel.com/2025/04/24/chatgpts-popular-new-image-generator-coming-to-adobe-figma-canva-and-more/" target="_blank">PetaPixel</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-news">艺术家</span></div>
+      <h3>Cara 一夜涌入数千 refugee 插画师</h3>
+      <p>艺术家平台 Cara 对抗 AI 训练数据收录。gpt-image-2 发布后 <strong class="highlight">月活再破纪录</strong>。Nicholas Kole 等领袖再声:未经同意是盗窃。</p>
+      <p class="quote">"生产力派拥抱 / 作者派退守" 两极分化的新平衡</p>
+      <div class="src">Source: <a href="https://news.artnet.com/art-world/independent-artists-are-fighting-back-against-a-i-image-generators-with-innovative-online-protests-2231334" target="_blank">Artnet</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-news">技术</span><span class="tag t-news">输</span></div>
+      <h3>空间推理短板 · Rubik's Cube 镜面测试仍挂</h3>
+      <p>gpt-image-2 赢综合 + world knowledge · 但 <strong class="highlight">Rubik's Cube 镜面反射测试仍失败</strong>。3D 空间关系 Flux 2 Max 和 Nano Banana Pro 小胜。</p>
+      <div class="src">Source: <a href="https://youmind.com/blog/gpt-image-2-vs-nano-banana-pro" target="_blank">YouMind</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-news">评价</span></div>
+      <h3>Canva Dwayne Koh · 触及"判断层"</h3>
+      <p class="quote">"It was interpreting briefs, understanding audiences, and making creative decisions behind the scenes."</p>
+      <p>VentureBeat 引用 · <strong class="highlight">AI 已越过执行层 · 触及判断层</strong>。比文字渲染更深的震荡。</p>
+      <div class="src">Source: <a href="https://venturebeat.com/technology/openais-chatgpt-images-2-0-is-here-and-it-does-multilingual-text-full-infographics-slides-maps-even-manga-seemingly-flawlessly" target="_blank">VentureBeat · Canva 创意策略师</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-news">连锁</span></div>
+      <h3>GPT-6 曝光衍生热点</h3>
+      <p>同窗口 Altman 在 Codex 界面短暂露出 GPT-5.5。<strong class="highlight">"OpenAI 攻势周"</strong>叙事成型:图像 + 编码 + 下一代模型连锁曝光。</p>
+      <div class="src">Source: <a href="https://www.qbitai.com/2026/04/396366.html" target="_blank">量子位</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · 全球反应 -->
+<section class="sec" id="global">
+  <div class="sec-head"><span class="emoji">🌏</span><h2>全球反应 · 非英语圈</h2><span class="count">9 条</span></div>
+  <div class="grid">
+    <div class="card">
+      <div class="tag-row"><span class="tag t-global">中国</span><span class="tag t-warn">焦虑</span></div>
+      <h3>中文圈集体"告别古法设计"</h3>
+      <p>36氪 / 虎嗅 / 量子位 / 爱范儿 / 华尔街见闻 / 凤凰 / 腾讯 <strong class="highlight">同日头条统一</strong>。虎嗅双发:"设计行业真的完蛋了吗" + "随意做出'证据'图 · 强到恐慌"。</p>
+      <p class="quote">"设计真的可以告别'古法设计'了" — 华尔街见闻</p>
+      <div class="src">Source: <a href="https://wallstreetcn.com/articles/3770552" target="_blank">华尔街见闻</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-global">中国</span><span class="tag t-global">实测</span></div>
+      <h3>腾讯云实测 · 中文 99% 准确</h3>
+      <p>腾讯云开发者社区 · 生成《出师表》全文 / 小学数学试卷 / 招聘海报 / 书法体全准。结论:<strong class="highlight">"中文乱码 = 过去式"</strong>。</p>
+      <div class="src">Source: <a href="https://cloud.tencent.com/developer/article/2658403" target="_blank">腾讯云</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-global">中国</span><span class="tag t-warn">监管</span></div>
+      <h3>AIGC 标识办法 2025-09-01 生效</h3>
+      <p>币世界:可作为"证据"的图片引发恐慌。呼应中国 <strong class="highlight">2025-09-01 生效的 AIGC 强制标识办法</strong>。监管讨论激烈。</p>
+      <div class="src">Source: <a href="https://www.bianews.com/news/details?id=236496" target="_blank">币世界</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-global">中国</span></div>
+      <h3>国产模型让道 · 可灵 / 即梦转视频赛道</h3>
+      <p>可灵 3.0 Omni 聚焦"电影级叙事视觉" · 字节即梦 Seedance 2.0 对标 Sora · <strong class="highlight">图像文字渲染主战场拱手</strong>。中文社区结论"各走各的"不强跟。</p>
+      <div class="src">Source: <a href="https://blog.csdn.net/weixin_43505211/article/details/148571478" target="_blank">CSDN</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-global">日本</span></div>
+      <h3>gihyo.jp 技术评论社官方背书</h3>
+      <p>"ChatGPT Images 2.0 — 日本語含む非ラテン文字のレンダリング能力も向上"。被认定为 <strong class="highlight">首个可直接做日文广告素材的 AI</strong>。</p>
+      <div class="src">Source: <a href="https://gihyo.jp/article/2026/04/chatgpt-images-2.0" target="_blank">gihyo.jp</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-global">日本</span></div>
+      <h3>note.com 漫画圈 vs Nano Banana 对决</h3>
+      <p>@aico_mic《漫画生成AI対決》· 同 prompt 对比 · GPT Image 2 画风"高饱和 + 闪光 + 细腻五官"。<strong class="highlight">日本漫画助手圈开始工作流实测</strong>。</p>
+      <div class="src">Source: <a href="https://note.com/aico_mic/n/n812f1b23fe77" target="_blank">note.com @aico_mic</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-global">印度</span></div>
+      <h3>Storyboard18 广告业视角</h3>
+      <p>"ChatGPT's Images 2.0 improves text rendering, marks shift in AI image generation"。<strong class="highlight">印地语 / 孟加拉语本地化创意不再需手工重描</strong>。宝莱坞海报 / 印地语 UI mockup 被列首批落地。</p>
+      <div class="src">Source: <a href="https://www.storyboard18.com/digital/chatgpts-images-2-0-improves-text-rendering-marks-shift-in-ai-image-generation-ws-l-95854.htm" target="_blank">Storyboard18</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-global">韩国</span></div>
+      <h3>Digital Today · "Posters and UI"定位</h3>
+      <p>韩国 IT 产业判定:<strong class="highlight">"文档级图像 / UI mockup"是实际可交付生产力</strong> · 海报 + UI 是主要用场。</p>
+      <div class="src">Source: <a href="https://www.digitaltoday.co.kr/en/view/49837/openai-releases-chatgpt-image-2-0-as-ai-evolution-targets-posters-and-ui" target="_blank">Digital Today</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-global">中东</span></div>
+      <h3>阿拉伯语 RTL + 书法终于解了</h3>
+      <p>48+ 语言含 Arabic / Hebrew / Cyrillic · <strong class="highlight">RTL 方向文字清晰 · 书法脚本可渲染</strong>。OpenAI Forum 多年"Arabic Text Support in DALL-E"投诉终结。</p>
+      <div class="src">Source: <a href="https://apidog.com/blog/gpt-images-2/" target="_blank">apidog</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · 资源库 -->
+<section class="sec" id="resources">
+  <div class="sec-head"><span class="emoji">📚</span><h2>Prompt 资源库</h2><span class="count">7 个</span></div>
+  <div class="grid">
+    <div class="card">
+      <div class="tag-row"><span class="tag t-resource">官方</span></div>
+      <h3>OpenAI Cookbook · GPT Image Prompting Guide</h3>
+      <p>5 段结构(Scene / Subject / Details / UseCase / Constraints)+ 16 图 compositing 规范 + 编辑三段(Change / Preserve / Constraints)。<strong class="highlight">唯一一手官方来源</strong>。</p>
+      <div class="src">Source: <a href="https://developers.openai.com/cookbook/examples/multimodal/image-gen-models-prompting-guide" target="_blank">OpenAI Cookbook</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-resource">库</span><span class="tag t-resource">7.7k ⭐</span></div>
+      <h3>jamez-bondos/awesome-gpt4o-images</h3>
+      <p>从 GPT-4o 延续到 gpt-image-2 · 分 Ghibli / 3D / 手办 / 拟人等风格。<strong class="highlight">最久 + 星最多</strong> · taxonomy 体系最成熟。</p>
+      <div class="src">Source: <a href="https://github.com/jamez-bondos/awesome-gpt4o-images" target="_blank">GitHub</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-resource">库</span><span class="tag t-resource">新</span></div>
+      <h3>EvoLinkAI/awesome-gpt-image-2-prompts</h3>
+      <p>发布当天上线。portraits / posters / UI mockups / character sheets / community experiments 分类 · 有 JSON 清单可 fork。</p>
+      <div class="src">Source: <a href="https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts" target="_blank">GitHub</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-resource">API</span></div>
+      <h3>Anil-matcha/Awesome-GPT-Image-2-API-Prompts</h3>
+      <p>专做 OpenAI API 侧 prompt · ready-to-use 粘进 API 即跑。<strong class="highlight">跟 apimart-image-gen skill 对齐</strong>。</p>
+      <div class="src">Source: <a href="https://github.com/Anil-matcha/Awesome-GPT-Image-2-API-Prompts" target="_blank">GitHub</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-resource">多语</span></div>
+      <h3>YouMind-OpenLab/awesome-gpt-image-2</h3>
+      <p>16 语言版本 · 重点 pixel-perfect text + cross-image consistency + 商业级插画。<strong class="highlight">中文 prompt 覆盖</strong>。</p>
+      <div class="src">Source: <a href="https://github.com/YouMind-OpenLab/awesome-gpt-image-2" target="_blank">GitHub</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-resource">工程</span></div>
+      <h3>fal.ai · GPT Image 2 Prompting Guide</h3>
+      <p>工程最实用:文本渲染硬招(EXACT TEXT + verbatim + no duplicate text)· 照片级 prompt 固定槽位(lens / light / texture)<strong class="highlight">可直接抄</strong>。</p>
+      <div class="src">Source: <a href="https://fal.ai/learn/tools/prompting-gpt-image-2" target="_blank">fal.ai</a></div>
+    </div>
+    <div class="card">
+      <div class="tag-row"><span class="tag t-resource">野</span></div>
+      <h3>ZeroLu/awesome-gpt-image · X 顶级创作者抓取</h3>
+      <p>比官方更野 · 抓 X 上刚冒出来的新招。<strong class="highlight">适合找灵感</strong>。宋朝朋友圈 / 宝藏米粒 / Hitman 关卡等都来自这。</p>
+      <div class="src">Source: <a href="https://github.com/ZeroLu/awesome-gpt-image/" target="_blank">GitHub</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · GPT Image 2 Hub 该做啥 -->
+<section class="rec" id="recommend">
+  <h2>🎯 GPT Image 2 Hub 最终建议</h2>
+  <p>整合 10 路调研的结论 · 以下 <strong>8 个方向</strong>最能撑起"牛逼 / 独家 / 讨论度 / 商业化"。俗套玩法(一只猫 / cyberpunk 街景 / 梦幻少女)直接跳过 —— 用户反馈 L3 "抵抗派 + 生产力派"分化 · <strong>GPT Image 2 Hub 应该站生产力派</strong>。</p>
+  <div class="rec-items">
+    <div class="rec-item"><div class="rank">01</div><h4>信息图可视化配方库</h4><p>文物拆解 + IKEA 万物化 + Glowing Anatomy + New Yorker 实时数据 · Thinking mode 独家(+ web search)· B 端刚需</p></div>
+    <div class="rec-item"><div class="rank">02</div><h4>时空 / 次元对撞</h4><p>宋朝朋友圈 + 名画 OOTD + Google Maps 羊皮纸 · UI 元素精准渲染 + 文化对撞 · Nano Banana 做不过 · 传播门槛低</p></div>
+    <div class="rec-item"><div class="rank">03</div><h4>8 格一致性漫画</h4><p>企业产品发布元叙事 + 个人故事漫画化 · thinking mode 独占 · B 端设计工作室直接下单</p></div>
+    <div class="rec-item"><div class="rank">04</div><h4>多脚本文字海报</h4><p>4-9 语同屏 · 中日韩 / 印地 / 阿拉伯 · 独家能力 · 国际化商业刚需 · 国产模型没法做</p></div>
+    <div class="rec-item"><div class="rank">05</div><h4>虚拟试衣 · 身份零漂</h4><p>电商刚需 · prompt 硬锁身份 · 一模特百款衣 · 直接替 DALL-E 3 痛点</p></div>
+    <div class="rec-item"><div class="rank">06</div><h4>Silhouette / Crystal 叙事容器</h4><p>剪影宇宙 + 水晶球压故事 · 高概念 poster 级 · 独立插画师 / 小众品牌</p></div>
+    <div class="rec-item"><div class="rank">07</div><h4>1:3 / 3:1 极端画幅</h4><p>小红书详情页 / 长卷画 / 电梯海报 / 360° VR · DALL-E MJ 做不到</p></div>
+    <div class="rec-item"><div class="rank">08</div><h4>米粒级微缩定制</h4><p>戒指 / 硬币 / 书法印 / 邮票齿孔 · Jewelry 定制直接商用 · Altman 同款 demo · C 端情感附加值</p></div>
+  </div>
+</section>
+
+<div class="foot">
+  <strong>数据来源</strong>:10 路并行 subagent + 主 agent WebSearch 综合 · OpenAI Cookbook · VentureBeat · Latent Space · The New Stack · Startup Fortune · Gizmodo · Creative Bloq · 36kr · 虎嗅 · 量子位 · 华尔街见闻 · Simon Willison · OfficeChai · PetaPixel · Artnet · The Information · apidog · fal.ai · YouMind · Storyboard18 · gihyo.jp · note.com · Digital Today · Frontierbeat · WavespeedAI · Azure Foundry 等<br>
+  调研时间:2026-04-22 · 发布 T+24h · 主 agent(10 路 WebSearch) + 6 subagent 完整返回汇总 · 约 5 万 tokens 数据聚合
+</div>
+
+</main>
+</div>
+
+<script>
+const sections = [
+  {id:'capabilities', emoji:'🔥', name:'模型能力', count:'15'},
+  {id:'viral',         emoji:'🎯', name:'炫技爆款', count:'10'},
+  {id:'creative',      emoji:'🌀', name:'创意玩法', count:'17'},
+  {id:'news',          emoji:'📰', name:'最近热点', count:'14'},
+  {id:'global',        emoji:'🌏', name:'全球反应', count:'9'},
+  {id:'resources',     emoji:'📚', name:'资源库',   count:'7'},
+  {id:'recommend',     emoji:'⭐', name:'该做啥',   count:'8'},
+];
+const navList = document.getElementById('nav-list');
+sections.forEach((s, i) => {
+  const a = document.createElement('a');
+  a.href = '#' + s.id;
+  a.className = 'nav-item' + (i===0?' active':'');
+  a.dataset.target = s.id;
+  a.innerHTML = `<span class="emoji">${s.emoji}</span><span>${s.name}</span><span class="count">${s.count}</span>`;
+  navList.appendChild(a);
+});
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+      const link = document.querySelector(`.nav-item[data-target="${e.target.id}"]`);
+      if (link) link.classList.add('active');
+    }
+  });
+}, {rootMargin:'-30% 0px -60% 0px'});
+document.querySelectorAll('.sec, .rec').forEach(el => observer.observe(el));
+
+navList.addEventListener('click', e => {
+  const l = e.target.closest('.nav-item'); if (!l) return;
+  e.preventDefault();
+  const t = document.getElementById(l.dataset.target);
+  if (t) t.scrollIntoView({behavior:'smooth', block:'start'});
+});
+</script>
+</body>
+</html>

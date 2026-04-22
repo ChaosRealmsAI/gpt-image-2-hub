@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>The Prompt Atlas Poster — Pro B · Broken Grid</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,0..100;1,9..144,300..900,0..100&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#eae5dd;
+    --paper-2:#e2ddd3;
+    --ink:#1c1c1e;
+    --ink-2:#3a3a3c;
+    --copper:#c87533;
+    --copper-deep:#a85a1e;
+    --teal:#224141;
+    --hair: rgba(28,28,30,.55);
+    --rule: .5px solid var(--hair);
+    --gutter:24px;
+    --col-gap:20px;
+    --ease: cubic-bezier(.2,.7,.15,1);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink)}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Fraunces", ui-serif, Georgia, serif;
+    font-variation-settings:"opsz" 96, "SOFT" 80, "wght" 400;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    font-feature-settings:"ss01","ss02","kern","liga","dlig";
+    letter-spacing:-0.005em;
+    position:relative;
+    overflow-x:hidden;
+  }
+  /* paper grain via SVG filter */
+  body::before{
+    content:"";
+    position:fixed; inset:0;
+    background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.11  0 0 0 0 0.11  0 0 0 0 0.12  0 0 0 0.18 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    mix-blend-mode:multiply;
+    opacity:.35;
+    pointer-events:none;
+    z-index:1;
+  }
+  /* custom thin scrollbar */
+  ::-webkit-scrollbar{width:8px;height:8px}
+  ::-webkit-scrollbar-track{background:transparent}
+  ::-webkit-scrollbar-thumb{background:rgba(28,28,30,.25);border-radius:8px}
+  ::-webkit-scrollbar-thumb:hover{background:var(--copper)}
+
+  .sheet{
+    position:relative;
+    z-index:2;
+    max-width:1480px;
+    margin:0 auto;
+    padding:56px var(--gutter) 140px;
+  }
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(12, 1fr);
+    column-gap:var(--col-gap);
+  }
+
+  /* ───── Masthead ───── */
+  .masthead{
+    border-top:var(--rule);
+    border-bottom:var(--rule);
+    padding:14px 0 12px;
+    align-items:center;
+  }
+  .masthead > *{ grid-row:1; }
+  .mh-mark{ grid-column:1 / span 3; font-family:"IBM Plex Mono",monospace; font-size:10.5px; letter-spacing:.22em; text-transform:uppercase; color:var(--ink); }
+  .mh-mark b{ color:var(--copper); font-weight:500;}
+  .mh-issue{ grid-column:4 / span 3; font-family:"IBM Plex Mono",monospace; font-size:10.5px; letter-spacing:.22em; text-transform:uppercase; color:var(--ink-2); }
+  .mh-kicker{ grid-column:7 / span 4; font-family:"IBM Plex Mono",monospace; font-size:10.5px; letter-spacing:.22em; text-transform:uppercase; color:var(--ink-2);}
+  .mh-pg{ grid-column:12 / span 1; text-align:right; font-family:"IBM Plex Mono",monospace; font-size:10.5px; letter-spacing:.22em;}
+  .mh-pg em{ color:var(--copper); font-style:normal;}
+
+  /* ───── Hero title ───── */
+  .hero{ margin-top:56px; position:relative; }
+  .hero-title{
+    grid-column:1 / span 8;
+    font-family:"Fraunces", serif;
+    font-variation-settings:"opsz" 144, "SOFT" 100, "wght" 900;
+    font-weight:900;
+    font-size: clamp(96px, 14.4vw, 218px);
+    line-height:.86;
+    letter-spacing:-0.045em;
+    margin:0;
+    color:var(--ink);
+  }
+  .hero-title .amp{
+    font-style:italic;
+    font-variation-settings:"opsz" 144, "SOFT" 100, "wght" 300;
+    color:var(--copper);
+    font-size:.72em;
+    display:inline-block;
+    transform:translateY(-.06em);
+    padding: 0 .04em;
+  }
+  .hero-title .lt{
+    display:block;
+    font-variation-settings:"opsz" 144, "SOFT" 100, "wght" 300;
+    font-style:italic;
+    letter-spacing:-0.02em;
+    font-size:.56em;
+    line-height:1;
+    color:var(--teal);
+    margin-top:.06em;
+  }
+  .hero-kicker{
+    grid-column: 11 / span 2;
+    align-self:end;
+    padding-bottom:14px;
+    font-family:"IBM Plex Mono", monospace;
+    font-size:10.5px; letter-spacing:.22em; text-transform:uppercase;
+    color:var(--ink-2);
+    text-align:right;
+  }
+  .hero-kicker .dot{display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--copper); margin-right:8px; transform:translateY(-1px);}
+
+  .dek-row{ margin-top:22px; padding-top:18px; border-top:var(--rule);}
+  .dek{
+    grid-column: 4 / span 6;
+    font-family:"Fraunces", serif;
+    font-variation-settings:"opsz" 48, "SOFT" 90, "wght" 400;
+    font-style:italic;
+    font-size:22px;
+    line-height:1.28;
+    color:var(--ink);
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  .dek::first-letter{ color:var(--copper);}
+  .dek-meta{
+    grid-column: 11 / span 2;
+    font-family:"IBM Plex Mono", monospace;
+    font-size:10.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--ink-2);
+    text-align:right;
+    align-self:start;
+  }
+
+  /* ───── Image row (bleed right) ───── */
+  .image-row{ margin-top:72px; }
+  .img-cap{
+    grid-column:1 / span 3;
+    align-self:end;
+    padding-bottom:6px;
+    font-family:"IBM Plex Mono", monospace;
+    font-size:10.5px; letter-spacing:.22em; text-transform:uppercase; color:var(--ink-2);
+    line-height:1.8;
+  }
+  .img-cap .num{ color:var(--copper); font-weight:500; letter-spacing:.08em;}
+  .img-cap hr{ border:0; border-top:var(--rule); margin:10px 0 14px;}
+  .img-cap .big{
+    display:block;
+    font-family:"Fraunces", serif;
+    font-variation-settings:"opsz" 96, "SOFT" 100, "wght" 300;
+    font-style:italic;
+    font-size:44px;
+    letter-spacing:-0.02em;
+    color:var(--ink);
+    line-height:.95;
+    margin-bottom:10px;
+    text-transform:none;
+  }
+  .hero-img{
+    grid-column: 4 / span 9;
+    position:relative;
+    /* bleed to right edge */
+    margin-right: calc(50% - 50vw + 0px);
+    aspect-ratio: 16/10;
+    overflow:hidden;
+    background:#0c0c0d;
+  }
+  .hero-img img{
+    display:block;
+    width:100%; height:100%;
+    object-fit:cover;
+    object-position:center;
+    filter:contrast(1.02) saturate(.95);
+  }
+  .hero-img::after{
+    content:"";
+    position:absolute; inset:0;
+    box-shadow: inset 0 0 0 .5px rgba(234,229,221,.35);
+    pointer-events:none;
+  }
+  .hero-img .tag{
+    position:absolute; left:18px; top:16px;
+    font-family:"IBM Plex Mono",monospace;
+    font-size:10px; letter-spacing:.22em; color:var(--paper);
+    mix-blend-mode:difference;
+  }
+  .hero-img .tag b{color:var(--copper); font-weight:500}
+
+  /* ───── Fields ───── */
+  .fields{ margin-top:92px; }
+  .field{
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+    column-gap:var(--col-gap);
+    padding:22px 0 26px;
+    border-bottom:var(--rule);
+    position:relative;
+    align-items:start;
+    cursor:default;
+    transition: background .4s var(--ease);
+  }
+  .field:first-child{ border-top:var(--rule);}
+  .field-num{
+    grid-column:1 / span 2;
+    font-family:"Fraunces", serif;
+    font-variation-settings:"opsz" 144, "SOFT" 100, "wght" 300;
+    font-style:italic;
+    font-size:124px;
+    line-height:.82;
+    color:var(--copper);
+    letter-spacing:-0.04em;
+    margin:0;
+    transition: transform 600ms var(--ease), color 400ms var(--ease);
+    position:relative;
+    padding-left:14px;
+  }
+  .field-num::before{
+    content:"";
+    position:absolute;
+    left:0; top:28px;
+    width:4px; height:4px; border-radius:50%;
+    background:var(--copper);
+  }
+  .field-label{
+    grid-column:3 / span 2;
+    font-family:"IBM Plex Mono", monospace;
+    font-size:10.5px;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--ink-2);
+    padding-top:14px;
+    line-height:1.5;
+  }
+  .field-label .chip{
+    display:inline-block;
+    margin-top:10px;
+    padding:3px 7px 2px;
+    border:.5px solid var(--hair);
+    border-radius:2px;
+    font-size:9px;
+    letter-spacing:.18em;
+    color:var(--ink-2);
+  }
+  .field-value{
+    grid-column:5 / span 7;
+    font-family:"Fraunces", serif;
+    font-variation-settings:"opsz" 48, "SOFT" 90, "wght" 400;
+    font-size:16.5px;
+    line-height:1.55;
+    color:var(--ink);
+    padding-top:16px;
+    max-width:62ch;
+    letter-spacing:-0.003em;
+    transition: color 600ms var(--ease);
+  }
+  .field-value em{ color:var(--teal); font-style:italic;}
+  .field-value b{ color:var(--copper); font-weight:500; font-style:italic;}
+
+  /* intentional irregular spans */
+  .field--1 .field-value{ grid-column:5 / span 6;}
+  .field--2 .field-label{ grid-column:3 / span 2;}
+  .field--2 .field-value{ grid-column:5 / span 7;}
+  .field--3 .field-num{ padding-left:18px;}
+  .field--3 .field-value{ grid-column:5 / span 5;}
+  .field--4 .field-value{ grid-column:5 / span 6;}
+  .field--5 .field-value{ grid-column:5 / span 7;}
+
+  /* hover sweep underline */
+  .field::after{
+    content:"";
+    position:absolute;
+    left:0; right:0; bottom:-0.5px;
+    height:1.5px;
+    background:var(--copper);
+    transform:scaleX(0);
+    transform-origin:left center;
+    transition: transform 600ms var(--ease);
+  }
+  .field:hover::after{ transform:scaleX(1);}
+  .field:hover .field-num{ transform:translateX(4px); color:var(--copper-deep);}
+  .field:hover .field-value{ color:var(--copper-deep);}
+  .field:hover .field-label{ color:var(--ink);}
+
+  /* ───── Tags — breaks grid ───── */
+  .tags-wrap{
+    margin-top:68px;
+    padding:28px 0 34px;
+    border-top:var(--rule);
+    border-bottom:var(--rule);
+    position:relative;
+  }
+  .tags-head{
+    display:flex; justify-content:space-between; align-items:baseline;
+    font-family:"IBM Plex Mono",monospace;
+    font-size:10.5px; letter-spacing:.22em; text-transform:uppercase;
+    color:var(--ink-2);
+    margin-bottom:22px;
+  }
+  .tags-head .title{color:var(--ink);}
+  .tags-head .title b{color:var(--copper); font-weight:500;}
+  .tags{
+    display:flex; flex-wrap:wrap; gap:14px 22px;
+  }
+  .tag{
+    display:inline-flex; align-items:baseline; gap:8px;
+    font-family:"Fraunces", serif;
+    font-variation-settings:"opsz" 72, "SOFT" 100, "wght" 300;
+    font-style:italic;
+    font-size: clamp(22px, 2.6vw, 34px);
+    line-height:1;
+    color:var(--ink);
+    letter-spacing:-0.02em;
+    padding:6px 2px 8px;
+    border-bottom:.5px solid transparent;
+    transition:color .35s var(--ease), border-color .35s var(--ease), transform .35s var(--ease);
+  }
+  .tag .n{
+    font-family:"IBM Plex Mono",monospace;
+    font-style:normal;
+    font-size:10.5px;
+    color:var(--copper);
+    letter-spacing:.12em;
+    transform:translateY(-.6em);
+  }
+  .tag:hover{ color:var(--copper); border-color:var(--copper); transform:translateY(-2px);}
+
+  /* ───── Copy button row ───── */
+  .action-row{ margin-top:56px; }
+  .copy-wrap{
+    grid-column:7 / span 4;
+    display:flex; justify-content:flex-end; align-items:center; gap:14px;
+  }
+  .copy-meta{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:10.5px; letter-spacing:.22em; text-transform:uppercase;
+    color:var(--ink-2);
+  }
+  .copy-meta em{color:var(--copper); font-style:normal;}
+  .copy-btn{
+    position:relative;
+    appearance:none; background:var(--ink); color:var(--paper);
+    border:.5px solid var(--ink); border-radius:0;
+    padding:18px 26px 16px;
+    font-family:"IBM Plex Mono",monospace;
+    font-size:11px; letter-spacing:.24em; text-transform:uppercase;
+    cursor:pointer;
+    transition: background .35s var(--ease), color .35s var(--ease), padding .35s var(--ease);
+    display:inline-flex; align-items:center; gap:14px;
+  }
+  .copy-btn .arrow{
+    display:inline-block;
+    width:22px; height:1px; background:var(--paper); position:relative;
+    transition: width .4s var(--ease), background .4s var(--ease);
+  }
+  .copy-btn .arrow::after{
+    content:""; position:absolute; right:-1px; top:-3px;
+    width:7px; height:7px; border-top:1px solid var(--paper); border-right:1px solid var(--paper); transform:rotate(45deg);
+    transition: border-color .4s var(--ease);
+  }
+  .copy-btn:hover{ background:var(--copper); color:var(--paper); padding-right:32px;}
+  .copy-btn:hover .arrow{ width:32px;}
+  .copy-btn.copied{ background:var(--teal);}
+
+  /* ───── Colophon ───── */
+  .colophon{
+    margin-top:110px;
+    padding-top:20px;
+    border-top:var(--rule);
+    display:grid; grid-template-columns:repeat(12,1fr); column-gap:var(--col-gap);
+    font-family:"IBM Plex Mono",monospace;
+    font-size:10px; letter-spacing:.22em; text-transform:uppercase;
+    color:var(--ink-2);
+  }
+  .colophon .c1{grid-column:1 / span 3;}
+  .colophon .c2{grid-column:4 / span 3;}
+  .colophon .c3{grid-column:7 / span 3;}
+  .colophon .c4{grid-column:10 / span 3; text-align:right;}
+  .colophon em{color:var(--copper); font-style:normal;}
+
+  /* ───── Toast ───── */
+  .toast{
+    position:fixed;
+    left:50%; bottom:40px;
+    transform:translate(-50%, 24px);
+    background:var(--ink); color:var(--paper);
+    padding:12px 18px 11px;
+    font-family:"IBM Plex Mono",monospace;
+    font-size:10.5px; letter-spacing:.22em; text-transform:uppercase;
+    opacity:0;
+    transition: transform .45s var(--ease), opacity .45s var(--ease);
+    z-index:50;
+    border-left:3px solid var(--copper);
+  }
+  .toast.show{ opacity:1; transform:translate(-50%, 0);}
+
+  /* ───── Cursor ring ───── */
+  .cursor-ring{
+    position:fixed;
+    top:0; left:0;
+    width:22px; height:22px;
+    border:1px solid var(--ink);
+    border-radius:50%;
+    mix-blend-mode:difference;
+    pointer-events:none;
+    transform:translate(-50%,-50%) scale(1);
+    transition: width .3s var(--ease), height .3s var(--ease), border-color .3s var(--ease);
+    z-index:60;
+  }
+  .cursor-ring.big{ width:58px; height:58px;}
+  @media (max-width:720px){ .cursor-ring{display:none;} }
+
+  @media (max-width:900px){
+    .hero-title{ grid-column:1 / span 12; font-size: 72px;}
+    .hero-kicker{ grid-column:1 / span 12; text-align:left; padding-bottom:0; margin-top:8px;}
+    .dek{grid-column:1 / span 12}
+    .dek-meta{grid-column:1 / span 12; text-align:left; margin-top:10px;}
+    .img-cap{grid-column:1 / span 12; margin-bottom:16px;}
+    .hero-img{grid-column:1 / span 12; margin-right:0;}
+    .field-num{grid-column:1 / span 3; font-size:76px;}
+    .field-label{grid-column:4 / span 9; padding-top:6px;}
+    .field-value{grid-column:1 / span 12; padding-top:10px;}
+    .copy-wrap{grid-column:1 / span 12; justify-content:flex-start;}
+  }
+</style>
+</head>
+<body>
+
+<div class="cursor-ring" id="ring"></div>
+
+<main class="sheet">
+
+  <!-- Masthead -->
+  <header class="grid masthead">
+    <div class="mh-mark">The Prompt Atlas · <b>Quarterly</b></div>
+    <div class="mh-issue">Issue N°07 — Synthetic Print</div>
+    <div class="mh-kicker">Section · Atomic Composition</div>
+    <div class="mh-pg">Folio <em>042</em></div>
+  </header>
+
+  <!-- Hero -->
+  <section class="grid hero">
+    <h1 class="hero-title">
+      The Prompt<span class="amp">&amp;</span>Atlas
+      <span class="lt">Poster — an object that reads itself.</span>
+    </h1>
+    <aside class="hero-kicker"><span class="dot"></span>File №<br/>PA-POSTER-002<br/><span style="color:var(--copper)">Pro · B</span></aside>
+  </section>
+
+  <section class="grid dek-row">
+    <p class="dek">A self-referential demonstration of atomic composition — five fields conspire to describe the poster they are printed upon, until the description becomes the artifact.</p>
+    <div class="dek-meta">Read time<br/>04<span style="color:var(--copper)">&#39;</span>30<span style="color:var(--copper)">&#34;</span></div>
+  </section>
+
+  <!-- Image row, bleed right -->
+  <section class="grid image-row">
+    <figcaption class="img-cap">
+      <span class="big">Plate I.</span>
+      <hr/>
+      <span class="num">042 · A</span><br/>
+      Poster, recto.<br/>
+      Synthetic pigment on warm stock.<br/>
+      2026 — edition of one.
+    </figcaption>
+    <div class="hero-img">
+      <img src="../../assets/demo/poster.png" alt="Prompt Atlas Poster — hero image" onerror="this.style.opacity=.15;this.parentElement.style.background='linear-gradient(135deg,#224141, #1c1c1e 60%, #c87533)';this.parentElement.insertAdjacentHTML('beforeend','<div style=\'position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#eae5dd;font-family:IBM Plex Mono,monospace;font-size:11px;letter-spacing:.24em;\'>IMAGE · MISSING · ../../assets/demo/poster.png</div>')"/>
+      <span class="tag"><b>▲</b>  HERO · POSTER.PNG</span>
+    </div>
+  </section>
+
+  <!-- Fields -->
+  <section class="fields" aria-label="Composition fields">
+
+    <article class="field field--1">
+      <h3 class="field-num">01</h3>
+      <div class="field-label">Intent<span class="chip">FIELD 01 / 05</span></div>
+      <p class="field-value">
+        Produce a printable poster that is <b>itself</b> a demonstration of atomic composition —
+        a single artifact where <em>subject, form and caption</em> collapse into one readable surface.
+      </p>
+    </article>
+
+    <article class="field field--2">
+      <h3 class="field-num">02</h3>
+      <div class="field-label">Style<span class="chip">FIELD 02 / 05</span></div>
+      <p class="field-value">
+        Editorial · <em>brutalist-minimal</em>. Display serif at <b>200pt+</b> against a warm paper stock;
+        heavy opsz contrast, italic ampersands, copper accent restrained to numerals and sweeping underlines.
+      </p>
+    </article>
+
+    <article class="field field--3">
+      <h3 class="field-num">03</h3>
+      <div class="field-label">Text<span class="chip">FIELD 03 / 05</span></div>
+      <p class="field-value">
+        Title — <em>“The Prompt Atlas Poster.”</em> Dek — <em>“a self-referential demonstration of atomic composition.”</em>
+        Body is generated from the composition itself.
+      </p>
+    </article>
+
+    <article class="field field--4">
+      <h3 class="field-num">04</h3>
+      <div class="field-label">Color<span class="chip">FIELD 04 / 05</span></div>
+      <p class="field-value">
+        Palette <em>Graphite &amp; Copper</em>: paper <b>#EAE5DD</b>, ink <b>#1C1C1E</b>,
+        accent-hot <b>#C87533</b>, accent-cool <b>#224141</b>. Copper only on numerals and hover states — never on body copy.
+      </p>
+    </article>
+
+    <article class="field field--5">
+      <h3 class="field-num">05</h3>
+      <div class="field-label">Watermark<span class="chip">FIELD 05 / 05</span></div>
+      <p class="field-value">
+        Micro-mark bottom-right: <em>“prompt-atlas / pro-b / folio 042”</em> rendered in IBM Plex Mono at 9pt, ink at 32% opacity,
+        a rotated <b>4°</b> to break perfect register.
+      </p>
+    </article>
+
+  </section>
+
+  <!-- Tags -->
+  <section class="tags-wrap">
+    <div class="tags-head">
+      <span class="title">Auto · <b>Tags</b> — derived from composition</span>
+      <span>08 descriptors</span>
+    </div>
+    <div class="tags" id="tags"></div>
+  </section>
+
+  <!-- Copy action -->
+  <section class="grid action-row">
+    <div class="copy-wrap">
+      <span class="copy-meta">Prompt · <em>MD / 842B</em></span>
+      <button class="copy-btn" id="copyBtn" type="button">
+        <span>Copy Prompt</span>
+        <span class="arrow"></span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Colophon -->
+  <footer class="grid colophon">
+    <div class="c1">Set in Fraunces &amp; Plex Mono</div>
+    <div class="c2">Printed at 96 DPI · synthetic</div>
+    <div class="c3">© Prompt Atlas Quarterly</div>
+    <div class="c4">End of folio · <em>042</em></div>
+  </footer>
+
+</main>
+
+<div class="toast" id="toast">Prompt copied — <span style="color:var(--copper)">842 B</span></div>
+
+<!-- hidden mdPrompt -->
+<script type="text/markdown" id="mdPrompt">
+# The Prompt Atlas Poster
+
+A self-referential demonstration of atomic composition.
+
+## Intent
+Produce a printable poster that is itself a demonstration of atomic composition — a single artifact where subject, form and caption collapse into one readable surface.
+
+## Style
+Editorial · brutalist-minimal. Display serif at 200pt+ against a warm paper stock; heavy opsz contrast, italic ampersands, copper accent restrained to numerals and sweeping underlines.
+
+## Text
+- Title: "The Prompt Atlas Poster."
+- Dek: "a self-referential demonstration of atomic composition."
+- Body: generated from the composition itself.
+
+## Color
+Palette — Graphite & Copper.
+- paper  #EAE5DD
+- ink    #1C1C1E
+- accent-hot  #C87533
+- accent-cool #224141
+Copper only on numerals and hover states — never on body copy.
+
+## Watermark
+Micro-mark bottom-right: "prompt-atlas / pro-b / folio 042" rendered in IBM Plex Mono at 9pt, ink at 32% opacity, rotated 4° to break perfect register.
+
+## Tags
+editorial, brutalist, serif-display, copper-accent, warm-paper, broken-grid, self-referential, atomic-composition
+</script>
+
+<script>
+(() => {
+  // tags
+  const TAGS = [
+    "editorial","brutalist","serif-display","copper-accent",
+    "warm-paper","broken-grid","self-referential","atomic-composition"
+  ];
+  const root = document.getElementById("tags");
+  TAGS.forEach((t,i)=>{
+    const el = document.createElement("span");
+    el.className = "tag";
+    el.innerHTML = `<span class="n">${String(i+1).padStart(2,"0")}</span>${t}`;
+    root.appendChild(el);
+  });
+
+  // copy
+  const btn = document.getElementById("copyBtn");
+  const toast = document.getElementById("toast");
+  const md = document.getElementById("mdPrompt").textContent.trim();
+  btn.addEventListener("click", async () => {
+    try{
+      await navigator.clipboard.writeText(md);
+    }catch(e){
+      const ta = document.createElement("textarea");
+      ta.value = md; document.body.appendChild(ta); ta.select();
+      document.execCommand("copy"); ta.remove();
+    }
+    btn.classList.add("copied");
+    btn.querySelector("span").textContent = "Copied ✓";
+    toast.classList.add("show");
+    setTimeout(()=>{ toast.classList.remove("show"); }, 1600);
+    setTimeout(()=>{
+      btn.classList.remove("copied");
+      btn.querySelector("span").textContent = "Copy Prompt";
+    }, 2200);
+  });
+
+  // cursor ring
+  const ring = document.getElementById("ring");
+  let rx = window.innerWidth/2, ry = window.innerHeight/2;
+  let tx = rx, ty = ry;
+  window.addEventListener("mousemove", e => { tx = e.clientX; ty = e.clientY; });
+  const grow = "a, button, .field, .tag, .copy-btn, .hero-img";
+  document.querySelectorAll(grow).forEach(el=>{
+    el.addEventListener("mouseenter",()=>ring.classList.add("big"));
+    el.addEventListener("mouseleave",()=>ring.classList.remove("big"));
+  });
+  (function loop(){
+    rx += (tx-rx)*0.18; ry += (ty-ry)*0.18;
+    ring.style.transform = `translate(${rx}px, ${ry}px) translate(-50%,-50%)`;
+    requestAnimationFrame(loop);
+  })();
+})();
+</script>
+</body>
+</html>

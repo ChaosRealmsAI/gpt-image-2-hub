@@ -274,7 +274,7 @@
 <!-- ============ WATERFALL ============ -->
 <div class="waterfall" id="waterfall"></div>
 
-<div class="foot-tip" data-i18n="foot">✨ 设计图 · gallery.html · 更多风格持续加入 · GPT Image 2 Hub © 2026</div>
+<div class="foot-tip" data-i18n="foot">✨ 设计图 · index.html · 更多风格持续加入 · GPT Image 2 Hub © 2026</div>
 
 <div id="detail-modal" class="hidden" role="dialog" style="position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;">
   <div class="detail-overlay" style="position:absolute;inset:0;background:rgba(0,0,0,0.75);backdrop-filter:blur(14px);"></div>
@@ -413,79 +413,79 @@ function t(key) {
 const FALLBACK_CARDS = [
   { id:'01', title:'梦幻蝴蝶少女', en:'Vintage Butterfly',
     authorModel:'claude-code', imageModel:'gpt-image-2',
-    img:'assets/generated/e2e-sunset-mountain.png', aspect:'3/4', likes:4989, cat:'人像',
+    img:'assets/demo/e2e-sunset-mountain.png', aspect:'3/4', likes:4989, cat:'人像',
     tags:['复古','人像','蝴蝶','金色时光','水彩','painterly'],
     prompt:`A full-body portrait of a beautiful young woman, rendered in photo-realistic digital painting with subtle painterly brushwork. She has long flowing hair in a brown gradient from warm chestnut to caramel, with two delicate emerald-green butterflies resting gently on her hair. Vintage beige cream dress with lace ruffled trim, pearl and jade jewelry. Warm vintage interior with golden-hour god rays filtering through a tall window, visible dust motes. Color palette: warm browns + cream beige + emerald green accents. Aspect ratio 3:4.` },
 
   { id:'02', title:'深夜改 bug', en:'Deep Night Debug',
     authorModel:'codex', imageModel:'gpt-image-2',
-    img:'assets/generated/synthwave.png', aspect:'3/4', likes:2518, cat:'漫画',
+    img:'assets/demo/synthwave.png', aspect:'3/4', likes:2518, cat:'漫画',
     tags:['漫画','程序员','四格','段子','黑白','screentone'],
     prompt:`A 4-panel Japanese manga strip titled "深夜改 bug", black and white screen-tone style, thick ink outlines, dot halftones. Panel 1: programmer at desk at 2am, coffee and energy drink cans piled up. Panel 2: close-up of confused face staring at red error wall. Panel 3: stack overflow tab open, relief gesture. Panel 4: sunrise through window, programmer asleep on keyboard. Aspect ratio 3:4.` },
 
   { id:'03', title:'赛博茶馆', en:'Cyberpunk Teahouse',
     authorModel:'claude-code', imageModel:'gpt-image-2',
-    img:'assets/generated/batch-cyberpunk-market.png', aspect:'16/9', likes:1267, cat:'赛博',
+    img:'assets/demo/batch-cyberpunk-market.png', aspect:'16/9', likes:1267, cat:'赛博',
     tags:['赛博','环境','霓虹','茶馆','雨夜','volumetric'],
     prompt:`A poster-style environment illustration of a small cyberpunk teahouse in a rain-soaked East Asian back alley, painterly hand-printed style with analog grain and CRT scanline artifacts. Round wood table with gaiwan releasing steam, vintage CRT TV, ginger cat. Jade-green neon (#00b894) + amber lantern (#f39c12) + near-black base (#0d1b2a). Wet concrete reflections. Aspect 3:4.` },
 
   { id:'04', title:'昭和和菓子店', en:'Showa Tea Shop',
     authorModel:'claude-sonnet', imageModel:'gpt-image-2',
-    img:'assets/generated/batch-coffee-flat.png', aspect:'3/4', likes:744, cat:'国风',
+    img:'assets/demo/batch-coffee-flat.png', aspect:'3/4', likes:744, cat:'国风',
     tags:['国风','昭和','黄昏','手工','和菓子','复古海报'],
     prompt:`A vertical retro poster illustration of a Japanese Showa-era tea and wagashi shop facade at dusk, painterly hand-printed with warm grain of vintage mid-century Japanese travel posters. Aged cedar planks, shoji screens glowing amber, noren curtain in indigo. Hand-brushed ink calligraphy reading 和菓子. Palette: #2c1810 + #e8a048 + #7a9e7e + #d4c4a0. Aspect 3:4.` },
 
   { id:'05', title:'水彩橘猫看夕阳', en:'Watercolor Tabby',
     authorModel:'gpt-5', imageModel:'gpt-image-2',
-    img:'assets/samples/cat-sunset-watercolor.png', aspect:'16/9', likes:8822, cat:'动物',
+    img:'assets/demo/cat-sunset-watercolor.png', aspect:'16/9', likes:8822, cat:'动物',
     tags:['水彩','猫','治愈','黄昏','小确幸'],
     prompt:`一只橘猫坐在窗台上看夕阳，水彩画风格，柔和笔触，暖色调，窗框木纹清晰，光线透过玻璃洒在猫毛上形成柔和高光，背景远处是模糊的城市剪影。色调：温暖橙黄 + 柔粉 + 淡蓝。aspect ratio 16:9.` },
 
   { id:'06', title:'盲盒柯基', en:'Pixar Corgi',
     authorModel:'claude-code', imageModel:'gpt-image-2',
-    img:'assets/generated/batch-corgi-pixar.png', aspect:'4/3', likes:3421, cat:'可爱',
+    img:'assets/demo/batch-corgi-pixar.png', aspect:'4/3', likes:3421, cat:'可爱',
     tags:['皮克斯','3D','柯基','生日','手办','棚拍光'],
     prompt:`a Pixar-style 3D render of a cute corgi wearing a birthday hat, studio lighting, soft fur detail, big sparkling eyes, shallow depth of field, pastel background with blurred confetti, hyperreal toy-like finish. Aspect 4:3.` },
 
   { id:'07', title:'霓虹夜市', en:'Cyberpunk Night Market',
     authorModel:'claude-opus', imageModel:'gpt-image-2',
-    img:'assets/generated/batch-cyberpunk-market.png', aspect:'16/9', likes:12876, cat:'赛博',
+    img:'assets/demo/batch-cyberpunk-market.png', aspect:'16/9', likes:12876, cat:'赛博',
     tags:['赛博','夜市','霓虹','电影感','Blade Runner','蒸汽'],
     prompt:`cyberpunk street market at night, neon signs in jade + pink + gold, blade runner atmosphere, wet reflective pavement, steam from food stalls catching neon light, volumetric haze. Cinematic wide shot, aspect 16:9.` },
 
   { id:'08', title:'水墨锦鲤', en:'Ink Wash Koi',
     authorModel:'claude-sonnet', imageModel:'gpt-image-2',
-    img:'assets/generated/batch-koi-watercolor.png', aspect:'1/1', likes:5643, cat:'国风',
+    img:'assets/demo/batch-koi-watercolor.png', aspect:'1/1', likes:5643, cat:'国风',
     tags:['水墨','锦鲤','荷塘','禅意','国画','宣纸'],
     prompt:`a watercolor painting of a koi fish swimming in a lotus pond, traditional Chinese ink wash style, minimal composition, visible brushwork and rice paper texture, subtle gold leaf accents. Aspect 1:1.` },
 
   { id:'09', title:'极简咖啡', en:'Minimal Coffee',
     authorModel:'claude-code', imageModel:'gpt-image-2',
-    img:'assets/generated/batch-coffee-flat.png', aspect:'3/4', likes:2109, cat:'极简',
+    img:'assets/demo/batch-coffee-flat.png', aspect:'3/4', likes:2109, cat:'极简',
     tags:['极简','咖啡','晨光','木质','flat'],
     prompt:`minimalist flat illustration of a coffee cup on a wooden desk, morning soft light through window, limited palette of warm beige + cream + subtle sage green, large negative space top-left for quote text. Aspect 3:4.` },
 
   { id:'10', title:'日落山川', en:'Sunset Mountain',
     authorModel:'codex', imageModel:'gpt-image-2',
-    img:'assets/generated/e2e-sunset-mountain.png', aspect:'16/9', likes:7332, cat:'海报',
+    img:'assets/demo/e2e-sunset-mountain.png', aspect:'16/9', likes:7332, cat:'海报',
     tags:['风光','日落','极简','渐变','海报','背景图'],
     prompt:`a minimalist mountain landscape with sunset gradient sky, flat illustration style, warm oranges and purples, subtle atmospheric haze, clean silhouetted ridgelines, poster-ready composition. Aspect 16:9.` },
 
   { id:'11', title:'禅意石庭', en:'Zen Rock Garden',
     authorModel:'claude-code', imageModel:'gpt-image-2',
-    img:'assets/generated/zen-garden.png', aspect:'1/1', likes:1891, cat:'国风',
+    img:'assets/demo/zen-garden.png', aspect:'1/1', likes:1891, cat:'国风',
     tags:['禅意','日式','石庭','侘寂','冥想'],
     prompt:`a serene Japanese zen rock garden at dawn, raked gravel patterns, single stone lantern, soft painterly watercolor, muted earth tones #d4c4a0 + #7a9e7e + #5c4033, golden hour light, aspect 1:1.` },
 
   { id:'12', title:'赛博电子猫', en:'Cyber Cat',
     authorModel:'claude-opus', imageModel:'gpt-image-2',
-    img:'assets/generated/cyber-cat.png', aspect:'16/9', likes:6540, cat:'赛博',
+    img:'assets/demo/cyber-cat.png', aspect:'16/9', likes:6540, cat:'赛博',
     tags:['赛博','猫','霓虹','全息','屋顶','未来'],
     prompt:`a cybernetic tabby cat on a futuristic rooftop, holographic collar with floating data glyphs, neon magenta + cyan signage in background, wet rain-slicked surfaces reflecting lights, cinematic depth of field. Aspect 16:9.` },
 
   { id:'13', title:'蒸汽波日落', en:'Synthwave Sunset',
     authorModel:'cursor', imageModel:'gpt-image-2',
-    img:'assets/generated/synthwave.png', aspect:'9/16', likes:4201, cat:'复古',
+    img:'assets/demo/synthwave.png', aspect:'9/16', likes:4201, cat:'复古',
     tags:['蒸汽波','Y2K','网格','紫粉','80s','CRT'],
     prompt:`synthwave retro aesthetic, palm tree silhouettes in front of a purple-pink gradient grid horizon, chrome text glow, 80s VHS film grain, CRT scanline overlay. Aspect 9:16.` },
 ];

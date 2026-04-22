@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>GPT Image 2 · 爆火项目 clone 清单</title>
+<style>
+:root {
+  --bg: #050507;
+  --bg-glass: rgba(0,0,0,0.30);
+  --bg-elevated: rgba(255,255,255,0.04);
+  --accent: #a78bfa;
+  --accent-strong: #8b5cf6;
+  --accent-12: rgba(167,139,250,0.12);
+  --accent-20: rgba(167,139,250,0.20);
+  --warm: #f97316;
+  --green: #34d399;
+  --red: #f87171;
+  --yellow: #fbbf24;
+  --blue: #38bdf8;
+  --pink: #f472b6;
+  --border: rgba(255,255,255,0.13);
+  --border-soft: rgba(255,255,255,0.06);
+  --text: rgba(255,255,255,0.96);
+  --text-sub: rgba(255,255,255,0.80);
+  --text-60: rgba(255,255,255,0.60);
+  --text-40: rgba(255,255,255,0.40);
+}
+* { box-sizing: border-box; }
+html, body { margin:0; padding:0; }
+body {
+  background: var(--bg);
+  background-image:
+    radial-gradient(ellipse 80% 25% at 50% 0%, rgba(139,92,246,0.22), transparent 60%),
+    radial-gradient(ellipse 50% 20% at 80% 0%, rgba(167,139,250,0.12), transparent 60%),
+    radial-gradient(ellipse 60% 20% at 50% 100%, rgba(124,58,237,0.10), transparent 60%),
+    radial-gradient(ellipse 40% 15% at 20% 100%, rgba(249,115,22,0.06), transparent 60%);
+  background-attachment: fixed;
+  color: var(--text-sub);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 18px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: 1360px; margin: 0 auto; padding: 48px 28px 80px; }
+
+.hero {
+  background: var(--bg-glass);
+  backdrop-filter: blur(40px) saturate(2);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 40px 44px;
+  margin-bottom: 28px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.10), 0 8px 32px rgba(0,0,0,0.40);
+}
+.eyebrow { color: var(--accent); font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 14px; }
+.hero h1 { font-size: 48px; font-weight: 800; letter-spacing: -0.03em; color: var(--text); margin: 0 0 12px; line-height: 1.1; }
+.hero .sub { color: var(--text-sub); font-size: 20px; margin: 0; }
+
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 28px; }
+.stat { background: var(--bg-elevated); border: 1px solid var(--border-soft); border-radius: 14px; padding: 18px 20px; }
+.stat .num { font-size: 32px; font-weight: 800; color: var(--text); line-height: 1.1; font-variant-numeric: tabular-nums; }
+.stat .lbl { font-size: 13px; color: var(--text-60); margin-top: 4px; letter-spacing: 0.04em; }
+
+h2 { font-size: 28px; font-weight: 700; color: var(--text); margin: 56px 0 20px; letter-spacing: -0.01em; }
+.h2-tag { display: inline-block; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 999px; vertical-align: middle; margin-left: 10px; background: var(--accent-12); color: var(--accent); letter-spacing: 0.05em; }
+
+.repo-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.repo {
+  background: var(--bg-glass);
+  backdrop-filter: blur(30px) saturate(1.8);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 22px 24px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.repo .top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.repo .name { font-size: 19px; font-weight: 700; color: var(--text); font-family: "SF Mono", ui-monospace, monospace; }
+.repo .stars { font-size: 14px; font-weight: 700; color: var(--yellow); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.repo .desc { font-size: 15px; color: var(--text-sub); line-height: 1.55; margin: 0; }
+.repo .meta { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 2px; }
+.badge { display: inline-flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 999px; letter-spacing: 0.02em; }
+.b-prompt { background: var(--accent-12); color: var(--accent); }
+.b-product { background: rgba(249,115,22,0.14); color: var(--warm); }
+.b-model { background: rgba(52,211,153,0.14); color: var(--green); }
+.b-old { background: rgba(248,113,113,0.12); color: var(--red); }
+.b-new { background: rgba(56,189,248,0.14); color: var(--blue); }
+.b-i18n { background: rgba(244,114,182,0.14); color: var(--pink); }
+.repo .links { display: flex; gap: 10px; margin-top: 2px; font-size: 13px; }
+.repo a { color: var(--accent); text-decoration: none; border-bottom: 1px dashed var(--accent-20); }
+.repo a:hover { border-bottom-style: solid; }
+.repo .path { font-family: "SF Mono", ui-monospace, monospace; font-size: 12px; color: var(--text-40); }
+.repo.focus { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent-12), 0 8px 32px rgba(139,92,246,0.25); }
+
+.focus-section { background: var(--bg-glass); backdrop-filter: blur(40px) saturate(2); border: 1px solid var(--border); border-radius: 20px; padding: 36px 40px; margin-top: 32px; }
+.focus-title { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 14px; }
+.focus-title h2 { margin: 0; font-size: 30px; }
+.focus-title .head-stars { color: var(--yellow); font-size: 18px; font-weight: 700; }
+.cat-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin: 20px 0 26px; }
+.cat-row .cat { background: var(--bg-elevated); border: 1px solid var(--border-soft); border-radius: 12px; padding: 14px 16px; text-align: center; }
+.cat-row .cat .n { font-size: 26px; font-weight: 800; color: var(--text); font-variant-numeric: tabular-nums; line-height: 1; }
+.cat-row .cat .k { font-size: 12px; color: var(--text-60); text-transform: uppercase; margin-top: 4px; letter-spacing: 0.1em; }
+
+.gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.gallery figure { margin: 0; position: relative; border-radius: 12px; overflow: hidden; background: #111; border: 1px solid var(--border-soft); aspect-ratio: 1/1; }
+.gallery img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s ease; }
+.gallery figure:hover img { transform: scale(1.05); }
+.gallery figcaption { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.85), transparent); padding: 18px 12px 10px; color: var(--text); font-size: 12px; font-weight: 600; letter-spacing: 0.04em; }
+.gallery figcaption .tag { display: inline-block; background: var(--accent-12); color: var(--accent); padding: 2px 8px; border-radius: 6px; font-size: 11px; margin-right: 6px; }
+
+.tip { background: var(--accent-12); border: 1px solid var(--accent-20); border-radius: 12px; padding: 14px 18px; margin-top: 20px; font-size: 14px; color: var(--text-sub); }
+.tip b { color: var(--accent); }
+
+.footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border-soft); color: var(--text-40); font-size: 13px; text-align: center; }
+
+@media (max-width: 900px) {
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .repo-grid { grid-template-columns: 1fr; }
+  .cat-row { grid-template-columns: repeat(5, 1fr); }
+  .gallery { grid-template-columns: repeat(2, 1fr); }
+  .hero h1 { font-size: 36px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="eyebrow">2026-04-22 · gpt-image-2 爆火方向</div>
+  <h1>Clone 了 6 个爆款仓 · 总 ⭐ 14K+</h1>
+  <p class="sub">你选了看 <b style="color:var(--accent)">EvoLinkAI · 1551⭐</b> · Twitter 实战案例 gallery · 下面直接扫</p>
+  <div class="stats">
+    <div class="stat"><div class="num">6</div><div class="lbl">仓 / 爆款</div></div>
+    <div class="stat"><div class="num">14,071</div><div class="lbl">⭐ 总数</div></div>
+    <div class="stat"><div class="num">136</div><div class="lbl">EvoLink 实例图</div></div>
+    <div class="stat"><div class="num">~440M</div><div class="lbl">磁盘占用</div></div>
+  </div>
+</section>
+
+<!-- FOCUS · EvoLinkAI -->
+<section class="focus-section">
+  <div class="focus-title">
+    <h2>🎯 EvoLinkAI / awesome-gpt-image-2-prompts</h2>
+    <div class="head-stars">⭐ 1,551 · pushed 2026-04-22</div>
+  </div>
+  <p style="margin-top:6px; font-size:16px; color:var(--text-sub);">
+    X / Twitter 精选实战 prompt + 按类别整理的真图 · 5 大类 136 张 · 11 国语言 README
+  </p>
+
+  <div class="cat-row">
+    <div class="cat"><div class="n">49</div><div class="k">Poster</div></div>
+    <div class="cat"><div class="n">33</div><div class="k">Comparison</div></div>
+    <div class="cat"><div class="n">27</div><div class="k">UI</div></div>
+    <div class="cat"><div class="n">18</div><div class="k">Portrait</div></div>
+    <div class="cat"><div class="n">9</div><div class="k">Character</div></div>
+  </div>
+
+  <div class="gallery">
+    <figure><img src="file:///Users/Zhuanz/workspace/prompt-atlas-archive/reference-repos/ref/awesome-gpt-image-2-prompts/images/poster_case1/output.jpg" alt="poster 1" loading="lazy"><figcaption><span class="tag">poster</span>case 1</figcaption></figure>
+    <figure><img src="file:///Users/Zhuanz/workspace/prompt-atlas-archive/reference-repos/ref/awesome-gpt-image-2-prompts/images/poster_case10/output.jpg" alt="poster 10" loading="lazy"><figcaption><span class="tag">poster</span>case 10</figcaption></figure>
+    <figure><img src="file:///Users/Zhuanz/workspace/prompt-atlas-archive/reference-repos/ref/awesome-gpt-image-2-prompts/images/comparison_case10/output.jpg" alt="comparison 10" loading="lazy"><figcaption><span class="tag">compare</span>case 10</figcaption></figure>
+    <figure><img src="file:///Users/Zhuanz/workspace/prompt-atlas-archive/reference-repos/ref/awesome-gpt-image-2-prompts/images/comparison_case11/output.jpg" alt="comparison 11" loading="lazy"><figcaption><span class="tag">compare</span>case 11</figcaption></figure>
+    <figure><img src="file:///Users/Zhuanz/workspace/prompt-atlas-archive/reference-repos/ref/awesome-gpt-image-2-prompts/images/ui_case1/output.jpg" alt="ui 1" loading="lazy"><figcaption><span class="tag">ui</span>case 1</figcaption></figure>
+    <figure><img src="file:///Users/Zhuanz/workspace/prompt-atlas-archive/reference-repos/ref/awesome-gpt-image-2-prompts/images/ui_case10/output.jpg" alt="ui 10" loading="lazy"><figcaption><span class="tag">ui</span>case 10</figcaption></figure>
+    <figure><img src="file:///Users/Zhuanz/workspace/prompt-atlas-archive/reference-repos/ref/awesome-gpt-image-2-prompts/images/portrait_case1/output.jpg" alt="portrait 1" loading="lazy"><figcaption><span class="tag">portrait</span>case 1</figcaption></figure>
+    <figure><img src="file:///Users/Zhuanz/workspace/prompt-atlas-archive/reference-repos/ref/awesome-gpt-image-2-prompts/images/portrait_case10/output.jpg" alt="portrait 10" loading="lazy"><figcaption><span class="tag">portrait</span>case 10</figcaption></figure>
+    <figure><img src="file:///Users/Zhuanz/workspace/prompt-atlas-archive/reference-repos/ref/awesome-gpt-image-2-prompts/images/character_case1/output.jpg" alt="character 1" loading="lazy"><figcaption><span class="tag">character</span>case 1</figcaption></figure>
+    <figure><img src="file:///Users/Zhuanz/workspace/prompt-atlas-archive/reference-repos/ref/awesome-gpt-image-2-prompts/images/character_case2/output.jpg" alt="character 2" loading="lazy"><figcaption><span class="tag">character</span>case 2</figcaption></figure>
+    <figure><img src="file:///Users/Zhuanz/workspace/prompt-atlas-archive/reference-repos/ref/awesome-gpt-image-2-prompts/images/poster_case11/output.jpg" alt="poster 11" loading="lazy"><figcaption><span class="tag">poster</span>case 11</figcaption></figure>
+    <figure><img src="file:///Users/Zhuanz/workspace/prompt-atlas-archive/reference-repos/ref/awesome-gpt-image-2-prompts/images/ui_case11/output.jpg" alt="ui 11" loading="lazy"><figcaption><span class="tag">ui</span>case 11</figcaption></figure>
+  </div>
+
+  <div class="tip">
+    <b>💡 原始 prompt 数据</b> · <span style="font-family:'SF Mono',monospace">awesome-gpt-image-2-prompts/gpt_image2_prompts.json</span> · 带 X 作者 / 点赞 / 浏览量 / 多语言 prompt 原文 · 可直接用于 Prompt Atlas 填充示例
+  </div>
+</section>
+
+<!-- 其他 5 仓 -->
+<h2>🗂️ 其他 5 个仓 <span class="h2-tag">同步 clone 了</span></h2>
+<div class="repo-grid">
+
+  <div class="repo">
+    <div class="top">
+      <span class="name">jamez-bondos/awesome-gpt4o-images</span>
+      <span class="stars">⭐ 7,871</span>
+    </div>
+    <p class="desc">老牌 GPT-4o + gpt-image-1 精选图例 · 中英双语 README · 40 个官方 gpt-image-1 案例精翻</p>
+    <div class="meta">
+      <span class="badge b-prompt">prompt 合集</span>
+      <span class="badge b-old">祖师爷</span>
+    </div>
+    <div class="path">/Users/Zhuanz/workspace/prompt-atlas-archive/reference-repos/ref/awesome-gpt4o-images/</div>
+    <div class="links">
+      <a href="https://github.com/jamez-bondos/awesome-gpt4o-images">GitHub ↗</a>
+      <a href="awesome-gpt4o-images/README.md">本地 README</a>
+    </div>
+  </div>
+
+  <div class="repo">
+    <div class="top">
+      <span class="name">Anil-matcha/Awesome-GPT-Image-2-API-Prompts</span>
+      <span class="stars">⭐ 1,571</span>
+    </div>
+    <p class="desc">OpenAI API 纯 prompt 清单 · portrait / poster / UI mockup / game / character 五大类 · 开箱即贴到 images.generate()</p>
+    <div class="meta">
+      <span class="badge b-prompt">prompt 合集</span>
+      <span class="badge b-new">API 向</span>
+    </div>
+    <div class="path">/Users/Zhuanz/workspace/prompt-atlas-archive/reference-repos/ref/Awesome-GPT-Image-2-API-Prompts/</div>
+    <div class="links">
+      <a href="https://github.com/Anil-matcha/Awesome-GPT-Image-2-API-Prompts">GitHub ↗</a>
+      <a href="Awesome-GPT-Image-2-API-Prompts/README.md">本地 README</a>
+    </div>
+  </div>
+
+  <div class="repo">
+    <div class="top">
+      <span class="name">stepfun-ai/Step1X-Edit</span>
+      <span class="stars">⭐ 2,186</span>
+    </div>
+    <p class="desc">阶跃开源图像编辑模型 · 对标 gpt-image / 4o / Gemini 2 Flash · 带 gradio app + GEdit-Bench · HF 可下权重</p>
+    <div class="meta">
+      <span class="badge b-model">开源模型</span>
+      <span class="badge b-new">可本地跑</span>
+    </div>
+    <div class="path">/Users/Zhuanz/workspace/prompt-atlas-archive/reference-repos/ref/Step1X-Edit/</div>
+    <div class="links">
+      <a href="https://github.com/stepfun-ai/Step1X-Edit">GitHub ↗</a>
+      <a href="Step1X-Edit/README.md">本地 README</a>
+    </div>
+  </div>
+
+  <div class="repo">
+    <div class="top">
+      <span class="name">432539/gpt2api</span>
+      <span class="stars">⭐ 759</span>
+    </div>
+    <p class="desc">逆向 chatgpt.com 的 OpenAI 兼容 SaaS 网关 · Go + Vue3 · 多账号池 / 批量出图 / 高并发 / 积分计费 / 管理后台</p>
+    <div class="meta">
+      <span class="badge b-product">产品代码</span>
+      <span class="badge b-old">灰产向</span>
+    </div>
+    <div class="path">/Users/Zhuanz/workspace/prompt-atlas-archive/reference-repos/ref/gpt2api/</div>
+    <div class="links">
+      <a href="https://github.com/432539/gpt2api">GitHub ↗</a>
+      <a href="gpt2api/README.md">本地 README</a>
+    </div>
+  </div>
+
+  <div class="repo">
+    <div class="top">
+      <span class="name">YouMind-OpenLab/awesome-gpt-image-2</span>
+      <span class="stars">⭐ 133</span>
+    </div>
+    <p class="desc">16 国语言 prompt 库 · 配 youmind.com 在线 Masonry gallery · 自动化 workflow(GitHub Actions 更新 README)</p>
+    <div class="meta">
+      <span class="badge b-prompt">prompt 合集</span>
+      <span class="badge b-i18n">多语言</span>
+    </div>
+    <div class="path">/Users/Zhuanz/workspace/prompt-atlas-archive/reference-repos/ref/youmind-awesome-gpt-image-2/</div>
+    <div class="links">
+      <a href="https://github.com/YouMind-OpenLab/awesome-gpt-image-2">GitHub ↗</a>
+      <a href="youmind-awesome-gpt-image-2/README.md">本地 README</a>
+    </div>
+  </div>
+
+  <div class="repo">
+    <div class="top">
+      <span class="name">songguoxs/gpt4o-image-prompts</span>
+      <span class="stars">⭐ 3,330</span>
+    </div>
+    <p class="desc">Nano Banana / GPT-5 / GPT-4o 综合 prompt 合集 · 跨模型 · clone 时网络中断未下完 · 手动补拉即可</p>
+    <div class="meta">
+      <span class="badge b-prompt">prompt 合集</span>
+      <span class="badge" style="background:rgba(251,191,36,0.14);color:var(--yellow)">⚠ 未完整</span>
+    </div>
+    <div class="path">/Users/Zhuanz/workspace/prompt-atlas-archive/reference-repos/ref/gpt4o-image-prompts/ · <b style="color:var(--red)">已清理</b></div>
+    <div class="links">
+      <a href="https://github.com/songguoxs/gpt4o-image-prompts">GitHub ↗</a>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  /Users/Zhuanz/workspace/prompt-atlas-archive/reference-repos/ref/ 已移出主仓 · 不污染主仓 · 按 stars 精选 · 产 2026-04-22
+</div>
+
+</div>
+</body>
+</html>

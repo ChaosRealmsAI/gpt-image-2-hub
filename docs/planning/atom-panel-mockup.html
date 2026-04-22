@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>Prompt Atlas · 原子面板 mockup</title>
+<style>
+:root{
+  --bg:#050507; --bg-glass:rgba(0,0,0,0.30); --bg-elevated:rgba(255,255,255,0.04);
+  --accent:#a78bfa; --accent-12:rgba(167,139,250,0.12); --accent-20:rgba(167,139,250,0.20);
+  --warm:#f97316; --green:#34d399; --red:#f87171; --yellow:#fbbf24; --blue:#38bdf8; --pink:#f472b6;
+  --border:rgba(255,255,255,0.13); --border-soft:rgba(255,255,255,0.06);
+  --text:rgba(255,255,255,0.96); --text-sub:rgba(255,255,255,0.80); --text-40:rgba(255,255,255,0.40);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;height:100%}
+body{
+  background:var(--bg);
+  background-image:
+    radial-gradient(ellipse 80% 25% at 50% 0%, rgba(139,92,246,0.22), transparent 60%),
+    radial-gradient(ellipse 60% 20% at 50% 100%, rgba(52,211,153,0.08), transparent 60%);
+  background-attachment:fixed;
+  color:var(--text-sub); font-size:16px; line-height:1.55;
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro",system-ui,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* Top bar */
+.topbar{
+  position:sticky;top:0;z-index:50;
+  background:rgba(5,5,7,0.80);backdrop-filter:blur(20px) saturate(2.0);
+  border-bottom:1px solid var(--border-soft);
+  padding:14px 32px;
+  display:flex;align-items:center;gap:20px;
+}
+.topbar .brand{font-size:17px;font-weight:800;letter-spacing:-0.01em;color:var(--text);background:linear-gradient(135deg,#a78bfa,#34d399);-webkit-background-clip:text;background-clip:text;color:transparent;font-family:"SF Mono",monospace}
+.topbar .breadcrumb{color:var(--text-40);font-size:13px;letter-spacing:0.04em}
+.topbar .breadcrumb span{color:var(--text-sub);margin:0 6px}
+.topbar .spacer{flex:1}
+.topbar .tag{padding:4px 10px;border-radius:6px;font-size:11px;font-weight:700;font-family:"SF Mono",monospace;letter-spacing:0.06em;background:var(--accent-12);color:var(--accent);border:1px solid rgba(167,139,250,0.30)}
+
+/* Layout split */
+.split{display:grid;grid-template-columns:1fr 520px;height:calc(100vh - 58px);min-height:700px}
+
+/* LEFT · image panel */
+.left{
+  padding:32px;overflow-y:auto;
+  display:flex;flex-direction:column;gap:18px;
+}
+.image-frame{
+  background:var(--bg-glass);backdrop-filter:blur(40px) saturate(2.0);
+  border:1px solid var(--border);border-radius:16px;
+  padding:14px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.08), 0 8px 40px rgba(0,0,0,0.4);
+  position:relative;
+}
+.image-frame img{width:100%;height:auto;display:block;border-radius:10px}
+.image-frame .toolbar{
+  position:absolute;top:22px;right:22px;
+  display:flex;gap:6px;
+  background:rgba(0,0,0,0.50);backdrop-filter:blur(20px);
+  border:1px solid var(--border);border-radius:10px;padding:5px;
+}
+.image-frame .toolbar button{
+  background:transparent;color:var(--text-sub);border:none;
+  padding:6px 9px;border-radius:6px;font-size:14px;cursor:pointer;
+}
+.image-frame .toolbar button:hover{background:var(--accent-12);color:var(--accent)}
+
+.image-meta{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:10px;
+}
+.image-meta .cell{
+  background:var(--bg-glass);backdrop-filter:blur(40px) saturate(2.0);
+  border:1px solid var(--border);border-radius:10px;padding:12px 14px;
+}
+.image-meta .lbl{font-size:10px;color:var(--text-40);letter-spacing:0.1em;text-transform:uppercase;font-family:"SF Mono",monospace;margin-bottom:3px}
+.image-meta .val{font-size:14px;color:var(--text);font-weight:600}
+.image-meta .val.s{color:var(--green)}
+
+.title-block h1{font-size:28px;color:var(--text);margin:0 0 6px;letter-spacing:-0.02em;font-weight:700}
+.title-block .chips{display:flex;gap:6px;flex-wrap:wrap}
+.title-block .chip{padding:3px 10px;border-radius:6px;font-size:11px;font-weight:600;letter-spacing:0.04em;font-family:"SF Mono",monospace}
+.title-block .chip.a{background:var(--accent-12);color:var(--accent);border:1px solid rgba(167,139,250,0.30)}
+.title-block .chip.g{background:rgba(52,211,153,0.14);color:var(--green);border:1px solid rgba(52,211,153,0.30)}
+.title-block .chip.w{background:rgba(249,115,22,0.14);color:var(--warm);border:1px solid rgba(249,115,22,0.30)}
+.title-block .chip.b{background:rgba(56,189,248,0.14);color:var(--blue);border:1px solid rgba(56,189,248,0.30)}
+
+/* RIGHT · atom panel */
+.right{
+  background:rgba(5,5,7,0.60);backdrop-filter:blur(20px);
+  border-left:1px solid var(--border-soft);
+  overflow-y:auto;
+  display:flex;flex-direction:column;
+}
+.right .panel-header{
+  padding:20px 24px 14px;
+  border-bottom:1px solid var(--border-soft);
+  position:sticky;top:0;background:rgba(5,5,7,0.90);backdrop-filter:blur(20px);z-index:5;
+}
+.right .panel-header h2{margin:0 0 3px;font-size:18px;color:var(--text);letter-spacing:-0.01em;font-weight:700}
+.right .panel-header .sub{font-size:12px;color:var(--text-40)}
+
+/* Filter pills */
+.filter-bar{
+  padding:12px 24px;
+  display:flex;flex-wrap:wrap;gap:6px;
+  border-bottom:1px solid var(--border-soft);
+  position:sticky;top:67px;background:rgba(5,5,7,0.90);backdrop-filter:blur(20px);z-index:4;
+}
+.filter{
+  padding:5px 11px;border-radius:999px;font-size:11px;font-weight:600;cursor:pointer;
+  font-family:"SF Mono",monospace;letter-spacing:0.04em;
+  background:var(--bg-elevated);color:var(--text-40);border:1px solid var(--border-soft);
+  transition:all .15s;
+}
+.filter:hover{color:var(--text-sub)}
+.filter.active{background:var(--accent-12);color:var(--accent);border-color:rgba(167,139,250,0.40)}
+
+/* Atom groups */
+.atoms{padding:14px 20px 100px}
+.atom-group{
+  background:var(--bg-glass);backdrop-filter:blur(40px) saturate(2.0);
+  border:1px solid var(--border-soft);border-radius:10px;
+  margin-bottom:10px;overflow:hidden;
+  transition:border-color .2s;
+}
+.atom-group:hover{border-color:var(--border)}
+.atom-group > summary{
+  list-style:none;cursor:pointer;
+  padding:12px 16px;
+  display:flex;align-items:center;gap:10px;
+}
+.atom-group > summary::-webkit-details-marker{display:none}
+.atom-group > summary .ic{font-size:18px;flex-shrink:0}
+.atom-group > summary .t-meta{flex:1;min-width:0}
+.atom-group > summary .t-name{font-size:13px;font-weight:700;color:var(--text);font-family:"SF Mono",monospace;letter-spacing:0.02em}
+.atom-group > summary .t-zh{font-size:11px;color:var(--text-40);margin-top:1px}
+.atom-group > summary .t-count{font-size:10px;color:var(--text-40);font-family:"SF Mono",monospace;padding:2px 6px;border-radius:4px;background:var(--bg-elevated)}
+.atom-group > summary .arr{font-size:11px;color:var(--text-40);transition:transform .2s;margin-left:4px}
+.atom-group[open] > summary .arr{transform:rotate(90deg)}
+
+.kv{padding:2px 16px 14px 44px}
+.kv .row{
+  display:grid;grid-template-columns:90px 1fr;gap:10px;
+  padding:5px 0;font-size:12.5px;line-height:1.5;
+  border-bottom:1px dashed var(--border-soft);
+}
+.kv .row:last-child{border-bottom:none}
+.kv .key{color:var(--text-40);font-family:"SF Mono",monospace;font-size:11px;letter-spacing:0.04em;padding-top:1px}
+.kv .val{color:var(--text-sub);word-break:break-word}
+.kv .val b{color:var(--text);font-weight:600}
+.kv .val code{background:var(--bg-elevated);color:var(--yellow);padding:1px 6px;border-radius:4px;font-family:"SF Mono",monospace;font-size:11.5px}
+
+.atom-group.text-atom .kv .val b{color:var(--yellow)}
+.atom-group.neg-atom .kv .val{color:#fca5a5}
+
+/* Bottom CTA */
+.cta-bar{
+  position:sticky;bottom:0;
+  padding:14px 24px;
+  background:rgba(5,5,7,0.95);backdrop-filter:blur(24px);
+  border-top:1px solid var(--border);
+  display:flex;gap:10px;
+  box-shadow:0 -8px 24px rgba(0,0,0,0.5);
+}
+.cta-primary{
+  flex:1;
+  background:linear-gradient(135deg,#a78bfa,#8b5cf6);color:#fff;
+  border:none;border-radius:10px;
+  padding:13px 18px;font-size:14px;font-weight:700;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  box-shadow:0 4px 20px rgba(139,92,246,0.35);
+  letter-spacing:0.02em;
+  transition:all .15s;
+}
+.cta-primary:hover{transform:translateY(-1px);box-shadow:0 6px 24px rgba(139,92,246,0.5)}
+.cta-primary.ok{background:linear-gradient(135deg,#34d399,#10b981);box-shadow:0 4px 20px rgba(52,211,153,0.4)}
+.cta-secondary{
+  flex:1;
+  background:var(--bg-glass);color:var(--accent);border:1px solid var(--accent);border-radius:10px;
+  padding:13px 18px;font-size:14px;font-weight:700;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  letter-spacing:0.02em;
+}
+.cta-secondary:hover{background:var(--accent-12)}
+
+/* Toast */
+.toast{
+  position:fixed;bottom:90px;left:50%;transform:translateX(-50%) translateY(100px);
+  background:var(--bg-glass);backdrop-filter:blur(40px) saturate(2.0);
+  border:1px solid var(--green);
+  color:var(--green);font-weight:700;
+  padding:10px 20px;border-radius:999px;font-size:13px;
+  box-shadow:0 8px 40px rgba(52,211,153,0.3);
+  transition:transform .3s ease;
+  z-index:100;font-family:"SF Mono",monospace;
+  pointer-events:none;
+}
+.toast.show{transform:translateX(-50%) translateY(0)}
+
+/* hidden */
+.md-source{display:none}
+
+@media (max-width:1100px){.split{grid-template-columns:1fr}.right{border-left:none;border-top:1px solid var(--border-soft)}}
+</style>
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="topbar">
+  <div class="brand">Prompt Atlas</div>
+  <div class="breadcrumb">示例库 <span>›</span> 编辑级海报 <span>›</span> Prompt Atlas Poster</div>
+  <div class="spacer"></div>
+  <span class="tag">S · showcase</span>
+</div>
+
+<!-- Main split -->
+<div class="split">
+
+  <!-- LEFT · 图 -->
+  <div class="left">
+    <div class="title-block">
+      <h1>Prompt Atlas · 海报</h1>
+      <div class="chips">
+        <span class="chip a">编辑级</span>
+        <span class="chip g">中英混排</span>
+        <span class="chip w">品牌视觉</span>
+        <span class="chip b">Thinking ON</span>
+      </div>
+    </div>
+
+    <div class="image-frame">
+      <div class="toolbar">
+        <button title="放大">⤢</button>
+        <button title="下载">⬇</button>
+        <button title="喜欢">♡</button>
+      </div>
+      <img src="../../assets/demo/poster.png" alt="Prompt Atlas poster sample">
+    </div>
+
+    <div class="image-meta">
+      <div class="cell"><div class="lbl">MODEL</div><div class="val">GPT Image 2</div></div>
+      <div class="cell"><div class="lbl">MODE</div><div class="val">Thinking</div></div>
+      <div class="cell"><div class="lbl">ASPECT</div><div class="val">16:9</div></div>
+      <div class="cell"><div class="lbl">评分</div><div class="val s">S · 首发示例</div></div>
+    </div>
+
+    <div class="image-frame" style="padding:18px 22px">
+      <div style="font-size:13px;color:var(--text-40);margin-bottom:6px;letter-spacing:0.06em;font-family:'SF Mono',monospace">SUMMARY</div>
+      <div style="font-size:14px;line-height:1.65;color:var(--text-sub)">编辑级杂志封面风格海报 · 中央 3D 水晶地球仪镶嵌元素周期表格子 · 中英文标题精准渲染 · aurora 紫光背景 · Wired 杂志审美.</div>
+    </div>
+  </div>
+
+  <!-- RIGHT · 原子面板 -->
+  <div class="right">
+
+    <div class="panel-header">
+      <h2>🧬 Atom Breakdown</h2>
+      <div class="sub">20 原子拆解 · 界面结构化 · 复制时合成自然语言 prompt</div>
+    </div>
+
+    <div class="filter-bar">
+      <button class="filter active" data-f="all">全部 · 15</button>
+      <button class="filter" data-f="core">核心</button>
+      <button class="filter" data-f="style">风格</button>
+      <button class="filter" data-f="light">光影色</button>
+      <button class="filter" data-f="text">文字</button>
+      <button class="filter" data-f="tech">技术参数</button>
+      <button class="filter" data-f="neg">约束</button>
+    </div>
+
+    <div class="atoms">
+
+      <details class="atom-group" data-cat="core" open>
+        <summary><span class="ic">🎯</span><div class="t-meta"><div class="t-name">intent</div><div class="t-zh">意图 · 决定精度基调</div></div><span class="t-count">1</span><span class="arr">›</span></summary>
+        <div class="kv">
+          <div class="row"><div class="key">value</div><div class="val"><b>editorial magazine cover poster</b> · Wired 杂志级 · museum-grade 精度</div></div>
+        </div>
+      </details>
+
+      <details class="atom-group" data-cat="core" open>
+        <summary><span class="ic">🖼️</span><div class="t-meta"><div class="t-name">medium</div><div class="t-zh">媒介 / 物理肌理</div></div><span class="t-count">1</span><span class="arr">›</span></summary>
+        <div class="kv">
+          <div class="row"><div class="key">primary</div><div class="val">high-end <b>3D rendered editorial poster</b> · 干净数码渲染 · 无胶片颗粒</div></div>
+        </div>
+      </details>
+
+      <details class="atom-group" data-cat="style" open>
+        <summary><span class="ic">🎨</span><div class="t-meta"><div class="t-name">style</div><div class="t-zh">风格锚</div></div><span class="t-count">2</span><span class="arr">›</span></summary>
+        <div class="kv">
+          <div class="row"><div class="key">anchor</div><div class="val"><b>Wired magazine editorial</b> + <b>futuristic glass morphism</b></div></div>
+          <div class="row"><div class="key">era</div><div class="val">contemporary 2020s tech editorial</div></div>
+        </div>
+      </details>
+
+      <details class="atom-group" data-cat="core" open>
+        <summary><span class="ic">🧑</span><div class="t-meta"><div class="t-name">subject</div><div class="t-zh">画面主体</div></div><span class="t-count">3</span><span class="arr">›</span></summary>
+        <div class="kv">
+          <div class="row"><div class="key">centerpiece</div><div class="val">悬浮 <b>水晶地球仪</b> · 玻璃拟态 · 体积光</div></div>
+          <div class="row"><div class="key">inside</div><div class="val">交织彩色能量丝线 · 连接 <b>元素周期表格子</b> (H · O · N · C · Na · Ca · Fe · Cu · Al · S · K · Cl · P)</div></div>
+          <div class="row"><div class="key">symbolism</div><div class="val">"文生图的原子可组合" 的视觉隐喻</div></div>
+        </div>
+      </details>
+
+      <details class="atom-group" data-cat="core" open>
+        <summary><span class="ic">🌆</span><div class="t-meta"><div class="t-name">scene</div><div class="t-zh">背景环境</div></div><span class="t-count">2</span><span class="arr">›</span></summary>
+        <div class="kv">
+          <div class="row"><div class="key">background</div><div class="val"><b>深紫黑 void</b> + 上方紫绿 <b>aurora 极光渐变</b></div></div>
+          <div class="row"><div class="key">side_decor</div><div class="val">两侧细长金属框架柱 + 科技纹饰(装饰性 · 不突出)</div></div>
+        </div>
+      </details>
+
+      <details class="atom-group" data-cat="core" open>
+        <summary><span class="ic">📐</span><div class="t-meta"><div class="t-name">composition</div><div class="t-zh">构图</div></div><span class="t-count">3</span><span class="arr">›</span></summary>
+        <div class="kv">
+          <div class="row"><div class="key">framing</div><div class="val"><b>16:9 横版</b> · 编辑级呼吸感</div></div>
+          <div class="row"><div class="key">layout</div><div class="val">水晶球居中略偏下 · 大标题顶部 · 副标底部 · 四角印章/小字</div></div>
+          <div class="row"><div class="key">balance</div><div class="val">strong 中心对称 · 克制留白</div></div>
+        </div>
+      </details>
+
+      <details class="atom-group" data-cat="light" open>
+        <summary><span class="ic">💡</span><div class="t-meta"><div class="t-name">lighting</div><div class="t-zh">光照</div></div><span class="t-count">3</span><span class="arr">›</span></summary>
+        <div class="kv">
+          <div class="row"><div class="key">primary</div><div class="val">水晶球自发光 · 内部能量丝线 <b>体积光</b></div></div>
+          <div class="row"><div class="key">ambient</div><div class="val">背景 aurora 从上方 <b>柔和漫射</b></div></div>
+          <div class="row"><div class="key">accent</div><div class="val">暖橙 rim light 勾边 · studio soft box 整体</div></div>
+        </div>
+      </details>
+
+      <details class="atom-group" data-cat="light" open>
+        <summary><span class="ic">🌈</span><div class="t-meta"><div class="t-name">color</div><div class="t-zh">色彩调性</div></div><span class="t-count">4</span><span class="arr">›</span></summary>
+        <div class="kv">
+          <div class="row"><div class="key">base</div><div class="val"><code>#2d1b4e</code> 深紫 void</div></div>
+          <div class="row"><div class="key">accent</div><div class="val"><code>#34d399</code> 青绿能量丝线</div></div>
+          <div class="row"><div class="key">highlight</div><div class="val"><code>#f97316</code> 暖橙 rim + 侧柱</div></div>
+          <div class="row"><div class="key">background</div><div class="val">多层 <code>aurora gradient</code> 紫绿混</div></div>
+        </div>
+      </details>
+
+      <details class="atom-group" data-cat="light" open>
+        <summary><span class="ic">🌫️</span><div class="t-meta"><div class="t-name">mood</div><div class="t-zh">情绪氛围</div></div><span class="t-count">3</span><span class="arr">›</span></summary>
+        <div class="kv">
+          <div class="row"><div class="key">primary</div><div class="val"><b>reverent tech editorial</b> · 神圣 / 探索</div></div>
+          <div class="row"><div class="key">secondary</div><div class="val">未来感 · 产品发布会质感</div></div>
+          <div class="row"><div class="key">avoid</div><div class="val">cheesy / 廉价 / 乱炫光</div></div>
+        </div>
+      </details>
+
+      <details class="atom-group text-atom" data-cat="text" open>
+        <summary><span class="ic">✍️</span><div class="t-meta"><div class="t-name">text_elements</div><div class="t-zh">引号精确文字 · 4 处</div></div><span class="t-count">4</span><span class="arr">›</span></summary>
+        <div class="kv">
+          <div class="row"><div class="key">top_title</div><div class="val"><b>"Prompt Atlas"</b> · 顶部金属立体 serif 大字</div></div>
+          <div class="row"><div class="key">zh_sub</div><div class="val"><b>"提示词图谱"</b> · 中文 serif · 字符无缺笔</div></div>
+          <div class="row"><div class="key">eng_sub</div><div class="val"><b>"Compose Atoms · Generate Better Images"</b> · 球下方 · 中号克制</div></div>
+          <div class="row"><div class="key">corner_credit</div><div class="val"><b>"Powered by GPT Image 2 · 2026"</b> · 右下小字</div></div>
+          <div class="row"><div class="key">top_seal</div><div class="val"><b>"v1.0 · beta"</b> · 左上圆形印章徽标</div></div>
+        </div>
+      </details>
+
+      <details class="atom-group" data-cat="text" open>
+        <summary><span class="ic">📍</span><div class="t-meta"><div class="t-name">placement</div><div class="t-zh">位置规则</div></div><span class="t-count">4</span><span class="arr">›</span></summary>
+        <div class="kv">
+          <div class="row"><div class="key">hero</div><div class="val">水晶球 → 垂直中心略偏下</div></div>
+          <div class="row"><div class="key">title</div><div class="val">顶部 1/4 区域 · 水平居中</div></div>
+          <div class="row"><div class="key">subtitle</div><div class="val">球正下方 · 水平居中 · 小字</div></div>
+          <div class="row"><div class="key">corners</div><div class="val">左上印章 · 右下 credit</div></div>
+        </div>
+      </details>
+
+      <details class="atom-group" data-cat="core">
+        <summary><span class="ic">📷</span><div class="t-meta"><div class="t-name">camera</div><div class="t-zh">镜头 / 视角</div></div><span class="t-count">2</span><span class="arr">›</span></summary>
+        <div class="kv">
+          <div class="row"><div class="key">perspective</div><div class="val">product-shot 正面 · 略微低角度</div></div>
+          <div class="row"><div class="key">dof</div><div class="val">全帧清晰 · 无 bokeh</div></div>
+        </div>
+      </details>
+
+      <details class="atom-group" data-cat="tech">
+        <summary><span class="ic">📏</span><div class="t-meta"><div class="t-name">aspect_ratio</div><div class="t-zh">长宽比</div></div><span class="t-count">1</span><span class="arr">›</span></summary>
+        <div class="kv">
+          <div class="row"><div class="key">value</div><div class="val"><code>16:9</code> 横版 cinematic</div></div>
+        </div>
+      </details>
+
+      <details class="atom-group" data-cat="tech">
+        <summary><span class="ic">⚙️</span><div class="t-meta"><div class="t-name">quality</div><div class="t-zh">画质参数</div></div><span class="t-count">3</span><span class="arr">›</span></summary>
+        <div class="kv">
+          <div class="row"><div class="key">level</div><div class="val"><code>high</code> (密集文字必用)</div></div>
+          <div class="row"><div class="key">resolution</div><div class="val"><code>4K</code> ultra-detailed</div></div>
+          <div class="row"><div class="key">typography</div><div class="val">sharp · zero-typo · print-ready</div></div>
+        </div>
+      </details>
+
+      <details class="atom-group" data-cat="tech">
+        <summary><span class="ic">🧠</span><div class="t-meta"><div class="t-name">thinking_mode</div><div class="t-zh">思考开关 (API / UI)</div></div><span class="t-count">1</span><span class="arr">›</span></summary>
+        <div class="kv">
+          <div class="row"><div class="key">required</div><div class="val"><b>ON</b> · 复杂多文字多元素 · 需深推理 · 非 prompt 触发 · 在 ChatGPT UI toggle</div></div>
+        </div>
+      </details>
+
+      <details class="atom-group neg-atom" data-cat="neg" open>
+        <summary><span class="ic">🚫</span><div class="t-meta"><div class="t-name">constraints · exclude</div><div class="t-zh">禁用 / 不变量</div></div><span class="t-count">5</span><span class="arr">›</span></summary>
+        <div class="kv">
+          <div class="row"><div class="key">no_extra</div><div class="val">禁任何未指定的装饰文字 / 乱序西里尔 / 无意义小字</div></div>
+          <div class="row"><div class="key">no_watermark</div><div class="val">禁水印 / 签名 / 版权标记</div></div>
+          <div class="row"><div class="key">no_shiny_gold</div><div class="val">禁亮金 · 禁高饱和金属眩光</div></div>
+          <div class="row"><div class="key">no_clutter</div><div class="val">禁堆叠元素 · 留白要足</div></div>
+          <div class="row"><div class="key">preserve_cjk</div><div class="val">中文字符必完整 · 无缺笔 · 无乱码</div></div>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-bar">
+      <button class="cta-primary" id="copyBtn">📋 复制 Prompt (MD)</button>
+      <button class="cta-secondary">✨ 做我的主题</button>
+    </div>
+
+  </div>
+</div>
+
+<div class="toast" id="toast">✓ prompt 已复制 · 粘到 ChatGPT 直接跑</div>
+
+<!-- 隐藏的 MD 源 · 自然语言版 · 点复制就拿这个 -->
+<script type="text/plain" id="mdPrompt">
+Create a high-end editorial magazine cover poster in 16:9 cinematic landscape, in the style of a Wired magazine cover with futuristic glass morphism. The centerpiece is a luminous floating 3D crystal sphere, rendered with museum-grade detail, surrounded by subtle volumetric lighting. Inside the sphere, interlocking colored energy filaments weave through miniature periodic-table element tiles including H, O, N, C, Na, Ca, Fe, Cu, Al, S, K, Cl, and P — symbolizing that the atoms of text-to-image can be freely composed.
+
+At the top of the frame, in large chrome serif lettering, render exactly this text on line one: "Prompt Atlas". Directly beneath it on line two, in a clean CJK serif, render exactly: "提示词图谱" — every Chinese character must be complete, correct, and legible, no missing strokes.
+
+Just beneath the central sphere, in medium-weight English serif, render exactly: "Compose Atoms · Generate Better Images".
+
+In the lower-right corner, render small text exactly: "Powered by GPT Image 2 · 2026". In the upper-left corner, inside a small circular seal badge, render exactly: "v1.0 · beta".
+
+Color palette: deep purple (#2d1b4e) base, accent cyan-green (#34d399) along the energy filaments, warm orange (#f97316) as rim light and side accents, with multi-layered purple-green aurora gradient in the background. Lighting combines internal volumetric glow from the sphere with soft studio ambient light and warm rim light. Mood: reverent tech editorial, sacred and exploratory, premium product-launch aesthetic.
+
+Composition: strong central symmetry, sphere occupies the vertical center slightly below midline, title at top quarter, subtitle directly below sphere, small seal top-left corner, credit bottom-right corner. Generous negative space frames all elements. Include two slim vertical metallic frame columns at the far edges as subtle decor only.
+
+Hard constraints: render every quoted text string above exactly as specified, character-for-character. Do not invent any additional decorative text, lorem-ipsum fills, background writing, fake Russian or Latin filler, or unspecified lettering. No watermarks, no signatures, no copyright marks. No shiny bright yellow gold anywhere. Keep CJK characters structurally complete. Output a single clean 16:9 poster.
+
+Quality: 4K ultra-detailed, sharp print-ready typography, zero typos. Aspect ratio 16:9.
+</script>
+
+<script>
+// filter 行为
+document.querySelectorAll('.filter').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.dataset.f;
+    document.querySelectorAll('.atom-group').forEach(g => {
+      if (f === 'all' || g.dataset.cat === f) g.style.display = '';
+      else g.style.display = 'none';
+    });
+  });
+});
+
+// 复制行为
+const copyBtn = document.getElementById('copyBtn');
+const toast = document.getElementById('toast');
+const mdText = document.getElementById('mdPrompt').textContent.trim();
+
+copyBtn.addEventListener('click', async () => {
+  try {
+    await navigator.clipboard.writeText(mdText);
+    copyBtn.textContent = '✓ 已复制到剪贴板';
+    copyBtn.classList.add('ok');
+    toast.classList.add('show');
+    setTimeout(() => {
+      copyBtn.textContent = '📋 复制 Prompt (MD)';
+      copyBtn.classList.remove('ok');
+      toast.classList.remove('show');
+    }, 2200);
+  } catch (e) {
+    alert('复制失败,请手动选择源码');
+  }
+});
+
+// 原子值 hover → 未来可以在图上高亮对应区域(占位)
+document.querySelectorAll('.atom-group .row').forEach(row => {
+  row.addEventListener('mouseenter', () => row.style.background = 'rgba(167,139,250,0.08)');
+  row.addEventListener('mouseleave', () => row.style.background = '');
+});
+</script>
+
+</body>
+</html>

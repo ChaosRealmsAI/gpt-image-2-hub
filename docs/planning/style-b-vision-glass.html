@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Prompt Atlas · Vision Glass</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    font-family: -apple-system, system-ui, sans-serif;
+    color: #f4f4f8;
+    min-height: 100vh;
+    background-image:
+      linear-gradient(135deg, rgba(10,8,24,0.72) 0%, rgba(14,20,40,0.55) 50%, rgba(8,6,20,0.78) 100%),
+      url('../../assets/demo/poster.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: "";
+    position: fixed; inset: 0;
+    background: radial-gradient(1200px 700px at 20% 10%, rgba(168,200,255,0.12), transparent 60%),
+                radial-gradient(900px 600px at 85% 85%, rgba(180,140,255,0.10), transparent 60%);
+    pointer-events: none; z-index: 0;
+  }
+  .brand {
+    position: fixed; top: 22px; left: 26px; z-index: 10;
+    font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase;
+    color: rgba(255,255,255,0.72); font-weight: 500;
+  }
+  .brand span { color: #a8c8ff; }
+  .shell {
+    position: relative; z-index: 2;
+    max-width: 1240px; margin: 0 auto;
+    padding: 80px 36px 60px;
+    display: grid; grid-template-columns: 1.05fr 1fr; gap: 28px;
+    align-items: start;
+  }
+  .glass {
+    background: rgba(255,255,255,0.09);
+    backdrop-filter: blur(36px) saturate(180%);
+    -webkit-backdrop-filter: blur(36px) saturate(180%);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 22px;
+    box-shadow:
+      0 18px 60px rgba(0,0,0,0.35),
+      inset 0 1px 0 rgba(255,255,255,0.22),
+      inset 0 -1px 0 rgba(255,255,255,0.05);
+    padding: 26px 28px;
+  }
+  /* Left column */
+  .left { display: flex; flex-direction: column; gap: 22px; }
+  .hero-card { padding: 22px; }
+  .hero-card .label {
+    font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase;
+    color: rgba(255,255,255,0.6); margin-bottom: 14px;
+  }
+  .poster-frame {
+    border-radius: 14px; overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.14);
+    background: rgba(0,0,0,0.25);
+    aspect-ratio: 16/9;
+  }
+  .poster-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .title-card h1 {
+    font-family: Georgia, serif;
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    color: #ffffff;
+    margin-bottom: 12px;
+  }
+  .title-card .sub {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 15px;
+    color: rgba(255,255,255,0.62);
+    letter-spacing: 0.01em;
+  }
+  /* Right column */
+  .right { display: flex; flex-direction: column; gap: 22px; }
+  .section-label {
+    font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase;
+    color: rgba(255,255,255,0.58); margin-bottom: 14px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .section-label::before {
+    content: ""; width: 6px; height: 6px; border-radius: 50%;
+    background: #a8c8ff; box-shadow: 0 0 10px #a8c8ff;
+  }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip {
+    padding: 7px 14px;
+    font-size: 12px; letter-spacing: 0.04em;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.18);
+    color: rgba(255,255,255,0.92);
+  }
+  .chip.accent {
+    background: rgba(168,200,255,0.14);
+    border-color: rgba(168,200,255,0.42);
+    color: #dbe8ff;
+  }
+  .fields { display: flex; flex-direction: column; gap: 14px; }
+  .field { display: grid; grid-template-columns: 92px 1fr; gap: 14px; align-items: baseline; }
+  .field dt {
+    font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase;
+    color: rgba(255,255,255,0.55); font-weight: 500;
+  }
+  .field dd {
+    font-size: 13.5px; line-height: 1.55;
+    color: rgba(255,255,255,0.92); font-weight: 300;
+  }
+  .field + .field { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 14px; }
+  .btn-row { grid-column: 1 / -1; margin-top: 6px; }
+  .copy-btn {
+    width: 100%;
+    padding: 18px 24px;
+    background: rgba(168,200,255,0.14);
+    backdrop-filter: blur(30px) saturate(180%);
+    -webkit-backdrop-filter: blur(30px) saturate(180%);
+    border: 1px solid rgba(168,200,255,0.45);
+    border-radius: 18px;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 13px; letter-spacing: 0.28em; text-transform: uppercase; font-weight: 500;
+    cursor: pointer;
+    box-shadow:
+      0 12px 40px rgba(168,200,255,0.18),
+      inset 0 1px 0 rgba(255,255,255,0.28);
+    transition: transform 0.15s ease, background 0.15s ease;
+  }
+  .copy-btn:hover { background: rgba(168,200,255,0.22); transform: translateY(-1px); }
+  .copy-btn:active { transform: translateY(0); }
+  .toast {
+    position: fixed; bottom: 40px; left: 50%; transform: translateX(-50%) translateY(20px);
+    padding: 12px 22px;
+    background: rgba(20,22,32,0.72);
+    backdrop-filter: blur(30px) saturate(180%);
+    -webkit-backdrop-filter: blur(30px) saturate(180%);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 999px;
+    color: #f4f4f8; font-size: 13px; letter-spacing: 0.08em;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    z-index: 50;
+  }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+  @media (max-width: 900px) {
+    .shell { grid-template-columns: 1fr; padding: 76px 20px 40px; }
+    .title-card h1 { font-size: 34px; }
+  }
+</style>
+</head>
+<body>
+  <div class="brand">Prompt Atlas <span>·</span> Showcase</div>
+
+  <div class="shell">
+    <!-- LEFT: hero -->
+    <div class="left">
+      <div class="glass hero-card">
+        <div class="label">Featured Poster</div>
+        <div class="poster-frame">
+          <img src="../../assets/demo/poster.png" alt="Prompt Atlas poster">
+        </div>
+      </div>
+      <div class="glass title-card">
+        <h1>The Prompt Atlas Poster</h1>
+        <p class="sub">A self-referential demonstration of atomic composition</p>
+      </div>
+    </div>
+
+    <!-- RIGHT: info panels -->
+    <div class="right">
+      <div class="glass">
+        <div class="section-label">Auto Tags</div>
+        <div class="chips">
+          <span class="chip accent">editorial</span>
+          <span class="chip">3d-render</span>
+          <span class="chip">16:9</span>
+          <span class="chip accent">thinking-on</span>
+          <span class="chip">watermark-integrated</span>
+          <span class="chip">aurora-bg</span>
+          <span class="chip">cjk-ready</span>
+        </div>
+      </div>
+
+      <div class="glass">
+        <div class="section-label">Composition</div>
+        <dl class="fields">
+          <div class="field"><dt>Intent</dt><dd>Editorial magazine cover poster · Wired-class</dd></div>
+          <div class="field"><dt>Style</dt><dd>Wired editorial × futuristic glass morphism</dd></div>
+          <div class="field"><dt>Text</dt><dd>"Prompt Atlas" · "提示词图谱" · "Compose Atoms · Generate Better Images"</dd></div>
+          <div class="field"><dt>Color</dt><dd>Deep purple + cyan-green + warm orange + aurora</dd></div>
+          <div class="field"><dt>Aspect</dt><dd>16:9 cinematic</dd></div>
+          <div class="field"><dt>Watermark</dt><dd>"Prompt Atlas · 2026" integrated, ~30% opacity</dd></div>
+        </dl>
+      </div>
+
+      <div class="btn-row">
+        <button class="copy-btn" id="copyBtn">Copy Prompt (MD)</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">✓ copied</div>
+
+  <script type="text/plain" id="mdPrompt">Create a high-end editorial magazine cover poster in 16:9 cinematic landscape. A luminous floating 3D crystal sphere sits center, inside it periodic-table element tiles connected by colored energy filaments. Top chrome serif title renders exactly: "Prompt Atlas". Below it CJK serif renders exactly: "提示词图谱". Under the sphere renders exactly: "Compose Atoms · Generate Better Images". Lower-right small text: "Powered by GPT Image 2 · 2026". Upper-left seal: "v1.0 · beta". Deep purple #2d1b4e base, cyan-green #34d399 filaments, warm orange #f97316 rim, aurora gradient background. Watermark "Prompt Atlas · 2026" integrated on the glass base, 25-35% opacity. 4K, sharp typography, no extra text, no shiny gold.</script>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('copyBtn');
+      var toast = document.getElementById('toast');
+      var src = document.getElementById('mdPrompt');
+      function showToast() {
+        toast.classList.add('show');
+        setTimeout(function () { toast.classList.remove('show'); }, 1600);
+      }
+      btn.addEventListener('click', function () {
+        var text = (src.textContent || '').trim();
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(showToast, function () {
+            fallback(text); showToast();
+          });
+        } else {
+          fallback(text); showToast();
+        }
+      });
+      function fallback(text) {
+        var ta = document.createElement('textarea');
+        ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+        document.body.appendChild(ta); ta.select();
+        try { document.execCommand('copy'); } catch (e) {}
+        document.body.removeChild(ta);
+      }
+    })();
+  </script>
+</body>
+</html>

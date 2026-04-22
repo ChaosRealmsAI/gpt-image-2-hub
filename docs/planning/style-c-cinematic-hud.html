@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Prompt Atlas · Scene 01</title>
+<style>
+  :root{
+    --bg:#000;
+    --ink:#e6e9ef;
+    --dim:#7a8290;
+    --line:#1c2230;
+    --cyan:#00d4ff;
+    --mono: "SF Mono", Menlo, Consolas, monospace;
+    --serif: Georgia, "Times New Roman", serif;
+    --sans: system-ui, -apple-system, "Helvetica Neue", sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--bg);color:var(--ink);font-family:var(--sans);height:100%;overflow-x:hidden}
+  body{min-height:100vh;position:relative;padding:12vh 0 12vh 0}
+  /* letterbox bars */
+  .bar{position:fixed;left:0;right:0;height:12vh;background:#000;z-index:50;pointer-events:none}
+  .bar.top{top:0;border-bottom:1px solid var(--line)}
+  .bar.bot{bottom:0;border-top:1px solid var(--line);pointer-events:auto}
+  .bar-inner{position:absolute;inset:0;display:flex;align-items:center;padding:0 32px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--dim)}
+  .bar.top .bar-inner{justify-content:space-between}
+  .bar.bot .bar-inner{justify-content:center;gap:18px;color:#9aa4b2}
+  .bar.bot .sep{color:var(--line)}
+  .tc{color:var(--cyan)}
+  .rec{color:var(--cyan);display:inline-flex;align-items:center;gap:8px}
+  .rec .dot{width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px var(--cyan);animation:blink 1.6s infinite}
+  @keyframes blink{0%,60%{opacity:1}80%,100%{opacity:.25}}
+  .slug{color:var(--dim)}
+  .slug b{color:var(--ink);font-weight:600;letter-spacing:.2em}
+
+  /* stage */
+  .stage{max-width:1180px;margin:0 auto;padding:40px 48px 24px}
+  .frame{position:relative;aspect-ratio:16/9;background:#050608;border:1px solid var(--line)}
+  .frame img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.95) contrast(1.02)}
+  /* corner brackets */
+  .cb{position:absolute;width:28px;height:28px;pointer-events:none}
+  .cb::before,.cb::after{content:"";position:absolute;background:var(--cyan)}
+  .cb.tl{top:-8px;left:-8px}
+  .cb.tl::before{top:0;left:0;width:18px;height:1px}
+  .cb.tl::after{top:0;left:0;width:1px;height:18px}
+  .cb.tr{top:-8px;right:-8px}
+  .cb.tr::before{top:0;right:0;width:18px;height:1px}
+  .cb.tr::after{top:0;right:0;width:1px;height:18px}
+  .cb.bl{bottom:-8px;left:-8px}
+  .cb.bl::before{bottom:0;left:0;width:18px;height:1px}
+  .cb.bl::after{bottom:0;left:0;width:1px;height:18px}
+  .cb.br{bottom:-8px;right:-8px}
+  .cb.br::before{bottom:0;right:0;width:18px;height:1px}
+  .cb.br::after{bottom:0;right:0;width:1px;height:18px}
+
+  /* title block */
+  .title{margin-top:34px;text-align:center}
+  .title h1{font-family:var(--serif);font-weight:400;font-size:34px;letter-spacing:.01em;color:var(--ink)}
+  .title em{display:block;margin-top:8px;font-family:var(--serif);font-style:italic;font-size:13px;color:var(--dim);letter-spacing:.02em}
+
+  /* tags */
+  .tags-wrap{margin:40px auto 0;max-width:980px;padding:0 8px}
+  .tags-label{font-family:var(--mono);font-size:11px;letter-spacing:.28em;color:var(--cyan);margin-bottom:10px}
+  .tags-label::before{content:"◀ ";color:var(--cyan)}
+  .tags{display:flex;flex-wrap:wrap;gap:10px 14px}
+  .tag{font-family:var(--mono);font-size:11px;color:#c3cbd6;letter-spacing:.08em;padding:3px 0}
+  .tag::before{content:"[";color:var(--cyan);margin-right:4px}
+  .tag::after{content:"]";color:var(--cyan);margin-left:4px}
+
+  /* data stream */
+  .data{margin:28px auto 0;max-width:980px;padding:0 8px}
+  .row{display:flex;align-items:baseline;gap:10px;font-family:var(--mono);font-size:12.5px;line-height:2.05;color:#b8c2cf;border-bottom:1px solid var(--line)}
+  .row .mk{color:var(--cyan);width:14px;flex:none}
+  .row .k{color:#8892a0;letter-spacing:.06em;white-space:nowrap}
+  .row .dots{flex:1;border-bottom:1px dotted #2a3242;transform:translateY(-4px);margin:0 10px}
+  .row .v{color:#e6e9ef;text-align:right;max-width:62%}
+  .row .v q{font-style:normal;color:var(--cyan)}
+  .row .v q::before{content:"\201C"}
+  .row .v q::after{content:"\201D"}
+
+  /* copy button */
+  .cta-wrap{margin:44px auto 0;max-width:980px;padding:0 8px;display:flex;justify-content:center}
+  .copy{appearance:none;background:transparent;border:1px solid var(--cyan);color:var(--cyan);
+    font-family:var(--mono);font-size:12px;letter-spacing:.28em;padding:14px 30px;cursor:pointer;
+    transition:background .15s ease,color .15s ease}
+  .copy:hover{background:rgba(0,212,255,.08)}
+  .copy:active{background:rgba(0,212,255,.18)}
+
+  /* toast */
+  .toast{position:fixed;left:50%;bottom:16vh;transform:translateX(-50%) translateY(12px);
+    background:rgba(0,20,28,.9);border:1px solid var(--cyan);color:var(--cyan);
+    font-family:var(--mono);font-size:12px;letter-spacing:.2em;padding:9px 18px;
+    opacity:0;pointer-events:none;transition:opacity .2s ease,transform .2s ease;z-index:60}
+  .toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+
+  /* ambient vignette + subtle scanline texture */
+  body::before{content:"";position:fixed;inset:0;pointer-events:none;
+    background:radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,.55) 100%);z-index:40}
+  body::after{content:"";position:fixed;inset:0;pointer-events:none;
+    background:repeating-linear-gradient(to bottom, rgba(255,255,255,.012) 0 1px, transparent 1px 3px);z-index:41}
+</style>
+</head>
+<body>
+
+<div class="bar top">
+  <div class="bar-inner">
+    <div>
+      <span class="tc" id="tc">T+00:01:23</span>
+      &nbsp;&nbsp;<span class="slug"><b>PROMPT.ATLAS</b> / SCENE_01</span>
+    </div>
+    <div class="rec"><span class="dot"></span>REC&nbsp;&nbsp;·&nbsp;&nbsp;LIVE</div>
+  </div>
+</div>
+
+<main class="stage">
+  <div class="frame">
+    <span class="cb tl"></span><span class="cb tr"></span>
+    <span class="cb bl"></span><span class="cb br"></span>
+    <img src="../../assets/demo/poster.png" alt="Prompt Atlas poster">
+  </div>
+
+  <div class="title">
+    <h1>The Prompt Atlas Poster</h1>
+    <em>A self-referential demonstration of atomic composition</em>
+  </div>
+
+  <section class="tags-wrap" aria-label="auto tags">
+    <div class="tags-label">AUTO TAGS</div>
+    <div class="tags">
+      <span class="tag">editorial</span>
+      <span class="tag">3d-render</span>
+      <span class="tag">16:9</span>
+      <span class="tag">thinking-on</span>
+      <span class="tag">watermark-integrated</span>
+      <span class="tag">aurora-bg</span>
+      <span class="tag">cjk-ready</span>
+    </div>
+  </section>
+
+  <section class="data" aria-label="field data">
+    <div class="row"><span class="mk">&gt;</span><span class="k">INTENT</span><span class="dots"></span><span class="v">Editorial magazine cover poster · Wired-class</span></div>
+    <div class="row"><span class="mk">&gt;</span><span class="k">STYLE</span><span class="dots"></span><span class="v">Wired editorial × futuristic glass morphism</span></div>
+    <div class="row"><span class="mk">&gt;</span><span class="k">TEXT</span><span class="dots"></span><span class="v"><q>Prompt Atlas</q> · <q>提示词图谱</q> · <q>Compose Atoms · Generate Better Images</q></span></div>
+    <div class="row"><span class="mk">&gt;</span><span class="k">COLOR</span><span class="dots"></span><span class="v">Deep purple + cyan-green + warm orange + aurora</span></div>
+    <div class="row"><span class="mk">&gt;</span><span class="k">ASPECT</span><span class="dots"></span><span class="v">16:9 cinematic</span></div>
+    <div class="row"><span class="mk">&gt;</span><span class="k">WATERMARK</span><span class="dots"></span><span class="v"><q>Prompt Atlas · 2026</q> integrated, ~30% opacity</span></div>
+  </section>
+
+  <div class="cta-wrap">
+    <button class="copy" id="copyBtn" type="button">[ COPY PROMPT (MD) ]</button>
+  </div>
+</main>
+
+<div class="bar bot">
+  <div class="bar-inner">
+    <span>SYS.STATUS OK</span><span class="sep">·</span>
+    <span>COPY.READY</span><span class="sep">·</span>
+    <span>THINKING.ON</span><span class="sep">·</span>
+    <span>22.APR.2026</span>
+  </div>
+</div>
+
+<div class="toast" id="toast">✓ copied</div>
+
+<script type="text/plain" id="mdPrompt">Create a high-end editorial magazine cover poster in 16:9 cinematic landscape. A luminous floating 3D crystal sphere sits center, inside it periodic-table element tiles connected by colored energy filaments. Top chrome serif title renders exactly: "Prompt Atlas". Below it CJK serif renders exactly: "提示词图谱". Under the sphere renders exactly: "Compose Atoms · Generate Better Images". Lower-right small text: "Powered by GPT Image 2 · 2026". Upper-left seal: "v1.0 · beta". Deep purple #2d1b4e base, cyan-green #34d399 filaments, warm orange #f97316 rim, aurora gradient background. Watermark "Prompt Atlas · 2026" integrated on the glass base, 25-35% opacity. 4K, sharp typography, no extra text, no shiny gold.</script>
+
+<script>
+(function(){
+  // live timecode starting at T+00:01:23
+  var base = 83, start = Date.now();
+  var tcEl = document.getElementById('tc');
+  function pad(n){return n<10?'0'+n:''+n}
+  function tick(){
+    var t = base + Math.floor((Date.now()-start)/1000);
+    var h = Math.floor(t/3600), m = Math.floor((t%3600)/60), s = t%60;
+    tcEl.textContent = 'T+' + pad(h) + ':' + pad(m) + ':' + pad(s);
+  }
+  setInterval(tick, 1000);
+
+  // copy button
+  var btn = document.getElementById('copyBtn');
+  var toast = document.getElementById('toast');
+  var md = document.getElementById('mdPrompt').textContent.trim();
+  function showToast(msg){
+    toast.textContent = msg;
+    toast.classList.add('on');
+    clearTimeout(showToast._t);
+    showToast._t = setTimeout(function(){toast.classList.remove('on')}, 1600);
+  }
+  btn.addEventListener('click', function(){
+    if (navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(md).then(
+        function(){ showToast('✓ copied'); },
+        function(){ fallback(); }
+      );
+    } else { fallback(); }
+  });
+  function fallback(){
+    try{
+      var ta = document.createElement('textarea');
+      ta.value = md; ta.style.position='fixed'; ta.style.opacity='0';
+      document.body.appendChild(ta); ta.select();
+      document.execCommand('copy'); document.body.removeChild(ta);
+      showToast('✓ copied');
+    }catch(e){ showToast('✗ copy failed'); }
+  }
+})();
+</script>
+</body>
+</html>

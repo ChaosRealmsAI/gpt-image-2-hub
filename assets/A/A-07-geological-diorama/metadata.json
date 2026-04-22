@@ -1,0 +1,28 @@
+{
+  "id": "A-07",
+  "tier": "A",
+  "title": "Hyperreal Diorama Cube · 地质剖面立方",
+  "type": "single",
+  "total_shots": 1,
+  "created_at": "2026-04-22T23:13:00Z",
+  "done_at": "2026-04-22T23:17:30Z",
+  "tags": ["diorama", "geology", "editorial", "hyperreal", "museum-grade", "text-rendering"],
+  "source_todo_ref": "atlas-todo.json#A-07",
+  "visual_grade": "9.5/10",
+  "visual_notes": "6 层地质全渲染:Topsoil / Clay / Sandstone / Limestone / Basalt / Magma Core · 6 个英文标签全部精确拼写 · 玻璃立方体透明感 + 边缘反光 + 熔岩发光都到位 · 博物馆展品级。扣 0.5 分:topsoil 根须略有菜根感。",
+  "shots": [
+    {
+      "prompt": "Aspect ratio 1:1 square.\n\nScene:\nA hyperreal transparent glass cube displayed like a premium natural history museum specimen, floating in front of a deep charcoal-black background. The cube is shown from a diagonal three-quarter cutaway angle, with the top plane, front plane, and right plane all visible. A focused overhead museum spotlight falls from above, creating thin silver rim highlights along every glass edge and subtle caustic reflections on the cube faces.\n\nSubject:\nInside the glass cube is a precise miniature geological cross-section with six stacked strata from top to bottom: loose topsoil, compressed clay, banded sandstone, porous limestone, black crystalline basalt, and a glowing magma core. The cube is transparent enough to see the full internal stratigraphy, while the glass still has realistic thickness, bevels, refraction, and polished museum-object reflections.\n\nImportant details:\nMake every layer materially distinct and tactile: granular dark-brown soil particles with tiny roots in the topsoil; smooth reddish clay laminae; ochre sandstone with horizontal sediment stripes; pale limestone full of small rounded holes and fossil-like pores; dense black basalt with angular crystal lattice facets; molten red-orange magma with incandescent cracks and heat glow at the bottom. Keep the layers cleanly separated, readable, and textbook-accurate, with a refined editorial craft aesthetic.\n\nScreens and text:\nRender six crisp small museum callout labels in white technical lettering, each inside a thin translucent label tab on the front-right side of the cube, connected by hairline leader marks to the correct stratum. The exact quoted text must appear once and only once: \"Topsoil\", \"Clay\", \"Sandstone\", \"Limestone\", \"Basalt\", \"Magma Core\". Keep spelling exact, straight, sharp, and legible.\n\nUse case:\nHigh-end geology textbook cover image, museum exhibition catalog plate, editorial scientific diorama artwork.\n\nConstraints:\nPhotoreal, macro product photography quality, high dynamic range, no decorative border, no watermark, no extra labels beyond the six quoted layer names. Aspect ratio 1:1 square.",
+      "name": "main",
+      "size": "1:1",
+      "refs_used": [],
+      "task_id": "(ally 未记录 · 图已成功下载)",
+      "url": "(ally 未记录 · 24h 内可 redownload)",
+      "local_filename": "main.png",
+      "local_path": "/Users/Zhuanz/workspace/prompt-atlas/assets/A/A-07-geological-diorama/main.png",
+      "size_bytes": 2120000,
+      "actual_time_sec": null,
+      "status": "done"
+    }
+  ]
+}

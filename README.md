@@ -76,6 +76,18 @@ curl http://127.0.0.1:3000/api/health
 - CLI: Node.js 18+ ESM 脚本, 用于批量生成、下载和余额查询。
 - 部署: Vercel 静态前端优先; Rust serverless / 独立后端作为生产 API 方案。
 
+## 目录结构
+
+- `frontend/`: 当前前端入口, Rust 服务和 Vercel 静态发布都读这里。
+- `src/`: Rust Axum 服务, 提供静态文件和 `/api/*`。
+- `api/`: APIMART 图像生成 Node CLI。
+- `content/`: prompt 内容源、atlas todo、批量 prompt 样例。
+- `assets/`: 前端 demo 图、参考样图和 atlas 作品沉淀。
+- `docs/`: 部署、架构、规划 HTML、调研 brief。
+- `spec/`: 独立 git 仓, 不随主仓提交。
+
+大体积历史材料已移出主仓: `/Users/Zhuanz/workspace/prompt-atlas-archive/`。
+
 ## 10 版演进
 
 | 版本 | 主题 | 结果 |

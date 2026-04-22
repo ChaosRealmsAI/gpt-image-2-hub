@@ -115,7 +115,7 @@ npm run gen -- "panda on bamboo" --out ./my-output --name panda-01
 写个 JSON:
 
 ```json
-// prompts.json
+// content/prompts/batch-example.json
 [
   { "prompt": "a cat",       "size": "1:1",  "name": "cat-01" },
   { "prompt": "a dog",       "size": "16:9", "name": "dog-01" },
@@ -126,7 +126,7 @@ npm run gen -- "panda on bamboo" --out ./my-output --name panda-01
 跑:
 
 ```bash
-npm run batch -- prompts.json
+npm run batch -- content/prompts/batch-example.json
 ```
 
 所有任务并行提交 · 全部跑完 & 下载 · 平均每张 ~40 秒。
@@ -249,4 +249,3 @@ npm test
   - `api/apimart.js` · 核心封装(submit / queryTask / pollUntilDone / downloadImage / generate)
   - `api/generate.js` · CLI 入口
   - `api/batch.js` · 批量 CLI
-

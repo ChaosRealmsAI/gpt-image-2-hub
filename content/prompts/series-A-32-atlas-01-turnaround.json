@@ -1,0 +1,113 @@
+{
+  "schema_version": 3,
+  "name": "atlas-01-turnaround",
+  "meta": {
+    "title": "Atlas-01 机甲少女 · 角色四视图",
+    "category": "characters",
+    "source_todo": "A-32",
+    "total_shots": 4,
+    "theme": "原创角色 concept art turnaround · 正/45°/90°侧/背 四视图 · 游戏美术 pipeline 标准",
+    "tags": [
+      "character-sheet",
+      "mecha",
+      "turnaround",
+      "concept-art",
+      "game-art"
+    ],
+    "intended_use": "游戏 pipeline 提案 · 角色设计立绘 · T-pose 展示"
+  },
+  "generated_at": "2026-04-22T14:54:49.867Z",
+  "source_file": "/Users/Zhuanz/workspace/prompt-atlas/content/prompts/series-A-32-atlas-01-turnaround.json",
+  "output_dir": "/Users/Zhuanz/workspace/prompt-atlas/assets/A/A-32-atlas-01-turnaround",
+  "total_shots": 4,
+  "shots": [
+    {
+      "prompt": "Scene:\nA clean studio character design sheet, flat neutral medium-grey background #808080, soft uniform key light from above plus fill from front, no cast shadow on backdrop, 9:16 vertical framing.\n\nSubject:\nAn original mecha girl character — Atlas-01, 17-year-old teen pilot, silver undercut pixie hair with long fringe swept over left eye, sharp amber-gold eyes, pale skin with faint soot smudges on cheekbones, navy-blue technical bodysuit with orange accent stripes along seams, black carbon exoskeleton collar around neck, white pilot gloves, matte black carbon-fiber boots, pilot emblem patch \"A-01\" on left shoulder, chest belt with silver buckles, small utility pouches at hips. (Series subject lock — identical across all four views.)\n\nImportant details:\nFRONT VIEW · fully facing the camera in a T-pose, arms extended horizontally, feet shoulder-width apart. Even frontal lighting so all costume details are readable. Include ultra-thin horizontal reference rule lines faintly across the page marking head-top, eye-line, chin, shoulder, waist, knee, ankle. Small text bottom-right reading: \"01 · FRONT · Atlas-01\".\n\nUse case:\nGame concept art turnaround sheet, first anchor shot of a four-view set, 9:16 vertical.\n\nConstraints:\nAspect ratio 9:16 vertical. Keep the backdrop as a flat neutral grey design sheet — stay neutral like a design document rather than a cinematic render.",
+      "id": "01-front",
+      "index": 1,
+      "size": "9:16",
+      "use_ref": false,
+      "ref_kind": "none",
+      "refs_used": [],
+      "display": {
+        "caption": "正面 T-pose · Atlas-01",
+        "purpose": "anchor · 系列第 1 张 · 后续 3 张锁主体的视觉 ref",
+        "notes": "独立生成 · use_ref=false"
+      },
+      "status": "in_progress",
+      "task_id": null,
+      "url": null,
+      "expires_at": null,
+      "local_path": null,
+      "local_filename": null,
+      "size_bytes": null,
+      "actual_time_sec": null
+    },
+    {
+      "prompt": "Scene:\nSame clean studio character design sheet, flat neutral medium-grey background #808080, same soft uniform key light from above plus fill from front, no cast shadow on backdrop, 9:16 vertical framing.\n\nSubject:\nThe same Atlas-01 mecha girl — 17-year-old teen pilot, silver undercut pixie hair with long fringe over left eye, sharp amber-gold eyes, pale skin with soot smudges on cheekbones, navy-blue technical bodysuit with orange accent stripes along seams, black carbon exoskeleton collar, white pilot gloves, matte black carbon-fiber boots, \"A-01\" patch on left shoulder, chest belt with silver buckles, hip utility pouches. (Series subject lock — identical to view 01.)\n\nImportant details:\nTHREE-QUARTER VIEW · body rotated 45 degrees to camera-left so we see about 3/4 of the front and 1/4 of the right side, still in full T-pose. Volume depth of shoulder, chest, and hip now visible. Keep the same faint reference rule lines as shot 01 aligning head-top, eye, chin, shoulder, waist, knee, ankle. Small text bottom-right reading: \"02 · 3/4 VIEW · Atlas-01\".\n\nUse case:\nGame concept art turnaround sheet shot 2 of 4, 9:16 vertical.\n\nConstraints:\nAspect ratio 9:16 vertical. Maintain identical character, outfit, proportions, and palette as shot 01. Keep the flat studio document look.",
+      "id": "02-threequarter",
+      "index": 2,
+      "size": "9:16",
+      "use_ref": true,
+      "ref_kind": null,
+      "refs_used": [],
+      "display": {
+        "caption": "3/4 侧 45° · Atlas-01",
+        "purpose": "锚到 01 · 锁主体一致性",
+        "notes": "use_ref=true (anchor to 01)"
+      },
+      "status": "pending",
+      "task_id": null,
+      "url": null,
+      "expires_at": null,
+      "local_path": null,
+      "local_filename": null,
+      "size_bytes": null,
+      "actual_time_sec": null
+    },
+    {
+      "prompt": "Scene:\nSame clean studio character design sheet, flat neutral medium-grey background #808080, same soft uniform key light from above plus fill from front, no cast shadow on backdrop, 9:16 vertical framing.\n\nSubject:\nThe same Atlas-01 mecha girl — 17-year-old teen pilot, silver undercut pixie hair with long fringe over left eye, sharp amber-gold eyes, pale skin, navy-blue technical bodysuit with orange accent stripes along seams, black carbon exoskeleton collar, white pilot gloves, matte black carbon-fiber boots, \"A-01\" patch on left shoulder, chest belt, hip utility pouches. (Series subject lock — identical to view 01.)\n\nImportant details:\nFULL SIDE PROFILE · body rotated 90 degrees so we see pure left side, arms still in T-pose (one arm projecting toward camera, one behind body). Silhouette reveals bodysuit cut lines, collar height, boot shaft height, clear profile of face and hair fringe. Keep the same faint reference rule lines aligning head-top, eye, chin, shoulder, waist, knee, ankle. Small text bottom-right reading: \"03 · SIDE · Atlas-01\".\n\nUse case:\nGame concept art turnaround sheet shot 3 of 4, 9:16 vertical.\n\nConstraints:\nAspect ratio 9:16 vertical. Consistent outfit, proportions, and palette with previous views. Flat studio document look.",
+      "id": "03-side",
+      "index": 3,
+      "size": "9:16",
+      "use_ref": true,
+      "ref_kind": null,
+      "refs_used": [],
+      "display": {
+        "caption": "正侧 90° · Atlas-01",
+        "purpose": "侧剖轮廓 · rigging 参考",
+        "notes": "use_ref=true"
+      },
+      "status": "pending",
+      "task_id": null,
+      "url": null,
+      "expires_at": null,
+      "local_path": null,
+      "local_filename": null,
+      "size_bytes": null,
+      "actual_time_sec": null
+    },
+    {
+      "prompt": "Scene:\nSame clean studio character design sheet, flat neutral medium-grey background #808080, same soft uniform key light from above plus fill from front, no cast shadow on backdrop, 9:16 vertical framing.\n\nSubject:\nThe same Atlas-01 mecha girl seen from BEHIND — 17-year-old teen pilot, silver undercut pixie hair (asymmetric silhouette from back with long fringe visible hanging on left side of neck), pale neck skin, navy-blue technical bodysuit with orange accent stripes along the back seams, black carbon exoskeleton collar at nape, white pilot gloves, matte black carbon-fiber boots, \"A-01\" patch still visible on left shoulder from the back, chest belt buckle faintly visible at sides, hip utility pouches at back of hips. (Series subject lock — identical to view 01 but seen from behind.)\n\nImportant details:\nBACK VIEW · body fully turned away from camera, arms still extended in T-pose. Focus on back details: spine seam of bodysuit, shoulder-blade reinforcement panels, back of collar, rear of hair cut. Keep the same faint reference rule lines aligning head-top, shoulder, waist, knee, ankle. Small text bottom-right reading: \"04 · BACK · Atlas-01\".\n\nUse case:\nGame concept art turnaround sheet shot 4 of 4, 9:16 vertical.\n\nConstraints:\nAspect ratio 9:16 vertical. Back-detail must align with front-detail from shot 01 for rigging and texture-mapping consistency. Flat studio document look.",
+      "id": "04-back",
+      "index": 4,
+      "size": "9:16",
+      "use_ref": true,
+      "ref_kind": null,
+      "refs_used": [],
+      "display": {
+        "caption": "背面 180° · Atlas-01",
+        "purpose": "后视 · pipeline 闭环",
+        "notes": "use_ref=true"
+      },
+      "status": "pending",
+      "task_id": null,
+      "url": null,
+      "expires_at": null,
+      "local_path": null,
+      "local_filename": null,
+      "size_bytes": null,
+      "actual_time_sec": null
+    }
+  ]
+}

@@ -8,6 +8,9 @@ assets/moderation-probe/
 assets/skill-test/
 assets/sonnet-blind-test/
 output/
+archive/
+prompt-atlas-archive/
+.autopilot/
 .DS_Store
 *.log
 target/
@@ -18,4 +21,3 @@ ref/
 
 # 🔴 spec 独立仓(按 commit-format rule 铁律)· 主代码仓不跟踪
 spec/
-

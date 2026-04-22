@@ -1,0 +1,25 @@
+{
+  "id": "A-10",
+  "tier": "A",
+  "title": "JSON 名片 · Code as Object",
+  "type": "single",
+  "total_shots": 1,
+  "created_at": "2026-04-22T23:35:00Z",
+  "done_at": "2026-04-22T23:39:00Z",
+  "tags": ["editorial", "concept", "text-rendering", "code", "product-still"],
+  "source_todo_ref": "atlas-todo.json#A-10",
+  "shots": [
+    {
+      "prompt": "Scene:\nA clean editorial product still on a light grey minimalist studio surface with soft overhead window light, 3:2 horizontal framing.\n\nSubject:\nA premium physical business card rendered as a hyperreal 3D object — but the card's face is structured exactly like a JSON code object, with curly braces, keys and values floating on thin engraved metal plates. The card itself is a solid matte black slab with subtle beveled edges and a soft silver rim.\n\nImportant details:\nThe JSON is rendered as crisp clean white and warm orange inline syntax — standard code editor color theme (Monaco / JetBrains Mono feel), consistent quote marks, colons, and commas. Letters sit slightly recessed into the card like precision-engraved tooling. Subtle drop shadow on the card, shallow depth of field, editorial magazine craft aesthetic.\n\nScreens and text:\nRender the exact JSON content line by line on the card, perfectly aligned:\n\n{\n  \"name\": \"Alex Chen\",\n  \"role\": \"Product Designer\",\n  \"stack\": [\"Figma\", \"Rust\", \"GPT-Image-2\"],\n  \"city\": \"Shanghai\",\n  \"since\": 2024\n}\n\nAll quotes, braces, brackets, commas must be crisp and legible in monospace code font. Correct syntax throughout.\n\nUse case:\nConcept editorial portrait of a modern designer's identity, personal-brand hero image, 3:2 horizontal.\n\nConstraints:\nNo watermark, no extra logos, no decorative border. Aspect ratio 3:2.",
+      "name": "main",
+      "size": "3:2",
+      "refs_used": [],
+      "task_id": "task_01KPTXFPVHP71AV4Z0XJSWDFM0",
+      "url": "https://upload.apimart.ai/f/image/9998223127654930-51857ed8-dcf3-4e2e-b2e1-fba33fed31a0-gpt_image_2_backup_task_01KPTXGKFAQ8TPY7GWQKWQJTZK_0.png",
+      "local_filename": "main.png",
+      "local_path": "/Users/Zhuanz/workspace/prompt-atlas/assets/A/A-10-json-business-card/main.png",
+      "size_bytes": 2140666,
+      "status": "done"
+    }
+  ]
+}
