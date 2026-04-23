@@ -14,7 +14,7 @@
     "single"
   ],
   "refs": [],
-  "status": "running",
+  "status": "failed",
   "generation": {
     "order": 6,
     "mode": "image",
@@ -25,7 +25,13 @@
     },
     "depends_on": [],
     "ref_urls": [],
-    "runner_notes": "Independent cafe retail mockup; no reference dependencies."
+    "runner_notes": "Independent cafe retail mockup; no reference dependencies.",
+    "last_error": {
+      "reason": "❌ fetch failed",
+      "retryable": true,
+      "output_path": "works/topics/brand-artist-collab-mockup/packages/single-collab-proposal-studies/images/coffee-riso-launch-kit/image.png",
+      "checked_at": "2026-04-23T07:48:30.014Z"
+    }
   },
   "i18n": {
     "en": {

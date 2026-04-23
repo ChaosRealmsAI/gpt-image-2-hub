@@ -15,7 +15,7 @@
     "series"
   ],
   "refs": [],
-  "status": "prompted",
+  "status": "running",
   "generation": {
     "order": 4,
     "mode": "image",

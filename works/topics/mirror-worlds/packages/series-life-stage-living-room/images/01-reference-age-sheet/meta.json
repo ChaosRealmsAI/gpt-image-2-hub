@@ -13,7 +13,7 @@
     "series"
   ],
   "refs": [],
-  "status": "failed",
+  "status": "done",
   "generation": {
     "order": 1,
     "mode": "image",
@@ -24,13 +24,7 @@
     },
     "depends_on": [],
     "ref_urls": [],
-    "runner_notes": "Root multi-age identity reference for the Mirror Worlds series.",
-    "last_error": {
-      "reason": "poll 超时 240s",
-      "retryable": true,
-      "output_path": "works/topics/mirror-worlds/packages/series-life-stage-living-room/images/01-reference-age-sheet/image.png",
-      "checked_at": "2026-04-23T07:46:54.853Z"
-    }
+    "runner_notes": "Root multi-age identity reference for the Mirror Worlds series."
   },
   "i18n": {
     "en": {

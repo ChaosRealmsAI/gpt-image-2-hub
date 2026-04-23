@@ -15,7 +15,7 @@
     "series"
   ],
   "refs": [],
-  "status": "prompted",
+  "status": "failed",
   "generation": {
     "order": 2,
     "mode": "image",
@@ -34,7 +34,13 @@
       }
     ],
     "ref_urls": [],
-    "runner_notes": "Use the first image as the identity and grid reference for a stage-light expression variation."
+    "runner_notes": "Use the first image as the identity and grid reference for a stage-light expression variation.",
+    "last_error": {
+      "reason": "❌ fetch failed",
+      "retryable": true,
+      "output_path": "works/topics/nine-expression-portrait-grid/packages/series-idol-expression-lock/images/02-stage-light-sheet/image.png",
+      "checked_at": "2026-04-23T07:49:49.303Z"
+    }
   },
   "i18n": {
     "en": {

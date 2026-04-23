@@ -13,7 +13,7 @@
     "single"
   ],
   "refs": [],
-  "status": "failed",
+  "status": "done",
   "generation": {
     "order": 7,
     "mode": "image",
@@ -24,13 +24,7 @@
     },
     "depends_on": [],
     "ref_urls": [],
-    "runner_notes": "Independent six-era cover grid with ocean and static motifs.",
-    "last_error": {
-      "reason": "❌ fetch failed",
-      "retryable": true,
-      "output_path": "works/topics/multi-era-album-covers/packages/single-era-cover-sets/images/ocean-static-set/image.png",
-      "checked_at": "2026-04-23T07:44:32.639Z"
-    }
+    "runner_notes": "Independent six-era cover grid with ocean and static motifs."
   },
   "i18n": {
     "en": {

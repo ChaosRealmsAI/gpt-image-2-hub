@@ -13,7 +13,7 @@
     "single"
   ],
   "refs": [],
-  "status": "failed",
+  "status": "done",
   "generation": {
     "order": 1,
     "mode": "image",
@@ -24,13 +24,7 @@
     },
     "depends_on": [],
     "ref_urls": [],
-    "runner_notes": "Independent runner anatomy overlay study; no reference URL required.",
-    "last_error": {
-      "reason": "poll 超时 240s",
-      "retryable": true,
-      "output_path": "works/topics/glowing-anatomy-overlay/packages/single-performance-overlays/images/01-runner-cardio-overlay/image.png",
-      "checked_at": "2026-04-23T07:39:31.365Z"
-    }
+    "runner_notes": "Independent runner anatomy overlay study; no reference URL required."
   },
   "i18n": {
     "en": {

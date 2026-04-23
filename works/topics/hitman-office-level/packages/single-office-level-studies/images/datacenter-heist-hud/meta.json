@@ -26,10 +26,10 @@
     "ref_urls": [],
     "runner_notes": "Independent single image testing datacenter-office HUD and route logic.",
     "last_error": {
-      "reason": "poll 超时 240s",
+      "reason": "❌ fetch failed",
       "retryable": true,
       "output_path": "works/topics/hitman-office-level/packages/single-office-level-studies/images/datacenter-heist-hud/image.png",
-      "checked_at": "2026-04-23T07:40:42.583Z"
+      "checked_at": "2026-04-23T07:48:59.848Z"
     }
   },
   "i18n": {

@@ -14,7 +14,7 @@
     "single"
   ],
   "refs": [],
-  "status": "running",
+  "status": "failed",
   "generation": {
     "order": 3,
     "mode": "image",
@@ -25,7 +25,13 @@
     },
     "depends_on": [],
     "ref_urls": [],
-    "runner_notes": "Independent technology retail mockup; no reference dependencies."
+    "runner_notes": "Independent technology retail mockup; no reference dependencies.",
+    "last_error": {
+      "reason": "❌ fetch failed",
+      "retryable": true,
+      "output_path": "works/topics/brand-artist-collab-mockup/packages/single-collab-proposal-studies/images/phone-dot-gallery/image.png",
+      "checked_at": "2026-04-23T07:50:49.553Z"
+    }
   },
   "i18n": {
     "en": {

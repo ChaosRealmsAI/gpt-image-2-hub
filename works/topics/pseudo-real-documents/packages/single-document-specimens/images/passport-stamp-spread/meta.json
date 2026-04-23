@@ -14,7 +14,7 @@
     "single"
   ],
   "refs": [],
-  "status": "prompted",
+  "status": "running",
   "generation": {
     "order": 2,
     "mode": "image",
