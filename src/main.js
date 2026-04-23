@@ -3,10 +3,14 @@ import './styles.css';
 const DATA_URL = './works/index.json';
 const LANG_KEY = 'prompt-atlas-lang';
 const VIEW_MODE_KEY = 'prompt-atlas-view-mode';
+const CATEGORY_KEY = 'prompt-atlas-active-category';
+const STYLE_KEY = 'prompt-atlas-active-styles';
+const CAPABILITY_KEY = 'prompt-atlas-active-capabilities';
 
 const UI = {
   'zh-CN': {
     all: '全部',
+    allTopics: '全部主题',
     empty: '没有匹配的作品。',
     copied: '提示词已复制',
     promptLabel: '提示词',
@@ -16,19 +20,20 @@ const UI = {
     searchPh: '搜索图片、提示词、主题或标签',
     loading: 'Loading...',
     latest: '最新',
-    sectionTopics: '分类',
+    sectionCategories: '分类',
+    sectionTopics: '主题',
+    sectionStyles: '风格',
+    sectionCapabilities: '能力',
     viewModeExpanded: '展开',
     viewModeCollapsed: '封面',
     openOriginal: '新窗口预览',
     download: '下载原图',
-    showAllTopics: '展开全部',
-    showLessTopics: '收起',
-    randomTopic: '随机分类',
     close: '关闭',
     foot: 'GPT Image 2 Hub · AI 生图灵感图鉴',
   },
   en: {
     all: 'All',
+    allTopics: 'All Topics',
     empty: 'No matching works.',
     copied: 'Prompt copied',
     promptLabel: 'Prompt',
@@ -38,14 +43,14 @@ const UI = {
     searchPh: 'Search images, prompts, topics or tags',
     loading: 'Loading...',
     latest: 'Latest',
+    sectionCategories: 'Categories',
     sectionTopics: 'Topics',
+    sectionStyles: 'Style',
+    sectionCapabilities: 'Capability',
     viewModeExpanded: 'All',
     viewModeCollapsed: 'Cover',
     openOriginal: 'Open original',
     download: 'Download',
-    showAllTopics: 'Show all',
-    showLessTopics: 'Show less',
-    randomTopic: 'Random topic',
     close: 'Close',
     foot: 'GPT Image 2 Hub · AI image inspiration atlas',
   },
@@ -71,8 +76,10 @@ const state = {
   data: null,
   lang: normalizeLang(localStorage.getItem(LANG_KEY) || 'zh-CN'),
   viewMode: localStorage.getItem(VIEW_MODE_KEY) === 'expanded' ? 'expanded' : 'collapsed',
+  activeCategory: localStorage.getItem(CATEGORY_KEY) || 'all',
   activeTopic: 'all',
-  topicTabsExpanded: false,
+  activeStyles: readStoredSet(STYLE_KEY),
+  activeCapabilities: readStoredSet(CAPABILITY_KEY),
   search: '',
   modal: null,
   promptCache: new Map(),
@@ -88,6 +95,19 @@ const $ = (sel) => document.querySelector(sel);
 
 function normalizeLang(lang) {
   return LANGS.some((item) => item.id === lang) ? lang : 'zh-CN';
+}
+
+function readStoredSet(key) {
+  try {
+    const value = JSON.parse(localStorage.getItem(key) || '[]');
+    return Array.isArray(value) ? new Set(value.filter(Boolean)) : new Set();
+  } catch {
+    return new Set();
+  }
+}
+
+function writeStoredSet(key, values) {
+  localStorage.setItem(key, JSON.stringify([...values]));
 }
 
 function esc(value) {
@@ -134,6 +154,28 @@ function tagLabel(tag) {
     || tag;
 }
 
+function categoryDefinition(id) {
+  return state.data?.categories?.category?.[id] || null;
+}
+
+function categoryLabel(id) {
+  const category = categoryDefinition(id);
+  return category?.labels?.[state.lang]
+    || category?.labels?.en
+    || id;
+}
+
+function categoryIcon(id) {
+  return categoryDefinition(id)?.icon || '';
+}
+
+function taxonomyLabel(group, id) {
+  const entry = state.data?.categories?.[group]?.[id];
+  return entry?.labels?.[state.lang]
+    || entry?.labels?.en
+    || id;
+}
+
 function imageUrl(path) {
   if (!path) return '';
   return `./${String(path).replace(/^\.?\//, '')}`;
@@ -171,6 +213,15 @@ function isSeries(image) {
   return image.type === 'series';
 }
 
+function sortTopics(topics) {
+  return topics.slice().sort((a, b) => {
+    const ao = Number(a.display?.sort_order ?? Number.POSITIVE_INFINITY);
+    const bo = Number(b.display?.sort_order ?? Number.POSITIVE_INFINITY);
+    if (ao !== bo) return ao - bo;
+    return topicLabel(a).localeCompare(topicLabel(b), state.lang);
+  });
+}
+
 function buildIndexes() {
   topicMap = new Map((state.data?.topics || []).map((topic) => [topic.id, topic]));
   packageMap = new Map((state.data?.packages || []).map((pack) => [pack.id, pack]));
@@ -197,9 +248,80 @@ function shuffleImages(images) {
   }
 }
 
+function topicsWithImages() {
+  return (state.data?.topics || []).filter((topic) => Number(topic.image_count || 0) > 0);
+}
+
+function categoryExists(id) {
+  return id === 'all' || Boolean(categoryDefinition(id));
+}
+
+function normalizeCategory(id) {
+  return categoryExists(id) ? id : 'all';
+}
+
+function topicExists(id) {
+  return id === 'all' || topicMap.has(id);
+}
+
+function topicMatchesCategory(topicId, categoryId = state.activeCategory) {
+  if (topicId === 'all') return true;
+  const topic = topicMap.get(topicId);
+  if (!topic) return false;
+  return categoryId === 'all' || topic.category === categoryId;
+}
+
+function currentTopicList() {
+  const topics = topicsWithImages();
+  if (state.activeCategory === 'all') return sortTopics(topics);
+  return sortTopics(topics.filter((topic) => topic.category === state.activeCategory));
+}
+
+function categoryItems() {
+  const topics = topicsWithImages();
+  const defs = state.data?.categories?.category || {};
+  return [
+    {
+      id: 'all',
+      icon: '',
+      label: t('allTopics'),
+      count: topics.length,
+    },
+    ...Object.keys(defs).map((id) => ({
+      id,
+      icon: defs[id]?.icon || '',
+      label: categoryLabel(id),
+      count: topics.filter((topic) => topic.category === id).length,
+    })),
+  ];
+}
+
+function syncRouteHash() {
+  if (state.modal) return;
+  const route = state.activeTopic !== 'all'
+    ? `#t-${encodeURIComponent(state.activeTopic)}`
+    : state.activeCategory !== 'all'
+      ? `#c-${encodeURIComponent(state.activeCategory)}`
+      : `${location.pathname}${location.search}`;
+  suppressHash = true;
+  history.replaceState(null, '', route);
+  suppressHash = false;
+}
+
 function renderShell() {
   app.innerHTML = `
     <div class="app">
+      <aside class="sidebar">
+        <div class="sidebar-section">
+          <div class="section-label">${esc(t('sectionCategories'))}</div>
+          <nav class="category-nav" id="category-nav" aria-label="categories"></nav>
+        </div>
+        <div class="sidebar-section sidebar-topics">
+          <div class="section-label">${esc(t('sectionTopics'))}</div>
+          <nav class="topic-list" id="topics-nav" aria-label="topics"></nav>
+        </div>
+      </aside>
+
       <main class="main">
         <header class="topbar">
           <a class="brand" href="./" aria-label="home">
@@ -236,33 +358,24 @@ function renderShell() {
           </div>
         </header>
 
-        <div class="topic-tabs">
-          <div class="section-label">${esc(t('sectionTopics'))}</div>
-          <nav class="topics" id="topics-nav" aria-label="topics"></nav>
-          <div class="topic-actions">
-            <button class="topic-action-btn topic-random" id="topics-random" type="button">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3h5v5"/><path d="M4 20 21 3"/><path d="M21 16v5h-5"/><path d="M15 15 21 21"/><path d="M4 4l5 5"/></svg>
-              <span>${esc(t('randomTopic'))}</span>
-            </button>
-            <button class="topic-action-btn topics-toggle" id="topics-toggle" type="button" hidden></button>
-          </div>
-        </div>
-
-        <div class="filter-bar" id="filter-bar-anchor">
-          <div class="filter-title" id="filter-title"></div>
-          <div class="filter-right">
-            <div class="view-mode" id="view-mode-group" role="radiogroup" aria-label="view mode">
-              <button class="vm-btn ${state.viewMode === 'collapsed' ? 'active' : ''}" data-mode="collapsed" type="button" role="radio" aria-checked="${state.viewMode === 'collapsed'}">${esc(t('viewModeCollapsed'))}</button>
-              <button class="vm-btn ${state.viewMode === 'expanded' ? 'active' : ''}" data-mode="expanded" type="button" role="radio" aria-checked="${state.viewMode === 'expanded'}">${esc(t('viewModeExpanded'))}</button>
+        <div class="filter-bar">
+          <div class="filter-head">
+            <div class="filter-title" id="filter-title"></div>
+            <div class="filter-right">
+              <div class="view-mode" id="view-mode-group" role="radiogroup" aria-label="view mode">
+                <button class="vm-btn ${state.viewMode === 'collapsed' ? 'active' : ''}" data-mode="collapsed" type="button" role="radio" aria-checked="${state.viewMode === 'collapsed'}">${esc(t('viewModeCollapsed'))}</button>
+                <button class="vm-btn ${state.viewMode === 'expanded' ? 'active' : ''}" data-mode="expanded" type="button" role="radio" aria-checked="${state.viewMode === 'expanded'}">${esc(t('viewModeExpanded'))}</button>
+              </div>
+              <button class="sort-btn" id="sort-btn" type="button">
+                <span id="sort-label">${esc(t('latest'))}</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <button class="view-btn active" aria-label="grid" type="button">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+              </button>
             </div>
-            <button class="sort-btn" id="sort-btn" type="button">
-              <span id="sort-label">${esc(t('latest'))}</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <button class="view-btn active" aria-label="grid" type="button">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
-            </button>
           </div>
+          <div class="chip-groups" id="chip-groups"></div>
         </div>
 
         <section class="waterfall" id="waterfall" aria-label="works"></section>
@@ -323,67 +436,80 @@ function renderShell() {
   `;
 }
 
-function topicItems() {
-  const images = state.data?.images || [];
-  return [
-    {
-      id: 'all',
-      label: t('all'),
-      count: images.length,
-    },
-    ...(state.data?.topics || []).map((topic) => ({
-      id: topic.id,
-      label: topicLabel(topic),
-      count: Number(topic.image_count || images.filter((image) => image.topic_id === topic.id).length),
-    })),
-  ];
+function renderCategoryNav() {
+  const nav = $('#category-nav');
+  if (!nav) return;
+  nav.innerHTML = categoryItems().map((item) => `
+    <button class="category-item ${item.id === state.activeCategory ? 'active' : ''}" data-category="${esc(item.id)}" type="button">
+      <span class="category-icon">${esc(item.icon || '•')}</span>
+      <span class="category-name">${esc(item.label)}</span>
+      <span class="category-count">${item.count}</span>
+    </button>
+  `).join('');
 }
 
 function renderTopicsNav() {
   const nav = $('#topics-nav');
   if (!nav) return;
-  nav.innerHTML = topicItems().map((item) => `
-    <button class="topic-item ${item.id === state.activeTopic ? 'active' : ''}" data-topic="${esc(item.id)}" type="button">
-      <span>${esc(item.label)}</span>
-      <span class="topic-count">${item.count}</span>
+  const items = currentTopicList();
+  nav.innerHTML = items.map((topic) => `
+    <button class="topic-link ${topic.id === state.activeTopic ? 'active' : ''}" data-topic="${esc(topic.id)}" type="button">
+      <span>${esc(topicLabel(topic))}</span>
+      <span class="topic-count">${Number(topic.image_count || 0)}</span>
     </button>
   `).join('');
-  syncTopicsLayout();
 }
 
-function syncTopicsLayout() {
-  const nav = $('#topics-nav');
-  const toggle = $('#topics-toggle');
-  if (!nav || !toggle) return;
+function renderFilterChips() {
+  const groups = $('#chip-groups');
+  if (!groups) return;
+  const styles = Object.keys(state.data?.categories?.style || {});
+  const capabilities = Object.keys(state.data?.categories?.capability || {});
+  groups.innerHTML = `
+    <div class="chip-group">
+      <div class="chip-group-label">${esc(t('sectionStyles'))}</div>
+      <div class="chip-strip">
+        ${styles.map((id) => `
+          <button
+            class="filter-chip ${state.activeStyles.has(id) ? 'active' : ''}"
+            data-group="style"
+            data-value="${esc(id)}"
+            type="button"
+          >${esc(taxonomyLabel('style', id))}</button>
+        `).join('')}
+      </div>
+    </div>
+    <div class="chip-group">
+      <div class="chip-group-label">${esc(t('sectionCapabilities'))}</div>
+      <div class="chip-strip">
+        ${capabilities.map((id) => `
+          <button
+            class="filter-chip ${state.activeCapabilities.has(id) ? 'active' : ''}"
+            data-group="capability"
+            data-value="${esc(id)}"
+            type="button"
+          >${esc(taxonomyLabel('capability', id))}</button>
+        `).join('')}
+      </div>
+    </div>
+  `;
+}
 
-  const items = [...nav.querySelectorAll('.topic-item')];
-  items.forEach((item) => item.classList.remove('topic-item-hidden'));
-
-  const rows = [];
-  for (const item of items) {
-    const top = item.offsetTop;
-    let rowIndex = rows.findIndex((value) => Math.abs(value - top) <= 2);
-    if (rowIndex === -1) {
-      rows.push(top);
-      rowIndex = rows.length - 1;
-    }
-    if (!state.topicTabsExpanded && rowIndex >= 2) item.classList.add('topic-item-hidden');
+function activeFilterLabel() {
+  if (state.activeTopic !== 'all') {
+    return topicLabel(topicMap.get(state.activeTopic));
   }
-
-  const needsToggle = rows.length > 2;
-  toggle.hidden = !needsToggle;
-  toggle.textContent = needsToggle
-    ? t(state.topicTabsExpanded ? 'showLessTopics' : 'showAllTopics')
-    : '';
-  nav.classList.toggle('is-expanded', state.topicTabsExpanded || !needsToggle);
+  if (state.activeCategory !== 'all') {
+    return `${categoryIcon(state.activeCategory)} ${categoryLabel(state.activeCategory)}`.trim();
+  }
+  return t('allTopics');
 }
 
 function renderFilterTitle() {
   const bar = $('#filter-title');
   if (!bar) return;
-  const active = topicItems().find((item) => item.id === state.activeTopic) || topicItems()[0];
   bar.innerHTML = `
-    <span class="t">${esc(active.label)}</span>
+    <span class="t">${esc(activeFilterLabel())}</span>
     <span class="n">${filteredImages().length}</span>
   `;
 }
@@ -401,10 +527,14 @@ function renderViewModeGroup() {
 function filteredImages() {
   const q = state.search.trim().toLowerCase();
   const images = (state.data?.images || []).filter((image) => {
+    const topic = topicOf(image);
+    if (!topic) return false;
+    if (state.activeCategory !== 'all' && topic.category !== state.activeCategory) return false;
     if (state.activeTopic !== 'all' && image.topic_id !== state.activeTopic) return false;
+    if (state.activeStyles.size && !(topic.style || []).some((style) => state.activeStyles.has(style))) return false;
+    if (state.activeCapabilities.size && !(topic.capability || []).some((capability) => state.activeCapabilities.has(capability))) return false;
     if (!q) return true;
 
-    const topic = topicOf(image);
     const pack = packageOf(image);
     const hay = [
       titleOf(image),
@@ -418,8 +548,6 @@ function filteredImages() {
 
   if (state.viewMode !== 'collapsed') return images;
 
-  // Collapsed mode: only dedupe `series` packages to their cover (first image by order).
-  // `single` packages keep every image — each entry in a single package is an independent work.
   const seenSeries = new Set();
   return images.reduce((acc, image) => {
     if (!isSeries(image) || !image.package_id) {
@@ -482,7 +610,7 @@ async function loadPrompt(image) {
     const prompt = meta.prompt || '';
     state.promptCache.set(image.id, prompt);
     return prompt;
-  } catch (error) {
+  } catch {
     const message = `Unable to load prompt from ${image.meta_path}`;
     state.promptCache.set(image.id, message);
     return message;
@@ -583,9 +711,7 @@ function closeModal(options = {}) {
   state.modal = null;
 
   if (!options.keepHash && location.hash.startsWith('#m-')) {
-    suppressHash = true;
-    history.replaceState(null, '', `${location.pathname}${location.search}`);
-    suppressHash = false;
+    syncRouteHash();
   }
 }
 
@@ -622,42 +748,73 @@ async function copyPromptFor(image) {
   showToast(t('copied'));
 }
 
+function renderAll() {
+  renderShell();
+  renderCategoryNav();
+  renderTopicsNav();
+  renderFilterTitle();
+  renderFilterChips();
+  renderGallery();
+}
+
 function applyLang() {
   document.documentElement.lang = state.lang;
   localStorage.setItem(LANG_KEY, state.lang);
-  renderShell();
-  renderTopicsNav();
-  renderFilterTitle();
-  renderGallery();
+  renderAll();
   if (state.modal) openModal(state.modal.id);
 }
 
-function topicExists(id) {
-  return id === 'all' || (state.data?.topics || []).some((topic) => topic.id === id);
-}
-
-function pickRandomTopicId() {
-  const topics = (state.data?.topics || []).map((topic) => topic.id).filter(Boolean);
-  if (!topics.length) return 'all';
-  const pool = topics.length > 1 ? topics.filter((id) => id !== state.activeTopic) : topics;
-  return pool[Math.floor(Math.random() * pool.length)] || topics[0];
+function setActiveCategory(id, options = {}) {
+  const next = normalizeCategory(id);
+  if (!options.keepTopic && !topicMatchesCategory(state.activeTopic, next)) {
+    state.activeTopic = 'all';
+  }
+  state.activeCategory = next;
+  localStorage.setItem(CATEGORY_KEY, next);
+  renderCategoryNav();
+  renderTopicsNav();
+  renderFilterTitle();
+  renderGallery();
+  if (options.scrollTop) window.scrollTo(0, 0);
+  if (options.updateHash !== false) syncRouteHash();
+  return true;
 }
 
 function setActiveTopic(id, options = {}) {
   if (!topicExists(id)) return false;
-  state.activeTopic = id;
-  renderTopicsNav();
-  if (options.expandIfHidden) {
-    const activeButton = $('#topics-nav .topic-item.active');
-    if (activeButton?.classList.contains('topic-item-hidden')) {
-      state.topicTabsExpanded = true;
-      syncTopicsLayout();
-    }
+  if (id === 'all') {
+    state.activeTopic = 'all';
+    renderCategoryNav();
+    renderTopicsNav();
+    renderFilterTitle();
+    renderGallery();
+    if (options.scrollTop) window.scrollTo(0, 0);
+    if (options.updateHash !== false) syncRouteHash();
+    return true;
   }
+
+  const topic = topicMap.get(id);
+  const nextCategory = normalizeCategory(topic?.category || 'all');
+  state.activeCategory = nextCategory;
+  state.activeTopic = id;
+  localStorage.setItem(CATEGORY_KEY, nextCategory);
+  renderCategoryNav();
+  renderTopicsNav();
   renderFilterTitle();
   renderGallery();
   if (options.scrollTop) window.scrollTo(0, 0);
+  if (options.updateHash !== false) syncRouteHash();
   return true;
+}
+
+function toggleFilter(group, value) {
+  const store = group === 'style' ? state.activeStyles : state.activeCapabilities;
+  if (store.has(value)) store.delete(value);
+  else store.add(value);
+  writeStoredSet(group === 'style' ? STYLE_KEY : CAPABILITY_KEY, store);
+  renderFilterChips();
+  renderFilterTitle();
+  renderGallery();
 }
 
 function applyHashRoute() {
@@ -666,7 +823,14 @@ function applyHashRoute() {
   if (hash.startsWith('#t-')) {
     closeModal({ keepHash: true });
     const topicId = decodeURIComponent(hash.slice(3).split('/')[0] || '');
-    setActiveTopic(topicId, { expandIfHidden: true, scrollTop: true });
+    setActiveTopic(topicId, { scrollTop: true, updateHash: false });
+    return;
+  }
+
+  if (hash.startsWith('#c-')) {
+    closeModal({ keepHash: true });
+    const categoryId = decodeURIComponent(hash.slice(3).split('/')[0] || '');
+    setActiveCategory(categoryId, { scrollTop: true, updateHash: false });
     return;
   }
 
@@ -680,20 +844,21 @@ function applyHashRoute() {
 
 function bindEvents() {
   document.addEventListener('click', (event) => {
-    const topicItem = event.target.closest('.topic-item');
+    const categoryItem = event.target.closest('.category-item');
+    if (categoryItem) {
+      setActiveCategory(categoryItem.dataset.category, { scrollTop: true });
+      return;
+    }
+
+    const topicItem = event.target.closest('.topic-link');
     if (topicItem) {
-      setActiveTopic(topicItem.dataset.topic);
+      setActiveTopic(topicItem.dataset.topic, { scrollTop: true });
       return;
     }
 
-    if (event.target.closest('#topics-toggle')) {
-      state.topicTabsExpanded = !state.topicTabsExpanded;
-      syncTopicsLayout();
-      return;
-    }
-
-    if (event.target.closest('#topics-random')) {
-      setActiveTopic(pickRandomTopicId(), { expandIfHidden: true });
+    const chip = event.target.closest('.filter-chip');
+    if (chip) {
+      toggleFilter(chip.dataset.group, chip.dataset.value);
       return;
     }
 
@@ -751,9 +916,7 @@ function bindEvents() {
 
     if (event.target.id === 'scrim') {
       closeModal();
-      return;
     }
-
   });
 
   document.addEventListener('input', (event) => {
@@ -800,10 +963,6 @@ function bindEvents() {
     if (suppressHash) return;
     applyHashRoute();
   });
-
-  window.addEventListener('resize', () => {
-    syncTopicsLayout();
-  });
 }
 
 async function boot() {
@@ -814,6 +973,8 @@ async function boot() {
   state.data = await response.json();
   buildIndexes();
   shuffleImages(state.data.images || []);
+  state.activeCategory = normalizeCategory(state.activeCategory);
+  if (!topicMatchesCategory(state.activeTopic, state.activeCategory)) state.activeTopic = 'all';
   applyLang();
   applyHashRoute();
 }
