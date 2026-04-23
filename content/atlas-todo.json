@@ -18,7 +18,7 @@
     "owner_session": "UUID · claimed 时写",
     "claimed_at": "ISO · claimed 时写",
     "done_at": "ISO · done 时写",
-    "output_dir": "assets/{tier}/{id}-{slug}/ · claimed 时写",
+    "output_dir": "assets/{tier}/{id}-{work_slug}/ · claimed 时写；series 用系列名，single 用单图作品名",
     "metadata_path": "output_dir + metadata.json · done 时写"
   },
   "tiers": [
@@ -597,13 +597,13 @@
           "difficulty": 5,
           "business_value": "low",
           "viral_potential": "high",
-          "status": "todo",
-          "type": null,
-          "total_shots": null,
-          "owner_session": null,
-          "claimed_at": null,
+          "status": "claimed",
+          "type": "series",
+          "total_shots": 3,
+          "owner_session": "codex-20260423-a13-series",
+          "claimed_at": "2026-04-23T00:19:15Z",
           "done_at": null,
-          "output_dir": null,
+          "output_dir": "assets/A/A-13-mirror-worlds/",
           "metadata_path": null
         },
         {
