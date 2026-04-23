@@ -84,17 +84,6 @@ function render(lang) {
 
   const topicsWithImages = topics.filter((t) => (imagesByTopic.get(t.id) || []).length > 0);
 
-  lines.push(`## ${s.toc}`);
-  lines.push('');
-  for (const topic of topicsWithImages) {
-    const title = localized(topic, 'title', lang);
-    const count = (imagesByTopic.get(topic.id) || []).length;
-    lines.push(`- [${title}](#${slugAnchor(title)}) · ${count}`);
-  }
-  lines.push('');
-  lines.push('---');
-  lines.push('');
-
   for (const topic of topicsWithImages) {
     const topicTitle = localized(topic, 'title', lang);
     const topicDesc = localized(topic, 'description', lang);
