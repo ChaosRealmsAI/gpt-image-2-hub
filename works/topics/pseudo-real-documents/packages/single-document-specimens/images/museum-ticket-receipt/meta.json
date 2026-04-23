@@ -14,7 +14,7 @@
     "single"
   ],
   "refs": [],
-  "status": "failed",
+  "status": "done",
   "generation": {
     "order": 6,
     "mode": "image",
@@ -25,13 +25,7 @@
     },
     "depends_on": [],
     "ref_urls": [],
-    "runner_notes": "Independent single image testing fictional ticket and receipt material contrast.",
-    "last_error": {
-      "reason": "poll 超时 240s",
-      "retryable": true,
-      "output_path": "works/topics/pseudo-real-documents/packages/single-document-specimens/images/museum-ticket-receipt/image.png",
-      "checked_at": "2026-04-23T07:59:00.000Z"
-    }
+    "runner_notes": "Independent single image testing fictional ticket and receipt material contrast."
   },
   "i18n": {
     "en": {

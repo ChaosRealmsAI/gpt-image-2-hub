@@ -13,7 +13,7 @@
     "scientific-realism"
   ],
   "refs": [],
-  "status": "failed",
+  "status": "done",
   "generation": {
     "order": 8,
     "mode": "image",
@@ -24,13 +24,7 @@
     },
     "depends_on": [],
     "ref_urls": [],
-    "runner_notes": "Independent Dashboard Data Visualization single-image study; no reference URL required.",
-    "last_error": {
-      "reason": "poll 超时 240s",
-      "retryable": true,
-      "output_path": "works/topics/dashboard-data-visualization/packages/single-dashboard-data-visualization-studies/images/final-plate/image.png",
-      "checked_at": "2026-04-23T08:18:57.664Z"
-    }
+    "runner_notes": "Independent Dashboard Data Visualization single-image study; no reference URL required."
   },
   "i18n": {
     "en": {

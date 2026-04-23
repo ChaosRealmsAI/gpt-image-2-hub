@@ -13,7 +13,7 @@
     "identity-consistency"
   ],
   "refs": [],
-  "status": "failed",
+  "status": "done",
   "generation": {
     "order": 1,
     "mode": "image",
@@ -24,13 +24,7 @@
     },
     "depends_on": [],
     "ref_urls": [],
-    "runner_notes": "Root reference sheet for the courier identity, proportions, and turnaround layout.",
-    "last_error": {
-      "reason": "❌ fetch failed",
-      "retryable": true,
-      "output_path": "works/topics/character-turnaround/packages/series-courier-variant-turnarounds/images/01-reference-courier-sheet/image.png",
-      "checked_at": "2026-04-23T08:10:47.247Z"
-    }
+    "runner_notes": "Root reference sheet for the courier identity, proportions, and turnaround layout."
   },
   "i18n": {
     "en": {

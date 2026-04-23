@@ -13,7 +13,7 @@
     "photorealism"
   ],
   "refs": [],
-  "status": "failed",
+  "status": "done",
   "generation": {
     "order": 5,
     "mode": "image",
@@ -24,13 +24,7 @@
     },
     "depends_on": [],
     "ref_urls": [],
-    "runner_notes": "Independent Forensic Scene Reconstruction single-image study; no reference URL required.",
-    "last_error": {
-      "reason": "poll 超时 240s",
-      "retryable": true,
-      "output_path": "works/topics/forensic-scene-reconstruction/packages/single-forensic-scene-reconstruction-studies/images/evidence-table/image.png",
-      "checked_at": "2026-04-23T08:25:23.622Z"
-    }
+    "runner_notes": "Independent Forensic Scene Reconstruction single-image study; no reference URL required."
   },
   "i18n": {
     "en": {

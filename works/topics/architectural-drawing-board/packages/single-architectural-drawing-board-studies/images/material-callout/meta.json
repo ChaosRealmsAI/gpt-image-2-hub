@@ -13,7 +13,7 @@
     "scientific-realism"
   ],
   "refs": [],
-  "status": "failed",
+  "status": "done",
   "generation": {
     "order": 6,
     "mode": "image",
@@ -24,13 +24,7 @@
     },
     "depends_on": [],
     "ref_urls": [],
-    "runner_notes": "Independent Architectural Drawing Board single-image study; no reference URL required.",
-    "last_error": {
-      "reason": "poll 超时 240s",
-      "retryable": true,
-      "output_path": "works/topics/architectural-drawing-board/packages/single-architectural-drawing-board-studies/images/material-callout/image.png",
-      "checked_at": "2026-04-23T08:07:39.866Z"
-    }
+    "runner_notes": "Independent Architectural Drawing Board single-image study; no reference URL required."
   },
   "i18n": {
     "en": {

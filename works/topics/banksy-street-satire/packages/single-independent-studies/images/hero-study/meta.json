@@ -29,7 +29,7 @@
       "reason": "❌ task failed: no image data URI found in content: 非常抱歉，该提示可能违反了关于与第三方内容相似性的防护限制。如果你认为此判断有误，请重试或修改提示语。",
       "retryable": true,
       "output_path": "works/topics/banksy-street-satire/packages/single-independent-studies/images/hero-study/image.png",
-      "checked_at": "2026-04-23T08:08:11.699Z"
+      "checked_at": "2026-04-23T09:02:23.342Z"
     }
   },
   "i18n": {

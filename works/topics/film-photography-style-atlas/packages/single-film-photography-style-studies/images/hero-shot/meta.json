@@ -13,7 +13,7 @@
     "frontier-creative-composition"
   ],
   "refs": [],
-  "status": "failed",
+  "status": "done",
   "generation": {
     "order": 1,
     "mode": "image",
@@ -24,13 +24,7 @@
     },
     "depends_on": [],
     "ref_urls": [],
-    "runner_notes": "Independent Film Photography Style Atlas single-image study; no reference URL required.",
-    "last_error": {
-      "reason": "poll 超时 240s",
-      "retryable": true,
-      "output_path": "works/topics/film-photography-style-atlas/packages/single-film-photography-style-studies/images/hero-shot/image.png",
-      "checked_at": "2026-04-23T08:21:54.811Z"
-    }
+    "runner_notes": "Independent Film Photography Style Atlas single-image study; no reference URL required."
   },
   "i18n": {
     "en": {

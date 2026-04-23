@@ -13,7 +13,7 @@
     "frontier-creative-composition"
   ],
   "refs": [],
-  "status": "failed",
+  "status": "done",
   "generation": {
     "order": 4,
     "mode": "image",
@@ -24,13 +24,7 @@
     },
     "depends_on": [],
     "ref_urls": [],
-    "runner_notes": "Independent Lego Scene Rebuild single-image study; no reference URL required.",
-    "last_error": {
-      "reason": "❌ task failed: Please wait and try again later. Thank you for your patience!",
-      "retryable": true,
-      "output_path": "works/topics/lego-scene-rebuild/packages/single-lego-scene-rebuild-studies/images/studio-turn/image.png",
-      "checked_at": "2026-04-23T08:27:16.716Z"
-    }
+    "runner_notes": "Independent Lego Scene Rebuild single-image study; no reference URL required."
   },
   "i18n": {
     "en": {

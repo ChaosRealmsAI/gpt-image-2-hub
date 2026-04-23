@@ -15,7 +15,7 @@
     "single"
   ],
   "refs": [],
-  "status": "failed",
+  "status": "done",
   "generation": {
     "order": 2,
     "mode": "image",
@@ -26,13 +26,7 @@
     },
     "depends_on": [],
     "ref_urls": [],
-    "runner_notes": "Independent single image testing Baroque chiaroscuro with modern tailoring and a structured grid.",
-    "last_error": {
-      "reason": "poll 超时 240s",
-      "retryable": true,
-      "output_path": "works/topics/painting-character-ootd/packages/single-art-history-ootd-studies/images/02-baroque-tailor-carousel/image.png",
-      "checked_at": "2026-04-23T07:56:45.997Z"
-    }
+    "runner_notes": "Independent single image testing Baroque chiaroscuro with modern tailoring and a structured grid."
   },
   "i18n": {
     "en": {

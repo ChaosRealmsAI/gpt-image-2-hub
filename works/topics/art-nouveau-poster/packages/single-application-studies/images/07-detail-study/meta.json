@@ -15,7 +15,7 @@
     "single"
   ],
   "refs": [],
-  "status": "failed",
+  "status": "done",
   "generation": {
     "order": 7,
     "mode": "image",
@@ -26,13 +26,7 @@
     },
     "depends_on": [],
     "ref_urls": [],
-    "runner_notes": "Independent single-image study with no reference dependency.",
-    "last_error": {
-      "reason": "❌ fetch failed",
-      "retryable": true,
-      "output_path": "works/topics/art-nouveau-poster/packages/single-application-studies/images/07-detail-study/image.png",
-      "checked_at": "2026-04-23T08:05:43.213Z"
-    }
+    "runner_notes": "Independent single-image study with no reference dependency."
   },
   "i18n": {
     "en": {

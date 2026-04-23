@@ -14,7 +14,7 @@
     "single"
   ],
   "refs": [],
-  "status": "failed",
+  "status": "done",
   "generation": {
     "order": 1,
     "mode": "image",
@@ -25,13 +25,7 @@
     },
     "depends_on": [],
     "ref_urls": [],
-    "runner_notes": "Independent single image testing transparent glass physics in an executive boardroom concept.",
-    "last_error": {
-      "reason": "❌ fetch failed",
-      "retryable": true,
-      "output_path": "works/topics/object-boardroom/packages/single-object-negotiations/images/glass-ceo-vote/image.png",
-      "checked_at": "2026-04-23T07:52:27.399Z"
-    }
+    "runner_notes": "Independent single image testing transparent glass physics in an executive boardroom concept."
   },
   "i18n": {
     "en": {

@@ -13,7 +13,7 @@
     "editorial-illustration"
   ],
   "refs": [],
-  "status": "failed",
+  "status": "done",
   "generation": {
     "order": 3,
     "mode": "image",
@@ -24,13 +24,7 @@
     },
     "depends_on": [],
     "ref_urls": [],
-    "runner_notes": "Independent Book Series Design single-image study; no reference URL required.",
-    "last_error": {
-      "reason": "poll 超时 240s",
-      "retryable": true,
-      "output_path": "works/topics/book-series-design/packages/single-book-series-design-studies/images/desk-review/image.png",
-      "checked_at": "2026-04-23T08:12:31.977Z"
-    }
+    "runner_notes": "Independent Book Series Design single-image study; no reference URL required."
   },
   "i18n": {
     "en": {
