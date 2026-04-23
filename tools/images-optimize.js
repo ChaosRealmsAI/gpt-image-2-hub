@@ -1,9 +1,10 @@
+#!/usr/bin/env node
 import fs from 'node:fs';
 import path from 'node:path';
+import process from 'node:process';
 import sharp from 'sharp';
+import { fileURLToPath } from 'node:url';
 
-const root = process.cwd();
-const worksDir = path.join(root, 'works');
 const sourceExtensions = new Set(['.png', '.jpg', '.jpeg', '.webp']);
 const variants = [
   { width: 400, quality: 78, suffix: 'w400' },
@@ -17,6 +18,7 @@ function formatBytes(bytes) {
 }
 
 function walk(dir, files = []) {
+  if (!fs.existsSync(dir)) return files;
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
     const fullPath = path.join(dir, entry.name);
     if (entry.isDirectory()) {
@@ -63,7 +65,10 @@ async function optimizeVariant(sourcePath, sourceStat, variant) {
   };
 }
 
-async function main() {
+export async function optimizeImages({ root = process.cwd(), log = console.log } = {}) {
+  const worksDir = path.join(root, 'works');
+  const print = typeof log === 'function' ? log : console.log;
+
   if (!fs.existsSync(worksDir)) {
     throw new Error(`works directory not found: ${path.relative(root, worksDir)}`);
   }
@@ -96,17 +101,31 @@ async function main() {
         return `${verb} ${name} (${formatBytes(sourceSize)} -> ${formatBytes(result.size)})`;
       })
       .join(', ');
-    console.log(`[${index + 1}/${sources.length}] ${relSource}: ${rendered}`);
+    print(`[${index + 1}/${sources.length}] ${relSource}: ${rendered}`);
   }
 
   const webpCount = compressedCount + skippedCount;
   const saved = Math.max(0, sourceTotal - outputTotal);
-  console.log(
+  print(
     `Total: ${sources.length} sources · ${webpCount} webp · ${compressedCount} compressed · ${skippedCount} skipped · saved ${formatBytes(saved)} (${formatBytes(sourceTotal)} -> ${formatBytes(outputTotal)})`,
   );
+
+  return {
+    sourceCount: sources.length,
+    webpCount,
+    compressedCount,
+    skippedCount,
+    sourceTotal,
+    outputTotal,
+    saved,
+  };
 }
 
-main().catch((error) => {
-  console.error(error instanceof Error ? error.message : error);
-  process.exitCode = 1;
-});
+const isCliEntry = process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.argv[1]);
+
+if (isCliEntry) {
+  optimizeImages().catch((error) => {
+    console.error(error instanceof Error ? error.message : error);
+    process.exitCode = 1;
+  });
+}

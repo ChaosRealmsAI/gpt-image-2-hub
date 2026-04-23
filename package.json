@@ -17,6 +17,7 @@
     "works:queue": "node tools/works.js queue",
     "works:scan": "node tools/works.js scan",
     "images:optimize": "node tools/images-optimize.js",
+    "content:publish": "node tools/content-publish.js",
     "check:public": "node tools/works.js check-public"
   },
   "devDependencies": {
