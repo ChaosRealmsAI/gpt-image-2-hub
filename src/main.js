@@ -517,6 +517,24 @@ async function openModal(id, options = {}) {
 
   $('#m-img').src = modalSrc;
   $('#m-img').alt = image.display?.alt?.[state.lang] || primaryTitle;
+
+  if (peers && peers.length > 1) {
+    const idx = Math.max(0, peers.findIndex((p) => p.id === image.id));
+    const neighbors = new Set([
+      peers[(idx - 1 + peers.length) % peers.length],
+      peers[(idx + 1) % peers.length],
+    ]);
+    setTimeout(() => {
+      for (const peer of neighbors) {
+        if (peer.id === image.id) continue;
+        const preImg = new Image();
+        preImg.decoding = 'async';
+        preImg.src = imageVariantUrl(peer.image, 1600);
+        if (!state.promptCache.has(peer.id)) loadPrompt(peer);
+      }
+    }, 300);
+  }
+
   $('#m-title').textContent = primaryTitle;
   $('#m-prompt').textContent = state.promptCache.get(image.id) || t('loading');
   $('#m-open').href = src;
@@ -567,16 +585,6 @@ async function openModal(id, options = {}) {
 
   const prompt = await loadPrompt(image);
   if (state.modal?.id === image.id) $('#m-prompt').textContent = prompt;
-
-  if (peers && peers.length > 1) {
-    for (const peer of peers) {
-      if (peer.id === image.id) continue;
-      const preImg = new Image();
-      preImg.decoding = 'async';
-      preImg.src = imageVariantUrl(peer.image, 1600);
-      if (!state.promptCache.has(peer.id)) loadPrompt(peer);
-    }
-  }
 }
 
 function closeModal(options = {}) {
