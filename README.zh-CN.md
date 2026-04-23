@@ -1,88 +1,88 @@
-# GPT Image 2 Hub · AI Image Inspiration Atlas
+# GPT Image 2 Hub · AI 视觉灵感图鉴
 
-A curated atlas of GPT Image 2 generations. Every work ships with its full prompt — copy and remix.
+一份精选的 GPT Image 2 作品集 · 每张图都附完整提示词 · 可直接复制复用。
 
-**61 topics · 82 packages · 412 works** · [简体中文](./README.zh-CN.md)
+**61 主题 · 82 合集 · 412 作品** · [English](./README.md)
 
-## Topics
+## 分类
 
-- [2D and 3D Medium Collision](#2d-and-3d-medium-collision) · 8
-- [Abstract Expressionism Study](#abstract-expressionism-study) · 8
-- [Ambigram Readability](#ambigram-readability) · 8
-- [Anamorphic Perspective Art](#anamorphic-perspective-art) · 3
-- [Ancient Book Restoration](#ancient-book-restoration) · 6
-- [Annotated Map Design](#annotated-map-design) · 8
-- [Architectural Drawing Board](#architectural-drawing-board) · 7
-- [Archive Aesthetic File](#archive-aesthetic-file) · 8
-- [Art Nouveau Poster](#art-nouveau-poster) · 6
-- [Audubon Specimen Atlas](#audubon-specimen-atlas) · 7
-- [Automotive Concept Art](#automotive-concept-art) · 7
-- [Book Series Design](#book-series-design) · 1
-- [Brand Artist Collab Mockup](#brand-artist-collab-mockup) · 6
-- [Conversational Editing Workflow](#conversational-editing-workflow) · 7
-- [Crystal Ball Narrative](#crystal-ball-narrative) · 4
-- [Eight-Panel Consistency Comic](#eight-panel-consistency-comic) · 7
-- [Equirectangular VR Panorama](#equirectangular-vr-panorama) · 8
-- [Escher Impossible Geometry](#escher-impossible-geometry) · 8
-- [Fictional Celebrity Snapshot](#fictional-celebrity-snapshot) · 8
-- [Fictional IP Poster](#fictional-ip-poster) · 8
-- [Film Storyboard Sequence](#film-storyboard-sequence) · 8
-- [Glowing Anatomy Overlay](#glowing-anatomy-overlay) · 8
-- [High-Speed Freeze](#high-speed-freeze) · 3
-- [Hitman Office Level](#hitman-office-level) · 7
-- [Hyperreal Diorama Cube](#hyperreal-diorama-cube) · 8
-- [IKEA Instruction World](#ikea-instruction-world) · 8
-- [In-Image Translation](#in-image-translation) · 8
-- [JSON Business Card](#json-business-card) · 8
-- [Maps to Treasure Map](#maps-to-treasure-map) · 8
-- [Material Swaps](#material-swaps) · 7
-- [Micro-Engraved Jewelry](#micro-engraved-jewelry) · 8
-- [Micro-Macro Infographic](#micro-macro-infographic) · 8
-- [Mirror Worlds](#mirror-worlds) · 8
-- [Multi-Era Album Covers](#multi-era-album-covers) · 8
-- [Multi-Script Poster](#multi-script-poster) · 8
-- [Museum Exploded View](#museum-exploded-view) · 8
-- [Neural Network Self-Explanation](#neural-network-self-explanation) · 8
-- [New Chinese Ink Poster](#new-chinese-ink-poster) · 6
-- [New Yorker Editorial](#new-yorker-editorial) · 8
-- [Nine-Expression Portrait Grid](#nine-expression-portrait-grid) · 7
-- [Object Boardroom](#object-boardroom) · 6
-- [Painting Character OOTD](#painting-character-ootd) · 7
-- [Propaganda Poster History](#propaganda-poster-history) · 7
-- [Pseudo-Real Documents](#pseudo-real-documents) · 7
-- [Risograph Misprint](#risograph-misprint) · 7
-- [SEM Microscopy](#sem-microscopy) · 8
-- [Silhouette Universe](#silhouette-universe) · 3
-- [Sixteen Reference Fusion](#sixteen-reference-fusion) · 7
-- [Sketch to Photoreal Render](#sketch-to-photoreal-render) · 7
-- [Song Dynasty Social Feed](#song-dynasty-social-feed) · 3
-- [Stereoscopic Depth](#stereoscopic-depth) · 3
-- [Tessellation Pattern](#tessellation-pattern) · 4
-- [Thematic Subway Map](#thematic-subway-map) · 8
+- [2D 手绘 × 3D 实拍碰撞](#2d-手绘-3d-实拍碰撞) · 8
+- [抽象表现主义 · Pollock 滴画 / Rothko 色域](#抽象表现主义-pollock-滴画-rothko-色域) · 8
+- [Ambigram 双向字 · 旋转 180° 可读](#ambigram-双向字-旋转-180-可读) · 8
+- [变形透视艺术](#变形透视艺术) · 3
+- [古籍复原 · 对照页](#古籍复原-对照页) · 6
+- [地图 + 信息标注](#地图-信息标注) · 8
+- [建筑制图 · 平/立/剖 同屏](#建筑制图-平立剖-同屏) · 7
+- [档案美学 · Wanted / 指纹卡 / 档案页](#档案美学-wanted-指纹卡-档案页) · 8
+- [Art Nouveau · Mucha 装饰女性 + 花卉](#art-nouveau-mucha-装饰女性-花卉) · 6
+- [Audubon 风生物图谱 · 昆虫 / 鸟类标本盒](#audubon-风生物图谱-昆虫-鸟类标本盒) · 7
+- [汽车 Concept Art · 设计工作室级](#汽车-concept-art-设计工作室级) · 7
+- [书籍装帧系列 · 丛书](#书籍装帧系列-丛书) · 1
+- [品牌 × 艺术家跨界联名 mockup](#品牌-艺术家跨界联名-mockup) · 6
+- [多轮对话式编辑工作流](#多轮对话式编辑工作流) · 7
+- [水晶球叙事](#水晶球叙事) · 4
+- [八格一致性漫画](#八格一致性漫画) · 7
+- [360° Equirectangular VR 全景](#360-equirectangular-vr-全景) · 8
+- [Escher 不可能几何 · 永恒楼梯](#escher-不可能几何-永恒楼梯) · 8
+- [名人虚构 snapshot · 伪手机抓拍](#名人虚构-snapshot-伪手机抓拍) · 8
+- [架空 IP 电影 / 动漫海报](#架空-ip-电影-动漫海报) · 8
+- [电影 Storyboard 分镜 6-12 帧](#电影-storyboard-分镜-6-12-帧) · 8
+- [Glowing Anatomy Overlay · 霓虹解剖](#glowing-anatomy-overlay-霓虹解剖) · 8
+- [高速摄影级定格](#高速摄影级定格) · 3
+- [Hitman 关卡 · 办公室游戏化](#hitman-关卡-办公室游戏化) · 7
+- [Hyperreal Diorama Cube · 剖面立方](#hyperreal-diorama-cube-剖面立方) · 8
+- [IKEA 万物化说明书](#ikea-万物化说明书) · 8
+- [图内翻译 · 保 typography 只换文字](#图内翻译-保-typography-只换文字) · 8
+- [JSON 名片 · Code as Object](#json-名片-code-as-object) · 8
+- [Google Maps → 羊皮纸藏宝图](#google-maps-羊皮纸藏宝图) · 8
+- [材质错位](#材质错位) · 7
+- [米粒级微缩刻字 · Jewelry 定制](#米粒级微缩刻字-jewelry-定制) · 8
+- [微观 × 宏观对比信息图](#微观-宏观对比信息图) · 8
+- [Mirror Worlds · 同角色跨时空同框](#mirror-worlds-同角色跨时空同框) · 8
+- [多时代 Album Cover 专辑封面合集](#多时代-album-cover-专辑封面合集) · 8
+- [多脚本同屏海报(4-9 语言)](#多脚本同屏海报4-9-语言) · 8
+- [Museum Exploded View · 文物拆解图鉴](#museum-exploded-view-文物拆解图鉴) · 8
+- [神经网络自解释图 · AI 画自己](#神经网络自解释图-ai-画自己) · 8
+- [新中式水墨极简海报](#新中式水墨极简海报) · 6
+- [The New Yorker editorial illustration](#the-new-yorker-editorial-illustration) · 8
+- [3x3 九宫格多表情写真](#3x3-九宫格多表情写真) · 7
+- [物体拟人化开会](#物体拟人化开会) · 6
+- [名画人物 OOTD · 穿搭九宫格](#名画人物-ootd-穿搭九宫格) · 7
+- [政治宣传海报艺术史](#政治宣传海报艺术史) · 7
+- [伪真实文档 · 票据 / 护照 / 药方 / 字帖](#伪真实文档-票据-护照-药方-字帖) · 7
+- [Risograph 丝网错版印刷](#risograph-丝网错版印刷) · 7
+- [SEM 电子显微镜显微摄影](#sem-电子显微镜显微摄影) · 8
+- [Silhouette Universe · 剪影宇宙](#silhouette-universe-剪影宇宙) · 3
+- [十六参考融合](#十六参考融合) · 7
+- [草图 → 写实一键渲染](#草图-写实一键渲染) · 7
+- [宋朝朋友圈](#宋朝朋友圈) · 3
+- [立体视差](#立体视差) · 3
+- [无缝拼贴](#无缝拼贴) · 4
+- [X 主题地铁路线图](#x-主题地铁路线图) · 8
 - [Thinking Mode](#thinking-mode) · 7
-- [Time-Space Contrast](#time-space-contrast) · 8
-- [Ultra-Long Scroll Painting](#ultra-long-scroll-painting) · 3
-- [USPTO Patent Diagram](#uspto-patent-diagram) · 3
-- [Virtual Try-On Identity Lock](#virtual-try-on-identity-lock) · 8
-- [Wes Anderson Language](#wes-anderson-language) · 7
-- [World Knowledge Reconstruction](#world-knowledge-reconstruction) · 8
-- [Y2K Vaporwave CRT](#y2k-vaporwave-crt) · 8
+- [时空错位反差](#时空错位反差) · 8
+- [超长竖卷画](#超长竖卷画) · 3
+- [美国专利技术图](#美国专利技术图) · 3
+- [虚拟试衣 · 身份零漂移](#虚拟试衣-身份零漂移) · 8
+- [Wes Anderson × 一切 · 导演视觉语言](#wes-anderson-一切-导演视觉语言) · 7
+- [World Knowledge 场景还原](#world-knowledge-场景还原) · 8
+- [Y2K / Vaporwave / CRT 时代美学](#y2k-vaporwave-crt-时代美学) · 8
 
 ---
 
-## 2D and 3D Medium Collision
+## 2D 手绘 × 3D 实拍碰撞
 
-> A Prompt Atlas theme for images where flat handmade drawing and photoreal 3D objects share one physical scene with credible shadows, occlusion, and material boundaries.
+> 测试二维手绘层与三维实拍物体在同一画面中共存,重点考察阴影、遮挡、材质和渲染层隔离。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/2d-3d-medium-collision/packages/series-crayon-apple-carrier/images/01-paper-figure-reference/image.w1600.webp"><img src="./works/topics/2d-3d-medium-collision/packages/series-crayon-apple-carrier/images/01-paper-figure-reference/image.w400.webp" width="100%" alt="Paper Figure Reference"/></a>
+<a href="./works/topics/2d-3d-medium-collision/packages/series-crayon-apple-carrier/images/01-paper-figure-reference/image.w1600.webp"><img src="./works/topics/2d-3d-medium-collision/packages/series-crayon-apple-carrier/images/01-paper-figure-reference/image.w400.webp" width="100%" alt="纸面小人基准"/></a>
 
-<b>Paper Figure Reference</b>
+<b>纸面小人基准</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -106,11 +106,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no ex
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/2d-3d-medium-collision/packages/single-medium-collision-studies/images/chalk-dinosaur-egg/image.w1600.webp"><img src="./works/topics/2d-3d-medium-collision/packages/single-medium-collision-studies/images/chalk-dinosaur-egg/image.w400.webp" width="100%" alt="Chalk Dinosaur Egg"/></a>
+<a href="./works/topics/2d-3d-medium-collision/packages/single-medium-collision-studies/images/chalk-dinosaur-egg/image.w1600.webp"><img src="./works/topics/2d-3d-medium-collision/packages/single-medium-collision-studies/images/chalk-dinosaur-egg/image.w400.webp" width="100%" alt="粉笔恐龙蛋"/></a>
 
-<b>Chalk Dinosaur Egg</b>
+<b>粉笔恐龙蛋</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -134,11 +134,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no fo
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/2d-3d-medium-collision/packages/series-crayon-apple-carrier/images/02-glass-marble-lift/image.w1600.webp"><img src="./works/topics/2d-3d-medium-collision/packages/series-crayon-apple-carrier/images/02-glass-marble-lift/image.w400.webp" width="100%" alt="Glass Marble Lift"/></a>
+<a href="./works/topics/2d-3d-medium-collision/packages/series-crayon-apple-carrier/images/02-glass-marble-lift/image.w1600.webp"><img src="./works/topics/2d-3d-medium-collision/packages/series-crayon-apple-carrier/images/02-glass-marble-lift/image.w400.webp" width="100%" alt="举起玻璃弹珠"/></a>
 
-<b>Glass Marble Lift</b>
+<b>举起玻璃弹珠</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -164,11 +164,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no ex
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/2d-3d-medium-collision/packages/single-medium-collision-studies/images/ink-cat-fishbowl/image.w1600.webp"><img src="./works/topics/2d-3d-medium-collision/packages/single-medium-collision-studies/images/ink-cat-fishbowl/image.w400.webp" width="100%" alt="Ink Cat Fishbowl"/></a>
+<a href="./works/topics/2d-3d-medium-collision/packages/single-medium-collision-studies/images/ink-cat-fishbowl/image.w1600.webp"><img src="./works/topics/2d-3d-medium-collision/packages/single-medium-collision-studies/images/ink-cat-fishbowl/image.w400.webp" width="100%" alt="墨猫鱼缸"/></a>
 
-<b>Ink Cat Fishbowl</b>
+<b>墨猫鱼缸</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -192,11 +192,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no ex
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/2d-3d-medium-collision/packages/series-crayon-apple-carrier/images/03-metal-cube-balance/image.w1600.webp"><img src="./works/topics/2d-3d-medium-collision/packages/series-crayon-apple-carrier/images/03-metal-cube-balance/image.w400.webp" width="100%" alt="Metal Cube Balance"/></a>
+<a href="./works/topics/2d-3d-medium-collision/packages/series-crayon-apple-carrier/images/03-metal-cube-balance/image.w1600.webp"><img src="./works/topics/2d-3d-medium-collision/packages/series-crayon-apple-carrier/images/03-metal-cube-balance/image.w400.webp" width="100%" alt="平衡金属方块"/></a>
 
-<b>Metal Cube Balance</b>
+<b>平衡金属方块</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -220,11 +220,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no ex
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/2d-3d-medium-collision/packages/single-medium-collision-studies/images/collage-astronaut-orange/image.w1600.webp"><img src="./works/topics/2d-3d-medium-collision/packages/single-medium-collision-studies/images/collage-astronaut-orange/image.w400.webp" width="100%" alt="Collage Astronaut Orange"/></a>
+<a href="./works/topics/2d-3d-medium-collision/packages/single-medium-collision-studies/images/collage-astronaut-orange/image.w1600.webp"><img src="./works/topics/2d-3d-medium-collision/packages/single-medium-collision-studies/images/collage-astronaut-orange/image.w400.webp" width="100%" alt="拼贴宇航员与橙瓣"/></a>
 
-<b>Collage Astronaut Orange</b>
+<b>拼贴宇航员与橙瓣</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -250,11 +250,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no sp
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/2d-3d-medium-collision/packages/series-crayon-apple-carrier/images/04-water-balloon-strain/image.w1600.webp"><img src="./works/topics/2d-3d-medium-collision/packages/series-crayon-apple-carrier/images/04-water-balloon-strain/image.w400.webp" width="100%" alt="Water Balloon Strain"/></a>
+<a href="./works/topics/2d-3d-medium-collision/packages/series-crayon-apple-carrier/images/04-water-balloon-strain/image.w1600.webp"><img src="./works/topics/2d-3d-medium-collision/packages/series-crayon-apple-carrier/images/04-water-balloon-strain/image.w400.webp" width="100%" alt="承重水气球"/></a>
 
-<b>Water Balloon Strain</b>
+<b>承重水气球</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -278,11 +278,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no sp
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/2d-3d-medium-collision/packages/single-medium-collision-studies/images/blueprint-hand-crystal/image.w1600.webp"><img src="./works/topics/2d-3d-medium-collision/packages/single-medium-collision-studies/images/blueprint-hand-crystal/image.w400.webp" width="100%" alt="Blueprint Hand Crystal"/></a>
+<a href="./works/topics/2d-3d-medium-collision/packages/single-medium-collision-studies/images/blueprint-hand-crystal/image.w1600.webp"><img src="./works/topics/2d-3d-medium-collision/packages/single-medium-collision-studies/images/blueprint-hand-crystal/image.w400.webp" width="100%" alt="蓝图手托水晶"/></a>
 
-<b>Blueprint Hand Crystal</b>
+<b>蓝图手托水晶</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -308,19 +308,19 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no la
 </tr>
 </table>
 
-## Abstract Expressionism Study
+## 抽象表现主义 · Pollock 滴画 / Rothko 色域
 
-> A Prompt Atlas theme for Abstract Expressionism Study, testing style-transfer with GPT Image 2.
+> 抽象表现主义 · Pollock 滴画 / Rothko 色域：Pollock 滴溅混沌线条 / Rothko 大色块渐变叠加 / de Kooning 女性碎片 / Kline 黑白书法笔
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/abstract-expressionism-study/packages/single-abstract-expressionism-studies/images/drip-constellation/image.w1600.webp"><img src="./works/topics/abstract-expressionism-study/packages/single-abstract-expressionism-studies/images/drip-constellation/image.w400.webp" width="100%" alt="Drip Constellation"/></a>
+<a href="./works/topics/abstract-expressionism-study/packages/single-abstract-expressionism-studies/images/drip-constellation/image.w1600.webp"><img src="./works/topics/abstract-expressionism-study/packages/single-abstract-expressionism-studies/images/drip-constellation/image.w400.webp" width="100%" alt="滴画星群"/></a>
 
-<b>Drip Constellation</b>
+<b>滴画星群</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -344,11 +344,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no di
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/abstract-expressionism-study/packages/single-abstract-expressionism-studies/images/color-field-threshold/image.w1600.webp"><img src="./works/topics/abstract-expressionism-study/packages/single-abstract-expressionism-studies/images/color-field-threshold/image.w400.webp" width="100%" alt="Color Field Threshold"/></a>
+<a href="./works/topics/abstract-expressionism-study/packages/single-abstract-expressionism-studies/images/color-field-threshold/image.w1600.webp"><img src="./works/topics/abstract-expressionism-study/packages/single-abstract-expressionism-studies/images/color-field-threshold/image.w400.webp" width="100%" alt="色域门槛"/></a>
 
-<b>Color Field Threshold</b>
+<b>色域门槛</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -372,11 +372,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no di
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/abstract-expressionism-study/packages/single-abstract-expressionism-studies/images/fractured-figure-surge/image.w1600.webp"><img src="./works/topics/abstract-expressionism-study/packages/single-abstract-expressionism-studies/images/fractured-figure-surge/image.w400.webp" width="100%" alt="Fractured Figure Surge"/></a>
+<a href="./works/topics/abstract-expressionism-study/packages/single-abstract-expressionism-studies/images/fractured-figure-surge/image.w1600.webp"><img src="./works/topics/abstract-expressionism-study/packages/single-abstract-expressionism-studies/images/fractured-figure-surge/image.w400.webp" width="100%" alt="碎形浪潮"/></a>
 
-<b>Fractured Figure Surge</b>
+<b>碎形浪潮</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -402,11 +402,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no di
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/abstract-expressionism-study/packages/single-abstract-expressionism-studies/images/black-brush-choir/image.w1600.webp"><img src="./works/topics/abstract-expressionism-study/packages/single-abstract-expressionism-studies/images/black-brush-choir/image.w400.webp" width="100%" alt="Black Brush Choir"/></a>
+<a href="./works/topics/abstract-expressionism-study/packages/single-abstract-expressionism-studies/images/black-brush-choir/image.w1600.webp"><img src="./works/topics/abstract-expressionism-study/packages/single-abstract-expressionism-studies/images/black-brush-choir/image.w400.webp" width="100%" alt="黑笔合奏"/></a>
 
-<b>Black Brush Choir</b>
+<b>黑笔合奏</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -430,11 +430,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no di
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/abstract-expressionism-study/packages/single-abstract-expressionism-studies/images/studio-floor-afterimage/image.w1600.webp"><img src="./works/topics/abstract-expressionism-study/packages/single-abstract-expressionism-studies/images/studio-floor-afterimage/image.w400.webp" width="100%" alt="Studio Floor Afterimage"/></a>
+<a href="./works/topics/abstract-expressionism-study/packages/single-abstract-expressionism-studies/images/studio-floor-afterimage/image.w1600.webp"><img src="./works/topics/abstract-expressionism-study/packages/single-abstract-expressionism-studies/images/studio-floor-afterimage/image.w400.webp" width="100%" alt="地面残像"/></a>
 
-<b>Studio Floor Afterimage</b>
+<b>地面残像</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -462,7 +462,7 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no di
 
 <b>厚涂天气</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -488,11 +488,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no di
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/abstract-expressionism-study/packages/single-abstract-expressionism-studies/images/gesture-architecture/image.w1600.webp"><img src="./works/topics/abstract-expressionism-study/packages/single-abstract-expressionism-studies/images/gesture-architecture/image.w400.webp" width="100%" alt="Gesture Architecture"/></a>
+<a href="./works/topics/abstract-expressionism-study/packages/single-abstract-expressionism-studies/images/gesture-architecture/image.w1600.webp"><img src="./works/topics/abstract-expressionism-study/packages/single-abstract-expressionism-studies/images/gesture-architecture/image.w400.webp" width="100%" alt="手势结构"/></a>
 
-<b>Gesture Architecture</b>
+<b>手势结构</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -516,11 +516,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no di
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/abstract-expressionism-study/packages/single-abstract-expressionism-studies/images/museum-wall-hang/image.w1600.webp"><img src="./works/topics/abstract-expressionism-study/packages/single-abstract-expressionism-studies/images/museum-wall-hang/image.w400.webp" width="100%" alt="Museum Wall Hang"/></a>
+<a href="./works/topics/abstract-expressionism-study/packages/single-abstract-expressionism-studies/images/museum-wall-hang/image.w1600.webp"><img src="./works/topics/abstract-expressionism-study/packages/single-abstract-expressionism-studies/images/museum-wall-hang/image.w400.webp" width="100%" alt="美术馆陈列"/></a>
 
-<b>Museum Wall Hang</b>
+<b>美术馆陈列</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -546,19 +546,19 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no di
 </tr>
 </table>
 
-## Ambigram Readability
+## Ambigram 双向字 · 旋转 180° 可读
 
-> A Prompt Atlas theme for testing whether generated lettering can remain readable as a deliberate ambigram under rotation, mirror logic, and material constraints.
+> 测试双向字形工程: 正读、倒读、镜像和材质应用中,指定文字必须清晰、无多余字符,几何规则可被肉眼验证。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/ambigram-readability/packages/single-ambigram-studies/images/gpt-image-gothic-plaque/image.w1600.webp"><img src="./works/topics/ambigram-readability/packages/single-ambigram-studies/images/gpt-image-gothic-plaque/image.w400.webp" width="100%" alt="GPT Image Gothic Plaque"/></a>
+<a href="./works/topics/ambigram-readability/packages/single-ambigram-studies/images/gpt-image-gothic-plaque/image.w1600.webp"><img src="./works/topics/ambigram-readability/packages/single-ambigram-studies/images/gpt-image-gothic-plaque/image.w400.webp" width="100%" alt="GPT Image 哥特牌匾"/></a>
 
-<b>GPT Image Gothic Plaque</b>
+<b>GPT Image 哥特牌匾</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -582,11 +582,11 @@ No readable text except the specified ambigram "GPT-IMAGE-2", no watermark, no l
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/ambigram-readability/packages/single-ambigram-studies/images/atlas-tattoo-stencil/image.w1600.webp"><img src="./works/topics/ambigram-readability/packages/single-ambigram-studies/images/atlas-tattoo-stencil/image.w400.webp" width="100%" alt="Atlas Tattoo Stencil"/></a>
+<a href="./works/topics/ambigram-readability/packages/single-ambigram-studies/images/atlas-tattoo-stencil/image.w1600.webp"><img src="./works/topics/ambigram-readability/packages/single-ambigram-studies/images/atlas-tattoo-stencil/image.w400.webp" width="100%" alt="ATLAS 纹身模板"/></a>
 
-<b>Atlas Tattoo Stencil</b>
+<b>ATLAS 纹身模板</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -610,11 +610,11 @@ No readable text except the specified ambigram "ATLAS", no watermark, no logos, 
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/ambigram-readability/packages/single-ambigram-studies/images/rise-fall-poster/image.w1600.webp"><img src="./works/topics/ambigram-readability/packages/single-ambigram-studies/images/rise-fall-poster/image.w400.webp" width="100%" alt="Rise Fall Poster"/></a>
+<a href="./works/topics/ambigram-readability/packages/single-ambigram-studies/images/rise-fall-poster/image.w1600.webp"><img src="./works/topics/ambigram-readability/packages/single-ambigram-studies/images/rise-fall-poster/image.w400.webp" width="100%" alt="RISE / FALL 海报"/></a>
 
-<b>Rise Fall Poster</b>
+<b>RISE / FALL 海报</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -640,11 +640,11 @@ No readable text except the specified ambigram words "RISE" and "FALL", no water
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/ambigram-readability/packages/single-ambigram-studies/images/flow-wave-ring/image.w1600.webp"><img src="./works/topics/ambigram-readability/packages/single-ambigram-studies/images/flow-wave-ring/image.w400.webp" width="100%" alt="Flow Wave Ring"/></a>
+<a href="./works/topics/ambigram-readability/packages/single-ambigram-studies/images/flow-wave-ring/image.w1600.webp"><img src="./works/topics/ambigram-readability/packages/single-ambigram-studies/images/flow-wave-ring/image.w400.webp" width="100%" alt="FLOW / WAVE 戒面"/></a>
 
-<b>Flow Wave Ring</b>
+<b>FLOW / WAVE 戒面</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -668,11 +668,11 @@ No readable text except the specified ambigram words "FLOW" and "WAVE", no water
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/ambigram-readability/packages/single-ambigram-studies/images/code-arts-logo/image.w1600.webp"><img src="./works/topics/ambigram-readability/packages/single-ambigram-studies/images/code-arts-logo/image.w400.webp" width="100%" alt="Code Arts Logo"/></a>
+<a href="./works/topics/ambigram-readability/packages/single-ambigram-studies/images/code-arts-logo/image.w1600.webp"><img src="./works/topics/ambigram-readability/packages/single-ambigram-studies/images/code-arts-logo/image.w400.webp" width="100%" alt="CODE / ARTS 标志"/></a>
 
-<b>Code Arts Logo</b>
+<b>CODE / ARTS 标志</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -696,11 +696,11 @@ No readable text except the specified ambigram words "CODE" and "ARTS", no water
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/ambigram-readability/packages/single-ambigram-studies/images/dream-awake-neon/image.w1600.webp"><img src="./works/topics/ambigram-readability/packages/single-ambigram-studies/images/dream-awake-neon/image.w400.webp" width="100%" alt="Dream Awake Neon"/></a>
+<a href="./works/topics/ambigram-readability/packages/single-ambigram-studies/images/dream-awake-neon/image.w1600.webp"><img src="./works/topics/ambigram-readability/packages/single-ambigram-studies/images/dream-awake-neon/image.w400.webp" width="100%" alt="DREAM / AWAKE 霓虹"/></a>
 
-<b>Dream Awake Neon</b>
+<b>DREAM / AWAKE 霓虹</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -726,11 +726,11 @@ No readable text except the specified ambigram words "DREAM" and "AWAKE", no wat
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/ambigram-readability/packages/single-ambigram-studies/images/ocean-river-calligraphy/image.w1600.webp"><img src="./works/topics/ambigram-readability/packages/single-ambigram-studies/images/ocean-river-calligraphy/image.w400.webp" width="100%" alt="Ocean River Calligraphy"/></a>
+<a href="./works/topics/ambigram-readability/packages/single-ambigram-studies/images/ocean-river-calligraphy/image.w1600.webp"><img src="./works/topics/ambigram-readability/packages/single-ambigram-studies/images/ocean-river-calligraphy/image.w400.webp" width="100%" alt="OCEAN / RIVER 书写"/></a>
 
-<b>Ocean River Calligraphy</b>
+<b>OCEAN / RIVER 书写</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -754,11 +754,11 @@ No readable text except the specified ambigram words "OCEAN" and "RIVER", no wat
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/ambigram-readability/packages/single-ambigram-studies/images/time-mind-coin/image.w1600.webp"><img src="./works/topics/ambigram-readability/packages/single-ambigram-studies/images/time-mind-coin/image.w400.webp" width="100%" alt="Time Mind Coin"/></a>
+<a href="./works/topics/ambigram-readability/packages/single-ambigram-studies/images/time-mind-coin/image.w1600.webp"><img src="./works/topics/ambigram-readability/packages/single-ambigram-studies/images/time-mind-coin/image.w400.webp" width="100%" alt="TIME / MIND 铜币"/></a>
 
-<b>Time Mind Coin</b>
+<b>TIME / MIND 铜币</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -784,19 +784,19 @@ No readable text except the specified ambigram words "TIME" and "MIND", no water
 </tr>
 </table>
 
-## Anamorphic Perspective Art
+## 变形透视艺术
 
-> A Prompt Atlas theme for perspective illusions that only resolve from one controlled viewing angle.
+> 测试只在特定视角成立的变形透视图案。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/anamorphic-perspective-art/packages/single-anamorphic-studies/images/rooftop-atlas-mark/image.w1600.webp"><img src="./works/topics/anamorphic-perspective-art/packages/single-anamorphic-studies/images/rooftop-atlas-mark/image.w400.webp" width="100%" alt="Rooftop Atlas Mark"/></a>
+<a href="./works/topics/anamorphic-perspective-art/packages/single-anamorphic-studies/images/rooftop-atlas-mark/image.w1600.webp"><img src="./works/topics/anamorphic-perspective-art/packages/single-anamorphic-studies/images/rooftop-atlas-mark/image.w400.webp" width="100%" alt="屋顶 ATLAS 标记"/></a>
 
-<b>Rooftop Atlas Mark</b>
+<b>屋顶 ATLAS 标记</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -820,11 +820,11 @@ Only readable text should be ATLAS inside the illusion, no real brand logos, no 
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/anamorphic-perspective-art/packages/single-anamorphic-studies/images/gallery-cylinder-shadow/image.w1600.webp"><img src="./works/topics/anamorphic-perspective-art/packages/single-anamorphic-studies/images/gallery-cylinder-shadow/image.w400.webp" width="100%" alt="Gallery Cylinder Shadow"/></a>
+<a href="./works/topics/anamorphic-perspective-art/packages/single-anamorphic-studies/images/gallery-cylinder-shadow/image.w1600.webp"><img src="./works/topics/anamorphic-perspective-art/packages/single-anamorphic-studies/images/gallery-cylinder-shadow/image.w400.webp" width="100%" alt="画廊圆柱反射"/></a>
 
-<b>Gallery Cylinder Shadow</b>
+<b>画廊圆柱反射</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -848,11 +848,11 @@ No readable text, no watermark, no logos, no human hands, no extra mirrors, no f
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/anamorphic-perspective-art/packages/single-anamorphic-studies/images/station-floor-arrow/image.w1600.webp"><img src="./works/topics/anamorphic-perspective-art/packages/single-anamorphic-studies/images/station-floor-arrow/image.w400.webp" width="100%" alt="Station Floor Arrow"/></a>
+<a href="./works/topics/anamorphic-perspective-art/packages/single-anamorphic-studies/images/station-floor-arrow/image.w1600.webp"><img src="./works/topics/anamorphic-perspective-art/packages/single-anamorphic-studies/images/station-floor-arrow/image.w400.webp" width="100%" alt="站厅地面箭头"/></a>
 
-<b>Station Floor Arrow</b>
+<b>站厅地面箭头</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -877,19 +877,19 @@ No readable text, no real transit logos, no watermark, no crowds, no floating ph
 </tr>
 </table>
 
-## Ancient Book Restoration
+## 古籍复原 · 对照页
 
-> A Prompt Atlas theme for Ancient Book Restoration, testing world-knowledge, editing-workflow with GPT Image 2.
+> 古籍复原 · 对照页：《永乐大典》残页 + 现代复原 + 注释 + 年代对照
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/ancient-book-restoration/packages/single-ancient-book-restoration-studies/images/macro-study/image.w1600.webp"><img src="./works/topics/ancient-book-restoration/packages/single-ancient-book-restoration-studies/images/macro-study/image.w400.webp" width="100%" alt="Macro Study"/></a>
+<a href="./works/topics/ancient-book-restoration/packages/single-ancient-book-restoration-studies/images/macro-study/image.w1600.webp"><img src="./works/topics/ancient-book-restoration/packages/single-ancient-book-restoration-studies/images/macro-study/image.w400.webp" width="100%" alt="微距研究"/></a>
 
-<b>Macro Study</b>
+<b>微距研究</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -913,11 +913,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no ge
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/ancient-book-restoration/packages/single-ancient-book-restoration-studies/images/side-light-study/image.w1600.webp"><img src="./works/topics/ancient-book-restoration/packages/single-ancient-book-restoration-studies/images/side-light-study/image.w400.webp" width="100%" alt="Side Light Study"/></a>
+<a href="./works/topics/ancient-book-restoration/packages/single-ancient-book-restoration-studies/images/side-light-study/image.w1600.webp"><img src="./works/topics/ancient-book-restoration/packages/single-ancient-book-restoration-studies/images/side-light-study/image.w400.webp" width="100%" alt="侧光研究"/></a>
 
-<b>Side Light Study</b>
+<b>侧光研究</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -941,11 +941,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no ge
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/ancient-book-restoration/packages/single-ancient-book-restoration-studies/images/process-trace/image.w1600.webp"><img src="./works/topics/ancient-book-restoration/packages/single-ancient-book-restoration-studies/images/process-trace/image.w400.webp" width="100%" alt="Process Trace"/></a>
+<a href="./works/topics/ancient-book-restoration/packages/single-ancient-book-restoration-studies/images/process-trace/image.w1600.webp"><img src="./works/topics/ancient-book-restoration/packages/single-ancient-book-restoration-studies/images/process-trace/image.w400.webp" width="100%" alt="工艺痕迹"/></a>
 
-<b>Process Trace</b>
+<b>工艺痕迹</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -971,11 +971,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no ge
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/ancient-book-restoration/packages/single-ancient-book-restoration-studies/images/specimen-table/image.w1600.webp"><img src="./works/topics/ancient-book-restoration/packages/single-ancient-book-restoration-studies/images/specimen-table/image.w400.webp" width="100%" alt="Specimen Table"/></a>
+<a href="./works/topics/ancient-book-restoration/packages/single-ancient-book-restoration-studies/images/specimen-table/image.w1600.webp"><img src="./works/topics/ancient-book-restoration/packages/single-ancient-book-restoration-studies/images/specimen-table/image.w400.webp" width="100%" alt="标本桌面"/></a>
 
-<b>Specimen Table</b>
+<b>标本桌面</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -1003,7 +1003,7 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no ge
 
 <b>氛围场景</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -1027,11 +1027,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no ge
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/ancient-book-restoration/packages/single-ancient-book-restoration-studies/images/signature-material/image.w1600.webp"><img src="./works/topics/ancient-book-restoration/packages/single-ancient-book-restoration-studies/images/signature-material/image.w400.webp" width="100%" alt="Signature Material"/></a>
+<a href="./works/topics/ancient-book-restoration/packages/single-ancient-book-restoration-studies/images/signature-material/image.w1600.webp"><img src="./works/topics/ancient-book-restoration/packages/single-ancient-book-restoration-studies/images/signature-material/image.w400.webp" width="100%" alt="代表材质"/></a>
 
-<b>Signature Material</b>
+<b>代表材质</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -1056,19 +1056,19 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no ge
 </tr>
 </table>
 
-## Annotated Map Design
+## 地图 + 信息标注
 
-> A Prompt Atlas theme for Annotated Map Design, testing structured-layout, photorealism, technical-diagram, world-knowledge, reasoning-composition with GPT Image 2.
+> 地图 + 信息标注：古代丝绸之路 + 贸易货品 + 年代标注 · 手绘风但地理准
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/annotated-map-design/packages/single-annotated-map-design-studies/images/overview-plate/image.w1600.webp"><img src="./works/topics/annotated-map-design/packages/single-annotated-map-design-studies/images/overview-plate/image.w400.webp" width="100%" alt="Overview Plate"/></a>
+<a href="./works/topics/annotated-map-design/packages/single-annotated-map-design-studies/images/overview-plate/image.w1600.webp"><img src="./works/topics/annotated-map-design/packages/single-annotated-map-design-studies/images/overview-plate/image.w400.webp" width="100%" alt="总览板"/></a>
 
-<b>Overview Plate</b>
+<b>总览板</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -1092,11 +1092,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/annotated-map-design/packages/single-annotated-map-design-studies/images/cutaway-panel/image.w1600.webp"><img src="./works/topics/annotated-map-design/packages/single-annotated-map-design-studies/images/cutaway-panel/image.w400.webp" width="100%" alt="Cutaway Panel"/></a>
+<a href="./works/topics/annotated-map-design/packages/single-annotated-map-design-studies/images/cutaway-panel/image.w1600.webp"><img src="./works/topics/annotated-map-design/packages/single-annotated-map-design-studies/images/cutaway-panel/image.w400.webp" width="100%" alt="剖面板"/></a>
 
-<b>Cutaway Panel</b>
+<b>剖面板</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -1120,11 +1120,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/annotated-map-design/packages/single-annotated-map-design-studies/images/process-sequence/image.w1600.webp"><img src="./works/topics/annotated-map-design/packages/single-annotated-map-design-studies/images/process-sequence/image.w400.webp" width="100%" alt="Process Sequence"/></a>
+<a href="./works/topics/annotated-map-design/packages/single-annotated-map-design-studies/images/process-sequence/image.w1600.webp"><img src="./works/topics/annotated-map-design/packages/single-annotated-map-design-studies/images/process-sequence/image.w400.webp" width="100%" alt="流程序列"/></a>
 
-<b>Process Sequence</b>
+<b>流程序列</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -1150,11 +1150,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/annotated-map-design/packages/single-annotated-map-design-studies/images/annotation-cluster/image.w1600.webp"><img src="./works/topics/annotated-map-design/packages/single-annotated-map-design-studies/images/annotation-cluster/image.w400.webp" width="100%" alt="Annotation Cluster"/></a>
+<a href="./works/topics/annotated-map-design/packages/single-annotated-map-design-studies/images/annotation-cluster/image.w1600.webp"><img src="./works/topics/annotated-map-design/packages/single-annotated-map-design-studies/images/annotation-cluster/image.w400.webp" width="100%" alt="注释簇"/></a>
 
-<b>Annotation Cluster</b>
+<b>注释簇</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -1178,11 +1178,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/annotated-map-design/packages/single-annotated-map-design-studies/images/comparison-board/image.w1600.webp"><img src="./works/topics/annotated-map-design/packages/single-annotated-map-design-studies/images/comparison-board/image.w400.webp" width="100%" alt="Comparison Board"/></a>
+<a href="./works/topics/annotated-map-design/packages/single-annotated-map-design-studies/images/comparison-board/image.w1600.webp"><img src="./works/topics/annotated-map-design/packages/single-annotated-map-design-studies/images/comparison-board/image.w400.webp" width="100%" alt="对照板"/></a>
 
-<b>Comparison Board</b>
+<b>对照板</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -1210,7 +1210,7 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 
 <b>材质标注</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -1236,11 +1236,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/annotated-map-design/packages/single-annotated-map-design-studies/images/exploded-system/image.w1600.webp"><img src="./works/topics/annotated-map-design/packages/single-annotated-map-design-studies/images/exploded-system/image.w400.webp" width="100%" alt="Exploded System"/></a>
+<a href="./works/topics/annotated-map-design/packages/single-annotated-map-design-studies/images/exploded-system/image.w1600.webp"><img src="./works/topics/annotated-map-design/packages/single-annotated-map-design-studies/images/exploded-system/image.w400.webp" width="100%" alt="爆炸系统"/></a>
 
-<b>Exploded System</b>
+<b>爆炸系统</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -1264,11 +1264,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/annotated-map-design/packages/single-annotated-map-design-studies/images/final-plate/image.w1600.webp"><img src="./works/topics/annotated-map-design/packages/single-annotated-map-design-studies/images/final-plate/image.w400.webp" width="100%" alt="Final Plate"/></a>
+<a href="./works/topics/annotated-map-design/packages/single-annotated-map-design-studies/images/final-plate/image.w1600.webp"><img src="./works/topics/annotated-map-design/packages/single-annotated-map-design-studies/images/final-plate/image.w400.webp" width="100%" alt="终板"/></a>
 
-<b>Final Plate</b>
+<b>终板</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -1294,19 +1294,19 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </tr>
 </table>
 
-## Architectural Drawing Board
+## 建筑制图 · 平/立/剖 同屏
 
-> A Prompt Atlas theme for Architectural Drawing Board, testing photorealism, physics-materials, technical-diagram, world-knowledge with GPT Image 2.
+> 建筑制图 · 平/立/剖 同屏：一栋楼 · 平面图 + 正立面 + 侧剖面 + 总轴测 同屏 · 建筑师级
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/architectural-drawing-board/packages/single-architectural-drawing-board-studies/images/overview-plate/image.w1600.webp"><img src="./works/topics/architectural-drawing-board/packages/single-architectural-drawing-board-studies/images/overview-plate/image.w400.webp" width="100%" alt="Overview Plate"/></a>
+<a href="./works/topics/architectural-drawing-board/packages/single-architectural-drawing-board-studies/images/overview-plate/image.w1600.webp"><img src="./works/topics/architectural-drawing-board/packages/single-architectural-drawing-board-studies/images/overview-plate/image.w400.webp" width="100%" alt="总览板"/></a>
 
-<b>Overview Plate</b>
+<b>总览板</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -1330,11 +1330,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/architectural-drawing-board/packages/single-architectural-drawing-board-studies/images/cutaway-panel/image.w1600.webp"><img src="./works/topics/architectural-drawing-board/packages/single-architectural-drawing-board-studies/images/cutaway-panel/image.w400.webp" width="100%" alt="Cutaway Panel"/></a>
+<a href="./works/topics/architectural-drawing-board/packages/single-architectural-drawing-board-studies/images/cutaway-panel/image.w1600.webp"><img src="./works/topics/architectural-drawing-board/packages/single-architectural-drawing-board-studies/images/cutaway-panel/image.w400.webp" width="100%" alt="剖面板"/></a>
 
-<b>Cutaway Panel</b>
+<b>剖面板</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -1358,11 +1358,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/architectural-drawing-board/packages/single-architectural-drawing-board-studies/images/process-sequence/image.w1600.webp"><img src="./works/topics/architectural-drawing-board/packages/single-architectural-drawing-board-studies/images/process-sequence/image.w400.webp" width="100%" alt="Process Sequence"/></a>
+<a href="./works/topics/architectural-drawing-board/packages/single-architectural-drawing-board-studies/images/process-sequence/image.w1600.webp"><img src="./works/topics/architectural-drawing-board/packages/single-architectural-drawing-board-studies/images/process-sequence/image.w400.webp" width="100%" alt="流程序列"/></a>
 
-<b>Process Sequence</b>
+<b>流程序列</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -1388,11 +1388,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/architectural-drawing-board/packages/single-architectural-drawing-board-studies/images/annotation-cluster/image.w1600.webp"><img src="./works/topics/architectural-drawing-board/packages/single-architectural-drawing-board-studies/images/annotation-cluster/image.w400.webp" width="100%" alt="Annotation Cluster"/></a>
+<a href="./works/topics/architectural-drawing-board/packages/single-architectural-drawing-board-studies/images/annotation-cluster/image.w1600.webp"><img src="./works/topics/architectural-drawing-board/packages/single-architectural-drawing-board-studies/images/annotation-cluster/image.w400.webp" width="100%" alt="注释簇"/></a>
 
-<b>Annotation Cluster</b>
+<b>注释簇</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -1416,11 +1416,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/architectural-drawing-board/packages/single-architectural-drawing-board-studies/images/comparison-board/image.w1600.webp"><img src="./works/topics/architectural-drawing-board/packages/single-architectural-drawing-board-studies/images/comparison-board/image.w400.webp" width="100%" alt="Comparison Board"/></a>
+<a href="./works/topics/architectural-drawing-board/packages/single-architectural-drawing-board-studies/images/comparison-board/image.w1600.webp"><img src="./works/topics/architectural-drawing-board/packages/single-architectural-drawing-board-studies/images/comparison-board/image.w400.webp" width="100%" alt="对照板"/></a>
 
-<b>Comparison Board</b>
+<b>对照板</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -1444,11 +1444,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/architectural-drawing-board/packages/single-architectural-drawing-board-studies/images/exploded-system/image.w1600.webp"><img src="./works/topics/architectural-drawing-board/packages/single-architectural-drawing-board-studies/images/exploded-system/image.w400.webp" width="100%" alt="Exploded System"/></a>
+<a href="./works/topics/architectural-drawing-board/packages/single-architectural-drawing-board-studies/images/exploded-system/image.w1600.webp"><img src="./works/topics/architectural-drawing-board/packages/single-architectural-drawing-board-studies/images/exploded-system/image.w400.webp" width="100%" alt="爆炸系统"/></a>
 
-<b>Exploded System</b>
+<b>爆炸系统</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -1474,11 +1474,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/architectural-drawing-board/packages/single-architectural-drawing-board-studies/images/final-plate/image.w1600.webp"><img src="./works/topics/architectural-drawing-board/packages/single-architectural-drawing-board-studies/images/final-plate/image.w400.webp" width="100%" alt="Final Plate"/></a>
+<a href="./works/topics/architectural-drawing-board/packages/single-architectural-drawing-board-studies/images/final-plate/image.w1600.webp"><img src="./works/topics/architectural-drawing-board/packages/single-architectural-drawing-board-studies/images/final-plate/image.w400.webp" width="100%" alt="终板"/></a>
 
-<b>Final Plate</b>
+<b>终板</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -1505,19 +1505,19 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </tr>
 </table>
 
-## Archive Aesthetic File
+## 档案美学 · Wanted / 指纹卡 / 档案页
 
-> A Prompt Atlas theme for Archive Aesthetic File, testing text-rendering, structured-layout with GPT Image 2.
+> 档案美学 · Wanted / 指纹卡 / 档案页：Old West Wanted 通缉令 + 悬赏 + 罪状 / FBI 档案页 + 指纹 + 侧面照 / 学生档案卡 + 照片 + 成绩
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/archive-aesthetic-file/packages/single-archive-aesthetic-file-studies/images/hero-spread/image.w1600.webp"><img src="./works/topics/archive-aesthetic-file/packages/single-archive-aesthetic-file-studies/images/hero-spread/image.w400.webp" width="100%" alt="Hero Spread"/></a>
+<a href="./works/topics/archive-aesthetic-file/packages/single-archive-aesthetic-file-studies/images/hero-spread/image.w1600.webp"><img src="./works/topics/archive-aesthetic-file/packages/single-archive-aesthetic-file-studies/images/hero-spread/image.w400.webp" width="100%" alt="主展开"/></a>
 
-<b>Hero Spread</b>
+<b>主展开</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -1541,11 +1541,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/archive-aesthetic-file/packages/single-archive-aesthetic-file-studies/images/variant-grid/image.w1600.webp"><img src="./works/topics/archive-aesthetic-file/packages/single-archive-aesthetic-file-studies/images/variant-grid/image.w400.webp" width="100%" alt="Variant Grid"/></a>
+<a href="./works/topics/archive-aesthetic-file/packages/single-archive-aesthetic-file-studies/images/variant-grid/image.w1600.webp"><img src="./works/topics/archive-aesthetic-file/packages/single-archive-aesthetic-file-studies/images/variant-grid/image.w400.webp" width="100%" alt="变体网格"/></a>
 
-<b>Variant Grid</b>
+<b>变体网格</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -1569,11 +1569,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/archive-aesthetic-file/packages/single-archive-aesthetic-file-studies/images/desk-review/image.w1600.webp"><img src="./works/topics/archive-aesthetic-file/packages/single-archive-aesthetic-file-studies/images/desk-review/image.w400.webp" width="100%" alt="Desk Review"/></a>
+<a href="./works/topics/archive-aesthetic-file/packages/single-archive-aesthetic-file-studies/images/desk-review/image.w1600.webp"><img src="./works/topics/archive-aesthetic-file/packages/single-archive-aesthetic-file-studies/images/desk-review/image.w400.webp" width="100%" alt="审稿桌面"/></a>
 
-<b>Desk Review</b>
+<b>审稿桌面</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -1599,11 +1599,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/archive-aesthetic-file/packages/single-archive-aesthetic-file-studies/images/material-closeup/image.w1600.webp"><img src="./works/topics/archive-aesthetic-file/packages/single-archive-aesthetic-file-studies/images/material-closeup/image.w400.webp" width="100%" alt="Material Closeup"/></a>
+<a href="./works/topics/archive-aesthetic-file/packages/single-archive-aesthetic-file-studies/images/material-closeup/image.w1600.webp"><img src="./works/topics/archive-aesthetic-file/packages/single-archive-aesthetic-file-studies/images/material-closeup/image.w400.webp" width="100%" alt="材质特写"/></a>
 
-<b>Material Closeup</b>
+<b>材质特写</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -1627,11 +1627,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/archive-aesthetic-file/packages/single-archive-aesthetic-file-studies/images/archive-sheet/image.w1600.webp"><img src="./works/topics/archive-aesthetic-file/packages/single-archive-aesthetic-file-studies/images/archive-sheet/image.w400.webp" width="100%" alt="Archive Sheet"/></a>
+<a href="./works/topics/archive-aesthetic-file/packages/single-archive-aesthetic-file-studies/images/archive-sheet/image.w1600.webp"><img src="./works/topics/archive-aesthetic-file/packages/single-archive-aesthetic-file-studies/images/archive-sheet/image.w400.webp" width="100%" alt="档案页"/></a>
 
-<b>Archive Sheet</b>
+<b>档案页</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -1659,7 +1659,7 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 
 <b>陈列展示</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -1685,11 +1685,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/archive-aesthetic-file/packages/single-archive-aesthetic-file-studies/images/system-board/image.w1600.webp"><img src="./works/topics/archive-aesthetic-file/packages/single-archive-aesthetic-file-studies/images/system-board/image.w400.webp" width="100%" alt="System Board"/></a>
+<a href="./works/topics/archive-aesthetic-file/packages/single-archive-aesthetic-file-studies/images/system-board/image.w1600.webp"><img src="./works/topics/archive-aesthetic-file/packages/single-archive-aesthetic-file-studies/images/system-board/image.w400.webp" width="100%" alt="系统板"/></a>
 
-<b>System Board</b>
+<b>系统板</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -1713,11 +1713,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/archive-aesthetic-file/packages/single-archive-aesthetic-file-studies/images/signature-layout/image.w1600.webp"><img src="./works/topics/archive-aesthetic-file/packages/single-archive-aesthetic-file-studies/images/signature-layout/image.w400.webp" width="100%" alt="Signature Layout"/></a>
+<a href="./works/topics/archive-aesthetic-file/packages/single-archive-aesthetic-file-studies/images/signature-layout/image.w1600.webp"><img src="./works/topics/archive-aesthetic-file/packages/single-archive-aesthetic-file-studies/images/signature-layout/image.w400.webp" width="100%" alt="签名式版式"/></a>
 
-<b>Signature Layout</b>
+<b>签名式版式</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -1743,19 +1743,19 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </tr>
 </table>
 
-## Art Nouveau Poster
+## Art Nouveau · Mucha 装饰女性 + 花卉
 
-> A Prompt Atlas theme for Art Nouveau Poster, testing text-rendering, structured-layout, style-transfer, commercial-mockup with GPT Image 2.
+> Art Nouveau · Mucha 装饰女性 + 花卉：Alphonse Mucha 风 · 飘发女子 + 星形光环 + 百合藤蔓 + 书法 typography · 广告海报(香槟 / 火车 / 烟草)
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/art-nouveau-poster/packages/single-application-studies/images/01-editorial-study/image.w1600.webp"><img src="./works/topics/art-nouveau-poster/packages/single-application-studies/images/01-editorial-study/image.w400.webp" width="100%" alt="Editorial Study"/></a>
+<a href="./works/topics/art-nouveau-poster/packages/single-application-studies/images/01-editorial-study/image.w1600.webp"><img src="./works/topics/art-nouveau-poster/packages/single-application-studies/images/01-editorial-study/image.w400.webp" width="100%" alt="编辑研究"/></a>
 
-<b>Editorial Study</b>
+<b>编辑研究</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -1779,11 +1779,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no mu
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/art-nouveau-poster/packages/single-application-studies/images/02-commercial-study/image.w1600.webp"><img src="./works/topics/art-nouveau-poster/packages/single-application-studies/images/02-commercial-study/image.w400.webp" width="100%" alt="Commercial Study"/></a>
+<a href="./works/topics/art-nouveau-poster/packages/single-application-studies/images/02-commercial-study/image.w1600.webp"><img src="./works/topics/art-nouveau-poster/packages/single-application-studies/images/02-commercial-study/image.w400.webp" width="100%" alt="商业研究"/></a>
 
-<b>Commercial Study</b>
+<b>商业研究</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -1807,11 +1807,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no mu
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/art-nouveau-poster/packages/single-application-studies/images/03-technical-study/image.w1600.webp"><img src="./works/topics/art-nouveau-poster/packages/single-application-studies/images/03-technical-study/image.w400.webp" width="100%" alt="Technical Study"/></a>
+<a href="./works/topics/art-nouveau-poster/packages/single-application-studies/images/03-technical-study/image.w1600.webp"><img src="./works/topics/art-nouveau-poster/packages/single-application-studies/images/03-technical-study/image.w400.webp" width="100%" alt="技术研究"/></a>
 
-<b>Technical Study</b>
+<b>技术研究</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -1837,11 +1837,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no mu
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/art-nouveau-poster/packages/single-application-studies/images/05-material-study/image.w1600.webp"><img src="./works/topics/art-nouveau-poster/packages/single-application-studies/images/05-material-study/image.w400.webp" width="100%" alt="Material Study"/></a>
+<a href="./works/topics/art-nouveau-poster/packages/single-application-studies/images/05-material-study/image.w1600.webp"><img src="./works/topics/art-nouveau-poster/packages/single-application-studies/images/05-material-study/image.w400.webp" width="100%" alt="材质研究"/></a>
 
-<b>Material Study</b>
+<b>材质研究</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -1865,11 +1865,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no mu
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/art-nouveau-poster/packages/single-application-studies/images/06-context-study/image.w1600.webp"><img src="./works/topics/art-nouveau-poster/packages/single-application-studies/images/06-context-study/image.w400.webp" width="100%" alt="Context Study"/></a>
+<a href="./works/topics/art-nouveau-poster/packages/single-application-studies/images/06-context-study/image.w1600.webp"><img src="./works/topics/art-nouveau-poster/packages/single-application-studies/images/06-context-study/image.w400.webp" width="100%" alt="语境研究"/></a>
 
-<b>Context Study</b>
+<b>语境研究</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -1893,11 +1893,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no mu
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/art-nouveau-poster/packages/single-application-studies/images/08-hero-study/image.w1600.webp"><img src="./works/topics/art-nouveau-poster/packages/single-application-studies/images/08-hero-study/image.w400.webp" width="100%" alt="Hero Study"/></a>
+<a href="./works/topics/art-nouveau-poster/packages/single-application-studies/images/08-hero-study/image.w1600.webp"><img src="./works/topics/art-nouveau-poster/packages/single-application-studies/images/08-hero-study/image.w400.webp" width="100%" alt="主视觉研究"/></a>
 
-<b>Hero Study</b>
+<b>主视觉研究</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -1922,19 +1922,19 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no mu
 </tr>
 </table>
 
-## Audubon Specimen Atlas
+## Audubon 风生物图谱 · 昆虫 / 鸟类标本盒
 
-> A Prompt Atlas theme for Audubon Specimen Atlas, testing structured-layout, technical-diagram with GPT Image 2.
+> Audubon 风生物图谱 · 昆虫 / 鸟类标本盒：John James Audubon 鸟类图鉴风 / Maria Sibylla Merian 昆虫变态图 / 大英博物馆昆虫标本盒整面
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/audubon-specimen-atlas/packages/single-audubon-specimen-studies/images/hero-shot/image.w1600.webp"><img src="./works/topics/audubon-specimen-atlas/packages/single-audubon-specimen-studies/images/hero-shot/image.w400.webp" width="100%" alt="Hero Shot"/></a>
+<a href="./works/topics/audubon-specimen-atlas/packages/single-audubon-specimen-studies/images/hero-shot/image.w1600.webp"><img src="./works/topics/audubon-specimen-atlas/packages/single-audubon-specimen-studies/images/hero-shot/image.w400.webp" width="100%" alt="主镜头"/></a>
 
-<b>Hero Shot</b>
+<b>主镜头</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -1958,11 +1958,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no wa
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/audubon-specimen-atlas/packages/single-audubon-specimen-studies/images/side-light-study/image.w1600.webp"><img src="./works/topics/audubon-specimen-atlas/packages/single-audubon-specimen-studies/images/side-light-study/image.w400.webp" width="100%" alt="Side Light Study"/></a>
+<a href="./works/topics/audubon-specimen-atlas/packages/single-audubon-specimen-studies/images/side-light-study/image.w1600.webp"><img src="./works/topics/audubon-specimen-atlas/packages/single-audubon-specimen-studies/images/side-light-study/image.w400.webp" width="100%" alt="侧光研究"/></a>
 
-<b>Side Light Study</b>
+<b>侧光研究</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -1986,11 +1986,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no wa
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/audubon-specimen-atlas/packages/single-audubon-specimen-studies/images/motion-moment/image.w1600.webp"><img src="./works/topics/audubon-specimen-atlas/packages/single-audubon-specimen-studies/images/motion-moment/image.w400.webp" width="100%" alt="Motion Moment"/></a>
+<a href="./works/topics/audubon-specimen-atlas/packages/single-audubon-specimen-studies/images/motion-moment/image.w1600.webp"><img src="./works/topics/audubon-specimen-atlas/packages/single-audubon-specimen-studies/images/motion-moment/image.w400.webp" width="100%" alt="动态瞬间"/></a>
 
-<b>Motion Moment</b>
+<b>动态瞬间</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -2016,11 +2016,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no wa
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/audubon-specimen-atlas/packages/single-audubon-specimen-studies/images/low-light-atlas/image.w1600.webp"><img src="./works/topics/audubon-specimen-atlas/packages/single-audubon-specimen-studies/images/low-light-atlas/image.w400.webp" width="100%" alt="Low-Light Atlas"/></a>
+<a href="./works/topics/audubon-specimen-atlas/packages/single-audubon-specimen-studies/images/low-light-atlas/image.w1600.webp"><img src="./works/topics/audubon-specimen-atlas/packages/single-audubon-specimen-studies/images/low-light-atlas/image.w400.webp" width="100%" alt="低照图谱"/></a>
 
-<b>Low-Light Atlas</b>
+<b>低照图谱</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -2044,11 +2044,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no wa
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/audubon-specimen-atlas/packages/single-audubon-specimen-studies/images/specimen-table/image.w1600.webp"><img src="./works/topics/audubon-specimen-atlas/packages/single-audubon-specimen-studies/images/specimen-table/image.w400.webp" width="100%" alt="Specimen Table"/></a>
+<a href="./works/topics/audubon-specimen-atlas/packages/single-audubon-specimen-studies/images/specimen-table/image.w1600.webp"><img src="./works/topics/audubon-specimen-atlas/packages/single-audubon-specimen-studies/images/specimen-table/image.w400.webp" width="100%" alt="标本桌面"/></a>
 
-<b>Specimen Table</b>
+<b>标本桌面</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -2072,11 +2072,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no wa
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/audubon-specimen-atlas/packages/single-audubon-specimen-studies/images/atmospheric-view/image.w1600.webp"><img src="./works/topics/audubon-specimen-atlas/packages/single-audubon-specimen-studies/images/atmospheric-view/image.w400.webp" width="100%" alt="Atmospheric View"/></a>
+<a href="./works/topics/audubon-specimen-atlas/packages/single-audubon-specimen-studies/images/atmospheric-view/image.w1600.webp"><img src="./works/topics/audubon-specimen-atlas/packages/single-audubon-specimen-studies/images/atmospheric-view/image.w400.webp" width="100%" alt="氛围视图"/></a>
 
-<b>Atmospheric View</b>
+<b>氛围视图</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -2102,11 +2102,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no wa
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/audubon-specimen-atlas/packages/single-audubon-specimen-studies/images/signature-frame/image.w1600.webp"><img src="./works/topics/audubon-specimen-atlas/packages/single-audubon-specimen-studies/images/signature-frame/image.w400.webp" width="100%" alt="Signature Frame"/></a>
+<a href="./works/topics/audubon-specimen-atlas/packages/single-audubon-specimen-studies/images/signature-frame/image.w1600.webp"><img src="./works/topics/audubon-specimen-atlas/packages/single-audubon-specimen-studies/images/signature-frame/image.w400.webp" width="100%" alt="代表画面"/></a>
 
-<b>Signature Frame</b>
+<b>代表画面</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -2133,19 +2133,19 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no wa
 </tr>
 </table>
 
-## Automotive Concept Art
+## 汽车 Concept Art · 设计工作室级
 
-> A Prompt Atlas theme for Automotive Concept Art, testing technical-diagram, style-transfer, commercial-mockup with GPT Image 2.
+> 汽车 Concept Art · 设计工作室级：风格:碳笔草图 + 马克笔快速上色 · 3/4 侧面 + 前视 + 侧视 + 俯视 4 视图 · 铅笔网格辅助线 · 例:概念跑车 / 月球车 / 蒸汽朋克机车
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/automotive-concept-art/packages/single-automotive-concept-art-studies/images/hero-model/image.w1600.webp"><img src="./works/topics/automotive-concept-art/packages/single-automotive-concept-art-studies/images/hero-model/image.w400.webp" width="100%" alt="Hero Model"/></a>
+<a href="./works/topics/automotive-concept-art/packages/single-automotive-concept-art-studies/images/hero-model/image.w1600.webp"><img src="./works/topics/automotive-concept-art/packages/single-automotive-concept-art-studies/images/hero-model/image.w400.webp" width="100%" alt="主模型"/></a>
 
-<b>Hero Model</b>
+<b>主模型</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -2169,11 +2169,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/automotive-concept-art/packages/single-automotive-concept-art-studies/images/exploded-arrangement/image.w1600.webp"><img src="./works/topics/automotive-concept-art/packages/single-automotive-concept-art-studies/images/exploded-arrangement/image.w400.webp" width="100%" alt="Exploded Arrangement"/></a>
+<a href="./works/topics/automotive-concept-art/packages/single-automotive-concept-art-studies/images/exploded-arrangement/image.w1600.webp"><img src="./works/topics/automotive-concept-art/packages/single-automotive-concept-art-studies/images/exploded-arrangement/image.w400.webp" width="100%" alt="爆炸排列"/></a>
 
-<b>Exploded Arrangement</b>
+<b>爆炸排列</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -2197,11 +2197,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/automotive-concept-art/packages/single-automotive-concept-art-studies/images/studio-turn/image.w1600.webp"><img src="./works/topics/automotive-concept-art/packages/single-automotive-concept-art-studies/images/studio-turn/image.w400.webp" width="100%" alt="Studio Turn"/></a>
+<a href="./works/topics/automotive-concept-art/packages/single-automotive-concept-art-studies/images/studio-turn/image.w1600.webp"><img src="./works/topics/automotive-concept-art/packages/single-automotive-concept-art-studies/images/studio-turn/image.w400.webp" width="100%" alt="转台视角"/></a>
 
-<b>Studio Turn</b>
+<b>转台视角</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -2227,11 +2227,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/automotive-concept-art/packages/single-automotive-concept-art-studies/images/scale-comparison/image.w1600.webp"><img src="./works/topics/automotive-concept-art/packages/single-automotive-concept-art-studies/images/scale-comparison/image.w400.webp" width="100%" alt="Scale Comparison"/></a>
+<a href="./works/topics/automotive-concept-art/packages/single-automotive-concept-art-studies/images/scale-comparison/image.w1600.webp"><img src="./works/topics/automotive-concept-art/packages/single-automotive-concept-art-studies/images/scale-comparison/image.w400.webp" width="100%" alt="尺度对照"/></a>
 
-<b>Scale Comparison</b>
+<b>尺度对照</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -2255,11 +2255,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/automotive-concept-art/packages/single-automotive-concept-art-studies/images/detail-closeup/image.w1600.webp"><img src="./works/topics/automotive-concept-art/packages/single-automotive-concept-art-studies/images/detail-closeup/image.w400.webp" width="100%" alt="Detail Closeup"/></a>
+<a href="./works/topics/automotive-concept-art/packages/single-automotive-concept-art-studies/images/detail-closeup/image.w1600.webp"><img src="./works/topics/automotive-concept-art/packages/single-automotive-concept-art-studies/images/detail-closeup/image.w400.webp" width="100%" alt="细节特写"/></a>
 
-<b>Detail Closeup</b>
+<b>细节特写</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -2287,7 +2287,7 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 
 <b>环境展示</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -2313,11 +2313,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/automotive-concept-art/packages/single-automotive-concept-art-studies/images/signature-render/image.w1600.webp"><img src="./works/topics/automotive-concept-art/packages/single-automotive-concept-art-studies/images/signature-render/image.w400.webp" width="100%" alt="Signature Render"/></a>
+<a href="./works/topics/automotive-concept-art/packages/single-automotive-concept-art-studies/images/signature-render/image.w1600.webp"><img src="./works/topics/automotive-concept-art/packages/single-automotive-concept-art-studies/images/signature-render/image.w400.webp" width="100%" alt="代表渲染"/></a>
 
-<b>Signature Render</b>
+<b>代表渲染</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -2344,19 +2344,19 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </tr>
 </table>
 
-## Book Series Design
+## 书籍装帧系列 · 丛书
 
-> A Prompt Atlas theme for Book Series Design, testing text-rendering, structured-layout, style-transfer, commercial-mockup with GPT Image 2.
+> 书籍装帧系列 · 丛书：一套 6-10 本丛书封面(主题:世界文学 / 哲学经典 / 科幻十大)· 风格统一 · 配色 / 字体 / 装饰一致但各自主题 · 书脊排成一排成图案
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/book-series-design/packages/single-book-series-design-studies/images/material-closeup/image.w1600.webp"><img src="./works/topics/book-series-design/packages/single-book-series-design-studies/images/material-closeup/image.w400.webp" width="100%" alt="Material Closeup"/></a>
+<a href="./works/topics/book-series-design/packages/single-book-series-design-studies/images/material-closeup/image.w1600.webp"><img src="./works/topics/book-series-design/packages/single-book-series-design-studies/images/material-closeup/image.w400.webp" width="100%" alt="材质特写"/></a>
 
-<b>Material Closeup</b>
+<b>材质特写</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -2383,19 +2383,19 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </tr>
 </table>
 
-## Brand Artist Collab Mockup
+## 品牌 × 艺术家跨界联名 mockup
 
-> A Prompt Atlas theme for fictional brand and artist collaboration mockups, testing structured commercial layouts, style transfer, and proposal-ready product systems.
+> 围绕虚构品牌与艺术家跨界联名的商业样机主题,测试产品、包装与广告海报三件套的结构化版式和风格迁移。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/brand-artist-collab-mockup/packages/single-collab-proposal-studies/images/athletic-toy-window/image.w1600.webp"><img src="./works/topics/brand-artist-collab-mockup/packages/single-collab-proposal-studies/images/athletic-toy-window/image.w400.webp" width="100%" alt="Athletic Toy Window"/></a>
+<a href="./works/topics/brand-artist-collab-mockup/packages/single-collab-proposal-studies/images/athletic-toy-window/image.w1600.webp"><img src="./works/topics/brand-artist-collab-mockup/packages/single-collab-proposal-studies/images/athletic-toy-window/image.w400.webp" width="100%" alt="运动玩具橱窗"/></a>
 
-<b>Athletic Toy Window</b>
+<b>运动玩具橱窗</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -2419,11 +2419,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/brand-artist-collab-mockup/packages/single-collab-proposal-studies/images/soda-stencil-billboard/image.w1600.webp"><img src="./works/topics/brand-artist-collab-mockup/packages/single-collab-proposal-studies/images/soda-stencil-billboard/image.w400.webp" width="100%" alt="Soda Stencil Billboard"/></a>
+<a href="./works/topics/brand-artist-collab-mockup/packages/single-collab-proposal-studies/images/soda-stencil-billboard/image.w1600.webp"><img src="./works/topics/brand-artist-collab-mockup/packages/single-collab-proposal-studies/images/soda-stencil-billboard/image.w400.webp" width="100%" alt="汽水模板海报"/></a>
 
-<b>Soda Stencil Billboard</b>
+<b>汽水模板海报</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -2447,11 +2447,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no ex
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/brand-artist-collab-mockup/packages/single-collab-proposal-studies/images/sneaker-animation-case/image.w1600.webp"><img src="./works/topics/brand-artist-collab-mockup/packages/single-collab-proposal-studies/images/sneaker-animation-case/image.w400.webp" width="100%" alt="Sneaker Animation Case"/></a>
+<a href="./works/topics/brand-artist-collab-mockup/packages/single-collab-proposal-studies/images/sneaker-animation-case/image.w1600.webp"><img src="./works/topics/brand-artist-collab-mockup/packages/single-collab-proposal-studies/images/sneaker-animation-case/image.w400.webp" width="100%" alt="球鞋动画收纳盒"/></a>
 
-<b>Sneaker Animation Case</b>
+<b>球鞋动画收纳盒</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -2477,11 +2477,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no ex
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/brand-artist-collab-mockup/packages/single-collab-proposal-studies/images/perfume-calligraphy-counter/image.w1600.webp"><img src="./works/topics/brand-artist-collab-mockup/packages/single-collab-proposal-studies/images/perfume-calligraphy-counter/image.w400.webp" width="100%" alt="Perfume Calligraphy Counter"/></a>
+<a href="./works/topics/brand-artist-collab-mockup/packages/single-collab-proposal-studies/images/perfume-calligraphy-counter/image.w1600.webp"><img src="./works/topics/brand-artist-collab-mockup/packages/single-collab-proposal-studies/images/perfume-calligraphy-counter/image.w400.webp" width="100%" alt="香水书法柜台"/></a>
 
-<b>Perfume Calligraphy Counter</b>
+<b>香水书法柜台</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -2505,11 +2505,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/brand-artist-collab-mockup/packages/single-collab-proposal-studies/images/bike-ceramic-pop/image.w1600.webp"><img src="./works/topics/brand-artist-collab-mockup/packages/single-collab-proposal-studies/images/bike-ceramic-pop/image.w400.webp" width="100%" alt="Bike Ceramic Pop"/></a>
+<a href="./works/topics/brand-artist-collab-mockup/packages/single-collab-proposal-studies/images/bike-ceramic-pop/image.w1600.webp"><img src="./works/topics/brand-artist-collab-mockup/packages/single-collab-proposal-studies/images/bike-ceramic-pop/image.w400.webp" width="100%" alt="电助力车陶瓷波普"/></a>
 
-<b>Bike Ceramic Pop</b>
+<b>电助力车陶瓷波普</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -2533,11 +2533,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/brand-artist-collab-mockup/packages/single-collab-proposal-studies/images/headphones-paper-cut-display/image.w1600.webp"><img src="./works/topics/brand-artist-collab-mockup/packages/single-collab-proposal-studies/images/headphones-paper-cut-display/image.w400.webp" width="100%" alt="Headphones Paper Cut Display"/></a>
+<a href="./works/topics/brand-artist-collab-mockup/packages/single-collab-proposal-studies/images/headphones-paper-cut-display/image.w1600.webp"><img src="./works/topics/brand-artist-collab-mockup/packages/single-collab-proposal-studies/images/headphones-paper-cut-display/image.w400.webp" width="100%" alt="耳机纸雕陈列"/></a>
 
-<b>Headphones Paper Cut Display</b>
+<b>耳机纸雕陈列</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -2562,19 +2562,19 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </tr>
 </table>
 
-## Conversational Editing Workflow
+## 多轮对话式编辑工作流
 
-> A Prompt Atlas theme testing mask-free conversational image editing: preserving most of a scene while applying sequential semantic changes.
+> 测试免 mask 的多轮对话式图像编辑：在连续语义修改中保留大部分场景、布局和视觉身份。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/conversational-editing-workflow/packages/series-iterative-poster-edit/images/01-base-transit-poster/image.w1600.webp"><img src="./works/topics/conversational-editing-workflow/packages/series-iterative-poster-edit/images/01-base-transit-poster/image.w400.webp" width="100%" alt="Base Transit Poster"/></a>
+<a href="./works/topics/conversational-editing-workflow/packages/series-iterative-poster-edit/images/01-base-transit-poster/image.w1600.webp"><img src="./works/topics/conversational-editing-workflow/packages/series-iterative-poster-edit/images/01-base-transit-poster/image.w400.webp" width="100%" alt="基础交通海报"/></a>
 
-<b>Base Transit Poster</b>
+<b>基础交通海报</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -2598,11 +2598,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/conversational-editing-workflow/packages/single-editing-scenarios/images/cafe-menu-revision/image.w1600.webp"><img src="./works/topics/conversational-editing-workflow/packages/single-editing-scenarios/images/cafe-menu-revision/image.w400.webp" width="100%" alt="Cafe Menu Revision"/></a>
+<a href="./works/topics/conversational-editing-workflow/packages/single-editing-scenarios/images/cafe-menu-revision/image.w1600.webp"><img src="./works/topics/conversational-editing-workflow/packages/single-editing-scenarios/images/cafe-menu-revision/image.w400.webp" width="100%" alt="咖啡菜单修订"/></a>
 
-<b>Cafe Menu Revision</b>
+<b>咖啡菜单修订</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -2626,11 +2626,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/conversational-editing-workflow/packages/single-editing-scenarios/images/product-colorway-edit/image.w1600.webp"><img src="./works/topics/conversational-editing-workflow/packages/single-editing-scenarios/images/product-colorway-edit/image.w400.webp" width="100%" alt="Product Colorway Edit"/></a>
+<a href="./works/topics/conversational-editing-workflow/packages/single-editing-scenarios/images/product-colorway-edit/image.w1600.webp"><img src="./works/topics/conversational-editing-workflow/packages/single-editing-scenarios/images/product-colorway-edit/image.w400.webp" width="100%" alt="产品配色编辑"/></a>
 
-<b>Product Colorway Edit</b>
+<b>产品配色编辑</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -2656,11 +2656,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no br
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/conversational-editing-workflow/packages/series-iterative-poster-edit/images/03-larger-cooler-heading/image.w1600.webp"><img src="./works/topics/conversational-editing-workflow/packages/series-iterative-poster-edit/images/03-larger-cooler-heading/image.w400.webp" width="100%" alt="Larger Cooler Heading"/></a>
+<a href="./works/topics/conversational-editing-workflow/packages/series-iterative-poster-edit/images/03-larger-cooler-heading/image.w1600.webp"><img src="./works/topics/conversational-editing-workflow/packages/series-iterative-poster-edit/images/03-larger-cooler-heading/image.w400.webp" width="100%" alt="放大标题并降温配色"/></a>
 
-<b>Larger Cooler Heading</b>
+<b>放大标题并降温配色</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -2684,11 +2684,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/conversational-editing-workflow/packages/single-editing-scenarios/images/living-room-declutter/image.w1600.webp"><img src="./works/topics/conversational-editing-workflow/packages/single-editing-scenarios/images/living-room-declutter/image.w400.webp" width="100%" alt="Living Room Declutter"/></a>
+<a href="./works/topics/conversational-editing-workflow/packages/single-editing-scenarios/images/living-room-declutter/image.w1600.webp"><img src="./works/topics/conversational-editing-workflow/packages/single-editing-scenarios/images/living-room-declutter/image.w400.webp" width="100%" alt="客厅去杂物"/></a>
 
-<b>Living Room Declutter</b>
+<b>客厅去杂物</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -2712,11 +2712,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no be
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/conversational-editing-workflow/packages/series-iterative-poster-edit/images/04-final-balanced-campaign/image.w1600.webp"><img src="./works/topics/conversational-editing-workflow/packages/series-iterative-poster-edit/images/04-final-balanced-campaign/image.w400.webp" width="100%" alt="Final Balanced Campaign"/></a>
+<a href="./works/topics/conversational-editing-workflow/packages/series-iterative-poster-edit/images/04-final-balanced-campaign/image.w1600.webp"><img src="./works/topics/conversational-editing-workflow/packages/series-iterative-poster-edit/images/04-final-balanced-campaign/image.w400.webp" width="100%" alt="最终平衡版广告"/></a>
 
-<b>Final Balanced Campaign</b>
+<b>最终平衡版广告</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -2742,11 +2742,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no le
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/conversational-editing-workflow/packages/single-editing-scenarios/images/gallery-layout-correction/image.w1600.webp"><img src="./works/topics/conversational-editing-workflow/packages/single-editing-scenarios/images/gallery-layout-correction/image.w400.webp" width="100%" alt="Gallery Layout Correction"/></a>
+<a href="./works/topics/conversational-editing-workflow/packages/single-editing-scenarios/images/gallery-layout-correction/image.w1600.webp"><img src="./works/topics/conversational-editing-workflow/packages/single-editing-scenarios/images/gallery-layout-correction/image.w400.webp" width="100%" alt="展墙布局校正"/></a>
 
-<b>Gallery Layout Correction</b>
+<b>展墙布局校正</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -2773,19 +2773,19 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no mu
 </tr>
 </table>
 
-## Crystal Ball Narrative
+## 水晶球叙事
 
-> A Prompt Atlas theme for compressing changing miniature worlds into one consistent crystal ball object.
+> 把变化的微缩世界压进同一颗水晶球，测试主体连续性。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/crystal-ball-narrative/packages/series-oracle-seasons/images/01-reference-oracle/image.w1600.webp"><img src="./works/topics/crystal-ball-narrative/packages/series-oracle-seasons/images/01-reference-oracle/image.w400.webp" width="100%" alt="Reference Oracle"/></a>
+<a href="./works/topics/crystal-ball-narrative/packages/series-oracle-seasons/images/01-reference-oracle/image.w1600.webp"><img src="./works/topics/crystal-ball-narrative/packages/series-oracle-seasons/images/01-reference-oracle/image.w400.webp" width="100%" alt="基准预言球"/></a>
 
-<b>Reference Oracle</b>
+<b>基准预言球</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -2809,11 +2809,11 @@ No readable text, no watermark, no logos, no human hands, no extra crystal balls
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/crystal-ball-narrative/packages/series-oracle-seasons/images/02-spring-oracle/image.w1600.webp"><img src="./works/topics/crystal-ball-narrative/packages/series-oracle-seasons/images/02-spring-oracle/image.w400.webp" width="100%" alt="Spring Oracle"/></a>
+<a href="./works/topics/crystal-ball-narrative/packages/series-oracle-seasons/images/02-spring-oracle/image.w1600.webp"><img src="./works/topics/crystal-ball-narrative/packages/series-oracle-seasons/images/02-spring-oracle/image.w400.webp" width="100%" alt="春日预言球"/></a>
 
-<b>Spring Oracle</b>
+<b>春日预言球</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -2837,11 +2837,11 @@ No readable text, no watermark, no logos, no human hands, no extra crystal balls
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/crystal-ball-narrative/packages/series-oracle-seasons/images/03-autumn-oracle/image.w1600.webp"><img src="./works/topics/crystal-ball-narrative/packages/series-oracle-seasons/images/03-autumn-oracle/image.w400.webp" width="100%" alt="Autumn Oracle"/></a>
+<a href="./works/topics/crystal-ball-narrative/packages/series-oracle-seasons/images/03-autumn-oracle/image.w1600.webp"><img src="./works/topics/crystal-ball-narrative/packages/series-oracle-seasons/images/03-autumn-oracle/image.w400.webp" width="100%" alt="秋日预言球"/></a>
 
-<b>Autumn Oracle</b>
+<b>秋日预言球</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -2867,11 +2867,11 @@ No readable text, no watermark, no logos, no human hands, no extra crystal balls
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/crystal-ball-narrative/packages/series-oracle-seasons/images/04-winter-oracle/image.w1600.webp"><img src="./works/topics/crystal-ball-narrative/packages/series-oracle-seasons/images/04-winter-oracle/image.w400.webp" width="100%" alt="Winter Oracle"/></a>
+<a href="./works/topics/crystal-ball-narrative/packages/series-oracle-seasons/images/04-winter-oracle/image.w1600.webp"><img src="./works/topics/crystal-ball-narrative/packages/series-oracle-seasons/images/04-winter-oracle/image.w400.webp" width="100%" alt="冬日预言球"/></a>
 
-<b>Winter Oracle</b>
+<b>冬日预言球</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -2898,19 +2898,19 @@ No readable text, no watermark, no logos, no human hands, no extra crystal balls
 </tr>
 </table>
 
-## Eight-Panel Consistency Comic
+## 八格一致性漫画
 
-> A Prompt Atlas theme for multi-panel comics that keep character identity, product props, layout rhythm, and visual style consistent.
+> 测试多格漫画中的角色身份、产品道具、版式节奏和画风一致性。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/eight-panel-consistency-comic/packages/series-launch-comic/images/01-reference-hero-orb-page/image.w1600.webp"><img src="./works/topics/eight-panel-consistency-comic/packages/series-launch-comic/images/01-reference-hero-orb-page/image.w400.webp" width="100%" alt="Reference Hero Orb Page"/></a>
+<a href="./works/topics/eight-panel-consistency-comic/packages/series-launch-comic/images/01-reference-hero-orb-page/image.w1600.webp"><img src="./works/topics/eight-panel-consistency-comic/packages/series-launch-comic/images/01-reference-hero-orb-page/image.w400.webp" width="100%" alt="基准主角光球页"/></a>
 
-<b>Reference Hero Orb Page</b>
+<b>基准主角光球页</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -2934,11 +2934,11 @@ Exactly eight panels, preserve one protagonist identity across all panels, only 
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/eight-panel-consistency-comic/packages/single-comic-studies/images/product-demo-board/image.w1600.webp"><img src="./works/topics/eight-panel-consistency-comic/packages/single-comic-studies/images/product-demo-board/image.w400.webp" width="100%" alt="Product Demo Board"/></a>
+<a href="./works/topics/eight-panel-consistency-comic/packages/single-comic-studies/images/product-demo-board/image.w1600.webp"><img src="./works/topics/eight-panel-consistency-comic/packages/single-comic-studies/images/product-demo-board/image.w400.webp" width="100%" alt="产品演示分镜"/></a>
 
-<b>Product Demo Board</b>
+<b>产品演示分镜</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -2962,11 +2962,11 @@ Exactly eight panels, no real logos, no watermark, no readable text, no extra ma
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/eight-panel-consistency-comic/packages/series-launch-comic/images/02-rooftop-launch-page/image.w1600.webp"><img src="./works/topics/eight-panel-consistency-comic/packages/series-launch-comic/images/02-rooftop-launch-page/image.w400.webp" width="100%" alt="Rooftop Launch Page"/></a>
+<a href="./works/topics/eight-panel-consistency-comic/packages/series-launch-comic/images/02-rooftop-launch-page/image.w1600.webp"><img src="./works/topics/eight-panel-consistency-comic/packages/series-launch-comic/images/02-rooftop-launch-page/image.w400.webp" width="100%" alt="屋顶发布页"/></a>
 
-<b>Rooftop Launch Page</b>
+<b>屋顶发布页</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -2992,11 +2992,11 @@ PRESERVE the reference protagonist, outfit, orb, page style, panel count, and sq
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/eight-panel-consistency-comic/packages/single-comic-studies/images/character-turnaround-comic/image.w1600.webp"><img src="./works/topics/eight-panel-consistency-comic/packages/single-comic-studies/images/character-turnaround-comic/image.w400.webp" width="100%" alt="Character Turnaround Comic"/></a>
+<a href="./works/topics/eight-panel-consistency-comic/packages/single-comic-studies/images/character-turnaround-comic/image.w1600.webp"><img src="./works/topics/eight-panel-consistency-comic/packages/single-comic-studies/images/character-turnaround-comic/image.w400.webp" width="100%" alt="角色转面漫画"/></a>
 
-<b>Character Turnaround Comic</b>
+<b>角色转面漫画</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -3020,11 +3020,11 @@ Exactly eight panels, one main character only, no readable text, no logos, no wa
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/eight-panel-consistency-comic/packages/series-launch-comic/images/03-studio-demo-page/image.w1600.webp"><img src="./works/topics/eight-panel-consistency-comic/packages/series-launch-comic/images/03-studio-demo-page/image.w400.webp" width="100%" alt="Studio Demo Page"/></a>
+<a href="./works/topics/eight-panel-consistency-comic/packages/series-launch-comic/images/03-studio-demo-page/image.w1600.webp"><img src="./works/topics/eight-panel-consistency-comic/packages/series-launch-comic/images/03-studio-demo-page/image.w400.webp" width="100%" alt="影棚演示页"/></a>
 
-<b>Studio Demo Page</b>
+<b>影棚演示页</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -3048,11 +3048,11 @@ PRESERVE the reference protagonist, outfit, orb, page style, panel count, and sq
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/eight-panel-consistency-comic/packages/single-comic-studies/images/launch-storefront-comic/image.w1600.webp"><img src="./works/topics/eight-panel-consistency-comic/packages/single-comic-studies/images/launch-storefront-comic/image.w400.webp" width="100%" alt="Launch Storefront Comic"/></a>
+<a href="./works/topics/eight-panel-consistency-comic/packages/single-comic-studies/images/launch-storefront-comic/image.w1600.webp"><img src="./works/topics/eight-panel-consistency-comic/packages/single-comic-studies/images/launch-storefront-comic/image.w400.webp" width="100%" alt="店铺发布漫画"/></a>
 
-<b>Launch Storefront Comic</b>
+<b>店铺发布漫画</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -3078,11 +3078,11 @@ Exactly eight panels, no readable text, no real logos, no watermark, no extra ma
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/eight-panel-consistency-comic/packages/series-launch-comic/images/04-subway-reveal-page/image.w1600.webp"><img src="./works/topics/eight-panel-consistency-comic/packages/series-launch-comic/images/04-subway-reveal-page/image.w400.webp" width="100%" alt="Subway Reveal Page"/></a>
+<a href="./works/topics/eight-panel-consistency-comic/packages/series-launch-comic/images/04-subway-reveal-page/image.w1600.webp"><img src="./works/topics/eight-panel-consistency-comic/packages/series-launch-comic/images/04-subway-reveal-page/image.w400.webp" width="100%" alt="地铁揭晓页"/></a>
 
-<b>Subway Reveal Page</b>
+<b>地铁揭晓页</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -3109,19 +3109,19 @@ PRESERVE the reference protagonist, outfit, orb, page style, panel count, and sq
 </tr>
 </table>
 
-## Equirectangular VR Panorama
+## 360° Equirectangular VR 全景
 
-> A Prompt Atlas theme for AI-native 360-degree equirectangular scenes, testing structured layout, extreme aspect ratio control, and immersive style transfer.
+> 测试可放入 VR 头显观看的 2:1 等距矩形全景图，重点考察连续空间、极端画幅和风格化场景稳定性。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/equirectangular-vr-panorama/packages/single-panorama-studies/images/floating-sky-village/image.w1600.webp"><img src="./works/topics/equirectangular-vr-panorama/packages/single-panorama-studies/images/floating-sky-village/image.w400.webp" width="100%" alt="Floating Sky Village"/></a>
+<a href="./works/topics/equirectangular-vr-panorama/packages/single-panorama-studies/images/floating-sky-village/image.w1600.webp"><img src="./works/topics/equirectangular-vr-panorama/packages/single-panorama-studies/images/floating-sky-village/image.w400.webp" width="100%" alt="悬浮天空村落"/></a>
 
-<b>Floating Sky Village</b>
+<b>悬浮天空村落</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -3145,11 +3145,11 @@ No readable text, no watermark, no logos, preserve exact 2:1 aspect ratio, no ci
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/equirectangular-vr-panorama/packages/single-panorama-studies/images/undersea-observatory/image.w1600.webp"><img src="./works/topics/equirectangular-vr-panorama/packages/single-panorama-studies/images/undersea-observatory/image.w400.webp" width="100%" alt="Undersea Observatory"/></a>
+<a href="./works/topics/equirectangular-vr-panorama/packages/single-panorama-studies/images/undersea-observatory/image.w1600.webp"><img src="./works/topics/equirectangular-vr-panorama/packages/single-panorama-studies/images/undersea-observatory/image.w400.webp" width="100%" alt="深海观测舱"/></a>
 
-<b>Undersea Observatory</b>
+<b>深海观测舱</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -3173,11 +3173,11 @@ No readable text, no watermark, no logos, preserve exact 2:1 aspect ratio, no ci
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/equirectangular-vr-panorama/packages/single-panorama-studies/images/moon-temple-courtyard/image.w1600.webp"><img src="./works/topics/equirectangular-vr-panorama/packages/single-panorama-studies/images/moon-temple-courtyard/image.w400.webp" width="100%" alt="Moon Temple Courtyard"/></a>
+<a href="./works/topics/equirectangular-vr-panorama/packages/single-panorama-studies/images/moon-temple-courtyard/image.w1600.webp"><img src="./works/topics/equirectangular-vr-panorama/packages/single-panorama-studies/images/moon-temple-courtyard/image.w400.webp" width="100%" alt="月面寺院庭院"/></a>
 
-<b>Moon Temple Courtyard</b>
+<b>月面寺院庭院</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -3203,11 +3203,11 @@ No readable text, no watermark, no logos, preserve exact 2:1 aspect ratio, no ci
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/equirectangular-vr-panorama/packages/single-panorama-studies/images/desert-train-station/image.w1600.webp"><img src="./works/topics/equirectangular-vr-panorama/packages/single-panorama-studies/images/desert-train-station/image.w400.webp" width="100%" alt="Desert Train Station"/></a>
+<a href="./works/topics/equirectangular-vr-panorama/packages/single-panorama-studies/images/desert-train-station/image.w1600.webp"><img src="./works/topics/equirectangular-vr-panorama/packages/single-panorama-studies/images/desert-train-station/image.w400.webp" width="100%" alt="沙漠列车站"/></a>
 
-<b>Desert Train Station</b>
+<b>沙漠列车站</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -3231,11 +3231,11 @@ No readable text, no watermark, no logos, preserve exact 2:1 aspect ratio, no ci
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/equirectangular-vr-panorama/packages/single-panorama-studies/images/crystal-forest-clearing/image.w1600.webp"><img src="./works/topics/equirectangular-vr-panorama/packages/single-panorama-studies/images/crystal-forest-clearing/image.w400.webp" width="100%" alt="Crystal Forest Clearing"/></a>
+<a href="./works/topics/equirectangular-vr-panorama/packages/single-panorama-studies/images/crystal-forest-clearing/image.w1600.webp"><img src="./works/topics/equirectangular-vr-panorama/packages/single-panorama-studies/images/crystal-forest-clearing/image.w400.webp" width="100%" alt="水晶森林空地"/></a>
 
-<b>Crystal Forest Clearing</b>
+<b>水晶森林空地</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -3259,11 +3259,11 @@ No readable text, no watermark, no logos, preserve exact 2:1 aspect ratio, no ci
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/equirectangular-vr-panorama/packages/single-panorama-studies/images/retro-space-habitat/image.w1600.webp"><img src="./works/topics/equirectangular-vr-panorama/packages/single-panorama-studies/images/retro-space-habitat/image.w400.webp" width="100%" alt="Retro Space Habitat"/></a>
+<a href="./works/topics/equirectangular-vr-panorama/packages/single-panorama-studies/images/retro-space-habitat/image.w1600.webp"><img src="./works/topics/equirectangular-vr-panorama/packages/single-panorama-studies/images/retro-space-habitat/image.w400.webp" width="100%" alt="复古太空栖居舱"/></a>
 
-<b>Retro Space Habitat</b>
+<b>复古太空栖居舱</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -3289,11 +3289,11 @@ No readable text, no watermark, no logos, preserve exact 2:1 aspect ratio, no ci
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/equirectangular-vr-panorama/packages/single-panorama-studies/images/vertical-city-crossroads/image.w1600.webp"><img src="./works/topics/equirectangular-vr-panorama/packages/single-panorama-studies/images/vertical-city-crossroads/image.w400.webp" width="100%" alt="Vertical City Crossroads"/></a>
+<a href="./works/topics/equirectangular-vr-panorama/packages/single-panorama-studies/images/vertical-city-crossroads/image.w1600.webp"><img src="./works/topics/equirectangular-vr-panorama/packages/single-panorama-studies/images/vertical-city-crossroads/image.w400.webp" width="100%" alt="垂直城市十字路口"/></a>
 
-<b>Vertical City Crossroads</b>
+<b>垂直城市十字路口</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -3317,11 +3317,11 @@ No readable text, no watermark, no logos, preserve exact 2:1 aspect ratio, no ci
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/equirectangular-vr-panorama/packages/single-panorama-studies/images/aurora-ice-cavern/image.w1600.webp"><img src="./works/topics/equirectangular-vr-panorama/packages/single-panorama-studies/images/aurora-ice-cavern/image.w400.webp" width="100%" alt="Aurora Ice Cavern"/></a>
+<a href="./works/topics/equirectangular-vr-panorama/packages/single-panorama-studies/images/aurora-ice-cavern/image.w1600.webp"><img src="./works/topics/equirectangular-vr-panorama/packages/single-panorama-studies/images/aurora-ice-cavern/image.w400.webp" width="100%" alt="极光冰洞"/></a>
 
-<b>Aurora Ice Cavern</b>
+<b>极光冰洞</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -3347,19 +3347,19 @@ No readable text, no watermark, no logos, preserve exact 2:1 aspect ratio, no ci
 </tr>
 </table>
 
-## Escher Impossible Geometry
+## Escher 不可能几何 · 永恒楼梯
 
-> A Prompt Atlas theme for impossible geometric illusions, testing optical illusion logic, perspective reasoning, and black-and-white mathematical engraving with GPT Image 2.
+> Escher 不可能几何 · 永恒楼梯：彭罗斯三角、永恒上升楼梯、瀑布循环、相对性空间等数学视觉悖论。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/escher-impossible-geometry/packages/single-impossible-geometry-studies/images/penrose-triangle-terrace/image.w1600.webp"><img src="./works/topics/escher-impossible-geometry/packages/single-impossible-geometry-studies/images/penrose-triangle-terrace/image.w400.webp" width="100%" alt="Penrose Triangle Terrace"/></a>
+<a href="./works/topics/escher-impossible-geometry/packages/single-impossible-geometry-studies/images/penrose-triangle-terrace/image.w1600.webp"><img src="./works/topics/escher-impossible-geometry/packages/single-impossible-geometry-studies/images/penrose-triangle-terrace/image.w400.webp" width="100%" alt="彭罗斯三角露台"/></a>
 
-<b>Penrose Triangle Terrace</b>
+<b>彭罗斯三角露台</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -3383,11 +3383,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no co
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/escher-impossible-geometry/packages/single-impossible-geometry-studies/images/endless-stair-court/image.w1600.webp"><img src="./works/topics/escher-impossible-geometry/packages/single-impossible-geometry-studies/images/endless-stair-court/image.w400.webp" width="100%" alt="Endless Stair Court"/></a>
+<a href="./works/topics/escher-impossible-geometry/packages/single-impossible-geometry-studies/images/endless-stair-court/image.w1600.webp"><img src="./works/topics/escher-impossible-geometry/packages/single-impossible-geometry-studies/images/endless-stair-court/image.w400.webp" width="100%" alt="永恒楼梯庭院"/></a>
 
-<b>Endless Stair Court</b>
+<b>永恒楼梯庭院</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -3411,11 +3411,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no co
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/escher-impossible-geometry/packages/single-impossible-geometry-studies/images/waterfall-loop-mill/image.w1600.webp"><img src="./works/topics/escher-impossible-geometry/packages/single-impossible-geometry-studies/images/waterfall-loop-mill/image.w400.webp" width="100%" alt="Waterfall Loop Mill"/></a>
+<a href="./works/topics/escher-impossible-geometry/packages/single-impossible-geometry-studies/images/waterfall-loop-mill/image.w1600.webp"><img src="./works/topics/escher-impossible-geometry/packages/single-impossible-geometry-studies/images/waterfall-loop-mill/image.w400.webp" width="100%" alt="瀑布循环水磨"/></a>
 
-<b>Waterfall Loop Mill</b>
+<b>瀑布循环水磨</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -3441,11 +3441,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no co
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/escher-impossible-geometry/packages/single-impossible-geometry-studies/images/relativity-stair-room/image.w1600.webp"><img src="./works/topics/escher-impossible-geometry/packages/single-impossible-geometry-studies/images/relativity-stair-room/image.w400.webp" width="100%" alt="Relativity Stair Room"/></a>
+<a href="./works/topics/escher-impossible-geometry/packages/single-impossible-geometry-studies/images/relativity-stair-room/image.w1600.webp"><img src="./works/topics/escher-impossible-geometry/packages/single-impossible-geometry-studies/images/relativity-stair-room/image.w400.webp" width="100%" alt="相对性楼梯房间"/></a>
 
-<b>Relativity Stair Room</b>
+<b>相对性楼梯房间</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -3469,11 +3469,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no co
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/escher-impossible-geometry/packages/single-impossible-geometry-studies/images/impossible-bridge-archive/image.w1600.webp"><img src="./works/topics/escher-impossible-geometry/packages/single-impossible-geometry-studies/images/impossible-bridge-archive/image.w400.webp" width="100%" alt="Impossible Bridge Archive"/></a>
+<a href="./works/topics/escher-impossible-geometry/packages/single-impossible-geometry-studies/images/impossible-bridge-archive/image.w1600.webp"><img src="./works/topics/escher-impossible-geometry/packages/single-impossible-geometry-studies/images/impossible-bridge-archive/image.w400.webp" width="100%" alt="不可能桥档案馆"/></a>
 
-<b>Impossible Bridge Archive</b>
+<b>不可能桥档案馆</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -3497,11 +3497,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no co
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/escher-impossible-geometry/packages/single-impossible-geometry-studies/images/infinite-balcony-library/image.w1600.webp"><img src="./works/topics/escher-impossible-geometry/packages/single-impossible-geometry-studies/images/infinite-balcony-library/image.w400.webp" width="100%" alt="Infinite Balcony Library"/></a>
+<a href="./works/topics/escher-impossible-geometry/packages/single-impossible-geometry-studies/images/infinite-balcony-library/image.w1600.webp"><img src="./works/topics/escher-impossible-geometry/packages/single-impossible-geometry-studies/images/infinite-balcony-library/image.w400.webp" width="100%" alt="无限阳台图书馆"/></a>
 
-<b>Infinite Balcony Library</b>
+<b>无限阳台图书馆</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -3527,11 +3527,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no co
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/escher-impossible-geometry/packages/single-impossible-geometry-studies/images/cube-lattice-paradox/image.w1600.webp"><img src="./works/topics/escher-impossible-geometry/packages/single-impossible-geometry-studies/images/cube-lattice-paradox/image.w400.webp" width="100%" alt="Cube Lattice Paradox"/></a>
+<a href="./works/topics/escher-impossible-geometry/packages/single-impossible-geometry-studies/images/cube-lattice-paradox/image.w1600.webp"><img src="./works/topics/escher-impossible-geometry/packages/single-impossible-geometry-studies/images/cube-lattice-paradox/image.w400.webp" width="100%" alt="立方格架悖论"/></a>
 
-<b>Cube Lattice Paradox</b>
+<b>立方格架悖论</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -3555,11 +3555,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no co
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/escher-impossible-geometry/packages/single-impossible-geometry-studies/images/dual-gravity-plaza/image.w1600.webp"><img src="./works/topics/escher-impossible-geometry/packages/single-impossible-geometry-studies/images/dual-gravity-plaza/image.w400.webp" width="100%" alt="Dual Gravity Plaza"/></a>
+<a href="./works/topics/escher-impossible-geometry/packages/single-impossible-geometry-studies/images/dual-gravity-plaza/image.w1600.webp"><img src="./works/topics/escher-impossible-geometry/packages/single-impossible-geometry-studies/images/dual-gravity-plaza/image.w400.webp" width="100%" alt="双重重力广场"/></a>
 
-<b>Dual Gravity Plaza</b>
+<b>双重重力广场</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -3585,19 +3585,19 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no co
 </tr>
 </table>
 
-## Fictional Celebrity Snapshot
+## 名人虚构 snapshot · 伪手机抓拍
 
-> A Prompt Atlas theme for photorealistic candid-style images of invented public figures in mundane situations, testing casual camera realism and reasoning composition without real-person likeness.
+> 用完全虚构的公众人物制造看似随手拍的日常照片，测试手机照片真实感、场景推理和非真实事件构图。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/fictional-celebrity-snapshot/packages/single-fictional-snapshots/images/tech-founder-skate-stop/image.w1600.webp"><img src="./works/topics/fictional-celebrity-snapshot/packages/single-fictional-snapshots/images/tech-founder-skate-stop/image.w400.webp" width="100%" alt="Tech Founder Skate Stop"/></a>
+<a href="./works/topics/fictional-celebrity-snapshot/packages/single-fictional-snapshots/images/tech-founder-skate-stop/image.w1600.webp"><img src="./works/topics/fictional-celebrity-snapshot/packages/single-fictional-snapshots/images/tech-founder-skate-stop/image.w400.webp" width="100%" alt="科技创始人滑板停靠"/></a>
 
-<b>Tech Founder Skate Stop</b>
+<b>科技创始人滑板停靠</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -3621,11 +3621,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/fictional-celebrity-snapshot/packages/single-fictional-snapshots/images/design-icon-corner-store/image.w1600.webp"><img src="./works/topics/fictional-celebrity-snapshot/packages/single-fictional-snapshots/images/design-icon-corner-store/image.w400.webp" width="100%" alt="Design Icon Corner Store"/></a>
+<a href="./works/topics/fictional-celebrity-snapshot/packages/single-fictional-snapshots/images/design-icon-corner-store/image.w1600.webp"><img src="./works/topics/fictional-celebrity-snapshot/packages/single-fictional-snapshots/images/design-icon-corner-store/image.w400.webp" width="100%" alt="设计偶像便利店"/></a>
 
-<b>Design Icon Corner Store</b>
+<b>设计偶像便利店</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -3649,11 +3649,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/fictional-celebrity-snapshot/packages/single-fictional-snapshots/images/rocket-heiress-playground/image.w1600.webp"><img src="./works/topics/fictional-celebrity-snapshot/packages/single-fictional-snapshots/images/rocket-heiress-playground/image.w400.webp" width="100%" alt="Rocket Heiress Playground"/></a>
+<a href="./works/topics/fictional-celebrity-snapshot/packages/single-fictional-snapshots/images/rocket-heiress-playground/image.w1600.webp"><img src="./works/topics/fictional-celebrity-snapshot/packages/single-fictional-snapshots/images/rocket-heiress-playground/image.w400.webp" width="100%" alt="火箭继承人游乐场"/></a>
 
-<b>Rocket Heiress Playground</b>
+<b>火箭继承人游乐场</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -3679,11 +3679,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/fictional-celebrity-snapshot/packages/single-fictional-snapshots/images/pop-diva-laundromat/image.w1600.webp"><img src="./works/topics/fictional-celebrity-snapshot/packages/single-fictional-snapshots/images/pop-diva-laundromat/image.w400.webp" width="100%" alt="Pop Diva Laundromat"/></a>
+<a href="./works/topics/fictional-celebrity-snapshot/packages/single-fictional-snapshots/images/pop-diva-laundromat/image.w1600.webp"><img src="./works/topics/fictional-celebrity-snapshot/packages/single-fictional-snapshots/images/pop-diva-laundromat/image.w400.webp" width="100%" alt="流行天后洗衣房"/></a>
 
-<b>Pop Diva Laundromat</b>
+<b>流行天后洗衣房</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -3707,11 +3707,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/fictional-celebrity-snapshot/packages/single-fictional-snapshots/images/action-star-night-market/image.w1600.webp"><img src="./works/topics/fictional-celebrity-snapshot/packages/single-fictional-snapshots/images/action-star-night-market/image.w400.webp" width="100%" alt="Action Star Night Market"/></a>
+<a href="./works/topics/fictional-celebrity-snapshot/packages/single-fictional-snapshots/images/action-star-night-market/image.w1600.webp"><img src="./works/topics/fictional-celebrity-snapshot/packages/single-fictional-snapshots/images/action-star-night-market/image.w400.webp" width="100%" alt="动作明星夜市"/></a>
 
-<b>Action Star Night Market</b>
+<b>动作明星夜市</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -3735,11 +3735,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/fictional-celebrity-snapshot/packages/single-fictional-snapshots/images/fashion-muse-subway/image.w1600.webp"><img src="./works/topics/fictional-celebrity-snapshot/packages/single-fictional-snapshots/images/fashion-muse-subway/image.w400.webp" width="100%" alt="Fashion Muse Subway"/></a>
+<a href="./works/topics/fictional-celebrity-snapshot/packages/single-fictional-snapshots/images/fashion-muse-subway/image.w1600.webp"><img src="./works/topics/fictional-celebrity-snapshot/packages/single-fictional-snapshots/images/fashion-muse-subway/image.w400.webp" width="100%" alt="时装缪斯地铁"/></a>
 
-<b>Fashion Muse Subway</b>
+<b>时装缪斯地铁</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -3765,11 +3765,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/fictional-celebrity-snapshot/packages/single-fictional-snapshots/images/chef-legend-gas-station/image.w1600.webp"><img src="./works/topics/fictional-celebrity-snapshot/packages/single-fictional-snapshots/images/chef-legend-gas-station/image.w400.webp" width="100%" alt="Chef Legend Gas Station"/></a>
+<a href="./works/topics/fictional-celebrity-snapshot/packages/single-fictional-snapshots/images/chef-legend-gas-station/image.w1600.webp"><img src="./works/topics/fictional-celebrity-snapshot/packages/single-fictional-snapshots/images/chef-legend-gas-station/image.w400.webp" width="100%" alt="传奇主厨加油站"/></a>
 
-<b>Chef Legend Gas Station</b>
+<b>传奇主厨加油站</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -3793,11 +3793,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/fictional-celebrity-snapshot/packages/single-fictional-snapshots/images/indie-actor-rainy-bus/image.w1600.webp"><img src="./works/topics/fictional-celebrity-snapshot/packages/single-fictional-snapshots/images/indie-actor-rainy-bus/image.w400.webp" width="100%" alt="Indie Actor Rainy Bus"/></a>
+<a href="./works/topics/fictional-celebrity-snapshot/packages/single-fictional-snapshots/images/indie-actor-rainy-bus/image.w1600.webp"><img src="./works/topics/fictional-celebrity-snapshot/packages/single-fictional-snapshots/images/indie-actor-rainy-bus/image.w400.webp" width="100%" alt="独立演员雨夜公交"/></a>
 
-<b>Indie Actor Rainy Bus</b>
+<b>独立演员雨夜公交</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -3823,19 +3823,19 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </tr>
 </table>
 
-## Fictional IP Poster
+## 架空 IP 电影 / 动漫海报
 
-> A Prompt Atlas theme for fictional release-grade movie and animation posters, testing text rendering, structured layout, and photorealistic poster design with GPT Image 2.
+> 架空 IP 电影 / 动漫海报：虚构动漫或科幻片的发布级海报，测试标题字体、演员阵容、上映日期和虚构制片厂标识。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/fictional-ip-poster/packages/series-neon-railway-saga/images/01-key-art-poster/image.w1600.webp"><img src="./works/topics/fictional-ip-poster/packages/series-neon-railway-saga/images/01-key-art-poster/image.w400.webp" width="100%" alt="Key Art Poster"/></a>
+<a href="./works/topics/fictional-ip-poster/packages/series-neon-railway-saga/images/01-key-art-poster/image.w1600.webp"><img src="./works/topics/fictional-ip-poster/packages/series-neon-railway-saga/images/01-key-art-poster/image.w400.webp" width="100%" alt="主视觉海报"/></a>
 
-<b>Key Art Poster</b>
+<b>主视觉海报</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -3859,11 +3859,11 @@ No readable text except the specified fictional poster copy, no watermark, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/fictional-ip-poster/packages/single-fictional-release-posters/images/glass-orbit-poster/image.w1600.webp"><img src="./works/topics/fictional-ip-poster/packages/single-fictional-release-posters/images/glass-orbit-poster/image.w400.webp" width="100%" alt="Glass Orbit Poster"/></a>
+<a href="./works/topics/fictional-ip-poster/packages/single-fictional-release-posters/images/glass-orbit-poster/image.w1600.webp"><img src="./works/topics/fictional-ip-poster/packages/single-fictional-release-posters/images/glass-orbit-poster/image.w400.webp" width="100%" alt="玻璃轨道海报"/></a>
 
-<b>Glass Orbit Poster</b>
+<b>玻璃轨道海报</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -3887,11 +3887,11 @@ No readable text except the specified fictional poster copy, no watermark, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/fictional-ip-poster/packages/series-neon-railway-saga/images/02-teaser-poster/image.w1600.webp"><img src="./works/topics/fictional-ip-poster/packages/series-neon-railway-saga/images/02-teaser-poster/image.w400.webp" width="100%" alt="Teaser Poster"/></a>
+<a href="./works/topics/fictional-ip-poster/packages/series-neon-railway-saga/images/02-teaser-poster/image.w1600.webp"><img src="./works/topics/fictional-ip-poster/packages/series-neon-railway-saga/images/02-teaser-poster/image.w400.webp" width="100%" alt="先导海报"/></a>
 
-<b>Teaser Poster</b>
+<b>先导海报</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -3917,11 +3917,11 @@ No readable text except the specified fictional poster copy, no watermark, no re
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/fictional-ip-poster/packages/single-fictional-release-posters/images/clockwork-harbor-poster/image.w1600.webp"><img src="./works/topics/fictional-ip-poster/packages/single-fictional-release-posters/images/clockwork-harbor-poster/image.w400.webp" width="100%" alt="Clockwork Harbor Poster"/></a>
+<a href="./works/topics/fictional-ip-poster/packages/single-fictional-release-posters/images/clockwork-harbor-poster/image.w1600.webp"><img src="./works/topics/fictional-ip-poster/packages/single-fictional-release-posters/images/clockwork-harbor-poster/image.w400.webp" width="100%" alt="发条港湾海报"/></a>
 
-<b>Clockwork Harbor Poster</b>
+<b>发条港湾海报</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -3945,11 +3945,11 @@ No readable text except the specified fictional poster copy, no watermark, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/fictional-ip-poster/packages/series-neon-railway-saga/images/03-character-one-sheet/image.w1600.webp"><img src="./works/topics/fictional-ip-poster/packages/series-neon-railway-saga/images/03-character-one-sheet/image.w400.webp" width="100%" alt="Character One Sheet"/></a>
+<a href="./works/topics/fictional-ip-poster/packages/series-neon-railway-saga/images/03-character-one-sheet/image.w1600.webp"><img src="./works/topics/fictional-ip-poster/packages/series-neon-railway-saga/images/03-character-one-sheet/image.w400.webp" width="100%" alt="角色单人海报"/></a>
 
-<b>Character One Sheet</b>
+<b>角色单人海报</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -3973,11 +3973,11 @@ No readable text except the specified fictional poster copy, no watermark, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/fictional-ip-poster/packages/single-fictional-release-posters/images/salt-city-noir-poster/image.w1600.webp"><img src="./works/topics/fictional-ip-poster/packages/single-fictional-release-posters/images/salt-city-noir-poster/image.w400.webp" width="100%" alt="Salt City Noir Poster"/></a>
+<a href="./works/topics/fictional-ip-poster/packages/single-fictional-release-posters/images/salt-city-noir-poster/image.w1600.webp"><img src="./works/topics/fictional-ip-poster/packages/single-fictional-release-posters/images/salt-city-noir-poster/image.w400.webp" width="100%" alt="盐城黑色电影海报"/></a>
 
-<b>Salt City Noir Poster</b>
+<b>盐城黑色电影海报</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -4003,11 +4003,11 @@ No readable text except the specified fictional poster copy, no watermark, no re
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/fictional-ip-poster/packages/series-neon-railway-saga/images/04-premiere-wall-poster/image.w1600.webp"><img src="./works/topics/fictional-ip-poster/packages/series-neon-railway-saga/images/04-premiere-wall-poster/image.w400.webp" width="100%" alt="Premiere Wall Poster"/></a>
+<a href="./works/topics/fictional-ip-poster/packages/series-neon-railway-saga/images/04-premiere-wall-poster/image.w1600.webp"><img src="./works/topics/fictional-ip-poster/packages/series-neon-railway-saga/images/04-premiere-wall-poster/image.w400.webp" width="100%" alt="首映墙面海报"/></a>
 
-<b>Premiere Wall Poster</b>
+<b>首映墙面海报</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -4031,11 +4031,11 @@ No readable text except the specified fictional poster copy, no watermark, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/fictional-ip-poster/packages/single-fictional-release-posters/images/moon-gardeners-poster/image.w1600.webp"><img src="./works/topics/fictional-ip-poster/packages/single-fictional-release-posters/images/moon-gardeners-poster/image.w400.webp" width="100%" alt="Moon Gardeners Poster"/></a>
+<a href="./works/topics/fictional-ip-poster/packages/single-fictional-release-posters/images/moon-gardeners-poster/image.w1600.webp"><img src="./works/topics/fictional-ip-poster/packages/single-fictional-release-posters/images/moon-gardeners-poster/image.w400.webp" width="100%" alt="月球园丁海报"/></a>
 
-<b>Moon Gardeners Poster</b>
+<b>月球园丁海报</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -4061,19 +4061,19 @@ No readable text except the specified fictional poster copy, no watermark, no re
 </tr>
 </table>
 
-## Film Storyboard Sequence
+## 电影 Storyboard 分镜 6-12 帧
 
-> A Prompt Atlas theme for cinematic storyboard sheets with multi-panel shot planning, camera-movement arrows, physical action continuity, and production-board hierarchy.
+> 测试电影工业分镜板、多面板镜头语言、运动箭头、物理动作连续性和生产级版式层级。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/film-storyboard-sequence/packages/series-rain-alley-storyboards/images/01-reference-alley-board/image.w1600.webp"><img src="./works/topics/film-storyboard-sequence/packages/series-rain-alley-storyboards/images/01-reference-alley-board/image.w400.webp" width="100%" alt="Reference Alley Board"/></a>
+<a href="./works/topics/film-storyboard-sequence/packages/series-rain-alley-storyboards/images/01-reference-alley-board/image.w1600.webp"><img src="./works/topics/film-storyboard-sequence/packages/series-rain-alley-storyboards/images/01-reference-alley-board/image.w400.webp" width="100%" alt="基准雨巷分镜"/></a>
 
-<b>Reference Alley Board</b>
+<b>基准雨巷分镜</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -4097,11 +4097,11 @@ No readable text, no watermark, no logos, preserve exact 16:9 horizontal aspect 
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/film-storyboard-sequence/packages/single-production-storyboards/images/01-glass-spill-commercial/image.w1600.webp"><img src="./works/topics/film-storyboard-sequence/packages/single-production-storyboards/images/01-glass-spill-commercial/image.w400.webp" width="100%" alt="Glass Spill Commercial"/></a>
+<a href="./works/topics/film-storyboard-sequence/packages/single-production-storyboards/images/01-glass-spill-commercial/image.w1600.webp"><img src="./works/topics/film-storyboard-sequence/packages/single-production-storyboards/images/01-glass-spill-commercial/image.w400.webp" width="100%" alt="玻璃杯泼洒广告"/></a>
 
-<b>Glass Spill Commercial</b>
+<b>玻璃杯泼洒广告</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -4125,11 +4125,11 @@ No readable text, no watermark, no logos, preserve exact 16:9 horizontal aspect 
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/film-storyboard-sequence/packages/series-rain-alley-storyboards/images/02-market-pursuit-board/image.w1600.webp"><img src="./works/topics/film-storyboard-sequence/packages/series-rain-alley-storyboards/images/02-market-pursuit-board/image.w400.webp" width="100%" alt="Market Pursuit Board"/></a>
+<a href="./works/topics/film-storyboard-sequence/packages/series-rain-alley-storyboards/images/02-market-pursuit-board/image.w1600.webp"><img src="./works/topics/film-storyboard-sequence/packages/series-rain-alley-storyboards/images/02-market-pursuit-board/image.w400.webp" width="100%" alt="市场追逐分镜"/></a>
 
-<b>Market Pursuit Board</b>
+<b>市场追逐分镜</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -4155,11 +4155,11 @@ No readable text, no watermark, no logos, preserve exact 16:9 horizontal aspect 
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/film-storyboard-sequence/packages/single-production-storyboards/images/02-perfume-caustic-mockup/image.w1600.webp"><img src="./works/topics/film-storyboard-sequence/packages/single-production-storyboards/images/02-perfume-caustic-mockup/image.w400.webp" width="100%" alt="Perfume Caustic Mockup"/></a>
+<a href="./works/topics/film-storyboard-sequence/packages/single-production-storyboards/images/02-perfume-caustic-mockup/image.w1600.webp"><img src="./works/topics/film-storyboard-sequence/packages/single-production-storyboards/images/02-perfume-caustic-mockup/image.w400.webp" width="100%" alt="香水焦散广告样机"/></a>
 
-<b>Perfume Caustic Mockup</b>
+<b>香水焦散广告样机</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -4183,11 +4183,11 @@ No readable text, no watermark, no logos, preserve exact 16:9 horizontal aspect 
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/film-storyboard-sequence/packages/series-rain-alley-storyboards/images/03-rooftop-reveal-board/image.w1600.webp"><img src="./works/topics/film-storyboard-sequence/packages/series-rain-alley-storyboards/images/03-rooftop-reveal-board/image.w400.webp" width="100%" alt="Rooftop Reveal Board"/></a>
+<a href="./works/topics/film-storyboard-sequence/packages/series-rain-alley-storyboards/images/03-rooftop-reveal-board/image.w1600.webp"><img src="./works/topics/film-storyboard-sequence/packages/series-rain-alley-storyboards/images/03-rooftop-reveal-board/image.w400.webp" width="100%" alt="屋顶揭示分镜"/></a>
 
-<b>Rooftop Reveal Board</b>
+<b>屋顶揭示分镜</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -4211,11 +4211,11 @@ No readable text, no watermark, no logos, preserve exact 16:9 horizontal aspect 
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/film-storyboard-sequence/packages/single-production-storyboards/images/03-rescue-drone-warehouse/image.w1600.webp"><img src="./works/topics/film-storyboard-sequence/packages/single-production-storyboards/images/03-rescue-drone-warehouse/image.w400.webp" width="100%" alt="Rescue Drone Warehouse"/></a>
+<a href="./works/topics/film-storyboard-sequence/packages/single-production-storyboards/images/03-rescue-drone-warehouse/image.w1600.webp"><img src="./works/topics/film-storyboard-sequence/packages/single-production-storyboards/images/03-rescue-drone-warehouse/image.w400.webp" width="100%" alt="仓库救援无人机"/></a>
 
-<b>Rescue Drone Warehouse</b>
+<b>仓库救援无人机</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -4241,11 +4241,11 @@ No readable text, no watermark, no logos, preserve exact 16:9 horizontal aspect 
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/film-storyboard-sequence/packages/series-rain-alley-storyboards/images/04-tunnel-escape-board/image.w1600.webp"><img src="./works/topics/film-storyboard-sequence/packages/series-rain-alley-storyboards/images/04-tunnel-escape-board/image.w400.webp" width="100%" alt="Tunnel Escape Board"/></a>
+<a href="./works/topics/film-storyboard-sequence/packages/series-rain-alley-storyboards/images/04-tunnel-escape-board/image.w1600.webp"><img src="./works/topics/film-storyboard-sequence/packages/series-rain-alley-storyboards/images/04-tunnel-escape-board/image.w400.webp" width="100%" alt="隧道逃脱分镜"/></a>
 
-<b>Tunnel Escape Board</b>
+<b>隧道逃脱分镜</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -4269,11 +4269,11 @@ No readable text, no watermark, no logos, preserve exact 16:9 horizontal aspect 
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/film-storyboard-sequence/packages/single-production-storyboards/images/04-kitchen-dolly-drama/image.w1600.webp"><img src="./works/topics/film-storyboard-sequence/packages/single-production-storyboards/images/04-kitchen-dolly-drama/image.w400.webp" width="100%" alt="Kitchen Dolly Drama"/></a>
+<a href="./works/topics/film-storyboard-sequence/packages/single-production-storyboards/images/04-kitchen-dolly-drama/image.w1600.webp"><img src="./works/topics/film-storyboard-sequence/packages/single-production-storyboards/images/04-kitchen-dolly-drama/image.w400.webp" width="100%" alt="厨房推轨戏"/></a>
 
-<b>Kitchen Dolly Drama</b>
+<b>厨房推轨戏</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -4299,19 +4299,19 @@ No readable text, no watermark, no logos, preserve exact 16:9 horizontal aspect 
 </tr>
 </table>
 
-## Glowing Anatomy Overlay
+## Glowing Anatomy Overlay · 霓虹解剖
 
-> A Prompt Atlas theme for photoreal sports and wellness images with glowing anatomy, biomechanical stress, breathing, and performance-data overlays.
+> 霓虹解剖主题：在跑者、泳者、骑行者等实拍运动画面上叠加心率、呼吸、肌肉激活、关节应力和数据感图层。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/glowing-anatomy-overlay/packages/single-performance-overlays/images/01-runner-cardio-overlay/image.w1600.webp"><img src="./works/topics/glowing-anatomy-overlay/packages/single-performance-overlays/images/01-runner-cardio-overlay/image.w400.webp" width="100%" alt="Runner Cardio Overlay"/></a>
+<a href="./works/topics/glowing-anatomy-overlay/packages/single-performance-overlays/images/01-runner-cardio-overlay/image.w1600.webp"><img src="./works/topics/glowing-anatomy-overlay/packages/single-performance-overlays/images/01-runner-cardio-overlay/image.w400.webp" width="100%" alt="跑者心肺叠加"/></a>
 
-<b>Runner Cardio Overlay</b>
+<b>跑者心肺叠加</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -4335,11 +4335,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no br
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/glowing-anatomy-overlay/packages/single-performance-overlays/images/02-cyclist-power-overlay/image.w1600.webp"><img src="./works/topics/glowing-anatomy-overlay/packages/single-performance-overlays/images/02-cyclist-power-overlay/image.w400.webp" width="100%" alt="Cyclist Power Overlay"/></a>
+<a href="./works/topics/glowing-anatomy-overlay/packages/single-performance-overlays/images/02-cyclist-power-overlay/image.w1600.webp"><img src="./works/topics/glowing-anatomy-overlay/packages/single-performance-overlays/images/02-cyclist-power-overlay/image.w400.webp" width="100%" alt="骑行功率叠加"/></a>
 
-<b>Cyclist Power Overlay</b>
+<b>骑行功率叠加</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -4363,11 +4363,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no te
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/glowing-anatomy-overlay/packages/single-performance-overlays/images/03-swimmer-breath-overlay/image.w1600.webp"><img src="./works/topics/glowing-anatomy-overlay/packages/single-performance-overlays/images/03-swimmer-breath-overlay/image.w400.webp" width="100%" alt="Swimmer Breath Overlay"/></a>
+<a href="./works/topics/glowing-anatomy-overlay/packages/single-performance-overlays/images/03-swimmer-breath-overlay/image.w1600.webp"><img src="./works/topics/glowing-anatomy-overlay/packages/single-performance-overlays/images/03-swimmer-breath-overlay/image.w400.webp" width="100%" alt="泳者呼吸叠加"/></a>
 
-<b>Swimmer Breath Overlay</b>
+<b>泳者呼吸叠加</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -4393,11 +4393,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no la
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/glowing-anatomy-overlay/packages/single-performance-overlays/images/04-basketball-jump-overlay/image.w1600.webp"><img src="./works/topics/glowing-anatomy-overlay/packages/single-performance-overlays/images/04-basketball-jump-overlay/image.w400.webp" width="100%" alt="Basketball Jump Overlay"/></a>
+<a href="./works/topics/glowing-anatomy-overlay/packages/single-performance-overlays/images/04-basketball-jump-overlay/image.w1600.webp"><img src="./works/topics/glowing-anatomy-overlay/packages/single-performance-overlays/images/04-basketball-jump-overlay/image.w400.webp" width="100%" alt="篮球起跳叠加"/></a>
 
-<b>Basketball Jump Overlay</b>
+<b>篮球起跳叠加</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -4421,11 +4421,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no te
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/glowing-anatomy-overlay/packages/single-performance-overlays/images/05-yoga-alignment-overlay/image.w1600.webp"><img src="./works/topics/glowing-anatomy-overlay/packages/single-performance-overlays/images/05-yoga-alignment-overlay/image.w400.webp" width="100%" alt="Yoga Alignment Overlay"/></a>
+<a href="./works/topics/glowing-anatomy-overlay/packages/single-performance-overlays/images/05-yoga-alignment-overlay/image.w1600.webp"><img src="./works/topics/glowing-anatomy-overlay/packages/single-performance-overlays/images/05-yoga-alignment-overlay/image.w400.webp" width="100%" alt="瑜伽对齐叠加"/></a>
 
-<b>Yoga Alignment Overlay</b>
+<b>瑜伽对齐叠加</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -4449,11 +4449,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no st
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/glowing-anatomy-overlay/packages/single-performance-overlays/images/06-tennis-serve-overlay/image.w1600.webp"><img src="./works/topics/glowing-anatomy-overlay/packages/single-performance-overlays/images/06-tennis-serve-overlay/image.w400.webp" width="100%" alt="Tennis Serve Overlay"/></a>
+<a href="./works/topics/glowing-anatomy-overlay/packages/single-performance-overlays/images/06-tennis-serve-overlay/image.w1600.webp"><img src="./works/topics/glowing-anatomy-overlay/packages/single-performance-overlays/images/06-tennis-serve-overlay/image.w400.webp" width="100%" alt="网球发球叠加"/></a>
 
-<b>Tennis Serve Overlay</b>
+<b>网球发球叠加</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -4479,11 +4479,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no to
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/glowing-anatomy-overlay/packages/single-performance-overlays/images/07-rower-chain-overlay/image.w1600.webp"><img src="./works/topics/glowing-anatomy-overlay/packages/single-performance-overlays/images/07-rower-chain-overlay/image.w400.webp" width="100%" alt="Rower Chain Overlay"/></a>
+<a href="./works/topics/glowing-anatomy-overlay/packages/single-performance-overlays/images/07-rower-chain-overlay/image.w1600.webp"><img src="./works/topics/glowing-anatomy-overlay/packages/single-performance-overlays/images/07-rower-chain-overlay/image.w400.webp" width="100%" alt="划船动力链叠加"/></a>
 
-<b>Rower Chain Overlay</b>
+<b>划船动力链叠加</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -4507,11 +4507,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no ma
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/glowing-anatomy-overlay/packages/single-performance-overlays/images/08-sprinter-start-overlay/image.w1600.webp"><img src="./works/topics/glowing-anatomy-overlay/packages/single-performance-overlays/images/08-sprinter-start-overlay/image.w400.webp" width="100%" alt="Sprinter Start Overlay"/></a>
+<a href="./works/topics/glowing-anatomy-overlay/packages/single-performance-overlays/images/08-sprinter-start-overlay/image.w1600.webp"><img src="./works/topics/glowing-anatomy-overlay/packages/single-performance-overlays/images/08-sprinter-start-overlay/image.w400.webp" width="100%" alt="短跑起跑叠加"/></a>
 
-<b>Sprinter Start Overlay</b>
+<b>短跑起跑叠加</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -4537,19 +4537,19 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no la
 </tr>
 </table>
 
-## High-Speed Freeze
+## 高速摄影级定格
 
-> A Prompt Atlas theme for freezing fast physical events with controlled macro studio clarity.
+> 用受控微距棚拍清晰定格高速物理瞬间。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/high-speed-freeze/packages/single-impact-studies/images/water-crown/image.w1600.webp"><img src="./works/topics/high-speed-freeze/packages/single-impact-studies/images/water-crown/image.w400.webp" width="100%" alt="Water Crown"/></a>
+<a href="./works/topics/high-speed-freeze/packages/single-impact-studies/images/water-crown/image.w1600.webp"><img src="./works/topics/high-speed-freeze/packages/single-impact-studies/images/water-crown/image.w400.webp" width="100%" alt="水冠"/></a>
 
-<b>Water Crown</b>
+<b>水冠</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -4573,11 +4573,11 @@ No text, no watermark, no logo, no human hands, no visible weapon or launcher, n
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/high-speed-freeze/packages/single-impact-studies/images/citrus-burst/image.w1600.webp"><img src="./works/topics/high-speed-freeze/packages/single-impact-studies/images/citrus-burst/image.w400.webp" width="100%" alt="Citrus Burst"/></a>
+<a href="./works/topics/high-speed-freeze/packages/single-impact-studies/images/citrus-burst/image.w1600.webp"><img src="./works/topics/high-speed-freeze/packages/single-impact-studies/images/citrus-burst/image.w400.webp" width="100%" alt="柑橘爆裂"/></a>
 
-<b>Citrus Burst</b>
+<b>柑橘爆裂</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -4601,11 +4601,11 @@ No text, no watermark, no logo, no human hands, no visible weapon or launcher, n
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/high-speed-freeze/packages/single-impact-studies/images/powder-ring/image.w1600.webp"><img src="./works/topics/high-speed-freeze/packages/single-impact-studies/images/powder-ring/image.w400.webp" width="100%" alt="Powder Ring"/></a>
+<a href="./works/topics/high-speed-freeze/packages/single-impact-studies/images/powder-ring/image.w1600.webp"><img src="./works/topics/high-speed-freeze/packages/single-impact-studies/images/powder-ring/image.w400.webp" width="100%" alt="粉末环"/></a>
 
-<b>Powder Ring</b>
+<b>粉末环</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -4630,19 +4630,19 @@ No text, no watermark, no logo, no human hands, no visible weapon or launcher, n
 </tr>
 </table>
 
-## Hitman Office Level
+## Hitman 关卡 · 办公室游戏化
 
-> A Prompt Atlas theme for turning a corporate office into a readable top-down stealth-game level with patrol routes, objective UI, and layered HUD composition.
+> 把公司办公室转成俯视潜行动作关卡: NPC 巡逻路线、任务目标 UI、HUD 与办公空间布局必须清楚叠合。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/hitman-office-level/packages/series-corporate-stealth-map/images/01-reference-office-floor/image.w1600.webp"><img src="./works/topics/hitman-office-level/packages/series-corporate-stealth-map/images/01-reference-office-floor/image.w400.webp" width="100%" alt="Reference Office Floor"/></a>
+<a href="./works/topics/hitman-office-level/packages/series-corporate-stealth-map/images/01-reference-office-floor/image.w1600.webp"><img src="./works/topics/hitman-office-level/packages/series-corporate-stealth-map/images/01-reference-office-floor/image.w400.webp" width="100%" alt="基准办公室楼层"/></a>
 
-<b>Reference Office Floor</b>
+<b>基准办公室楼层</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -4666,11 +4666,11 @@ No readable text except "STEAL GPT-6", no watermark, no logos, preserve exact 1:
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/hitman-office-level/packages/single-office-level-studies/images/executive-floor-objective/image.w1600.webp"><img src="./works/topics/hitman-office-level/packages/single-office-level-studies/images/executive-floor-objective/image.w400.webp" width="100%" alt="Executive Floor Objective"/></a>
+<a href="./works/topics/hitman-office-level/packages/single-office-level-studies/images/executive-floor-objective/image.w1600.webp"><img src="./works/topics/hitman-office-level/packages/single-office-level-studies/images/executive-floor-objective/image.w400.webp" width="100%" alt="高管楼层目标"/></a>
 
-<b>Executive Floor Objective</b>
+<b>高管楼层目标</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -4694,11 +4694,11 @@ No readable text except "STEAL GPT-6", no watermark, no logos, preserve exact 1:
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/hitman-office-level/packages/series-corporate-stealth-map/images/02-server-vault-route/image.w1600.webp"><img src="./works/topics/hitman-office-level/packages/series-corporate-stealth-map/images/02-server-vault-route/image.w400.webp" width="100%" alt="Server Vault Route"/></a>
+<a href="./works/topics/hitman-office-level/packages/series-corporate-stealth-map/images/02-server-vault-route/image.w1600.webp"><img src="./works/topics/hitman-office-level/packages/series-corporate-stealth-map/images/02-server-vault-route/image.w400.webp" width="100%" alt="服务器金库路线"/></a>
 
-<b>Server Vault Route</b>
+<b>服务器金库路线</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -4724,11 +4724,11 @@ Use the reference image as layout source. No readable text except "STEAL GPT-6",
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/hitman-office-level/packages/single-office-level-studies/images/coworking-patrol-puzzle/image.w1600.webp"><img src="./works/topics/hitman-office-level/packages/single-office-level-studies/images/coworking-patrol-puzzle/image.w400.webp" width="100%" alt="Coworking Patrol Puzzle"/></a>
+<a href="./works/topics/hitman-office-level/packages/single-office-level-studies/images/coworking-patrol-puzzle/image.w1600.webp"><img src="./works/topics/hitman-office-level/packages/single-office-level-studies/images/coworking-patrol-puzzle/image.w400.webp" width="100%" alt="共享办公巡逻谜题"/></a>
 
-<b>Coworking Patrol Puzzle</b>
+<b>共享办公巡逻谜题</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -4752,11 +4752,11 @@ No readable text except "STEAL GPT-6", no watermark, no logos, preserve exact 1:
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/hitman-office-level/packages/series-corporate-stealth-map/images/03-boardroom-social-stealth/image.w1600.webp"><img src="./works/topics/hitman-office-level/packages/series-corporate-stealth-map/images/03-boardroom-social-stealth/image.w400.webp" width="100%" alt="Boardroom Social Stealth"/></a>
+<a href="./works/topics/hitman-office-level/packages/series-corporate-stealth-map/images/03-boardroom-social-stealth/image.w1600.webp"><img src="./works/topics/hitman-office-level/packages/series-corporate-stealth-map/images/03-boardroom-social-stealth/image.w400.webp" width="100%" alt="董事会议社交潜行"/></a>
 
-<b>Boardroom Social Stealth</b>
+<b>董事会议社交潜行</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -4780,11 +4780,11 @@ Use the reference image as layout source. No readable text except "STEAL GPT-6",
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/hitman-office-level/packages/series-corporate-stealth-map/images/04-afterhours-extraction/image.w1600.webp"><img src="./works/topics/hitman-office-level/packages/series-corporate-stealth-map/images/04-afterhours-extraction/image.w400.webp" width="100%" alt="Afterhours Extraction"/></a>
+<a href="./works/topics/hitman-office-level/packages/series-corporate-stealth-map/images/04-afterhours-extraction/image.w1600.webp"><img src="./works/topics/hitman-office-level/packages/series-corporate-stealth-map/images/04-afterhours-extraction/image.w400.webp" width="100%" alt="下班后撤离"/></a>
 
-<b>Afterhours Extraction</b>
+<b>下班后撤离</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -4810,11 +4810,11 @@ Use the reference image as layout source. No readable text except "STEAL GPT-6",
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/hitman-office-level/packages/single-office-level-studies/images/open-office-briefing-map/image.w1600.webp"><img src="./works/topics/hitman-office-level/packages/single-office-level-studies/images/open-office-briefing-map/image.w400.webp" width="100%" alt="Open Office Briefing Map"/></a>
+<a href="./works/topics/hitman-office-level/packages/single-office-level-studies/images/open-office-briefing-map/image.w1600.webp"><img src="./works/topics/hitman-office-level/packages/single-office-level-studies/images/open-office-briefing-map/image.w400.webp" width="100%" alt="开放办公简报地图"/></a>
 
-<b>Open Office Briefing Map</b>
+<b>开放办公简报地图</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -4841,19 +4841,19 @@ No readable text except "STEAL GPT-6", no watermark, no logos, preserve exact 1:
 </tr>
 </table>
 
-## Hyperreal Diorama Cube
+## Hyperreal Diorama Cube · 剖面立方
 
-> A Prompt Atlas theme for hyperreal cutaway cubes that compress surface worlds, geology, roots, water, fossils, and hidden chambers into one structured object.
+> 剖面立方主题：把顶面场景与四侧地层、树根、含水层、化石、熔岩腔等信息压缩成一个高真实度立方体。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/hyperreal-diorama-cube/packages/single-diorama-cube-studies/images/01-kyoto-rooftop-core/image.w1600.webp"><img src="./works/topics/hyperreal-diorama-cube/packages/single-diorama-cube-studies/images/01-kyoto-rooftop-core/image.w400.webp" width="100%" alt="Kyoto Rooftop Core"/></a>
+<a href="./works/topics/hyperreal-diorama-cube/packages/single-diorama-cube-studies/images/01-kyoto-rooftop-core/image.w1600.webp"><img src="./works/topics/hyperreal-diorama-cube/packages/single-diorama-cube-studies/images/01-kyoto-rooftop-core/image.w400.webp" width="100%" alt="京都屋顶岩芯"/></a>
 
-<b>Kyoto Rooftop Core</b>
+<b>京都屋顶岩芯</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -4877,11 +4877,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no fl
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/hyperreal-diorama-cube/packages/single-diorama-cube-studies/images/02-rainforest-canopy-core/image.w1600.webp"><img src="./works/topics/hyperreal-diorama-cube/packages/single-diorama-cube-studies/images/02-rainforest-canopy-core/image.w400.webp" width="100%" alt="Rainforest Canopy Core"/></a>
+<a href="./works/topics/hyperreal-diorama-cube/packages/single-diorama-cube-studies/images/02-rainforest-canopy-core/image.w1600.webp"><img src="./works/topics/hyperreal-diorama-cube/packages/single-diorama-cube-studies/images/02-rainforest-canopy-core/image.w400.webp" width="100%" alt="雨林冠层岩芯"/></a>
 
-<b>Rainforest Canopy Core</b>
+<b>雨林冠层岩芯</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -4905,11 +4905,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no fl
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/hyperreal-diorama-cube/packages/single-diorama-cube-studies/images/03-arctic-research-core/image.w1600.webp"><img src="./works/topics/hyperreal-diorama-cube/packages/single-diorama-cube-studies/images/03-arctic-research-core/image.w400.webp" width="100%" alt="Arctic Research Core"/></a>
+<a href="./works/topics/hyperreal-diorama-cube/packages/single-diorama-cube-studies/images/03-arctic-research-core/image.w1600.webp"><img src="./works/topics/hyperreal-diorama-cube/packages/single-diorama-cube-studies/images/03-arctic-research-core/image.w400.webp" width="100%" alt="北极科研岩芯"/></a>
 
-<b>Arctic Research Core</b>
+<b>北极科研岩芯</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -4935,11 +4935,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no po
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/hyperreal-diorama-cube/packages/single-diorama-cube-studies/images/04-mars-habitat-core/image.w1600.webp"><img src="./works/topics/hyperreal-diorama-cube/packages/single-diorama-cube-studies/images/04-mars-habitat-core/image.w400.webp" width="100%" alt="Mars Habitat Core"/></a>
+<a href="./works/topics/hyperreal-diorama-cube/packages/single-diorama-cube-studies/images/04-mars-habitat-core/image.w1600.webp"><img src="./works/topics/hyperreal-diorama-cube/packages/single-diorama-cube-studies/images/04-mars-habitat-core/image.w400.webp" width="100%" alt="火星栖居岩芯"/></a>
 
-<b>Mars Habitat Core</b>
+<b>火星栖居岩芯</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -4963,11 +4963,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/hyperreal-diorama-cube/packages/single-diorama-cube-studies/images/05-coral-atoll-core/image.w1600.webp"><img src="./works/topics/hyperreal-diorama-cube/packages/single-diorama-cube-studies/images/05-coral-atoll-core/image.w400.webp" width="100%" alt="Coral Atoll Core"/></a>
+<a href="./works/topics/hyperreal-diorama-cube/packages/single-diorama-cube-studies/images/05-coral-atoll-core/image.w1600.webp"><img src="./works/topics/hyperreal-diorama-cube/packages/single-diorama-cube-studies/images/05-coral-atoll-core/image.w400.webp" width="100%" alt="珊瑚环礁岩芯"/></a>
 
-<b>Coral Atoll Core</b>
+<b>珊瑚环礁岩芯</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -4991,11 +4991,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no ca
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/hyperreal-diorama-cube/packages/single-diorama-cube-studies/images/06-megacity-subway-core/image.w1600.webp"><img src="./works/topics/hyperreal-diorama-cube/packages/single-diorama-cube-studies/images/06-megacity-subway-core/image.w400.webp" width="100%" alt="Megacity Subway Core"/></a>
+<a href="./works/topics/hyperreal-diorama-cube/packages/single-diorama-cube-studies/images/06-megacity-subway-core/image.w1600.webp"><img src="./works/topics/hyperreal-diorama-cube/packages/single-diorama-cube-studies/images/06-megacity-subway-core/image.w400.webp" width="100%" alt="巨城地铁岩芯"/></a>
 
-<b>Megacity Subway Core</b>
+<b>巨城地铁岩芯</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -5021,11 +5021,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no br
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/hyperreal-diorama-cube/packages/single-diorama-cube-studies/images/07-volcanic-vineyard-core/image.w1600.webp"><img src="./works/topics/hyperreal-diorama-cube/packages/single-diorama-cube-studies/images/07-volcanic-vineyard-core/image.w400.webp" width="100%" alt="Volcanic Vineyard Core"/></a>
+<a href="./works/topics/hyperreal-diorama-cube/packages/single-diorama-cube-studies/images/07-volcanic-vineyard-core/image.w1600.webp"><img src="./works/topics/hyperreal-diorama-cube/packages/single-diorama-cube-studies/images/07-volcanic-vineyard-core/image.w400.webp" width="100%" alt="火山葡萄园岩芯"/></a>
 
-<b>Volcanic Vineyard Core</b>
+<b>火山葡萄园岩芯</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -5049,11 +5049,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no wi
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/hyperreal-diorama-cube/packages/single-diorama-cube-studies/images/08-desert-oasis-core/image.w1600.webp"><img src="./works/topics/hyperreal-diorama-cube/packages/single-diorama-cube-studies/images/08-desert-oasis-core/image.w400.webp" width="100%" alt="Desert Oasis Core"/></a>
+<a href="./works/topics/hyperreal-diorama-cube/packages/single-diorama-cube-studies/images/08-desert-oasis-core/image.w1600.webp"><img src="./works/topics/hyperreal-diorama-cube/packages/single-diorama-cube-studies/images/08-desert-oasis-core/image.w400.webp" width="100%" alt="沙漠绿洲岩芯"/></a>
 
-<b>Desert Oasis Core</b>
+<b>沙漠绿洲岩芯</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -5079,19 +5079,19 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no fl
 </tr>
 </table>
 
-## IKEA Instruction World
+## IKEA 万物化说明书
 
-> A Prompt Atlas theme for turning abstract life situations, recipes, and social rituals into flat-pack instruction worlds with structured layout, technical diagrams, and commercial mockup clarity.
+> 把一生、关系、食物和日常情绪画成平板包装说明书，用六角扳手、步骤箭头和小人表情测试幽默信息设计。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/ikea-instruction-world/packages/single-manual-worlds/images/assemble-a-life/image.w1600.webp"><img src="./works/topics/ikea-instruction-world/packages/single-manual-worlds/images/assemble-a-life/image.w400.webp" width="100%" alt="Assemble a Life"/></a>
+<a href="./works/topics/ikea-instruction-world/packages/single-manual-worlds/images/assemble-a-life/image.w1600.webp"><img src="./works/topics/ikea-instruction-world/packages/single-manual-worlds/images/assemble-a-life/image.w400.webp" width="100%" alt="组装一生"/></a>
 
-<b>Assemble a Life</b>
+<b>组装一生</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -5115,11 +5115,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/ikea-instruction-world/packages/single-manual-worlds/images/relationship-flat-pack/image.w1600.webp"><img src="./works/topics/ikea-instruction-world/packages/single-manual-worlds/images/relationship-flat-pack/image.w400.webp" width="100%" alt="Relationship Flat-Pack"/></a>
+<a href="./works/topics/ikea-instruction-world/packages/single-manual-worlds/images/relationship-flat-pack/image.w1600.webp"><img src="./works/topics/ikea-instruction-world/packages/single-manual-worlds/images/relationship-flat-pack/image.w400.webp" width="100%" alt="关系平板包装"/></a>
 
-<b>Relationship Flat-Pack</b>
+<b>关系平板包装</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -5143,11 +5143,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/ikea-instruction-world/packages/single-manual-worlds/images/hot-sour-soup-kit/image.w1600.webp"><img src="./works/topics/ikea-instruction-world/packages/single-manual-worlds/images/hot-sour-soup-kit/image.w400.webp" width="100%" alt="Hot Sour Soup Kit"/></a>
+<a href="./works/topics/ikea-instruction-world/packages/single-manual-worlds/images/hot-sour-soup-kit/image.w1600.webp"><img src="./works/topics/ikea-instruction-world/packages/single-manual-worlds/images/hot-sour-soup-kit/image.w400.webp" width="100%" alt="酸辣汤套件"/></a>
 
-<b>Hot Sour Soup Kit</b>
+<b>酸辣汤套件</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -5173,11 +5173,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/ikea-instruction-world/packages/single-manual-worlds/images/rainy-day-mood-kit/image.w1600.webp"><img src="./works/topics/ikea-instruction-world/packages/single-manual-worlds/images/rainy-day-mood-kit/image.w400.webp" width="100%" alt="Rainy Day Mood Kit"/></a>
+<a href="./works/topics/ikea-instruction-world/packages/single-manual-worlds/images/rainy-day-mood-kit/image.w1600.webp"><img src="./works/topics/ikea-instruction-world/packages/single-manual-worlds/images/rainy-day-mood-kit/image.w400.webp" width="100%" alt="雨天心情套件"/></a>
 
-<b>Rainy Day Mood Kit</b>
+<b>雨天心情套件</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -5201,11 +5201,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/ikea-instruction-world/packages/single-manual-worlds/images/apartment-move-cart/image.w1600.webp"><img src="./works/topics/ikea-instruction-world/packages/single-manual-worlds/images/apartment-move-cart/image.w400.webp" width="100%" alt="Apartment Move Cart"/></a>
+<a href="./works/topics/ikea-instruction-world/packages/single-manual-worlds/images/apartment-move-cart/image.w1600.webp"><img src="./works/topics/ikea-instruction-world/packages/single-manual-worlds/images/apartment-move-cart/image.w400.webp" width="100%" alt="搬家推车"/></a>
 
-<b>Apartment Move Cart</b>
+<b>搬家推车</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -5229,11 +5229,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/ikea-instruction-world/packages/single-manual-worlds/images/creative-burnout-repair/image.w1600.webp"><img src="./works/topics/ikea-instruction-world/packages/single-manual-worlds/images/creative-burnout-repair/image.w400.webp" width="100%" alt="Creative Burnout Repair"/></a>
+<a href="./works/topics/ikea-instruction-world/packages/single-manual-worlds/images/creative-burnout-repair/image.w1600.webp"><img src="./works/topics/ikea-instruction-world/packages/single-manual-worlds/images/creative-burnout-repair/image.w400.webp" width="100%" alt="创意枯竭维修"/></a>
 
-<b>Creative Burnout Repair</b>
+<b>创意枯竭维修</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -5259,11 +5259,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/ikea-instruction-world/packages/single-manual-worlds/images/friendship-shelf-system/image.w1600.webp"><img src="./works/topics/ikea-instruction-world/packages/single-manual-worlds/images/friendship-shelf-system/image.w400.webp" width="100%" alt="Friendship Shelf System"/></a>
+<a href="./works/topics/ikea-instruction-world/packages/single-manual-worlds/images/friendship-shelf-system/image.w1600.webp"><img src="./works/topics/ikea-instruction-world/packages/single-manual-worlds/images/friendship-shelf-system/image.w400.webp" width="100%" alt="友谊搁架系统"/></a>
 
-<b>Friendship Shelf System</b>
+<b>友谊搁架系统</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -5287,11 +5287,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/ikea-instruction-world/packages/single-manual-worlds/images/weekend-camping-module/image.w1600.webp"><img src="./works/topics/ikea-instruction-world/packages/single-manual-worlds/images/weekend-camping-module/image.w400.webp" width="100%" alt="Weekend Camping Module"/></a>
+<a href="./works/topics/ikea-instruction-world/packages/single-manual-worlds/images/weekend-camping-module/image.w1600.webp"><img src="./works/topics/ikea-instruction-world/packages/single-manual-worlds/images/weekend-camping-module/image.w400.webp" width="100%" alt="周末露营模块"/></a>
 
-<b>Weekend Camping Module</b>
+<b>周末露营模块</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -5317,19 +5317,19 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </tr>
 </table>
 
-## In-Image Translation
+## 图内翻译 · 保 typography 只换文字
 
-> A Prompt Atlas theme for in-image translation, testing text rendering, layout preservation, and localization workflow control with GPT Image 2.
+> 图内翻译 · 保 typography 只换文字：给英文 infographic，只翻文字到目标语言，字号、间距和图标位置全不动。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/in-image-translation/packages/series-poster-localization/images/01-english-source-poster/image.w1600.webp"><img src="./works/topics/in-image-translation/packages/series-poster-localization/images/01-english-source-poster/image.w400.webp" width="100%" alt="English Source Poster"/></a>
+<a href="./works/topics/in-image-translation/packages/series-poster-localization/images/01-english-source-poster/image.w1600.webp"><img src="./works/topics/in-image-translation/packages/series-poster-localization/images/01-english-source-poster/image.w400.webp" width="100%" alt="英文源海报"/></a>
 
-<b>English Source Poster</b>
+<b>英文源海报</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -5353,11 +5353,11 @@ No readable text except the specified English strings, no watermark, no logos, p
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/in-image-translation/packages/single-translation-surfaces/images/museum-wayfinding-card/image.w1600.webp"><img src="./works/topics/in-image-translation/packages/single-translation-surfaces/images/museum-wayfinding-card/image.w400.webp" width="100%" alt="Museum Wayfinding Card"/></a>
+<a href="./works/topics/in-image-translation/packages/single-translation-surfaces/images/museum-wayfinding-card/image.w1600.webp"><img src="./works/topics/in-image-translation/packages/single-translation-surfaces/images/museum-wayfinding-card/image.w400.webp" width="100%" alt="博物馆导视牌"/></a>
 
-<b>Museum Wayfinding Card</b>
+<b>博物馆导视牌</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -5381,11 +5381,11 @@ No readable text except the specified Chinese strings, no watermark, no logos, p
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/in-image-translation/packages/series-poster-localization/images/02-japanese-localized-poster/image.w1600.webp"><img src="./works/topics/in-image-translation/packages/series-poster-localization/images/02-japanese-localized-poster/image.w400.webp" width="100%" alt="Japanese Localized Poster"/></a>
+<a href="./works/topics/in-image-translation/packages/series-poster-localization/images/02-japanese-localized-poster/image.w1600.webp"><img src="./works/topics/in-image-translation/packages/series-poster-localization/images/02-japanese-localized-poster/image.w400.webp" width="100%" alt="日文本地化海报"/></a>
 
-<b>Japanese Localized Poster</b>
+<b>日文本地化海报</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -5411,11 +5411,11 @@ No readable text except the specified Japanese strings, no watermark, no logos, 
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/in-image-translation/packages/single-translation-surfaces/images/ingredient-label-sheet/image.w1600.webp"><img src="./works/topics/in-image-translation/packages/single-translation-surfaces/images/ingredient-label-sheet/image.w400.webp" width="100%" alt="Ingredient Label Sheet"/></a>
+<a href="./works/topics/in-image-translation/packages/single-translation-surfaces/images/ingredient-label-sheet/image.w1600.webp"><img src="./works/topics/in-image-translation/packages/single-translation-surfaces/images/ingredient-label-sheet/image.w400.webp" width="100%" alt="成分标签样张"/></a>
 
-<b>Ingredient Label Sheet</b>
+<b>成分标签样张</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -5439,11 +5439,11 @@ No readable text except the specified Spanish strings, no watermark, no logos, p
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/in-image-translation/packages/series-poster-localization/images/03-korean-localized-poster/image.w1600.webp"><img src="./works/topics/in-image-translation/packages/series-poster-localization/images/03-korean-localized-poster/image.w400.webp" width="100%" alt="Korean Localized Poster"/></a>
+<a href="./works/topics/in-image-translation/packages/series-poster-localization/images/03-korean-localized-poster/image.w1600.webp"><img src="./works/topics/in-image-translation/packages/series-poster-localization/images/03-korean-localized-poster/image.w400.webp" width="100%" alt="韩文本地化海报"/></a>
 
-<b>Korean Localized Poster</b>
+<b>韩文本地化海报</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -5467,11 +5467,11 @@ No readable text except the specified Korean strings, no watermark, no logos, pr
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/in-image-translation/packages/single-translation-surfaces/images/transit-safety-panel/image.w1600.webp"><img src="./works/topics/in-image-translation/packages/single-translation-surfaces/images/transit-safety-panel/image.w400.webp" width="100%" alt="Transit Safety Panel"/></a>
+<a href="./works/topics/in-image-translation/packages/single-translation-surfaces/images/transit-safety-panel/image.w1600.webp"><img src="./works/topics/in-image-translation/packages/single-translation-surfaces/images/transit-safety-panel/image.w400.webp" width="100%" alt="交通安全面板"/></a>
 
-<b>Transit Safety Panel</b>
+<b>交通安全面板</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -5497,11 +5497,11 @@ No readable text except the specified French strings, no watermark, no logos, pr
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/in-image-translation/packages/series-poster-localization/images/04-arabic-localized-poster/image.w1600.webp"><img src="./works/topics/in-image-translation/packages/series-poster-localization/images/04-arabic-localized-poster/image.w400.webp" width="100%" alt="Arabic Localized Poster"/></a>
+<a href="./works/topics/in-image-translation/packages/series-poster-localization/images/04-arabic-localized-poster/image.w1600.webp"><img src="./works/topics/in-image-translation/packages/series-poster-localization/images/04-arabic-localized-poster/image.w400.webp" width="100%" alt="阿拉伯文本地化海报"/></a>
 
-<b>Arabic Localized Poster</b>
+<b>阿拉伯文本地化海报</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -5525,11 +5525,11 @@ No readable text except the specified Arabic strings, no watermark, no logos, pr
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/in-image-translation/packages/single-translation-surfaces/images/app-onboarding-board/image.w1600.webp"><img src="./works/topics/in-image-translation/packages/single-translation-surfaces/images/app-onboarding-board/image.w400.webp" width="100%" alt="App Onboarding Board"/></a>
+<a href="./works/topics/in-image-translation/packages/single-translation-surfaces/images/app-onboarding-board/image.w1600.webp"><img src="./works/topics/in-image-translation/packages/single-translation-surfaces/images/app-onboarding-board/image.w400.webp" width="100%" alt="应用引导稿板"/></a>
 
-<b>App Onboarding Board</b>
+<b>应用引导稿板</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -5555,19 +5555,19 @@ No readable text except the specified German strings, no watermark, no logos, pr
 </tr>
 </table>
 
-## JSON Business Card
+## JSON 名片 · Code as Object
 
-> A Prompt Atlas theme for business cards where the contact identity is rendered as a precise JSON code block on a physical printed object.
+> 测试把 JSON 代码块变成真实名片物件: 可读文本、语法高亮、烫金和代码编辑器式装饰。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/json-business-card/packages/single-code-object-cards/images/foil-founder-card/image.w1600.webp"><img src="./works/topics/json-business-card/packages/single-code-object-cards/images/foil-founder-card/image.w400.webp" width="100%" alt="Foil Founder Card"/></a>
+<a href="./works/topics/json-business-card/packages/single-code-object-cards/images/foil-founder-card/image.w1600.webp"><img src="./works/topics/json-business-card/packages/single-code-object-cards/images/foil-founder-card/image.w400.webp" width="100%" alt="烫金创始人名片"/></a>
 
-<b>Foil Founder Card</b>
+<b>烫金创始人名片</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -5591,11 +5591,11 @@ No readable text except the specified JSON code block, no watermark, no logos, p
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/json-business-card/packages/single-code-object-cards/images/dark-mode-card/image.w1600.webp"><img src="./works/topics/json-business-card/packages/single-code-object-cards/images/dark-mode-card/image.w400.webp" width="100%" alt="Dark Mode Card"/></a>
+<a href="./works/topics/json-business-card/packages/single-code-object-cards/images/dark-mode-card/image.w1600.webp"><img src="./works/topics/json-business-card/packages/single-code-object-cards/images/dark-mode-card/image.w400.webp" width="100%" alt="暗色模式名片"/></a>
 
-<b>Dark Mode Card</b>
+<b>暗色模式名片</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -5619,11 +5619,11 @@ No readable text except the specified JSON code block, no watermark, no logos, p
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/json-business-card/packages/single-code-object-cards/images/translucent-acrylic-card/image.w1600.webp"><img src="./works/topics/json-business-card/packages/single-code-object-cards/images/translucent-acrylic-card/image.w400.webp" width="100%" alt="Translucent Acrylic Card"/></a>
+<a href="./works/topics/json-business-card/packages/single-code-object-cards/images/translucent-acrylic-card/image.w1600.webp"><img src="./works/topics/json-business-card/packages/single-code-object-cards/images/translucent-acrylic-card/image.w400.webp" width="100%" alt="半透明亚克力名片"/></a>
 
-<b>Translucent Acrylic Card</b>
+<b>半透明亚克力名片</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -5649,11 +5649,11 @@ No readable text except the specified JSON code block, no watermark, no logos, p
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/json-business-card/packages/single-code-object-cards/images/letterpress-code-card/image.w1600.webp"><img src="./works/topics/json-business-card/packages/single-code-object-cards/images/letterpress-code-card/image.w400.webp" width="100%" alt="Letterpress Code Card"/></a>
+<a href="./works/topics/json-business-card/packages/single-code-object-cards/images/letterpress-code-card/image.w1600.webp"><img src="./works/topics/json-business-card/packages/single-code-object-cards/images/letterpress-code-card/image.w400.webp" width="100%" alt="活版代码名片"/></a>
 
-<b>Letterpress Code Card</b>
+<b>活版代码名片</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -5677,11 +5677,11 @@ No readable text except the specified JSON code block, no watermark, no logos, p
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/json-business-card/packages/single-code-object-cards/images/embossed-api-card/image.w1600.webp"><img src="./works/topics/json-business-card/packages/single-code-object-cards/images/embossed-api-card/image.w400.webp" width="100%" alt="Embossed API Card"/></a>
+<a href="./works/topics/json-business-card/packages/single-code-object-cards/images/embossed-api-card/image.w1600.webp"><img src="./works/topics/json-business-card/packages/single-code-object-cards/images/embossed-api-card/image.w400.webp" width="100%" alt="压凸 API 名片"/></a>
 
-<b>Embossed API Card</b>
+<b>压凸 API 名片</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -5705,11 +5705,11 @@ No readable text except the specified JSON code block, no watermark, no logos, p
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/json-business-card/packages/single-code-object-cards/images/minimal-white-card/image.w1600.webp"><img src="./works/topics/json-business-card/packages/single-code-object-cards/images/minimal-white-card/image.w400.webp" width="100%" alt="Minimal White Card"/></a>
+<a href="./works/topics/json-business-card/packages/single-code-object-cards/images/minimal-white-card/image.w1600.webp"><img src="./works/topics/json-business-card/packages/single-code-object-cards/images/minimal-white-card/image.w400.webp" width="100%" alt="极简白色名片"/></a>
 
-<b>Minimal White Card</b>
+<b>极简白色名片</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -5735,11 +5735,11 @@ No readable text except the specified JSON code block, no watermark, no logos, p
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/json-business-card/packages/single-code-object-cards/images/holographic-startup-card/image.w1600.webp"><img src="./works/topics/json-business-card/packages/single-code-object-cards/images/holographic-startup-card/image.w400.webp" width="100%" alt="Holographic Startup Card"/></a>
+<a href="./works/topics/json-business-card/packages/single-code-object-cards/images/holographic-startup-card/image.w1600.webp"><img src="./works/topics/json-business-card/packages/single-code-object-cards/images/holographic-startup-card/image.w400.webp" width="100%" alt="镭射创业名片"/></a>
 
-<b>Holographic Startup Card</b>
+<b>镭射创业名片</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -5763,11 +5763,11 @@ No readable text except the specified JSON code block, no watermark, no logos, p
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/json-business-card/packages/single-code-object-cards/images/terminal-window-card/image.w1600.webp"><img src="./works/topics/json-business-card/packages/single-code-object-cards/images/terminal-window-card/image.w400.webp" width="100%" alt="Terminal Window Card"/></a>
+<a href="./works/topics/json-business-card/packages/single-code-object-cards/images/terminal-window-card/image.w1600.webp"><img src="./works/topics/json-business-card/packages/single-code-object-cards/images/terminal-window-card/image.w400.webp" width="100%" alt="终端窗口名片"/></a>
 
-<b>Terminal Window Card</b>
+<b>终端窗口名片</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -5793,19 +5793,19 @@ No readable text except the specified JSON code block, no watermark, no logos, p
 </tr>
 </table>
 
-## Maps to Treasure Map
+## Google Maps → 羊皮纸藏宝图
 
-> A Prompt Atlas theme for converting modern map topology into physically believable treasure-map artifacts, testing material transformation, route reasoning, and real-world cartographic structure.
+> 测试把现代地图路网拓扑换壳为可信的羊皮纸藏宝图，保留路线结构、真实世界方位感和材质物理细节。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/maps-to-treasure-map/packages/series-hutong-parchment/images/01-source-hutong-topology/image.w1600.webp"><img src="./works/topics/maps-to-treasure-map/packages/series-hutong-parchment/images/01-source-hutong-topology/image.w400.webp" width="100%" alt="Source Hutong Topology"/></a>
+<a href="./works/topics/maps-to-treasure-map/packages/series-hutong-parchment/images/01-source-hutong-topology/image.w1600.webp"><img src="./works/topics/maps-to-treasure-map/packages/series-hutong-parchment/images/01-source-hutong-topology/image.w400.webp" width="100%" alt="胡同拓扑源图"/></a>
 
-<b>Source Hutong Topology</b>
+<b>胡同拓扑源图</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -5829,11 +5829,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no ap
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/maps-to-treasure-map/packages/single-cartographic-relics/images/estate-neighborhood-scroll/image.w1600.webp"><img src="./works/topics/maps-to-treasure-map/packages/single-cartographic-relics/images/estate-neighborhood-scroll/image.w400.webp" width="100%" alt="Estate Neighborhood Scroll"/></a>
+<a href="./works/topics/maps-to-treasure-map/packages/single-cartographic-relics/images/estate-neighborhood-scroll/image.w1600.webp"><img src="./works/topics/maps-to-treasure-map/packages/single-cartographic-relics/images/estate-neighborhood-scroll/image.w400.webp" width="100%" alt="地产街区卷轴"/></a>
 
-<b>Estate Neighborhood Scroll</b>
+<b>地产街区卷轴</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -5857,11 +5857,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/maps-to-treasure-map/packages/series-hutong-parchment/images/02-parchment-sea-chart/image.w1600.webp"><img src="./works/topics/maps-to-treasure-map/packages/series-hutong-parchment/images/02-parchment-sea-chart/image.w400.webp" width="100%" alt="Parchment Sea Chart"/></a>
+<a href="./works/topics/maps-to-treasure-map/packages/series-hutong-parchment/images/02-parchment-sea-chart/image.w1600.webp"><img src="./works/topics/maps-to-treasure-map/packages/series-hutong-parchment/images/02-parchment-sea-chart/image.w400.webp" width="100%" alt="羊皮纸航海图"/></a>
 
-<b>Parchment Sea Chart</b>
+<b>羊皮纸航海图</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -5887,11 +5887,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no br
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/maps-to-treasure-map/packages/single-cartographic-relics/images/subway-labyrinth-chart/image.w1600.webp"><img src="./works/topics/maps-to-treasure-map/packages/single-cartographic-relics/images/subway-labyrinth-chart/image.w400.webp" width="100%" alt="Subway Labyrinth Chart"/></a>
+<a href="./works/topics/maps-to-treasure-map/packages/single-cartographic-relics/images/subway-labyrinth-chart/image.w1600.webp"><img src="./works/topics/maps-to-treasure-map/packages/single-cartographic-relics/images/subway-labyrinth-chart/image.w400.webp" width="100%" alt="地铁迷宫古图"/></a>
 
-<b>Subway Labyrinth Chart</b>
+<b>地铁迷宫古图</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -5915,11 +5915,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no tr
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/maps-to-treasure-map/packages/series-hutong-parchment/images/03-wax-sealed-route/image.w1600.webp"><img src="./works/topics/maps-to-treasure-map/packages/series-hutong-parchment/images/03-wax-sealed-route/image.w400.webp" width="100%" alt="Wax-Sealed Route"/></a>
+<a href="./works/topics/maps-to-treasure-map/packages/series-hutong-parchment/images/03-wax-sealed-route/image.w1600.webp"><img src="./works/topics/maps-to-treasure-map/packages/series-hutong-parchment/images/03-wax-sealed-route/image.w400.webp" width="100%" alt="蜡封路线"/></a>
 
-<b>Wax-Sealed Route</b>
+<b>蜡封路线</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -5943,11 +5943,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no br
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/maps-to-treasure-map/packages/single-cartographic-relics/images/mountain-trail-parchment/image.w1600.webp"><img src="./works/topics/maps-to-treasure-map/packages/single-cartographic-relics/images/mountain-trail-parchment/image.w400.webp" width="100%" alt="Mountain Trail Parchment"/></a>
+<a href="./works/topics/maps-to-treasure-map/packages/single-cartographic-relics/images/mountain-trail-parchment/image.w1600.webp"><img src="./works/topics/maps-to-treasure-map/packages/single-cartographic-relics/images/mountain-trail-parchment/image.w400.webp" width="100%" alt="山路羊皮纸"/></a>
 
-<b>Mountain Trail Parchment</b>
+<b>山路羊皮纸</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -5973,11 +5973,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no pa
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/maps-to-treasure-map/packages/series-hutong-parchment/images/04-travel-keepsake-map/image.w1600.webp"><img src="./works/topics/maps-to-treasure-map/packages/series-hutong-parchment/images/04-travel-keepsake-map/image.w400.webp" width="100%" alt="Travel Keepsake Map"/></a>
+<a href="./works/topics/maps-to-treasure-map/packages/series-hutong-parchment/images/04-travel-keepsake-map/image.w1600.webp"><img src="./works/topics/maps-to-treasure-map/packages/series-hutong-parchment/images/04-travel-keepsake-map/image.w400.webp" width="100%" alt="旅行纪念藏宝图"/></a>
 
-<b>Travel Keepsake Map</b>
+<b>旅行纪念藏宝图</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -6001,11 +6001,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no br
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/maps-to-treasure-map/packages/single-cartographic-relics/images/food-crawl-island-map/image.w1600.webp"><img src="./works/topics/maps-to-treasure-map/packages/single-cartographic-relics/images/food-crawl-island-map/image.w400.webp" width="100%" alt="Food Crawl Island Map"/></a>
+<a href="./works/topics/maps-to-treasure-map/packages/single-cartographic-relics/images/food-crawl-island-map/image.w1600.webp"><img src="./works/topics/maps-to-treasure-map/packages/single-cartographic-relics/images/food-crawl-island-map/image.w400.webp" width="100%" alt="美食路线岛图"/></a>
 
-<b>Food Crawl Island Map</b>
+<b>美食路线岛图</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -6031,19 +6031,19 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </tr>
 </table>
 
-## Material Swaps
+## 材质错位
 
-> A Prompt Atlas theme for physically believable objects rebuilt from unexpected materials, testing light, weight, surface texture, and structural plausibility.
+> 测试把熟悉物体重构为异常材质时的物理可信度: 光照、重量、表面纹理、边缘和结构强度。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/material-swaps/packages/single-material-impossibilities/images/butter-palace-gate/image.w1600.webp"><img src="./works/topics/material-swaps/packages/single-material-impossibilities/images/butter-palace-gate/image.w400.webp" width="100%" alt="Butter Palace Gate"/></a>
+<a href="./works/topics/material-swaps/packages/single-material-impossibilities/images/butter-palace-gate/image.w1600.webp"><img src="./works/topics/material-swaps/packages/single-material-impossibilities/images/butter-palace-gate/image.w400.webp" width="100%" alt="黄油宫门"/></a>
 
-<b>Butter Palace Gate</b>
+<b>黄油宫门</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -6067,11 +6067,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/material-swaps/packages/single-material-impossibilities/images/glass-rose-stem/image.w1600.webp"><img src="./works/topics/material-swaps/packages/single-material-impossibilities/images/glass-rose-stem/image.w400.webp" width="100%" alt="Glass Rose Stem"/></a>
+<a href="./works/topics/material-swaps/packages/single-material-impossibilities/images/glass-rose-stem/image.w1600.webp"><img src="./works/topics/material-swaps/packages/single-material-impossibilities/images/glass-rose-stem/image.w400.webp" width="100%" alt="玻璃玫瑰"/></a>
 
-<b>Glass Rose Stem</b>
+<b>玻璃玫瑰</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -6095,11 +6095,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no pl
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/material-swaps/packages/single-material-impossibilities/images/lace-cathedral/image.w1600.webp"><img src="./works/topics/material-swaps/packages/single-material-impossibilities/images/lace-cathedral/image.w400.webp" width="100%" alt="Lace Cathedral"/></a>
+<a href="./works/topics/material-swaps/packages/single-material-impossibilities/images/lace-cathedral/image.w1600.webp"><img src="./works/topics/material-swaps/packages/single-material-impossibilities/images/lace-cathedral/image.w400.webp" width="100%" alt="蕾丝教堂"/></a>
 
-<b>Lace Cathedral</b>
+<b>蕾丝教堂</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -6125,11 +6125,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no so
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/material-swaps/packages/single-material-impossibilities/images/porcelain-ocean-wave/image.w1600.webp"><img src="./works/topics/material-swaps/packages/single-material-impossibilities/images/porcelain-ocean-wave/image.w400.webp" width="100%" alt="Porcelain Ocean Wave"/></a>
+<a href="./works/topics/material-swaps/packages/single-material-impossibilities/images/porcelain-ocean-wave/image.w1600.webp"><img src="./works/topics/material-swaps/packages/single-material-impossibilities/images/porcelain-ocean-wave/image.w400.webp" width="100%" alt="瓷质海浪"/></a>
 
-<b>Porcelain Ocean Wave</b>
+<b>瓷质海浪</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -6153,11 +6153,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/material-swaps/packages/single-material-impossibilities/images/wax-library-chair/image.w1600.webp"><img src="./works/topics/material-swaps/packages/single-material-impossibilities/images/wax-library-chair/image.w400.webp" width="100%" alt="Wax Library Chair"/></a>
+<a href="./works/topics/material-swaps/packages/single-material-impossibilities/images/wax-library-chair/image.w1600.webp"><img src="./works/topics/material-swaps/packages/single-material-impossibilities/images/wax-library-chair/image.w400.webp" width="100%" alt="蜡制图书馆椅"/></a>
 
-<b>Wax Library Chair</b>
+<b>蜡制图书馆椅</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -6181,11 +6181,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/material-swaps/packages/single-material-impossibilities/images/rubber-bonsai-tree/image.w1600.webp"><img src="./works/topics/material-swaps/packages/single-material-impossibilities/images/rubber-bonsai-tree/image.w400.webp" width="100%" alt="Rubber Bonsai Tree"/></a>
+<a href="./works/topics/material-swaps/packages/single-material-impossibilities/images/rubber-bonsai-tree/image.w1600.webp"><img src="./works/topics/material-swaps/packages/single-material-impossibilities/images/rubber-bonsai-tree/image.w400.webp" width="100%" alt="橡胶盆景"/></a>
 
-<b>Rubber Bonsai Tree</b>
+<b>橡胶盆景</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -6211,11 +6211,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/material-swaps/packages/single-material-impossibilities/images/salt-crystal-sneaker/image.w1600.webp"><img src="./works/topics/material-swaps/packages/single-material-impossibilities/images/salt-crystal-sneaker/image.w400.webp" width="100%" alt="Salt Crystal Sneaker"/></a>
+<a href="./works/topics/material-swaps/packages/single-material-impossibilities/images/salt-crystal-sneaker/image.w1600.webp"><img src="./works/topics/material-swaps/packages/single-material-impossibilities/images/salt-crystal-sneaker/image.w400.webp" width="100%" alt="盐晶运动鞋"/></a>
 
-<b>Salt Crystal Sneaker</b>
+<b>盐晶运动鞋</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -6242,19 +6242,19 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no br
 </tr>
 </table>
 
-## Micro-Engraved Jewelry
+## 米粒级微缩刻字 · Jewelry 定制
 
-> A Prompt Atlas theme for pixel-level inscription placement on jewelry and tiny luxury objects, testing readable micro text, macro material realism, and commercial emotional value.
+> 测试珠宝和微型奢侈品上的像素级刻字定位、可读微观文字、微距材质真实感和 C 端情感定制价值。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/micro-engraved-jewelry/packages/series-inner-ring-inscription/images/01-reference-ring/image.w1600.webp"><img src="./works/topics/micro-engraved-jewelry/packages/series-inner-ring-inscription/images/01-reference-ring/image.w400.webp" width="100%" alt="Reference Ring"/></a>
+<a href="./works/topics/micro-engraved-jewelry/packages/series-inner-ring-inscription/images/01-reference-ring/image.w1600.webp"><img src="./works/topics/micro-engraved-jewelry/packages/series-inner-ring-inscription/images/01-reference-ring/image.w400.webp" width="100%" alt="基准戒指"/></a>
 
-<b>Reference Ring</b>
+<b>基准戒指</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -6278,11 +6278,11 @@ No readable text except the specified phrase "MAYA 2026", no watermark, no logos
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/micro-engraved-jewelry/packages/single-micro-inscription-studies/images/named-rice-grain/image.w1600.webp"><img src="./works/topics/micro-engraved-jewelry/packages/single-micro-inscription-studies/images/named-rice-grain/image.w400.webp" width="100%" alt="Named Rice Grain"/></a>
+<a href="./works/topics/micro-engraved-jewelry/packages/single-micro-inscription-studies/images/named-rice-grain/image.w1600.webp"><img src="./works/topics/micro-engraved-jewelry/packages/single-micro-inscription-studies/images/named-rice-grain/image.w400.webp" width="100%" alt="姓名米粒"/></a>
 
-<b>Named Rice Grain</b>
+<b>姓名米粒</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -6306,11 +6306,11 @@ No readable text except the specified name "LINA", no watermark, no logos, prese
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/micro-engraved-jewelry/packages/series-inner-ring-inscription/images/02-wedding-band-gold/image.w1600.webp"><img src="./works/topics/micro-engraved-jewelry/packages/series-inner-ring-inscription/images/02-wedding-band-gold/image.w400.webp" width="100%" alt="Wedding Band Gold"/></a>
+<a href="./works/topics/micro-engraved-jewelry/packages/series-inner-ring-inscription/images/02-wedding-band-gold/image.w1600.webp"><img src="./works/topics/micro-engraved-jewelry/packages/series-inner-ring-inscription/images/02-wedding-band-gold/image.w400.webp" width="100%" alt="金色婚戒"/></a>
 
-<b>Wedding Band Gold</b>
+<b>金色婚戒</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -6336,11 +6336,11 @@ No readable text except the specified phrase "MAYA 2026", no watermark, no logos
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/micro-engraved-jewelry/packages/single-micro-inscription-studies/images/locket-edge-script/image.w1600.webp"><img src="./works/topics/micro-engraved-jewelry/packages/single-micro-inscription-studies/images/locket-edge-script/image.w400.webp" width="100%" alt="Locket Edge Script"/></a>
+<a href="./works/topics/micro-engraved-jewelry/packages/single-micro-inscription-studies/images/locket-edge-script/image.w1600.webp"><img src="./works/topics/micro-engraved-jewelry/packages/single-micro-inscription-studies/images/locket-edge-script/image.w400.webp" width="100%" alt="吊坠边缘刻字"/></a>
 
-<b>Locket Edge Script</b>
+<b>吊坠边缘刻字</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -6364,11 +6364,11 @@ No readable text except the specified phrase "ALWAYS NEAR", no watermark, no log
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/micro-engraved-jewelry/packages/series-inner-ring-inscription/images/03-sapphire-shadow/image.w1600.webp"><img src="./works/topics/micro-engraved-jewelry/packages/series-inner-ring-inscription/images/03-sapphire-shadow/image.w400.webp" width="100%" alt="Sapphire Shadow"/></a>
+<a href="./works/topics/micro-engraved-jewelry/packages/series-inner-ring-inscription/images/03-sapphire-shadow/image.w1600.webp"><img src="./works/topics/micro-engraved-jewelry/packages/series-inner-ring-inscription/images/03-sapphire-shadow/image.w400.webp" width="100%" alt="蓝宝石阴影"/></a>
 
-<b>Sapphire Shadow</b>
+<b>蓝宝石阴影</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -6392,11 +6392,11 @@ No readable text except the specified phrase "MAYA 2026", no watermark, no logos
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/micro-engraved-jewelry/packages/single-micro-inscription-studies/images/watch-gear-initials/image.w1600.webp"><img src="./works/topics/micro-engraved-jewelry/packages/single-micro-inscription-studies/images/watch-gear-initials/image.w400.webp" width="100%" alt="Watch Gear Initials"/></a>
+<a href="./works/topics/micro-engraved-jewelry/packages/single-micro-inscription-studies/images/watch-gear-initials/image.w1600.webp"><img src="./works/topics/micro-engraved-jewelry/packages/single-micro-inscription-studies/images/watch-gear-initials/image.w400.webp" width="100%" alt="腕表齿轮 initials"/></a>
 
-<b>Watch Gear Initials</b>
+<b>腕表齿轮 initials</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -6422,11 +6422,11 @@ No readable text except the specified initials "A+J", no watermark, no logos, pr
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/micro-engraved-jewelry/packages/series-inner-ring-inscription/images/04-retail-macro/image.w1600.webp"><img src="./works/topics/micro-engraved-jewelry/packages/series-inner-ring-inscription/images/04-retail-macro/image.w400.webp" width="100%" alt="Retail Macro"/></a>
+<a href="./works/topics/micro-engraved-jewelry/packages/series-inner-ring-inscription/images/04-retail-macro/image.w1600.webp"><img src="./works/topics/micro-engraved-jewelry/packages/series-inner-ring-inscription/images/04-retail-macro/image.w400.webp" width="100%" alt="零售微距"/></a>
 
-<b>Retail Macro</b>
+<b>零售微距</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -6450,11 +6450,11 @@ No readable text except the specified phrase "MAYA 2026", no watermark, no logos
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/micro-engraved-jewelry/packages/single-micro-inscription-studies/images/stamp-perforation-message/image.w1600.webp"><img src="./works/topics/micro-engraved-jewelry/packages/single-micro-inscription-studies/images/stamp-perforation-message/image.w400.webp" width="100%" alt="Stamp Perforation Message"/></a>
+<a href="./works/topics/micro-engraved-jewelry/packages/single-micro-inscription-studies/images/stamp-perforation-message/image.w1600.webp"><img src="./works/topics/micro-engraved-jewelry/packages/single-micro-inscription-studies/images/stamp-perforation-message/image.w400.webp" width="100%" alt="邮票齿孔暗语"/></a>
 
-<b>Stamp Perforation Message</b>
+<b>邮票齿孔暗语</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -6480,19 +6480,19 @@ No readable text except the specified phrase "MEET AT 8", no watermark, no logos
 </tr>
 </table>
 
-## Micro-Macro Infographic
+## 微观 × 宏观对比信息图
 
-> A Prompt Atlas theme for scientific micro-macro comparison infographics, testing structured layout, photorealism, material physics, and reasoning composition.
+> 以显微结构和宏观世界的相似纹理为核心，测试科普信息图、写实材质和跨尺度构图。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/micro-macro-infographic/packages/single-scale-comparison-studies/images/cell-galaxy-echo/image.w1600.webp"><img src="./works/topics/micro-macro-infographic/packages/single-scale-comparison-studies/images/cell-galaxy-echo/image.w400.webp" width="100%" alt="Cell Galaxy Echo"/></a>
+<a href="./works/topics/micro-macro-infographic/packages/single-scale-comparison-studies/images/cell-galaxy-echo/image.w1600.webp"><img src="./works/topics/micro-macro-infographic/packages/single-scale-comparison-studies/images/cell-galaxy-echo/image.w400.webp" width="100%" alt="细胞星系回声"/></a>
 
-<b>Cell Galaxy Echo</b>
+<b>细胞星系回声</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -6516,11 +6516,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/micro-macro-infographic/packages/single-scale-comparison-studies/images/neuron-cosmic-web/image.w1600.webp"><img src="./works/topics/micro-macro-infographic/packages/single-scale-comparison-studies/images/neuron-cosmic-web/image.w400.webp" width="100%" alt="Neuron Cosmic Web"/></a>
+<a href="./works/topics/micro-macro-infographic/packages/single-scale-comparison-studies/images/neuron-cosmic-web/image.w1600.webp"><img src="./works/topics/micro-macro-infographic/packages/single-scale-comparison-studies/images/neuron-cosmic-web/image.w400.webp" width="100%" alt="神经元宇宙网"/></a>
 
-<b>Neuron Cosmic Web</b>
+<b>神经元宇宙网</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -6544,11 +6544,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no li
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/micro-macro-infographic/packages/single-scale-comparison-studies/images/stomata-city-grid/image.w1600.webp"><img src="./works/topics/micro-macro-infographic/packages/single-scale-comparison-studies/images/stomata-city-grid/image.w400.webp" width="100%" alt="Stomata City Grid"/></a>
+<a href="./works/topics/micro-macro-infographic/packages/single-scale-comparison-studies/images/stomata-city-grid/image.w1600.webp"><img src="./works/topics/micro-macro-infographic/packages/single-scale-comparison-studies/images/stomata-city-grid/image.w400.webp" width="100%" alt="气孔城市网格"/></a>
 
-<b>Stomata City Grid</b>
+<b>气孔城市网格</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -6574,11 +6574,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/micro-macro-infographic/packages/single-scale-comparison-studies/images/bone-coral-architecture/image.w1600.webp"><img src="./works/topics/micro-macro-infographic/packages/single-scale-comparison-studies/images/bone-coral-architecture/image.w400.webp" width="100%" alt="Bone Coral Architecture"/></a>
+<a href="./works/topics/micro-macro-infographic/packages/single-scale-comparison-studies/images/bone-coral-architecture/image.w1600.webp"><img src="./works/topics/micro-macro-infographic/packages/single-scale-comparison-studies/images/bone-coral-architecture/image.w400.webp" width="100%" alt="骨骼珊瑚结构"/></a>
 
-<b>Bone Coral Architecture</b>
+<b>骨骼珊瑚结构</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -6602,11 +6602,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no go
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/micro-macro-infographic/packages/single-scale-comparison-studies/images/capillary-river-delta/image.w1600.webp"><img src="./works/topics/micro-macro-infographic/packages/single-scale-comparison-studies/images/capillary-river-delta/image.w400.webp" width="100%" alt="Capillary River Delta"/></a>
+<a href="./works/topics/micro-macro-infographic/packages/single-scale-comparison-studies/images/capillary-river-delta/image.w1600.webp"><img src="./works/topics/micro-macro-infographic/packages/single-scale-comparison-studies/images/capillary-river-delta/image.w400.webp" width="100%" alt="毛细血管河口三角洲"/></a>
 
-<b>Capillary River Delta</b>
+<b>毛细血管河口三角洲</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -6630,11 +6630,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no go
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/micro-macro-infographic/packages/single-scale-comparison-studies/images/crystal-mountain-range/image.w1600.webp"><img src="./works/topics/micro-macro-infographic/packages/single-scale-comparison-studies/images/crystal-mountain-range/image.w400.webp" width="100%" alt="Crystal Mountain Range"/></a>
+<a href="./works/topics/micro-macro-infographic/packages/single-scale-comparison-studies/images/crystal-mountain-range/image.w1600.webp"><img src="./works/topics/micro-macro-infographic/packages/single-scale-comparison-studies/images/crystal-mountain-range/image.w400.webp" width="100%" alt="晶体山脉"/></a>
 
-<b>Crystal Mountain Range</b>
+<b>晶体山脉</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -6660,11 +6660,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no fa
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/micro-macro-infographic/packages/single-scale-comparison-studies/images/skin-desert-dunes/image.w1600.webp"><img src="./works/topics/micro-macro-infographic/packages/single-scale-comparison-studies/images/skin-desert-dunes/image.w400.webp" width="100%" alt="Skin Desert Dunes"/></a>
+<a href="./works/topics/micro-macro-infographic/packages/single-scale-comparison-studies/images/skin-desert-dunes/image.w1600.webp"><img src="./works/topics/micro-macro-infographic/packages/single-scale-comparison-studies/images/skin-desert-dunes/image.w400.webp" width="100%" alt="皮肤沙丘"/></a>
 
-<b>Skin Desert Dunes</b>
+<b>皮肤沙丘</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -6688,11 +6688,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no be
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/micro-macro-infographic/packages/single-scale-comparison-studies/images/diatom-space-station/image.w1600.webp"><img src="./works/topics/micro-macro-infographic/packages/single-scale-comparison-studies/images/diatom-space-station/image.w400.webp" width="100%" alt="Diatom Space Station"/></a>
+<a href="./works/topics/micro-macro-infographic/packages/single-scale-comparison-studies/images/diatom-space-station/image.w1600.webp"><img src="./works/topics/micro-macro-infographic/packages/single-scale-comparison-studies/images/diatom-space-station/image.w400.webp" width="100%" alt="硅藻太空站"/></a>
 
-<b>Diatom Space Station</b>
+<b>硅藻太空站</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -6718,19 +6718,19 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </tr>
 </table>
 
-## Mirror Worlds
+## Mirror Worlds · 同角色跨时空同框
 
-> A Prompt Atlas theme for mirror-world compositions, testing multi-image reference, identity consistency, and reasoning composition across simultaneous life stages with GPT Image 2.
+> Mirror Worlds · 同角色跨时空同框：同一个人从小到老同时出现在同一空间的不同角落，测试身份一致性和时空拼接。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/mirror-worlds/packages/series-life-stage-living-room/images/01-reference-age-sheet/image.w1600.webp"><img src="./works/topics/mirror-worlds/packages/series-life-stage-living-room/images/01-reference-age-sheet/image.w400.webp" width="100%" alt="Reference Age Sheet"/></a>
+<a href="./works/topics/mirror-worlds/packages/series-life-stage-living-room/images/01-reference-age-sheet/image.w1600.webp"><img src="./works/topics/mirror-worlds/packages/series-life-stage-living-room/images/01-reference-age-sheet/image.w400.webp" width="100%" alt="年龄谱参考图"/></a>
 
-<b>Reference Age Sheet</b>
+<b>年龄谱参考图</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -6754,11 +6754,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no ce
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/mirror-worlds/packages/single-temporal-mirror-studies/images/childhood-office-echo/image.w1600.webp"><img src="./works/topics/mirror-worlds/packages/single-temporal-mirror-studies/images/childhood-office-echo/image.w400.webp" width="100%" alt="Childhood Office Echo"/></a>
+<a href="./works/topics/mirror-worlds/packages/single-temporal-mirror-studies/images/childhood-office-echo/image.w1600.webp"><img src="./works/topics/mirror-worlds/packages/single-temporal-mirror-studies/images/childhood-office-echo/image.w400.webp" width="100%" alt="童年办公室回声"/></a>
 
-<b>Childhood Office Echo</b>
+<b>童年办公室回声</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -6782,11 +6782,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no ex
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/mirror-worlds/packages/series-life-stage-living-room/images/02-eight-ages-living-room/image.w1600.webp"><img src="./works/topics/mirror-worlds/packages/series-life-stage-living-room/images/02-eight-ages-living-room/image.w400.webp" width="100%" alt="Eight Ages Living Room"/></a>
+<a href="./works/topics/mirror-worlds/packages/series-life-stage-living-room/images/02-eight-ages-living-room/image.w1600.webp"><img src="./works/topics/mirror-worlds/packages/series-life-stage-living-room/images/02-eight-ages-living-room/image.w400.webp" width="100%" alt="八个年龄的客厅"/></a>
 
-<b>Eight Ages Living Room</b>
+<b>八个年龄的客厅</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -6812,11 +6812,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no un
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/mirror-worlds/packages/single-temporal-mirror-studies/images/subway-platform-ages/image.w1600.webp"><img src="./works/topics/mirror-worlds/packages/single-temporal-mirror-studies/images/subway-platform-ages/image.w400.webp" width="100%" alt="Subway Platform Ages"/></a>
+<a href="./works/topics/mirror-worlds/packages/single-temporal-mirror-studies/images/subway-platform-ages/image.w1600.webp"><img src="./works/topics/mirror-worlds/packages/single-temporal-mirror-studies/images/subway-platform-ages/image.w400.webp" width="100%" alt="地铁站台年龄线"/></a>
 
-<b>Subway Platform Ages</b>
+<b>地铁站台年龄线</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -6840,11 +6840,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no cr
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/mirror-worlds/packages/series-life-stage-living-room/images/03-mirror-hall-reunion/image.w1600.webp"><img src="./works/topics/mirror-worlds/packages/series-life-stage-living-room/images/03-mirror-hall-reunion/image.w400.webp" width="100%" alt="Mirror Hall Reunion"/></a>
+<a href="./works/topics/mirror-worlds/packages/series-life-stage-living-room/images/03-mirror-hall-reunion/image.w1600.webp"><img src="./works/topics/mirror-worlds/packages/series-life-stage-living-room/images/03-mirror-hall-reunion/image.w400.webp" width="100%" alt="镜厅重逢"/></a>
 
-<b>Mirror Hall Reunion</b>
+<b>镜厅重逢</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -6868,11 +6868,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no un
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/mirror-worlds/packages/single-temporal-mirror-studies/images/wedding-mirror-room/image.w1600.webp"><img src="./works/topics/mirror-worlds/packages/single-temporal-mirror-studies/images/wedding-mirror-room/image.w400.webp" width="100%" alt="Wedding Mirror Room"/></a>
+<a href="./works/topics/mirror-worlds/packages/single-temporal-mirror-studies/images/wedding-mirror-room/image.w1600.webp"><img src="./works/topics/mirror-worlds/packages/single-temporal-mirror-studies/images/wedding-mirror-room/image.w400.webp" width="100%" alt="婚礼镜室"/></a>
 
-<b>Wedding Mirror Room</b>
+<b>婚礼镜室</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -6898,11 +6898,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no ex
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/mirror-worlds/packages/series-life-stage-living-room/images/04-seasonal-apartment-loop/image.w1600.webp"><img src="./works/topics/mirror-worlds/packages/series-life-stage-living-room/images/04-seasonal-apartment-loop/image.w400.webp" width="100%" alt="Seasonal Apartment Loop"/></a>
+<a href="./works/topics/mirror-worlds/packages/series-life-stage-living-room/images/04-seasonal-apartment-loop/image.w1600.webp"><img src="./works/topics/mirror-worlds/packages/series-life-stage-living-room/images/04-seasonal-apartment-loop/image.w400.webp" width="100%" alt="四季公寓时间环"/></a>
 
-<b>Seasonal Apartment Loop</b>
+<b>四季公寓时间环</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -6926,11 +6926,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no pa
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/mirror-worlds/packages/single-temporal-mirror-studies/images/rooftop-time-split/image.w1600.webp"><img src="./works/topics/mirror-worlds/packages/single-temporal-mirror-studies/images/rooftop-time-split/image.w400.webp" width="100%" alt="Rooftop Time Split"/></a>
+<a href="./works/topics/mirror-worlds/packages/single-temporal-mirror-studies/images/rooftop-time-split/image.w1600.webp"><img src="./works/topics/mirror-worlds/packages/single-temporal-mirror-studies/images/rooftop-time-split/image.w400.webp" width="100%" alt="屋顶时间切片"/></a>
 
-<b>Rooftop Time Split</b>
+<b>屋顶时间切片</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -6956,19 +6956,19 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no ex
 </tr>
 </table>
 
-## Multi-Era Album Covers
+## 多时代 Album Cover 专辑封面合集
 
-> A Prompt Atlas theme for fictional album-cover sets that reinterpret one musical concept through multiple visual eras, from 1960s folk to 2020s hyperpop.
+> 测试同一音乐概念在 1960s 民谣、1970s 摇滚、1980s synthwave、1990s grunge、2000s emo、2020s hyperpop 等时代视觉中的重新演绎。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/multi-era-album-covers/packages/single-era-cover-sets/images/lunar-motel-set/image.w1600.webp"><img src="./works/topics/multi-era-album-covers/packages/single-era-cover-sets/images/lunar-motel-set/image.w400.webp" width="100%" alt="Lunar Motel Set"/></a>
+<a href="./works/topics/multi-era-album-covers/packages/single-era-cover-sets/images/lunar-motel-set/image.w1600.webp"><img src="./works/topics/multi-era-album-covers/packages/single-era-cover-sets/images/lunar-motel-set/image.w400.webp" width="100%" alt="月球汽车旅馆合集"/></a>
 
-<b>Lunar Motel Set</b>
+<b>月球汽车旅馆合集</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -6992,11 +6992,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/multi-era-album-covers/packages/single-era-cover-sets/images/desert-signal-set/image.w1600.webp"><img src="./works/topics/multi-era-album-covers/packages/single-era-cover-sets/images/desert-signal-set/image.w400.webp" width="100%" alt="Desert Signal Set"/></a>
+<a href="./works/topics/multi-era-album-covers/packages/single-era-cover-sets/images/desert-signal-set/image.w1600.webp"><img src="./works/topics/multi-era-album-covers/packages/single-era-cover-sets/images/desert-signal-set/image.w400.webp" width="100%" alt="沙漠信号合集"/></a>
 
-<b>Desert Signal Set</b>
+<b>沙漠信号合集</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -7020,11 +7020,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/multi-era-album-covers/packages/single-era-cover-sets/images/glass-garden-set/image.w1600.webp"><img src="./works/topics/multi-era-album-covers/packages/single-era-cover-sets/images/glass-garden-set/image.w400.webp" width="100%" alt="Glass Garden Set"/></a>
+<a href="./works/topics/multi-era-album-covers/packages/single-era-cover-sets/images/glass-garden-set/image.w1600.webp"><img src="./works/topics/multi-era-album-covers/packages/single-era-cover-sets/images/glass-garden-set/image.w400.webp" width="100%" alt="玻璃花园合集"/></a>
 
-<b>Glass Garden Set</b>
+<b>玻璃花园合集</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -7050,11 +7050,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/multi-era-album-covers/packages/single-era-cover-sets/images/city-rain-set/image.w1600.webp"><img src="./works/topics/multi-era-album-covers/packages/single-era-cover-sets/images/city-rain-set/image.w400.webp" width="100%" alt="City Rain Set"/></a>
+<a href="./works/topics/multi-era-album-covers/packages/single-era-cover-sets/images/city-rain-set/image.w1600.webp"><img src="./works/topics/multi-era-album-covers/packages/single-era-cover-sets/images/city-rain-set/image.w400.webp" width="100%" alt="城市雨夜合集"/></a>
 
-<b>City Rain Set</b>
+<b>城市雨夜合集</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -7078,11 +7078,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/multi-era-album-covers/packages/single-era-cover-sets/images/velvet-comet-set/image.w1600.webp"><img src="./works/topics/multi-era-album-covers/packages/single-era-cover-sets/images/velvet-comet-set/image.w400.webp" width="100%" alt="Velvet Comet Set"/></a>
+<a href="./works/topics/multi-era-album-covers/packages/single-era-cover-sets/images/velvet-comet-set/image.w1600.webp"><img src="./works/topics/multi-era-album-covers/packages/single-era-cover-sets/images/velvet-comet-set/image.w400.webp" width="100%" alt="天鹅绒彗星合集"/></a>
 
-<b>Velvet Comet Set</b>
+<b>天鹅绒彗星合集</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -7106,11 +7106,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/multi-era-album-covers/packages/single-era-cover-sets/images/paper-tigers-set/image.w1600.webp"><img src="./works/topics/multi-era-album-covers/packages/single-era-cover-sets/images/paper-tigers-set/image.w400.webp" width="100%" alt="Paper Tigers Set"/></a>
+<a href="./works/topics/multi-era-album-covers/packages/single-era-cover-sets/images/paper-tigers-set/image.w1600.webp"><img src="./works/topics/multi-era-album-covers/packages/single-era-cover-sets/images/paper-tigers-set/image.w400.webp" width="100%" alt="纸老虎合集"/></a>
 
-<b>Paper Tigers Set</b>
+<b>纸老虎合集</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -7136,11 +7136,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/multi-era-album-covers/packages/single-era-cover-sets/images/ocean-static-set/image.w1600.webp"><img src="./works/topics/multi-era-album-covers/packages/single-era-cover-sets/images/ocean-static-set/image.w400.webp" width="100%" alt="Ocean Static Set"/></a>
+<a href="./works/topics/multi-era-album-covers/packages/single-era-cover-sets/images/ocean-static-set/image.w1600.webp"><img src="./works/topics/multi-era-album-covers/packages/single-era-cover-sets/images/ocean-static-set/image.w400.webp" width="100%" alt="海洋静电合集"/></a>
 
-<b>Ocean Static Set</b>
+<b>海洋静电合集</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -7164,11 +7164,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/multi-era-album-covers/packages/single-era-cover-sets/images/neon-orchard-set/image.w1600.webp"><img src="./works/topics/multi-era-album-covers/packages/single-era-cover-sets/images/neon-orchard-set/image.w400.webp" width="100%" alt="Neon Orchard Set"/></a>
+<a href="./works/topics/multi-era-album-covers/packages/single-era-cover-sets/images/neon-orchard-set/image.w1600.webp"><img src="./works/topics/multi-era-album-covers/packages/single-era-cover-sets/images/neon-orchard-set/image.w400.webp" width="100%" alt="霓虹果园合集"/></a>
 
-<b>Neon Orchard Set</b>
+<b>霓虹果园合集</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -7194,19 +7194,19 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </tr>
 </table>
 
-## Multi-Script Poster
+## 多脚本同屏海报(4-9 语言)
 
-> A Prompt Atlas theme for posters and public-information layouts that place many writing systems in one controlled composition.
+> 多脚本同屏海报：在菜单、议程、机场指示等场景中测试中、日、韩、阿拉伯、印地、梵文等非拉丁文字的同屏排版。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/multi-script-poster/packages/single-global-script-posters/images/01-market-menu-wall/image.w1600.webp"><img src="./works/topics/multi-script-poster/packages/single-global-script-posters/images/01-market-menu-wall/image.w400.webp" width="100%" alt="Market Menu Wall"/></a>
+<a href="./works/topics/multi-script-poster/packages/single-global-script-posters/images/01-market-menu-wall/image.w1600.webp"><img src="./works/topics/multi-script-poster/packages/single-global-script-posters/images/01-market-menu-wall/image.w400.webp" width="100%" alt="市场菜单墙"/></a>
 
-<b>Market Menu Wall</b>
+<b>市场菜单墙</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -7230,11 +7230,11 @@ No readable text outside the specified multilingual menu copy, no watermark, no 
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/multi-script-poster/packages/single-global-script-posters/images/02-un-assembly-agenda/image.w1600.webp"><img src="./works/topics/multi-script-poster/packages/single-global-script-posters/images/02-un-assembly-agenda/image.w400.webp" width="100%" alt="Assembly Agenda"/></a>
+<a href="./works/topics/multi-script-poster/packages/single-global-script-posters/images/02-un-assembly-agenda/image.w1600.webp"><img src="./works/topics/multi-script-poster/packages/single-global-script-posters/images/02-un-assembly-agenda/image.w400.webp" width="100%" alt="大会日程"/></a>
 
-<b>Assembly Agenda</b>
+<b>大会日程</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -7258,11 +7258,11 @@ No readable text outside the specified multilingual agenda copy, no watermark, n
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/multi-script-poster/packages/single-global-script-posters/images/03-airport-wayfinding-grid/image.w1600.webp"><img src="./works/topics/multi-script-poster/packages/single-global-script-posters/images/03-airport-wayfinding-grid/image.w400.webp" width="100%" alt="Airport Wayfinding Grid"/></a>
+<a href="./works/topics/multi-script-poster/packages/single-global-script-posters/images/03-airport-wayfinding-grid/image.w1600.webp"><img src="./works/topics/multi-script-poster/packages/single-global-script-posters/images/03-airport-wayfinding-grid/image.w400.webp" width="100%" alt="机场导视网格"/></a>
 
-<b>Airport Wayfinding Grid</b>
+<b>机场导视网格</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -7288,11 +7288,11 @@ No readable text outside the specified multilingual wayfinding copy, no watermar
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/multi-script-poster/packages/single-global-script-posters/images/04-museum-exhibition-poster/image.w1600.webp"><img src="./works/topics/multi-script-poster/packages/single-global-script-posters/images/04-museum-exhibition-poster/image.w400.webp" width="100%" alt="Museum Exhibition Poster"/></a>
+<a href="./works/topics/multi-script-poster/packages/single-global-script-posters/images/04-museum-exhibition-poster/image.w1600.webp"><img src="./works/topics/multi-script-poster/packages/single-global-script-posters/images/04-museum-exhibition-poster/image.w400.webp" width="100%" alt="博物馆展览海报"/></a>
 
-<b>Museum Exhibition Poster</b>
+<b>博物馆展览海报</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -7316,11 +7316,11 @@ No readable text outside the specified multilingual exhibition copy, no watermar
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/multi-script-poster/packages/single-global-script-posters/images/05-night-market-festival/image.w1600.webp"><img src="./works/topics/multi-script-poster/packages/single-global-script-posters/images/05-night-market-festival/image.w400.webp" width="100%" alt="Night Market Festival"/></a>
+<a href="./works/topics/multi-script-poster/packages/single-global-script-posters/images/05-night-market-festival/image.w1600.webp"><img src="./works/topics/multi-script-poster/packages/single-global-script-posters/images/05-night-market-festival/image.w400.webp" width="100%" alt="夜市节庆海报"/></a>
 
-<b>Night Market Festival</b>
+<b>夜市节庆海报</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -7344,11 +7344,11 @@ No readable text outside the specified multilingual festival copy, no watermark,
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/multi-script-poster/packages/single-global-script-posters/images/06-clinic-service-board/image.w1600.webp"><img src="./works/topics/multi-script-poster/packages/single-global-script-posters/images/06-clinic-service-board/image.w400.webp" width="100%" alt="Clinic Service Board"/></a>
+<a href="./works/topics/multi-script-poster/packages/single-global-script-posters/images/06-clinic-service-board/image.w1600.webp"><img src="./works/topics/multi-script-poster/packages/single-global-script-posters/images/06-clinic-service-board/image.w400.webp" width="100%" alt="诊所服务牌"/></a>
 
-<b>Clinic Service Board</b>
+<b>诊所服务牌</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -7374,11 +7374,11 @@ No readable text outside the specified multilingual clinic copy, no watermark, n
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/multi-script-poster/packages/single-global-script-posters/images/07-rail-passenger-notice/image.w1600.webp"><img src="./works/topics/multi-script-poster/packages/single-global-script-posters/images/07-rail-passenger-notice/image.w400.webp" width="100%" alt="Rail Passenger Notice"/></a>
+<a href="./works/topics/multi-script-poster/packages/single-global-script-posters/images/07-rail-passenger-notice/image.w1600.webp"><img src="./works/topics/multi-script-poster/packages/single-global-script-posters/images/07-rail-passenger-notice/image.w400.webp" width="100%" alt="铁路乘客公告"/></a>
 
-<b>Rail Passenger Notice</b>
+<b>铁路乘客公告</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -7402,11 +7402,11 @@ No readable text outside the specified multilingual rail notice copy, no waterma
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/multi-script-poster/packages/single-global-script-posters/images/08-summit-program-map/image.w1600.webp"><img src="./works/topics/multi-script-poster/packages/single-global-script-posters/images/08-summit-program-map/image.w400.webp" width="100%" alt="Summit Program Map"/></a>
+<a href="./works/topics/multi-script-poster/packages/single-global-script-posters/images/08-summit-program-map/image.w1600.webp"><img src="./works/topics/multi-script-poster/packages/single-global-script-posters/images/08-summit-program-map/image.w400.webp" width="100%" alt="峰会议程地图"/></a>
 
-<b>Summit Program Map</b>
+<b>峰会议程地图</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -7432,19 +7432,19 @@ No readable text outside the specified multilingual summit program copy, no wate
 </tr>
 </table>
 
-## Museum Exploded View
+## Museum Exploded View · 文物拆解图鉴
 
-> A Prompt Atlas theme for museum-grade exploded artifact diagrams, testing structured layout, physical materials, technical annotation, and bilingual museum labeling with GPT Image 2.
+> Museum Exploded View · 文物拆解图鉴：将文物拆成爆炸图，展示材料、工艺、年代、编号标注和中英双语信息层级。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/museum-exploded-view/packages/series-bronze-ding-atlas/images/01-reference-bronze-ding/image.w1600.webp"><img src="./works/topics/museum-exploded-view/packages/series-bronze-ding-atlas/images/01-reference-bronze-ding/image.w400.webp" width="100%" alt="Reference Bronze Ding"/></a>
+<a href="./works/topics/museum-exploded-view/packages/series-bronze-ding-atlas/images/01-reference-bronze-ding/image.w1600.webp"><img src="./works/topics/museum-exploded-view/packages/series-bronze-ding-atlas/images/01-reference-bronze-ding/image.w400.webp" width="100%" alt="青铜鼎参考图"/></a>
 
-<b>Reference Bronze Ding</b>
+<b>青铜鼎参考图</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -7468,11 +7468,11 @@ No readable text except the specified bilingual labels, no watermark, no logos, 
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/museum-exploded-view/packages/single-artifact-exploded-studies/images/porcelain-vase-cutaway/image.w1600.webp"><img src="./works/topics/museum-exploded-view/packages/single-artifact-exploded-studies/images/porcelain-vase-cutaway/image.w400.webp" width="100%" alt="Porcelain Vase Cutaway"/></a>
+<a href="./works/topics/museum-exploded-view/packages/single-artifact-exploded-studies/images/porcelain-vase-cutaway/image.w1600.webp"><img src="./works/topics/museum-exploded-view/packages/single-artifact-exploded-studies/images/porcelain-vase-cutaway/image.w400.webp" width="100%" alt="瓷瓶剖面爆炸图"/></a>
 
-<b>Porcelain Vase Cutaway</b>
+<b>瓷瓶剖面爆炸图</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -7496,11 +7496,11 @@ No readable text except the specified bilingual labels, no watermark, no logos, 
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/museum-exploded-view/packages/series-bronze-ding-atlas/images/02-exploded-ritual-vessel/image.w1600.webp"><img src="./works/topics/museum-exploded-view/packages/series-bronze-ding-atlas/images/02-exploded-ritual-vessel/image.w400.webp" width="100%" alt="Exploded Ritual Vessel"/></a>
+<a href="./works/topics/museum-exploded-view/packages/series-bronze-ding-atlas/images/02-exploded-ritual-vessel/image.w1600.webp"><img src="./works/topics/museum-exploded-view/packages/series-bronze-ding-atlas/images/02-exploded-ritual-vessel/image.w400.webp" width="100%" alt="礼器爆炸图"/></a>
 
-<b>Exploded Ritual Vessel</b>
+<b>礼器爆炸图</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -7526,11 +7526,11 @@ No readable text except the specified bilingual labels, no watermark, no logos, 
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/museum-exploded-view/packages/single-artifact-exploded-studies/images/jade-pendant-assembly/image.w1600.webp"><img src="./works/topics/museum-exploded-view/packages/single-artifact-exploded-studies/images/jade-pendant-assembly/image.w400.webp" width="100%" alt="Jade Pendant Assembly"/></a>
+<a href="./works/topics/museum-exploded-view/packages/single-artifact-exploded-studies/images/jade-pendant-assembly/image.w1600.webp"><img src="./works/topics/museum-exploded-view/packages/single-artifact-exploded-studies/images/jade-pendant-assembly/image.w400.webp" width="100%" alt="玉佩工艺拆解图"/></a>
 
-<b>Jade Pendant Assembly</b>
+<b>玉佩工艺拆解图</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -7554,11 +7554,11 @@ No readable text except the specified bilingual labels, no watermark, no logos, 
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/museum-exploded-view/packages/series-bronze-ding-atlas/images/03-casting-process-layers/image.w1600.webp"><img src="./works/topics/museum-exploded-view/packages/series-bronze-ding-atlas/images/03-casting-process-layers/image.w400.webp" width="100%" alt="Casting Process Layers"/></a>
+<a href="./works/topics/museum-exploded-view/packages/series-bronze-ding-atlas/images/03-casting-process-layers/image.w1600.webp"><img src="./works/topics/museum-exploded-view/packages/series-bronze-ding-atlas/images/03-casting-process-layers/image.w400.webp" width="100%" alt="铸造工艺层图"/></a>
 
-<b>Casting Process Layers</b>
+<b>铸造工艺层图</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -7582,11 +7582,11 @@ No readable text except the specified bilingual labels, no watermark, no logos, 
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/museum-exploded-view/packages/single-artifact-exploded-studies/images/astrolabe-mechanism/image.w1600.webp"><img src="./works/topics/museum-exploded-view/packages/single-artifact-exploded-studies/images/astrolabe-mechanism/image.w400.webp" width="100%" alt="Astrolabe Mechanism"/></a>
+<a href="./works/topics/museum-exploded-view/packages/single-artifact-exploded-studies/images/astrolabe-mechanism/image.w1600.webp"><img src="./works/topics/museum-exploded-view/packages/single-artifact-exploded-studies/images/astrolabe-mechanism/image.w400.webp" width="100%" alt="星盘机构爆炸图"/></a>
 
-<b>Astrolabe Mechanism</b>
+<b>星盘机构爆炸图</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -7612,11 +7612,11 @@ No readable text except the specified bilingual labels, no watermark, no logos, 
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/museum-exploded-view/packages/series-bronze-ding-atlas/images/04-bilingual-museum-plate/image.w1600.webp"><img src="./works/topics/museum-exploded-view/packages/series-bronze-ding-atlas/images/04-bilingual-museum-plate/image.w400.webp" width="100%" alt="Bilingual Museum Plate"/></a>
+<a href="./works/topics/museum-exploded-view/packages/series-bronze-ding-atlas/images/04-bilingual-museum-plate/image.w1600.webp"><img src="./works/topics/museum-exploded-view/packages/series-bronze-ding-atlas/images/04-bilingual-museum-plate/image.w400.webp" width="100%" alt="双语馆藏图版"/></a>
 
-<b>Bilingual Museum Plate</b>
+<b>双语馆藏图版</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -7640,11 +7640,11 @@ No readable text except the specified bilingual labels, no watermark, no logos, 
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/museum-exploded-view/packages/single-artifact-exploded-studies/images/armored-helmet-layers/image.w1600.webp"><img src="./works/topics/museum-exploded-view/packages/single-artifact-exploded-studies/images/armored-helmet-layers/image.w400.webp" width="100%" alt="Armored Helmet Layers"/></a>
+<a href="./works/topics/museum-exploded-view/packages/single-artifact-exploded-studies/images/armored-helmet-layers/image.w1600.webp"><img src="./works/topics/museum-exploded-view/packages/single-artifact-exploded-studies/images/armored-helmet-layers/image.w400.webp" width="100%" alt="头盔层构拆解图"/></a>
 
-<b>Armored Helmet Layers</b>
+<b>头盔层构拆解图</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -7670,19 +7670,19 @@ No readable text except the specified bilingual labels, no watermark, no logos, 
 </tr>
 </table>
 
-## Neural Network Self-Explanation
+## 神经网络自解释图 · AI 画自己
 
-> A Prompt Atlas theme for visualizing neural networks explaining their own attention, training, denoising, routing, and retrieval processes.
+> 神经网络自解释图：用学术级节点连线、数据流、装置摄影和抽象注释表现注意力、反向传播、扩散去噪等过程。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/neural-network-self-explanation/packages/single-ai-self-explanations/images/01-transformer-attention-atrium/image.w1600.webp"><img src="./works/topics/neural-network-self-explanation/packages/single-ai-self-explanations/images/01-transformer-attention-atrium/image.w400.webp" width="100%" alt="Transformer Attention Atrium"/></a>
+<a href="./works/topics/neural-network-self-explanation/packages/single-ai-self-explanations/images/01-transformer-attention-atrium/image.w1600.webp"><img src="./works/topics/neural-network-self-explanation/packages/single-ai-self-explanations/images/01-transformer-attention-atrium/image.w400.webp" width="100%" alt="Transformer 注意力中庭"/></a>
 
-<b>Transformer Attention Atrium</b>
+<b>Transformer 注意力中庭</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -7706,11 +7706,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/neural-network-self-explanation/packages/single-ai-self-explanations/images/02-backpropagation-workbench/image.w1600.webp"><img src="./works/topics/neural-network-self-explanation/packages/single-ai-self-explanations/images/02-backpropagation-workbench/image.w400.webp" width="100%" alt="Backpropagation Workbench"/></a>
+<a href="./works/topics/neural-network-self-explanation/packages/single-ai-self-explanations/images/02-backpropagation-workbench/image.w1600.webp"><img src="./works/topics/neural-network-self-explanation/packages/single-ai-self-explanations/images/02-backpropagation-workbench/image.w400.webp" width="100%" alt="反向传播工作台"/></a>
 
-<b>Backpropagation Workbench</b>
+<b>反向传播工作台</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -7734,11 +7734,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/neural-network-self-explanation/packages/single-ai-self-explanations/images/03-diffusion-denoising-lab/image.w1600.webp"><img src="./works/topics/neural-network-self-explanation/packages/single-ai-self-explanations/images/03-diffusion-denoising-lab/image.w400.webp" width="100%" alt="Diffusion Denoising Lab"/></a>
+<a href="./works/topics/neural-network-self-explanation/packages/single-ai-self-explanations/images/03-diffusion-denoising-lab/image.w1600.webp"><img src="./works/topics/neural-network-self-explanation/packages/single-ai-self-explanations/images/03-diffusion-denoising-lab/image.w400.webp" width="100%" alt="扩散去噪实验室"/></a>
 
-<b>Diffusion Denoising Lab</b>
+<b>扩散去噪实验室</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -7764,11 +7764,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/neural-network-self-explanation/packages/single-ai-self-explanations/images/04-token-embedding-observatory/image.w1600.webp"><img src="./works/topics/neural-network-self-explanation/packages/single-ai-self-explanations/images/04-token-embedding-observatory/image.w400.webp" width="100%" alt="Token Embedding Observatory"/></a>
+<a href="./works/topics/neural-network-self-explanation/packages/single-ai-self-explanations/images/04-token-embedding-observatory/image.w1600.webp"><img src="./works/topics/neural-network-self-explanation/packages/single-ai-self-explanations/images/04-token-embedding-observatory/image.w400.webp" width="100%" alt="Token 嵌入观测台"/></a>
 
-<b>Token Embedding Observatory</b>
+<b>Token 嵌入观测台</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -7792,11 +7792,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/neural-network-self-explanation/packages/single-ai-self-explanations/images/05-expert-router-switchboard/image.w1600.webp"><img src="./works/topics/neural-network-self-explanation/packages/single-ai-self-explanations/images/05-expert-router-switchboard/image.w400.webp" width="100%" alt="Expert Router Switchboard"/></a>
+<a href="./works/topics/neural-network-self-explanation/packages/single-ai-self-explanations/images/05-expert-router-switchboard/image.w1600.webp"><img src="./works/topics/neural-network-self-explanation/packages/single-ai-self-explanations/images/05-expert-router-switchboard/image.w400.webp" width="100%" alt="专家路由交换板"/></a>
 
-<b>Expert Router Switchboard</b>
+<b>专家路由交换板</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -7820,11 +7820,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/neural-network-self-explanation/packages/single-ai-self-explanations/images/06-feedback-alignment-studio/image.w1600.webp"><img src="./works/topics/neural-network-self-explanation/packages/single-ai-self-explanations/images/06-feedback-alignment-studio/image.w400.webp" width="100%" alt="Feedback Alignment Studio"/></a>
+<a href="./works/topics/neural-network-self-explanation/packages/single-ai-self-explanations/images/06-feedback-alignment-studio/image.w1600.webp"><img src="./works/topics/neural-network-self-explanation/packages/single-ai-self-explanations/images/06-feedback-alignment-studio/image.w400.webp" width="100%" alt="反馈对齐工作室"/></a>
 
-<b>Feedback Alignment Studio</b>
+<b>反馈对齐工作室</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -7850,11 +7850,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/neural-network-self-explanation/packages/single-ai-self-explanations/images/07-vision-language-bridge/image.w1600.webp"><img src="./works/topics/neural-network-self-explanation/packages/single-ai-self-explanations/images/07-vision-language-bridge/image.w400.webp" width="100%" alt="Vision Language Bridge"/></a>
+<a href="./works/topics/neural-network-self-explanation/packages/single-ai-self-explanations/images/07-vision-language-bridge/image.w1600.webp"><img src="./works/topics/neural-network-self-explanation/packages/single-ai-self-explanations/images/07-vision-language-bridge/image.w400.webp" width="100%" alt="视觉语言桥"/></a>
 
-<b>Vision Language Bridge</b>
+<b>视觉语言桥</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -7878,11 +7878,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no br
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/neural-network-self-explanation/packages/single-ai-self-explanations/images/08-memory-retrieval-library/image.w1600.webp"><img src="./works/topics/neural-network-self-explanation/packages/single-ai-self-explanations/images/08-memory-retrieval-library/image.w400.webp" width="100%" alt="Memory Retrieval Library"/></a>
+<a href="./works/topics/neural-network-self-explanation/packages/single-ai-self-explanations/images/08-memory-retrieval-library/image.w1600.webp"><img src="./works/topics/neural-network-self-explanation/packages/single-ai-self-explanations/images/08-memory-retrieval-library/image.w400.webp" width="100%" alt="记忆检索图书馆"/></a>
 
-<b>Memory Retrieval Library</b>
+<b>记忆检索图书馆</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -7908,19 +7908,19 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </tr>
 </table>
 
-## New Chinese Ink Poster
+## 新中式水墨极简海报
 
-> A Prompt Atlas theme for vertical new Chinese ink posters with large white space, controlled Chinese typography, restrained luxury palettes, and commercial-ready layout discipline.
+> 9:16 竖版新中式水墨极简海报,强调奇峻山水、大留白、低饱和青绿雾蓝色系、可读中文标题和奢华商业质感。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/new-chinese-ink-poster/packages/single-ink-poster-studies/images/01-spring-mountain-lake/image.w1600.webp"><img src="./works/topics/new-chinese-ink-poster/packages/single-ink-poster-studies/images/01-spring-mountain-lake/image.w400.webp" width="100%" alt="Spring Mountain Lake"/></a>
+<a href="./works/topics/new-chinese-ink-poster/packages/single-ink-poster-studies/images/01-spring-mountain-lake/image.w1600.webp"><img src="./works/topics/new-chinese-ink-poster/packages/single-ink-poster-studies/images/01-spring-mountain-lake/image.w400.webp" width="100%" alt="春山入湖"/></a>
 
-<b>Spring Mountain Lake</b>
+<b>春山入湖</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -7944,11 +7944,11 @@ No readable text outside the specified Chinese title, no watermark, no logos, pr
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/new-chinese-ink-poster/packages/single-ink-poster-studies/images/02-tea-house-launch/image.w1600.webp"><img src="./works/topics/new-chinese-ink-poster/packages/single-ink-poster-studies/images/02-tea-house-launch/image.w400.webp" width="100%" alt="Tea House Launch"/></a>
+<a href="./works/topics/new-chinese-ink-poster/packages/single-ink-poster-studies/images/02-tea-house-launch/image.w1600.webp"><img src="./works/topics/new-chinese-ink-poster/packages/single-ink-poster-studies/images/02-tea-house-launch/image.w400.webp" width="100%" alt="云上问茶"/></a>
 
-<b>Tea House Launch</b>
+<b>云上问茶</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -7972,11 +7972,11 @@ No readable text outside the specified Chinese title, no watermark, no logos, pr
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/new-chinese-ink-poster/packages/single-ink-poster-studies/images/04-museum-night/image.w1600.webp"><img src="./works/topics/new-chinese-ink-poster/packages/single-ink-poster-studies/images/04-museum-night/image.w400.webp" width="100%" alt="Museum Night"/></a>
+<a href="./works/topics/new-chinese-ink-poster/packages/single-ink-poster-studies/images/04-museum-night/image.w1600.webp"><img src="./works/topics/new-chinese-ink-poster/packages/single-ink-poster-studies/images/04-museum-night/image.w400.webp" width="100%" alt="墨山夜游"/></a>
 
-<b>Museum Night</b>
+<b>墨山夜游</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -8002,11 +8002,11 @@ No readable text outside the specified Chinese title, no watermark, no logos, pr
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/new-chinese-ink-poster/packages/single-ink-poster-studies/images/05-fragrance-bottle/image.w1600.webp"><img src="./works/topics/new-chinese-ink-poster/packages/single-ink-poster-studies/images/05-fragrance-bottle/image.w400.webp" width="100%" alt="Fragrance Bottle"/></a>
+<a href="./works/topics/new-chinese-ink-poster/packages/single-ink-poster-studies/images/05-fragrance-bottle/image.w1600.webp"><img src="./works/topics/new-chinese-ink-poster/packages/single-ink-poster-studies/images/05-fragrance-bottle/image.w400.webp" width="100%" alt="一缕山岚"/></a>
 
-<b>Fragrance Bottle</b>
+<b>一缕山岚</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -8030,11 +8030,11 @@ No readable text outside the specified Chinese title, no watermark, no logos, pr
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/new-chinese-ink-poster/packages/single-ink-poster-studies/images/06-bamboo-rain/image.w1600.webp"><img src="./works/topics/new-chinese-ink-poster/packages/single-ink-poster-studies/images/06-bamboo-rain/image.w400.webp" width="100%" alt="Bamboo Rain"/></a>
+<a href="./works/topics/new-chinese-ink-poster/packages/single-ink-poster-studies/images/06-bamboo-rain/image.w1600.webp"><img src="./works/topics/new-chinese-ink-poster/packages/single-ink-poster-studies/images/06-bamboo-rain/image.w400.webp" width="100%" alt="听雨见竹"/></a>
 
-<b>Bamboo Rain</b>
+<b>听雨见竹</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -8058,11 +8058,11 @@ No readable text outside the specified Chinese title, no watermark, no logos, pr
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/new-chinese-ink-poster/packages/single-ink-poster-studies/images/08-snow-pavilion/image.w1600.webp"><img src="./works/topics/new-chinese-ink-poster/packages/single-ink-poster-studies/images/08-snow-pavilion/image.w400.webp" width="100%" alt="Snow Pavilion"/></a>
+<a href="./works/topics/new-chinese-ink-poster/packages/single-ink-poster-studies/images/08-snow-pavilion/image.w1600.webp"><img src="./works/topics/new-chinese-ink-poster/packages/single-ink-poster-studies/images/08-snow-pavilion/image.w400.webp" width="100%" alt="雪亭无声"/></a>
 
-<b>Snow Pavilion</b>
+<b>雪亭无声</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -8087,19 +8087,19 @@ No readable text outside the specified Chinese title, no watermark, no logos, pr
 </tr>
 </table>
 
-## New Yorker Editorial
+## The New Yorker editorial illustration
 
-> A Prompt Atlas theme for magazine-style editorial illustration, hand-drawn metaphors, structured layout, and watercolor narrative restraint.
+> 纽约客式编辑插画研究：手绘线条、水彩填色、装饰花边和一眼成立的双关隐喻。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/new-yorker-editorial/packages/series-cover-metaphors/images/01-reference-cover/image.w1600.webp"><img src="./works/topics/new-yorker-editorial/packages/series-cover-metaphors/images/01-reference-cover/image.w400.webp" width="100%" alt="Reference Cover"/></a>
+<a href="./works/topics/new-yorker-editorial/packages/series-cover-metaphors/images/01-reference-cover/image.w1600.webp"><img src="./works/topics/new-yorker-editorial/packages/series-cover-metaphors/images/01-reference-cover/image.w400.webp" width="100%" alt="基准封面"/></a>
 
-<b>Reference Cover</b>
+<b>基准封面</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -8123,11 +8123,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/new-yorker-editorial/packages/single-editorial-studies/images/01-subway-notification-garden/image.w1600.webp"><img src="./works/topics/new-yorker-editorial/packages/single-editorial-studies/images/01-subway-notification-garden/image.w400.webp" width="100%" alt="Subway Notification Garden"/></a>
+<a href="./works/topics/new-yorker-editorial/packages/single-editorial-studies/images/01-subway-notification-garden/image.w1600.webp"><img src="./works/topics/new-yorker-editorial/packages/single-editorial-studies/images/01-subway-notification-garden/image.w400.webp" width="100%" alt="地铁通知花园"/></a>
 
-<b>Subway Notification Garden</b>
+<b>地铁通知花园</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -8151,11 +8151,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/new-yorker-editorial/packages/series-cover-metaphors/images/02-ai-labor-desk/image.w1600.webp"><img src="./works/topics/new-yorker-editorial/packages/series-cover-metaphors/images/02-ai-labor-desk/image.w400.webp" width="100%" alt="AI Labor Desk"/></a>
+<a href="./works/topics/new-yorker-editorial/packages/series-cover-metaphors/images/02-ai-labor-desk/image.w1600.webp"><img src="./works/topics/new-yorker-editorial/packages/series-cover-metaphors/images/02-ai-labor-desk/image.w400.webp" width="100%" alt="AI 劳动桌"/></a>
 
-<b>AI Labor Desk</b>
+<b>AI 劳动桌</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -8181,11 +8181,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/new-yorker-editorial/packages/single-editorial-studies/images/02-robot-copy-desk/image.w1600.webp"><img src="./works/topics/new-yorker-editorial/packages/single-editorial-studies/images/02-robot-copy-desk/image.w400.webp" width="100%" alt="Robot Copy Desk"/></a>
+<a href="./works/topics/new-yorker-editorial/packages/single-editorial-studies/images/02-robot-copy-desk/image.w1600.webp"><img src="./works/topics/new-yorker-editorial/packages/single-editorial-studies/images/02-robot-copy-desk/image.w400.webp" width="100%" alt="机器人编辑台"/></a>
 
-<b>Robot Copy Desk</b>
+<b>机器人编辑台</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -8209,11 +8209,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/new-yorker-editorial/packages/series-cover-metaphors/images/03-social-window-grid/image.w1600.webp"><img src="./works/topics/new-yorker-editorial/packages/series-cover-metaphors/images/03-social-window-grid/image.w400.webp" width="100%" alt="Social Window Grid"/></a>
+<a href="./works/topics/new-yorker-editorial/packages/series-cover-metaphors/images/03-social-window-grid/image.w1600.webp"><img src="./works/topics/new-yorker-editorial/packages/series-cover-metaphors/images/03-social-window-grid/image.w400.webp" width="100%" alt="社交窗格"/></a>
 
-<b>Social Window Grid</b>
+<b>社交窗格</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -8237,11 +8237,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/new-yorker-editorial/packages/single-editorial-studies/images/03-flooded-boardroom/image.w1600.webp"><img src="./works/topics/new-yorker-editorial/packages/single-editorial-studies/images/03-flooded-boardroom/image.w400.webp" width="100%" alt="Flooded Boardroom"/></a>
+<a href="./works/topics/new-yorker-editorial/packages/single-editorial-studies/images/03-flooded-boardroom/image.w1600.webp"><img src="./works/topics/new-yorker-editorial/packages/single-editorial-studies/images/03-flooded-boardroom/image.w400.webp" width="100%" alt="被淹的董事会"/></a>
 
-<b>Flooded Boardroom</b>
+<b>被淹的董事会</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -8267,11 +8267,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/new-yorker-editorial/packages/series-cover-metaphors/images/04-climate-umbrella/image.w1600.webp"><img src="./works/topics/new-yorker-editorial/packages/series-cover-metaphors/images/04-climate-umbrella/image.w400.webp" width="100%" alt="Climate Umbrella"/></a>
+<a href="./works/topics/new-yorker-editorial/packages/series-cover-metaphors/images/04-climate-umbrella/image.w1600.webp"><img src="./works/topics/new-yorker-editorial/packages/series-cover-metaphors/images/04-climate-umbrella/image.w400.webp" width="100%" alt="气候雨伞"/></a>
 
-<b>Climate Umbrella</b>
+<b>气候雨伞</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -8295,11 +8295,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/new-yorker-editorial/packages/single-editorial-studies/images/04-magazine-cover-mockup/image.w1600.webp"><img src="./works/topics/new-yorker-editorial/packages/single-editorial-studies/images/04-magazine-cover-mockup/image.w400.webp" width="100%" alt="Magazine Cover Mockup"/></a>
+<a href="./works/topics/new-yorker-editorial/packages/single-editorial-studies/images/04-magazine-cover-mockup/image.w1600.webp"><img src="./works/topics/new-yorker-editorial/packages/single-editorial-studies/images/04-magazine-cover-mockup/image.w400.webp" width="100%" alt="杂志封面 Mockup"/></a>
 
-<b>Magazine Cover Mockup</b>
+<b>杂志封面 Mockup</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -8325,19 +8325,19 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </tr>
 </table>
 
-## Nine-Expression Portrait Grid
+## 3x3 九宫格多表情写真
 
-> A Prompt Atlas theme for 9:16 portrait sheets where one subject remains identity-consistent across a precise 3 by 3 grid of expressions, poses, and styling changes.
+> 测试 9:16 竖幅 3x3 九宫格中同一人物的脸部一致性、表情差异、姿态变化和版式清晰度。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/nine-expression-portrait-grid/packages/series-idol-expression-lock/images/01-reference-idol-sheet/image.w1600.webp"><img src="./works/topics/nine-expression-portrait-grid/packages/series-idol-expression-lock/images/01-reference-idol-sheet/image.w400.webp" width="100%" alt="Reference Idol Sheet"/></a>
+<a href="./works/topics/nine-expression-portrait-grid/packages/series-idol-expression-lock/images/01-reference-idol-sheet/image.w1600.webp"><img src="./works/topics/nine-expression-portrait-grid/packages/series-idol-expression-lock/images/01-reference-idol-sheet/image.w400.webp" width="100%" alt="基准偶像表情表"/></a>
 
-<b>Reference Idol Sheet</b>
+<b>基准偶像表情表</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -8361,11 +8361,11 @@ No readable text, no watermark, no logos, preserve exact 9:16 vertical aspect ra
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/nine-expression-portrait-grid/packages/single-expression-grid-studies/images/01-family-album-matriarch/image.w1600.webp"><img src="./works/topics/nine-expression-portrait-grid/packages/single-expression-grid-studies/images/01-family-album-matriarch/image.w400.webp" width="100%" alt="Family Album Matriarch"/></a>
+<a href="./works/topics/nine-expression-portrait-grid/packages/single-expression-grid-studies/images/01-family-album-matriarch/image.w1600.webp"><img src="./works/topics/nine-expression-portrait-grid/packages/single-expression-grid-studies/images/01-family-album-matriarch/image.w400.webp" width="100%" alt="家族相册祖母"/></a>
 
-<b>Family Album Matriarch</b>
+<b>家族相册祖母</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -8389,11 +8389,11 @@ No readable text, no watermark, no logos, preserve exact 9:16 vertical aspect ra
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/nine-expression-portrait-grid/packages/single-expression-grid-studies/images/02-actor-audition-contact-sheet/image.w1600.webp"><img src="./works/topics/nine-expression-portrait-grid/packages/single-expression-grid-studies/images/02-actor-audition-contact-sheet/image.w400.webp" width="100%" alt="Actor Audition Contact Sheet"/></a>
+<a href="./works/topics/nine-expression-portrait-grid/packages/single-expression-grid-studies/images/02-actor-audition-contact-sheet/image.w1600.webp"><img src="./works/topics/nine-expression-portrait-grid/packages/single-expression-grid-studies/images/02-actor-audition-contact-sheet/image.w400.webp" width="100%" alt="演员试镜接触表"/></a>
 
-<b>Actor Audition Contact Sheet</b>
+<b>演员试镜接触表</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -8419,11 +8419,11 @@ No readable text, no watermark, no logos, preserve exact 9:16 vertical aspect ra
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/nine-expression-portrait-grid/packages/series-idol-expression-lock/images/03-soft-album-sheet/image.w1600.webp"><img src="./works/topics/nine-expression-portrait-grid/packages/series-idol-expression-lock/images/03-soft-album-sheet/image.w400.webp" width="100%" alt="Soft Album Sheet"/></a>
+<a href="./works/topics/nine-expression-portrait-grid/packages/series-idol-expression-lock/images/03-soft-album-sheet/image.w1600.webp"><img src="./works/topics/nine-expression-portrait-grid/packages/series-idol-expression-lock/images/03-soft-album-sheet/image.w400.webp" width="100%" alt="柔光专辑表情表"/></a>
 
-<b>Soft Album Sheet</b>
+<b>柔光专辑表情表</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -8447,11 +8447,11 @@ No readable text, no watermark, no logos, preserve exact 9:16 vertical aspect ra
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/nine-expression-portrait-grid/packages/single-expression-grid-studies/images/03-athlete-media-day/image.w1600.webp"><img src="./works/topics/nine-expression-portrait-grid/packages/single-expression-grid-studies/images/03-athlete-media-day/image.w400.webp" width="100%" alt="Athlete Media Day"/></a>
+<a href="./works/topics/nine-expression-portrait-grid/packages/single-expression-grid-studies/images/03-athlete-media-day/image.w1600.webp"><img src="./works/topics/nine-expression-portrait-grid/packages/single-expression-grid-studies/images/03-athlete-media-day/image.w400.webp" width="100%" alt="运动员媒体日"/></a>
 
-<b>Athlete Media Day</b>
+<b>运动员媒体日</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -8475,11 +8475,11 @@ No readable text, no watermark, no logos, preserve exact 9:16 vertical aspect ra
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/nine-expression-portrait-grid/packages/series-idol-expression-lock/images/04-street-casting-sheet/image.w1600.webp"><img src="./works/topics/nine-expression-portrait-grid/packages/series-idol-expression-lock/images/04-street-casting-sheet/image.w400.webp" width="100%" alt="Street Casting Sheet"/></a>
+<a href="./works/topics/nine-expression-portrait-grid/packages/series-idol-expression-lock/images/04-street-casting-sheet/image.w1600.webp"><img src="./works/topics/nine-expression-portrait-grid/packages/series-idol-expression-lock/images/04-street-casting-sheet/image.w400.webp" width="100%" alt="街头试镜表情表"/></a>
 
-<b>Street Casting Sheet</b>
+<b>街头试镜表情表</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -8505,11 +8505,11 @@ No readable text, no watermark, no logos, preserve exact 9:16 vertical aspect ra
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/nine-expression-portrait-grid/packages/single-expression-grid-studies/images/04-wedding-emotion-study/image.w1600.webp"><img src="./works/topics/nine-expression-portrait-grid/packages/single-expression-grid-studies/images/04-wedding-emotion-study/image.w400.webp" width="100%" alt="Wedding Emotion Study"/></a>
+<a href="./works/topics/nine-expression-portrait-grid/packages/single-expression-grid-studies/images/04-wedding-emotion-study/image.w1600.webp"><img src="./works/topics/nine-expression-portrait-grid/packages/single-expression-grid-studies/images/04-wedding-emotion-study/image.w400.webp" width="100%" alt="婚礼情绪研究"/></a>
 
-<b>Wedding Emotion Study</b>
+<b>婚礼情绪研究</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -8536,19 +8536,19 @@ No readable text, no watermark, no logos, preserve exact 9:16 vertical aspect ra
 </tr>
 </table>
 
-## Object Boardroom
+## 物体拟人化开会
 
-> A Prompt Atlas theme for photorealistic anthropomorphic objects in executive boardrooms, testing material physics, lighting, and commercial concept staging.
+> 用写实广告级画面表现物体穿西装坐进会议室,测试材质、光照、物理可信度和高概念幽默。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/object-boardroom/packages/series-executive-table/images/01-coffee-chair/image.w1600.webp"><img src="./works/topics/object-boardroom/packages/series-executive-table/images/01-coffee-chair/image.w400.webp" width="100%" alt="Coffee Chair"/></a>
+<a href="./works/topics/object-boardroom/packages/series-executive-table/images/01-coffee-chair/image.w1600.webp"><img src="./works/topics/object-boardroom/packages/series-executive-table/images/01-coffee-chair/image.w400.webp" width="100%" alt="咖啡主席"/></a>
 
-<b>Coffee Chair</b>
+<b>咖啡主席</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -8572,11 +8572,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no ca
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/object-boardroom/packages/series-executive-table/images/02-cigar-chair/image.w1600.webp"><img src="./works/topics/object-boardroom/packages/series-executive-table/images/02-cigar-chair/image.w400.webp" width="100%" alt="Cigar Chair"/></a>
+<a href="./works/topics/object-boardroom/packages/series-executive-table/images/02-cigar-chair/image.w1600.webp"><img src="./works/topics/object-boardroom/packages/series-executive-table/images/02-cigar-chair/image.w400.webp" width="100%" alt="雪茄董事"/></a>
 
-<b>Cigar Chair</b>
+<b>雪茄董事</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -8600,11 +8600,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no ca
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/object-boardroom/packages/single-object-negotiations/images/candle-risk-briefing/image.w1600.webp"><img src="./works/topics/object-boardroom/packages/single-object-negotiations/images/candle-risk-briefing/image.w400.webp" width="100%" alt="Candle Risk Briefing"/></a>
+<a href="./works/topics/object-boardroom/packages/single-object-negotiations/images/candle-risk-briefing/image.w1600.webp"><img src="./works/topics/object-boardroom/packages/single-object-negotiations/images/candle-risk-briefing/image.w400.webp" width="100%" alt="蜡烛风控会"/></a>
 
-<b>Candle Risk Briefing</b>
+<b>蜡烛风控会</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -8630,11 +8630,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no ca
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/object-boardroom/packages/series-executive-table/images/03-pen-chair/image.w1600.webp"><img src="./works/topics/object-boardroom/packages/series-executive-table/images/03-pen-chair/image.w400.webp" width="100%" alt="Pen Chair"/></a>
+<a href="./works/topics/object-boardroom/packages/series-executive-table/images/03-pen-chair/image.w1600.webp"><img src="./works/topics/object-boardroom/packages/series-executive-table/images/03-pen-chair/image.w400.webp" width="100%" alt="钢笔席位"/></a>
 
-<b>Pen Chair</b>
+<b>钢笔席位</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -8658,11 +8658,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no ca
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/object-boardroom/packages/series-executive-table/images/04-key-chair/image.w1600.webp"><img src="./works/topics/object-boardroom/packages/series-executive-table/images/04-key-chair/image.w400.webp" width="100%" alt="Key Chair"/></a>
+<a href="./works/topics/object-boardroom/packages/series-executive-table/images/04-key-chair/image.w1600.webp"><img src="./works/topics/object-boardroom/packages/series-executive-table/images/04-key-chair/image.w400.webp" width="100%" alt="钥匙主位"/></a>
 
-<b>Key Chair</b>
+<b>钥匙主位</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -8686,11 +8686,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no ca
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/object-boardroom/packages/single-object-negotiations/images/umbrella-crisis-seat/image.w1600.webp"><img src="./works/topics/object-boardroom/packages/single-object-negotiations/images/umbrella-crisis-seat/image.w400.webp" width="100%" alt="Umbrella Crisis Seat"/></a>
+<a href="./works/topics/object-boardroom/packages/single-object-negotiations/images/umbrella-crisis-seat/image.w1600.webp"><img src="./works/topics/object-boardroom/packages/single-object-negotiations/images/umbrella-crisis-seat/image.w400.webp" width="100%" alt="雨伞危机席"/></a>
 
-<b>Umbrella Crisis Seat</b>
+<b>雨伞危机席</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -8715,19 +8715,19 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no ca
 </tr>
 </table>
 
-## Painting Character OOTD
+## 名画人物 OOTD · 穿搭九宫格
 
-> A Prompt Atlas theme for preserving painted-character identity while translating historic portrait subjects into modern outfit-of-the-day grid layouts.
+> 测试名画人物身份保留、现代穿搭替换、社交媒体九宫格版式和跨时代风格反串。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/painting-character-ootd/packages/series-renaissance-ootd-grid/images/01-reference-portrait-grid/image.w1600.webp"><img src="./works/topics/painting-character-ootd/packages/series-renaissance-ootd-grid/images/01-reference-portrait-grid/image.w400.webp" width="100%" alt="Reference Portrait Grid"/></a>
+<a href="./works/topics/painting-character-ootd/packages/series-renaissance-ootd-grid/images/01-reference-portrait-grid/image.w1600.webp"><img src="./works/topics/painting-character-ootd/packages/series-renaissance-ootd-grid/images/01-reference-portrait-grid/image.w400.webp" width="100%" alt="基准肖像九宫格"/></a>
 
-<b>Reference Portrait Grid</b>
+<b>基准肖像九宫格</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -8751,11 +8751,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no br
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/painting-character-ootd/packages/single-art-history-ootd-studies/images/01-pearl-earring-fit-check/image.w1600.webp"><img src="./works/topics/painting-character-ootd/packages/single-art-history-ootd-studies/images/01-pearl-earring-fit-check/image.w400.webp" width="100%" alt="Pearl Earring Fit Check"/></a>
+<a href="./works/topics/painting-character-ootd/packages/single-art-history-ootd-studies/images/01-pearl-earring-fit-check/image.w1600.webp"><img src="./works/topics/painting-character-ootd/packages/single-art-history-ootd-studies/images/01-pearl-earring-fit-check/image.w400.webp" width="100%" alt="珍珠耳环试穿"/></a>
 
-<b>Pearl Earring Fit Check</b>
+<b>珍珠耳环试穿</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -8779,11 +8779,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no br
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/painting-character-ootd/packages/series-renaissance-ootd-grid/images/02-streetwear-layering/image.w1600.webp"><img src="./works/topics/painting-character-ootd/packages/series-renaissance-ootd-grid/images/02-streetwear-layering/image.w400.webp" width="100%" alt="Streetwear Layering"/></a>
+<a href="./works/topics/painting-character-ootd/packages/series-renaissance-ootd-grid/images/02-streetwear-layering/image.w1600.webp"><img src="./works/topics/painting-character-ootd/packages/series-renaissance-ootd-grid/images/02-streetwear-layering/image.w400.webp" width="100%" alt="街头叠搭"/></a>
 
-<b>Streetwear Layering</b>
+<b>街头叠搭</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -8809,11 +8809,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no br
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/painting-character-ootd/packages/series-renaissance-ootd-grid/images/03-gallery-tailoring/image.w1600.webp"><img src="./works/topics/painting-character-ootd/packages/series-renaissance-ootd-grid/images/03-gallery-tailoring/image.w400.webp" width="100%" alt="Gallery Tailoring"/></a>
+<a href="./works/topics/painting-character-ootd/packages/series-renaissance-ootd-grid/images/03-gallery-tailoring/image.w1600.webp"><img src="./works/topics/painting-character-ootd/packages/series-renaissance-ootd-grid/images/03-gallery-tailoring/image.w400.webp" width="100%" alt="画廊剪裁"/></a>
 
-<b>Gallery Tailoring</b>
+<b>画廊剪裁</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -8837,11 +8837,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no br
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/painting-character-ootd/packages/single-art-history-ootd-studies/images/03-ukiyo-e-street-style/image.w1600.webp"><img src="./works/topics/painting-character-ootd/packages/single-art-history-ootd-studies/images/03-ukiyo-e-street-style/image.w400.webp" width="100%" alt="Ukiyo-e Street Style"/></a>
+<a href="./works/topics/painting-character-ootd/packages/single-art-history-ootd-studies/images/03-ukiyo-e-street-style/image.w1600.webp"><img src="./works/topics/painting-character-ootd/packages/single-art-history-ootd-studies/images/03-ukiyo-e-street-style/image.w400.webp" width="100%" alt="浮世绘街拍"/></a>
 
-<b>Ukiyo-e Street Style</b>
+<b>浮世绘街拍</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -8865,11 +8865,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no br
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/painting-character-ootd/packages/series-renaissance-ootd-grid/images/04-studio-athleisure/image.w1600.webp"><img src="./works/topics/painting-character-ootd/packages/series-renaissance-ootd-grid/images/04-studio-athleisure/image.w400.webp" width="100%" alt="Studio Athleisure"/></a>
+<a href="./works/topics/painting-character-ootd/packages/series-renaissance-ootd-grid/images/04-studio-athleisure/image.w1600.webp"><img src="./works/topics/painting-character-ootd/packages/series-renaissance-ootd-grid/images/04-studio-athleisure/image.w400.webp" width="100%" alt="棚拍运动休闲"/></a>
 
-<b>Studio Athleisure</b>
+<b>棚拍运动休闲</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -8895,11 +8895,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no br
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/painting-character-ootd/packages/single-art-history-ootd-studies/images/04-romantic-cloud-coat/image.w1600.webp"><img src="./works/topics/painting-character-ootd/packages/single-art-history-ootd-studies/images/04-romantic-cloud-coat/image.w400.webp" width="100%" alt="Romantic Cloud Coat"/></a>
+<a href="./works/topics/painting-character-ootd/packages/single-art-history-ootd-studies/images/04-romantic-cloud-coat/image.w1600.webp"><img src="./works/topics/painting-character-ootd/packages/single-art-history-ootd-studies/images/04-romantic-cloud-coat/image.w400.webp" width="100%" alt="浪漫主义云层风衣"/></a>
 
-<b>Romantic Cloud Coat</b>
+<b>浪漫主义云层风衣</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -8926,19 +8926,19 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no br
 </tr>
 </table>
 
-## Propaganda Poster History
+## 政治宣传海报艺术史
 
-> A Prompt Atlas theme for educational, fictionalized studies of historical propaganda-poster visual languages, focusing on layout, typography fields, print texture, and era-specific style transfer.
+> 以教学和设计史研究为目的,测试历史宣传海报视觉语言、版式、字体区域、印刷质感和时代风格转译。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/propaganda-poster-history/packages/single-poster-history-studies/images/02-civic-recruitment-hand/image.w1600.webp"><img src="./works/topics/propaganda-poster-history/packages/single-poster-history-studies/images/02-civic-recruitment-hand/image.w400.webp" width="100%" alt="Civic Recruitment Hand"/></a>
+<a href="./works/topics/propaganda-poster-history/packages/single-poster-history-studies/images/02-civic-recruitment-hand/image.w1600.webp"><img src="./works/topics/propaganda-poster-history/packages/single-poster-history-studies/images/02-civic-recruitment-hand/image.w400.webp" width="100%" alt="公民招募手势"/></a>
 
-<b>Civic Recruitment Hand</b>
+<b>公民招募手势</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -8962,11 +8962,11 @@ No readable text, no watermark, no logos, preserve exact 9:16 vertical aspect ra
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/propaganda-poster-history/packages/single-poster-history-studies/images/03-industrial-harvest-mural/image.w1600.webp"><img src="./works/topics/propaganda-poster-history/packages/single-poster-history-studies/images/03-industrial-harvest-mural/image.w400.webp" width="100%" alt="Industrial Harvest Mural"/></a>
+<a href="./works/topics/propaganda-poster-history/packages/single-poster-history-studies/images/03-industrial-harvest-mural/image.w1600.webp"><img src="./works/topics/propaganda-poster-history/packages/single-poster-history-studies/images/03-industrial-harvest-mural/image.w400.webp" width="100%" alt="工业丰收壁画"/></a>
 
-<b>Industrial Harvest Mural</b>
+<b>工业丰收壁画</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -8990,11 +8990,11 @@ No readable text, no watermark, no logos, preserve exact 9:16 vertical aspect ra
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/propaganda-poster-history/packages/single-poster-history-studies/images/04-revolution-portrait-study/image.w1600.webp"><img src="./works/topics/propaganda-poster-history/packages/single-poster-history-studies/images/04-revolution-portrait-study/image.w400.webp" width="100%" alt="Revolution Portrait Study"/></a>
+<a href="./works/topics/propaganda-poster-history/packages/single-poster-history-studies/images/04-revolution-portrait-study/image.w1600.webp"><img src="./works/topics/propaganda-poster-history/packages/single-poster-history-studies/images/04-revolution-portrait-study/image.w400.webp" width="100%" alt="革命肖像研究"/></a>
 
-<b>Revolution Portrait Study</b>
+<b>革命肖像研究</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -9020,11 +9020,11 @@ No readable text, no watermark, no logos, preserve exact 9:16 vertical aspect ra
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/propaganda-poster-history/packages/single-poster-history-studies/images/05-space-race-optimism/image.w1600.webp"><img src="./works/topics/propaganda-poster-history/packages/single-poster-history-studies/images/05-space-race-optimism/image.w400.webp" width="100%" alt="Space Race Optimism"/></a>
+<a href="./works/topics/propaganda-poster-history/packages/single-poster-history-studies/images/05-space-race-optimism/image.w1600.webp"><img src="./works/topics/propaganda-poster-history/packages/single-poster-history-studies/images/05-space-race-optimism/image.w400.webp" width="100%" alt="太空竞赛乐观主义"/></a>
 
-<b>Space Race Optimism</b>
+<b>太空竞赛乐观主义</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -9048,11 +9048,11 @@ No readable text, no watermark, no logos, preserve exact 9:16 vertical aspect ra
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/propaganda-poster-history/packages/single-poster-history-studies/images/06-public-health-modernist/image.w1600.webp"><img src="./works/topics/propaganda-poster-history/packages/single-poster-history-studies/images/06-public-health-modernist/image.w400.webp" width="100%" alt="Public Health Modernist"/></a>
+<a href="./works/topics/propaganda-poster-history/packages/single-poster-history-studies/images/06-public-health-modernist/image.w1600.webp"><img src="./works/topics/propaganda-poster-history/packages/single-poster-history-studies/images/06-public-health-modernist/image.w400.webp" width="100%" alt="现代主义公共卫生"/></a>
 
-<b>Public Health Modernist</b>
+<b>现代主义公共卫生</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -9076,11 +9076,11 @@ No readable text, no watermark, no logos, preserve exact 9:16 vertical aspect ra
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/propaganda-poster-history/packages/single-poster-history-studies/images/07-woodcut-crowd-march/image.w1600.webp"><img src="./works/topics/propaganda-poster-history/packages/single-poster-history-studies/images/07-woodcut-crowd-march/image.w400.webp" width="100%" alt="Woodcut Crowd March"/></a>
+<a href="./works/topics/propaganda-poster-history/packages/single-poster-history-studies/images/07-woodcut-crowd-march/image.w1600.webp"><img src="./works/topics/propaganda-poster-history/packages/single-poster-history-studies/images/07-woodcut-crowd-march/image.w400.webp" width="100%" alt="木刻人群行进"/></a>
 
-<b>Woodcut Crowd March</b>
+<b>木刻人群行进</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -9106,11 +9106,11 @@ No readable text, no watermark, no logos, preserve exact 9:16 vertical aspect ra
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/propaganda-poster-history/packages/single-poster-history-studies/images/08-civil-defense-broadcast/image.w1600.webp"><img src="./works/topics/propaganda-poster-history/packages/single-poster-history-studies/images/08-civil-defense-broadcast/image.w400.webp" width="100%" alt="Civil Defense Broadcast"/></a>
+<a href="./works/topics/propaganda-poster-history/packages/single-poster-history-studies/images/08-civil-defense-broadcast/image.w1600.webp"><img src="./works/topics/propaganda-poster-history/packages/single-poster-history-studies/images/08-civil-defense-broadcast/image.w400.webp" width="100%" alt="民防广播海报"/></a>
 
-<b>Civil Defense Broadcast</b>
+<b>民防广播海报</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -9137,19 +9137,19 @@ No readable text, no watermark, no logos, preserve exact 9:16 vertical aspect ra
 </tr>
 </table>
 
-## Pseudo-Real Documents
+## 伪真实文档 · 票据 / 护照 / 药方 / 字帖
 
-> A Prompt Atlas theme for fictional specimen documents that test readable typography, paper physics, print texture, stamps, handwriting, and commercial mockup realism.
+> 测试虚构 specimen 文档的可读文字、纸张材质、印刷纹理、印章、手写笔迹和商业 mockup 真实感。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/pseudo-real-documents/packages/single-document-specimens/images/specimen-boarding-pass/image.w1600.webp"><img src="./works/topics/pseudo-real-documents/packages/single-document-specimens/images/specimen-boarding-pass/image.w400.webp" width="100%" alt="Specimen Boarding Pass"/></a>
+<a href="./works/topics/pseudo-real-documents/packages/single-document-specimens/images/specimen-boarding-pass/image.w1600.webp"><img src="./works/topics/pseudo-real-documents/packages/single-document-specimens/images/specimen-boarding-pass/image.w400.webp" width="100%" alt="样张登机牌"/></a>
 
-<b>Specimen Boarding Pass</b>
+<b>样张登机牌</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -9173,11 +9173,11 @@ No readable text except the specified specimen boarding-pass strings, no waterma
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/pseudo-real-documents/packages/single-document-specimens/images/passport-stamp-spread/image.w1600.webp"><img src="./works/topics/pseudo-real-documents/packages/single-document-specimens/images/passport-stamp-spread/image.w400.webp" width="100%" alt="Passport Stamp Spread"/></a>
+<a href="./works/topics/pseudo-real-documents/packages/single-document-specimens/images/passport-stamp-spread/image.w1600.webp"><img src="./works/topics/pseudo-real-documents/packages/single-document-specimens/images/passport-stamp-spread/image.w400.webp" width="100%" alt="护照印章样页"/></a>
 
-<b>Passport Stamp Spread</b>
+<b>护照印章样页</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -9201,11 +9201,11 @@ No readable text except the specified fictional passport and stamp strings, no w
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/pseudo-real-documents/packages/single-document-specimens/images/tcm-herbal-note/image.w1600.webp"><img src="./works/topics/pseudo-real-documents/packages/single-document-specimens/images/tcm-herbal-note/image.w400.webp" width="100%" alt="Herbal Study Note"/></a>
+<a href="./works/topics/pseudo-real-documents/packages/single-document-specimens/images/tcm-herbal-note/image.w1600.webp"><img src="./works/topics/pseudo-real-documents/packages/single-document-specimens/images/tcm-herbal-note/image.w400.webp" width="100%" alt="草本学习单"/></a>
 
-<b>Herbal Study Note</b>
+<b>草本学习单</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -9231,11 +9231,11 @@ No readable text except the specified herbal study strings, no watermark, no log
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/pseudo-real-documents/packages/single-document-specimens/images/calligraphy-copybook/image.w1600.webp"><img src="./works/topics/pseudo-real-documents/packages/single-document-specimens/images/calligraphy-copybook/image.w400.webp" width="100%" alt="Calligraphy Copybook"/></a>
+<a href="./works/topics/pseudo-real-documents/packages/single-document-specimens/images/calligraphy-copybook/image.w1600.webp"><img src="./works/topics/pseudo-real-documents/packages/single-document-specimens/images/calligraphy-copybook/image.w400.webp" width="100%" alt="书法临摹字帖"/></a>
 
-<b>Calligraphy Copybook</b>
+<b>书法临摹字帖</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -9259,11 +9259,11 @@ No readable text except the specified copybook strings, no watermark, no logos, 
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/pseudo-real-documents/packages/single-document-specimens/images/palm-reading-report/image.w1600.webp"><img src="./works/topics/pseudo-real-documents/packages/single-document-specimens/images/palm-reading-report/image.w400.webp" width="100%" alt="Palm Reading Report"/></a>
+<a href="./works/topics/pseudo-real-documents/packages/single-document-specimens/images/palm-reading-report/image.w1600.webp"><img src="./works/topics/pseudo-real-documents/packages/single-document-specimens/images/palm-reading-report/image.w400.webp" width="100%" alt="手相鉴定样张"/></a>
 
-<b>Palm Reading Report</b>
+<b>手相鉴定样张</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -9287,11 +9287,11 @@ No readable text except the specified palm report strings, no watermark, no logo
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/pseudo-real-documents/packages/single-document-specimens/images/hotel-invoice-folio/image.w1600.webp"><img src="./works/topics/pseudo-real-documents/packages/single-document-specimens/images/hotel-invoice-folio/image.w400.webp" width="100%" alt="Hotel Invoice Folio"/></a>
+<a href="./works/topics/pseudo-real-documents/packages/single-document-specimens/images/hotel-invoice-folio/image.w1600.webp"><img src="./works/topics/pseudo-real-documents/packages/single-document-specimens/images/hotel-invoice-folio/image.w400.webp" width="100%" alt="酒店账单样张"/></a>
 
-<b>Hotel Invoice Folio</b>
+<b>酒店账单样张</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -9317,11 +9317,11 @@ No readable text except the specified hotel folio strings, no watermark, no logo
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/pseudo-real-documents/packages/single-document-specimens/images/train-seat-reservation/image.w1600.webp"><img src="./works/topics/pseudo-real-documents/packages/single-document-specimens/images/train-seat-reservation/image.w400.webp" width="100%" alt="Train Seat Reservation"/></a>
+<a href="./works/topics/pseudo-real-documents/packages/single-document-specimens/images/train-seat-reservation/image.w1600.webp"><img src="./works/topics/pseudo-real-documents/packages/single-document-specimens/images/train-seat-reservation/image.w400.webp" width="100%" alt="火车座位预订单"/></a>
 
-<b>Train Seat Reservation</b>
+<b>火车座位预订单</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -9348,19 +9348,19 @@ No readable text except the specified rail reservation strings, no watermark, no
 </tr>
 </table>
 
-## Risograph Misprint
+## Risograph 丝网错版印刷
 
-> A Prompt Atlas theme for Risograph misprint aesthetics, testing structured layout, paper-and-ink physics, photoreal print mockups, and two-to-three-color style transfer.
+> 测试荧光粉、钴蓝、黑色三色分版，1-2mm 故意错位、颗粒 halftone、纸张纤维和 80 年代 zine 质感。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/risograph-misprint/packages/series-three-plate-zine/images/01-reference-zine-poster/image.w1600.webp"><img src="./works/topics/risograph-misprint/packages/series-three-plate-zine/images/01-reference-zine-poster/image.w400.webp" width="100%" alt="Reference Zine Poster"/></a>
+<a href="./works/topics/risograph-misprint/packages/series-three-plate-zine/images/01-reference-zine-poster/image.w1600.webp"><img src="./works/topics/risograph-misprint/packages/series-three-plate-zine/images/01-reference-zine-poster/image.w400.webp" width="100%" alt="基准 Zine 海报"/></a>
 
-<b>Reference Zine Poster</b>
+<b>基准 Zine 海报</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -9384,11 +9384,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/risograph-misprint/packages/single-riso-print-studies/images/botanical-zine-spread/image.w1600.webp"><img src="./works/topics/risograph-misprint/packages/single-riso-print-studies/images/botanical-zine-spread/image.w400.webp" width="100%" alt="Botanical Zine Spread"/></a>
+<a href="./works/topics/risograph-misprint/packages/single-riso-print-studies/images/botanical-zine-spread/image.w1600.webp"><img src="./works/topics/risograph-misprint/packages/single-riso-print-studies/images/botanical-zine-spread/image.w400.webp" width="100%" alt="植物 Zine 跨页"/></a>
 
-<b>Botanical Zine Spread</b>
+<b>植物 Zine 跨页</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -9412,11 +9412,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/risograph-misprint/packages/series-three-plate-zine/images/02-pink-plate-shift/image.w1600.webp"><img src="./works/topics/risograph-misprint/packages/series-three-plate-zine/images/02-pink-plate-shift/image.w400.webp" width="100%" alt="Pink Plate Shift"/></a>
+<a href="./works/topics/risograph-misprint/packages/series-three-plate-zine/images/02-pink-plate-shift/image.w1600.webp"><img src="./works/topics/risograph-misprint/packages/series-three-plate-zine/images/02-pink-plate-shift/image.w400.webp" width="100%" alt="荧光粉版错位"/></a>
 
-<b>Pink Plate Shift</b>
+<b>荧光粉版错位</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -9442,11 +9442,11 @@ PRESERVE the reference image composition, paper crop, zine layout, subject place
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/risograph-misprint/packages/single-riso-print-studies/images/cosmic-bike-poster/image.w1600.webp"><img src="./works/topics/risograph-misprint/packages/single-riso-print-studies/images/cosmic-bike-poster/image.w400.webp" width="100%" alt="Cosmic Bike Poster"/></a>
+<a href="./works/topics/risograph-misprint/packages/single-riso-print-studies/images/cosmic-bike-poster/image.w1600.webp"><img src="./works/topics/risograph-misprint/packages/single-riso-print-studies/images/cosmic-bike-poster/image.w400.webp" width="100%" alt="宇宙自行车海报"/></a>
 
-<b>Cosmic Bike Poster</b>
+<b>宇宙自行车海报</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -9470,11 +9470,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/risograph-misprint/packages/series-three-plate-zine/images/03-blue-ghost-feed/image.w1600.webp"><img src="./works/topics/risograph-misprint/packages/series-three-plate-zine/images/03-blue-ghost-feed/image.w400.webp" width="100%" alt="Blue Ghost Feed"/></a>
+<a href="./works/topics/risograph-misprint/packages/series-three-plate-zine/images/03-blue-ghost-feed/image.w1600.webp"><img src="./works/topics/risograph-misprint/packages/series-three-plate-zine/images/03-blue-ghost-feed/image.w400.webp" width="100%" alt="钴蓝重影进纸"/></a>
 
-<b>Blue Ghost Feed</b>
+<b>钴蓝重影进纸</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -9498,11 +9498,11 @@ PRESERVE the reference image composition, paper crop, zine layout, subject place
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/risograph-misprint/packages/single-riso-print-studies/images/aquarium-flyer-misprint/image.w1600.webp"><img src="./works/topics/risograph-misprint/packages/single-riso-print-studies/images/aquarium-flyer-misprint/image.w400.webp" width="100%" alt="Aquarium Flyer Misprint"/></a>
+<a href="./works/topics/risograph-misprint/packages/single-riso-print-studies/images/aquarium-flyer-misprint/image.w1600.webp"><img src="./works/topics/risograph-misprint/packages/single-riso-print-studies/images/aquarium-flyer-misprint/image.w400.webp" width="100%" alt="水族馆传单错版"/></a>
 
-<b>Aquarium Flyer Misprint</b>
+<b>水族馆传单错版</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -9528,11 +9528,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/risograph-misprint/packages/single-riso-print-studies/images/street-cat-comic-page/image.w1600.webp"><img src="./works/topics/risograph-misprint/packages/single-riso-print-studies/images/street-cat-comic-page/image.w400.webp" width="100%" alt="Street Cat Comic Page"/></a>
+<a href="./works/topics/risograph-misprint/packages/single-riso-print-studies/images/street-cat-comic-page/image.w1600.webp"><img src="./works/topics/risograph-misprint/packages/single-riso-print-studies/images/street-cat-comic-page/image.w400.webp" width="100%" alt="街猫漫画页"/></a>
 
-<b>Street Cat Comic Page</b>
+<b>街猫漫画页</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -9559,19 +9559,19 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </tr>
 </table>
 
-## SEM Microscopy
+## SEM 电子显微镜显微摄影
 
-> A Prompt Atlas theme for realistic scanning electron microscope image plates with scientific texture, grayscale or false-color rendering, and structured instrument-layout cues.
+> 测试真实扫描电镜质感、灰阶或假彩色显微摄影、比例尺区域和仪器信息栏式结构化版式。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/sem-microscopy/packages/single-sem-specimen-plates/images/butterfly-wing-scales/image.w1600.webp"><img src="./works/topics/sem-microscopy/packages/single-sem-specimen-plates/images/butterfly-wing-scales/image.w400.webp" width="100%" alt="Butterfly Wing Scales"/></a>
+<a href="./works/topics/sem-microscopy/packages/single-sem-specimen-plates/images/butterfly-wing-scales/image.w1600.webp"><img src="./works/topics/sem-microscopy/packages/single-sem-specimen-plates/images/butterfly-wing-scales/image.w400.webp" width="100%" alt="蝴蝶翅膀鳞粉"/></a>
 
-<b>Butterfly Wing Scales</b>
+<b>蝴蝶翅膀鳞粉</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -9595,11 +9595,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no co
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/sem-microscopy/packages/single-sem-specimen-plates/images/pollen-grain-field/image.w1600.webp"><img src="./works/topics/sem-microscopy/packages/single-sem-specimen-plates/images/pollen-grain-field/image.w400.webp" width="100%" alt="Pollen Grain Field"/></a>
+<a href="./works/topics/sem-microscopy/packages/single-sem-specimen-plates/images/pollen-grain-field/image.w1600.webp"><img src="./works/topics/sem-microscopy/packages/single-sem-specimen-plates/images/pollen-grain-field/image.w400.webp" width="100%" alt="花粉粒场"/></a>
 
-<b>Pollen Grain Field</b>
+<b>花粉粒场</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -9623,11 +9623,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no br
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/sem-microscopy/packages/single-sem-specimen-plates/images/mosquito-mouthparts/image.w1600.webp"><img src="./works/topics/sem-microscopy/packages/single-sem-specimen-plates/images/mosquito-mouthparts/image.w400.webp" width="100%" alt="Mosquito Mouthparts"/></a>
+<a href="./works/topics/sem-microscopy/packages/single-sem-specimen-plates/images/mosquito-mouthparts/image.w1600.webp"><img src="./works/topics/sem-microscopy/packages/single-sem-specimen-plates/images/mosquito-mouthparts/image.w400.webp" width="100%" alt="蚊子口器"/></a>
 
-<b>Mosquito Mouthparts</b>
+<b>蚊子口器</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -9653,11 +9653,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no go
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/sem-microscopy/packages/single-sem-specimen-plates/images/snowflake-hex-crystal/image.w1600.webp"><img src="./works/topics/sem-microscopy/packages/single-sem-specimen-plates/images/snowflake-hex-crystal/image.w400.webp" width="100%" alt="Snowflake Hex Crystal"/></a>
+<a href="./works/topics/sem-microscopy/packages/single-sem-specimen-plates/images/snowflake-hex-crystal/image.w1600.webp"><img src="./works/topics/sem-microscopy/packages/single-sem-specimen-plates/images/snowflake-hex-crystal/image.w400.webp" width="100%" alt="雪花六角晶体"/></a>
 
-<b>Snowflake Hex Crystal</b>
+<b>雪花六角晶体</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -9681,11 +9681,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no fa
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/sem-microscopy/packages/single-sem-specimen-plates/images/red-blood-cell-terrain/image.w1600.webp"><img src="./works/topics/sem-microscopy/packages/single-sem-specimen-plates/images/red-blood-cell-terrain/image.w400.webp" width="100%" alt="Red Blood Cell Terrain"/></a>
+<a href="./works/topics/sem-microscopy/packages/single-sem-specimen-plates/images/red-blood-cell-terrain/image.w1600.webp"><img src="./works/topics/sem-microscopy/packages/single-sem-specimen-plates/images/red-blood-cell-terrain/image.w400.webp" width="100%" alt="红细胞地形"/></a>
 
-<b>Red Blood Cell Terrain</b>
+<b>红细胞地形</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -9709,11 +9709,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no go
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/sem-microscopy/packages/single-sem-specimen-plates/images/diatom-glass-lattice/image.w1600.webp"><img src="./works/topics/sem-microscopy/packages/single-sem-specimen-plates/images/diatom-glass-lattice/image.w400.webp" width="100%" alt="Diatom Glass Lattice"/></a>
+<a href="./works/topics/sem-microscopy/packages/single-sem-specimen-plates/images/diatom-glass-lattice/image.w1600.webp"><img src="./works/topics/sem-microscopy/packages/single-sem-specimen-plates/images/diatom-glass-lattice/image.w400.webp" width="100%" alt="硅藻玻璃晶格"/></a>
 
-<b>Diatom Glass Lattice</b>
+<b>硅藻玻璃晶格</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -9739,11 +9739,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no de
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/sem-microscopy/packages/single-sem-specimen-plates/images/gecko-toe-setae/image.w1600.webp"><img src="./works/topics/sem-microscopy/packages/single-sem-specimen-plates/images/gecko-toe-setae/image.w400.webp" width="100%" alt="Gecko Toe Setae"/></a>
+<a href="./works/topics/sem-microscopy/packages/single-sem-specimen-plates/images/gecko-toe-setae/image.w1600.webp"><img src="./works/topics/sem-microscopy/packages/single-sem-specimen-plates/images/gecko-toe-setae/image.w400.webp" width="100%" alt="壁虎趾垫刚毛"/></a>
 
-<b>Gecko Toe Setae</b>
+<b>壁虎趾垫刚毛</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -9767,11 +9767,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no cu
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/sem-microscopy/packages/single-sem-specimen-plates/images/microchip-fracture/image.w1600.webp"><img src="./works/topics/sem-microscopy/packages/single-sem-specimen-plates/images/microchip-fracture/image.w400.webp" width="100%" alt="Microchip Fracture"/></a>
+<a href="./works/topics/sem-microscopy/packages/single-sem-specimen-plates/images/microchip-fracture/image.w1600.webp"><img src="./works/topics/sem-microscopy/packages/single-sem-specimen-plates/images/microchip-fracture/image.w400.webp" width="100%" alt="微芯片断面"/></a>
 
-<b>Microchip Fracture</b>
+<b>微芯片断面</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -9797,19 +9797,19 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no br
 </tr>
 </table>
 
-## Silhouette Universe
+## Silhouette Universe · 剪影宇宙
 
-> A Prompt Atlas theme for symbolic compositions where a crisp black silhouette becomes a container for an entire narrative world.
+> 测试黑色剪影作为叙事容器的象征性构图,让塔、门和骷髅轮廓内部承载完整世界。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/silhouette-universe/packages/single-silhouette-studies/images/tower-at-dusk/image.w1600.webp"><img src="./works/topics/silhouette-universe/packages/single-silhouette-studies/images/tower-at-dusk/image.w400.webp" width="100%" alt="Tower at Dusk"/></a>
+<a href="./works/topics/silhouette-universe/packages/single-silhouette-studies/images/tower-at-dusk/image.w1600.webp"><img src="./works/topics/silhouette-universe/packages/single-silhouette-studies/images/tower-at-dusk/image.w400.webp" width="100%" alt="黄昏之塔"/></a>
 
-<b>Tower at Dusk</b>
+<b>黄昏之塔</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -9833,11 +9833,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no br
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/silhouette-universe/packages/single-silhouette-studies/images/doorway-threshold/image.w1600.webp"><img src="./works/topics/silhouette-universe/packages/single-silhouette-studies/images/doorway-threshold/image.w400.webp" width="100%" alt="Doorway Threshold"/></a>
+<a href="./works/topics/silhouette-universe/packages/single-silhouette-studies/images/doorway-threshold/image.w1600.webp"><img src="./works/topics/silhouette-universe/packages/single-silhouette-studies/images/doorway-threshold/image.w400.webp" width="100%" alt="门槛异界"/></a>
 
-<b>Doorway Threshold</b>
+<b>门槛异界</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -9861,11 +9861,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no br
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/silhouette-universe/packages/single-silhouette-studies/images/skull-memento/image.w1600.webp"><img src="./works/topics/silhouette-universe/packages/single-silhouette-studies/images/skull-memento/image.w400.webp" width="100%" alt="Skull Memento"/></a>
+<a href="./works/topics/silhouette-universe/packages/single-silhouette-studies/images/skull-memento/image.w1600.webp"><img src="./works/topics/silhouette-universe/packages/single-silhouette-studies/images/skull-memento/image.w400.webp" width="100%" alt="骷髅纪念"/></a>
 
-<b>Skull Memento</b>
+<b>骷髅纪念</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -9890,19 +9890,19 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no br
 </tr>
 </table>
 
-## Sixteen Reference Fusion
+## 十六参考融合
 
-> A Prompt Atlas theme for fusing many visual inputs into one coherent image while preserving identity, place, materials, and style cues.
+> 把多组视觉输入融合成一张连贯图，同时保持身份、地点、材质和风格线索。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/images/01-sixteen-source-board/image.w1600.webp"><img src="./works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/images/01-sixteen-source-board/image.w400.webp" width="100%" alt="Sixteen Source Board"/></a>
+<a href="./works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/images/01-sixteen-source-board/image.w1600.webp"><img src="./works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/images/01-sixteen-source-board/image.w400.webp" width="100%" alt="十六来源板"/></a>
 
-<b>Sixteen Source Board</b>
+<b>十六来源板</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -9926,11 +9926,11 @@ Exactly sixteen tiles in a 4 by 4 grid, no readable text, no logos, no watermark
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/sixteen-reference-fusion/packages/single-fusion-studies/images/sixteen-swatch-portrait/image.w1600.webp"><img src="./works/topics/sixteen-reference-fusion/packages/single-fusion-studies/images/sixteen-swatch-portrait/image.w400.webp" width="100%" alt="Sixteen Swatch Portrait"/></a>
+<a href="./works/topics/sixteen-reference-fusion/packages/single-fusion-studies/images/sixteen-swatch-portrait/image.w1600.webp"><img src="./works/topics/sixteen-reference-fusion/packages/single-fusion-studies/images/sixteen-swatch-portrait/image.w400.webp" width="100%" alt="十六色卡肖像"/></a>
 
-<b>Sixteen Swatch Portrait</b>
+<b>十六色卡肖像</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -9954,11 +9954,11 @@ No readable text, no logos, no watermark, no real person likeness, no cluttered 
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/images/02-canal-wanderer-fusion/image.w1600.webp"><img src="./works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/images/02-canal-wanderer-fusion/image.w400.webp" width="100%" alt="Canal Wanderer Fusion"/></a>
+<a href="./works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/images/02-canal-wanderer-fusion/image.w1600.webp"><img src="./works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/images/02-canal-wanderer-fusion/image.w400.webp" width="100%" alt="运河漫步融合"/></a>
 
-<b>Canal Wanderer Fusion</b>
+<b>运河漫步融合</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -9984,11 +9984,11 @@ Use the reference image as source material, but no visible 4 by 4 grid. No reada
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/sixteen-reference-fusion/packages/single-fusion-studies/images/archive-object-hybrid/image.w1600.webp"><img src="./works/topics/sixteen-reference-fusion/packages/single-fusion-studies/images/archive-object-hybrid/image.w400.webp" width="100%" alt="Archive Object Hybrid"/></a>
+<a href="./works/topics/sixteen-reference-fusion/packages/single-fusion-studies/images/archive-object-hybrid/image.w1600.webp"><img src="./works/topics/sixteen-reference-fusion/packages/single-fusion-studies/images/archive-object-hybrid/image.w400.webp" width="100%" alt="档案物件混合体"/></a>
 
-<b>Archive Object Hybrid</b>
+<b>档案物件混合体</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -10012,11 +10012,11 @@ No readable text, no labels, no logos, no watermark, no scattered junk, no real 
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/images/03-studio-creature-fusion/image.w1600.webp"><img src="./works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/images/03-studio-creature-fusion/image.w400.webp" width="100%" alt="Studio Creature Fusion"/></a>
+<a href="./works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/images/03-studio-creature-fusion/image.w1600.webp"><img src="./works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/images/03-studio-creature-fusion/image.w400.webp" width="100%" alt="工作室生物融合"/></a>
 
-<b>Studio Creature Fusion</b>
+<b>工作室生物融合</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -10040,11 +10040,11 @@ Use the reference image as source material, but no visible 4 by 4 grid. No reada
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/sixteen-reference-fusion/packages/single-fusion-studies/images/travel-poster-fusion/image.w1600.webp"><img src="./works/topics/sixteen-reference-fusion/packages/single-fusion-studies/images/travel-poster-fusion/image.w400.webp" width="100%" alt="Travel Poster Fusion"/></a>
+<a href="./works/topics/sixteen-reference-fusion/packages/single-fusion-studies/images/travel-poster-fusion/image.w1600.webp"><img src="./works/topics/sixteen-reference-fusion/packages/single-fusion-studies/images/travel-poster-fusion/image.w400.webp" width="100%" alt="旅行海报融合"/></a>
 
-<b>Travel Poster Fusion</b>
+<b>旅行海报融合</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -10070,11 +10070,11 @@ No readable text, no real place names, no logos, no watermark, no random collage
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/images/04-room-memory-fusion/image.w1600.webp"><img src="./works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/images/04-room-memory-fusion/image.w400.webp" width="100%" alt="Room Memory Fusion"/></a>
+<a href="./works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/images/04-room-memory-fusion/image.w1600.webp"><img src="./works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/images/04-room-memory-fusion/image.w400.webp" width="100%" alt="记忆房间融合"/></a>
 
-<b>Room Memory Fusion</b>
+<b>记忆房间融合</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -10101,19 +10101,19 @@ Use the reference image as source material, but no visible 4 by 4 grid. No reada
 </tr>
 </table>
 
-## Sketch to Photoreal Render
+## 草图 → 写实一键渲染
 
-> A Prompt Atlas theme for converting architectural pencil sketches into photoreal renders while preserving horizon, proportions, window placement, and real-world plausibility.
+> 测试将建筑铅笔草图转为照片级效果图时,能否保持地平线、比例、窗户位置和真实世界合理性。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/sketch-to-photoreal-render/packages/series-facade-preservation/images/01-pencil-facade-reference/image.w1600.webp"><img src="./works/topics/sketch-to-photoreal-render/packages/series-facade-preservation/images/01-pencil-facade-reference/image.w400.webp" width="100%" alt="Pencil Facade Reference"/></a>
+<a href="./works/topics/sketch-to-photoreal-render/packages/series-facade-preservation/images/01-pencil-facade-reference/image.w1600.webp"><img src="./works/topics/sketch-to-photoreal-render/packages/series-facade-preservation/images/01-pencil-facade-reference/image.w400.webp" width="100%" alt="铅笔立面参考"/></a>
 
-<b>Pencil Facade Reference</b>
+<b>铅笔立面参考</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -10137,11 +10137,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no bl
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/sketch-to-photoreal-render/packages/single-render-studies/images/warehouse-loft-conversion/image.w1600.webp"><img src="./works/topics/sketch-to-photoreal-render/packages/single-render-studies/images/warehouse-loft-conversion/image.w400.webp" width="100%" alt="Warehouse Loft Conversion"/></a>
+<a href="./works/topics/sketch-to-photoreal-render/packages/single-render-studies/images/warehouse-loft-conversion/image.w1600.webp"><img src="./works/topics/sketch-to-photoreal-render/packages/single-render-studies/images/warehouse-loft-conversion/image.w400.webp" width="100%" alt="仓库阁楼改造"/></a>
 
-<b>Warehouse Loft Conversion</b>
+<b>仓库阁楼改造</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -10165,11 +10165,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no fl
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/sketch-to-photoreal-render/packages/series-facade-preservation/images/02-daylight-street-render/image.w1600.webp"><img src="./works/topics/sketch-to-photoreal-render/packages/series-facade-preservation/images/02-daylight-street-render/image.w400.webp" width="100%" alt="Daylight Street Render"/></a>
+<a href="./works/topics/sketch-to-photoreal-render/packages/series-facade-preservation/images/02-daylight-street-render/image.w1600.webp"><img src="./works/topics/sketch-to-photoreal-render/packages/series-facade-preservation/images/02-daylight-street-render/image.w400.webp" width="100%" alt="日景街道渲染"/></a>
 
-<b>Daylight Street Render</b>
+<b>日景街道渲染</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -10195,11 +10195,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no ex
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/sketch-to-photoreal-render/packages/series-facade-preservation/images/03-rain-night-render/image.w1600.webp"><img src="./works/topics/sketch-to-photoreal-render/packages/series-facade-preservation/images/03-rain-night-render/image.w400.webp" width="100%" alt="Rain Night Render"/></a>
+<a href="./works/topics/sketch-to-photoreal-render/packages/series-facade-preservation/images/03-rain-night-render/image.w1600.webp"><img src="./works/topics/sketch-to-photoreal-render/packages/series-facade-preservation/images/03-rain-night-render/image.w400.webp" width="100%" alt="雨夜渲染"/></a>
 
-<b>Rain Night Render</b>
+<b>雨夜渲染</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -10223,11 +10223,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no ne
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/sketch-to-photoreal-render/packages/single-render-studies/images/museum-stair-atrium/image.w1600.webp"><img src="./works/topics/sketch-to-photoreal-render/packages/single-render-studies/images/museum-stair-atrium/image.w400.webp" width="100%" alt="Museum Stair Atrium"/></a>
+<a href="./works/topics/sketch-to-photoreal-render/packages/single-render-studies/images/museum-stair-atrium/image.w1600.webp"><img src="./works/topics/sketch-to-photoreal-render/packages/single-render-studies/images/museum-stair-atrium/image.w400.webp" width="100%" alt="博物馆楼梯中庭"/></a>
 
-<b>Museum Stair Atrium</b>
+<b>博物馆楼梯中庭</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -10251,11 +10251,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no im
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/sketch-to-photoreal-render/packages/series-facade-preservation/images/04-interior-courtyard-render/image.w1600.webp"><img src="./works/topics/sketch-to-photoreal-render/packages/series-facade-preservation/images/04-interior-courtyard-render/image.w400.webp" width="100%" alt="Interior Courtyard Render"/></a>
+<a href="./works/topics/sketch-to-photoreal-render/packages/series-facade-preservation/images/04-interior-courtyard-render/image.w1600.webp"><img src="./works/topics/sketch-to-photoreal-render/packages/series-facade-preservation/images/04-interior-courtyard-render/image.w400.webp" width="100%" alt="内院侧渲染"/></a>
 
-<b>Interior Courtyard Render</b>
+<b>内院侧渲染</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -10281,11 +10281,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no ex
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/sketch-to-photoreal-render/packages/single-render-studies/images/alley-cafe-facade/image.w1600.webp"><img src="./works/topics/sketch-to-photoreal-render/packages/single-render-studies/images/alley-cafe-facade/image.w400.webp" width="100%" alt="Alley Cafe Facade"/></a>
+<a href="./works/topics/sketch-to-photoreal-render/packages/single-render-studies/images/alley-cafe-facade/image.w1600.webp"><img src="./works/topics/sketch-to-photoreal-render/packages/single-render-studies/images/alley-cafe-facade/image.w400.webp" width="100%" alt="巷子咖啡店立面"/></a>
 
-<b>Alley Cafe Facade</b>
+<b>巷子咖啡店立面</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -10312,19 +10312,19 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no ad
 </tr>
 </table>
 
-## Song Dynasty Social Feed
+## 宋朝朋友圈
 
-> A Prompt Atlas theme for modern social-feed layouts reimagined through Song dynasty public life, literary culture, and market scenes.
+> 用现代社交动态版式重构宋代文人、市场和出游场景。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/song-dynasty-social-feed/packages/single-social-feed-studies/images/sushi-nine-grid/image.w1600.webp"><img src="./works/topics/song-dynasty-social-feed/packages/single-social-feed-studies/images/sushi-nine-grid/image.w400.webp" width="100%" alt="Su Shi Nine-Grid"/></a>
+<a href="./works/topics/song-dynasty-social-feed/packages/single-social-feed-studies/images/sushi-nine-grid/image.w1600.webp"><img src="./works/topics/song-dynasty-social-feed/packages/single-social-feed-studies/images/sushi-nine-grid/image.w400.webp" width="100%" alt="苏轼九宫格"/></a>
 
-<b>Su Shi Nine-Grid</b>
+<b>苏轼九宫格</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -10348,11 +10348,11 @@ No real app logo, no real brand marks, no watermark, no broken grid, no random m
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/song-dynasty-social-feed/packages/single-social-feed-studies/images/market-lantern-thread/image.w1600.webp"><img src="./works/topics/song-dynasty-social-feed/packages/single-social-feed-studies/images/market-lantern-thread/image.w400.webp" width="100%" alt="Market Lantern Thread"/></a>
+<a href="./works/topics/song-dynasty-social-feed/packages/single-social-feed-studies/images/market-lantern-thread/image.w1600.webp"><img src="./works/topics/song-dynasty-social-feed/packages/single-social-feed-studies/images/market-lantern-thread/image.w400.webp" width="100%" alt="夜市灯帖"/></a>
 
-<b>Market Lantern Thread</b>
+<b>夜市灯帖</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -10376,11 +10376,11 @@ No real app logo, no real brand marks, no watermark, no broken alignment, no ran
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/song-dynasty-social-feed/packages/single-social-feed-studies/images/scholar-travel-stories/image.w1600.webp"><img src="./works/topics/song-dynasty-social-feed/packages/single-social-feed-studies/images/scholar-travel-stories/image.w400.webp" width="100%" alt="Scholar Travel Stories"/></a>
+<a href="./works/topics/song-dynasty-social-feed/packages/single-social-feed-studies/images/scholar-travel-stories/image.w1600.webp"><img src="./works/topics/song-dynasty-social-feed/packages/single-social-feed-studies/images/scholar-travel-stories/image.w400.webp" width="100%" alt="文人出游故事"/></a>
 
-<b>Scholar Travel Stories</b>
+<b>文人出游故事</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -10405,19 +10405,19 @@ No real app logo, no real brand marks, no watermark, no broken rounded tiles, no
 </tr>
 </table>
 
-## Stereoscopic Depth
+## 立体视差
 
-> A Prompt Atlas theme for images that encode depth through stereo pairs, anaglyph rendering, and hidden-depth patterns.
+> 测试左右视差、红蓝 3D 和隐藏深度图案。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/stereoscopic-depth/packages/single-depth-studies/images/crossview-crystal-cubes/image.w1600.webp"><img src="./works/topics/stereoscopic-depth/packages/single-depth-studies/images/crossview-crystal-cubes/image.w400.webp" width="100%" alt="Crossview Crystal Cubes"/></a>
+<a href="./works/topics/stereoscopic-depth/packages/single-depth-studies/images/crossview-crystal-cubes/image.w1600.webp"><img src="./works/topics/stereoscopic-depth/packages/single-depth-studies/images/crossview-crystal-cubes/image.w400.webp" width="100%" alt="交叉视水晶方块"/></a>
 
-<b>Crossview Crystal Cubes</b>
+<b>交叉视水晶方块</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -10441,11 +10441,11 @@ No readable text, no labels, no watermark, no logos, no extra objects in only on
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/stereoscopic-depth/packages/single-depth-studies/images/anaglyph-glass-corridor/image.w1600.webp"><img src="./works/topics/stereoscopic-depth/packages/single-depth-studies/images/anaglyph-glass-corridor/image.w400.webp" width="100%" alt="Anaglyph Glass Corridor"/></a>
+<a href="./works/topics/stereoscopic-depth/packages/single-depth-studies/images/anaglyph-glass-corridor/image.w1600.webp"><img src="./works/topics/stereoscopic-depth/packages/single-depth-studies/images/anaglyph-glass-corridor/image.w400.webp" width="100%" alt="红蓝玻璃走廊"/></a>
 
-<b>Anaglyph Glass Corridor</b>
+<b>红蓝玻璃走廊</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -10469,11 +10469,11 @@ No readable text, no watermark, no logos, no people, no random color fringing un
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/stereoscopic-depth/packages/single-depth-studies/images/autostereogram-hidden-fish/image.w1600.webp"><img src="./works/topics/stereoscopic-depth/packages/single-depth-studies/images/autostereogram-hidden-fish/image.w400.webp" width="100%" alt="Autostereogram Hidden Fish"/></a>
+<a href="./works/topics/stereoscopic-depth/packages/single-depth-studies/images/autostereogram-hidden-fish/image.w1600.webp"><img src="./works/topics/stereoscopic-depth/packages/single-depth-studies/images/autostereogram-hidden-fish/image.w400.webp" width="100%" alt="隐藏鱼立体图"/></a>
 
-<b>Autostereogram Hidden Fish</b>
+<b>隐藏鱼立体图</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -10498,19 +10498,19 @@ No readable text, no watermark, no logos, no obvious central fish drawing, no ra
 </tr>
 </table>
 
-## Tessellation Pattern
+## 无缝拼贴
 
-> A Prompt Atlas theme for seamless geometric tiling, optical illusion structure, and Escher-like interlocking silhouettes.
+> 测试无缝几何平铺、视觉错觉结构和 Escher 式互嵌轮廓。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/tessellation-pattern/packages/series-living-tiles/images/01-reference-tile/image.w1600.webp"><img src="./works/topics/tessellation-pattern/packages/series-living-tiles/images/01-reference-tile/image.w400.webp" width="100%" alt="Reference Tile"/></a>
+<a href="./works/topics/tessellation-pattern/packages/series-living-tiles/images/01-reference-tile/image.w1600.webp"><img src="./works/topics/tessellation-pattern/packages/series-living-tiles/images/01-reference-tile/image.w400.webp" width="100%" alt="基准瓷砖"/></a>
 
-<b>Reference Tile</b>
+<b>基准瓷砖</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -10534,11 +10534,11 @@ No readable text, no watermark, no logos, no isolated central emblem, no blank b
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/tessellation-pattern/packages/series-living-tiles/images/02-coral-lattice/image.w1600.webp"><img src="./works/topics/tessellation-pattern/packages/series-living-tiles/images/02-coral-lattice/image.w400.webp" width="100%" alt="Coral Lattice"/></a>
+<a href="./works/topics/tessellation-pattern/packages/series-living-tiles/images/02-coral-lattice/image.w1600.webp"><img src="./works/topics/tessellation-pattern/packages/series-living-tiles/images/02-coral-lattice/image.w400.webp" width="100%" alt="珊瑚格栅"/></a>
 
-<b>Coral Lattice</b>
+<b>珊瑚格栅</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -10562,11 +10562,11 @@ PRESERVE the reference image lattice, crop, camera angle, border continuity, and
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/tessellation-pattern/packages/series-living-tiles/images/03-moth-lattice/image.w1600.webp"><img src="./works/topics/tessellation-pattern/packages/series-living-tiles/images/03-moth-lattice/image.w400.webp" width="100%" alt="Moth Lattice"/></a>
+<a href="./works/topics/tessellation-pattern/packages/series-living-tiles/images/03-moth-lattice/image.w1600.webp"><img src="./works/topics/tessellation-pattern/packages/series-living-tiles/images/03-moth-lattice/image.w400.webp" width="100%" alt="蛾翼格栅"/></a>
 
-<b>Moth Lattice</b>
+<b>蛾翼格栅</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -10592,11 +10592,11 @@ PRESERVE the reference image lattice, crop, camera angle, border continuity, and
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/tessellation-pattern/packages/series-living-tiles/images/04-city-lattice/image.w1600.webp"><img src="./works/topics/tessellation-pattern/packages/series-living-tiles/images/04-city-lattice/image.w400.webp" width="100%" alt="City Lattice"/></a>
+<a href="./works/topics/tessellation-pattern/packages/series-living-tiles/images/04-city-lattice/image.w1600.webp"><img src="./works/topics/tessellation-pattern/packages/series-living-tiles/images/04-city-lattice/image.w400.webp" width="100%" alt="城市格栅"/></a>
 
-<b>City Lattice</b>
+<b>城市格栅</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -10623,19 +10623,19 @@ PRESERVE the reference image lattice, crop, camera angle, border continuity, and
 </tr>
 </table>
 
-## Thematic Subway Map
+## X 主题地铁路线图
 
-> A Prompt Atlas theme for turning knowledge domains into subway-map diagrams with clear topology, transfer logic, structured hierarchy, and commercial-grade transit visual language.
+> 把莎士比亚戏剧、哲学史、AI 发展史或中国朝代等知识体系抽象为地铁路线图,测试关系可视化、线路拓扑和商业制图质感。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/thematic-subway-map/packages/single-knowledge-transit-maps/images/01-shakespeare-interchange/image.w1600.webp"><img src="./works/topics/thematic-subway-map/packages/single-knowledge-transit-maps/images/01-shakespeare-interchange/image.w400.webp" width="100%" alt="Shakespeare Interchange"/></a>
+<a href="./works/topics/thematic-subway-map/packages/single-knowledge-transit-maps/images/01-shakespeare-interchange/image.w1600.webp"><img src="./works/topics/thematic-subway-map/packages/single-knowledge-transit-maps/images/01-shakespeare-interchange/image.w400.webp" width="100%" alt="莎剧换乘站"/></a>
 
-<b>Shakespeare Interchange</b>
+<b>莎剧换乘站</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -10659,11 +10659,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/thematic-subway-map/packages/single-knowledge-transit-maps/images/02-philosophy-lineage/image.w1600.webp"><img src="./works/topics/thematic-subway-map/packages/single-knowledge-transit-maps/images/02-philosophy-lineage/image.w400.webp" width="100%" alt="Philosophy Lineage"/></a>
+<a href="./works/topics/thematic-subway-map/packages/single-knowledge-transit-maps/images/02-philosophy-lineage/image.w1600.webp"><img src="./works/topics/thematic-subway-map/packages/single-knowledge-transit-maps/images/02-philosophy-lineage/image.w400.webp" width="100%" alt="哲学谱系线路"/></a>
 
-<b>Philosophy Lineage</b>
+<b>哲学谱系线路</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -10687,11 +10687,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/thematic-subway-map/packages/single-knowledge-transit-maps/images/03-ai-history-rail/image.w1600.webp"><img src="./works/topics/thematic-subway-map/packages/single-knowledge-transit-maps/images/03-ai-history-rail/image.w400.webp" width="100%" alt="AI History Rail"/></a>
+<a href="./works/topics/thematic-subway-map/packages/single-knowledge-transit-maps/images/03-ai-history-rail/image.w1600.webp"><img src="./works/topics/thematic-subway-map/packages/single-knowledge-transit-maps/images/03-ai-history-rail/image.w400.webp" width="100%" alt="AI 历史轨道"/></a>
 
-<b>AI History Rail</b>
+<b>AI 历史轨道</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -10717,11 +10717,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/thematic-subway-map/packages/single-knowledge-transit-maps/images/04-chinese-dynasty-network/image.w1600.webp"><img src="./works/topics/thematic-subway-map/packages/single-knowledge-transit-maps/images/04-chinese-dynasty-network/image.w400.webp" width="100%" alt="Chinese Dynasty Network"/></a>
+<a href="./works/topics/thematic-subway-map/packages/single-knowledge-transit-maps/images/04-chinese-dynasty-network/image.w1600.webp"><img src="./works/topics/thematic-subway-map/packages/single-knowledge-transit-maps/images/04-chinese-dynasty-network/image.w400.webp" width="100%" alt="中国朝代网络"/></a>
 
-<b>Chinese Dynasty Network</b>
+<b>中国朝代网络</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -10745,11 +10745,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/thematic-subway-map/packages/single-knowledge-transit-maps/images/05-jazz-evolution-map/image.w1600.webp"><img src="./works/topics/thematic-subway-map/packages/single-knowledge-transit-maps/images/05-jazz-evolution-map/image.w400.webp" width="100%" alt="Jazz Evolution Map"/></a>
+<a href="./works/topics/thematic-subway-map/packages/single-knowledge-transit-maps/images/05-jazz-evolution-map/image.w1600.webp"><img src="./works/topics/thematic-subway-map/packages/single-knowledge-transit-maps/images/05-jazz-evolution-map/image.w400.webp" width="100%" alt="爵士演化地图"/></a>
 
-<b>Jazz Evolution Map</b>
+<b>爵士演化地图</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -10773,11 +10773,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/thematic-subway-map/packages/single-knowledge-transit-maps/images/06-climate-system-loop/image.w1600.webp"><img src="./works/topics/thematic-subway-map/packages/single-knowledge-transit-maps/images/06-climate-system-loop/image.w400.webp" width="100%" alt="Climate System Loop"/></a>
+<a href="./works/topics/thematic-subway-map/packages/single-knowledge-transit-maps/images/06-climate-system-loop/image.w1600.webp"><img src="./works/topics/thematic-subway-map/packages/single-knowledge-transit-maps/images/06-climate-system-loop/image.w400.webp" width="100%" alt="气候系统环线"/></a>
 
-<b>Climate System Loop</b>
+<b>气候系统环线</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -10803,11 +10803,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no po
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/thematic-subway-map/packages/single-knowledge-transit-maps/images/07-world-cuisine-lines/image.w1600.webp"><img src="./works/topics/thematic-subway-map/packages/single-knowledge-transit-maps/images/07-world-cuisine-lines/image.w400.webp" width="100%" alt="World Cuisine Lines"/></a>
+<a href="./works/topics/thematic-subway-map/packages/single-knowledge-transit-maps/images/07-world-cuisine-lines/image.w1600.webp"><img src="./works/topics/thematic-subway-map/packages/single-knowledge-transit-maps/images/07-world-cuisine-lines/image.w400.webp" width="100%" alt="世界风味线路"/></a>
 
-<b>World Cuisine Lines</b>
+<b>世界风味线路</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -10831,11 +10831,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/thematic-subway-map/packages/single-knowledge-transit-maps/images/08-startup-growth-transit/image.w1600.webp"><img src="./works/topics/thematic-subway-map/packages/single-knowledge-transit-maps/images/08-startup-growth-transit/image.w400.webp" width="100%" alt="Startup Growth Transit"/></a>
+<a href="./works/topics/thematic-subway-map/packages/single-knowledge-transit-maps/images/08-startup-growth-transit/image.w1600.webp"><img src="./works/topics/thematic-subway-map/packages/single-knowledge-transit-maps/images/08-startup-growth-transit/image.w400.webp" width="100%" alt="创业增长地铁"/></a>
 
-<b>Startup Growth Transit</b>
+<b>创业增长地铁</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -10863,17 +10863,17 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 
 ## Thinking Mode
 
-> A Prompt Atlas theme for turning research, trend reasoning, and multi-step analysis into structured editorial images.
+> 把研究、趋势判断和多步分析转化成结构化编辑插画。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/thinking-mode/packages/series-market-reasoning/images/01-reference-market-mountain/image.w1600.webp"><img src="./works/topics/thinking-mode/packages/series-market-reasoning/images/01-reference-market-mountain/image.w400.webp" width="100%" alt="Reference Market Mountain"/></a>
+<a href="./works/topics/thinking-mode/packages/series-market-reasoning/images/01-reference-market-mountain/image.w1600.webp"><img src="./works/topics/thinking-mode/packages/series-market-reasoning/images/01-reference-market-mountain/image.w400.webp" width="100%" alt="基准趋势山"/></a>
 
-<b>Reference Market Mountain</b>
+<b>基准趋势山</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -10897,11 +10897,11 @@ No readable text, no real company names, no real ticker symbols, no logos, no wa
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/thinking-mode/packages/single-reasoning-studies/images/analyst-workbench/image.w1600.webp"><img src="./works/topics/thinking-mode/packages/single-reasoning-studies/images/analyst-workbench/image.w400.webp" width="100%" alt="Analyst Workbench"/></a>
+<a href="./works/topics/thinking-mode/packages/single-reasoning-studies/images/analyst-workbench/image.w1600.webp"><img src="./works/topics/thinking-mode/packages/single-reasoning-studies/images/analyst-workbench/image.w400.webp" width="100%" alt="分析师工作台"/></a>
 
-<b>Analyst Workbench</b>
+<b>分析师工作台</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -10925,11 +10925,11 @@ No readable text, no real data, no company names, no logos, no watermark, no pho
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/thinking-mode/packages/series-market-reasoning/images/02-earnings-weather-map/image.w1600.webp"><img src="./works/topics/thinking-mode/packages/series-market-reasoning/images/02-earnings-weather-map/image.w400.webp" width="100%" alt="Earnings Weather Map"/></a>
+<a href="./works/topics/thinking-mode/packages/series-market-reasoning/images/02-earnings-weather-map/image.w1600.webp"><img src="./works/topics/thinking-mode/packages/series-market-reasoning/images/02-earnings-weather-map/image.w400.webp" width="100%" alt="财报天气图"/></a>
 
-<b>Earnings Weather Map</b>
+<b>财报天气图</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -10955,11 +10955,11 @@ PRESERVE the reference image's square crop, character scale, editorial line qual
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/thinking-mode/packages/single-reasoning-studies/images/model-thought-trace/image.w1600.webp"><img src="./works/topics/thinking-mode/packages/single-reasoning-studies/images/model-thought-trace/image.w400.webp" width="100%" alt="Model Thought Trace"/></a>
+<a href="./works/topics/thinking-mode/packages/single-reasoning-studies/images/model-thought-trace/image.w1600.webp"><img src="./works/topics/thinking-mode/packages/single-reasoning-studies/images/model-thought-trace/image.w400.webp" width="100%" alt="模型思路轨迹"/></a>
 
-<b>Model Thought Trace</b>
+<b>模型思路轨迹</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -10983,11 +10983,11 @@ No readable text, no code, no real prompt snippets, no private chain-of-thought 
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/thinking-mode/packages/series-market-reasoning/images/03-supply-chain-switchboard/image.w1600.webp"><img src="./works/topics/thinking-mode/packages/series-market-reasoning/images/03-supply-chain-switchboard/image.w400.webp" width="100%" alt="Supply Chain Switchboard"/></a>
+<a href="./works/topics/thinking-mode/packages/series-market-reasoning/images/03-supply-chain-switchboard/image.w1600.webp"><img src="./works/topics/thinking-mode/packages/series-market-reasoning/images/03-supply-chain-switchboard/image.w400.webp" width="100%" alt="供应链交换台"/></a>
 
-<b>Supply Chain Switchboard</b>
+<b>供应链交换台</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -11011,11 +11011,11 @@ PRESERVE the reference image's square crop, annotation style, small runners, mut
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/thinking-mode/packages/single-reasoning-studies/images/editorial-data-room/image.w1600.webp"><img src="./works/topics/thinking-mode/packages/single-reasoning-studies/images/editorial-data-room/image.w400.webp" width="100%" alt="Editorial Data Room"/></a>
+<a href="./works/topics/thinking-mode/packages/single-reasoning-studies/images/editorial-data-room/image.w1600.webp"><img src="./works/topics/thinking-mode/packages/single-reasoning-studies/images/editorial-data-room/image.w400.webp" width="100%" alt="编辑数据室"/></a>
 
-<b>Editorial Data Room</b>
+<b>编辑数据室</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -11041,11 +11041,11 @@ No readable text, no real news headlines, no real data, no logos, no watermark, 
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/thinking-mode/packages/series-market-reasoning/images/04-sentiment-newsroom/image.w1600.webp"><img src="./works/topics/thinking-mode/packages/series-market-reasoning/images/04-sentiment-newsroom/image.w400.webp" width="100%" alt="Sentiment Newsroom"/></a>
+<a href="./works/topics/thinking-mode/packages/series-market-reasoning/images/04-sentiment-newsroom/image.w1600.webp"><img src="./works/topics/thinking-mode/packages/series-market-reasoning/images/04-sentiment-newsroom/image.w400.webp" width="100%" alt="情绪新闻室"/></a>
 
-<b>Sentiment Newsroom</b>
+<b>情绪新闻室</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -11072,19 +11072,19 @@ PRESERVE the reference image's square crop, character scale, muted palette, pseu
 </tr>
 </table>
 
-## Time-Space Contrast
+## 时空错位反差
 
-> A Prompt Atlas theme for photoreal historical scenes where carefully researched period dress collides with modern technology in wide cinematic compositions.
+> 测试考究历史服饰、真实世界细节、现代科技道具和宽幅时空错位构图的融合能力。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/time-space-contrast/packages/series-scholar-tech-desk/images/01-reference-scholar-desk/image.w1600.webp"><img src="./works/topics/time-space-contrast/packages/series-scholar-tech-desk/images/01-reference-scholar-desk/image.w400.webp" width="100%" alt="Reference Scholar Desk"/></a>
+<a href="./works/topics/time-space-contrast/packages/series-scholar-tech-desk/images/01-reference-scholar-desk/image.w1600.webp"><img src="./works/topics/time-space-contrast/packages/series-scholar-tech-desk/images/01-reference-scholar-desk/image.w400.webp" width="100%" alt="基准书斋"/></a>
 
-<b>Reference Scholar Desk</b>
+<b>基准书斋</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -11108,11 +11108,11 @@ No readable text, no watermark, no logos, preserve exact 16:9 horizontal aspect 
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/time-space-contrast/packages/single-historical-tech-collisions/images/01-qing-vr-parlor/image.w1600.webp"><img src="./works/topics/time-space-contrast/packages/single-historical-tech-collisions/images/01-qing-vr-parlor/image.w400.webp" width="100%" alt="Qing VR Parlor"/></a>
+<a href="./works/topics/time-space-contrast/packages/single-historical-tech-collisions/images/01-qing-vr-parlor/image.w1600.webp"><img src="./works/topics/time-space-contrast/packages/single-historical-tech-collisions/images/01-qing-vr-parlor/image.w400.webp" width="100%" alt="清代太太 VR 厅堂"/></a>
 
-<b>Qing VR Parlor</b>
+<b>清代太太 VR 厅堂</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -11136,11 +11136,11 @@ No readable text, no watermark, no logos, preserve exact 16:9 horizontal aspect 
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/time-space-contrast/packages/series-scholar-tech-desk/images/02-pocket-glass-message/image.w1600.webp"><img src="./works/topics/time-space-contrast/packages/series-scholar-tech-desk/images/02-pocket-glass-message/image.w400.webp" width="100%" alt="Pocket Glass Message"/></a>
+<a href="./works/topics/time-space-contrast/packages/series-scholar-tech-desk/images/02-pocket-glass-message/image.w1600.webp"><img src="./works/topics/time-space-contrast/packages/series-scholar-tech-desk/images/02-pocket-glass-message/image.w400.webp" width="100%" alt="掌中玻璃信"/></a>
 
-<b>Pocket Glass Message</b>
+<b>掌中玻璃信</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -11166,11 +11166,11 @@ No readable text, no watermark, no logos, preserve exact 16:9 horizontal aspect 
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/time-space-contrast/packages/single-historical-tech-collisions/images/02-tang-poet-mobile-game/image.w1600.webp"><img src="./works/topics/time-space-contrast/packages/single-historical-tech-collisions/images/02-tang-poet-mobile-game/image.w400.webp" width="100%" alt="Tang Poet Mobile Game"/></a>
+<a href="./works/topics/time-space-contrast/packages/single-historical-tech-collisions/images/02-tang-poet-mobile-game/image.w1600.webp"><img src="./works/topics/time-space-contrast/packages/single-historical-tech-collisions/images/02-tang-poet-mobile-game/image.w400.webp" width="100%" alt="唐代诗人手游局"/></a>
 
-<b>Tang Poet Mobile Game</b>
+<b>唐代诗人手游局</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -11194,11 +11194,11 @@ No readable text, no watermark, no logos, preserve exact 16:9 horizontal aspect 
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/time-space-contrast/packages/series-scholar-tech-desk/images/03-vr-astronomy-lesson/image.w1600.webp"><img src="./works/topics/time-space-contrast/packages/series-scholar-tech-desk/images/03-vr-astronomy-lesson/image.w400.webp" width="100%" alt="VR Astronomy Lesson"/></a>
+<a href="./works/topics/time-space-contrast/packages/series-scholar-tech-desk/images/03-vr-astronomy-lesson/image.w1600.webp"><img src="./works/topics/time-space-contrast/packages/series-scholar-tech-desk/images/03-vr-astronomy-lesson/image.w400.webp" width="100%" alt="虚拟天文课"/></a>
 
-<b>VR Astronomy Lesson</b>
+<b>虚拟天文课</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -11222,11 +11222,11 @@ No readable text, no watermark, no logos, preserve exact 16:9 horizontal aspect 
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/time-space-contrast/packages/single-historical-tech-collisions/images/03-han-courier-drone/image.w1600.webp"><img src="./works/topics/time-space-contrast/packages/single-historical-tech-collisions/images/03-han-courier-drone/image.w400.webp" width="100%" alt="Han Courier Drone"/></a>
+<a href="./works/topics/time-space-contrast/packages/single-historical-tech-collisions/images/03-han-courier-drone/image.w1600.webp"><img src="./works/topics/time-space-contrast/packages/single-historical-tech-collisions/images/03-han-courier-drone/image.w400.webp" width="100%" alt="汉代驿使无人机"/></a>
 
-<b>Han Courier Drone</b>
+<b>汉代驿使无人机</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -11252,11 +11252,11 @@ No readable text, no watermark, no logos, preserve exact 16:9 horizontal aspect 
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/time-space-contrast/packages/series-scholar-tech-desk/images/04-handheld-battle-game/image.w1600.webp"><img src="./works/topics/time-space-contrast/packages/series-scholar-tech-desk/images/04-handheld-battle-game/image.w400.webp" width="100%" alt="Handheld Battle Game"/></a>
+<a href="./works/topics/time-space-contrast/packages/series-scholar-tech-desk/images/04-handheld-battle-game/image.w1600.webp"><img src="./works/topics/time-space-contrast/packages/series-scholar-tech-desk/images/04-handheld-battle-game/image.w400.webp" width="100%" alt="掌机战局"/></a>
 
-<b>Handheld Battle Game</b>
+<b>掌机战局</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -11280,11 +11280,11 @@ No readable text, no watermark, no logos, preserve exact 16:9 horizontal aspect 
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/time-space-contrast/packages/single-historical-tech-collisions/images/04-republican-laptop-studio/image.w1600.webp"><img src="./works/topics/time-space-contrast/packages/single-historical-tech-collisions/images/04-republican-laptop-studio/image.w400.webp" width="100%" alt="Republican Laptop Studio"/></a>
+<a href="./works/topics/time-space-contrast/packages/single-historical-tech-collisions/images/04-republican-laptop-studio/image.w1600.webp"><img src="./works/topics/time-space-contrast/packages/single-historical-tech-collisions/images/04-republican-laptop-studio/image.w400.webp" width="100%" alt="民国照相馆笔记本"/></a>
 
-<b>Republican Laptop Studio</b>
+<b>民国照相馆笔记本</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -11310,19 +11310,19 @@ No readable text, no watermark, no logos, preserve exact 16:9 horizontal aspect 
 </tr>
 </table>
 
-## Ultra-Long Scroll Painting
+## 超长竖卷画
 
-> A Prompt Atlas theme for dense vertical scroll images that keep continuous geography, time, and narrative structure legible across an extreme aspect ratio.
+> 测试极端长画幅中连续地理、时间线和叙事密度是否仍然清楚。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/ultra-long-scroll-painting/packages/single-scroll-studies/images/beijing-hutong-scroll/image.w1600.webp"><img src="./works/topics/ultra-long-scroll-painting/packages/single-scroll-studies/images/beijing-hutong-scroll/image.w400.webp" width="100%" alt="Beijing Hutong Scroll"/></a>
+<a href="./works/topics/ultra-long-scroll-painting/packages/single-scroll-studies/images/beijing-hutong-scroll/image.w1600.webp"><img src="./works/topics/ultra-long-scroll-painting/packages/single-scroll-studies/images/beijing-hutong-scroll/image.w400.webp" width="100%" alt="北京胡同长卷"/></a>
 
-<b>Beijing Hutong Scroll</b>
+<b>北京胡同长卷</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -11346,11 +11346,11 @@ No readable text, no watermark, no logos, no floating labels, no modern app UI, 
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/ultra-long-scroll-painting/packages/single-scroll-studies/images/great-wall-terrain-scroll/image.w1600.webp"><img src="./works/topics/ultra-long-scroll-painting/packages/single-scroll-studies/images/great-wall-terrain-scroll/image.w400.webp" width="100%" alt="Great Wall Terrain Scroll"/></a>
+<a href="./works/topics/ultra-long-scroll-painting/packages/single-scroll-studies/images/great-wall-terrain-scroll/image.w1600.webp"><img src="./works/topics/ultra-long-scroll-painting/packages/single-scroll-studies/images/great-wall-terrain-scroll/image.w400.webp" width="100%" alt="长城地形长卷"/></a>
 
-<b>Great Wall Terrain Scroll</b>
+<b>长城地形长卷</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -11374,11 +11374,11 @@ No readable text, no labels, no watermark, no logos, no map pins, no fantasy cas
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/ultra-long-scroll-painting/packages/single-scroll-studies/images/lifetime-river-scroll/image.w1600.webp"><img src="./works/topics/ultra-long-scroll-painting/packages/single-scroll-studies/images/lifetime-river-scroll/image.w400.webp" width="100%" alt="Lifetime River Scroll"/></a>
+<a href="./works/topics/ultra-long-scroll-painting/packages/single-scroll-studies/images/lifetime-river-scroll/image.w1600.webp"><img src="./works/topics/ultra-long-scroll-painting/packages/single-scroll-studies/images/lifetime-river-scroll/image.w400.webp" width="100%" alt="人生河流长卷"/></a>
 
-<b>Lifetime River Scroll</b>
+<b>人生河流长卷</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -11403,19 +11403,19 @@ No readable text, no captions, no watermark, no logos, no disjointed panels, no 
 </tr>
 </table>
 
-## USPTO Patent Diagram
+## 美国专利技术图
 
-> A Prompt Atlas theme for black-and-white patent-style technical plates with strict linework, labels, and multi-view structure.
+> 测试黑白专利风技术线稿、多视图编号和结构拆解。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/uspto-patent-diagram/packages/single-patent-plates/images/foldable-headphones-plate/image.w1600.webp"><img src="./works/topics/uspto-patent-diagram/packages/single-patent-plates/images/foldable-headphones-plate/image.w400.webp" width="100%" alt="Foldable Headphones Plate"/></a>
+<a href="./works/topics/uspto-patent-diagram/packages/single-patent-plates/images/foldable-headphones-plate/image.w1600.webp"><img src="./works/topics/uspto-patent-diagram/packages/single-patent-plates/images/foldable-headphones-plate/image.w400.webp" width="100%" alt="折叠耳机专利图"/></a>
 
-<b>Foldable Headphones Plate</b>
+<b>折叠耳机专利图</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -11439,11 +11439,11 @@ Only readable text should be FIG. 1, FIG. 2, FIG. 3, and numeric callouts 10 thr
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/uspto-patent-diagram/packages/single-patent-plates/images/modular-teapot-filter-plate/image.w1600.webp"><img src="./works/topics/uspto-patent-diagram/packages/single-patent-plates/images/modular-teapot-filter-plate/image.w400.webp" width="100%" alt="Modular Teapot Filter Plate"/></a>
+<a href="./works/topics/uspto-patent-diagram/packages/single-patent-plates/images/modular-teapot-filter-plate/image.w1600.webp"><img src="./works/topics/uspto-patent-diagram/packages/single-patent-plates/images/modular-teapot-filter-plate/image.w400.webp" width="100%" alt="模块茶壶滤器专利图"/></a>
 
-<b>Modular Teapot Filter Plate</b>
+<b>模块茶壶滤器专利图</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -11467,11 +11467,11 @@ Only readable text should be FIG. 1, FIG. 2, FIG. 3, FIG. 4, and numeric callout
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/uspto-patent-diagram/packages/single-patent-plates/images/drone-arm-exploded-plate/image.w1600.webp"><img src="./works/topics/uspto-patent-diagram/packages/single-patent-plates/images/drone-arm-exploded-plate/image.w400.webp" width="100%" alt="Drone Arm Exploded Plate"/></a>
+<a href="./works/topics/uspto-patent-diagram/packages/single-patent-plates/images/drone-arm-exploded-plate/image.w1600.webp"><img src="./works/topics/uspto-patent-diagram/packages/single-patent-plates/images/drone-arm-exploded-plate/image.w400.webp" width="100%" alt="无人机折臂专利图"/></a>
 
-<b>Drone Arm Exploded Plate</b>
+<b>无人机折臂专利图</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -11496,19 +11496,19 @@ Only readable text should be FIG. 1, FIG. 2, FIG. 3, FIG. 4, and numeric callout
 </tr>
 </table>
 
-## Virtual Try-On Identity Lock
+## 虚拟试衣 · 身份零漂移
 
-> A Prompt Atlas theme for virtual try-on studies that preserve one model identity while changing only clothing, styling, and garment context.
+> 测试虚拟试衣中的身份锁定: 脸、五官、肤色和体型保持一致,只改变服装与造型。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/virtual-try-on-identity-lock/packages/single-identity-lock-studies/images/studio-capsule-lock/image.w1600.webp"><img src="./works/topics/virtual-try-on-identity-lock/packages/single-identity-lock-studies/images/studio-capsule-lock/image.w400.webp" width="100%" alt="Studio Capsule Lock"/></a>
+<a href="./works/topics/virtual-try-on-identity-lock/packages/single-identity-lock-studies/images/studio-capsule-lock/image.w1600.webp"><img src="./works/topics/virtual-try-on-identity-lock/packages/single-identity-lock-studies/images/studio-capsule-lock/image.w400.webp" width="100%" alt="棚拍胶囊衣橱锁定"/></a>
 
-<b>Studio Capsule Lock</b>
+<b>棚拍胶囊衣橱锁定</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -11532,11 +11532,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no br
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/virtual-try-on-identity-lock/packages/single-identity-lock-studies/images/runway-season-lock/image.w1600.webp"><img src="./works/topics/virtual-try-on-identity-lock/packages/single-identity-lock-studies/images/runway-season-lock/image.w400.webp" width="100%" alt="Runway Season Lock"/></a>
+<a href="./works/topics/virtual-try-on-identity-lock/packages/single-identity-lock-studies/images/runway-season-lock/image.w1600.webp"><img src="./works/topics/virtual-try-on-identity-lock/packages/single-identity-lock-studies/images/runway-season-lock/image.w400.webp" width="100%" alt="秀场季节造型锁定"/></a>
 
-<b>Runway Season Lock</b>
+<b>秀场季节造型锁定</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -11560,11 +11560,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no br
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/virtual-try-on-identity-lock/packages/single-identity-lock-studies/images/outdoor-light-lock/image.w1600.webp"><img src="./works/topics/virtual-try-on-identity-lock/packages/single-identity-lock-studies/images/outdoor-light-lock/image.w400.webp" width="100%" alt="Outdoor Light Lock"/></a>
+<a href="./works/topics/virtual-try-on-identity-lock/packages/single-identity-lock-studies/images/outdoor-light-lock/image.w1600.webp"><img src="./works/topics/virtual-try-on-identity-lock/packages/single-identity-lock-studies/images/outdoor-light-lock/image.w400.webp" width="100%" alt="户外光线锁定"/></a>
 
-<b>Outdoor Light Lock</b>
+<b>户外光线锁定</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -11590,11 +11590,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no si
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/virtual-try-on-identity-lock/packages/single-identity-lock-studies/images/office-commute-lock/image.w1600.webp"><img src="./works/topics/virtual-try-on-identity-lock/packages/single-identity-lock-studies/images/office-commute-lock/image.w400.webp" width="100%" alt="Office Commute Lock"/></a>
+<a href="./works/topics/virtual-try-on-identity-lock/packages/single-identity-lock-studies/images/office-commute-lock/image.w1600.webp"><img src="./works/topics/virtual-try-on-identity-lock/packages/single-identity-lock-studies/images/office-commute-lock/image.w400.webp" width="100%" alt="通勤职场锁定"/></a>
 
-<b>Office Commute Lock</b>
+<b>通勤职场锁定</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -11618,11 +11618,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no co
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/virtual-try-on-identity-lock/packages/single-identity-lock-studies/images/sportswear-lock/image.w1600.webp"><img src="./works/topics/virtual-try-on-identity-lock/packages/single-identity-lock-studies/images/sportswear-lock/image.w400.webp" width="100%" alt="Sportswear Lock"/></a>
+<a href="./works/topics/virtual-try-on-identity-lock/packages/single-identity-lock-studies/images/sportswear-lock/image.w1600.webp"><img src="./works/topics/virtual-try-on-identity-lock/packages/single-identity-lock-studies/images/sportswear-lock/image.w400.webp" width="100%" alt="运动装锁定"/></a>
 
-<b>Sportswear Lock</b>
+<b>运动装锁定</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -11646,11 +11646,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no br
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/virtual-try-on-identity-lock/packages/single-identity-lock-studies/images/eveningwear-lock/image.w1600.webp"><img src="./works/topics/virtual-try-on-identity-lock/packages/single-identity-lock-studies/images/eveningwear-lock/image.w400.webp" width="100%" alt="Eveningwear Lock"/></a>
+<a href="./works/topics/virtual-try-on-identity-lock/packages/single-identity-lock-studies/images/eveningwear-lock/image.w1600.webp"><img src="./works/topics/virtual-try-on-identity-lock/packages/single-identity-lock-studies/images/eveningwear-lock/image.w400.webp" width="100%" alt="晚装礼服锁定"/></a>
 
-<b>Eveningwear Lock</b>
+<b>晚装礼服锁定</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -11676,11 +11676,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no br
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/virtual-try-on-identity-lock/packages/single-identity-lock-studies/images/heritage-textile-lock/image.w1600.webp"><img src="./works/topics/virtual-try-on-identity-lock/packages/single-identity-lock-studies/images/heritage-textile-lock/image.w400.webp" width="100%" alt="Heritage Textile Lock"/></a>
+<a href="./works/topics/virtual-try-on-identity-lock/packages/single-identity-lock-studies/images/heritage-textile-lock/image.w1600.webp"><img src="./works/topics/virtual-try-on-identity-lock/packages/single-identity-lock-studies/images/heritage-textile-lock/image.w400.webp" width="100%" alt="织物工艺锁定"/></a>
 
-<b>Heritage Textile Lock</b>
+<b>织物工艺锁定</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -11704,11 +11704,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no sa
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/virtual-try-on-identity-lock/packages/single-identity-lock-studies/images/streetwear-layer-lock/image.w1600.webp"><img src="./works/topics/virtual-try-on-identity-lock/packages/single-identity-lock-studies/images/streetwear-layer-lock/image.w400.webp" width="100%" alt="Streetwear Layer Lock"/></a>
+<a href="./works/topics/virtual-try-on-identity-lock/packages/single-identity-lock-studies/images/streetwear-layer-lock/image.w1600.webp"><img src="./works/topics/virtual-try-on-identity-lock/packages/single-identity-lock-studies/images/streetwear-layer-lock/image.w400.webp" width="100%" alt="街头叠穿锁定"/></a>
 
-<b>Streetwear Layer Lock</b>
+<b>街头叠穿锁定</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -11734,19 +11734,19 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no gr
 </tr>
 </table>
 
-## Wes Anderson Language
+## Wes Anderson × 一切 · 导演视觉语言
 
-> A Prompt Atlas theme testing how a strict centered-axis, pastel, deadpan film-poster language transfers across institutions, travel scenes, launch control, and commercial displays.
+> 测试中轴对称、糖果色、正面凝视、微缩布景和电影海报感如何迁移到候诊室、春运、航天发射和商品陈列等不同主题。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/wes-anderson-language/packages/series-axis-institutions/images/01-lobby-clerk/image.w1600.webp"><img src="./works/topics/wes-anderson-language/packages/series-axis-institutions/images/01-lobby-clerk/image.w400.webp" width="100%" alt="Lobby Clerk"/></a>
+<a href="./works/topics/wes-anderson-language/packages/series-axis-institutions/images/01-lobby-clerk/image.w1600.webp"><img src="./works/topics/wes-anderson-language/packages/series-axis-institutions/images/01-lobby-clerk/image.w400.webp" width="100%" alt="大堂职员"/></a>
 
-<b>Lobby Clerk</b>
+<b>大堂职员</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -11770,11 +11770,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no ce
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/wes-anderson-language/packages/single-pastel-transfer-studies/images/01-hospital-waiting-room/image.w1600.webp"><img src="./works/topics/wes-anderson-language/packages/single-pastel-transfer-studies/images/01-hospital-waiting-room/image.w400.webp" width="100%" alt="Hospital Waiting Room"/></a>
+<a href="./works/topics/wes-anderson-language/packages/single-pastel-transfer-studies/images/01-hospital-waiting-room/image.w1600.webp"><img src="./works/topics/wes-anderson-language/packages/single-pastel-transfer-studies/images/01-hospital-waiting-room/image.w400.webp" width="100%" alt="医院候诊室"/></a>
 
-<b>Hospital Waiting Room</b>
+<b>医院候诊室</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -11798,11 +11798,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no ce
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/wes-anderson-language/packages/series-axis-institutions/images/02-clinic-reception/image.w1600.webp"><img src="./works/topics/wes-anderson-language/packages/series-axis-institutions/images/02-clinic-reception/image.w400.webp" width="100%" alt="Clinic Reception"/></a>
+<a href="./works/topics/wes-anderson-language/packages/series-axis-institutions/images/02-clinic-reception/image.w1600.webp"><img src="./works/topics/wes-anderson-language/packages/series-axis-institutions/images/02-clinic-reception/image.w400.webp" width="100%" alt="诊所接待处"/></a>
 
-<b>Clinic Reception</b>
+<b>诊所接待处</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -11828,11 +11828,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no ce
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/wes-anderson-language/packages/series-axis-institutions/images/03-rail-ticket-hall/image.w1600.webp"><img src="./works/topics/wes-anderson-language/packages/series-axis-institutions/images/03-rail-ticket-hall/image.w400.webp" width="100%" alt="Rail Ticket Hall"/></a>
+<a href="./works/topics/wes-anderson-language/packages/series-axis-institutions/images/03-rail-ticket-hall/image.w1600.webp"><img src="./works/topics/wes-anderson-language/packages/series-axis-institutions/images/03-rail-ticket-hall/image.w400.webp" width="100%" alt="铁路售票厅"/></a>
 
-<b>Rail Ticket Hall</b>
+<b>铁路售票厅</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -11856,11 +11856,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no ce
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/wes-anderson-language/packages/single-pastel-transfer-studies/images/03-orbital-launch-breakfast/image.w1600.webp"><img src="./works/topics/wes-anderson-language/packages/single-pastel-transfer-studies/images/03-orbital-launch-breakfast/image.w400.webp" width="100%" alt="Orbital Launch Breakfast"/></a>
+<a href="./works/topics/wes-anderson-language/packages/single-pastel-transfer-studies/images/03-orbital-launch-breakfast/image.w1600.webp"><img src="./works/topics/wes-anderson-language/packages/single-pastel-transfer-studies/images/03-orbital-launch-breakfast/image.w400.webp" width="100%" alt="轨道发射早餐"/></a>
 
-<b>Orbital Launch Breakfast</b>
+<b>轨道发射早餐</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -11884,11 +11884,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no ce
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/wes-anderson-language/packages/series-axis-institutions/images/04-launch-control/image.w1600.webp"><img src="./works/topics/wes-anderson-language/packages/series-axis-institutions/images/04-launch-control/image.w400.webp" width="100%" alt="Launch Control"/></a>
+<a href="./works/topics/wes-anderson-language/packages/series-axis-institutions/images/04-launch-control/image.w1600.webp"><img src="./works/topics/wes-anderson-language/packages/series-axis-institutions/images/04-launch-control/image.w400.webp" width="100%" alt="发射控制室"/></a>
 
-<b>Launch Control</b>
+<b>发射控制室</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -11914,11 +11914,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no ce
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/wes-anderson-language/packages/single-pastel-transfer-studies/images/04-archive-product-shelf/image.w1600.webp"><img src="./works/topics/wes-anderson-language/packages/single-pastel-transfer-studies/images/04-archive-product-shelf/image.w400.webp" width="100%" alt="Archive Product Shelf"/></a>
+<a href="./works/topics/wes-anderson-language/packages/single-pastel-transfer-studies/images/04-archive-product-shelf/image.w1600.webp"><img src="./works/topics/wes-anderson-language/packages/single-pastel-transfer-studies/images/04-archive-product-shelf/image.w400.webp" width="100%" alt="档案商品架"/></a>
 
-<b>Archive Product Shelf</b>
+<b>档案商品架</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -11945,19 +11945,19 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no ce
 </tr>
 </table>
 
-## World Knowledge Reconstruction
+## World Knowledge 场景还原
 
-> A Prompt Atlas theme for reconstructing recognizable real-world architecture, interfaces, retail interiors, and cultural spaces from model knowledge rather than loose visual guesses.
+> 测试真实品牌、建筑、系统界面和文化空间的知识还原能力: 重点不是泛化风格,而是让细节像模型真的知道现实世界。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/flatpack-nightclub/image.w1600.webp"><img src="./works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/flatpack-nightclub/image.w400.webp" width="100%" alt="Flatpack Nightclub"/></a>
+<a href="./works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/flatpack-nightclub/image.w1600.webp"><img src="./works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/flatpack-nightclub/image.w400.webp" width="100%" alt="平板家具夜店"/></a>
 
-<b>Flatpack Nightclub</b>
+<b>平板家具夜店</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -11981,11 +11981,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no ac
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/desktop-ui-archive/image.w1600.webp"><img src="./works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/desktop-ui-archive/image.w400.webp" width="100%" alt="Desktop UI Archive"/></a>
+<a href="./works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/desktop-ui-archive/image.w1600.webp"><img src="./works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/desktop-ui-archive/image.w400.webp" width="100%" alt="桌面界面档案"/></a>
 
-<b>Desktop UI Archive</b>
+<b>桌面界面档案</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -12009,11 +12009,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/konbini-aisle/image.w1600.webp"><img src="./works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/konbini-aisle/image.w400.webp" width="100%" alt="Konbini Aisle"/></a>
+<a href="./works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/konbini-aisle/image.w1600.webp"><img src="./works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/konbini-aisle/image.w400.webp" width="100%" alt="便利店过道"/></a>
 
-<b>Konbini Aisle</b>
+<b>便利店过道</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -12039,11 +12039,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/minecraft-port-town/image.w1600.webp"><img src="./works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/minecraft-port-town/image.w400.webp" width="100%" alt="Voxel Port Town"/></a>
+<a href="./works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/minecraft-port-town/image.w1600.webp"><img src="./works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/minecraft-port-town/image.w400.webp" width="100%" alt="方块港口小镇"/></a>
 
-<b>Voxel Port Town</b>
+<b>方块港口小镇</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -12067,11 +12067,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no of
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/subway-transfer-hall/image.w1600.webp"><img src="./works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/subway-transfer-hall/image.w400.webp" width="100%" alt="Subway Transfer Hall"/></a>
+<a href="./works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/subway-transfer-hall/image.w1600.webp"><img src="./works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/subway-transfer-hall/image.w400.webp" width="100%" alt="地铁换乘大厅"/></a>
 
-<b>Subway Transfer Hall</b>
+<b>地铁换乘大厅</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -12095,11 +12095,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/flagship-electronics-store/image.w1600.webp"><img src="./works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/flagship-electronics-store/image.w400.webp" width="100%" alt="Flagship Electronics Store"/></a>
+<a href="./works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/flagship-electronics-store/image.w1600.webp"><img src="./works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/flagship-electronics-store/image.w400.webp" width="100%" alt="旗舰电子商店"/></a>
 
-<b>Flagship Electronics Store</b>
+<b>旗舰电子商店</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -12125,11 +12125,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no ac
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/paris-apartment-cutaway/image.w1600.webp"><img src="./works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/paris-apartment-cutaway/image.w400.webp" width="100%" alt="Paris Apartment Cutaway"/></a>
+<a href="./works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/paris-apartment-cutaway/image.w1600.webp"><img src="./works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/paris-apartment-cutaway/image.w400.webp" width="100%" alt="巴黎公寓剖面"/></a>
 
-<b>Paris Apartment Cutaway</b>
+<b>巴黎公寓剖面</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -12153,11 +12153,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no fa
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/museum-egypt-gallery/image.w1600.webp"><img src="./works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/museum-egypt-gallery/image.w400.webp" width="100%" alt="Museum Egypt Gallery"/></a>
+<a href="./works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/museum-egypt-gallery/image.w1600.webp"><img src="./works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/museum-egypt-gallery/image.w400.webp" width="100%" alt="埃及文物展厅"/></a>
 
-<b>Museum Egypt Gallery</b>
+<b>埃及文物展厅</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -12183,19 +12183,19 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </tr>
 </table>
 
-## Y2K Vaporwave CRT
+## Y2K / Vaporwave / CRT 时代美学
 
-> A Prompt Atlas theme for Y2K iridescent materials, vaporwave digital nostalgia, and CRT-era optical artifacts.
+> 测试 Y2K 虹彩金属、chrome 气泡、vaporwave 雕塑与棕榈，以及 CRT 扫描线、RGB 色散和 glitch 时代美学。
 
 <table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/y2k-vaporwave-crt/packages/single-crt-era-studies/images/chrome-bubble-desktop/image.w1600.webp"><img src="./works/topics/y2k-vaporwave-crt/packages/single-crt-era-studies/images/chrome-bubble-desktop/image.w400.webp" width="100%" alt="Chrome Bubble Desktop"/></a>
+<a href="./works/topics/y2k-vaporwave-crt/packages/single-crt-era-studies/images/chrome-bubble-desktop/image.w1600.webp"><img src="./works/topics/y2k-vaporwave-crt/packages/single-crt-era-studies/images/chrome-bubble-desktop/image.w400.webp" width="100%" alt="Chrome 气泡桌面"/></a>
 
-<b>Chrome Bubble Desktop</b>
+<b>Chrome 气泡桌面</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -12219,11 +12219,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/y2k-vaporwave-crt/packages/single-crt-era-studies/images/marble-bust-scanlines/image.w1600.webp"><img src="./works/topics/y2k-vaporwave-crt/packages/single-crt-era-studies/images/marble-bust-scanlines/image.w400.webp" width="100%" alt="Marble Bust Scanlines"/></a>
+<a href="./works/topics/y2k-vaporwave-crt/packages/single-crt-era-studies/images/marble-bust-scanlines/image.w1600.webp"><img src="./works/topics/y2k-vaporwave-crt/packages/single-crt-era-studies/images/marble-bust-scanlines/image.w400.webp" width="100%" alt="大理石胸像扫描线"/></a>
 
-<b>Marble Bust Scanlines</b>
+<b>大理石胸像扫描线</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -12247,11 +12247,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/y2k-vaporwave-crt/packages/single-crt-era-studies/images/iridescent-disc-tower/image.w1600.webp"><img src="./works/topics/y2k-vaporwave-crt/packages/single-crt-era-studies/images/iridescent-disc-tower/image.w400.webp" width="100%" alt="Iridescent Disc Tower"/></a>
+<a href="./works/topics/y2k-vaporwave-crt/packages/single-crt-era-studies/images/iridescent-disc-tower/image.w1600.webp"><img src="./works/topics/y2k-vaporwave-crt/packages/single-crt-era-studies/images/iridescent-disc-tower/image.w400.webp" width="100%" alt="虹彩光盘塔"/></a>
 
-<b>Iridescent Disc Tower</b>
+<b>虹彩光盘塔</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -12277,11 +12277,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no al
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/y2k-vaporwave-crt/packages/single-crt-era-studies/images/palm-grid-arcade/image.w1600.webp"><img src="./works/topics/y2k-vaporwave-crt/packages/single-crt-era-studies/images/palm-grid-arcade/image.w400.webp" width="100%" alt="Palm Grid Arcade"/></a>
+<a href="./works/topics/y2k-vaporwave-crt/packages/single-crt-era-studies/images/palm-grid-arcade/image.w1600.webp"><img src="./works/topics/y2k-vaporwave-crt/packages/single-crt-era-studies/images/palm-grid-arcade/image.w400.webp" width="100%" alt="棕榈网格街机厅"/></a>
 
-<b>Palm Grid Arcade</b>
+<b>棕榈网格街机厅</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -12305,11 +12305,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/y2k-vaporwave-crt/packages/single-crt-era-studies/images/transparent-phone-shell/image.w1600.webp"><img src="./works/topics/y2k-vaporwave-crt/packages/single-crt-era-studies/images/transparent-phone-shell/image.w400.webp" width="100%" alt="Transparent Phone Shell"/></a>
+<a href="./works/topics/y2k-vaporwave-crt/packages/single-crt-era-studies/images/transparent-phone-shell/image.w1600.webp"><img src="./works/topics/y2k-vaporwave-crt/packages/single-crt-era-studies/images/transparent-phone-shell/image.w400.webp" width="100%" alt="透明翻盖手机外壳"/></a>
 
-<b>Transparent Phone Shell</b>
+<b>透明翻盖手机外壳</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -12333,11 +12333,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/y2k-vaporwave-crt/packages/single-crt-era-studies/images/liquid-metal-interface/image.w1600.webp"><img src="./works/topics/y2k-vaporwave-crt/packages/single-crt-era-studies/images/liquid-metal-interface/image.w400.webp" width="100%" alt="Liquid Metal Interface"/></a>
+<a href="./works/topics/y2k-vaporwave-crt/packages/single-crt-era-studies/images/liquid-metal-interface/image.w1600.webp"><img src="./works/topics/y2k-vaporwave-crt/packages/single-crt-era-studies/images/liquid-metal-interface/image.w400.webp" width="100%" alt="液态金属界面"/></a>
 
-<b>Liquid Metal Interface</b>
+<b>液态金属界面</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -12363,11 +12363,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/y2k-vaporwave-crt/packages/single-crt-era-studies/images/glitch-fashion-still/image.w1600.webp"><img src="./works/topics/y2k-vaporwave-crt/packages/single-crt-era-studies/images/glitch-fashion-still/image.w400.webp" width="100%" alt="Glitch Fashion Still"/></a>
+<a href="./works/topics/y2k-vaporwave-crt/packages/single-crt-era-studies/images/glitch-fashion-still/image.w1600.webp"><img src="./works/topics/y2k-vaporwave-crt/packages/single-crt-era-studies/images/glitch-fashion-still/image.w400.webp" width="100%" alt="Glitch 时装定格"/></a>
 
-<b>Glitch Fashion Still</b>
+<b>Glitch 时装定格</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -12391,11 +12391,11 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="./works/topics/y2k-vaporwave-crt/packages/single-crt-era-studies/images/after-hours-mall-atrium/image.w1600.webp"><img src="./works/topics/y2k-vaporwave-crt/packages/single-crt-era-studies/images/after-hours-mall-atrium/image.w400.webp" width="100%" alt="After Hours Mall Atrium"/></a>
+<a href="./works/topics/y2k-vaporwave-crt/packages/single-crt-era-studies/images/after-hours-mall-atrium/image.w1600.webp"><img src="./works/topics/y2k-vaporwave-crt/packages/single-crt-era-studies/images/after-hours-mall-atrium/image.w400.webp" width="100%" alt="闭店后的商场中庭"/></a>
 
-<b>After Hours Mall Atrium</b>
+<b>闭店后的商场中庭</b>
 
-<details><summary>📋 Prompt</summary>
+<details><summary>📋 完整提示词</summary>
 
 ```
 Scene:
@@ -12423,4 +12423,4 @@ No readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, no re
 
 ---
 
-<sub>Generated by `npm run readme:gen`</sub>
+<sub>由 `npm run readme:gen` 自动生成</sub>

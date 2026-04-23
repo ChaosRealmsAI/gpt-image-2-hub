@@ -6,7 +6,8 @@
   "private": false,
   "scripts": {
     "dev": "vite --host 127.0.0.1",
-    "build": "npm run works:index && npm run images:optimize && vite build",
+    "build": "npm run works:index && npm run images:optimize && npm run readme:gen && vite build",
+    "readme:gen": "node tools/readme-gen.js",
     "preview": "vite preview --host 127.0.0.1",
     "works:validate": "node tools/works.js validate",
     "works:index": "node tools/works.js build-index",
