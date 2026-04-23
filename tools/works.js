@@ -11,6 +11,7 @@ const TODO_PATH = path.join(ROOT, 'todo/atlas-todo.json');
 const WORKS_ROOT = path.join(ROOT, 'works');
 const LOCALES_PATH = path.join(WORKS_ROOT, 'locales.json');
 const TAGS_PATH = path.join(WORKS_ROOT, 'tags.json');
+const CATEGORIES_PATH = path.join(WORKS_ROOT, 'categories.json');
 const INDEX_PATH = path.join(WORKS_ROOT, 'index.json');
 
 const FALLBACK_REQUIRED_LOCALES = ['en', 'zh-CN'];
@@ -515,6 +516,11 @@ function buildIndex() {
     supported_locales: FALLBACK_REQUIRED_LOCALES.map((code) => ({ code })),
   });
   const tags = readJsonIfExists(TAGS_PATH, { tags: {} });
+  const categories = readJsonIfExists(CATEGORIES_PATH, {
+    category: {},
+    style: {},
+    capability: {},
+  });
   const topics = [];
   const packages = [];
   const images = [];
@@ -568,6 +574,9 @@ function buildIndex() {
     topics.push({
       id: topic.id,
       slug: topic.slug || topic.id,
+      category: topic.category || null,
+      style: Array.isArray(topic.style) ? topic.style : [],
+      capability: Array.isArray(topic.capability) ? topic.capability : [],
       todo_id: item?.id || item?.legacy_id || topic.id,
       title: topic.title,
       short_title: topic.short_title,
@@ -590,6 +599,7 @@ function buildIndex() {
     required_locales: locales.required_locales || FALLBACK_REQUIRED_LOCALES,
     supported_locales: locales.supported_locales || [],
     tag_labels: tags.tags || {},
+    categories,
     stats: {
       topic_count: topics.length,
       package_count: packages.length,

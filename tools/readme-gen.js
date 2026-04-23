@@ -63,10 +63,19 @@ function tierLimit(count) {
   return TIERS.find((n) => count >= n) ?? 0;
 }
 
+function sortTopics(a, b) {
+  const ao = Number(a.display?.sort_order ?? Number.POSITIVE_INFINITY);
+  const bo = Number(b.display?.sort_order ?? Number.POSITIVE_INFINITY);
+  if (ao !== bo) return ao - bo;
+  return localized(a, 'title', 'en').localeCompare(localized(b, 'title', 'en'));
+}
+
 function render(lang) {
   const idx = readIndex();
   const s = STR[lang];
   const topics = idx.topics || [];
+  const categoryDefs = idx.categories?.category || {};
+  const categoryOrder = Object.keys(categoryDefs);
   const imagesByTopic = new Map();
   for (const img of idx.images || []) {
     if (!imagesByTopic.has(img.topic_id)) imagesByTopic.set(img.topic_id, []);
@@ -82,55 +91,75 @@ function render(lang) {
   lines.push('');
 
   const topicsWithImages = topics.filter((t) => tierLimit((imagesByTopic.get(t.id) || []).length) > 0);
-
+  const topicsByCategory = new Map();
   for (const topic of topicsWithImages) {
-    const topicTitle = localized(topic, 'title', lang);
-    const topicDesc = localized(topic, 'description', lang);
-    const originalCount = (imagesByTopic.get(topic.id) || []).length;
-    const imgs = (imagesByTopic.get(topic.id) || [])
-      .slice()
-      .sort((a, b) => {
-        const ao = Number(a.generation?.order ?? 0);
-        const bo = Number(b.generation?.order ?? 0);
-        return ao - bo || String(a.id).localeCompare(String(b.id));
-      })
-      .slice(0, tierLimit(originalCount));
+    const categoryId = topic.category || 'illustration';
+    if (!topicsByCategory.has(categoryId)) topicsByCategory.set(categoryId, []);
+    topicsByCategory.get(categoryId).push(topic);
+  }
 
-    lines.push(`## [${topicTitle}](${topicHref(topic.id)})`);
+  for (const categoryId of categoryOrder) {
+    const categoryTopics = (topicsByCategory.get(categoryId) || []).slice().sort(sortTopics);
+    if (!categoryTopics.length) continue;
+
+    const category = categoryDefs[categoryId] || {};
+    const categoryLabel = category.labels?.[lang]
+      || category.labels?.en
+      || categoryId;
+    const icon = category.icon || '';
+
+    lines.push(`## ${icon} ${categoryLabel}`.trim());
     lines.push('');
-    if (topicDesc) {
-      lines.push(`> ${topicDesc}`);
+
+    for (const topic of categoryTopics) {
+      const topicTitle = localized(topic, 'title', lang);
+      const topicDesc = localized(topic, 'description', lang);
+      const originalCount = (imagesByTopic.get(topic.id) || []).length;
+      const imgs = (imagesByTopic.get(topic.id) || [])
+        .slice()
+        .sort((a, b) => {
+          const ao = Number(a.generation?.order ?? 0);
+          const bo = Number(b.generation?.order ?? 0);
+          return ao - bo || String(a.id).localeCompare(String(b.id));
+        })
+        .slice(0, tierLimit(originalCount));
+
+      lines.push(`### [${topicTitle}](${topicHref(topic.id)}) · ${originalCount}`);
+      lines.push('');
+      if (topicDesc) {
+        lines.push(`> ${topicDesc}`);
+        lines.push('');
+      }
+
+      lines.push('<table>');
+      for (let i = 0; i < imgs.length; i += 3) {
+        lines.push('<tr>');
+        for (let j = i; j < i + 3; j += 1) {
+          if (j >= imgs.length) {
+            lines.push('<td width="33%"></td>');
+            continue;
+          }
+          const img = imgs[j];
+          const imgTitle = localized(img, 'title', lang) || img.id;
+          const imgUrl = variantUrl(img.image);
+          const liveImageHref = imageHref(img.id);
+          const alt = img.display?.alt?.[lang]
+            || img.display?.alt?.en
+            || img.display?.alt?.['zh-CN']
+            || imgTitle;
+          lines.push('<td width="33%" valign="top" align="center">');
+          lines.push('');
+          lines.push(`<a href="${liveImageHref}"><img src="${imgUrl}" width="100%" alt="${escapeHtml(alt)}"/></a>`);
+          lines.push('');
+          lines.push(`<b><a href="${liveImageHref}">${escapeHtml(imgTitle)}</a></b>`);
+          lines.push('');
+          lines.push('</td>');
+        }
+        lines.push('</tr>');
+      }
+      lines.push('</table>');
       lines.push('');
     }
-
-    lines.push('<table>');
-    for (let i = 0; i < imgs.length; i += 3) {
-      lines.push('<tr>');
-      for (let j = i; j < i + 3; j += 1) {
-        if (j >= imgs.length) {
-          lines.push('<td width="33%"></td>');
-          continue;
-        }
-        const img = imgs[j];
-        const imgTitle = localized(img, 'title', lang) || img.id;
-        const imgUrl = variantUrl(img.image);
-        const liveImageHref = imageHref(img.id);
-        const alt = img.display?.alt?.[lang]
-          || img.display?.alt?.en
-          || img.display?.alt?.['zh-CN']
-          || imgTitle;
-        lines.push('<td width="33%" valign="top" align="center">');
-        lines.push('');
-        lines.push(`<a href="${liveImageHref}"><img src="${imgUrl}" width="100%" alt="${escapeHtml(alt)}"/></a>`);
-        lines.push('');
-        lines.push(`<b><a href="${liveImageHref}">${escapeHtml(imgTitle)}</a></b>`);
-        lines.push('');
-        lines.push('</td>');
-      }
-      lines.push('</tr>');
-    }
-    lines.push('</table>');
-    lines.push('');
   }
 
   lines.push('---');
