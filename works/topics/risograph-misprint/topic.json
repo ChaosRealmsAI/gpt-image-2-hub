@@ -1,0 +1,39 @@
+{
+  "id": "risograph-misprint",
+  "slug": "risograph-misprint",
+  "title": "Risograph Misprint",
+  "short_title": "Risograph",
+  "description": "A Prompt Atlas theme for Risograph Misprint, testing structured-layout, photorealism, physics-materials, style-transfer with GPT Image 2.",
+  "i18n": {
+    "en": {
+      "title": "Risograph Misprint",
+      "description": "A Prompt Atlas theme for Risograph Misprint, testing structured-layout, photorealism, physics-materials, style-transfer with GPT Image 2."
+    },
+    "zh-CN": {
+      "title": "Risograph 丝网错版印刷",
+      "description": "Risograph 丝网错版印刷：荧光粉 + 钴蓝 + 黑 三色分版 · 故意错位 1-2mm · 颗粒 halftone · 80 年代 zine / 独立漫画感"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 200,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "structured-layout",
+      "photorealism",
+      "physics-materials",
+      "style-transfer"
+    ]
+  },
+  "packages": [
+    {
+      "id": "single-theme-studies",
+      "type": "single",
+      "title": "Theme Studies",
+      "path": "packages/single-theme-studies/package.json"
+    }
+  ]
+}

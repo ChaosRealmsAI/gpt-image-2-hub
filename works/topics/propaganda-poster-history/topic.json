@@ -1,0 +1,39 @@
+{
+  "id": "propaganda-poster-history",
+  "slug": "propaganda-poster-history",
+  "title": "Propaganda Poster History",
+  "short_title": "Propaganda",
+  "description": "A Prompt Atlas theme for Propaganda Poster History, testing text-rendering, structured-layout, world-knowledge, style-transfer with GPT Image 2.",
+  "i18n": {
+    "en": {
+      "title": "Propaganda Poster History",
+      "description": "A Prompt Atlas theme for Propaganda Poster History, testing text-rendering, structured-layout, world-knowledge, style-transfer with GPT Image 2."
+    },
+    "zh-CN": {
+      "title": "政治宣传海报艺术史",
+      "description": "政治宣传海报艺术史：苏联 Rodchenko 构成主义 / 中国文革大跃进 / 二战 Uncle Sam / 古巴 Che 头像 / 北朝鲜 socialist realism"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 200,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "text-rendering",
+      "structured-layout",
+      "world-knowledge",
+      "style-transfer"
+    ]
+  },
+  "packages": [
+    {
+      "id": "single-theme-studies",
+      "type": "single",
+      "title": "Theme Studies",
+      "path": "packages/single-theme-studies/package.json"
+    }
+  ]
+}

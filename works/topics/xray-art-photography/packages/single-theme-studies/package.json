@@ -1,0 +1,64 @@
+{
+  "id": "single-theme-studies",
+  "type": "single",
+  "title": "Theme Studies",
+  "description": "Three independent studies for the X-Ray Art Photography theme.",
+  "creative_direction": "A first-pass single-image package for X-Ray Art Photography: one core demonstration, one applied system, and one gallery-oriented variation, all focused on credible real-world light, texture, and camera behavior, controlled style language without losing structure, optical-illusion geometry and precise perspective.",
+  "cover_image": "images/01-core-demonstration/image.png",
+  "generation_plan": {
+    "status": "prompted",
+    "execution": "parallel",
+    "runner": "image2gen",
+    "images": [
+      "images/01-core-demonstration/meta.json",
+      "images/02-applied-system/meta.json",
+      "images/03-gallery-variant/meta.json"
+    ],
+    "ref_strategy": "No references; each image is independent.",
+    "index_policy": "Only status=done images with image.png are included in works/index.json."
+  },
+  "i18n": {
+    "en": {
+      "title": "Theme Studies",
+      "description": "Three independent studies for the X-Ray Art Photography theme."
+    },
+    "zh-CN": {
+      "title": "主题单图研究",
+      "description": "X 光艺术摄影 · Nick Veasey 风 主题的三张独立单图研究。"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 10,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "single",
+      "photorealism",
+      "style-transfer",
+      "optical-illusion"
+    ]
+  },
+  "images": [
+    {
+      "id": "01-core-demonstration",
+      "title": "Core Demonstration",
+      "image": "images/01-core-demonstration/image.png",
+      "meta": "images/01-core-demonstration/meta.json"
+    },
+    {
+      "id": "02-applied-system",
+      "title": "Applied System",
+      "image": "images/02-applied-system/image.png",
+      "meta": "images/02-applied-system/meta.json"
+    },
+    {
+      "id": "03-gallery-variant",
+      "title": "Gallery Variant",
+      "image": "images/03-gallery-variant/image.png",
+      "meta": "images/03-gallery-variant/meta.json"
+    }
+  ]
+}

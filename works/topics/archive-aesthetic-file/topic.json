@@ -1,0 +1,37 @@
+{
+  "id": "archive-aesthetic-file",
+  "slug": "archive-aesthetic-file",
+  "title": "Archive Aesthetic File",
+  "short_title": "Archive File",
+  "description": "A Prompt Atlas theme for Archive Aesthetic File, testing text-rendering, structured-layout with GPT Image 2.",
+  "i18n": {
+    "en": {
+      "title": "Archive Aesthetic File",
+      "description": "A Prompt Atlas theme for Archive Aesthetic File, testing text-rendering, structured-layout with GPT Image 2."
+    },
+    "zh-CN": {
+      "title": "档案美学 · Wanted / 指纹卡 / 档案页",
+      "description": "档案美学 · Wanted / 指纹卡 / 档案页：Old West Wanted 通缉令 + 悬赏 + 罪状 / FBI 档案页 + 指纹 + 侧面照 / 学生档案卡 + 照片 + 成绩"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 200,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "text-rendering",
+      "structured-layout"
+    ]
+  },
+  "packages": [
+    {
+      "id": "single-theme-studies",
+      "type": "single",
+      "title": "Theme Studies",
+      "path": "packages/single-theme-studies/package.json"
+    }
+  ]
+}

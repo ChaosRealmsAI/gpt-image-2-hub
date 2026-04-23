@@ -1,0 +1,38 @@
+{
+  "id": "fictional-ip-poster",
+  "slug": "fictional-ip-poster",
+  "title": "Fictional IP Poster",
+  "short_title": "IP Poster",
+  "description": "A Prompt Atlas theme for Fictional IP Poster, testing text-rendering, structured-layout, photorealism with GPT Image 2.",
+  "i18n": {
+    "en": {
+      "title": "Fictional IP Poster",
+      "description": "A Prompt Atlas theme for Fictional IP Poster, testing text-rendering, structured-layout, photorealism with GPT Image 2."
+    },
+    "zh-CN": {
+      "title": "架空 IP 电影 / 动漫海报",
+      "description": "架空 IP 电影 / 动漫海报：'即将上映' 虚构动漫 / 科幻片 · 标题字体 + 演员阵容 + 上映日期 + 制片厂 logo · 看起来像真海报"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 200,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "text-rendering",
+      "structured-layout",
+      "photorealism"
+    ]
+  },
+  "packages": [
+    {
+      "id": "single-theme-studies",
+      "type": "single",
+      "title": "Theme Studies",
+      "path": "packages/single-theme-studies/package.json"
+    }
+  ]
+}

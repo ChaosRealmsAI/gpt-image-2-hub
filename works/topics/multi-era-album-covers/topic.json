@@ -1,0 +1,37 @@
+{
+  "id": "multi-era-album-covers",
+  "slug": "multi-era-album-covers",
+  "title": "Multi-Era Album Covers",
+  "short_title": "Album Covers",
+  "description": "A Prompt Atlas theme for Multi-Era Album Covers, testing style-transfer, commercial-mockup with GPT Image 2.",
+  "i18n": {
+    "en": {
+      "title": "Multi-Era Album Covers",
+      "description": "A Prompt Atlas theme for Multi-Era Album Covers, testing style-transfer, commercial-mockup with GPT Image 2."
+    },
+    "zh-CN": {
+      "title": "多时代 Album Cover 专辑封面合集",
+      "description": "多时代 Album Cover 专辑封面合集：一组 6 张 · 1960s 民谣 / 1970s 摇滚 / 1980s synthwave / 1990s grunge / 2000s emo / 2020s hyperpop · 同主题不同时代演绎"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 200,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "style-transfer",
+      "commercial-mockup"
+    ]
+  },
+  "packages": [
+    {
+      "id": "single-theme-studies",
+      "type": "single",
+      "title": "Theme Studies",
+      "path": "packages/single-theme-studies/package.json"
+    }
+  ]
+}

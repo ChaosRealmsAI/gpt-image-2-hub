@@ -15,7 +15,7 @@
   "refs": [
     "01-reference-hero-orb-page"
   ],
-  "status": "prompted",
+  "status": "done",
   "generation": {
     "order": 4,
     "mode": "image",

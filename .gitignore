@@ -9,6 +9,9 @@
 !package.json
 !package-lock.json
 !vite.config.js
+!vercel.json
+!public/
+!public/**
 !index.html
 !src/
 !src/**
@@ -27,3 +30,4 @@ dist/
 todo/
 prototype/
 research-materials/
+.vercel

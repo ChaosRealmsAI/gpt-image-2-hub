@@ -1,0 +1,39 @@
+{
+  "id": "new-yorker-editorial",
+  "slug": "new-yorker-editorial",
+  "title": "New Yorker Editorial",
+  "short_title": "New Yorker",
+  "description": "A Prompt Atlas theme for New Yorker Editorial, testing structured-layout, reasoning-composition, style-transfer, editing-workflow, commercial-mockup with GPT Image 2.",
+  "i18n": {
+    "en": {
+      "title": "New Yorker Editorial",
+      "description": "A Prompt Atlas theme for New Yorker Editorial, testing structured-layout, reasoning-composition, style-transfer, editing-workflow, commercial-mockup with GPT Image 2."
+    },
+    "zh-CN": {
+      "title": "The New Yorker editorial illustration",
+      "description": "The New Yorker editorial illustration：纽约客风 · 手绘线条 + 水彩填色 + 装饰花边 · 双关隐喻主题(AI 时代劳动 / 社交网络孤独 / 气候变化)"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 200,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "structured-layout",
+      "reasoning-composition",
+      "style-transfer",
+      "editing-workflow"
+    ]
+  },
+  "packages": [
+    {
+      "id": "single-theme-studies",
+      "type": "single",
+      "title": "Theme Studies",
+      "path": "packages/single-theme-studies/package.json"
+    }
+  ]
+}

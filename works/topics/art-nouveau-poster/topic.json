@@ -1,0 +1,39 @@
+{
+  "id": "art-nouveau-poster",
+  "slug": "art-nouveau-poster",
+  "title": "Art Nouveau Poster",
+  "short_title": "Art Nouveau",
+  "description": "A Prompt Atlas theme for Art Nouveau Poster, testing text-rendering, structured-layout, style-transfer, commercial-mockup with GPT Image 2.",
+  "i18n": {
+    "en": {
+      "title": "Art Nouveau Poster",
+      "description": "A Prompt Atlas theme for Art Nouveau Poster, testing text-rendering, structured-layout, style-transfer, commercial-mockup with GPT Image 2."
+    },
+    "zh-CN": {
+      "title": "Art Nouveau · Mucha 装饰女性 + 花卉",
+      "description": "Art Nouveau · Mucha 装饰女性 + 花卉：Alphonse Mucha 风 · 飘发女子 + 星形光环 + 百合藤蔓 + 书法 typography · 广告海报(香槟 / 火车 / 烟草)"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 200,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "text-rendering",
+      "structured-layout",
+      "style-transfer",
+      "commercial-mockup"
+    ]
+  },
+  "packages": [
+    {
+      "id": "single-theme-studies",
+      "type": "single",
+      "title": "Theme Studies",
+      "path": "packages/single-theme-studies/package.json"
+    }
+  ]
+}

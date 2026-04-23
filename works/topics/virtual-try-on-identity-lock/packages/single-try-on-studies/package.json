@@ -1,0 +1,64 @@
+{
+  "id": "single-try-on-studies",
+  "type": "single",
+  "title": "Try-On Studies",
+  "description": "Three independent virtual try-on compositions testing wardrobe changes and identity-preserving presentation.",
+  "creative_direction": "Independent studies for outfit transformation: each image makes identity preservation visibly testable through repeated face, body, pose, or mirror comparison structures.",
+  "cover_image": "images/four-look-fitting-sheet/image.png",
+  "generation_plan": {
+    "status": "prompted",
+    "execution": "parallel",
+    "runner": "image2gen",
+    "images": [
+      "images/four-look-fitting-sheet/meta.json",
+      "images/material-swap-mannequin/meta.json",
+      "images/retail-mirror-comparison/meta.json"
+    ],
+    "ref_strategy": "No references; each image is independent.",
+    "index_policy": "Only status=done images with image.png are included in works/index.json."
+  },
+  "i18n": {
+    "en": {
+      "title": "Try-On Studies",
+      "description": "Three independent virtual try-on compositions testing wardrobe changes and identity-preserving presentation."
+    },
+    "zh-CN": {
+      "title": "试衣单图研究",
+      "description": "三张独立虚拟试衣图，测试换装和身份保持的展示方式。"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 20,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "single",
+      "virtual-try-on",
+      "identity-consistency",
+      "fashion"
+    ]
+  },
+  "images": [
+    {
+      "id": "four-look-fitting-sheet",
+      "title": "Four-Look Fitting Sheet",
+      "image": "images/four-look-fitting-sheet/image.png",
+      "meta": "images/four-look-fitting-sheet/meta.json"
+    },
+    {
+      "id": "material-swap-mannequin",
+      "title": "Material Swap Mannequin",
+      "image": "images/material-swap-mannequin/image.png",
+      "meta": "images/material-swap-mannequin/meta.json"
+    },
+    {
+      "id": "retail-mirror-comparison",
+      "title": "Retail Mirror Comparison",
+      "image": "images/retail-mirror-comparison/image.png",
+      "meta": "images/retail-mirror-comparison/meta.json"
+    }
+  ]
+}

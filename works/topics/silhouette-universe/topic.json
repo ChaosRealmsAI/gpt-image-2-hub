@@ -1,0 +1,37 @@
+{
+  "id": "silhouette-universe",
+  "slug": "silhouette-universe",
+  "title": "Silhouette Universe",
+  "short_title": "Silhouette Universe",
+  "description": "A Prompt Atlas theme for Silhouette Universe, testing structured-layout, reasoning-composition with GPT Image 2.",
+  "i18n": {
+    "en": {
+      "title": "Silhouette Universe",
+      "description": "A Prompt Atlas theme for Silhouette Universe, testing structured-layout, reasoning-composition with GPT Image 2."
+    },
+    "zh-CN": {
+      "title": "Silhouette Universe · 剪影宇宙",
+      "description": "Silhouette Universe · 剪影宇宙：黑色剪影(塔 / 门 / 骷髅)里塞入完整叙事世界 · 城市 / 河流 / 人物 / 天气分层"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 200,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "structured-layout",
+      "reasoning-composition"
+    ]
+  },
+  "packages": [
+    {
+      "id": "single-theme-studies",
+      "type": "single",
+      "title": "Theme Studies",
+      "path": "packages/single-theme-studies/package.json"
+    }
+  ]
+}

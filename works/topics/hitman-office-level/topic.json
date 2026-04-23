@@ -1,0 +1,38 @@
+{
+  "id": "hitman-office-level",
+  "slug": "hitman-office-level",
+  "title": "Hitman Office Level",
+  "short_title": "Office Level",
+  "description": "A Prompt Atlas theme for Hitman Office Level, testing multi-image-reference, structured-layout, reasoning-composition with GPT Image 2.",
+  "i18n": {
+    "en": {
+      "title": "Hitman Office Level",
+      "description": "A Prompt Atlas theme for Hitman Office Level, testing multi-image-reference, structured-layout, reasoning-composition with GPT Image 2."
+    },
+    "zh-CN": {
+      "title": "Hitman 关卡 · 办公室游戏化",
+      "description": "Hitman 关卡 · 办公室游戏化：俯视公司办公室 · NPC 巡逻路径 + 任务目标 UI + HUD 消音枪 · 'STEAL GPT-6'"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 200,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "multi-image-reference",
+      "structured-layout",
+      "reasoning-composition"
+    ]
+  },
+  "packages": [
+    {
+      "id": "single-theme-studies",
+      "type": "single",
+      "title": "Theme Studies",
+      "path": "packages/single-theme-studies/package.json"
+    }
+  ]
+}

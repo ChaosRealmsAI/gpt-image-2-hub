@@ -1,0 +1,65 @@
+{
+  "id": "single-theme-studies",
+  "type": "single",
+  "title": "Theme Studies",
+  "description": "Three independent studies for the Micro-Macro Infographic theme.",
+  "creative_direction": "A first-pass single-image package for Micro-Macro Infographic: one core demonstration, one applied system, and one gallery-oriented variation, all focused on structured layout and clear information hierarchy, credible real-world light, texture, and camera behavior, material physics, optical behavior, and tactile surface detail, reasoned multi-part visual storytelling.",
+  "cover_image": "images/01-core-demonstration/image.png",
+  "generation_plan": {
+    "status": "prompted",
+    "execution": "parallel",
+    "runner": "image2gen",
+    "images": [
+      "images/01-core-demonstration/meta.json",
+      "images/02-applied-system/meta.json",
+      "images/03-gallery-variant/meta.json"
+    ],
+    "ref_strategy": "No references; each image is independent.",
+    "index_policy": "Only status=done images with image.png are included in works/index.json."
+  },
+  "i18n": {
+    "en": {
+      "title": "Theme Studies",
+      "description": "Three independent studies for the Micro-Macro Infographic theme."
+    },
+    "zh-CN": {
+      "title": "主题单图研究",
+      "description": "微观 × 宏观对比信息图 主题的三张独立单图研究。"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 10,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "single",
+      "structured-layout",
+      "photorealism",
+      "physics-materials",
+      "reasoning-composition"
+    ]
+  },
+  "images": [
+    {
+      "id": "01-core-demonstration",
+      "title": "Core Demonstration",
+      "image": "images/01-core-demonstration/image.png",
+      "meta": "images/01-core-demonstration/meta.json"
+    },
+    {
+      "id": "02-applied-system",
+      "title": "Applied System",
+      "image": "images/02-applied-system/image.png",
+      "meta": "images/02-applied-system/meta.json"
+    },
+    {
+      "id": "03-gallery-variant",
+      "title": "Gallery Variant",
+      "image": "images/03-gallery-variant/image.png",
+      "meta": "images/03-gallery-variant/meta.json"
+    }
+  ]
+}

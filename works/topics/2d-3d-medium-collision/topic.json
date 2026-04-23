@@ -1,0 +1,37 @@
+{
+  "id": "2d-3d-medium-collision",
+  "slug": "2d-3d-medium-collision",
+  "title": "2D and 3D Medium Collision",
+  "short_title": "2D 3D Mix",
+  "description": "A Prompt Atlas theme for 2D and 3D Medium Collision, testing multi-image-reference, physics-materials with GPT Image 2.",
+  "i18n": {
+    "en": {
+      "title": "2D and 3D Medium Collision",
+      "description": "A Prompt Atlas theme for 2D and 3D Medium Collision, testing multi-image-reference, physics-materials with GPT Image 2."
+    },
+    "zh-CN": {
+      "title": "2D 手绘 × 3D 实拍碰撞",
+      "description": "2D 手绘 × 3D 实拍碰撞：儿童蜡笔画 stick figure 举 8K 实拍苹果 · 苹果投真阴影到纸上"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 200,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "multi-image-reference",
+      "physics-materials"
+    ]
+  },
+  "packages": [
+    {
+      "id": "single-theme-studies",
+      "type": "single",
+      "title": "Theme Studies",
+      "path": "packages/single-theme-studies/package.json"
+    }
+  ]
+}

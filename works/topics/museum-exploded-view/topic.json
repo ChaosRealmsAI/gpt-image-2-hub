@@ -1,0 +1,38 @@
+{
+  "id": "museum-exploded-view",
+  "slug": "museum-exploded-view",
+  "title": "Museum Exploded View",
+  "short_title": "Museum Exploded View",
+  "description": "A Prompt Atlas theme for Museum Exploded View, testing structured-layout, physics-materials, technical-diagram with GPT Image 2.",
+  "i18n": {
+    "en": {
+      "title": "Museum Exploded View",
+      "description": "A Prompt Atlas theme for Museum Exploded View, testing structured-layout, physics-materials, technical-diagram with GPT Image 2."
+    },
+    "zh-CN": {
+      "title": "Museum Exploded View · 文物拆解图鉴",
+      "description": "Museum Exploded View · 文物拆解图鉴：青铜鼎拆成爆炸图 · 材料 / 工艺 / 年代 / 编号标注 · 中英双语"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 200,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "structured-layout",
+      "physics-materials",
+      "technical-diagram"
+    ]
+  },
+  "packages": [
+    {
+      "id": "single-theme-studies",
+      "type": "single",
+      "title": "Theme Studies",
+      "path": "packages/single-theme-studies/package.json"
+    }
+  ]
+}

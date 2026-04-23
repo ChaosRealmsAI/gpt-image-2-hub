@@ -1,0 +1,38 @@
+{
+  "id": "nine-expression-portrait-grid",
+  "slug": "nine-expression-portrait-grid",
+  "title": "Nine-Expression Portrait Grid",
+  "short_title": "Expression Grid",
+  "description": "A Prompt Atlas theme for Nine-Expression Portrait Grid, testing multi-image-reference, structured-layout, reasoning-composition with GPT Image 2.",
+  "i18n": {
+    "en": {
+      "title": "Nine-Expression Portrait Grid",
+      "description": "A Prompt Atlas theme for Nine-Expression Portrait Grid, testing multi-image-reference, structured-layout, reasoning-composition with GPT Image 2."
+    },
+    "zh-CN": {
+      "title": "3x3 九宫格多表情写真",
+      "description": "3x3 九宫格多表情写真：9:16 · 3×3 = 9 格 · 同一人 9 种表情 / pose / 服装 · 脸保持不变 · Korean idol 写真集 / 家族相册"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 200,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "multi-image-reference",
+      "structured-layout",
+      "reasoning-composition"
+    ]
+  },
+  "packages": [
+    {
+      "id": "single-theme-studies",
+      "type": "single",
+      "title": "Theme Studies",
+      "path": "packages/single-theme-studies/package.json"
+    }
+  ]
+}

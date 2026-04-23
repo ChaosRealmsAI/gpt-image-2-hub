@@ -1,0 +1,39 @@
+{
+  "id": "pseudo-real-documents",
+  "slug": "pseudo-real-documents",
+  "title": "Pseudo-Real Documents",
+  "short_title": "Fake Docs",
+  "description": "A Prompt Atlas theme for Pseudo-Real Documents, testing text-rendering, photorealism, physics-materials, commercial-mockup with GPT Image 2.",
+  "i18n": {
+    "en": {
+      "title": "Pseudo-Real Documents",
+      "description": "A Prompt Atlas theme for Pseudo-Real Documents, testing text-rendering, photorealism, physics-materials, commercial-mockup with GPT Image 2."
+    },
+    "zh-CN": {
+      "title": "伪真实文档 · 票据 / 护照 / 药方 / 字帖",
+      "description": "伪真实文档 · 票据 / 护照 / 药方 / 字帖：登机牌(条码/航班号/gate 乱真)· 护照入境印章 · 中医手写药方 · 书法临摹字帖 · 手相鉴定书 · 任一都可成产品"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 200,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "text-rendering",
+      "photorealism",
+      "physics-materials",
+      "commercial-mockup"
+    ]
+  },
+  "packages": [
+    {
+      "id": "single-theme-studies",
+      "type": "single",
+      "title": "Theme Studies",
+      "path": "packages/single-theme-studies/package.json"
+    }
+  ]
+}

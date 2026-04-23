@@ -1,0 +1,37 @@
+{
+  "id": "scientific-paper-figure",
+  "slug": "scientific-paper-figure",
+  "title": "Scientific Paper Figure",
+  "short_title": "Paper Figure",
+  "description": "A Prompt Atlas theme for Scientific Paper Figure, testing physics-materials, commercial-mockup with GPT Image 2.",
+  "i18n": {
+    "en": {
+      "title": "Scientific Paper Figure",
+      "description": "A Prompt Atlas theme for Scientific Paper Figure, testing physics-materials, commercial-mockup with GPT Image 2."
+    },
+    "zh-CN": {
+      "title": "科学论文配图",
+      "description": "科学论文配图：分子结构式 + 反应链 + 数据图 · Nature / Science 封面级"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 200,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "physics-materials",
+      "commercial-mockup"
+    ]
+  },
+  "packages": [
+    {
+      "id": "single-theme-studies",
+      "type": "single",
+      "title": "Theme Studies",
+      "path": "packages/single-theme-studies/package.json"
+    }
+  ]
+}

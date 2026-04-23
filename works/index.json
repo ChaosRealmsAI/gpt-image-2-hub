@@ -75,6 +75,18 @@
         "zh-CN": "电影感"
       }
     },
+    "comic": {
+      "labels": {
+        "en": "Comic",
+        "zh-CN": "漫画"
+      }
+    },
+    "anamorphic": {
+      "labels": {
+        "en": "Anamorphic",
+        "zh-CN": "变形透视"
+      }
+    },
     "crystal-ball": {
       "labels": {
         "en": "Crystal ball",
@@ -93,6 +105,18 @@
         "zh-CN": "编辑插画"
       }
     },
+    "fusion": {
+      "labels": {
+        "en": "Fusion",
+        "zh-CN": "融合"
+      }
+    },
+    "extreme-aspect-ratio": {
+      "labels": {
+        "en": "Extreme aspect ratio",
+        "zh-CN": "极端画幅"
+      }
+    },
     "grayscale": {
       "labels": {
         "en": "Grayscale",
@@ -103,6 +127,12 @@
       "labels": {
         "en": "Identity consistency",
         "zh-CN": "身份一致性"
+      }
+    },
+    "fashion": {
+      "labels": {
+        "en": "Fashion",
+        "zh-CN": "时装"
       }
     },
     "micro-texture": {
@@ -117,10 +147,22 @@
         "zh-CN": "微缩世界"
       }
     },
+    "multi-reference": {
+      "labels": {
+        "en": "Multi-reference",
+        "zh-CN": "多参考"
+      }
+    },
     "optical-illusion": {
       "labels": {
         "en": "Optical illusion",
         "zh-CN": "视觉错觉"
+      }
+    },
+    "patent-diagram": {
+      "labels": {
+        "en": "Patent diagram",
+        "zh-CN": "专利图"
       }
     },
     "pattern": {
@@ -135,6 +177,12 @@
         "zh-CN": "写实摄影"
       }
     },
+    "physics-materials": {
+      "labels": {
+        "en": "Physics materials",
+        "zh-CN": "物理材质"
+      }
+    },
     "reasoning-composition": {
       "labels": {
         "en": "Reasoning composition",
@@ -145,6 +193,12 @@
       "labels": {
         "en": "Scientific realism",
         "zh-CN": "科学写实"
+      }
+    },
+    "scroll-painting": {
+      "labels": {
+        "en": "Scroll painting",
+        "zh-CN": "长卷画"
       }
     },
     "sem-microscopy": {
@@ -165,10 +219,34 @@
         "zh-CN": "单图"
       }
     },
+    "social-feed": {
+      "labels": {
+        "en": "Social feed",
+        "zh-CN": "社交动态"
+      }
+    },
     "structured-layout": {
       "labels": {
         "en": "Structured layout",
         "zh-CN": "结构版式"
+      }
+    },
+    "stereoscopic-depth": {
+      "labels": {
+        "en": "Stereoscopic depth",
+        "zh-CN": "立体视差"
+      }
+    },
+    "technical-diagram": {
+      "labels": {
+        "en": "Technical diagram",
+        "zh-CN": "技术图"
+      }
+    },
+    "text-rendering": {
+      "labels": {
+        "en": "Text rendering",
+        "zh-CN": "文字渲染"
       }
     },
     "tessellation": {
@@ -181,6 +259,12 @@
       "labels": {
         "en": "Thinking mode",
         "zh-CN": "推理图像"
+      }
+    },
+    "virtual-try-on": {
+      "labels": {
+        "en": "Virtual try-on",
+        "zh-CN": "虚拟试衣"
       }
     },
     "time-split": {
@@ -200,14 +284,89 @@
         "en": "High speed",
         "zh-CN": "高速摄影"
       }
+    },
+    "world-knowledge": {
+      "labels": {
+        "en": "World knowledge",
+        "zh-CN": "世界知识"
+      }
+    },
+    "multi-image-reference": {
+      "labels": {
+        "en": "Multi-image reference",
+        "zh-CN": "多图参考"
+      }
+    },
+    "editing-workflow": {
+      "labels": {
+        "en": "Editing workflow",
+        "zh-CN": "编辑流程"
+      }
+    },
+    "style-transfer": {
+      "labels": {
+        "en": "Style transfer",
+        "zh-CN": "风格迁移"
+      }
+    },
+    "commercial-mockup": {
+      "labels": {
+        "en": "Commercial mockup",
+        "zh-CN": "商业样机"
+      }
+    },
+    "frontier-creative-composition": {
+      "labels": {
+        "en": "Frontier creative composition",
+        "zh-CN": "前沿创意构图"
+      }
     }
   },
   "stats": {
-    "topic_count": 4,
-    "package_count": 5,
-    "image_count": 18
+    "topic_count": 11,
+    "package_count": 14,
+    "image_count": 47
   },
   "topics": [
+    {
+      "id": "anamorphic-perspective-art",
+      "slug": "anamorphic-perspective-art",
+      "todo_id": "anamorphic-perspective-art",
+      "title": "Anamorphic Perspective Art",
+      "short_title": "Anamorphic",
+      "description": "A Prompt Atlas theme for perspective illusions that only resolve from one controlled viewing angle.",
+      "i18n": {
+        "en": {
+          "title": "Anamorphic Perspective Art",
+          "short_title": "Anamorphic",
+          "description": "A Prompt Atlas theme for perspective illusions that only resolve from one controlled viewing angle."
+        },
+        "zh-CN": {
+          "title": "变形透视艺术",
+          "short_title": "变形透视",
+          "description": "测试只在特定视角成立的变形透视图案。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 80,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "anamorphic",
+          "optical-illusion",
+          "structured-layout"
+        ]
+      },
+      "package_count": 1,
+      "image_count": 3,
+      "packages": [
+        "single-anamorphic-studies"
+      ],
+      "topic_path": "works/topics/anamorphic-perspective-art/topic.json"
+    },
     {
       "id": "crystal-ball-narrative",
       "slug": "crystal-ball-narrative",
@@ -247,6 +406,46 @@
       "topic_path": "works/topics/crystal-ball-narrative/topic.json"
     },
     {
+      "id": "eight-panel-consistency-comic",
+      "slug": "eight-panel-consistency-comic",
+      "todo_id": "eight-panel-consistency-comic",
+      "title": "Eight-Panel Consistency Comic",
+      "short_title": "8 Panel Comic",
+      "description": "A Prompt Atlas theme for multi-panel comics that keep character identity, product props, layout rhythm, and visual style consistent.",
+      "i18n": {
+        "en": {
+          "title": "Eight-Panel Consistency Comic",
+          "short_title": "8 Panel Comic",
+          "description": "A Prompt Atlas theme for multi-panel comics that keep character identity, product props, layout rhythm, and visual style consistent."
+        },
+        "zh-CN": {
+          "title": "八格一致性漫画",
+          "short_title": "八格漫画",
+          "description": "测试多格漫画中的角色身份、产品道具、版式节奏和画风一致性。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 50,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "comic",
+          "identity-consistency",
+          "structured-layout"
+        ]
+      },
+      "package_count": 2,
+      "image_count": 7,
+      "packages": [
+        "series-launch-comic",
+        "single-comic-studies"
+      ],
+      "topic_path": "works/topics/eight-panel-consistency-comic/topic.json"
+    },
+    {
       "id": "high-speed-freeze",
       "slug": "high-speed-freeze",
       "todo_id": "high-speed-freeze",
@@ -283,6 +482,124 @@
         "single-impact-studies"
       ],
       "topic_path": "works/topics/high-speed-freeze/topic.json"
+    },
+    {
+      "id": "sixteen-reference-fusion",
+      "slug": "sixteen-reference-fusion",
+      "todo_id": "sixteen-reference-fusion",
+      "title": "Sixteen Reference Fusion",
+      "short_title": "16 Ref Fusion",
+      "description": "A Prompt Atlas theme for fusing many visual inputs into one coherent image while preserving identity, place, materials, and style cues.",
+      "i18n": {
+        "en": {
+          "title": "Sixteen Reference Fusion",
+          "short_title": "16 Ref Fusion",
+          "description": "A Prompt Atlas theme for fusing many visual inputs into one coherent image while preserving identity, place, materials, and style cues."
+        },
+        "zh-CN": {
+          "title": "十六参考融合",
+          "short_title": "参考融合",
+          "description": "把多组视觉输入融合成一张连贯图，同时保持身份、地点、材质和风格线索。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 60,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "multi-reference",
+          "fusion",
+          "identity-consistency"
+        ]
+      },
+      "package_count": 2,
+      "image_count": 7,
+      "packages": [
+        "series-reference-fusion-atlas",
+        "single-fusion-studies"
+      ],
+      "topic_path": "works/topics/sixteen-reference-fusion/topic.json"
+    },
+    {
+      "id": "song-dynasty-social-feed",
+      "slug": "song-dynasty-social-feed",
+      "todo_id": "song-dynasty-social-feed",
+      "title": "Song Dynasty Social Feed",
+      "short_title": "Song Feed",
+      "description": "A Prompt Atlas theme for modern social-feed layouts reimagined through Song dynasty public life, literary culture, and market scenes.",
+      "i18n": {
+        "en": {
+          "title": "Song Dynasty Social Feed",
+          "short_title": "Song Feed",
+          "description": "A Prompt Atlas theme for modern social-feed layouts reimagined through Song dynasty public life, literary culture, and market scenes."
+        },
+        "zh-CN": {
+          "title": "宋朝朋友圈",
+          "short_title": "宋朝朋友圈",
+          "description": "用现代社交动态版式重构宋代文人、市场和出游场景。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 70,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "social-feed",
+          "structured-layout",
+          "world-knowledge"
+        ]
+      },
+      "package_count": 1,
+      "image_count": 3,
+      "packages": [
+        "single-social-feed-studies"
+      ],
+      "topic_path": "works/topics/song-dynasty-social-feed/topic.json"
+    },
+    {
+      "id": "stereoscopic-depth",
+      "slug": "stereoscopic-depth",
+      "todo_id": "stereoscopic-depth",
+      "title": "Stereoscopic Depth",
+      "short_title": "Stereoscope",
+      "description": "A Prompt Atlas theme for images that encode depth through stereo pairs, anaglyph rendering, and hidden-depth patterns.",
+      "i18n": {
+        "en": {
+          "title": "Stereoscopic Depth",
+          "short_title": "Stereoscope",
+          "description": "A Prompt Atlas theme for images that encode depth through stereo pairs, anaglyph rendering, and hidden-depth patterns."
+        },
+        "zh-CN": {
+          "title": "立体视差",
+          "short_title": "立体视差",
+          "description": "测试左右视差、红蓝 3D 和隐藏深度图案。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 90,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "stereoscopic-depth",
+          "optical-illusion",
+          "physics-materials"
+        ]
+      },
+      "package_count": 1,
+      "image_count": 3,
+      "packages": [
+        "single-depth-studies"
+      ],
+      "topic_path": "works/topics/stereoscopic-depth/topic.json"
     },
     {
       "id": "tessellation-pattern",
@@ -362,9 +679,130 @@
         "single-reasoning-studies"
       ],
       "topic_path": "works/topics/thinking-mode/topic.json"
+    },
+    {
+      "id": "ultra-long-scroll-painting",
+      "slug": "ultra-long-scroll-painting",
+      "todo_id": "ultra-long-scroll-painting",
+      "title": "Ultra-Long Scroll Painting",
+      "short_title": "Long Scroll",
+      "description": "A Prompt Atlas theme for dense vertical scroll images that keep continuous geography, time, and narrative structure legible across an extreme aspect ratio.",
+      "i18n": {
+        "en": {
+          "title": "Ultra-Long Scroll Painting",
+          "short_title": "Long Scroll",
+          "description": "A Prompt Atlas theme for dense vertical scroll images that keep continuous geography, time, and narrative structure legible across an extreme aspect ratio."
+        },
+        "zh-CN": {
+          "title": "超长竖卷画",
+          "short_title": "超长画卷",
+          "description": "测试极端长画幅中连续地理、时间线和叙事密度是否仍然清楚。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 60,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "scroll-painting",
+          "extreme-aspect-ratio",
+          "structured-layout",
+          "world-knowledge"
+        ]
+      },
+      "package_count": 1,
+      "image_count": 3,
+      "packages": [
+        "single-scroll-studies"
+      ],
+      "topic_path": "works/topics/ultra-long-scroll-painting/topic.json"
+    },
+    {
+      "id": "uspto-patent-diagram",
+      "slug": "uspto-patent-diagram",
+      "todo_id": "uspto-patent-diagram",
+      "title": "USPTO Patent Diagram",
+      "short_title": "Patent Diagram",
+      "description": "A Prompt Atlas theme for black-and-white patent-style technical plates with strict linework, labels, and multi-view structure.",
+      "i18n": {
+        "en": {
+          "title": "USPTO Patent Diagram",
+          "short_title": "Patent Diagram",
+          "description": "A Prompt Atlas theme for black-and-white patent-style technical plates with strict linework, labels, and multi-view structure."
+        },
+        "zh-CN": {
+          "title": "美国专利技术图",
+          "short_title": "专利图",
+          "description": "测试黑白专利风技术线稿、多视图编号和结构拆解。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 100,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "patent-diagram",
+          "technical-diagram",
+          "text-rendering",
+          "structured-layout"
+        ]
+      },
+      "package_count": 1,
+      "image_count": 3,
+      "packages": [
+        "single-patent-plates"
+      ],
+      "topic_path": "works/topics/uspto-patent-diagram/topic.json"
     }
   ],
   "packages": [
+    {
+      "id": "single-anamorphic-studies",
+      "topic_id": "anamorphic-perspective-art",
+      "topic_slug": "anamorphic-perspective-art",
+      "type": "single",
+      "title": "Anamorphic Studies",
+      "description": "Three independent perspective illusion images with one readable resolved shape from a controlled camera point.",
+      "creative_direction": "Each image uses a different physical setting for an anamorphic illusion: rooftop paint, cylindrical mirror reflection, and transit-floor wayfinding.",
+      "i18n": {
+        "en": {
+          "title": "Anamorphic Studies",
+          "description": "Three independent perspective illusion images with one readable resolved shape from a controlled camera point."
+        },
+        "zh-CN": {
+          "title": "变形透视单图研究",
+          "description": "三张独立透视错觉图，从受控机位看见一个完整图形。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 10,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "single",
+          "anamorphic",
+          "optical-illusion"
+        ]
+      },
+      "cover_image": "works/topics/anamorphic-perspective-art/packages/single-anamorphic-studies/images/rooftop-atlas-mark/image.png",
+      "image_count": 3,
+      "images": [
+        "anamorphic-perspective-art/single-anamorphic-studies/rooftop-atlas-mark",
+        "anamorphic-perspective-art/single-anamorphic-studies/gallery-cylinder-shadow",
+        "anamorphic-perspective-art/single-anamorphic-studies/station-floor-arrow"
+      ],
+      "package_path": "works/topics/anamorphic-perspective-art/packages/single-anamorphic-studies/package.json",
+      "topic_path": "works/topics/anamorphic-perspective-art/topic.json"
+    },
     {
       "id": "series-oracle-seasons",
       "topic_id": "crystal-ball-narrative",
@@ -408,6 +846,91 @@
       "topic_path": "works/topics/crystal-ball-narrative/topic.json"
     },
     {
+      "id": "series-launch-comic",
+      "topic_id": "eight-panel-consistency-comic",
+      "topic_slug": "eight-panel-consistency-comic",
+      "type": "series",
+      "title": "Launch Comic",
+      "description": "A reference-dependent four-image series about the same hero, outfit, glowing product orb, and eight-panel comic language.",
+      "creative_direction": "Image 01 establishes the protagonist, outfit, glowing GPT-IMAGE-2 orb, manga panel grammar, and launch-story tone; images 02-04 reuse that identity and page language in different locations.",
+      "i18n": {
+        "en": {
+          "title": "Launch Comic",
+          "description": "A reference-dependent four-image series about the same hero, outfit, glowing product orb, and eight-panel comic language."
+        },
+        "zh-CN": {
+          "title": "发布漫画",
+          "description": "四张依赖参考图的系列，保持同一主角、服装、发光产品球和八格漫画语言。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 10,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "series",
+          "comic",
+          "identity-consistency",
+          "structured-layout"
+        ]
+      },
+      "cover_image": "works/topics/eight-panel-consistency-comic/packages/series-launch-comic/images/01-reference-hero-orb-page/image.png",
+      "image_count": 4,
+      "images": [
+        "eight-panel-consistency-comic/series-launch-comic/01-reference-hero-orb-page",
+        "eight-panel-consistency-comic/series-launch-comic/02-rooftop-launch-page",
+        "eight-panel-consistency-comic/series-launch-comic/03-studio-demo-page",
+        "eight-panel-consistency-comic/series-launch-comic/04-subway-reveal-page"
+      ],
+      "package_path": "works/topics/eight-panel-consistency-comic/packages/series-launch-comic/package.json",
+      "topic_path": "works/topics/eight-panel-consistency-comic/topic.json"
+    },
+    {
+      "id": "single-comic-studies",
+      "topic_id": "eight-panel-consistency-comic",
+      "topic_slug": "eight-panel-consistency-comic",
+      "type": "single",
+      "title": "Comic Studies",
+      "description": "Three independent eight-panel comic pages testing layout, character consistency, and commercial storytelling.",
+      "creative_direction": "Independent comic studies under the same theme: each is a complete eight-panel page with its own scene, protagonist, and product-story structure.",
+      "i18n": {
+        "en": {
+          "title": "Comic Studies",
+          "description": "Three independent eight-panel comic pages testing layout, character consistency, and commercial storytelling."
+        },
+        "zh-CN": {
+          "title": "漫画单图研究",
+          "description": "三张独立八格漫画页，测试版式、角色一致性和商业叙事。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 20,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "single",
+          "comic",
+          "identity-consistency",
+          "structured-layout"
+        ]
+      },
+      "cover_image": "works/topics/eight-panel-consistency-comic/packages/single-comic-studies/images/product-demo-board/image.png",
+      "image_count": 3,
+      "images": [
+        "eight-panel-consistency-comic/single-comic-studies/product-demo-board",
+        "eight-panel-consistency-comic/single-comic-studies/character-turnaround-comic",
+        "eight-panel-consistency-comic/single-comic-studies/launch-storefront-comic"
+      ],
+      "package_path": "works/topics/eight-panel-consistency-comic/packages/single-comic-studies/package.json",
+      "topic_path": "works/topics/eight-panel-consistency-comic/topic.json"
+    },
+    {
       "id": "single-impact-studies",
       "topic_id": "high-speed-freeze",
       "topic_slug": "high-speed-freeze",
@@ -446,6 +969,173 @@
       ],
       "package_path": "works/topics/high-speed-freeze/packages/single-impact-studies/package.json",
       "topic_path": "works/topics/high-speed-freeze/topic.json"
+    },
+    {
+      "id": "series-reference-fusion-atlas",
+      "topic_id": "sixteen-reference-fusion",
+      "topic_slug": "sixteen-reference-fusion",
+      "type": "series",
+      "title": "Reference Fusion Atlas",
+      "description": "A reference-dependent series where one sixteen-tile source board drives three fusion scenes.",
+      "creative_direction": "Image 01 creates a public synthetic reference board with sixteen distinct cues; images 02-04 depend on it as --ref and fuse those cues into new coherent scenes.",
+      "i18n": {
+        "en": {
+          "title": "Reference Fusion Atlas",
+          "description": "A reference-dependent series where one sixteen-tile source board drives three fusion scenes."
+        },
+        "zh-CN": {
+          "title": "参考融合图谱",
+          "description": "一张十六格来源板驱动三张融合场景的参考依赖系列。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 10,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "series",
+          "multi-reference",
+          "fusion",
+          "identity-consistency"
+        ]
+      },
+      "cover_image": "works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/images/01-sixteen-source-board/image.png",
+      "image_count": 4,
+      "images": [
+        "sixteen-reference-fusion/series-reference-fusion-atlas/01-sixteen-source-board",
+        "sixteen-reference-fusion/series-reference-fusion-atlas/02-canal-wanderer-fusion",
+        "sixteen-reference-fusion/series-reference-fusion-atlas/03-studio-creature-fusion",
+        "sixteen-reference-fusion/series-reference-fusion-atlas/04-room-memory-fusion"
+      ],
+      "package_path": "works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/package.json",
+      "topic_path": "works/topics/sixteen-reference-fusion/topic.json"
+    },
+    {
+      "id": "single-fusion-studies",
+      "topic_id": "sixteen-reference-fusion",
+      "topic_slug": "sixteen-reference-fusion",
+      "type": "single",
+      "title": "Fusion Studies",
+      "description": "Three independent images that simulate sixteen-input fusion as complete self-contained compositions.",
+      "creative_direction": "Independent fusion studies: each image visibly synthesizes many source-like cues without requiring external private reference files.",
+      "i18n": {
+        "en": {
+          "title": "Fusion Studies",
+          "description": "Three independent images that simulate sixteen-input fusion as complete self-contained compositions."
+        },
+        "zh-CN": {
+          "title": "融合单图研究",
+          "description": "三张独立图，用完整构图模拟十六输入融合能力。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 20,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "single",
+          "multi-reference",
+          "fusion"
+        ]
+      },
+      "cover_image": "works/topics/sixteen-reference-fusion/packages/single-fusion-studies/images/sixteen-swatch-portrait/image.png",
+      "image_count": 3,
+      "images": [
+        "sixteen-reference-fusion/single-fusion-studies/sixteen-swatch-portrait",
+        "sixteen-reference-fusion/single-fusion-studies/archive-object-hybrid",
+        "sixteen-reference-fusion/single-fusion-studies/travel-poster-fusion"
+      ],
+      "package_path": "works/topics/sixteen-reference-fusion/packages/single-fusion-studies/package.json",
+      "topic_path": "works/topics/sixteen-reference-fusion/topic.json"
+    },
+    {
+      "id": "single-social-feed-studies",
+      "topic_id": "song-dynasty-social-feed",
+      "topic_slug": "song-dynasty-social-feed",
+      "type": "single",
+      "title": "Social Feed Studies",
+      "description": "Three independent mobile feed mockups that fuse Song dynasty scenes with contemporary social UI structure.",
+      "creative_direction": "Each image is an independent fictional mobile feed screen: a literati nine-grid post, a night-market comment thread, and a travel story stack. The UI should feel modern but not copy a real app.",
+      "i18n": {
+        "en": {
+          "title": "Social Feed Studies",
+          "description": "Three independent mobile feed mockups that fuse Song dynasty scenes with contemporary social UI structure."
+        },
+        "zh-CN": {
+          "title": "社交动态单图研究",
+          "description": "三张独立移动端动态界面图，把宋代场景与当代社交 UI 结构融合。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 10,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "single",
+          "social-feed",
+          "structured-layout",
+          "world-knowledge"
+        ]
+      },
+      "cover_image": "works/topics/song-dynasty-social-feed/packages/single-social-feed-studies/images/sushi-nine-grid/image.png",
+      "image_count": 3,
+      "images": [
+        "song-dynasty-social-feed/single-social-feed-studies/sushi-nine-grid",
+        "song-dynasty-social-feed/single-social-feed-studies/market-lantern-thread",
+        "song-dynasty-social-feed/single-social-feed-studies/scholar-travel-stories"
+      ],
+      "package_path": "works/topics/song-dynasty-social-feed/packages/single-social-feed-studies/package.json",
+      "topic_path": "works/topics/song-dynasty-social-feed/topic.json"
+    },
+    {
+      "id": "single-depth-studies",
+      "topic_id": "stereoscopic-depth",
+      "topic_slug": "stereoscopic-depth",
+      "type": "single",
+      "title": "Depth Studies",
+      "description": "Three independent stereoscopic experiments: a cross-view pair, a red-cyan anaglyph, and a hidden-depth autostereogram.",
+      "creative_direction": "Each image uses a different established stereo visual language while keeping the depth cue visible as a finished gallery asset.",
+      "i18n": {
+        "en": {
+          "title": "Depth Studies",
+          "description": "Three independent stereoscopic experiments: a cross-view pair, a red-cyan anaglyph, and a hidden-depth autostereogram."
+        },
+        "zh-CN": {
+          "title": "立体视差单图研究",
+          "description": "三张独立立体视觉实验：左右视差、红蓝 3D 和隐藏深度图。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 10,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "single",
+          "stereoscopic-depth",
+          "optical-illusion"
+        ]
+      },
+      "cover_image": "works/topics/stereoscopic-depth/packages/single-depth-studies/images/crossview-crystal-cubes/image.png",
+      "image_count": 3,
+      "images": [
+        "stereoscopic-depth/single-depth-studies/crossview-crystal-cubes",
+        "stereoscopic-depth/single-depth-studies/anaglyph-glass-corridor",
+        "stereoscopic-depth/single-depth-studies/autostereogram-hidden-fish"
+      ],
+      "package_path": "works/topics/stereoscopic-depth/packages/single-depth-studies/package.json",
+      "topic_path": "works/topics/stereoscopic-depth/topic.json"
     },
     {
       "id": "series-living-tiles",
@@ -574,9 +1264,282 @@
       ],
       "package_path": "works/topics/thinking-mode/packages/single-reasoning-studies/package.json",
       "topic_path": "works/topics/thinking-mode/topic.json"
+    },
+    {
+      "id": "single-scroll-studies",
+      "topic_id": "ultra-long-scroll-painting",
+      "topic_slug": "ultra-long-scroll-painting",
+      "type": "single",
+      "title": "Scroll Studies",
+      "description": "Three independent 9:21 vertical scroll studies testing continuous scene planning, dense local detail, and stable extreme framing.",
+      "creative_direction": "Each image is a complete vertical scroll rather than a series dependency: one city lane, one terrain map, and one life timeline, all built for dense visual scanning.",
+      "i18n": {
+        "en": {
+          "title": "Scroll Studies",
+          "description": "Three independent 9:21 vertical scroll studies testing continuous scene planning, dense local detail, and stable extreme framing."
+        },
+        "zh-CN": {
+          "title": "长卷单图研究",
+          "description": "三张独立 9:21 竖卷图，测试连续场景规划、高密度细节和极端画幅稳定性。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 10,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "single",
+          "scroll-painting",
+          "extreme-aspect-ratio",
+          "world-knowledge"
+        ]
+      },
+      "cover_image": "works/topics/ultra-long-scroll-painting/packages/single-scroll-studies/images/beijing-hutong-scroll/image.png",
+      "image_count": 3,
+      "images": [
+        "ultra-long-scroll-painting/single-scroll-studies/beijing-hutong-scroll",
+        "ultra-long-scroll-painting/single-scroll-studies/great-wall-terrain-scroll",
+        "ultra-long-scroll-painting/single-scroll-studies/lifetime-river-scroll"
+      ],
+      "package_path": "works/topics/ultra-long-scroll-painting/packages/single-scroll-studies/package.json",
+      "topic_path": "works/topics/ultra-long-scroll-painting/topic.json"
+    },
+    {
+      "id": "single-patent-plates",
+      "topic_id": "uspto-patent-diagram",
+      "topic_slug": "uspto-patent-diagram",
+      "type": "single",
+      "title": "Patent Plates",
+      "description": "Three independent patent-style plates using monochrome linework, numbered callouts, and technical decomposition.",
+      "creative_direction": "Each image should look like a clean patent drawing sheet rather than a rendered product: white background, black linework, FIG labels, and precise callout numbering.",
+      "i18n": {
+        "en": {
+          "title": "Patent Plates",
+          "description": "Three independent patent-style plates using monochrome linework, numbered callouts, and technical decomposition."
+        },
+        "zh-CN": {
+          "title": "专利图单图研究",
+          "description": "三张独立专利风图版，使用黑白线稿、编号标注和技术拆解。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 10,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "single",
+          "patent-diagram",
+          "technical-diagram",
+          "text-rendering"
+        ]
+      },
+      "cover_image": "works/topics/uspto-patent-diagram/packages/single-patent-plates/images/foldable-headphones-plate/image.png",
+      "image_count": 3,
+      "images": [
+        "uspto-patent-diagram/single-patent-plates/foldable-headphones-plate",
+        "uspto-patent-diagram/single-patent-plates/modular-teapot-filter-plate",
+        "uspto-patent-diagram/single-patent-plates/drone-arm-exploded-plate"
+      ],
+      "package_path": "works/topics/uspto-patent-diagram/packages/single-patent-plates/package.json",
+      "topic_path": "works/topics/uspto-patent-diagram/topic.json"
     }
   ],
   "images": [
+    {
+      "id": "anamorphic-perspective-art/single-anamorphic-studies/rooftop-atlas-mark",
+      "image_id": "rooftop-atlas-mark",
+      "package_id": "single-anamorphic-studies",
+      "topic_id": "anamorphic-perspective-art",
+      "topic_slug": "anamorphic-perspective-art",
+      "title": "Rooftop Atlas Mark",
+      "description": "A rooftop anamorphic painting that resolves into ATLAS from one viewing point.",
+      "i18n": {
+        "en": {
+          "title": "Rooftop Atlas Mark",
+          "description": "A rooftop anamorphic painting that resolves into ATLAS from one viewing point."
+        },
+        "zh-CN": {
+          "title": "屋顶 ATLAS 标记",
+          "description": "屋顶变形透视涂装，从单一视点拼成 ATLAS。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 10,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "anamorphic",
+          "optical-illusion"
+        ],
+        "alt": {
+          "en": "A rooftop anamorphic painting resolving into the word ATLAS from one camera point.",
+          "zh-CN": "屋顶变形透视涂装从一个机位拼成 ATLAS。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 1,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/topics/anamorphic-perspective-art/packages/single-anamorphic-studies/images/rooftop-atlas-mark/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "Independent prompted image; no reference URL required."
+      },
+      "type": "single",
+      "aspect_ratio": "16:9",
+      "tags": [
+        "anamorphic",
+        "optical-illusion",
+        "text-rendering"
+      ],
+      "refs": [],
+      "image": "works/topics/anamorphic-perspective-art/packages/single-anamorphic-studies/images/rooftop-atlas-mark/image.png",
+      "meta_path": "works/topics/anamorphic-perspective-art/packages/single-anamorphic-studies/images/rooftop-atlas-mark/meta.json",
+      "package_path": "works/topics/anamorphic-perspective-art/packages/single-anamorphic-studies/package.json",
+      "topic_path": "works/topics/anamorphic-perspective-art/topic.json",
+      "package_title": "Anamorphic Studies",
+      "topic_title": "Anamorphic Perspective Art",
+      "package_ref_image": "works/topics/anamorphic-perspective-art/packages/single-anamorphic-studies/images/rooftop-atlas-mark/image.png"
+    },
+    {
+      "id": "anamorphic-perspective-art/single-anamorphic-studies/gallery-cylinder-shadow",
+      "image_id": "gallery-cylinder-shadow",
+      "package_id": "single-anamorphic-studies",
+      "topic_id": "anamorphic-perspective-art",
+      "topic_slug": "anamorphic-perspective-art",
+      "title": "Gallery Cylinder Shadow",
+      "description": "A cylindrical mirror installation where scattered fragments resolve into a butterfly reflection.",
+      "i18n": {
+        "en": {
+          "title": "Gallery Cylinder Shadow",
+          "description": "A cylindrical mirror installation where scattered fragments resolve into a butterfly reflection."
+        },
+        "zh-CN": {
+          "title": "画廊圆柱反射",
+          "description": "圆柱镜装置把散乱碎片反射成蝴蝶。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 20,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "anamorphic",
+          "physics-materials"
+        ],
+        "alt": {
+          "en": "A chrome cylinder reflection turns scattered table fragments into a butterfly silhouette.",
+          "zh-CN": "铬面圆柱反射把桌面碎片变成蝴蝶轮廓。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 2,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/topics/anamorphic-perspective-art/packages/single-anamorphic-studies/images/gallery-cylinder-shadow/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "Independent prompted image; no reference URL required."
+      },
+      "type": "single",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "anamorphic",
+        "optical-illusion",
+        "physics-materials"
+      ],
+      "refs": [],
+      "image": "works/topics/anamorphic-perspective-art/packages/single-anamorphic-studies/images/gallery-cylinder-shadow/image.png",
+      "meta_path": "works/topics/anamorphic-perspective-art/packages/single-anamorphic-studies/images/gallery-cylinder-shadow/meta.json",
+      "package_path": "works/topics/anamorphic-perspective-art/packages/single-anamorphic-studies/package.json",
+      "topic_path": "works/topics/anamorphic-perspective-art/topic.json",
+      "package_title": "Anamorphic Studies",
+      "topic_title": "Anamorphic Perspective Art",
+      "package_ref_image": "works/topics/anamorphic-perspective-art/packages/single-anamorphic-studies/images/gallery-cylinder-shadow/image.png"
+    },
+    {
+      "id": "anamorphic-perspective-art/single-anamorphic-studies/station-floor-arrow",
+      "image_id": "station-floor-arrow",
+      "package_id": "single-anamorphic-studies",
+      "topic_id": "anamorphic-perspective-art",
+      "topic_slug": "anamorphic-perspective-art",
+      "title": "Station Floor Arrow",
+      "description": "A station concourse where distorted floor and wall markings align into one arrow.",
+      "i18n": {
+        "en": {
+          "title": "Station Floor Arrow",
+          "description": "A station concourse where distorted floor and wall markings align into one arrow."
+        },
+        "zh-CN": {
+          "title": "站厅地面箭头",
+          "description": "站厅地面和墙面的变形标记从一个机位拼成箭头。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 30,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "anamorphic",
+          "structured-layout"
+        ],
+        "alt": {
+          "en": "Distorted station floor and wall markings align into one large directional arrow.",
+          "zh-CN": "站厅地面与墙面的变形标记拼成一个大型方向箭头。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 3,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/topics/anamorphic-perspective-art/packages/single-anamorphic-studies/images/station-floor-arrow/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "Independent prompted image; no reference URL required."
+      },
+      "type": "single",
+      "aspect_ratio": "16:9",
+      "tags": [
+        "anamorphic",
+        "optical-illusion",
+        "structured-layout"
+      ],
+      "refs": [],
+      "image": "works/topics/anamorphic-perspective-art/packages/single-anamorphic-studies/images/station-floor-arrow/image.png",
+      "meta_path": "works/topics/anamorphic-perspective-art/packages/single-anamorphic-studies/images/station-floor-arrow/meta.json",
+      "package_path": "works/topics/anamorphic-perspective-art/packages/single-anamorphic-studies/package.json",
+      "topic_path": "works/topics/anamorphic-perspective-art/topic.json",
+      "package_title": "Anamorphic Studies",
+      "topic_title": "Anamorphic Perspective Art",
+      "package_ref_image": "works/topics/anamorphic-perspective-art/packages/single-anamorphic-studies/images/station-floor-arrow/image.png"
+    },
     {
       "id": "crystal-ball-narrative/series-oracle-seasons/01-reference-oracle",
       "image_id": "01-reference-oracle",
@@ -864,6 +1827,484 @@
       "package_ref_image": "works/topics/crystal-ball-narrative/packages/series-oracle-seasons/images/04-winter-oracle/image.png"
     },
     {
+      "id": "eight-panel-consistency-comic/series-launch-comic/01-reference-hero-orb-page",
+      "image_id": "01-reference-hero-orb-page",
+      "package_id": "series-launch-comic",
+      "topic_id": "eight-panel-consistency-comic",
+      "topic_slug": "eight-panel-consistency-comic",
+      "title": "Reference Hero Orb Page",
+      "description": "An eight-panel manga launch page establishing the protagonist and glowing GPT-IMAGE-2 orb.",
+      "i18n": {
+        "en": {
+          "title": "Reference Hero Orb Page",
+          "description": "An eight-panel manga launch page establishing the protagonist and glowing GPT-IMAGE-2 orb."
+        },
+        "zh-CN": {
+          "title": "基准主角光球页",
+          "description": "建立主角和 GPT-IMAGE-2 发光球的八格日漫发布页。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 10,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "comic",
+          "identity-consistency"
+        ],
+        "alt": {
+          "en": "An eight-panel manga page with one consistent hero holding a glowing GPT-IMAGE-2 orb.",
+          "zh-CN": "八格漫画页，同一主角举起发光的 GPT-IMAGE-2 球。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 1,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/topics/eight-panel-consistency-comic/packages/series-launch-comic/images/01-reference-hero-orb-page/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "Root reference image for the eight-panel consistency comic series."
+      },
+      "type": "series",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "comic",
+        "identity-consistency",
+        "structured-layout",
+        "series"
+      ],
+      "refs": [],
+      "image": "works/topics/eight-panel-consistency-comic/packages/series-launch-comic/images/01-reference-hero-orb-page/image.png",
+      "meta_path": "works/topics/eight-panel-consistency-comic/packages/series-launch-comic/images/01-reference-hero-orb-page/meta.json",
+      "package_path": "works/topics/eight-panel-consistency-comic/packages/series-launch-comic/package.json",
+      "topic_path": "works/topics/eight-panel-consistency-comic/topic.json",
+      "package_title": "Launch Comic",
+      "topic_title": "Eight-Panel Consistency Comic",
+      "package_ref_image": "works/topics/eight-panel-consistency-comic/packages/series-launch-comic/images/01-reference-hero-orb-page/image.png"
+    },
+    {
+      "id": "eight-panel-consistency-comic/series-launch-comic/02-rooftop-launch-page",
+      "image_id": "02-rooftop-launch-page",
+      "package_id": "series-launch-comic",
+      "topic_id": "eight-panel-consistency-comic",
+      "topic_slug": "eight-panel-consistency-comic",
+      "title": "Rooftop Launch Page",
+      "description": "The same hero and orb appear in an eight-panel rooftop launch scene.",
+      "i18n": {
+        "en": {
+          "title": "Rooftop Launch Page",
+          "description": "The same hero and orb appear in an eight-panel rooftop launch scene."
+        },
+        "zh-CN": {
+          "title": "屋顶发布页",
+          "description": "同一主角和光球出现在屋顶发布场景的八格漫画中。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 20,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "comic",
+          "identity-consistency"
+        ],
+        "alt": {
+          "en": "An eight-panel rooftop launch comic preserving the same hero and glowing orb.",
+          "zh-CN": "保持同一主角和发光球的屋顶发布八格漫画。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 2,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/topics/eight-panel-consistency-comic/packages/series-launch-comic/images/02-rooftop-launch-page/image.png",
+          "name": "image"
+        },
+        "depends_on": [
+          {
+            "id": "01-reference-hero-orb-page",
+            "meta_path": "works/topics/eight-panel-consistency-comic/packages/series-launch-comic/images/01-reference-hero-orb-page/meta.json",
+            "image_path": "works/topics/eight-panel-consistency-comic/packages/series-launch-comic/images/01-reference-hero-orb-page/image.png",
+            "ref_role": "character_and_prop_reference",
+            "required_status": "done"
+          }
+        ],
+        "ref_urls": [],
+        "runner_notes": "Fanout variation; queue injects the 01 runtime URL as --ref."
+      },
+      "type": "series",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "comic",
+        "identity-consistency",
+        "structured-layout",
+        "series"
+      ],
+      "refs": [
+        "01-reference-hero-orb-page"
+      ],
+      "image": "works/topics/eight-panel-consistency-comic/packages/series-launch-comic/images/02-rooftop-launch-page/image.png",
+      "meta_path": "works/topics/eight-panel-consistency-comic/packages/series-launch-comic/images/02-rooftop-launch-page/meta.json",
+      "package_path": "works/topics/eight-panel-consistency-comic/packages/series-launch-comic/package.json",
+      "topic_path": "works/topics/eight-panel-consistency-comic/topic.json",
+      "package_title": "Launch Comic",
+      "topic_title": "Eight-Panel Consistency Comic",
+      "package_ref_image": "works/topics/eight-panel-consistency-comic/packages/series-launch-comic/images/02-rooftop-launch-page/image.png"
+    },
+    {
+      "id": "eight-panel-consistency-comic/series-launch-comic/03-studio-demo-page",
+      "image_id": "03-studio-demo-page",
+      "package_id": "series-launch-comic",
+      "topic_id": "eight-panel-consistency-comic",
+      "topic_slug": "eight-panel-consistency-comic",
+      "title": "Studio Demo Page",
+      "description": "The same hero demonstrates the glowing orb in an eight-panel studio comic.",
+      "i18n": {
+        "en": {
+          "title": "Studio Demo Page",
+          "description": "The same hero demonstrates the glowing orb in an eight-panel studio comic."
+        },
+        "zh-CN": {
+          "title": "影棚演示页",
+          "description": "同一主角在影棚中演示发光球的八格漫画。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 30,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "comic",
+          "identity-consistency"
+        ],
+        "alt": {
+          "en": "An eight-panel studio demo comic preserving the same hero and glowing orb.",
+          "zh-CN": "保持同一主角和发光球的影棚演示八格漫画。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 3,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/topics/eight-panel-consistency-comic/packages/series-launch-comic/images/03-studio-demo-page/image.png",
+          "name": "image"
+        },
+        "depends_on": [
+          {
+            "id": "01-reference-hero-orb-page",
+            "meta_path": "works/topics/eight-panel-consistency-comic/packages/series-launch-comic/images/01-reference-hero-orb-page/meta.json",
+            "image_path": "works/topics/eight-panel-consistency-comic/packages/series-launch-comic/images/01-reference-hero-orb-page/image.png",
+            "ref_role": "character_and_prop_reference",
+            "required_status": "done"
+          }
+        ],
+        "ref_urls": [],
+        "runner_notes": "Fanout variation; queue injects the 01 runtime URL as --ref."
+      },
+      "type": "series",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "comic",
+        "identity-consistency",
+        "structured-layout",
+        "series"
+      ],
+      "refs": [
+        "01-reference-hero-orb-page"
+      ],
+      "image": "works/topics/eight-panel-consistency-comic/packages/series-launch-comic/images/03-studio-demo-page/image.png",
+      "meta_path": "works/topics/eight-panel-consistency-comic/packages/series-launch-comic/images/03-studio-demo-page/meta.json",
+      "package_path": "works/topics/eight-panel-consistency-comic/packages/series-launch-comic/package.json",
+      "topic_path": "works/topics/eight-panel-consistency-comic/topic.json",
+      "package_title": "Launch Comic",
+      "topic_title": "Eight-Panel Consistency Comic",
+      "package_ref_image": "works/topics/eight-panel-consistency-comic/packages/series-launch-comic/images/03-studio-demo-page/image.png"
+    },
+    {
+      "id": "eight-panel-consistency-comic/series-launch-comic/04-subway-reveal-page",
+      "image_id": "04-subway-reveal-page",
+      "package_id": "series-launch-comic",
+      "topic_id": "eight-panel-consistency-comic",
+      "topic_slug": "eight-panel-consistency-comic",
+      "title": "Subway Reveal Page",
+      "description": "The same hero reveals the glowing orb in an eight-panel subway comic.",
+      "i18n": {
+        "en": {
+          "title": "Subway Reveal Page",
+          "description": "The same hero reveals the glowing orb in an eight-panel subway comic."
+        },
+        "zh-CN": {
+          "title": "地铁揭晓页",
+          "description": "同一主角在地铁站揭晓发光球的八格漫画。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 40,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "comic",
+          "identity-consistency"
+        ],
+        "alt": {
+          "en": "An eight-panel subway reveal comic preserving the same hero and glowing orb.",
+          "zh-CN": "保持同一主角和发光球的地铁揭晓八格漫画。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 4,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/topics/eight-panel-consistency-comic/packages/series-launch-comic/images/04-subway-reveal-page/image.png",
+          "name": "image"
+        },
+        "depends_on": [
+          {
+            "id": "01-reference-hero-orb-page",
+            "meta_path": "works/topics/eight-panel-consistency-comic/packages/series-launch-comic/images/01-reference-hero-orb-page/meta.json",
+            "image_path": "works/topics/eight-panel-consistency-comic/packages/series-launch-comic/images/01-reference-hero-orb-page/image.png",
+            "ref_role": "character_and_prop_reference",
+            "required_status": "done"
+          }
+        ],
+        "ref_urls": [],
+        "runner_notes": "Fanout variation; queue injects the 01 runtime URL as --ref."
+      },
+      "type": "series",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "comic",
+        "identity-consistency",
+        "structured-layout",
+        "series"
+      ],
+      "refs": [
+        "01-reference-hero-orb-page"
+      ],
+      "image": "works/topics/eight-panel-consistency-comic/packages/series-launch-comic/images/04-subway-reveal-page/image.png",
+      "meta_path": "works/topics/eight-panel-consistency-comic/packages/series-launch-comic/images/04-subway-reveal-page/meta.json",
+      "package_path": "works/topics/eight-panel-consistency-comic/packages/series-launch-comic/package.json",
+      "topic_path": "works/topics/eight-panel-consistency-comic/topic.json",
+      "package_title": "Launch Comic",
+      "topic_title": "Eight-Panel Consistency Comic",
+      "package_ref_image": "works/topics/eight-panel-consistency-comic/packages/series-launch-comic/images/04-subway-reveal-page/image.png"
+    },
+    {
+      "id": "eight-panel-consistency-comic/single-comic-studies/product-demo-board",
+      "image_id": "product-demo-board",
+      "package_id": "single-comic-studies",
+      "topic_id": "eight-panel-consistency-comic",
+      "topic_slug": "eight-panel-consistency-comic",
+      "title": "Product Demo Board",
+      "description": "An independent eight-panel comic showing a consistent inventor demonstrating an image tablet.",
+      "i18n": {
+        "en": {
+          "title": "Product Demo Board",
+          "description": "An independent eight-panel comic showing a consistent inventor demonstrating an image tablet."
+        },
+        "zh-CN": {
+          "title": "产品演示分镜",
+          "description": "同一发明家演示图像平板的独立八格漫画。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 10,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "comic",
+          "identity-consistency"
+        ],
+        "alt": {
+          "en": "An eight-panel product demo comic with one consistent inventor and tablet prop.",
+          "zh-CN": "一个发明家和图像平板保持一致的八格产品演示漫画。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 1,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/topics/eight-panel-consistency-comic/packages/single-comic-studies/images/product-demo-board/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "Independent eight-panel comic single image; no reference URL required."
+      },
+      "type": "single",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "comic",
+        "identity-consistency",
+        "structured-layout",
+        "single"
+      ],
+      "refs": [],
+      "image": "works/topics/eight-panel-consistency-comic/packages/single-comic-studies/images/product-demo-board/image.png",
+      "meta_path": "works/topics/eight-panel-consistency-comic/packages/single-comic-studies/images/product-demo-board/meta.json",
+      "package_path": "works/topics/eight-panel-consistency-comic/packages/single-comic-studies/package.json",
+      "topic_path": "works/topics/eight-panel-consistency-comic/topic.json",
+      "package_title": "Comic Studies",
+      "topic_title": "Eight-Panel Consistency Comic",
+      "package_ref_image": "works/topics/eight-panel-consistency-comic/packages/single-comic-studies/images/product-demo-board/image.png"
+    },
+    {
+      "id": "eight-panel-consistency-comic/single-comic-studies/character-turnaround-comic",
+      "image_id": "character-turnaround-comic",
+      "package_id": "single-comic-studies",
+      "topic_id": "eight-panel-consistency-comic",
+      "topic_slug": "eight-panel-consistency-comic",
+      "title": "Character Turnaround Comic",
+      "description": "An independent eight-panel page testing one mascot character across poses and angles.",
+      "i18n": {
+        "en": {
+          "title": "Character Turnaround Comic",
+          "description": "An independent eight-panel page testing one mascot character across poses and angles."
+        },
+        "zh-CN": {
+          "title": "角色转面漫画",
+          "description": "在姿势和角度变化中测试同一吉祥物角色一致性的八格漫画。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 20,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "comic",
+          "identity-consistency"
+        ],
+        "alt": {
+          "en": "An eight-panel character turnaround comic with one consistent courier mascot.",
+          "zh-CN": "同一快递吉祥物保持一致的八格角色转面漫画。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 2,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/topics/eight-panel-consistency-comic/packages/single-comic-studies/images/character-turnaround-comic/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "Independent eight-panel comic single image; no reference URL required."
+      },
+      "type": "single",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "comic",
+        "identity-consistency",
+        "structured-layout",
+        "single"
+      ],
+      "refs": [],
+      "image": "works/topics/eight-panel-consistency-comic/packages/single-comic-studies/images/character-turnaround-comic/image.png",
+      "meta_path": "works/topics/eight-panel-consistency-comic/packages/single-comic-studies/images/character-turnaround-comic/meta.json",
+      "package_path": "works/topics/eight-panel-consistency-comic/packages/single-comic-studies/package.json",
+      "topic_path": "works/topics/eight-panel-consistency-comic/topic.json",
+      "package_title": "Comic Studies",
+      "topic_title": "Eight-Panel Consistency Comic",
+      "package_ref_image": "works/topics/eight-panel-consistency-comic/packages/single-comic-studies/images/character-turnaround-comic/image.png"
+    },
+    {
+      "id": "eight-panel-consistency-comic/single-comic-studies/launch-storefront-comic",
+      "image_id": "launch-storefront-comic",
+      "package_id": "single-comic-studies",
+      "topic_id": "eight-panel-consistency-comic",
+      "topic_slug": "eight-panel-consistency-comic",
+      "title": "Launch Storefront Comic",
+      "description": "An independent eight-panel storefront launch comic with consistent props and character.",
+      "i18n": {
+        "en": {
+          "title": "Launch Storefront Comic",
+          "description": "An independent eight-panel storefront launch comic with consistent props and character."
+        },
+        "zh-CN": {
+          "title": "店铺发布漫画",
+          "description": "角色和道具保持一致的独立八格店铺发布漫画。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 30,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "comic",
+          "identity-consistency"
+        ],
+        "alt": {
+          "en": "An eight-panel storefront launch comic with one consistent shopkeeper and display cube.",
+          "zh-CN": "一个店主和展示方块保持一致的八格店铺发布漫画。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 3,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/topics/eight-panel-consistency-comic/packages/single-comic-studies/images/launch-storefront-comic/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "Independent eight-panel comic single image; no reference URL required."
+      },
+      "type": "single",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "comic",
+        "identity-consistency",
+        "structured-layout",
+        "single"
+      ],
+      "refs": [],
+      "image": "works/topics/eight-panel-consistency-comic/packages/single-comic-studies/images/launch-storefront-comic/image.png",
+      "meta_path": "works/topics/eight-panel-consistency-comic/packages/single-comic-studies/images/launch-storefront-comic/meta.json",
+      "package_path": "works/topics/eight-panel-consistency-comic/packages/single-comic-studies/package.json",
+      "topic_path": "works/topics/eight-panel-consistency-comic/topic.json",
+      "package_title": "Comic Studies",
+      "topic_title": "Eight-Panel Consistency Comic",
+      "package_ref_image": "works/topics/eight-panel-consistency-comic/packages/single-comic-studies/images/launch-storefront-comic/image.png"
+    },
+    {
       "id": "high-speed-freeze/single-impact-studies/water-crown",
       "image_id": "water-crown",
       "package_id": "single-impact-studies",
@@ -1048,6 +2489,860 @@
       "package_title": "Impact Studies",
       "topic_title": "High-Speed Freeze",
       "package_ref_image": "works/topics/high-speed-freeze/packages/single-impact-studies/images/powder-ring/image.png"
+    },
+    {
+      "id": "sixteen-reference-fusion/series-reference-fusion-atlas/01-sixteen-source-board",
+      "image_id": "01-sixteen-source-board",
+      "package_id": "series-reference-fusion-atlas",
+      "topic_id": "sixteen-reference-fusion",
+      "topic_slug": "sixteen-reference-fusion",
+      "title": "Sixteen Source Board",
+      "description": "A 4 by 4 synthetic reference board containing sixteen reusable visual cues.",
+      "i18n": {
+        "en": {
+          "title": "Sixteen Source Board",
+          "description": "A 4 by 4 synthetic reference board containing sixteen reusable visual cues."
+        },
+        "zh-CN": {
+          "title": "十六来源板",
+          "description": "包含十六个可复用视觉线索的 4x4 合成参考板。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 10,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "multi-reference",
+          "fusion"
+        ],
+        "alt": {
+          "en": "A 4 by 4 reference board with sixteen distinct visual source tiles.",
+          "zh-CN": "一张 4x4 参考板，包含十六个不同视觉来源格。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 1,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/images/01-sixteen-source-board/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "Root synthetic reference board for the sixteen-reference fusion series."
+      },
+      "type": "series",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "multi-reference",
+        "fusion",
+        "identity-consistency",
+        "series"
+      ],
+      "refs": [],
+      "image": "works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/images/01-sixteen-source-board/image.png",
+      "meta_path": "works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/images/01-sixteen-source-board/meta.json",
+      "package_path": "works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/package.json",
+      "topic_path": "works/topics/sixteen-reference-fusion/topic.json",
+      "package_title": "Reference Fusion Atlas",
+      "topic_title": "Sixteen Reference Fusion",
+      "package_ref_image": "works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/images/01-sixteen-source-board/image.png"
+    },
+    {
+      "id": "sixteen-reference-fusion/series-reference-fusion-atlas/02-canal-wanderer-fusion",
+      "image_id": "02-canal-wanderer-fusion",
+      "package_id": "series-reference-fusion-atlas",
+      "topic_id": "sixteen-reference-fusion",
+      "topic_slug": "sixteen-reference-fusion",
+      "title": "Canal Wanderer Fusion",
+      "description": "The sixteen source cues fuse into one canal-walking character scene.",
+      "i18n": {
+        "en": {
+          "title": "Canal Wanderer Fusion",
+          "description": "The sixteen source cues fuse into one canal-walking character scene."
+        },
+        "zh-CN": {
+          "title": "运河漫步融合",
+          "description": "十六个来源线索融合成一张运河漫步人物场景。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 20,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "multi-reference",
+          "fusion"
+        ],
+        "alt": {
+          "en": "A canal alley scene fusing a character, bicycle, lanterns, bridge, and texture cues.",
+          "zh-CN": "融合人物、自行车、灯笼、桥和材质线索的运河小巷场景。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 2,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/images/02-canal-wanderer-fusion/image.png",
+          "name": "image"
+        },
+        "depends_on": [
+          {
+            "id": "01-sixteen-source-board",
+            "meta_path": "works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/images/01-sixteen-source-board/meta.json",
+            "image_path": "works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/images/01-sixteen-source-board/image.png",
+            "ref_role": "source_atlas_reference",
+            "required_status": "done"
+          }
+        ],
+        "ref_urls": [],
+        "runner_notes": "Fanout variation; queue injects the 01 runtime URL as --ref."
+      },
+      "type": "series",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "multi-reference",
+        "fusion",
+        "identity-consistency",
+        "series"
+      ],
+      "refs": [
+        "01-sixteen-source-board"
+      ],
+      "image": "works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/images/02-canal-wanderer-fusion/image.png",
+      "meta_path": "works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/images/02-canal-wanderer-fusion/meta.json",
+      "package_path": "works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/package.json",
+      "topic_path": "works/topics/sixteen-reference-fusion/topic.json",
+      "package_title": "Reference Fusion Atlas",
+      "topic_title": "Sixteen Reference Fusion",
+      "package_ref_image": "works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/images/02-canal-wanderer-fusion/image.png"
+    },
+    {
+      "id": "sixteen-reference-fusion/series-reference-fusion-atlas/03-studio-creature-fusion",
+      "image_id": "03-studio-creature-fusion",
+      "package_id": "series-reference-fusion-atlas",
+      "topic_id": "sixteen-reference-fusion",
+      "topic_slug": "sixteen-reference-fusion",
+      "title": "Studio Creature Fusion",
+      "description": "The reference cues fuse into a studio creature and its memory-map objects.",
+      "i18n": {
+        "en": {
+          "title": "Studio Creature Fusion",
+          "description": "The reference cues fuse into a studio creature and its memory-map objects."
+        },
+        "zh-CN": {
+          "title": "工作室生物融合",
+          "description": "参考线索融合成工作室小生物和记忆地图物件。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 30,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "multi-reference",
+          "fusion"
+        ],
+        "alt": {
+          "en": "A studio still life where many reference cues fuse into a small ceramic-cat creature.",
+          "zh-CN": "许多参考线索融合成陶瓷猫小生物的工作室静物。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 3,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/images/03-studio-creature-fusion/image.png",
+          "name": "image"
+        },
+        "depends_on": [
+          {
+            "id": "01-sixteen-source-board",
+            "meta_path": "works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/images/01-sixteen-source-board/meta.json",
+            "image_path": "works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/images/01-sixteen-source-board/image.png",
+            "ref_role": "source_atlas_reference",
+            "required_status": "done"
+          }
+        ],
+        "ref_urls": [],
+        "runner_notes": "Fanout variation; queue injects the 01 runtime URL as --ref."
+      },
+      "type": "series",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "multi-reference",
+        "fusion",
+        "identity-consistency",
+        "series"
+      ],
+      "refs": [
+        "01-sixteen-source-board"
+      ],
+      "image": "works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/images/03-studio-creature-fusion/image.png",
+      "meta_path": "works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/images/03-studio-creature-fusion/meta.json",
+      "package_path": "works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/package.json",
+      "topic_path": "works/topics/sixteen-reference-fusion/topic.json",
+      "package_title": "Reference Fusion Atlas",
+      "topic_title": "Sixteen Reference Fusion",
+      "package_ref_image": "works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/images/03-studio-creature-fusion/image.png"
+    },
+    {
+      "id": "sixteen-reference-fusion/series-reference-fusion-atlas/04-room-memory-fusion",
+      "image_id": "04-room-memory-fusion",
+      "package_id": "series-reference-fusion-atlas",
+      "topic_id": "sixteen-reference-fusion",
+      "topic_slug": "sixteen-reference-fusion",
+      "title": "Room Memory Fusion",
+      "description": "The reference cues fuse into a coherent memory room beside a canal.",
+      "i18n": {
+        "en": {
+          "title": "Room Memory Fusion",
+          "description": "The reference cues fuse into a coherent memory room beside a canal."
+        },
+        "zh-CN": {
+          "title": "记忆房间融合",
+          "description": "参考线索融合成运河旁一间连贯的记忆房间。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 40,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "multi-reference",
+          "fusion"
+        ],
+        "alt": {
+          "en": "A canal-side memory room fusing coat, scarf, compass, cat, bicycle, and bridge cues.",
+          "zh-CN": "融合外套、围巾、指南针、猫、自行车和桥等线索的运河房间。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 4,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/images/04-room-memory-fusion/image.png",
+          "name": "image"
+        },
+        "depends_on": [
+          {
+            "id": "01-sixteen-source-board",
+            "meta_path": "works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/images/01-sixteen-source-board/meta.json",
+            "image_path": "works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/images/01-sixteen-source-board/image.png",
+            "ref_role": "source_atlas_reference",
+            "required_status": "done"
+          }
+        ],
+        "ref_urls": [],
+        "runner_notes": "Fanout variation; queue injects the 01 runtime URL as --ref."
+      },
+      "type": "series",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "multi-reference",
+        "fusion",
+        "identity-consistency",
+        "series"
+      ],
+      "refs": [
+        "01-sixteen-source-board"
+      ],
+      "image": "works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/images/04-room-memory-fusion/image.png",
+      "meta_path": "works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/images/04-room-memory-fusion/meta.json",
+      "package_path": "works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/package.json",
+      "topic_path": "works/topics/sixteen-reference-fusion/topic.json",
+      "package_title": "Reference Fusion Atlas",
+      "topic_title": "Sixteen Reference Fusion",
+      "package_ref_image": "works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/images/04-room-memory-fusion/image.png"
+    },
+    {
+      "id": "sixteen-reference-fusion/single-fusion-studies/sixteen-swatch-portrait",
+      "image_id": "sixteen-swatch-portrait",
+      "package_id": "single-fusion-studies",
+      "topic_id": "sixteen-reference-fusion",
+      "topic_slug": "sixteen-reference-fusion",
+      "title": "Sixteen Swatch Portrait",
+      "description": "A unified portrait built from sixteen visible source-like cues.",
+      "i18n": {
+        "en": {
+          "title": "Sixteen Swatch Portrait",
+          "description": "A unified portrait built from sixteen visible source-like cues."
+        },
+        "zh-CN": {
+          "title": "十六色卡肖像",
+          "description": "由十六个可见来源线索融合成的统一肖像。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 10,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "multi-reference",
+          "fusion"
+        ],
+        "alt": {
+          "en": "A central traveler portrait surrounded by sixteen subtle source swatches.",
+          "zh-CN": "中央旅行者肖像周围环绕十六个细微来源色卡。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 1,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/topics/sixteen-reference-fusion/packages/single-fusion-studies/images/sixteen-swatch-portrait/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "Independent fusion single image; no reference URL required."
+      },
+      "type": "single",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "multi-reference",
+        "fusion",
+        "identity-consistency",
+        "single"
+      ],
+      "refs": [],
+      "image": "works/topics/sixteen-reference-fusion/packages/single-fusion-studies/images/sixteen-swatch-portrait/image.png",
+      "meta_path": "works/topics/sixteen-reference-fusion/packages/single-fusion-studies/images/sixteen-swatch-portrait/meta.json",
+      "package_path": "works/topics/sixteen-reference-fusion/packages/single-fusion-studies/package.json",
+      "topic_path": "works/topics/sixteen-reference-fusion/topic.json",
+      "package_title": "Fusion Studies",
+      "topic_title": "Sixteen Reference Fusion",
+      "package_ref_image": "works/topics/sixteen-reference-fusion/packages/single-fusion-studies/images/sixteen-swatch-portrait/image.png"
+    },
+    {
+      "id": "sixteen-reference-fusion/single-fusion-studies/archive-object-hybrid",
+      "image_id": "archive-object-hybrid",
+      "package_id": "single-fusion-studies",
+      "topic_id": "sixteen-reference-fusion",
+      "topic_slug": "sixteen-reference-fusion",
+      "title": "Archive Object Hybrid",
+      "description": "A central archive object fused from sixteen material and prop cues.",
+      "i18n": {
+        "en": {
+          "title": "Archive Object Hybrid",
+          "description": "A central archive object fused from sixteen material and prop cues."
+        },
+        "zh-CN": {
+          "title": "档案物件混合体",
+          "description": "由十六个材质和道具线索融合成的中央档案物件。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 20,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "multi-reference",
+          "fusion"
+        ],
+        "alt": {
+          "en": "A museum archive table with a hybrid object and sixteen material source fragments.",
+          "zh-CN": "博物馆档案桌上有一个混合物件和十六个材质来源碎片。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 2,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/topics/sixteen-reference-fusion/packages/single-fusion-studies/images/archive-object-hybrid/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "Independent fusion single image; no reference URL required."
+      },
+      "type": "single",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "multi-reference",
+        "fusion",
+        "single"
+      ],
+      "refs": [],
+      "image": "works/topics/sixteen-reference-fusion/packages/single-fusion-studies/images/archive-object-hybrid/image.png",
+      "meta_path": "works/topics/sixteen-reference-fusion/packages/single-fusion-studies/images/archive-object-hybrid/meta.json",
+      "package_path": "works/topics/sixteen-reference-fusion/packages/single-fusion-studies/package.json",
+      "topic_path": "works/topics/sixteen-reference-fusion/topic.json",
+      "package_title": "Fusion Studies",
+      "topic_title": "Sixteen Reference Fusion",
+      "package_ref_image": "works/topics/sixteen-reference-fusion/packages/single-fusion-studies/images/archive-object-hybrid/image.png"
+    },
+    {
+      "id": "sixteen-reference-fusion/single-fusion-studies/travel-poster-fusion",
+      "image_id": "travel-poster-fusion",
+      "package_id": "single-fusion-studies",
+      "topic_id": "sixteen-reference-fusion",
+      "topic_slug": "sixteen-reference-fusion",
+      "title": "Travel Poster Fusion",
+      "description": "A fictional canal-town poster built from sixteen fused source motifs.",
+      "i18n": {
+        "en": {
+          "title": "Travel Poster Fusion",
+          "description": "A fictional canal-town poster built from sixteen fused source motifs."
+        },
+        "zh-CN": {
+          "title": "旅行海报融合",
+          "description": "由十六个来源母题融合成的虚构运河小镇海报。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 30,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "multi-reference",
+          "fusion"
+        ],
+        "alt": {
+          "en": "A hand-painted canal town poster fusing sixteen source motifs into one place.",
+          "zh-CN": "把十六个来源母题融合成一处地点的手绘运河小镇海报。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 3,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/topics/sixteen-reference-fusion/packages/single-fusion-studies/images/travel-poster-fusion/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "Independent fusion single image; no reference URL required."
+      },
+      "type": "single",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "multi-reference",
+        "fusion",
+        "single"
+      ],
+      "refs": [],
+      "image": "works/topics/sixteen-reference-fusion/packages/single-fusion-studies/images/travel-poster-fusion/image.png",
+      "meta_path": "works/topics/sixteen-reference-fusion/packages/single-fusion-studies/images/travel-poster-fusion/meta.json",
+      "package_path": "works/topics/sixteen-reference-fusion/packages/single-fusion-studies/package.json",
+      "topic_path": "works/topics/sixteen-reference-fusion/topic.json",
+      "package_title": "Fusion Studies",
+      "topic_title": "Sixteen Reference Fusion",
+      "package_ref_image": "works/topics/sixteen-reference-fusion/packages/single-fusion-studies/images/travel-poster-fusion/image.png"
+    },
+    {
+      "id": "song-dynasty-social-feed/single-social-feed-studies/sushi-nine-grid",
+      "image_id": "sushi-nine-grid",
+      "package_id": "single-social-feed-studies",
+      "topic_id": "song-dynasty-social-feed",
+      "topic_slug": "song-dynasty-social-feed",
+      "title": "Su Shi Nine-Grid",
+      "description": "A fictional mobile social post where Su Shi shares a Song dynasty nine-grid update.",
+      "i18n": {
+        "en": {
+          "title": "Su Shi Nine-Grid",
+          "description": "A fictional mobile social post where Su Shi shares a Song dynasty nine-grid update."
+        },
+        "zh-CN": {
+          "title": "苏轼九宫格",
+          "description": "一张虚构移动端动态图，苏轼发布宋代九宫格。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 10,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "social-feed",
+          "structured-layout"
+        ],
+        "alt": {
+          "en": "A fictional mobile social-feed post by Su Shi with a Song dynasty nine-grid image layout.",
+          "zh-CN": "虚构移动社交动态中，苏轼发布宋代九宫格。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 1,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/topics/song-dynasty-social-feed/packages/single-social-feed-studies/images/sushi-nine-grid/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "Independent prompted image; no reference URL required."
+      },
+      "type": "single",
+      "aspect_ratio": "4:5",
+      "tags": [
+        "social-feed",
+        "structured-layout",
+        "world-knowledge"
+      ],
+      "refs": [],
+      "image": "works/topics/song-dynasty-social-feed/packages/single-social-feed-studies/images/sushi-nine-grid/image.png",
+      "meta_path": "works/topics/song-dynasty-social-feed/packages/single-social-feed-studies/images/sushi-nine-grid/meta.json",
+      "package_path": "works/topics/song-dynasty-social-feed/packages/single-social-feed-studies/package.json",
+      "topic_path": "works/topics/song-dynasty-social-feed/topic.json",
+      "package_title": "Social Feed Studies",
+      "topic_title": "Song Dynasty Social Feed",
+      "package_ref_image": "works/topics/song-dynasty-social-feed/packages/single-social-feed-studies/images/sushi-nine-grid/image.png"
+    },
+    {
+      "id": "song-dynasty-social-feed/single-social-feed-studies/market-lantern-thread",
+      "image_id": "market-lantern-thread",
+      "package_id": "single-social-feed-studies",
+      "topic_id": "song-dynasty-social-feed",
+      "topic_slug": "song-dynasty-social-feed",
+      "title": "Market Lantern Thread",
+      "description": "A fictional Song dynasty night-market post with a dense modern comment thread.",
+      "i18n": {
+        "en": {
+          "title": "Market Lantern Thread",
+          "description": "A fictional Song dynasty night-market post with a dense modern comment thread."
+        },
+        "zh-CN": {
+          "title": "夜市灯帖",
+          "description": "一张虚构宋代夜市动态图，带有密集的现代评论线程。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 20,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "social-feed",
+          "world-knowledge"
+        ],
+        "alt": {
+          "en": "A fictional mobile feed post about a Song dynasty lantern market with stacked comments.",
+          "zh-CN": "虚构移动动态展示宋代灯市，并带有层叠评论。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 2,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/topics/song-dynasty-social-feed/packages/single-social-feed-studies/images/market-lantern-thread/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "Independent prompted image; no reference URL required."
+      },
+      "type": "single",
+      "aspect_ratio": "4:5",
+      "tags": [
+        "social-feed",
+        "structured-layout",
+        "world-knowledge"
+      ],
+      "refs": [],
+      "image": "works/topics/song-dynasty-social-feed/packages/single-social-feed-studies/images/market-lantern-thread/image.png",
+      "meta_path": "works/topics/song-dynasty-social-feed/packages/single-social-feed-studies/images/market-lantern-thread/meta.json",
+      "package_path": "works/topics/song-dynasty-social-feed/packages/single-social-feed-studies/package.json",
+      "topic_path": "works/topics/song-dynasty-social-feed/topic.json",
+      "package_title": "Social Feed Studies",
+      "topic_title": "Song Dynasty Social Feed",
+      "package_ref_image": "works/topics/song-dynasty-social-feed/packages/single-social-feed-studies/images/market-lantern-thread/image.png"
+    },
+    {
+      "id": "song-dynasty-social-feed/single-social-feed-studies/scholar-travel-stories",
+      "image_id": "scholar-travel-stories",
+      "package_id": "single-social-feed-studies",
+      "topic_id": "song-dynasty-social-feed",
+      "topic_slug": "song-dynasty-social-feed",
+      "title": "Scholar Travel Stories",
+      "description": "A fictional mobile stories screen for Song dynasty scholars traveling between river towns.",
+      "i18n": {
+        "en": {
+          "title": "Scholar Travel Stories",
+          "description": "A fictional mobile stories screen for Song dynasty scholars traveling between river towns."
+        },
+        "zh-CN": {
+          "title": "文人出游故事",
+          "description": "虚构移动端故事页，展示宋代文人在水乡城镇之间出游。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 30,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "social-feed",
+          "structured-layout"
+        ],
+        "alt": {
+          "en": "A fictional mobile stories overview with Song dynasty scholars traveling by river towns.",
+          "zh-CN": "虚构移动端故事总览，宋代文人在水乡城镇之间出行。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 3,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/topics/song-dynasty-social-feed/packages/single-social-feed-studies/images/scholar-travel-stories/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "Independent prompted image; no reference URL required."
+      },
+      "type": "single",
+      "aspect_ratio": "4:5",
+      "tags": [
+        "social-feed",
+        "structured-layout",
+        "world-knowledge"
+      ],
+      "refs": [],
+      "image": "works/topics/song-dynasty-social-feed/packages/single-social-feed-studies/images/scholar-travel-stories/image.png",
+      "meta_path": "works/topics/song-dynasty-social-feed/packages/single-social-feed-studies/images/scholar-travel-stories/meta.json",
+      "package_path": "works/topics/song-dynasty-social-feed/packages/single-social-feed-studies/package.json",
+      "topic_path": "works/topics/song-dynasty-social-feed/topic.json",
+      "package_title": "Social Feed Studies",
+      "topic_title": "Song Dynasty Social Feed",
+      "package_ref_image": "works/topics/song-dynasty-social-feed/packages/single-social-feed-studies/images/scholar-travel-stories/image.png"
+    },
+    {
+      "id": "stereoscopic-depth/single-depth-studies/crossview-crystal-cubes",
+      "image_id": "crossview-crystal-cubes",
+      "package_id": "single-depth-studies",
+      "topic_id": "stereoscopic-depth",
+      "topic_slug": "stereoscopic-depth",
+      "title": "Crossview Crystal Cubes",
+      "description": "A side-by-side stereo pair of crystal cubes and studio objects with controlled parallax.",
+      "i18n": {
+        "en": {
+          "title": "Crossview Crystal Cubes",
+          "description": "A side-by-side stereo pair of crystal cubes and studio objects with controlled parallax."
+        },
+        "zh-CN": {
+          "title": "交叉视水晶方块",
+          "description": "一张左右并排立体图，用受控视差展示水晶方块和棚拍物体。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 10,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "stereoscopic-depth",
+          "photorealism"
+        ],
+        "alt": {
+          "en": "A side-by-side stereo pair of crystal cubes with small controlled parallax.",
+          "zh-CN": "左右并排立体图，水晶方块带有细微受控视差。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 1,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/topics/stereoscopic-depth/packages/single-depth-studies/images/crossview-crystal-cubes/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "Independent prompted image; no reference URL required."
+      },
+      "type": "single",
+      "aspect_ratio": "2:1",
+      "tags": [
+        "stereoscopic-depth",
+        "optical-illusion",
+        "photorealism"
+      ],
+      "refs": [],
+      "image": "works/topics/stereoscopic-depth/packages/single-depth-studies/images/crossview-crystal-cubes/image.png",
+      "meta_path": "works/topics/stereoscopic-depth/packages/single-depth-studies/images/crossview-crystal-cubes/meta.json",
+      "package_path": "works/topics/stereoscopic-depth/packages/single-depth-studies/package.json",
+      "topic_path": "works/topics/stereoscopic-depth/topic.json",
+      "package_title": "Depth Studies",
+      "topic_title": "Stereoscopic Depth",
+      "package_ref_image": "works/topics/stereoscopic-depth/packages/single-depth-studies/images/crossview-crystal-cubes/image.png"
+    },
+    {
+      "id": "stereoscopic-depth/single-depth-studies/anaglyph-glass-corridor",
+      "image_id": "anaglyph-glass-corridor",
+      "package_id": "single-depth-studies",
+      "topic_id": "stereoscopic-depth",
+      "topic_slug": "stereoscopic-depth",
+      "title": "Anaglyph Glass Corridor",
+      "description": "A red-cyan anaglyph corridor with depth encoded through controlled channel separation.",
+      "i18n": {
+        "en": {
+          "title": "Anaglyph Glass Corridor",
+          "description": "A red-cyan anaglyph corridor with depth encoded through controlled channel separation."
+        },
+        "zh-CN": {
+          "title": "红蓝玻璃走廊",
+          "description": "一张红蓝 3D 玻璃走廊，用受控通道偏移表现深度。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 20,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "stereoscopic-depth",
+          "physics-materials"
+        ],
+        "alt": {
+          "en": "A red-cyan anaglyph glass corridor with stronger separation in the foreground.",
+          "zh-CN": "红蓝 3D 玻璃走廊，前景通道偏移更明显。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 2,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/topics/stereoscopic-depth/packages/single-depth-studies/images/anaglyph-glass-corridor/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "Independent prompted image; no reference URL required."
+      },
+      "type": "single",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "stereoscopic-depth",
+        "optical-illusion",
+        "physics-materials"
+      ],
+      "refs": [],
+      "image": "works/topics/stereoscopic-depth/packages/single-depth-studies/images/anaglyph-glass-corridor/image.png",
+      "meta_path": "works/topics/stereoscopic-depth/packages/single-depth-studies/images/anaglyph-glass-corridor/meta.json",
+      "package_path": "works/topics/stereoscopic-depth/packages/single-depth-studies/package.json",
+      "topic_path": "works/topics/stereoscopic-depth/topic.json",
+      "package_title": "Depth Studies",
+      "topic_title": "Stereoscopic Depth",
+      "package_ref_image": "works/topics/stereoscopic-depth/packages/single-depth-studies/images/anaglyph-glass-corridor/image.png"
+    },
+    {
+      "id": "stereoscopic-depth/single-depth-studies/autostereogram-hidden-fish",
+      "image_id": "autostereogram-hidden-fish",
+      "package_id": "single-depth-studies",
+      "topic_id": "stereoscopic-depth",
+      "topic_slug": "stereoscopic-depth",
+      "title": "Autostereogram Hidden Fish",
+      "description": "A repeating ocean pattern intended to hide a central fish through autostereogram-style depth shifts.",
+      "i18n": {
+        "en": {
+          "title": "Autostereogram Hidden Fish",
+          "description": "A repeating ocean pattern intended to hide a central fish through autostereogram-style depth shifts."
+        },
+        "zh-CN": {
+          "title": "隐藏鱼立体图",
+          "description": "一张海洋重复纹理，尝试通过隐藏深度位移藏入中央鱼形。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 30,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "stereoscopic-depth",
+          "pattern"
+        ],
+        "alt": {
+          "en": "A repeating ocean texture meant to hide a fish shape through autostereogram depth.",
+          "zh-CN": "重复海洋纹理中尝试通过立体深度藏入鱼形。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 3,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/topics/stereoscopic-depth/packages/single-depth-studies/images/autostereogram-hidden-fish/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "Independent prompted image; no reference URL required."
+      },
+      "type": "single",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "stereoscopic-depth",
+        "optical-illusion",
+        "pattern"
+      ],
+      "refs": [],
+      "image": "works/topics/stereoscopic-depth/packages/single-depth-studies/images/autostereogram-hidden-fish/image.png",
+      "meta_path": "works/topics/stereoscopic-depth/packages/single-depth-studies/images/autostereogram-hidden-fish/meta.json",
+      "package_path": "works/topics/stereoscopic-depth/packages/single-depth-studies/package.json",
+      "topic_path": "works/topics/stereoscopic-depth/topic.json",
+      "package_title": "Depth Studies",
+      "topic_title": "Stereoscopic Depth",
+      "package_ref_image": "works/topics/stereoscopic-depth/packages/single-depth-studies/images/autostereogram-hidden-fish/image.png"
     },
     {
       "id": "tessellation-pattern/series-living-tiles/01-reference-tile",
@@ -1812,6 +4107,390 @@
       "package_title": "Reasoning Studies",
       "topic_title": "Thinking Mode",
       "package_ref_image": "works/topics/thinking-mode/packages/single-reasoning-studies/images/editorial-data-room/image.png"
+    },
+    {
+      "id": "ultra-long-scroll-painting/single-scroll-studies/beijing-hutong-scroll",
+      "image_id": "beijing-hutong-scroll",
+      "package_id": "single-scroll-studies",
+      "topic_id": "ultra-long-scroll-painting",
+      "topic_slug": "ultra-long-scroll-painting",
+      "title": "Beijing Hutong Scroll",
+      "description": "A dense 9:21 vertical scroll of an old Beijing hutong across one continuous day.",
+      "i18n": {
+        "en": {
+          "title": "Beijing Hutong Scroll",
+          "description": "A dense 9:21 vertical scroll of an old Beijing hutong across one continuous day."
+        },
+        "zh-CN": {
+          "title": "北京胡同长卷",
+          "description": "一张 9:21 竖幅长卷，描绘老北京胡同从清晨到夜晚的连续日常。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 10,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "scroll-painting",
+          "extreme-aspect-ratio"
+        ],
+        "alt": {
+          "en": "A vertical long scroll showing a continuous Beijing hutong across one day.",
+          "zh-CN": "一幅竖向长卷，展示北京胡同一天中的连续场景。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 1,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/topics/ultra-long-scroll-painting/packages/single-scroll-studies/images/beijing-hutong-scroll/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "Independent prompted image; no reference URL required."
+      },
+      "type": "single",
+      "aspect_ratio": "9:21",
+      "tags": [
+        "scroll-painting",
+        "extreme-aspect-ratio",
+        "structured-layout",
+        "world-knowledge"
+      ],
+      "refs": [],
+      "image": "works/topics/ultra-long-scroll-painting/packages/single-scroll-studies/images/beijing-hutong-scroll/image.png",
+      "meta_path": "works/topics/ultra-long-scroll-painting/packages/single-scroll-studies/images/beijing-hutong-scroll/meta.json",
+      "package_path": "works/topics/ultra-long-scroll-painting/packages/single-scroll-studies/package.json",
+      "topic_path": "works/topics/ultra-long-scroll-painting/topic.json",
+      "package_title": "Scroll Studies",
+      "topic_title": "Ultra-Long Scroll Painting",
+      "package_ref_image": "works/topics/ultra-long-scroll-painting/packages/single-scroll-studies/images/beijing-hutong-scroll/image.png"
+    },
+    {
+      "id": "ultra-long-scroll-painting/single-scroll-studies/great-wall-terrain-scroll",
+      "image_id": "great-wall-terrain-scroll",
+      "package_id": "single-scroll-studies",
+      "topic_id": "ultra-long-scroll-painting",
+      "topic_slug": "ultra-long-scroll-painting",
+      "title": "Great Wall Terrain Scroll",
+      "description": "A 9:21 terrain scroll where the Great Wall remains continuous across mountains, passes, and villages.",
+      "i18n": {
+        "en": {
+          "title": "Great Wall Terrain Scroll",
+          "description": "A 9:21 terrain scroll where the Great Wall remains continuous across mountains, passes, and villages."
+        },
+        "zh-CN": {
+          "title": "长城地形长卷",
+          "description": "一张 9:21 地形长卷，长城在山脊、关口和村落之间保持连续。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 20,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "scroll-painting",
+          "world-knowledge"
+        ],
+        "alt": {
+          "en": "A vertical painted terrain scroll with the Great Wall running continuously along mountain ridges.",
+          "zh-CN": "竖向地形画卷中，长城沿山脊连续延伸。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 2,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/topics/ultra-long-scroll-painting/packages/single-scroll-studies/images/great-wall-terrain-scroll/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "Independent prompted image; no reference URL required."
+      },
+      "type": "single",
+      "aspect_ratio": "9:21",
+      "tags": [
+        "scroll-painting",
+        "extreme-aspect-ratio",
+        "world-knowledge",
+        "structured-layout"
+      ],
+      "refs": [],
+      "image": "works/topics/ultra-long-scroll-painting/packages/single-scroll-studies/images/great-wall-terrain-scroll/image.png",
+      "meta_path": "works/topics/ultra-long-scroll-painting/packages/single-scroll-studies/images/great-wall-terrain-scroll/meta.json",
+      "package_path": "works/topics/ultra-long-scroll-painting/packages/single-scroll-studies/package.json",
+      "topic_path": "works/topics/ultra-long-scroll-painting/topic.json",
+      "package_title": "Scroll Studies",
+      "topic_title": "Ultra-Long Scroll Painting",
+      "package_ref_image": "works/topics/ultra-long-scroll-painting/packages/single-scroll-studies/images/great-wall-terrain-scroll/image.png"
+    },
+    {
+      "id": "ultra-long-scroll-painting/single-scroll-studies/lifetime-river-scroll",
+      "image_id": "lifetime-river-scroll",
+      "package_id": "single-scroll-studies",
+      "topic_id": "ultra-long-scroll-painting",
+      "topic_slug": "ultra-long-scroll-painting",
+      "title": "Lifetime River Scroll",
+      "description": "A 9:21 allegorical river scroll that turns one life into a continuous visual timeline.",
+      "i18n": {
+        "en": {
+          "title": "Lifetime River Scroll",
+          "description": "A 9:21 allegorical river scroll that turns one life into a continuous visual timeline."
+        },
+        "zh-CN": {
+          "title": "人生河流长卷",
+          "description": "一张 9:21 寓言长卷，把人的一生转化为连续河流时间线。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 30,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "scroll-painting",
+          "reasoning-composition"
+        ],
+        "alt": {
+          "en": "A vertical river scroll where scenes from one life connect along the same river.",
+          "zh-CN": "竖向河流长卷中，一生的不同阶段沿同一条河连接。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 3,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/topics/ultra-long-scroll-painting/packages/single-scroll-studies/images/lifetime-river-scroll/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "Independent prompted image; no reference URL required."
+      },
+      "type": "single",
+      "aspect_ratio": "9:21",
+      "tags": [
+        "scroll-painting",
+        "extreme-aspect-ratio",
+        "reasoning-composition",
+        "structured-layout"
+      ],
+      "refs": [],
+      "image": "works/topics/ultra-long-scroll-painting/packages/single-scroll-studies/images/lifetime-river-scroll/image.png",
+      "meta_path": "works/topics/ultra-long-scroll-painting/packages/single-scroll-studies/images/lifetime-river-scroll/meta.json",
+      "package_path": "works/topics/ultra-long-scroll-painting/packages/single-scroll-studies/package.json",
+      "topic_path": "works/topics/ultra-long-scroll-painting/topic.json",
+      "package_title": "Scroll Studies",
+      "topic_title": "Ultra-Long Scroll Painting",
+      "package_ref_image": "works/topics/ultra-long-scroll-painting/packages/single-scroll-studies/images/lifetime-river-scroll/image.png"
+    },
+    {
+      "id": "uspto-patent-diagram/single-patent-plates/foldable-headphones-plate",
+      "image_id": "foldable-headphones-plate",
+      "package_id": "single-patent-plates",
+      "topic_id": "uspto-patent-diagram",
+      "topic_slug": "uspto-patent-diagram",
+      "title": "Foldable Headphones Plate",
+      "description": "A patent-style multi-view plate for a foldable headphone mechanism.",
+      "i18n": {
+        "en": {
+          "title": "Foldable Headphones Plate",
+          "description": "A patent-style multi-view plate for a foldable headphone mechanism."
+        },
+        "zh-CN": {
+          "title": "折叠耳机专利图",
+          "description": "一张折叠耳机机构的专利风多视图图版。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 10,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "patent-diagram",
+          "technical-diagram"
+        ],
+        "alt": {
+          "en": "A black-and-white patent plate showing foldable headphones in three numbered figures.",
+          "zh-CN": "黑白专利图版展示折叠耳机的三个编号视图。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 1,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/topics/uspto-patent-diagram/packages/single-patent-plates/images/foldable-headphones-plate/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "Independent prompted image; no reference URL required."
+      },
+      "type": "single",
+      "aspect_ratio": "4:5",
+      "tags": [
+        "patent-diagram",
+        "technical-diagram",
+        "text-rendering",
+        "structured-layout"
+      ],
+      "refs": [],
+      "image": "works/topics/uspto-patent-diagram/packages/single-patent-plates/images/foldable-headphones-plate/image.png",
+      "meta_path": "works/topics/uspto-patent-diagram/packages/single-patent-plates/images/foldable-headphones-plate/meta.json",
+      "package_path": "works/topics/uspto-patent-diagram/packages/single-patent-plates/package.json",
+      "topic_path": "works/topics/uspto-patent-diagram/topic.json",
+      "package_title": "Patent Plates",
+      "topic_title": "USPTO Patent Diagram",
+      "package_ref_image": "works/topics/uspto-patent-diagram/packages/single-patent-plates/images/foldable-headphones-plate/image.png"
+    },
+    {
+      "id": "uspto-patent-diagram/single-patent-plates/modular-teapot-filter-plate",
+      "image_id": "modular-teapot-filter-plate",
+      "package_id": "single-patent-plates",
+      "topic_id": "uspto-patent-diagram",
+      "topic_slug": "uspto-patent-diagram",
+      "title": "Modular Teapot Filter Plate",
+      "description": "A patent-style technical plate for a modular teapot filter assembly.",
+      "i18n": {
+        "en": {
+          "title": "Modular Teapot Filter Plate",
+          "description": "A patent-style technical plate for a modular teapot filter assembly."
+        },
+        "zh-CN": {
+          "title": "模块茶壶滤器专利图",
+          "description": "一张模块化茶壶滤器组件的专利风技术图版。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 20,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "patent-diagram",
+          "technical-diagram"
+        ],
+        "alt": {
+          "en": "A black-and-white patent sheet showing a modular teapot filter with numbered callouts.",
+          "zh-CN": "黑白专利图展示模块化茶壶滤器和编号标注。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 2,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/topics/uspto-patent-diagram/packages/single-patent-plates/images/modular-teapot-filter-plate/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "Independent prompted image; no reference URL required."
+      },
+      "type": "single",
+      "aspect_ratio": "4:5",
+      "tags": [
+        "patent-diagram",
+        "technical-diagram",
+        "text-rendering",
+        "structured-layout"
+      ],
+      "refs": [],
+      "image": "works/topics/uspto-patent-diagram/packages/single-patent-plates/images/modular-teapot-filter-plate/image.png",
+      "meta_path": "works/topics/uspto-patent-diagram/packages/single-patent-plates/images/modular-teapot-filter-plate/meta.json",
+      "package_path": "works/topics/uspto-patent-diagram/packages/single-patent-plates/package.json",
+      "topic_path": "works/topics/uspto-patent-diagram/topic.json",
+      "package_title": "Patent Plates",
+      "topic_title": "USPTO Patent Diagram",
+      "package_ref_image": "works/topics/uspto-patent-diagram/packages/single-patent-plates/images/modular-teapot-filter-plate/image.png"
+    },
+    {
+      "id": "uspto-patent-diagram/single-patent-plates/drone-arm-exploded-plate",
+      "image_id": "drone-arm-exploded-plate",
+      "package_id": "single-patent-plates",
+      "topic_id": "uspto-patent-diagram",
+      "topic_slug": "uspto-patent-diagram",
+      "title": "Drone Arm Exploded Plate",
+      "description": "A patent-style exploded technical plate for a folding drone arm joint.",
+      "i18n": {
+        "en": {
+          "title": "Drone Arm Exploded Plate",
+          "description": "A patent-style exploded technical plate for a folding drone arm joint."
+        },
+        "zh-CN": {
+          "title": "无人机折臂专利图",
+          "description": "一张折叠无人机臂关节的专利风爆炸技术图。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 30,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "patent-diagram",
+          "technical-diagram"
+        ],
+        "alt": {
+          "en": "A black-and-white patent plate showing an exploded folding drone arm joint.",
+          "zh-CN": "黑白专利图展示折叠无人机臂关节爆炸结构。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 3,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/topics/uspto-patent-diagram/packages/single-patent-plates/images/drone-arm-exploded-plate/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "Independent prompted image; no reference URL required."
+      },
+      "type": "single",
+      "aspect_ratio": "4:5",
+      "tags": [
+        "patent-diagram",
+        "technical-diagram",
+        "text-rendering",
+        "structured-layout"
+      ],
+      "refs": [],
+      "image": "works/topics/uspto-patent-diagram/packages/single-patent-plates/images/drone-arm-exploded-plate/image.png",
+      "meta_path": "works/topics/uspto-patent-diagram/packages/single-patent-plates/images/drone-arm-exploded-plate/meta.json",
+      "package_path": "works/topics/uspto-patent-diagram/packages/single-patent-plates/package.json",
+      "topic_path": "works/topics/uspto-patent-diagram/topic.json",
+      "package_title": "Patent Plates",
+      "topic_title": "USPTO Patent Diagram",
+      "package_ref_image": "works/topics/uspto-patent-diagram/packages/single-patent-plates/images/drone-arm-exploded-plate/image.png"
     }
   ]
 }

@@ -1,0 +1,36 @@
+{
+  "id": "tarot-card-deck",
+  "slug": "tarot-card-deck",
+  "title": "Tarot Card Deck",
+  "short_title": "Tarot Deck",
+  "description": "A Prompt Atlas theme for Tarot Card Deck, testing multi-image-reference with GPT Image 2.",
+  "i18n": {
+    "en": {
+      "title": "Tarot Card Deck",
+      "description": "A Prompt Atlas theme for Tarot Card Deck, testing multi-image-reference with GPT Image 2."
+    },
+    "zh-CN": {
+      "title": "塔罗牌全套 78 张 · 系列卡",
+      "description": "塔罗牌全套 78 张 · 系列卡：大阿卡纳 22 + 小阿卡纳 56 · 同一画风贯穿 · 边框装饰一致 · 编号 + 名称 + 罗马数字"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 200,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "multi-image-reference"
+    ]
+  },
+  "packages": [
+    {
+      "id": "single-theme-studies",
+      "type": "single",
+      "title": "Theme Studies",
+      "path": "packages/single-theme-studies/package.json"
+    }
+  ]
+}

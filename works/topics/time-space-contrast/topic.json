@@ -1,0 +1,39 @@
+{
+  "id": "time-space-contrast",
+  "slug": "time-space-contrast",
+  "title": "Time-Space Contrast",
+  "short_title": "Time Contrast",
+  "description": "A Prompt Atlas theme for Time-Space Contrast, testing multi-image-reference, extreme-aspect-ratio, photorealism, world-knowledge, reasoning-composition with GPT Image 2.",
+  "i18n": {
+    "en": {
+      "title": "Time-Space Contrast",
+      "description": "A Prompt Atlas theme for Time-Space Contrast, testing multi-image-reference, extreme-aspect-ratio, photorealism, world-knowledge, reasoning-composition with GPT Image 2."
+    },
+    "zh-CN": {
+      "title": "时空错位反差",
+      "description": "时空错位反差：古代书生手拿 iPhone / 清代太太戴 VR / 李白打王者荣耀 · 考究服饰 + 现代科技"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 200,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "multi-image-reference",
+      "extreme-aspect-ratio",
+      "photorealism",
+      "world-knowledge"
+    ]
+  },
+  "packages": [
+    {
+      "id": "single-theme-studies",
+      "type": "single",
+      "title": "Theme Studies",
+      "path": "packages/single-theme-studies/package.json"
+    }
+  ]
+}

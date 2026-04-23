@@ -1,0 +1,38 @@
+{
+  "id": "equirectangular-vr-panorama",
+  "slug": "equirectangular-vr-panorama",
+  "title": "Equirectangular VR Panorama",
+  "short_title": "VR Panorama",
+  "description": "A Prompt Atlas theme for Equirectangular VR Panorama, testing structured-layout, extreme-aspect-ratio, style-transfer with GPT Image 2.",
+  "i18n": {
+    "en": {
+      "title": "Equirectangular VR Panorama",
+      "description": "A Prompt Atlas theme for Equirectangular VR Panorama, testing structured-layout, extreme-aspect-ratio, style-transfer with GPT Image 2."
+    },
+    "zh-CN": {
+      "title": "360° Equirectangular VR 全景",
+      "description": "360° Equirectangular VR 全景：Ghibli 风悬浮天空村落 · 2:1 等距矩形 · 扔进 VR 头显可站入"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 200,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "structured-layout",
+      "extreme-aspect-ratio",
+      "style-transfer"
+    ]
+  },
+  "packages": [
+    {
+      "id": "single-theme-studies",
+      "type": "single",
+      "title": "Theme Studies",
+      "path": "packages/single-theme-studies/package.json"
+    }
+  ]
+}

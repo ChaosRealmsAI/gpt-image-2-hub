@@ -1,0 +1,37 @@
+{
+  "id": "ambigram-readability",
+  "slug": "ambigram-readability",
+  "title": "Ambigram Readability",
+  "short_title": "Ambigram",
+  "description": "A Prompt Atlas theme for Ambigram Readability, testing text-rendering, optical-illusion-geometry with GPT Image 2.",
+  "i18n": {
+    "en": {
+      "title": "Ambigram Readability",
+      "description": "A Prompt Atlas theme for Ambigram Readability, testing text-rendering, optical-illusion-geometry with GPT Image 2."
+    },
+    "zh-CN": {
+      "title": "Ambigram 双向字 · 旋转 180° 可读",
+      "description": "Ambigram 双向字 · 旋转 180° 可读：'GPT-IMAGE-2' 六字母 · 正读一行 · 倒过来还能读出另一单词 / 同单词 · 哥特字体烫金"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 200,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "text-rendering",
+      "optical-illusion"
+    ]
+  },
+  "packages": [
+    {
+      "id": "single-theme-studies",
+      "type": "single",
+      "title": "Theme Studies",
+      "path": "packages/single-theme-studies/package.json"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "id": "conversational-editing-workflow",
+  "slug": "conversational-editing-workflow",
+  "title": "Conversational Editing Workflow",
+  "short_title": "Edit Workflow",
+  "description": "A Prompt Atlas theme for Conversational Editing Workflow, testing reasoning-composition, editing-workflow with GPT Image 2.",
+  "i18n": {
+    "en": {
+      "title": "Conversational Editing Workflow",
+      "description": "A Prompt Atlas theme for Conversational Editing Workflow, testing reasoning-composition, editing-workflow with GPT Image 2."
+    },
+    "zh-CN": {
+      "title": "多轮对话式编辑工作流",
+      "description": "多轮对话式编辑工作流：'换黄昏 → 去掉左人 → 字变大 → 颜色冷一点' · 5 轮迭代保其他元素"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 200,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "reasoning-composition",
+      "editing-workflow"
+    ]
+  },
+  "packages": [
+    {
+      "id": "single-theme-studies",
+      "type": "single",
+      "title": "Theme Studies",
+      "path": "packages/single-theme-studies/package.json"
+    }
+  ]
+}

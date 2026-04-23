@@ -1,0 +1,37 @@
+{
+  "id": "neural-network-self-explanation",
+  "slug": "neural-network-self-explanation",
+  "title": "Neural Network Self-Explanation",
+  "short_title": "AI Explains",
+  "description": "A Prompt Atlas theme for Neural Network Self-Explanation, testing photorealism, reasoning-composition with GPT Image 2.",
+  "i18n": {
+    "en": {
+      "title": "Neural Network Self-Explanation",
+      "description": "A Prompt Atlas theme for Neural Network Self-Explanation, testing photorealism, reasoning-composition with GPT Image 2."
+    },
+    "zh-CN": {
+      "title": "神经网络自解释图 · AI 画自己",
+      "description": "神经网络自解释图 · AI 画自己：Transformer self-attention 流程 / 反向传播图解 / Diffusion 去噪流程 · 节点连线 + 数据流 + 注释 · 学术级"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 200,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "photorealism",
+      "reasoning-composition"
+    ]
+  },
+  "packages": [
+    {
+      "id": "single-theme-studies",
+      "type": "single",
+      "title": "Theme Studies",
+      "path": "packages/single-theme-studies/package.json"
+    }
+  ]
+}

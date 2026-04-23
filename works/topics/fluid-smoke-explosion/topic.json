@@ -1,0 +1,37 @@
+{
+  "id": "fluid-smoke-explosion",
+  "slug": "fluid-smoke-explosion",
+  "title": "Fluid Smoke Explosion",
+  "short_title": "Fluid FX",
+  "description": "A Prompt Atlas theme for Fluid Smoke Explosion, testing physics-materials, commercial-mockup with GPT Image 2.",
+  "i18n": {
+    "en": {
+      "title": "Fluid Smoke Explosion",
+      "description": "A Prompt Atlas theme for Fluid Smoke Explosion, testing physics-materials, commercial-mockup with GPT Image 2."
+    },
+    "zh-CN": {
+      "title": "流体 · 烟雾 · 爆炸",
+      "description": "流体 · 烟雾 · 爆炸：咖啡倒进杯子一瞬 · 奶花旋起 · 慢动作 · 毫秒级"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 200,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "physics-materials",
+      "commercial-mockup"
+    ]
+  },
+  "packages": [
+    {
+      "id": "single-theme-studies",
+      "type": "single",
+      "title": "Theme Studies",
+      "path": "packages/single-theme-studies/package.json"
+    }
+  ]
+}

@@ -79,18 +79,26 @@ For failed retries:
 npm run works:queue -- --retry failed --concurrency 10
 ```
 
+For failed series retries where dependencies should be submitted again to create fresh runtime reference URLs:
+
+```bash
+npm run works:queue -- --retry failed --with-deps --concurrency 10
+```
+
 For interrupted runs where no queue is active:
 
 ```bash
 npm run works:queue -- --retry running --concurrency 10
 ```
 
+Both retry modes submit new `image2gen` jobs and ignore old task ids.
+
 ## Status Meaning
 
 - `prompted`: ready for scan and queue if dependencies are satisfied.
 - `running`: queue claimed it. If stale, retry with `--retry running`.
 - `done`: `image.png` exists and can enter `works/index.json`.
-- `failed`: queue failed. Check `generation.last_error`, then retry or revise prompt.
+- `failed`: queue or single-image generation failed. Check `generation.last_error`, then retry or revise prompt.
 - `skipped`: intentionally not queued; leave it out of the gallery.
 
 `works/index.json` must include only `done` images with real `image.png`.
@@ -99,6 +107,7 @@ npm run works:queue -- --retry running --concurrency 10
 
 - If dependency metadata is missing, fix paths instead of bypassing the dependency.
 - If a dependency is not `done`, let the queue run it first.
+- If a failed series task needs a runtime reference URL, use `--with-deps` to submit the dependency chain again.
 - If output is missing but status is `done`, set status back to `prompted` or restore the image.
 - If prompt quality caused failure, edit the prompt, clear `generation.last_error`, set `status: prompted`, then rerun.
 - Never commit `generation.ref_urls`, task ids, temporary URLs, or `tmp/queue-runs` logs.

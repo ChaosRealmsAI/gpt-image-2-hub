@@ -116,7 +116,7 @@ For image generation:
 npm run works:generate -- works/topics/{theme}/packages/{package}/images/{image}/meta.json
 ```
 
-The generator reads `meta.json.prompt`, writes `image.png` to the same image directory, and does not write internal API fields into public metadata.
+The generator reads `meta.json.prompt`, writes `image.png` to the same image directory, marks success as `done`, marks failure as `failed`, writes a public-safe `generation.last_error`, and does not write internal API fields into public metadata.
 
 For batch production, prefer:
 
@@ -172,6 +172,7 @@ Do not stage `todo/`, `prototype/`, `research-materials/`, private logs, or API 
 
 - If `works:scan` reports `blocked`, inspect `generation.depends_on`; do not manually paste URLs into committed meta.
 - If `works:scan` reports `failed`, retry with `npm run works:queue -- --retry failed --concurrency 10` after checking `generation.last_error`.
-- If `works:scan` reports `running` and no queue is active, retry with `npm run works:queue -- --retry running --concurrency 10`.
+- If failed series tasks need references, retry with `npm run works:queue -- --retry failed --with-deps --concurrency 10` so the dependency chain is submitted again and fresh runtime reference URLs are created.
+- If `works:scan` reports `running` and no queue is active, retry with `npm run works:queue -- --retry running --concurrency 10`; this submits the task again.
 - If `works:scan` reports `missing_image`, either restore the image, set status back to `prompted`, or mark it `skipped` with a clear reason.
 - A complete production run is not complete until `npm run works:scan -- --strict` passes.

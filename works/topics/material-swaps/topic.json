@@ -1,0 +1,36 @@
+{
+  "id": "material-swaps",
+  "slug": "material-swaps",
+  "title": "Material Swaps",
+  "short_title": "Material Swap",
+  "description": "A Prompt Atlas theme for Material Swaps, testing physics-materials with GPT Image 2.",
+  "i18n": {
+    "en": {
+      "title": "Material Swaps",
+      "description": "A Prompt Atlas theme for Material Swaps, testing physics-materials with GPT Image 2."
+    },
+    "zh-CN": {
+      "title": "材质错位",
+      "description": "材质错位：黄油雕故宫 / 玻璃做玫瑰 / 毛线编洋房 / 蕾丝建教堂"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 200,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "physics-materials"
+    ]
+  },
+  "packages": [
+    {
+      "id": "single-theme-studies",
+      "type": "single",
+      "title": "Theme Studies",
+      "path": "packages/single-theme-studies/package.json"
+    }
+  ]
+}

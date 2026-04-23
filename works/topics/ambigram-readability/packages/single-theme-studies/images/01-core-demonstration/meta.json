@@ -1,0 +1,55 @@
+{
+  "prompt": "Scene:\nA polished Prompt Atlas production image for the theme Ambigram Readability. Build a finished, gallery-ready visual demonstration rather than a generic mood board. The setting should be specific, coherent, and immediately readable, with lighting, viewpoint, and environment chosen to support the core visual challenge.\n\nSubject:\nCreate core demonstration as a self-contained image that demonstrates Ambigram Readability. The main subject should occupy the visual center of gravity, with clear supporting details around it. Use the theme's capability focus: controlled in-image text and typography, optical-illusion geometry and precise perspective.\n\nImportant details:\nHigh production value, precise composition, clean hierarchy, crop-safe framing, and no unrelated filler. Make the visual evidence of the theme visible at thumbnail size and still rewarding in close inspection. Use believable materials, intentional color contrast, and consistent design language across all elements.\n\nUse case:\nIndependent single-image study in Prompt Atlas, intended for a gallery card and detail modal. It should prove the theme direction before deeper series production.\n\nConstraints:\nNo watermark, no real brand logo, no private data, no temporary URLs, no task ids, no messy extra panels, no unreadable clutter, no accidental duplicate main subjects, preserve exact 4:5 aspect ratio.",
+  "id": "01-core-demonstration",
+  "title": "Core Demonstration",
+  "description": "Core Demonstration is an independent study for the Ambigram Readability theme.",
+  "type": "single",
+  "image": "image.png",
+  "aspect_ratio": "4:5",
+  "tags": [
+    "single",
+    "text-rendering",
+    "optical-illusion"
+  ],
+  "refs": [],
+  "status": "prompted",
+  "generation": {
+    "order": 1,
+    "mode": "image",
+    "model": "gpt-image-2",
+    "output": {
+      "path": "works/topics/ambigram-readability/packages/single-theme-studies/images/01-core-demonstration/image.png",
+      "name": "image"
+    },
+    "depends_on": [],
+    "ref_urls": [],
+    "runner_notes": "Independent prompted image; no reference URL required."
+  },
+  "i18n": {
+    "en": {
+      "title": "Core Demonstration",
+      "description": "Core Demonstration is an independent study for the Ambigram Readability theme."
+    },
+    "zh-CN": {
+      "title": "Core Demonstration",
+      "description": "Core Demonstration 是 Ambigram 双向字 · 旋转 180° 可读 主题的一张独立研究图。"
+    }
+  },
+  "display": {
+    "featured": true,
+    "sort_order": 10,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "single",
+      "text-rendering",
+      "optical-illusion"
+    ],
+    "alt": {
+      "en": "Core Demonstration is an independent study for the Ambigram Readability theme.",
+      "zh-CN": "Core Demonstration 是 Ambigram 双向字 · 旋转 180° 可读 主题的一张独立研究图。"
+    }
+  }
+}

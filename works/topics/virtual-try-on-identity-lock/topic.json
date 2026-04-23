@@ -1,0 +1,46 @@
+{
+  "id": "virtual-try-on-identity-lock",
+  "slug": "virtual-try-on-identity-lock",
+  "title": "Virtual Try-On Identity Lock",
+  "short_title": "Try-On Lock",
+  "description": "A Prompt Atlas theme for changing outfits while preserving a synthetic model's face, body, skin tone, hair, and posture identity.",
+  "i18n": {
+    "en": {
+      "title": "Virtual Try-On Identity Lock",
+      "short_title": "Try-On Lock",
+      "description": "A Prompt Atlas theme for changing outfits while preserving a synthetic model's face, body, skin tone, hair, and posture identity."
+    },
+    "zh-CN": {
+      "title": "虚拟试衣身份锁",
+      "short_title": "虚拟试衣",
+      "description": "测试只换服装，同时保持合成模特脸、身形、肤色、发型和姿态身份不漂移。"
+    }
+  },
+  "display": {
+    "featured": true,
+    "sort_order": 70,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "virtual-try-on",
+      "identity-consistency",
+      "fashion"
+    ]
+  },
+  "packages": [
+    {
+      "id": "series-identity-lock-lookbook",
+      "type": "series",
+      "title": "Identity Lock Lookbook",
+      "path": "packages/series-identity-lock-lookbook/package.json"
+    },
+    {
+      "id": "single-try-on-studies",
+      "type": "single",
+      "title": "Try-On Studies",
+      "path": "packages/single-try-on-studies/package.json"
+    }
+  ]
+}

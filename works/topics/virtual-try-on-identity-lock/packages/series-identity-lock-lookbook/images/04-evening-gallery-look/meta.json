@@ -1,0 +1,65 @@
+{
+  "prompt": "Scene:\nSame synthetic model identity as the reference image, now inside a quiet contemporary gallery at night, warm track lighting, polished concrete floor, and elegant square editorial framing.\n\nSubject:\nPreserve the reference model exactly: same oval face, warm medium-brown skin tone, short natural black curls, straight eyebrows, almond-shaped dark eyes, beauty mark under the left eye, lean athletic build, and body proportions. Change only the outfit to an evening gallery look: black satin column dress layered with a cropped cream jacket, minimal gold earrings, black slingback shoes, and a small sculptural clutch.\n\nImportant details:\nIdentity lock is the main test. Do not alter face, age, skin tone, hair, body, height, or facial proportions. Keep realistic satin sheen, jacket structure, natural hands, balanced pose, and gallery-quality lighting. The outfit should look convincingly worn by the same person from the reference.\n\nUse case:\nFourth image in a reference-dependent virtual try-on series, testing elegant wardrobe change while preserving synthetic model identity.\n\nConstraints:\nPRESERVE the reference model identity exactly. Change only clothing, shoes, accessories, and setting. No readable text, no logos, no watermark, no extra people, no face retouching, no body shape changes, no distorted hands or feet, preserve exact 1:1 aspect ratio.",
+  "id": "04-evening-gallery-look",
+  "title": "Evening Gallery Look",
+  "description": "The same synthetic model wears an evening gallery outfit.",
+  "type": "series",
+  "image": "image.png",
+  "aspect_ratio": "1:1",
+  "tags": [
+    "virtual-try-on",
+    "identity-consistency",
+    "fashion",
+    "series"
+  ],
+  "refs": [
+    "01-reference-model-card"
+  ],
+  "status": "prompted",
+  "generation": {
+    "order": 4,
+    "mode": "image",
+    "model": "gpt-image-2",
+    "output": {
+      "path": "works/topics/virtual-try-on-identity-lock/packages/series-identity-lock-lookbook/images/04-evening-gallery-look/image.png",
+      "name": "image"
+    },
+    "depends_on": [
+      {
+        "id": "01-reference-model-card",
+        "meta_path": "works/topics/virtual-try-on-identity-lock/packages/series-identity-lock-lookbook/images/01-reference-model-card/meta.json",
+        "image_path": "works/topics/virtual-try-on-identity-lock/packages/series-identity-lock-lookbook/images/01-reference-model-card/image.png",
+        "ref_role": "identity_reference",
+        "required_status": "done"
+      }
+    ],
+    "ref_urls": [],
+    "runner_notes": "Fanout variation; queue injects the 01 runtime URL as --ref."
+  },
+  "i18n": {
+    "en": {
+      "title": "Evening Gallery Look",
+      "description": "The same synthetic model wears an evening gallery outfit."
+    },
+    "zh-CN": {
+      "title": "夜间画廊造型",
+      "description": "同一合成模特穿着夜间画廊晚装。"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 40,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "virtual-try-on",
+      "identity-consistency"
+    ],
+    "alt": {
+      "en": "The same synthetic model in an evening gallery outfit.",
+      "zh-CN": "同一合成模特穿着夜间画廊晚装。"
+    }
+  }
+}

@@ -2,7 +2,7 @@ import './styles.css';
 
 const DATA_URL = './works/index.json';
 const LANG_KEY = 'prompt-atlas-lang';
-const HERO_IMAGE = '/hero-rose-v2.png';
+const VIEW_MODE_KEY = 'prompt-atlas-view-mode';
 
 const TOPIC_ICONS = {
   'crystal-ball-narrative': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="10" r="6"/><path d="M8 16l-2 5h12l-2-5"/></svg>',
@@ -24,16 +24,11 @@ const UI = {
     searchPh: '搜索图片、提示词、主题或标签',
     loading: 'Loading...',
     latest: '最新',
-    heroTitle: 'AI <em>视觉灵感</em>库',
-    heroSub: '基于 gpt-image-2 的高级玩法图鉴 · 真图 + 一键复刻提示词',
-    heroCta: '探索全部',
-    navHome: '首页',
-    navExplore: '探索',
-    navFavorites: '收藏',
-    navCreate: '创作',
-    navInspire: '灵感',
     sectionTopics: '分类',
-    darkMode: '深色模式',
+    viewModeExpanded: '展开',
+    viewModeCollapsed: '封面',
+    openOriginal: '新窗口预览',
+    download: '下载原图',
   },
   en: {
     all: 'All',
@@ -46,16 +41,11 @@ const UI = {
     searchPh: 'Search images, prompts, topics or tags',
     loading: 'Loading...',
     latest: 'Latest',
-    heroTitle: 'AI <em>Visual Inspiration</em> Library',
-    heroSub: 'A gpt-image-2 atlas with real images and reusable prompts',
-    heroCta: 'Explore all',
-    navHome: 'Home',
-    navExplore: 'Explore',
-    navFavorites: 'Saved',
-    navCreate: 'Create',
-    navInspire: 'Inspire',
     sectionTopics: 'Topics',
-    darkMode: 'Dark mode',
+    viewModeExpanded: 'All',
+    viewModeCollapsed: 'Cover',
+    openOriginal: 'Open original',
+    download: 'Download',
   },
 };
 
@@ -67,6 +57,7 @@ const LANGS = [
 const state = {
   data: null,
   lang: normalizeLang(localStorage.getItem(LANG_KEY) || 'zh-CN'),
+  viewMode: localStorage.getItem(VIEW_MODE_KEY) === 'expanded' ? 'expanded' : 'collapsed',
   activeTopic: 'all',
   search: '',
   modal: null,
@@ -80,7 +71,6 @@ let suppressHash = false;
 
 const app = document.querySelector('#app');
 const $ = (sel) => document.querySelector(sel);
-const $$ = (sel) => document.querySelectorAll(sel);
 
 function normalizeLang(lang) {
   return LANGS.some((item) => item.id === lang) ? lang : 'zh-CN';
@@ -194,39 +184,8 @@ function renderShell() {
           <span class="brand-name">GPT Image 2 Hub</span>
         </a>
 
-        <nav class="nav" aria-label="primary">
-          <button class="nav-item active" data-nav="home" type="button">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg>
-            ${esc(t('navHome'))}
-          </button>
-          <button class="nav-item" data-nav="explore" type="button">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15.09 8.91-2.36 4.9-4.9 2.36 2.36-4.9z"/></svg>
-            ${esc(t('navExplore'))}
-          </button>
-          <button class="nav-item" data-nav="favorites" type="button">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-            ${esc(t('navFavorites'))}
-          </button>
-          <button class="nav-item" data-nav="create" type="button">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
-            ${esc(t('navCreate'))}
-          </button>
-          <button class="nav-item" data-nav="inspire" type="button">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26A7 7 0 0 0 12 2z"/></svg>
-            ${esc(t('navInspire'))}
-          </button>
-        </nav>
-
         <div class="section-label">${esc(t('sectionTopics'))}</div>
         <nav class="topics" id="topics-nav" aria-label="topics"></nav>
-
-        <div class="sidebar-bottom">
-          <div class="theme-toggle" role="button" tabindex="0">
-            <span class="theme-toggle-icon"></span>
-            <span class="theme-toggle-label">${esc(t('darkMode'))}</span>
-            <span class="theme-switch"></span>
-          </div>
-        </div>
       </aside>
 
       <main class="main">
@@ -239,33 +198,35 @@ function renderShell() {
             <a class="icon-btn" href="https://github.com" target="_blank" rel="noopener" aria-label="github">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.38 7.86 10.9.58.1.79-.25.79-.55 0-.28-.01-1.02-.02-2-3.2.69-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.76 2.69 1.25 3.34.95.1-.74.4-1.25.72-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.18A11 11 0 0 1 12 6.8c.98 0 1.97.13 2.89.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.73.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.41-5.27 5.69.41.36.78 1.06.78 2.14 0 1.55-.02 2.8-.02 3.18 0 .3.21.66.8.55A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
             </a>
-            <button class="icon-btn" aria-label="notifications" type="button">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 16v-5a6 6 0 0 0-12 0v5l-2 2h16z"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-              <span class="dot"></span>
-            </button>
-            <button class="lang-btn" id="lang-btn" type="button">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-              <span id="lang-label">${esc(currentLangLabel())}</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
+            <a class="icon-btn" href="https://x.com" target="_blank" rel="noopener" aria-label="x">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <div class="lang-dd" id="lang-dd">
+              <button class="lang-dd-trigger" id="lang-dd-trigger" type="button" aria-haspopup="listbox" aria-expanded="false">
+                <svg class="lang-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                <span class="lang-dd-label" id="lang-dd-label">${esc(LANGS.find((l) => l.id === state.lang)?.label || '简体中文')}</span>
+                <svg class="lang-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <ul class="lang-dd-menu" id="lang-dd-menu" role="listbox">
+                ${LANGS.map((lang) => `
+                  <li class="lang-dd-option ${lang.id === state.lang ? 'active' : ''}" data-lang="${esc(lang.id)}" role="option" aria-selected="${lang.id === state.lang}">
+                    <span class="lang-dd-dot"></span>
+                    <span class="lang-dd-name">${esc(lang.label)}</span>
+                    ${lang.id === state.lang ? `<svg class="lang-dd-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>` : ''}
+                  </li>
+                `).join('')}
+              </ul>
+            </div>
           </div>
         </header>
 
-        <section class="hero">
-          <img class="hero-img" src="${HERO_IMAGE}" alt="AI 视觉灵感库 Hero" />
-          <div class="hero-text">
-            <h1 class="hero-title">${t('heroTitle')}</h1>
-            <p class="hero-sub">${esc(t('heroSub'))}</p>
-            <button class="hero-cta" id="hero-cta" type="button">
-              ${esc(t('heroCta'))}
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-            </button>
-          </div>
-        </section>
-
         <div class="filter-bar" id="filter-bar-anchor">
-          <div class="filter-pills" id="filter-pills"></div>
+          <div class="filter-title" id="filter-title"></div>
           <div class="filter-right">
+            <div class="view-mode" id="view-mode-group" role="radiogroup" aria-label="view mode">
+              <button class="vm-btn ${state.viewMode === 'collapsed' ? 'active' : ''}" data-mode="collapsed" type="button" role="radio" aria-checked="${state.viewMode === 'collapsed'}">${esc(t('viewModeCollapsed'))}</button>
+              <button class="vm-btn ${state.viewMode === 'expanded' ? 'active' : ''}" data-mode="expanded" type="button" role="radio" aria-checked="${state.viewMode === 'expanded'}">${esc(t('viewModeExpanded'))}</button>
+            </div>
             <button class="sort-btn" id="sort-btn" type="button">
               <span id="sort-label">${esc(t('latest'))}</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
@@ -314,12 +275,14 @@ function renderShell() {
             </button>
           </div>
           <pre class="prompt-text" id="m-prompt"></pre>
-          <div class="fab-group">
-            <a class="fab" id="m-open" href="#" target="_blank" rel="noopener" aria-label="open in new window">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          <div class="modal-actions">
+            <a class="modal-action" id="m-open" href="#" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              <span id="m-open-label">${esc(t('openOriginal'))}</span>
             </a>
-            <a class="fab" id="m-download" download aria-label="download">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <a class="modal-action" id="m-download" download>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span id="m-download-label">${esc(t('download'))}</span>
             </a>
           </div>
         </div>
@@ -331,10 +294,6 @@ function renderShell() {
       <span id="toast-text">已复制</span>
     </div>
   `;
-}
-
-function currentLangLabel() {
-  return LANGS.find((lang) => lang.id === state.lang)?.label || '简体中文';
 }
 
 function topicItems() {
@@ -367,20 +326,29 @@ function renderTopicsNav() {
   `).join('');
 }
 
-function renderFilterPills() {
-  const bar = $('#filter-pills');
+function renderFilterTitle() {
+  const bar = $('#filter-title');
   if (!bar) return;
-  bar.innerHTML = topicItems().map((item) => `
-    <button class="filter-pill ${item.id === state.activeTopic ? 'active' : ''}" data-topic="${esc(item.id)}" type="button">
-      <span>${esc(item.label)}</span>
-      <span class="count">${item.count}</span>
-    </button>
-  `).join('');
+  const active = topicItems().find((item) => item.id === state.activeTopic) || topicItems()[0];
+  bar.innerHTML = `
+    <span class="t">${esc(active.label)}</span>
+    <span class="n">${filteredImages().length}</span>
+  `;
+}
+
+function renderViewModeGroup() {
+  const group = $('#view-mode-group');
+  if (!group) return;
+  group.querySelectorAll('.vm-btn').forEach((button) => {
+    const active = button.dataset.mode === state.viewMode;
+    button.classList.toggle('active', active);
+    button.setAttribute('aria-checked', String(active));
+  });
 }
 
 function filteredImages() {
   const q = state.search.trim().toLowerCase();
-  return (state.data?.images || []).filter((image) => {
+  const images = (state.data?.images || []).filter((image) => {
     if (state.activeTopic !== 'all' && image.topic_id !== state.activeTopic) return false;
     if (!q) return true;
 
@@ -400,41 +368,49 @@ function filteredImages() {
     ].filter(Boolean).join(' ').toLowerCase();
     return hay.includes(q);
   });
+
+  if (state.viewMode !== 'collapsed') return images;
+
+  // Collapsed mode: only dedupe `series` packages to their cover (first image by order).
+  // `single` packages keep every image — each entry in a single package is an independent work.
+  const seenSeries = new Set();
+  return images.reduce((acc, image) => {
+    if (!isSeries(image) || !image.package_id) {
+      acc.push(image);
+      return acc;
+    }
+    if (seenSeries.has(image.package_id)) return acc;
+    seenSeries.add(image.package_id);
+    acc.push(peersOf(image)[0] || image);
+    return acc;
+  }, []);
 }
 
 function renderCard(image) {
-  const topic = topicOf(image);
-  const pack = packageOf(image);
   const peers = isSeries(image) ? peersOf(image) : null;
   const primaryTitle = titleOf(image);
   const secondaryTitle = secondaryTitleOf(image);
-  const packageTitle = packageLabel(pack);
+  const packageTitle = packageLabel(packageOf(image));
+  const isCollapsedSeries = peers && peers.length > 1 && state.viewMode === 'collapsed';
   return `
-    <article class="card" data-id="${esc(image.id)}" style="--hue:${hashHue(image.id)}">
+    <article class="card ${isCollapsedSeries ? 'is-stack' : ''}" data-id="${esc(image.id)}" style="--hue:${hashHue(image.id)}">
+      ${isCollapsedSeries ? '<span class="stack-layer stack-2" aria-hidden="true"></span><span class="stack-layer stack-1" aria-hidden="true"></span>' : ''}
       <div class="cover" style="--ar:${ratio(image.aspect_ratio)}">
         <img src="${esc(imageUrl(image.image))}" alt="${esc(image.display?.alt?.[state.lang] || primaryTitle)}" loading="lazy" onerror="this.classList.add('failed')" />
         <div class="cover-placeholder">🎨</div>
-        <span class="tier-pill type-${esc(image.type)}">${esc(isSeries(image) ? t('series') : t('single'))}</span>
         ${peers && peers.length > 1 ? `
           <span class="series-badge" title="${esc(`${packageTitle} · ${peers.length}`)}">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="13" height="13" rx="2"/><path d="M8 21h10a2 2 0 0 0 2-2V9"/></svg>
-            <span class="n">${peers.length}</span>
+            <span class="n">${esc(t('series'))} · ${peers.length}</span>
           </span>
         ` : ''}
-      </div>
-      <div class="meta">
-        <span class="topic-eyebrow">
-          <span class="dot"></span>
-          <span class="text">${esc(topicLabel(topic))}</span>
-        </span>
-        <div class="card-title">${esc(primaryTitle)}</div>
-        <div class="card-en">${esc(secondaryTitle)}</div>
-        <div class="action-row">
-          <span class="aspect-mini">${esc(image.aspect_ratio || '1:1')}</span>
-          <button class="mini-btn" data-copy="${esc(image.id)}" type="button" title="${esc(t('copy'))}">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-          </button>
+        <div class="card-overlay">
+          <div class="card-title">${esc(primaryTitle)}</div>
+          <div class="card-en">${esc(secondaryTitle)}</div>
         </div>
+        <button class="mini-btn" data-copy="${esc(image.id)}" type="button" title="${esc(t('copy'))}" aria-label="${esc(t('copy'))}">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        </button>
       </div>
     </article>
   `;
@@ -476,7 +452,6 @@ async function openModal(id, options = {}) {
 
   state.modal = image;
   const topic = topicOf(image);
-  const pack = packageOf(image);
   const peers = isSeries(image) ? peersOf(image) : null;
   const primaryTitle = titleOf(image);
   const secondaryTitle = secondaryTitleOf(image);
@@ -588,7 +563,7 @@ function applyLang() {
   localStorage.setItem(LANG_KEY, state.lang);
   renderShell();
   renderTopicsNav();
-  renderFilterPills();
+  renderFilterTitle();
   renderGallery();
   if (state.modal) openModal(state.modal.id);
 }
@@ -596,7 +571,7 @@ function applyLang() {
 function setActiveTopic(id) {
   state.activeTopic = id;
   renderTopicsNav();
-  renderFilterPills();
+  renderFilterTitle();
   renderGallery();
 }
 
@@ -608,9 +583,16 @@ function bindEvents() {
       return;
     }
 
-    const filterPill = event.target.closest('.filter-pill');
-    if (filterPill) {
-      setActiveTopic(filterPill.dataset.topic);
+    const viewModeButton = event.target.closest('.vm-btn');
+    if (viewModeButton) {
+      const mode = viewModeButton.dataset.mode === 'expanded' ? 'expanded' : 'collapsed';
+      if (mode !== state.viewMode) {
+        state.viewMode = mode;
+        localStorage.setItem(VIEW_MODE_KEY, mode);
+        renderViewModeGroup();
+        renderFilterTitle();
+        renderGallery();
+      }
       return;
     }
 
@@ -658,27 +640,33 @@ function bindEvents() {
       return;
     }
 
-    const navButton = event.target.closest('.nav-item');
-    if (navButton) {
-      $$('.nav-item').forEach((item) => item.classList.toggle('active', item === navButton));
-      return;
-    }
-
-    if (event.target.closest('#hero-cta')) {
-      $('#filter-bar-anchor')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      return;
-    }
-
-    if (event.target.closest('#lang-btn')) {
-      state.lang = state.lang === 'zh-CN' ? 'en' : 'zh-CN';
-      applyLang();
-    }
   });
 
   document.addEventListener('input', (event) => {
     if (event.target.id === 'search') {
       state.search = event.target.value;
+      renderFilterTitle();
       renderGallery();
+    }
+  });
+
+  document.addEventListener('click', (event) => {
+    const trigger = event.target.closest('#lang-dd-trigger');
+    const dd = $('#lang-dd');
+    if (trigger && dd) {
+      const open = dd.classList.toggle('open');
+      trigger.setAttribute('aria-expanded', String(open));
+      return;
+    }
+    const option = event.target.closest('.lang-dd-option');
+    if (option) {
+      state.lang = normalizeLang(option.dataset.lang);
+      applyLang();
+      return;
+    }
+    if (dd && !event.target.closest('#lang-dd')) {
+      dd.classList.remove('open');
+      $('#lang-dd-trigger')?.setAttribute('aria-expanded', 'false');
     }
   });
 

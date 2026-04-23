@@ -1,0 +1,39 @@
+{
+  "id": "world-knowledge-reconstruction",
+  "slug": "world-knowledge-reconstruction",
+  "title": "World Knowledge Reconstruction",
+  "short_title": "World Knowledge",
+  "description": "A Prompt Atlas theme for World Knowledge Reconstruction, testing structured-layout, photorealism, world-knowledge, style-transfer, commercial-mockup with GPT Image 2.",
+  "i18n": {
+    "en": {
+      "title": "World Knowledge Reconstruction",
+      "description": "A Prompt Atlas theme for World Knowledge Reconstruction, testing structured-layout, photorealism, world-knowledge, style-transfer, commercial-mockup with GPT Image 2."
+    },
+    "zh-CN": {
+      "title": "World Knowledge 场景还原",
+      "description": "World Knowledge 场景还原：IKEA 夜店招建筑师级精准 / Windows UI 像素级 / 日本便利店内部 / Minecraft 世界"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 200,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "structured-layout",
+      "photorealism",
+      "world-knowledge",
+      "style-transfer"
+    ]
+  },
+  "packages": [
+    {
+      "id": "single-theme-studies",
+      "type": "single",
+      "title": "Theme Studies",
+      "path": "packages/single-theme-studies/package.json"
+    }
+  ]
+}

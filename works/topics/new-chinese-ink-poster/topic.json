@@ -1,0 +1,39 @@
+{
+  "id": "new-chinese-ink-poster",
+  "slug": "new-chinese-ink-poster",
+  "title": "New Chinese Ink Poster",
+  "short_title": "Ink Poster",
+  "description": "A Prompt Atlas theme for New Chinese Ink Poster, testing text-rendering, structured-layout, extreme-aspect-ratio, style-transfer, commercial-mockup with GPT Image 2.",
+  "i18n": {
+    "en": {
+      "title": "New Chinese Ink Poster",
+      "description": "A Prompt Atlas theme for New Chinese Ink Poster, testing text-rendering, structured-layout, extreme-aspect-ratio, style-transfer, commercial-mockup with GPT Image 2."
+    },
+    "zh-CN": {
+      "title": "新中式水墨极简海报",
+      "description": "新中式水墨极简海报：9:16 竖版 · 奇峻群山 + 中间湖面 · 留白 60% · 春日青绿/雾蓝/淡墨/浅灰 · 低饱和 · 奢华感"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 200,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "text-rendering",
+      "structured-layout",
+      "extreme-aspect-ratio",
+      "style-transfer"
+    ]
+  },
+  "packages": [
+    {
+      "id": "single-theme-studies",
+      "type": "single",
+      "title": "Theme Studies",
+      "path": "packages/single-theme-studies/package.json"
+    }
+  ]
+}

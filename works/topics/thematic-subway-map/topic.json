@@ -1,0 +1,39 @@
+{
+  "id": "thematic-subway-map",
+  "slug": "thematic-subway-map",
+  "title": "Thematic Subway Map",
+  "short_title": "Subway Map",
+  "description": "A Prompt Atlas theme for Thematic Subway Map, testing structured-layout, technical-diagram, reasoning-composition, commercial-mockup with GPT Image 2.",
+  "i18n": {
+    "en": {
+      "title": "Thematic Subway Map",
+      "description": "A Prompt Atlas theme for Thematic Subway Map, testing structured-layout, technical-diagram, reasoning-composition, commercial-mockup with GPT Image 2."
+    },
+    "zh-CN": {
+      "title": "X 主题地铁路线图",
+      "description": "X 主题地铁路线图：莎士比亚戏剧以地铁线串联 / 哲学史人物地铁图 / AI 发展史 1950-2026 / 中国朝代更替"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 200,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "structured-layout",
+      "technical-diagram",
+      "reasoning-composition",
+      "commercial-mockup"
+    ]
+  },
+  "packages": [
+    {
+      "id": "single-theme-studies",
+      "type": "single",
+      "title": "Theme Studies",
+      "path": "packages/single-theme-studies/package.json"
+    }
+  ]
+}

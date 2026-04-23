@@ -40,7 +40,7 @@ Usage:
   node tools/works.js build-index
   node tools/works.js check-public
   node tools/works.js generate <works/.../meta.json>
-  node tools/works.js queue [--concurrency 10] [--limit n] [--retry failed] [--topic id] [--package id] [--dry-run]
+  node tools/works.js queue [--concurrency 10] [--limit n] [--retry failed|running] [--with-deps] [--topic id] [--package id] [--dry-run]
   node tools/works.js scan [--topic id] [--package id] [--problems] [--strict] [--json]
   node tools/works.js list [--todo-only] [--with-works]
   node tools/works.js show <item-id>
@@ -651,16 +651,37 @@ function generateImage(args) {
     '--name',
     generation.output.name || path.basename(meta.image || 'image.png', '.png'),
   ];
-  execFileSync('image2gen', command, {
-    cwd: ROOT,
-    stdio: 'inherit',
-  });
-  if (!fileExists(outputPath)) {
-    throw new Error(`image2gen completed but did not write ${rel(outputPath)}`);
+  try {
+    const output = execFileSync('image2gen', command, {
+      cwd: ROOT,
+      encoding: 'utf8',
+      maxBuffer: 50 * 1024 * 1024,
+      stdio: ['ignore', 'pipe', 'pipe'],
+    });
+    process.stdout.write(output);
+    if (!fileExists(outputPath)) {
+      throw new Error(`image2gen completed but did not write ${rel(outputPath)}`);
+    }
+    meta.status = 'done';
+    meta.generation.ref_urls = [];
+    delete meta.generation.last_error;
+    writeJson(metaPath, meta);
+  } catch (error) {
+    const failed = readJson(metaPath);
+    const output = [
+      error?.stdout?.toString?.() || '',
+      error?.stderr?.toString?.() || '',
+      error?.message || String(error),
+    ].filter(Boolean).join('\n');
+    if (error?.stdout) process.stdout.write(error.stdout.toString());
+    if (error?.stderr) process.stderr.write(error.stderr.toString());
+    failed.status = 'failed';
+    failed.generation ||= {};
+    failed.generation.ref_urls = [];
+    failed.generation.last_error = failureSummary(output, error?.status ?? 1, outputPath);
+    writeJson(metaPath, failed);
+    throw error;
   }
-  meta.status = 'done';
-  meta.generation.ref_urls = [];
-  writeJson(metaPath, meta);
 }
 
 function parseImageUrl(text) {
@@ -714,10 +735,32 @@ function loadMetaTasks(args) {
 
 function loadQueueTasks(args) {
   const retry = getArg(args, '--retry', '');
+  const withDeps = args.includes('--with-deps');
   const allowedStatuses = new Set(['prompted']);
   if (retry === 'failed') allowedStatuses.add('failed');
   if (retry === 'running') allowedStatuses.add('running');
-  return loadMetaTasks(args).filter((task) => allowedStatuses.has(task.meta.status));
+  const allTasks = loadMetaTasks(args);
+  const byMetaPath = new Map(allTasks.map((task) => [task.metaRel, task]));
+  const selected = new Map(allTasks.filter((task) => allowedStatuses.has(task.meta.status)).map((task) => [task.metaRel, task]));
+
+  if (withDeps) {
+    const visitDeps = (task) => {
+      for (const dep of task.meta.generation?.depends_on || []) {
+        const depTask = byMetaPath.get(dep.meta_path);
+        if (!depTask || selected.has(depTask.metaRel)) continue;
+        selected.set(depTask.metaRel, depTask);
+        visitDeps(depTask);
+      }
+    };
+    for (const task of [...selected.values()]) visitDeps(task);
+  }
+
+  return [...selected.values()].sort((a, b) => {
+    return (a.topic.id || '').localeCompare(b.topic.id || '')
+      || (a.pkg.id || '').localeCompare(b.pkg.id || '')
+      || (a.meta.generation?.order || 0) - (b.meta.generation?.order || 0)
+      || a.meta.id.localeCompare(b.meta.id);
+  });
 }
 
 function dependencyScanState(task) {
