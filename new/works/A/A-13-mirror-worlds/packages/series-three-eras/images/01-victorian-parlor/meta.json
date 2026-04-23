@@ -1,0 +1,43 @@
+{
+  "prompt": "Scene: A grand Victorian parlor at blue hour, tall arched windows, old brass mirrors on the back wall, dust in the light beams, dark walnut floor, deep emerald curtains, quiet uncanny museum atmosphere.\n\nSubject: One fictional woman named Elena is shown three times in the same room as if different versions of her share one timeline: age 12 seated on the left holding a sketchbook, age 32 standing in the center facing camera, age 72 seated on the right by the mirror. Keep the same almond-shaped eyes, straight nose, small beauty mark under the left eye, black wavy hair, and emerald velvet jacket motif across all ages. Center adult Elena is the anchor subject, full body, about 55% frame height.\n\nImportant details: Photorealistic cinematic editorial image, 35mm lens, controlled warm key light from frame left and cool window rim light from frame right, rich green and amber palette, realistic skin texture, coherent reflections in the mirrors, no fantasy glow, subtle temporal discontinuity only through age and styling.\n\nUse case: GPT Image 2 Hub showcase card for identity consistency and complex narrative composition, 16:9 crop-safe, all three figures fully visible, clean enough for gallery thumbnail and detail modal.\n\nConstraints: No text, no logos, no watermark, no extra people, no duplicated limbs, no malformed hands, no split faces, no anime style. The three versions must read as the same person at different ages, not three unrelated people. Preserve exact 16:9 aspect ratio.",
+  "id": "01-victorian-parlor",
+  "title": "Victorian Parlor",
+  "description": "Elena appears as child, adult, and elder inside a blue-hour Victorian room.",
+  "type": "series",
+  "image": "image.png",
+  "aspect_ratio": "16:9",
+  "tags": [
+    "identity-consistency",
+    "time-split",
+    "photorealism",
+    "cinematic",
+    "series"
+  ],
+  "refs": [],
+  "i18n": {
+    "en": {
+      "title": "Victorian Parlor",
+      "description": "Elena appears as child, adult, and elder inside a blue-hour Victorian room."
+    },
+    "zh-CN": {
+      "title": "维多利亚客厅",
+      "description": "Elena 以童年、成年和老年三个阶段出现在蓝调时刻的维多利亚房间中。"
+    }
+  },
+  "display": {
+    "featured": true,
+    "sort_order": 10,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "identity-consistency",
+      "time-split"
+    ],
+    "alt": {
+      "en": "Three ages of the same woman appear inside a cinematic Victorian parlor.",
+      "zh-CN": "同一位女性的三个年龄阶段出现在电影感维多利亚客厅中。"
+    }
+  }
+}

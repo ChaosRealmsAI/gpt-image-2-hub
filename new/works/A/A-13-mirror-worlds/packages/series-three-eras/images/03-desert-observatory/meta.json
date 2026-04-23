@@ -1,0 +1,46 @@
+{
+  "prompt": "Scene: A remote desert observatory at dawn, pale sandstone architecture, open roof telescope, low golden sun, long shadows across a polished concrete floor, circular brass mirror panels reflecting the sky, quiet mythic science atmosphere.\n\nSubject: Same fictional woman Elena from the reference images, again shown three times in one scene: age 12 on the left drawing star maps, age 32 centered beside the telescope looking toward camera, age 72 on the right seated with a folded star chart. Preserve the same almond-shaped eyes, straight nose, small beauty mark under the left eye, black wavy hair now aging naturally, and emerald velvet jacket/scarf motif. Center adult Elena is the anchor subject, full body, about 55% frame height.\n\nImportant details: Photorealistic cinematic editorial image, consistent face identity and wardrobe motif from shots 01 and 02, 35mm lens, sunrise key light from low frame left, cool blue sky fill, sandstone and emerald palette, realistic telescope hardware, clean reflections in brass mirrors, high detail but uncluttered.\n\nUse case: Final shot in a three-image GPT Image 2 Hub series proving identity continuity across time periods and locations, 16:9 crop-safe, suitable for gallery comparison.\n\nConstraints: PRESERVE Elena's identity from both reference images. No text, no logos, no watermark, no extra people, no anime style, no fantasy magic, no face drift, no inconsistent hair color. The three versions must read as the same person at different ages. Preserve exact 16:9 aspect ratio.",
+  "id": "03-desert-observatory",
+  "title": "Desert Observatory",
+  "description": "The character continuity continues in a dawn desert observatory scene.",
+  "type": "series",
+  "image": "image.png",
+  "aspect_ratio": "16:9",
+  "tags": [
+    "identity-consistency",
+    "time-split",
+    "photorealism",
+    "cinematic",
+    "series"
+  ],
+  "refs": [
+    "01-victorian-parlor",
+    "02-neon-apartment"
+  ],
+  "i18n": {
+    "en": {
+      "title": "Desert Observatory",
+      "description": "The character continuity continues in a dawn desert observatory scene."
+    },
+    "zh-CN": {
+      "title": "沙漠天文台",
+      "description": "角色连续性延续到一个黎明时分的沙漠天文台场景中。"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 30,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "identity-consistency",
+      "time-split"
+    ],
+    "alt": {
+      "en": "The same woman appears across three ages in a dawn desert observatory.",
+      "zh-CN": "同一位女性的三个年龄阶段出现在黎明沙漠天文台中。"
+    }
+  }
+}

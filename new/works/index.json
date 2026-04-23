@@ -1,0 +1,595 @@
+{
+  "generated_at": "2026-04-23T01:36:54.587Z",
+  "schema_version": 1,
+  "default_locale": "en",
+  "required_locales": [
+    "en",
+    "zh-CN"
+  ],
+  "supported_locales": [
+    {
+      "code": "en",
+      "label": "English",
+      "native_label": "English",
+      "direction": "ltr"
+    },
+    {
+      "code": "zh-CN",
+      "label": "Simplified Chinese",
+      "native_label": "简体中文",
+      "direction": "ltr"
+    },
+    {
+      "code": "zh-TW",
+      "label": "Traditional Chinese",
+      "native_label": "繁體中文",
+      "direction": "ltr"
+    },
+    {
+      "code": "ja",
+      "label": "Japanese",
+      "native_label": "日本語",
+      "direction": "ltr"
+    },
+    {
+      "code": "ko",
+      "label": "Korean",
+      "native_label": "한국어",
+      "direction": "ltr"
+    },
+    {
+      "code": "es",
+      "label": "Spanish",
+      "native_label": "Español",
+      "direction": "ltr"
+    },
+    {
+      "code": "fr",
+      "label": "French",
+      "native_label": "Français",
+      "direction": "ltr"
+    },
+    {
+      "code": "de",
+      "label": "German",
+      "native_label": "Deutsch",
+      "direction": "ltr"
+    },
+    {
+      "code": "pt-BR",
+      "label": "Brazilian Portuguese",
+      "native_label": "Português do Brasil",
+      "direction": "ltr"
+    },
+    {
+      "code": "ar",
+      "label": "Arabic",
+      "native_label": "العربية",
+      "direction": "rtl"
+    }
+  ],
+  "tag_labels": {
+    "cinematic": {
+      "labels": {
+        "en": "Cinematic",
+        "zh-CN": "电影感"
+      }
+    },
+    "grayscale": {
+      "labels": {
+        "en": "Grayscale",
+        "zh-CN": "灰阶"
+      }
+    },
+    "identity-consistency": {
+      "labels": {
+        "en": "Identity consistency",
+        "zh-CN": "身份一致性"
+      }
+    },
+    "micro-texture": {
+      "labels": {
+        "en": "Micro texture",
+        "zh-CN": "微观纹理"
+      }
+    },
+    "photorealism": {
+      "labels": {
+        "en": "Photorealism",
+        "zh-CN": "写实摄影"
+      }
+    },
+    "scientific-realism": {
+      "labels": {
+        "en": "Scientific realism",
+        "zh-CN": "科学写实"
+      }
+    },
+    "sem-microscopy": {
+      "labels": {
+        "en": "SEM microscopy",
+        "zh-CN": "扫描电镜"
+      }
+    },
+    "series": {
+      "labels": {
+        "en": "Series",
+        "zh-CN": "系列"
+      }
+    },
+    "single": {
+      "labels": {
+        "en": "Single image",
+        "zh-CN": "单图"
+      }
+    },
+    "time-split": {
+      "labels": {
+        "en": "Time split",
+        "zh-CN": "时间切分"
+      }
+    }
+  },
+  "stats": {
+    "topic_count": 2,
+    "package_count": 3,
+    "image_count": 5
+  },
+  "topics": [
+    {
+      "id": "A-13-mirror-worlds",
+      "todo_id": "A-13",
+      "tier": "A",
+      "title": "Mirror Worlds",
+      "description": "A prompt set about showing the same fictional person across different ages, rooms, and timelines.",
+      "i18n": {
+        "en": {
+          "title": "Mirror Worlds",
+          "description": "A prompt set about showing the same fictional person across different ages, rooms, and timelines."
+        },
+        "zh-CN": {
+          "title": "镜像世界",
+          "description": "一组关于同一虚构人物跨年龄、房间与时间线同框呈现的提示词作品。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 130,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "identity-consistency",
+          "time-split"
+        ]
+      },
+      "package_count": 2,
+      "image_count": 4,
+      "packages": [
+        "series-three-eras",
+        "single-timeline-collision"
+      ],
+      "topic_path": "works/A/A-13-mirror-worlds/topic.json"
+    },
+    {
+      "id": "S-19-sem-microscopy",
+      "todo_id": "S-19",
+      "tier": "S",
+      "title": "SEM Microscopy",
+      "description": "A prompt set exploring scanning electron microscope imagery with scientific texture, scale, and specimen realism.",
+      "i18n": {
+        "en": {
+          "title": "SEM Microscopy",
+          "description": "A prompt set exploring scanning electron microscope imagery with scientific texture, scale, and specimen realism."
+        },
+        "zh-CN": {
+          "title": "扫描电镜显微摄影",
+          "description": "一组探索扫描电子显微镜图像的作品，强调科学质感、尺度线索和样本真实感。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 190,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "sem-microscopy",
+          "scientific-realism"
+        ]
+      },
+      "package_count": 1,
+      "image_count": 1,
+      "packages": [
+        "single-pollen-micro-city"
+      ],
+      "topic_path": "works/S/S-19-sem-microscopy/topic.json"
+    }
+  ],
+  "packages": [
+    {
+      "id": "series-three-eras",
+      "topic_id": "A-13-mirror-worlds",
+      "tier": "A",
+      "type": "series",
+      "title": "Three Eras",
+      "description": "Three connected images that keep one fictional woman recognizable across Victorian, neon apartment, and desert observatory scenes.",
+      "creative_direction": "Series package focused on character identity continuity: same fictional woman, similar wardrobe motif, three connected environments, reference-chain consistency.",
+      "i18n": {
+        "en": {
+          "title": "Three Eras",
+          "description": "Three connected images that keep one fictional woman recognizable across Victorian, neon apartment, and desert observatory scenes."
+        },
+        "zh-CN": {
+          "title": "三重时代",
+          "description": "三张连续图像，在维多利亚客厅、霓虹公寓和沙漠天文台中保持同一位虚构女性的可识别身份。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 10,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "identity-consistency",
+          "series"
+        ]
+      },
+      "cover_image": "works/A/A-13-mirror-worlds/packages/series-three-eras/images/01-victorian-parlor/image.png",
+      "image_count": 3,
+      "images": [
+        "A-13-mirror-worlds/series-three-eras/01-victorian-parlor",
+        "A-13-mirror-worlds/series-three-eras/02-neon-apartment",
+        "A-13-mirror-worlds/series-three-eras/03-desert-observatory"
+      ],
+      "package_path": "works/A/A-13-mirror-worlds/packages/series-three-eras/package.json",
+      "topic_path": "works/A/A-13-mirror-worlds/topic.json"
+    },
+    {
+      "id": "single-timeline-collision",
+      "topic_id": "A-13-mirror-worlds",
+      "tier": "A",
+      "type": "single",
+      "title": "Timeline Collision Hero",
+      "description": "One wide cinematic image combining three life stages of the same fictional woman in a folded mirror room.",
+      "creative_direction": "Single-image package demo. This overlaps with the existing character-portrait series and should be treated as a structure example, not the ideal next creative direction.",
+      "i18n": {
+        "en": {
+          "title": "Timeline Collision Hero",
+          "description": "One wide cinematic image combining three life stages of the same fictional woman in a folded mirror room."
+        },
+        "zh-CN": {
+          "title": "时间线碰撞主视觉",
+          "description": "一张宽幅电影感图像，把同一位虚构女性的三个人生阶段合并到折叠镜厅中。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 20,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "identity-consistency",
+          "single"
+        ]
+      },
+      "cover_image": "works/A/A-13-mirror-worlds/packages/single-timeline-collision/images/timeline-collision-hero/image.png",
+      "image_count": 1,
+      "images": [
+        "A-13-mirror-worlds/single-timeline-collision/timeline-collision-hero"
+      ],
+      "package_path": "works/A/A-13-mirror-worlds/packages/single-timeline-collision/package.json",
+      "topic_path": "works/A/A-13-mirror-worlds/topic.json"
+    },
+    {
+      "id": "single-pollen-micro-city",
+      "topic_id": "S-19-sem-microscopy",
+      "tier": "S",
+      "type": "single",
+      "title": "Pollen Micro City",
+      "description": "A single-image package presenting a pollen grain as a monumental SEM landscape without leaving the language of scientific microscopy.",
+      "creative_direction": "Single grayscale SEM micrograph focused on specimen realism and scale cues; no fantasy illustration, no color poster treatment, no multi-panel layout.",
+      "i18n": {
+        "en": {
+          "title": "Pollen Micro City",
+          "description": "A single-image package presenting a pollen grain as a monumental SEM landscape without leaving the language of scientific microscopy."
+        },
+        "zh-CN": {
+          "title": "花粉微型城市",
+          "description": "一个单图包，把花粉粒呈现成具有纪念碑尺度的 SEM 地形，同时保持科学显微摄影语言。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 10,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "sem-microscopy",
+          "scientific-realism"
+        ]
+      },
+      "cover_image": "works/S/S-19-sem-microscopy/packages/single-pollen-micro-city/images/pollen-micro-city/image.png",
+      "image_count": 1,
+      "images": [
+        "S-19-sem-microscopy/single-pollen-micro-city/pollen-micro-city"
+      ],
+      "package_path": "works/S/S-19-sem-microscopy/packages/single-pollen-micro-city/package.json",
+      "topic_path": "works/S/S-19-sem-microscopy/topic.json"
+    }
+  ],
+  "images": [
+    {
+      "id": "A-13-mirror-worlds/series-three-eras/01-victorian-parlor",
+      "image_id": "01-victorian-parlor",
+      "package_id": "series-three-eras",
+      "topic_id": "A-13-mirror-worlds",
+      "tier": "A",
+      "title": "Victorian Parlor",
+      "description": "Elena appears as child, adult, and elder inside a blue-hour Victorian room.",
+      "i18n": {
+        "en": {
+          "title": "Victorian Parlor",
+          "description": "Elena appears as child, adult, and elder inside a blue-hour Victorian room."
+        },
+        "zh-CN": {
+          "title": "维多利亚客厅",
+          "description": "Elena 以童年、成年和老年三个阶段出现在蓝调时刻的维多利亚房间中。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 10,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "identity-consistency",
+          "time-split"
+        ],
+        "alt": {
+          "en": "Three ages of the same woman appear inside a cinematic Victorian parlor.",
+          "zh-CN": "同一位女性的三个年龄阶段出现在电影感维多利亚客厅中。"
+        }
+      },
+      "type": "series",
+      "aspect_ratio": "16:9",
+      "tags": [
+        "identity-consistency",
+        "time-split",
+        "photorealism",
+        "cinematic",
+        "series"
+      ],
+      "refs": [],
+      "image": "works/A/A-13-mirror-worlds/packages/series-three-eras/images/01-victorian-parlor/image.png",
+      "meta_path": "works/A/A-13-mirror-worlds/packages/series-three-eras/images/01-victorian-parlor/meta.json",
+      "package_path": "works/A/A-13-mirror-worlds/packages/series-three-eras/package.json",
+      "topic_path": "works/A/A-13-mirror-worlds/topic.json",
+      "package_title": "Three Eras",
+      "topic_title": "Mirror Worlds",
+      "package_ref_image": "works/A/A-13-mirror-worlds/packages/series-three-eras/images/01-victorian-parlor/image.png"
+    },
+    {
+      "id": "A-13-mirror-worlds/series-three-eras/02-neon-apartment",
+      "image_id": "02-neon-apartment",
+      "package_id": "series-three-eras",
+      "topic_id": "A-13-mirror-worlds",
+      "tier": "A",
+      "title": "Neon Apartment",
+      "description": "The same character identity is carried into a rainy near-future apartment.",
+      "i18n": {
+        "en": {
+          "title": "Neon Apartment",
+          "description": "The same character identity is carried into a rainy near-future apartment."
+        },
+        "zh-CN": {
+          "title": "霓虹公寓",
+          "description": "同一角色身份被延续到一个雨夜近未来公寓场景中。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 20,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "identity-consistency",
+          "time-split"
+        ],
+        "alt": {
+          "en": "The same fictional woman appears at three ages inside a rainy neon apartment.",
+          "zh-CN": "同一位虚构女性的三个年龄阶段出现在雨夜霓虹公寓中。"
+        }
+      },
+      "type": "series",
+      "aspect_ratio": "16:9",
+      "tags": [
+        "identity-consistency",
+        "time-split",
+        "photorealism",
+        "cinematic",
+        "series"
+      ],
+      "refs": [
+        "01-victorian-parlor"
+      ],
+      "image": "works/A/A-13-mirror-worlds/packages/series-three-eras/images/02-neon-apartment/image.png",
+      "meta_path": "works/A/A-13-mirror-worlds/packages/series-three-eras/images/02-neon-apartment/meta.json",
+      "package_path": "works/A/A-13-mirror-worlds/packages/series-three-eras/package.json",
+      "topic_path": "works/A/A-13-mirror-worlds/topic.json",
+      "package_title": "Three Eras",
+      "topic_title": "Mirror Worlds",
+      "package_ref_image": "works/A/A-13-mirror-worlds/packages/series-three-eras/images/02-neon-apartment/image.png"
+    },
+    {
+      "id": "A-13-mirror-worlds/series-three-eras/03-desert-observatory",
+      "image_id": "03-desert-observatory",
+      "package_id": "series-three-eras",
+      "topic_id": "A-13-mirror-worlds",
+      "tier": "A",
+      "title": "Desert Observatory",
+      "description": "The character continuity continues in a dawn desert observatory scene.",
+      "i18n": {
+        "en": {
+          "title": "Desert Observatory",
+          "description": "The character continuity continues in a dawn desert observatory scene."
+        },
+        "zh-CN": {
+          "title": "沙漠天文台",
+          "description": "角色连续性延续到一个黎明时分的沙漠天文台场景中。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 30,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "identity-consistency",
+          "time-split"
+        ],
+        "alt": {
+          "en": "The same woman appears across three ages in a dawn desert observatory.",
+          "zh-CN": "同一位女性的三个年龄阶段出现在黎明沙漠天文台中。"
+        }
+      },
+      "type": "series",
+      "aspect_ratio": "16:9",
+      "tags": [
+        "identity-consistency",
+        "time-split",
+        "photorealism",
+        "cinematic",
+        "series"
+      ],
+      "refs": [
+        "01-victorian-parlor",
+        "02-neon-apartment"
+      ],
+      "image": "works/A/A-13-mirror-worlds/packages/series-three-eras/images/03-desert-observatory/image.png",
+      "meta_path": "works/A/A-13-mirror-worlds/packages/series-three-eras/images/03-desert-observatory/meta.json",
+      "package_path": "works/A/A-13-mirror-worlds/packages/series-three-eras/package.json",
+      "topic_path": "works/A/A-13-mirror-worlds/topic.json",
+      "package_title": "Three Eras",
+      "topic_title": "Mirror Worlds",
+      "package_ref_image": "works/A/A-13-mirror-worlds/packages/series-three-eras/images/03-desert-observatory/image.png"
+    },
+    {
+      "id": "A-13-mirror-worlds/single-timeline-collision/timeline-collision-hero",
+      "image_id": "timeline-collision-hero",
+      "package_id": "single-timeline-collision",
+      "topic_id": "A-13-mirror-worlds",
+      "tier": "A",
+      "title": "Timeline Collision Hero",
+      "description": "A single wide image where Victorian, neon, and observatory timelines meet in one mirror room.",
+      "i18n": {
+        "en": {
+          "title": "Timeline Collision Hero",
+          "description": "A single wide image where Victorian, neon, and observatory timelines meet in one mirror room."
+        },
+        "zh-CN": {
+          "title": "时间线碰撞主视觉",
+          "description": "一张宽幅单图，维多利亚、霓虹和天文台三条时间线在同一个镜厅中相遇。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 10,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "identity-consistency",
+          "time-split"
+        ],
+        "alt": {
+          "en": "Three life stages of the same woman meet in one folded mirror-room timeline.",
+          "zh-CN": "同一位女性的三个人生阶段在折叠镜厅时间线中相遇。"
+        }
+      },
+      "type": "single",
+      "aspect_ratio": "16:9",
+      "tags": [
+        "identity-consistency",
+        "time-split",
+        "photorealism",
+        "cinematic",
+        "single"
+      ],
+      "refs": [],
+      "image": "works/A/A-13-mirror-worlds/packages/single-timeline-collision/images/timeline-collision-hero/image.png",
+      "meta_path": "works/A/A-13-mirror-worlds/packages/single-timeline-collision/images/timeline-collision-hero/meta.json",
+      "package_path": "works/A/A-13-mirror-worlds/packages/single-timeline-collision/package.json",
+      "topic_path": "works/A/A-13-mirror-worlds/topic.json",
+      "package_title": "Timeline Collision Hero",
+      "topic_title": "Mirror Worlds",
+      "package_ref_image": "works/A/A-13-mirror-worlds/packages/single-timeline-collision/images/timeline-collision-hero/image.png"
+    },
+    {
+      "id": "S-19-sem-microscopy/single-pollen-micro-city/pollen-micro-city",
+      "image_id": "pollen-micro-city",
+      "package_id": "single-pollen-micro-city",
+      "topic_id": "S-19-sem-microscopy",
+      "tier": "S",
+      "title": "Pollen Micro City",
+      "description": "A grayscale SEM-style image of a pollen grain whose real microstructure suggests a miniature city without becoming an illustration.",
+      "i18n": {
+        "en": {
+          "title": "Pollen Micro City",
+          "description": "A grayscale SEM-style image of a pollen grain whose real microstructure suggests a miniature city without becoming an illustration."
+        },
+        "zh-CN": {
+          "title": "花粉微型城市",
+          "description": "一张灰阶 SEM 风格图像，花粉粒的真实微观结构暗示微型城市，但不变成插画。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 10,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "sem-microscopy",
+          "micro-texture"
+        ],
+        "alt": {
+          "en": "A grayscale SEM-style pollen grain with spikes and pores on a dark microscope stub.",
+          "zh-CN": "一颗带尖刺和孔洞结构的灰阶扫描电镜风格花粉粒，位于深色样品台上。"
+        }
+      },
+      "type": "single",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "sem-microscopy",
+        "scientific-realism",
+        "micro-texture",
+        "grayscale"
+      ],
+      "refs": [],
+      "image": "works/S/S-19-sem-microscopy/packages/single-pollen-micro-city/images/pollen-micro-city/image.png",
+      "meta_path": "works/S/S-19-sem-microscopy/packages/single-pollen-micro-city/images/pollen-micro-city/meta.json",
+      "package_path": "works/S/S-19-sem-microscopy/packages/single-pollen-micro-city/package.json",
+      "topic_path": "works/S/S-19-sem-microscopy/topic.json",
+      "package_title": "Pollen Micro City",
+      "topic_title": "SEM Microscopy",
+      "package_ref_image": "works/S/S-19-sem-microscopy/packages/single-pollen-micro-city/images/pollen-micro-city/image.png"
+    }
+  ]
+}

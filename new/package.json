@@ -1,0 +1,24 @@
+{
+  "name": "prompt-atlas-gallery",
+  "version": "0.1.0",
+  "description": "Public GPT Image 2 works gallery",
+  "type": "module",
+  "private": false,
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "npm run works:index && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "works:validate": "node tools/works.js validate",
+    "works:index": "node tools/works.js build-index",
+    "works:sync": "node tools/works.js sync",
+    "works:scaffold": "node tools/works.js scaffold-package",
+    "works:generate": "node tools/works.js generate",
+    "check:public": "node tools/works.js check-public"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

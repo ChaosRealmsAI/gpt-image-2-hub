@@ -1,0 +1,45 @@
+{
+  "prompt": "Scene: A near-future Tokyo apartment at night, rain on the window, soft neon signs outside, compact modern furniture, one large circular mirror, glowing city reflections, intimate and cinematic but not cyberpunk clutter.\n\nSubject: Same fictional woman Elena from the reference image, shown three times in the apartment: age 12 at a desk sketching a floating city, age 32 in the center holding a transparent tablet, age 72 near the mirror adjusting an emerald scarf. Preserve the same almond-shaped eyes, straight nose, small beauty mark under the left eye, black wavy hair, facial proportions, and emerald velvet jacket/scarf motif from the reference. Center adult Elena remains the anchor subject, full body, about 55% frame height.\n\nImportant details: Photorealistic cinematic editorial image, same camera distance and character scale as the reference, 35mm lens, neon magenta and cyan rim light balanced with warm apartment practical lamps, realistic rain reflections, coherent mirror reflection, same body language family as shot 01.\n\nUse case: Second shot in a three-image consistency series, 16:9 crop-safe, should work side by side with shot 01 as the same character moving across eras.\n\nConstraints: PRESERVE Elena's identity from the reference image. No text, no logos, no watermark, no extra people, no anime style, no heavy sci-fi armor, no face drift. The three versions must read as the same person at different ages. Preserve exact 16:9 aspect ratio.",
+  "id": "02-neon-apartment",
+  "title": "Neon Apartment",
+  "description": "The same character identity is carried into a rainy near-future apartment.",
+  "type": "series",
+  "image": "image.png",
+  "aspect_ratio": "16:9",
+  "tags": [
+    "identity-consistency",
+    "time-split",
+    "photorealism",
+    "cinematic",
+    "series"
+  ],
+  "refs": [
+    "01-victorian-parlor"
+  ],
+  "i18n": {
+    "en": {
+      "title": "Neon Apartment",
+      "description": "The same character identity is carried into a rainy near-future apartment."
+    },
+    "zh-CN": {
+      "title": "霓虹公寓",
+      "description": "同一角色身份被延续到一个雨夜近未来公寓场景中。"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 20,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "identity-consistency",
+      "time-split"
+    ],
+    "alt": {
+      "en": "The same fictional woman appears at three ages inside a rainy neon apartment.",
+      "zh-CN": "同一位虚构女性的三个年龄阶段出现在雨夜霓虹公寓中。"
+    }
+  }
+}

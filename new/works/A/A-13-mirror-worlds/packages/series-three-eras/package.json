@@ -1,0 +1,50 @@
+{
+  "id": "series-three-eras",
+  "type": "series",
+  "title": "Three Eras",
+  "description": "Three connected images that keep one fictional woman recognizable across Victorian, neon apartment, and desert observatory scenes.",
+  "cover_image": "images/01-victorian-parlor/image.png",
+  "images": [
+    {
+      "id": "01-victorian-parlor",
+      "title": "Victorian Parlor",
+      "image": "images/01-victorian-parlor/image.png",
+      "meta": "images/01-victorian-parlor/meta.json"
+    },
+    {
+      "id": "02-neon-apartment",
+      "title": "Neon Apartment",
+      "image": "images/02-neon-apartment/image.png",
+      "meta": "images/02-neon-apartment/meta.json"
+    },
+    {
+      "id": "03-desert-observatory",
+      "title": "Desert Observatory",
+      "image": "images/03-desert-observatory/image.png",
+      "meta": "images/03-desert-observatory/meta.json"
+    }
+  ],
+  "creative_direction": "Series package focused on character identity continuity: same fictional woman, similar wardrobe motif, three connected environments, reference-chain consistency.",
+  "i18n": {
+    "en": {
+      "title": "Three Eras",
+      "description": "Three connected images that keep one fictional woman recognizable across Victorian, neon apartment, and desert observatory scenes."
+    },
+    "zh-CN": {
+      "title": "三重时代",
+      "description": "三张连续图像，在维多利亚客厅、霓虹公寓和沙漠天文台中保持同一位虚构女性的可识别身份。"
+    }
+  },
+  "display": {
+    "featured": true,
+    "sort_order": 10,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "identity-consistency",
+      "series"
+    ]
+  }
+}

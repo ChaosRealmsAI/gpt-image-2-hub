@@ -1,23 +1,32 @@
-.env
-.env.local
-node_modules/
-assets/generated/
-assets/atom-tests/
-assets/method-test/
-assets/moderation-probe/
-assets/skill-test/
-assets/sonnet-blind-test/
-output/
-archive/
-prompt-atlas-archive/
-.autopilot/
-.DS_Store
-*.log
-target/
-.worktrees/
-.ally/
-ref/
-.claude/scheduled_tasks.lock
+# Public repository allowlist.
+# Everything is private by default except the static gallery, public works data, and local tooling under new/.
 
-# 🔴 spec 独立仓(按 commit-format rule 铁律)· 主代码仓不跟踪
-spec/
+*
+
+!.gitignore
+!new/
+
+new/*
+!new/AGENTS.md
+!new/README.md
+!new/package.json
+!new/package-lock.json
+!new/vite.config.js
+!new/index.html
+!new/src/
+!new/src/**
+!new/tools/
+!new/tools/**
+!new/works/
+!new/works/**
+
+# Local/generated state inside the public project root.
+new/node_modules/
+new/dist/
+new/.vite/
+new/*.log
+
+# Closed source local inputs.
+new/todo/
+new/prototype/
+new/research-materials/

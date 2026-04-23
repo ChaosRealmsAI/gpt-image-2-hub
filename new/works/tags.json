@@ -1,0 +1,64 @@
+{
+  "tags": {
+    "cinematic": {
+      "labels": {
+        "en": "Cinematic",
+        "zh-CN": "电影感"
+      }
+    },
+    "grayscale": {
+      "labels": {
+        "en": "Grayscale",
+        "zh-CN": "灰阶"
+      }
+    },
+    "identity-consistency": {
+      "labels": {
+        "en": "Identity consistency",
+        "zh-CN": "身份一致性"
+      }
+    },
+    "micro-texture": {
+      "labels": {
+        "en": "Micro texture",
+        "zh-CN": "微观纹理"
+      }
+    },
+    "photorealism": {
+      "labels": {
+        "en": "Photorealism",
+        "zh-CN": "写实摄影"
+      }
+    },
+    "scientific-realism": {
+      "labels": {
+        "en": "Scientific realism",
+        "zh-CN": "科学写实"
+      }
+    },
+    "sem-microscopy": {
+      "labels": {
+        "en": "SEM microscopy",
+        "zh-CN": "扫描电镜"
+      }
+    },
+    "series": {
+      "labels": {
+        "en": "Series",
+        "zh-CN": "系列"
+      }
+    },
+    "single": {
+      "labels": {
+        "en": "Single image",
+        "zh-CN": "单图"
+      }
+    },
+    "time-split": {
+      "labels": {
+        "en": "Time split",
+        "zh-CN": "时间切分"
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://prompt-atlas.local/schema/meta.schema.json",
+  "title": "Prompt Atlas Works Image Metadata",
+  "type": "object",
+  "required": [
+    "prompt",
+    "id",
+    "title",
+    "description",
+    "type",
+    "image",
+    "aspect_ratio",
+    "tags",
+    "refs",
+    "i18n",
+    "display"
+  ],
+  "properties": {
+    "prompt": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "single",
+        "series"
+      ]
+    },
+    "image": {
+      "type": "string"
+    },
+    "aspect_ratio": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "refs": {
+      "type": "array"
+    },
+    "i18n": {
+      "$ref": "topic.schema.json#/$defs/i18n"
+    },
+    "display": {
+      "allOf": [
+        {
+          "$ref": "topic.schema.json#/$defs/display"
+        },
+        {
+          "type": "object",
+          "required": [
+            "alt"
+          ],
+          "properties": {
+            "alt": {
+              "type": "object",
+              "required": [
+                "en",
+                "zh-CN"
+              ],
+              "additionalProperties": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "additionalProperties": true
+}
