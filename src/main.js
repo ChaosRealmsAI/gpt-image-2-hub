@@ -567,6 +567,16 @@ async function openModal(id, options = {}) {
 
   const prompt = await loadPrompt(image);
   if (state.modal?.id === image.id) $('#m-prompt').textContent = prompt;
+
+  if (peers && peers.length > 1) {
+    for (const peer of peers) {
+      if (peer.id === image.id) continue;
+      const preImg = new Image();
+      preImg.decoding = 'async';
+      preImg.src = imageVariantUrl(peer.image, 1600);
+      if (!state.promptCache.has(peer.id)) loadPrompt(peer);
+    }
+  }
 }
 
 function closeModal(options = {}) {
