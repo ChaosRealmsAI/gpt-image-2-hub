@@ -13,6 +13,7 @@
     "works:sync": "node tools/works.js sync",
     "works:scaffold": "node tools/works.js scaffold-package",
     "works:generate": "node tools/works.js generate",
+    "works:queue": "node tools/works.js queue",
     "check:public": "node tools/works.js check-public"
   },
   "devDependencies": {

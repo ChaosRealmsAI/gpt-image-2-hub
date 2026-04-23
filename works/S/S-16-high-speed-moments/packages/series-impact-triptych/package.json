@@ -1,0 +1,62 @@
+{
+  "id": "series-impact-triptych",
+  "type": "series",
+  "title": "Impact Triptych",
+  "description": "A three-image high-speed photography series with the same black studio, rim light, and frozen-impact visual language.",
+  "creative_direction": "Series focused on physical timing and lighting continuity: different impacts, same black studio, macro lens, crisp frozen motion, and rim-lit particles.",
+  "cover_image": "images/01-water-crown/image.png",
+  "generation_plan": {
+    "status": "prompted",
+    "execution": "sequential",
+    "runner": "image2gen",
+    "images": [
+      "images/01-water-crown/meta.json",
+      "images/02-apple-puncture/meta.json",
+      "images/03-glass-fracture/meta.json"
+    ],
+    "ref_strategy": "Run 01 first to establish black studio and flash language. Use 01 URL as --ref for 02 and 03 for lighting/style continuity.",
+    "index_policy": "Only status=done images with image.png are included in works/index.json."
+  },
+  "i18n": {
+    "en": {
+      "title": "Impact Triptych",
+      "description": "Three high-speed studio images with consistent flash lighting."
+    },
+    "zh-CN": {
+      "title": "冲击三联画",
+      "description": "三张保持一致闪光灯语言的高速棚拍图。"
+    }
+  },
+  "display": {
+    "featured": true,
+    "sort_order": 10,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "high-speed",
+      "series"
+    ]
+  },
+  "images": [
+    {
+      "id": "01-water-crown",
+      "title": "Water Crown",
+      "image": "images/01-water-crown/image.png",
+      "meta": "images/01-water-crown/meta.json"
+    },
+    {
+      "id": "02-apple-puncture",
+      "title": "Apple Puncture",
+      "image": "images/02-apple-puncture/image.png",
+      "meta": "images/02-apple-puncture/meta.json"
+    },
+    {
+      "id": "03-glass-fracture",
+      "title": "Glass Fracture",
+      "image": "images/03-glass-fracture/image.png",
+      "meta": "images/03-glass-fracture/meta.json"
+    }
+  ]
+}

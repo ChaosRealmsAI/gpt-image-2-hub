@@ -1,0 +1,54 @@
+{
+  "prompt": "Scene:\nA black studio macro setup with a glossy black tray, invisible high-speed flash, and subtle blue rim light from the back right. The background is pure black with no visible room.\n\nSubject:\nA single water droplet impact frozen at the exact crown-splash moment, centered in frame. The crown is symmetrical but natural, with dozens of tiny droplets suspended midair around it.\n\nImportant details:\nPhotorealistic high-speed photography, millionth-of-a-second freeze, macro lens, razor-sharp water surface tension, crisp droplets, black reflective tray, cool blue rim highlights and white flash speculars.\n\nUse case:\nFirst image in a high-speed impact series, establishing lighting and freeze-frame language. Square crop-safe gallery card.\n\nConstraints:\nNo text, no watermark, no logo, no hands, no extra objects, no colored liquid, no cartoon or CGI look, preserve exact 1:1 aspect ratio.",
+  "id": "01-water-crown",
+  "title": "Water Crown",
+  "description": "Water Crown freezes a physical impact in a controlled black studio.",
+  "type": "series",
+  "image": "image.png",
+  "aspect_ratio": "1:1",
+  "tags": [
+    "high-speed",
+    "photorealism",
+    "series"
+  ],
+  "refs": [],
+  "status": "prompted",
+  "generation": {
+    "order": 1,
+    "mode": "image",
+    "model": "gpt-image-2",
+    "output": {
+      "path": "works/S/S-16-high-speed-moments/packages/series-impact-triptych/images/01-water-crown/image.png",
+      "name": "image"
+    },
+    "depends_on": [],
+    "ref_urls": [],
+    "runner_notes": "No reference image required. Queue can run this image directly from prompt."
+  },
+  "i18n": {
+    "en": {
+      "title": "Water Crown",
+      "description": "Water Crown freezes a physical impact in a controlled black studio."
+    },
+    "zh-CN": {
+      "title": "水冠瞬间",
+      "description": "水冠瞬间在黑色棚拍中定格高速物理冲击。"
+    }
+  },
+  "display": {
+    "featured": true,
+    "sort_order": 10,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "high-speed",
+      "photorealism"
+    ],
+    "alt": {
+      "en": "A photorealistic high-speed studio image titled Water Crown.",
+      "zh-CN": "水冠瞬间的写实高速棚拍图像。"
+    }
+  }
+}

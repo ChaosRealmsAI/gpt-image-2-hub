@@ -71,6 +71,18 @@
         "en": "Time split",
         "zh-CN": "时间切分"
       }
+    },
+    "material-swap": {
+      "labels": {
+        "en": "Material swap",
+        "zh-CN": "材质错位"
+      }
+    },
+    "high-speed": {
+      "labels": {
+        "en": "High speed",
+        "zh-CN": "高速摄影"
+      }
     }
   }
 }

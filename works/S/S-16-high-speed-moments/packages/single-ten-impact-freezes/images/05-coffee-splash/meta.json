@@ -1,0 +1,53 @@
+{
+  "prompt": "Scene:\nA controlled black studio macro setup for high-speed photography, pure black background, glossy black reflective tray, invisible electronic flash, cool blue rim light from back right and clean white key flash from front left. No visible room, no props beyond the named subject.\n\nSubject:\nespresso splashing upward from a black demitasse cup, centered in a square frame at the exact peak moment of impact or rupture. The subject fills about 62% of the image width, with fragments or droplets suspended around it while the main form remains readable.\n\nImportant details:\nPhotorealistic high-speed studio photograph, millionth-of-a-second freeze, macro lens, razor-sharp particles, brown coffee arcs, crema foam beads, black cup silhouette, controlled specular highlights, realistic physics, deep black negative space, crop-safe composition.\n\nUse case:\nOne image in a ten-image Prompt Atlas series testing batch queue generation, high-speed visual consistency, and gallery thumbnail readability. Square 1:1 crop-safe card and detail modal asset.\n\nConstraints:\nNo text, no watermark, no logo, no human hands, no visible weapon or launcher, no blood, no animals, no cartoon style, no CGI look, preserve exact 1:1 aspect ratio.",
+  "id": "05-coffee-splash",
+  "title": "Coffee Splash",
+  "description": "Coffee Splash freezes one high-speed physical event in a shared black studio language.",
+  "type": "single",
+  "image": "image.png",
+  "aspect_ratio": "1:1",
+  "tags": [
+    "high-speed",
+    "photorealism"
+  ],
+  "refs": [],
+  "status": "done",
+  "generation": {
+    "order": 5,
+    "mode": "image",
+    "model": "gpt-image-2",
+    "output": {
+      "path": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/images/05-coffee-splash/image.png",
+      "name": "image"
+    },
+    "depends_on": [],
+    "ref_urls": [],
+    "runner_notes": "Independent queue task. No reference image required; safe to run in parallel with other prompted images."
+  },
+  "i18n": {
+    "en": {
+      "title": "Coffee Splash",
+      "description": "Coffee Splash freezes one high-speed physical event in a shared black studio language."
+    },
+    "zh-CN": {
+      "title": "Coffee Splash",
+      "description": "Coffee Splash：同一黑色棚拍语言下的一次高速物理瞬间。"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 50,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "high-speed",
+      "photorealism"
+    ],
+    "alt": {
+      "en": "Photorealistic high-speed studio image of espresso splashing upward from a black demitasse cup.",
+      "zh-CN": "espresso splashing upward from a black demitasse cup 的写实高速棚拍图。"
+    }
+  }
+}

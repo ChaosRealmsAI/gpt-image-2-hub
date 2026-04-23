@@ -2,7 +2,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import process from 'node:process';
-import { execFileSync } from 'node:child_process';
+import { execFileSync, spawn } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
 const THIS_FILE = fileURLToPath(import.meta.url);
@@ -40,6 +40,7 @@ Usage:
   node tools/works.js build-index
   node tools/works.js check-public
   node tools/works.js generate <works/.../meta.json>
+  node tools/works.js queue [--concurrency 10] [--limit n] [--retry failed] [--topic id] [--package id] [--dry-run]
   node tools/works.js list [--todo-only] [--with-works]
   node tools/works.js show <item-id>
   node tools/works.js sync <item-id>
@@ -50,6 +51,7 @@ Examples:
   node tools/works.js build-index
   node tools/works.js check-public
   node tools/works.js generate works/S/S-19-sem-microscopy/packages/single-pollen-micro-city/images/pollen-micro-city/meta.json
+  node tools/works.js queue --concurrency 10
   node tools/works.js scaffold-package A-13 single object-memory --title "Object Memory" --image object-memory
 `);
 }
@@ -153,6 +155,10 @@ function topicFiles() {
   return walkFiles(WORKS_ROOT, (file) => path.basename(file) === 'topic.json').sort();
 }
 
+function metaFiles() {
+  return walkFiles(WORKS_ROOT, (file) => path.basename(file) === 'meta.json').sort();
+}
+
 function assertNoForbiddenFields(value, file, errors, trail = []) {
   if (!value || typeof value !== 'object') return;
   if (Array.isArray(value)) {
@@ -238,7 +244,15 @@ function validateGenerationObject(file, meta, errors) {
     errors.push(`${file}: missing generation.output.name`);
   }
   if (!Array.isArray(generation.depends_on)) errors.push(`${file}: generation.depends_on must be an array`);
-  if (!Array.isArray(generation.ref_urls)) errors.push(`${file}: generation.ref_urls must be an array`);
+  if (!Array.isArray(generation.ref_urls)) {
+    errors.push(`${file}: generation.ref_urls must be an array`);
+  } else {
+    generation.ref_urls.forEach((url, index) => {
+      if (typeof url !== 'string' || !url.trim()) {
+        errors.push(`${file}: generation.ref_urls[${index}] must be a non-empty string`);
+      }
+    });
+  }
 
   const metaDir = path.dirname(path.join(ROOT, file));
   const expectedOutput = rel(path.join(metaDir, meta.image || 'image.png'));
@@ -252,8 +266,22 @@ function validateGenerationObject(file, meta, errors) {
       }
     }
     if (dep.required_status !== 'done') errors.push(`${file}: dependency ${dep.id || '?'} required_status must be done`);
-    if (dep.meta_path && !fileExists(path.join(ROOT, dep.meta_path))) {
+    if (dep.meta_path && path.isAbsolute(dep.meta_path)) {
+      errors.push(`${file}: dependency meta_path must be repo-relative`);
+    }
+    if (dep.image_path && path.isAbsolute(dep.image_path)) {
+      errors.push(`${file}: dependency image_path must be repo-relative`);
+    }
+    const depMetaPath = dep.meta_path ? path.join(ROOT, dep.meta_path) : null;
+    if (depMetaPath && !fileExists(depMetaPath)) {
       errors.push(`${file}: dependency meta missing ${dep.meta_path}`);
+    }
+    if (depMetaPath && fileExists(depMetaPath)) {
+      const depMeta = readJson(depMetaPath);
+      const expectedDepImage = rel(path.join(path.dirname(depMetaPath), depMeta.image || 'image.png'));
+      if (dep.image_path && dep.image_path !== expectedDepImage) {
+        errors.push(`${file}: dependency ${dep.id || '?'} image_path must match ${expectedDepImage}`);
+      }
     }
   }
 }
@@ -339,7 +367,7 @@ function syncItem(id) {
   const existingNote = found.item.works?.note;
   found.item.works = {
     ...works,
-    note: existingNote || 'Synced from new/works.',
+    note: existingNote || 'Synced from works/.',
   };
   writeJson(TODO_PATH, data);
   console.log(`synced ${id}: ${works.package_count} packages, ${works.image_count} images`);
@@ -395,7 +423,7 @@ function validateItem(item, errors) {
       }
       if (!fileExists(imagePath)) {
         const meta = fileExists(metaPath) ? readJson(metaPath) : {};
-        if (!['prompted', 'failed', 'skipped'].includes(meta.status)) errors.push(`${item.id}/${pkg.package_slug}/${image.id}: missing image.png`);
+        if (!['prompted', 'running', 'failed', 'skipped'].includes(meta.status)) errors.push(`${item.id}/${pkg.package_slug}/${image.id}: missing image.png`);
       }
     }
   }
@@ -519,6 +547,7 @@ function buildIndex() {
         images.push(indexed);
         packageImages.push(indexed.id);
       }
+      if (!packageImages.length) continue;
       const indexedPkg = {
         id: pkg.id,
         topic_id: topic.id,
@@ -538,6 +567,7 @@ function buildIndex() {
       packages.push(indexedPkg);
       topicPackages.push(indexedPkg.id);
     }
+    if (!topicPackages.length) continue;
 
     topics.push({
       id: topic.id,
@@ -581,6 +611,13 @@ function getArg(args, name, fallback = undefined) {
   return i >= 0 ? args[i + 1] : fallback;
 }
 
+function intArg(args, name, fallback) {
+  const raw = getArg(args, name, String(fallback));
+  const value = Number(raw);
+  if (!Number.isInteger(value) || value <= 0) throw new Error(`${name} must be a positive integer`);
+  return value;
+}
+
 function generateImage(args) {
   const metaArg = args[0];
   if (!metaArg) throw new Error('Usage: generate <works/.../meta.json>');
@@ -592,26 +629,263 @@ function generateImage(args) {
   const meta = readJson(metaPath);
   const errors = [];
   validatePromptSections(rel(metaPath), meta.prompt, errors);
+  validateGenerationObject(rel(metaPath), meta, errors);
   if (errors.length) throw new Error(errors.join('\n'));
-  const outDir = path.dirname(metaPath);
-  execFileSync('image2gen', [
+  const generation = meta.generation || {};
+  const dependsOn = generation.depends_on || [];
+  const refUrls = generation.ref_urls || [];
+  if (dependsOn.length && refUrls.length !== dependsOn.length) {
+    const deps = dependsOn.map((dep) => `${dep.id} (${dep.meta_path})`).join(', ');
+    throw new Error([
+      `${rel(metaPath)} depends on ${dependsOn.length} image(s), but generation.ref_urls has ${refUrls.length}.`,
+      `Dependencies: ${deps}`,
+      'Inject dependency result URLs into generation.ref_urls at runtime, then rerun works:generate.',
+    ].join('\n'));
+  }
+  const outputPath = path.join(ROOT, generation.output.path);
+  const outDir = path.dirname(outputPath);
+  const command = [
     meta.prompt,
+    ...refUrls.flatMap((url) => ['--ref', url]),
     '--size',
     meta.aspect_ratio || '1:1',
     '--out',
     outDir,
     '--name',
-    path.basename(meta.image || 'image.png', '.png'),
-  ], {
+    generation.output.name || path.basename(meta.image || 'image.png', '.png'),
+  ];
+  execFileSync('image2gen', command, {
     cwd: ROOT,
     stdio: 'inherit',
   });
+  if (!fileExists(outputPath)) {
+    throw new Error(`image2gen completed but did not write ${rel(outputPath)}`);
+  }
+  meta.status = 'done';
+  meta.generation.ref_urls = [];
+  writeJson(metaPath, meta);
+}
+
+function parseImageUrl(text) {
+  const matches = [...String(text).matchAll(/https:\/\/[^\s)]+\.png/g)];
+  return matches.length ? matches[matches.length - 1][0] : null;
+}
+
+function loadQueueTasks(args) {
+  const retry = getArg(args, '--retry', '');
+  const topicFilter = getArg(args, '--topic', '');
+  const packageFilter = getArg(args, '--package', '');
+  const allowedStatuses = new Set(['prompted']);
+  if (retry === 'failed') allowedStatuses.add('failed');
+  if (retry === 'running') allowedStatuses.add('running');
+
+  const tasks = [];
+  for (const metaPath of metaFiles()) {
+    const meta = readJson(metaPath);
+    const metaRel = rel(metaPath);
+    const pkgRel = `${metaRel.split('/images/')[0]}/package.json`;
+    const topicRel = `${metaRel.split('/packages/')[0]}/topic.json`;
+    const pkgPath = path.join(ROOT, pkgRel);
+    const topicPath = path.join(ROOT, topicRel);
+    const pkg = fileExists(pkgPath) ? readJson(pkgPath) : {};
+    const topic = fileExists(topicPath) ? readJson(topicPath) : {};
+    if (topicFilter && topic.id !== topicFilter) continue;
+    if (packageFilter && pkg.id !== packageFilter) continue;
+    if (!allowedStatuses.has(meta.status)) continue;
+    tasks.push({
+      metaPath,
+      metaRel,
+      meta,
+      pkg,
+      topic,
+      outputPath: path.join(ROOT, meta.generation?.output?.path || path.join(path.dirname(metaRel), meta.image || 'image.png')),
+    });
+  }
+  return tasks.sort((a, b) => {
+    return (a.topic.id || '').localeCompare(b.topic.id || '')
+      || (a.pkg.id || '').localeCompare(b.pkg.id || '')
+      || (a.meta.generation?.order || 0) - (b.meta.generation?.order || 0)
+      || a.meta.id.localeCompare(b.meta.id);
+  });
+}
+
+function dependencyState(task, resultUrls) {
+  const missing = [];
+  const failed = [];
+  const refUrls = [];
+  for (const dep of task.meta.generation?.depends_on || []) {
+    const depMetaPath = path.join(ROOT, dep.meta_path || '');
+    if (!dep.meta_path || !fileExists(depMetaPath)) {
+      missing.push(`${dep.id || '?'} missing meta`);
+      continue;
+    }
+    const depMeta = readJson(depMetaPath);
+    if (depMeta.status === 'failed') {
+      failed.push(dep.id || dep.meta_path);
+      continue;
+    }
+    if (depMeta.status !== 'done') {
+      missing.push(`${dep.id || dep.meta_path} status=${depMeta.status || 'unknown'}`);
+      continue;
+    }
+    const url = resultUrls.get(dep.meta_path);
+    if (!url) {
+      missing.push(`${dep.id || dep.meta_path} has no runtime ref URL`);
+      continue;
+    }
+    refUrls.push(url);
+  }
+  return { ready: !missing.length && !failed.length, missing, failed, refUrls };
+}
+
+function writeQueueLog(runDir, state) {
+  writeJson(path.join(runDir, 'run.json'), state);
+}
+
+function runImageTask(task, refUrls, runDir, runState) {
+  return new Promise((resolve) => {
+    const latest = readJson(task.metaPath);
+    latest.status = 'running';
+    latest.generation.ref_urls = [];
+    writeJson(task.metaPath, latest);
+
+    const outputPath = path.join(ROOT, latest.generation.output.path);
+    const command = [
+      latest.prompt,
+      ...refUrls.flatMap((url) => ['--ref', url]),
+      '--size',
+      latest.aspect_ratio || '1:1',
+      '--out',
+      path.dirname(outputPath),
+      '--name',
+      latest.generation.output.name || path.basename(latest.image || 'image.png', '.png'),
+    ];
+    const startedAt = new Date().toISOString();
+    console.log(`queue start refs=${refUrls.length} ${task.metaRel}`);
+    const child = spawn('image2gen', command, {
+      cwd: ROOT,
+      stdio: ['ignore', 'pipe', 'pipe'],
+    });
+    let output = '';
+    child.stdout.on('data', (chunk) => {
+      const text = chunk.toString();
+      output += text;
+      process.stdout.write(text);
+    });
+    child.stderr.on('data', (chunk) => {
+      const text = chunk.toString();
+      output += text;
+      process.stderr.write(text);
+    });
+    child.on('error', (error) => {
+      output += `\n${error.message}\n`;
+    });
+    child.on('close', (code) => {
+      const current = readJson(task.metaPath);
+      const resultUrl = parseImageUrl(output);
+      const succeeded = code === 0 && fileExists(outputPath);
+      current.status = succeeded ? 'done' : 'failed';
+      current.generation.ref_urls = [];
+      writeJson(task.metaPath, current);
+
+      const logPath = path.join(runDir, `${task.meta.id}.log`);
+      fs.writeFileSync(logPath, output);
+      const record = {
+        meta_path: task.metaRel,
+        status: current.status,
+        started_at: startedAt,
+        done_at: new Date().toISOString(),
+        output_path: rel(outputPath),
+        result_url: resultUrl,
+        exit_code: code,
+        log_path: rel(logPath),
+      };
+      runState.tasks[task.metaRel] = record;
+      writeQueueLog(runDir, runState);
+      console.log(`queue ${current.status} ${task.metaRel}`);
+      resolve({ task, succeeded, resultUrl });
+    });
+  });
+}
+
+async function runQueue(args) {
+  const concurrency = intArg(args, '--concurrency', 10);
+  const limit = args.includes('--limit') ? intArg(args, '--limit', 1) : null;
+  const dryRun = args.includes('--dry-run');
+  const tasks = loadQueueTasks(args).slice(0, limit || undefined);
+  const pending = new Map(tasks.map((task) => [task.metaRel, task]));
+  const running = new Set();
+  const blocked = new Map();
+  const resultUrls = new Map();
+  const runDir = path.join(ROOT, 'tmp', 'queue-runs', new Date().toISOString().replace(/[:.]/g, '-'));
+  const runState = {
+    started_at: new Date().toISOString(),
+    concurrency,
+    dry_run: dryRun,
+    tasks: {},
+  };
+
+  if (!tasks.length) {
+    console.log('queue: no prompted tasks');
+    return;
+  }
+  fs.mkdirSync(runDir, { recursive: true });
+
+  function readyTasks() {
+    blocked.clear();
+    const ready = [];
+    for (const task of pending.values()) {
+      const deps = dependencyState(task, resultUrls);
+      if (deps.ready) ready.push({ task, refUrls: deps.refUrls });
+      else blocked.set(task.metaRel, [...deps.failed, ...deps.missing]);
+    }
+    return ready;
+  }
+
+  if (dryRun) {
+    const ready = readyTasks();
+    console.log(`queue dry-run: tasks=${tasks.length} ready=${ready.length} blocked=${blocked.size} concurrency=${concurrency}`);
+    for (const { task, refUrls } of ready) console.log(`ready\trefs=${refUrls.length}\t${task.metaRel}`);
+    for (const [file, reasons] of blocked) console.log(`blocked\t${file}\t${reasons.join('; ')}`);
+    return;
+  }
+
+  await new Promise((resolve) => {
+    const schedule = () => {
+      const ready = readyTasks();
+      while (running.size < concurrency && ready.length) {
+        const { task, refUrls } = ready.shift();
+        if (!pending.has(task.metaRel)) continue;
+        pending.delete(task.metaRel);
+        const promise = runImageTask(task, refUrls, runDir, runState).then((result) => {
+          running.delete(promise);
+          if (result.succeeded && result.resultUrl) resultUrls.set(result.task.metaRel, result.resultUrl);
+          schedule();
+        });
+        running.add(promise);
+      }
+      if (!pending.size && !running.size) resolve();
+      if (pending.size && !running.size && !ready.length) {
+        for (const [file, reasons] of blocked) console.error(`queue blocked ${file}: ${reasons.join('; ')}`);
+        resolve();
+      }
+    };
+    schedule();
+  });
+
+  runState.done_at = new Date().toISOString();
+  writeQueueLog(runDir, runState);
+  buildIndex();
+  console.log(`queue complete: log ${rel(path.join(runDir, 'run.json'))}`);
 }
 
 function checkPublic() {
   const errors = [];
   validateWorksTree(errors);
   const privatePathPatterns = [
+    /^todo\//,
+    /^prototype\//,
+    /^research-materials\//,
     /^new\/todo\//,
     /^new\/prototype\//,
     /^new\/research-materials\//,
@@ -791,7 +1065,7 @@ function scaffoldPackage(args) {
 
 const [command, ...args] = process.argv.slice(2);
 
-try {
+async function main() {
   if (!command || ['-h', '--help', 'help'].includes(command)) usage();
   else if (command === 'list') listItems(args);
   else if (command === 'show') showItem(args[0]);
@@ -800,9 +1074,12 @@ try {
   else if (command === 'build-index') buildIndex();
   else if (command === 'check-public') checkPublic();
   else if (command === 'generate') generateImage(args);
+  else if (command === 'queue') await runQueue(args);
   else if (command === 'scaffold-package') scaffoldPackage(args);
   else throw new Error(`Unknown command: ${command}`);
-} catch (error) {
+}
+
+main().catch((error) => {
   console.error(`error: ${error.message}`);
   process.exit(1);
-}
+});

@@ -1,0 +1,35 @@
+{
+  "id": "A-17-material-swaps",
+  "title": "Material Swaps",
+  "description": "Prompt works that transform familiar objects into physically convincing alternate materials.",
+  "i18n": {
+    "en": {
+      "title": "Material Swaps",
+      "description": "Prompt works that transform familiar objects into physically convincing alternate materials."
+    },
+    "zh-CN": {
+      "title": "材质错位",
+      "description": "把熟悉物体转换成物理上可信的反常材质。"
+    }
+  },
+  "display": {
+    "featured": true,
+    "sort_order": 170,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "material-swap",
+      "photorealism"
+    ]
+  },
+  "packages": [
+    {
+      "id": "series-glass-rose-study",
+      "type": "series",
+      "title": "Glass Rose Study",
+      "path": "packages/series-glass-rose-study/package.json"
+    }
+  ]
+}

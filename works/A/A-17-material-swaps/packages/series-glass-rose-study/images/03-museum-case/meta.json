@@ -1,0 +1,72 @@
+{
+  "prompt": "Scene:\nA minimal museum display case in a dark gallery, black velvet base, subtle brass label holder shape without readable text, soft overhead conservation lighting, faint reflections on the glass case walls.\n\nSubject:\nThe same transparent glass rose from the reference images, placed carefully on the black velvet display base. Preserve the same five-petal bloom, curved stem, two leaves, transparent glass material, and overall scale.\n\nImportant details:\nPhotorealistic museum object photography, controlled overhead spotlight, clean case reflections, realistic glass refraction and caustics on velvet, tiny air bubbles inside the petals, quiet luxury palette of black velvet, brass, and clear glass.\n\nUse case:\nFinal image in a material consistency series, suitable as a gallery card and detail modal.\n\nConstraints:\nPRESERVE the glass rose identity from all references. No readable text, no watermark, no logo, no human hands, no extra flowers, no colored petals, no cartoon style, preserve exact 1:1 aspect ratio.",
+  "id": "03-museum-case",
+  "title": "Museum Case",
+  "description": "Museum Case keeps the same transparent glass rose in a material consistency series.",
+  "type": "series",
+  "image": "image.png",
+  "aspect_ratio": "1:1",
+  "tags": [
+    "material-swap",
+    "photorealism",
+    "series"
+  ],
+  "refs": [
+    "01-studio-rose",
+    "02-rain-window"
+  ],
+  "status": "done",
+  "generation": {
+    "order": 3,
+    "mode": "image",
+    "model": "gpt-image-2",
+    "output": {
+      "path": "works/A/A-17-material-swaps/packages/series-glass-rose-study/images/03-museum-case/image.png",
+      "name": "image"
+    },
+    "depends_on": [
+      {
+        "id": "01-studio-rose",
+        "meta_path": "works/A/A-17-material-swaps/packages/series-glass-rose-study/images/01-studio-rose/meta.json",
+        "image_path": "works/A/A-17-material-swaps/packages/series-glass-rose-study/images/01-studio-rose/image.png",
+        "ref_role": "preserve base glass rose object identity",
+        "required_status": "done"
+      },
+      {
+        "id": "02-rain-window",
+        "meta_path": "works/A/A-17-material-swaps/packages/series-glass-rose-study/images/02-rain-window/meta.json",
+        "image_path": "works/A/A-17-material-swaps/packages/series-glass-rose-study/images/02-rain-window/image.png",
+        "ref_role": "preserve continuity of glass highlights and scale",
+        "required_status": "done"
+      }
+    ],
+    "ref_urls": [],
+    "runner_notes": "Queue must inject dependency output URLs into ref_urls before execution; image2gen --ref accepts URLs, not local paths."
+  },
+  "i18n": {
+    "en": {
+      "title": "Museum Case",
+      "description": "Museum Case keeps the same transparent glass rose in a material consistency series."
+    },
+    "zh-CN": {
+      "title": "博物馆玻璃玫瑰",
+      "description": "博物馆玻璃玫瑰保持同一朵透明玻璃玫瑰。"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 30,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "material-swap",
+      "photorealism"
+    ],
+    "alt": {
+      "en": "A photorealistic museum case image of the same transparent glass rose.",
+      "zh-CN": "同一朵透明玻璃玫瑰的博物馆玻璃玫瑰图像。"
+    }
+  }
+}

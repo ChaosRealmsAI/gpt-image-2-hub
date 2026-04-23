@@ -140,12 +140,24 @@
         "en": "Time split",
         "zh-CN": "时间切分"
       }
+    },
+    "material-swap": {
+      "labels": {
+        "en": "Material swap",
+        "zh-CN": "材质错位"
+      }
+    },
+    "high-speed": {
+      "labels": {
+        "en": "High speed",
+        "zh-CN": "高速摄影"
+      }
     }
   },
   "stats": {
-    "topic_count": 3,
-    "package_count": 4,
-    "image_count": 6
+    "topic_count": 5,
+    "package_count": 7,
+    "image_count": 29
   },
   "topics": [
     {
@@ -218,6 +230,77 @@
         "single-timeline-collision"
       ],
       "topic_path": "works/A/A-13-mirror-worlds/topic.json"
+    },
+    {
+      "id": "A-17-material-swaps",
+      "todo_id": "A-17",
+      "tier": "A",
+      "title": "Material Swaps",
+      "description": "Prompt works that transform familiar objects into physically convincing alternate materials.",
+      "i18n": {
+        "en": {
+          "title": "Material Swaps",
+          "description": "Prompt works that transform familiar objects into physically convincing alternate materials."
+        },
+        "zh-CN": {
+          "title": "材质错位",
+          "description": "把熟悉物体转换成物理上可信的反常材质。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 170,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "material-swap",
+          "photorealism"
+        ]
+      },
+      "package_count": 1,
+      "image_count": 3,
+      "packages": [
+        "series-glass-rose-study"
+      ],
+      "topic_path": "works/A/A-17-material-swaps/topic.json"
+    },
+    {
+      "id": "S-16-high-speed-moments",
+      "todo_id": "S-16",
+      "tier": "S",
+      "title": "High-Speed Moments",
+      "description": "Prompt works that freeze ultra-fast physical impacts with controlled studio clarity.",
+      "i18n": {
+        "en": {
+          "title": "High-Speed Moments",
+          "description": "Prompt works that freeze ultra-fast physical impacts with controlled studio clarity."
+        },
+        "zh-CN": {
+          "title": "高速摄影定格",
+          "description": "用受控棚拍清晰定格高速物理冲击瞬间。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 160,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "high-speed",
+          "photorealism"
+        ]
+      },
+      "package_count": 2,
+      "image_count": 20,
+      "packages": [
+        "single-ten-impact-freezes",
+        "series-reference-fanout"
+      ],
+      "topic_path": "works/S/S-16-high-speed-moments/topic.json"
     },
     {
       "id": "S-19-sem-microscopy",
@@ -371,6 +454,140 @@
       ],
       "package_path": "works/A/A-13-mirror-worlds/packages/single-timeline-collision/package.json",
       "topic_path": "works/A/A-13-mirror-worlds/topic.json"
+    },
+    {
+      "id": "series-glass-rose-study",
+      "topic_id": "A-17-material-swaps",
+      "tier": "A",
+      "type": "series",
+      "title": "Glass Rose Study",
+      "description": "A three-image continuity series about the same transparent glass rose moving through studio, rain window, and museum case settings.",
+      "creative_direction": "Series focused on material consistency: one fragile rose made entirely of clear glass, same petal geometry and stem silhouette, changing environment and lighting.",
+      "i18n": {
+        "en": {
+          "title": "Glass Rose Study",
+          "description": "A three-image continuity series about the same transparent glass rose."
+        },
+        "zh-CN": {
+          "title": "玻璃玫瑰研究",
+          "description": "三张图保持同一朵透明玻璃玫瑰，在不同环境中变化。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 10,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "material-swap",
+          "series"
+        ]
+      },
+      "cover_image": "works/A/A-17-material-swaps/packages/series-glass-rose-study/images/01-studio-rose/image.png",
+      "image_count": 3,
+      "images": [
+        "A-17-material-swaps/series-glass-rose-study/01-studio-rose",
+        "A-17-material-swaps/series-glass-rose-study/02-rain-window",
+        "A-17-material-swaps/series-glass-rose-study/03-museum-case"
+      ],
+      "package_path": "works/A/A-17-material-swaps/packages/series-glass-rose-study/package.json",
+      "topic_path": "works/A/A-17-material-swaps/topic.json"
+    },
+    {
+      "id": "single-ten-impact-freezes",
+      "topic_id": "S-16-high-speed-moments",
+      "tier": "S",
+      "type": "single",
+      "title": "Ten Independent Impact Freezes",
+      "description": "Ten independent high-speed studio images designed to exercise the 10-concurrency queue path from prompted meta to finished images.",
+      "creative_direction": "Queue validation package: ten independent high-speed macro impact prompts share one black studio lighting language so the runner can fill all 10 concurrent slots. This is not a continuity series and uses no reference images.",
+      "i18n": {
+        "en": {
+          "title": "Ten Independent Impact Freezes",
+          "description": "Ten independent high-speed studio images for testing the full queued generation path."
+        },
+        "zh-CN": {
+          "title": "十张独立高速定格",
+          "description": "十张独立高速棚拍图，用来验证完整队列生成链路。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 20,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "high-speed",
+          "photorealism"
+        ]
+      },
+      "cover_image": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/images/01-milk-crown/image.png",
+      "image_count": 10,
+      "images": [
+        "S-16-high-speed-moments/single-ten-impact-freezes/01-milk-crown",
+        "S-16-high-speed-moments/single-ten-impact-freezes/02-ink-bloom",
+        "S-16-high-speed-moments/single-ten-impact-freezes/03-orange-peel-burst",
+        "S-16-high-speed-moments/single-ten-impact-freezes/04-ceramic-chip",
+        "S-16-high-speed-moments/single-ten-impact-freezes/05-coffee-splash",
+        "S-16-high-speed-moments/single-ten-impact-freezes/06-ice-cube-impact",
+        "S-16-high-speed-moments/single-ten-impact-freezes/07-powder-burst",
+        "S-16-high-speed-moments/single-ten-impact-freezes/08-berry-split",
+        "S-16-high-speed-moments/single-ten-impact-freezes/09-metal-spark",
+        "S-16-high-speed-moments/single-ten-impact-freezes/10-water-balloon"
+      ],
+      "package_path": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/package.json",
+      "topic_path": "works/S/S-16-high-speed-moments/topic.json"
+    },
+    {
+      "id": "series-reference-fanout",
+      "topic_id": "S-16-high-speed-moments",
+      "tier": "S",
+      "type": "series",
+      "title": "Reference Fanout",
+      "description": "A ten-image dependency series: one acrylic cube reference image followed by nine variations that preserve the same object and studio setup.",
+      "creative_direction": "True continuity series for queue validation: image 01 establishes object identity; images 02-10 depend on 01 and should run as a fanout batch with --ref once the reference is done.",
+      "i18n": {
+        "en": {
+          "title": "Reference Fanout",
+          "description": "One reference image followed by nine dependent continuity variations."
+        },
+        "zh-CN": {
+          "title": "参考图扇出系列",
+          "description": "一张基准参考图，后续九张依赖它保持主体连续。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 30,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "high-speed",
+          "series"
+        ]
+      },
+      "cover_image": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/01-reference-rig/image.png",
+      "image_count": 10,
+      "images": [
+        "S-16-high-speed-moments/series-reference-fanout/01-reference-rig",
+        "S-16-high-speed-moments/series-reference-fanout/02-water-impact",
+        "S-16-high-speed-moments/series-reference-fanout/03-red-gel-impact",
+        "S-16-high-speed-moments/series-reference-fanout/04-white-powder-impact",
+        "S-16-high-speed-moments/series-reference-fanout/05-spark-impact",
+        "S-16-high-speed-moments/series-reference-fanout/06-ice-shard-impact",
+        "S-16-high-speed-moments/series-reference-fanout/07-ink-ribbon-impact",
+        "S-16-high-speed-moments/series-reference-fanout/08-gold-dust-impact",
+        "S-16-high-speed-moments/series-reference-fanout/09-blue-liquid-impact",
+        "S-16-high-speed-moments/series-reference-fanout/10-smoke-ring-impact"
+      ],
+      "package_path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/package.json",
+      "topic_path": "works/S/S-16-high-speed-moments/topic.json"
     },
     {
       "id": "single-pollen-micro-city",
@@ -740,6 +957,1563 @@
       "package_title": "Timeline Collision Hero",
       "topic_title": "Mirror Worlds",
       "package_ref_image": "works/A/A-13-mirror-worlds/packages/single-timeline-collision/images/timeline-collision-hero/image.png"
+    },
+    {
+      "id": "A-17-material-swaps/series-glass-rose-study/01-studio-rose",
+      "image_id": "01-studio-rose",
+      "package_id": "series-glass-rose-study",
+      "topic_id": "A-17-material-swaps",
+      "tier": "A",
+      "title": "Studio Rose",
+      "description": "Studio Rose keeps the same transparent glass rose in a material consistency series.",
+      "i18n": {
+        "en": {
+          "title": "Studio Rose",
+          "description": "Studio Rose keeps the same transparent glass rose in a material consistency series."
+        },
+        "zh-CN": {
+          "title": "影棚玻璃玫瑰",
+          "description": "影棚玻璃玫瑰保持同一朵透明玻璃玫瑰。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 10,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "material-swap",
+          "photorealism"
+        ],
+        "alt": {
+          "en": "A photorealistic studio rose image of the same transparent glass rose.",
+          "zh-CN": "同一朵透明玻璃玫瑰的影棚玻璃玫瑰图像。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 1,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/A/A-17-material-swaps/packages/series-glass-rose-study/images/01-studio-rose/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "No reference image required. Queue can run this image directly from prompt."
+      },
+      "type": "series",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "material-swap",
+        "photorealism",
+        "series"
+      ],
+      "refs": [],
+      "image": "works/A/A-17-material-swaps/packages/series-glass-rose-study/images/01-studio-rose/image.png",
+      "meta_path": "works/A/A-17-material-swaps/packages/series-glass-rose-study/images/01-studio-rose/meta.json",
+      "package_path": "works/A/A-17-material-swaps/packages/series-glass-rose-study/package.json",
+      "topic_path": "works/A/A-17-material-swaps/topic.json",
+      "package_title": "Glass Rose Study",
+      "topic_title": "Material Swaps",
+      "package_ref_image": "works/A/A-17-material-swaps/packages/series-glass-rose-study/images/01-studio-rose/image.png"
+    },
+    {
+      "id": "A-17-material-swaps/series-glass-rose-study/02-rain-window",
+      "image_id": "02-rain-window",
+      "package_id": "series-glass-rose-study",
+      "topic_id": "A-17-material-swaps",
+      "tier": "A",
+      "title": "Rain Window",
+      "description": "Rain Window keeps the same transparent glass rose in a material consistency series.",
+      "i18n": {
+        "en": {
+          "title": "Rain Window",
+          "description": "Rain Window keeps the same transparent glass rose in a material consistency series."
+        },
+        "zh-CN": {
+          "title": "雨窗玻璃玫瑰",
+          "description": "雨窗玻璃玫瑰保持同一朵透明玻璃玫瑰。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 20,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "material-swap",
+          "photorealism"
+        ],
+        "alt": {
+          "en": "A photorealistic rain window image of the same transparent glass rose.",
+          "zh-CN": "同一朵透明玻璃玫瑰的雨窗玻璃玫瑰图像。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 2,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/A/A-17-material-swaps/packages/series-glass-rose-study/images/02-rain-window/image.png",
+          "name": "image"
+        },
+        "depends_on": [
+          {
+            "id": "01-studio-rose",
+            "meta_path": "works/A/A-17-material-swaps/packages/series-glass-rose-study/images/01-studio-rose/meta.json",
+            "image_path": "works/A/A-17-material-swaps/packages/series-glass-rose-study/images/01-studio-rose/image.png",
+            "ref_role": "preserve exact glass rose petal geometry, stem curve, and material identity",
+            "required_status": "done"
+          }
+        ],
+        "ref_urls": [],
+        "runner_notes": "Queue must inject dependency output URLs into ref_urls before execution; image2gen --ref accepts URLs, not local paths."
+      },
+      "type": "series",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "material-swap",
+        "photorealism",
+        "series"
+      ],
+      "refs": [
+        "01-studio-rose"
+      ],
+      "image": "works/A/A-17-material-swaps/packages/series-glass-rose-study/images/02-rain-window/image.png",
+      "meta_path": "works/A/A-17-material-swaps/packages/series-glass-rose-study/images/02-rain-window/meta.json",
+      "package_path": "works/A/A-17-material-swaps/packages/series-glass-rose-study/package.json",
+      "topic_path": "works/A/A-17-material-swaps/topic.json",
+      "package_title": "Glass Rose Study",
+      "topic_title": "Material Swaps",
+      "package_ref_image": "works/A/A-17-material-swaps/packages/series-glass-rose-study/images/02-rain-window/image.png"
+    },
+    {
+      "id": "A-17-material-swaps/series-glass-rose-study/03-museum-case",
+      "image_id": "03-museum-case",
+      "package_id": "series-glass-rose-study",
+      "topic_id": "A-17-material-swaps",
+      "tier": "A",
+      "title": "Museum Case",
+      "description": "Museum Case keeps the same transparent glass rose in a material consistency series.",
+      "i18n": {
+        "en": {
+          "title": "Museum Case",
+          "description": "Museum Case keeps the same transparent glass rose in a material consistency series."
+        },
+        "zh-CN": {
+          "title": "博物馆玻璃玫瑰",
+          "description": "博物馆玻璃玫瑰保持同一朵透明玻璃玫瑰。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 30,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "material-swap",
+          "photorealism"
+        ],
+        "alt": {
+          "en": "A photorealistic museum case image of the same transparent glass rose.",
+          "zh-CN": "同一朵透明玻璃玫瑰的博物馆玻璃玫瑰图像。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 3,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/A/A-17-material-swaps/packages/series-glass-rose-study/images/03-museum-case/image.png",
+          "name": "image"
+        },
+        "depends_on": [
+          {
+            "id": "01-studio-rose",
+            "meta_path": "works/A/A-17-material-swaps/packages/series-glass-rose-study/images/01-studio-rose/meta.json",
+            "image_path": "works/A/A-17-material-swaps/packages/series-glass-rose-study/images/01-studio-rose/image.png",
+            "ref_role": "preserve base glass rose object identity",
+            "required_status": "done"
+          },
+          {
+            "id": "02-rain-window",
+            "meta_path": "works/A/A-17-material-swaps/packages/series-glass-rose-study/images/02-rain-window/meta.json",
+            "image_path": "works/A/A-17-material-swaps/packages/series-glass-rose-study/images/02-rain-window/image.png",
+            "ref_role": "preserve continuity of glass highlights and scale",
+            "required_status": "done"
+          }
+        ],
+        "ref_urls": [],
+        "runner_notes": "Queue must inject dependency output URLs into ref_urls before execution; image2gen --ref accepts URLs, not local paths."
+      },
+      "type": "series",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "material-swap",
+        "photorealism",
+        "series"
+      ],
+      "refs": [
+        "01-studio-rose",
+        "02-rain-window"
+      ],
+      "image": "works/A/A-17-material-swaps/packages/series-glass-rose-study/images/03-museum-case/image.png",
+      "meta_path": "works/A/A-17-material-swaps/packages/series-glass-rose-study/images/03-museum-case/meta.json",
+      "package_path": "works/A/A-17-material-swaps/packages/series-glass-rose-study/package.json",
+      "topic_path": "works/A/A-17-material-swaps/topic.json",
+      "package_title": "Glass Rose Study",
+      "topic_title": "Material Swaps",
+      "package_ref_image": "works/A/A-17-material-swaps/packages/series-glass-rose-study/images/03-museum-case/image.png"
+    },
+    {
+      "id": "S-16-high-speed-moments/single-ten-impact-freezes/01-milk-crown",
+      "image_id": "01-milk-crown",
+      "package_id": "single-ten-impact-freezes",
+      "topic_id": "S-16-high-speed-moments",
+      "tier": "S",
+      "title": "Milk Crown",
+      "description": "Milk Crown freezes one high-speed physical event in a shared black studio language.",
+      "i18n": {
+        "en": {
+          "title": "Milk Crown",
+          "description": "Milk Crown freezes one high-speed physical event in a shared black studio language."
+        },
+        "zh-CN": {
+          "title": "Milk Crown",
+          "description": "Milk Crown：同一黑色棚拍语言下的一次高速物理瞬间。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 10,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "high-speed",
+          "photorealism"
+        ],
+        "alt": {
+          "en": "Photorealistic high-speed studio image of a white milk droplet forming a crown splash on a glossy black tray.",
+          "zh-CN": "a white milk droplet forming a crown splash on a glossy black tray 的写实高速棚拍图。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 1,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/images/01-milk-crown/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "Independent queue task. No reference image required; safe to run in parallel with other prompted images."
+      },
+      "type": "single",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "high-speed",
+        "photorealism"
+      ],
+      "refs": [],
+      "image": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/images/01-milk-crown/image.png",
+      "meta_path": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/images/01-milk-crown/meta.json",
+      "package_path": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/package.json",
+      "topic_path": "works/S/S-16-high-speed-moments/topic.json",
+      "package_title": "Ten Independent Impact Freezes",
+      "topic_title": "High-Speed Moments",
+      "package_ref_image": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/images/01-milk-crown/image.png"
+    },
+    {
+      "id": "S-16-high-speed-moments/single-ten-impact-freezes/02-ink-bloom",
+      "image_id": "02-ink-bloom",
+      "package_id": "single-ten-impact-freezes",
+      "topic_id": "S-16-high-speed-moments",
+      "tier": "S",
+      "title": "Ink Bloom",
+      "description": "Ink Bloom freezes one high-speed physical event in a shared black studio language.",
+      "i18n": {
+        "en": {
+          "title": "Ink Bloom",
+          "description": "Ink Bloom freezes one high-speed physical event in a shared black studio language."
+        },
+        "zh-CN": {
+          "title": "Ink Bloom",
+          "description": "Ink Bloom：同一黑色棚拍语言下的一次高速物理瞬间。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 20,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "high-speed",
+          "photorealism"
+        ],
+        "alt": {
+          "en": "Photorealistic high-speed studio image of black ink blooming inside clear water in a glass cube.",
+          "zh-CN": "black ink blooming inside clear water in a glass cube 的写实高速棚拍图。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 2,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/images/02-ink-bloom/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "Independent queue task. No reference image required; safe to run in parallel with other prompted images."
+      },
+      "type": "single",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "high-speed",
+        "photorealism"
+      ],
+      "refs": [],
+      "image": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/images/02-ink-bloom/image.png",
+      "meta_path": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/images/02-ink-bloom/meta.json",
+      "package_path": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/package.json",
+      "topic_path": "works/S/S-16-high-speed-moments/topic.json",
+      "package_title": "Ten Independent Impact Freezes",
+      "topic_title": "High-Speed Moments",
+      "package_ref_image": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/images/02-ink-bloom/image.png"
+    },
+    {
+      "id": "S-16-high-speed-moments/single-ten-impact-freezes/03-orange-peel-burst",
+      "image_id": "03-orange-peel-burst",
+      "package_id": "single-ten-impact-freezes",
+      "topic_id": "S-16-high-speed-moments",
+      "tier": "S",
+      "title": "Orange Peel Burst",
+      "description": "Orange Peel Burst freezes one high-speed physical event in a shared black studio language.",
+      "i18n": {
+        "en": {
+          "title": "Orange Peel Burst",
+          "description": "Orange Peel Burst freezes one high-speed physical event in a shared black studio language."
+        },
+        "zh-CN": {
+          "title": "Orange Peel Burst",
+          "description": "Orange Peel Burst：同一黑色棚拍语言下的一次高速物理瞬间。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 30,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "high-speed",
+          "photorealism"
+        ],
+        "alt": {
+          "en": "Photorealistic high-speed studio image of a peeled orange segment bursting with juice mist.",
+          "zh-CN": "a peeled orange segment bursting with juice mist 的写实高速棚拍图。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 3,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/images/03-orange-peel-burst/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "Independent queue task. No reference image required; safe to run in parallel with other prompted images."
+      },
+      "type": "single",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "high-speed",
+        "photorealism"
+      ],
+      "refs": [],
+      "image": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/images/03-orange-peel-burst/image.png",
+      "meta_path": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/images/03-orange-peel-burst/meta.json",
+      "package_path": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/package.json",
+      "topic_path": "works/S/S-16-high-speed-moments/topic.json",
+      "package_title": "Ten Independent Impact Freezes",
+      "topic_title": "High-Speed Moments",
+      "package_ref_image": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/images/03-orange-peel-burst/image.png"
+    },
+    {
+      "id": "S-16-high-speed-moments/single-ten-impact-freezes/04-ceramic-chip",
+      "image_id": "04-ceramic-chip",
+      "package_id": "single-ten-impact-freezes",
+      "topic_id": "S-16-high-speed-moments",
+      "tier": "S",
+      "title": "Ceramic Chip",
+      "description": "Ceramic Chip freezes one high-speed physical event in a shared black studio language.",
+      "i18n": {
+        "en": {
+          "title": "Ceramic Chip",
+          "description": "Ceramic Chip freezes one high-speed physical event in a shared black studio language."
+        },
+        "zh-CN": {
+          "title": "Ceramic Chip",
+          "description": "Ceramic Chip：同一黑色棚拍语言下的一次高速物理瞬间。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 40,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "high-speed",
+          "photorealism"
+        ],
+        "alt": {
+          "en": "Photorealistic high-speed studio image of a white ceramic cup chip breaking away from an unseen impact.",
+          "zh-CN": "a white ceramic cup chip breaking away from an unseen impact 的写实高速棚拍图。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 4,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/images/04-ceramic-chip/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "Independent queue task. No reference image required; safe to run in parallel with other prompted images."
+      },
+      "type": "single",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "high-speed",
+        "photorealism"
+      ],
+      "refs": [],
+      "image": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/images/04-ceramic-chip/image.png",
+      "meta_path": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/images/04-ceramic-chip/meta.json",
+      "package_path": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/package.json",
+      "topic_path": "works/S/S-16-high-speed-moments/topic.json",
+      "package_title": "Ten Independent Impact Freezes",
+      "topic_title": "High-Speed Moments",
+      "package_ref_image": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/images/04-ceramic-chip/image.png"
+    },
+    {
+      "id": "S-16-high-speed-moments/single-ten-impact-freezes/05-coffee-splash",
+      "image_id": "05-coffee-splash",
+      "package_id": "single-ten-impact-freezes",
+      "topic_id": "S-16-high-speed-moments",
+      "tier": "S",
+      "title": "Coffee Splash",
+      "description": "Coffee Splash freezes one high-speed physical event in a shared black studio language.",
+      "i18n": {
+        "en": {
+          "title": "Coffee Splash",
+          "description": "Coffee Splash freezes one high-speed physical event in a shared black studio language."
+        },
+        "zh-CN": {
+          "title": "Coffee Splash",
+          "description": "Coffee Splash：同一黑色棚拍语言下的一次高速物理瞬间。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 50,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "high-speed",
+          "photorealism"
+        ],
+        "alt": {
+          "en": "Photorealistic high-speed studio image of espresso splashing upward from a black demitasse cup.",
+          "zh-CN": "espresso splashing upward from a black demitasse cup 的写实高速棚拍图。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 5,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/images/05-coffee-splash/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "Independent queue task. No reference image required; safe to run in parallel with other prompted images."
+      },
+      "type": "single",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "high-speed",
+        "photorealism"
+      ],
+      "refs": [],
+      "image": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/images/05-coffee-splash/image.png",
+      "meta_path": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/images/05-coffee-splash/meta.json",
+      "package_path": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/package.json",
+      "topic_path": "works/S/S-16-high-speed-moments/topic.json",
+      "package_title": "Ten Independent Impact Freezes",
+      "topic_title": "High-Speed Moments",
+      "package_ref_image": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/images/05-coffee-splash/image.png"
+    },
+    {
+      "id": "S-16-high-speed-moments/single-ten-impact-freezes/06-ice-cube-impact",
+      "image_id": "06-ice-cube-impact",
+      "package_id": "single-ten-impact-freezes",
+      "topic_id": "S-16-high-speed-moments",
+      "tier": "S",
+      "title": "Ice Cube Impact",
+      "description": "Ice Cube Impact freezes one high-speed physical event in a shared black studio language.",
+      "i18n": {
+        "en": {
+          "title": "Ice Cube Impact",
+          "description": "Ice Cube Impact freezes one high-speed physical event in a shared black studio language."
+        },
+        "zh-CN": {
+          "title": "Ice Cube Impact",
+          "description": "Ice Cube Impact：同一黑色棚拍语言下的一次高速物理瞬间。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 60,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "high-speed",
+          "photorealism"
+        ],
+        "alt": {
+          "en": "Photorealistic high-speed studio image of a clear ice cube striking a shallow water surface.",
+          "zh-CN": "a clear ice cube striking a shallow water surface 的写实高速棚拍图。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 6,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/images/06-ice-cube-impact/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "Independent queue task. No reference image required; safe to run in parallel with other prompted images."
+      },
+      "type": "single",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "high-speed",
+        "photorealism"
+      ],
+      "refs": [],
+      "image": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/images/06-ice-cube-impact/image.png",
+      "meta_path": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/images/06-ice-cube-impact/meta.json",
+      "package_path": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/package.json",
+      "topic_path": "works/S/S-16-high-speed-moments/topic.json",
+      "package_title": "Ten Independent Impact Freezes",
+      "topic_title": "High-Speed Moments",
+      "package_ref_image": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/images/06-ice-cube-impact/image.png"
+    },
+    {
+      "id": "S-16-high-speed-moments/single-ten-impact-freezes/07-powder-burst",
+      "image_id": "07-powder-burst",
+      "package_id": "single-ten-impact-freezes",
+      "topic_id": "S-16-high-speed-moments",
+      "tier": "S",
+      "title": "Powder Burst",
+      "description": "Powder Burst freezes one high-speed physical event in a shared black studio language.",
+      "i18n": {
+        "en": {
+          "title": "Powder Burst",
+          "description": "Powder Burst freezes one high-speed physical event in a shared black studio language."
+        },
+        "zh-CN": {
+          "title": "Powder Burst",
+          "description": "Powder Burst：同一黑色棚拍语言下的一次高速物理瞬间。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 70,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "high-speed",
+          "photorealism"
+        ],
+        "alt": {
+          "en": "Photorealistic high-speed studio image of a compact sphere of blue pigment powder exploding outward.",
+          "zh-CN": "a compact sphere of blue pigment powder exploding outward 的写实高速棚拍图。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 7,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/images/07-powder-burst/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "Independent queue task. No reference image required; safe to run in parallel with other prompted images."
+      },
+      "type": "single",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "high-speed",
+        "photorealism"
+      ],
+      "refs": [],
+      "image": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/images/07-powder-burst/image.png",
+      "meta_path": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/images/07-powder-burst/meta.json",
+      "package_path": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/package.json",
+      "topic_path": "works/S/S-16-high-speed-moments/topic.json",
+      "package_title": "Ten Independent Impact Freezes",
+      "topic_title": "High-Speed Moments",
+      "package_ref_image": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/images/07-powder-burst/image.png"
+    },
+    {
+      "id": "S-16-high-speed-moments/single-ten-impact-freezes/08-berry-split",
+      "image_id": "08-berry-split",
+      "package_id": "single-ten-impact-freezes",
+      "topic_id": "S-16-high-speed-moments",
+      "tier": "S",
+      "title": "Berry Split",
+      "description": "Berry Split freezes one high-speed physical event in a shared black studio language.",
+      "i18n": {
+        "en": {
+          "title": "Berry Split",
+          "description": "Berry Split freezes one high-speed physical event in a shared black studio language."
+        },
+        "zh-CN": {
+          "title": "Berry Split",
+          "description": "Berry Split：同一黑色棚拍语言下的一次高速物理瞬间。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 80,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "high-speed",
+          "photorealism"
+        ],
+        "alt": {
+          "en": "Photorealistic high-speed studio image of a ripe strawberry splitting open with juice droplets.",
+          "zh-CN": "a ripe strawberry splitting open with juice droplets 的写实高速棚拍图。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 8,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/images/08-berry-split/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "Independent queue task. No reference image required; safe to run in parallel with other prompted images."
+      },
+      "type": "single",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "high-speed",
+        "photorealism"
+      ],
+      "refs": [],
+      "image": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/images/08-berry-split/image.png",
+      "meta_path": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/images/08-berry-split/meta.json",
+      "package_path": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/package.json",
+      "topic_path": "works/S/S-16-high-speed-moments/topic.json",
+      "package_title": "Ten Independent Impact Freezes",
+      "topic_title": "High-Speed Moments",
+      "package_ref_image": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/images/08-berry-split/image.png"
+    },
+    {
+      "id": "S-16-high-speed-moments/single-ten-impact-freezes/09-metal-spark",
+      "image_id": "09-metal-spark",
+      "package_id": "single-ten-impact-freezes",
+      "topic_id": "S-16-high-speed-moments",
+      "tier": "S",
+      "title": "Metal Spark",
+      "description": "Metal Spark freezes one high-speed physical event in a shared black studio language.",
+      "i18n": {
+        "en": {
+          "title": "Metal Spark",
+          "description": "Metal Spark freezes one high-speed physical event in a shared black studio language."
+        },
+        "zh-CN": {
+          "title": "Metal Spark",
+          "description": "Metal Spark：同一黑色棚拍语言下的一次高速物理瞬间。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 90,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "high-speed",
+          "photorealism"
+        ],
+        "alt": {
+          "en": "Photorealistic high-speed studio image of a small steel bearing striking a metal plate and producing sparks.",
+          "zh-CN": "a small steel bearing striking a metal plate and producing sparks 的写实高速棚拍图。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 9,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/images/09-metal-spark/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "Independent queue task. No reference image required; safe to run in parallel with other prompted images."
+      },
+      "type": "single",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "high-speed",
+        "photorealism"
+      ],
+      "refs": [],
+      "image": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/images/09-metal-spark/image.png",
+      "meta_path": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/images/09-metal-spark/meta.json",
+      "package_path": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/package.json",
+      "topic_path": "works/S/S-16-high-speed-moments/topic.json",
+      "package_title": "Ten Independent Impact Freezes",
+      "topic_title": "High-Speed Moments",
+      "package_ref_image": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/images/09-metal-spark/image.png"
+    },
+    {
+      "id": "S-16-high-speed-moments/single-ten-impact-freezes/10-water-balloon",
+      "image_id": "10-water-balloon",
+      "package_id": "single-ten-impact-freezes",
+      "topic_id": "S-16-high-speed-moments",
+      "tier": "S",
+      "title": "Water Balloon",
+      "description": "Water Balloon freezes one high-speed physical event in a shared black studio language.",
+      "i18n": {
+        "en": {
+          "title": "Water Balloon",
+          "description": "Water Balloon freezes one high-speed physical event in a shared black studio language."
+        },
+        "zh-CN": {
+          "title": "Water Balloon",
+          "description": "Water Balloon：同一黑色棚拍语言下的一次高速物理瞬间。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 100,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "high-speed",
+          "photorealism"
+        ],
+        "alt": {
+          "en": "Photorealistic high-speed studio image of a transparent water balloon rupturing in midair.",
+          "zh-CN": "a transparent water balloon rupturing in midair 的写实高速棚拍图。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 10,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/images/10-water-balloon/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "Independent queue task. No reference image required; safe to run in parallel with other prompted images."
+      },
+      "type": "single",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "high-speed",
+        "photorealism"
+      ],
+      "refs": [],
+      "image": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/images/10-water-balloon/image.png",
+      "meta_path": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/images/10-water-balloon/meta.json",
+      "package_path": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/package.json",
+      "topic_path": "works/S/S-16-high-speed-moments/topic.json",
+      "package_title": "Ten Independent Impact Freezes",
+      "topic_title": "High-Speed Moments",
+      "package_ref_image": "works/S/S-16-high-speed-moments/packages/single-ten-impact-freezes/images/10-water-balloon/image.png"
+    },
+    {
+      "id": "S-16-high-speed-moments/series-reference-fanout/01-reference-rig",
+      "image_id": "01-reference-rig",
+      "package_id": "series-reference-fanout",
+      "topic_id": "S-16-high-speed-moments",
+      "tier": "S",
+      "title": "Reference Rig",
+      "description": "Reference Rig is part of a reference-dependent acrylic cube continuity series.",
+      "i18n": {
+        "en": {
+          "title": "Reference Rig",
+          "description": "Reference Rig is part of a reference-dependent acrylic cube continuity series."
+        },
+        "zh-CN": {
+          "title": "Reference Rig",
+          "description": "Reference Rig：参考图依赖的亚克力方块连续性系列。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 10,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "high-speed",
+          "series"
+        ],
+        "alt": {
+          "en": "High-speed studio image: a single clear acrylic cube on a glossy black tray with suspended silver dust particles around it.",
+          "zh-CN": "高速棚拍图：a single clear acrylic cube on a glossy black tray with suspended silver dust particles around it。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 1,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/01-reference-rig/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "Reference seed image. No --ref required."
+      },
+      "type": "series",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "high-speed",
+        "photorealism",
+        "series"
+      ],
+      "refs": [],
+      "image": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/01-reference-rig/image.png",
+      "meta_path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/01-reference-rig/meta.json",
+      "package_path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/package.json",
+      "topic_path": "works/S/S-16-high-speed-moments/topic.json",
+      "package_title": "Reference Fanout",
+      "topic_title": "High-Speed Moments",
+      "package_ref_image": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/01-reference-rig/image.png"
+    },
+    {
+      "id": "S-16-high-speed-moments/series-reference-fanout/02-water-impact",
+      "image_id": "02-water-impact",
+      "package_id": "series-reference-fanout",
+      "topic_id": "S-16-high-speed-moments",
+      "tier": "S",
+      "title": "Water Impact",
+      "description": "Water Impact is part of a reference-dependent acrylic cube continuity series.",
+      "i18n": {
+        "en": {
+          "title": "Water Impact",
+          "description": "Water Impact is part of a reference-dependent acrylic cube continuity series."
+        },
+        "zh-CN": {
+          "title": "Water Impact",
+          "description": "Water Impact：参考图依赖的亚克力方块连续性系列。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 20,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "high-speed",
+          "series"
+        ],
+        "alt": {
+          "en": "High-speed studio image: the same clear acrylic cube being struck by a thin sheet of water from the left, with droplets wrapping around the cube.",
+          "zh-CN": "高速棚拍图：the same clear acrylic cube being struck by a thin sheet of water from the left, with droplets wrapping around the cube。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 2,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/02-water-impact/image.png",
+          "name": "image"
+        },
+        "depends_on": [
+          {
+            "id": "01-reference-rig",
+            "meta_path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/01-reference-rig/meta.json",
+            "image_path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/01-reference-rig/image.png",
+            "ref_role": "preserve acrylic cube identity, black tray, camera angle, lighting, and frozen-particle style",
+            "required_status": "done"
+          }
+        ],
+        "ref_urls": [],
+        "runner_notes": "Queue must wait for 01-reference-rig, then pass its runtime result URL as --ref."
+      },
+      "type": "series",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "high-speed",
+        "photorealism",
+        "series"
+      ],
+      "refs": [
+        "01-reference-rig"
+      ],
+      "image": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/02-water-impact/image.png",
+      "meta_path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/02-water-impact/meta.json",
+      "package_path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/package.json",
+      "topic_path": "works/S/S-16-high-speed-moments/topic.json",
+      "package_title": "Reference Fanout",
+      "topic_title": "High-Speed Moments",
+      "package_ref_image": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/02-water-impact/image.png"
+    },
+    {
+      "id": "S-16-high-speed-moments/series-reference-fanout/03-red-gel-impact",
+      "image_id": "03-red-gel-impact",
+      "package_id": "series-reference-fanout",
+      "topic_id": "S-16-high-speed-moments",
+      "tier": "S",
+      "title": "Red Gel Impact",
+      "description": "Red Gel Impact is part of a reference-dependent acrylic cube continuity series.",
+      "i18n": {
+        "en": {
+          "title": "Red Gel Impact",
+          "description": "Red Gel Impact is part of a reference-dependent acrylic cube continuity series."
+        },
+        "zh-CN": {
+          "title": "Red Gel Impact",
+          "description": "Red Gel Impact：参考图依赖的亚克力方块连续性系列。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 30,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "high-speed",
+          "series"
+        ],
+        "alt": {
+          "en": "High-speed studio image: the same clear acrylic cube surrounded by a bursting red translucent gel sheet.",
+          "zh-CN": "高速棚拍图：the same clear acrylic cube surrounded by a bursting red translucent gel sheet。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 3,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/03-red-gel-impact/image.png",
+          "name": "image"
+        },
+        "depends_on": [
+          {
+            "id": "01-reference-rig",
+            "meta_path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/01-reference-rig/meta.json",
+            "image_path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/01-reference-rig/image.png",
+            "ref_role": "preserve acrylic cube identity, black tray, camera angle, lighting, and frozen-particle style",
+            "required_status": "done"
+          }
+        ],
+        "ref_urls": [],
+        "runner_notes": "Queue must wait for 01-reference-rig, then pass its runtime result URL as --ref."
+      },
+      "type": "series",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "high-speed",
+        "photorealism",
+        "series"
+      ],
+      "refs": [
+        "01-reference-rig"
+      ],
+      "image": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/03-red-gel-impact/image.png",
+      "meta_path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/03-red-gel-impact/meta.json",
+      "package_path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/package.json",
+      "topic_path": "works/S/S-16-high-speed-moments/topic.json",
+      "package_title": "Reference Fanout",
+      "topic_title": "High-Speed Moments",
+      "package_ref_image": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/03-red-gel-impact/image.png"
+    },
+    {
+      "id": "S-16-high-speed-moments/series-reference-fanout/04-white-powder-impact",
+      "image_id": "04-white-powder-impact",
+      "package_id": "series-reference-fanout",
+      "topic_id": "S-16-high-speed-moments",
+      "tier": "S",
+      "title": "White Powder Impact",
+      "description": "White Powder Impact is part of a reference-dependent acrylic cube continuity series.",
+      "i18n": {
+        "en": {
+          "title": "White Powder Impact",
+          "description": "White Powder Impact is part of a reference-dependent acrylic cube continuity series."
+        },
+        "zh-CN": {
+          "title": "White Powder Impact",
+          "description": "White Powder Impact：参考图依赖的亚克力方块连续性系列。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 40,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "high-speed",
+          "series"
+        ],
+        "alt": {
+          "en": "High-speed studio image: the same clear acrylic cube hit by a cloud of white powder that blooms around its edges.",
+          "zh-CN": "高速棚拍图：the same clear acrylic cube hit by a cloud of white powder that blooms around its edges。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 4,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/04-white-powder-impact/image.png",
+          "name": "image"
+        },
+        "depends_on": [
+          {
+            "id": "01-reference-rig",
+            "meta_path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/01-reference-rig/meta.json",
+            "image_path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/01-reference-rig/image.png",
+            "ref_role": "preserve acrylic cube identity, black tray, camera angle, lighting, and frozen-particle style",
+            "required_status": "done"
+          }
+        ],
+        "ref_urls": [],
+        "runner_notes": "Queue must wait for 01-reference-rig, then pass its runtime result URL as --ref."
+      },
+      "type": "series",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "high-speed",
+        "photorealism",
+        "series"
+      ],
+      "refs": [
+        "01-reference-rig"
+      ],
+      "image": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/04-white-powder-impact/image.png",
+      "meta_path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/04-white-powder-impact/meta.json",
+      "package_path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/package.json",
+      "topic_path": "works/S/S-16-high-speed-moments/topic.json",
+      "package_title": "Reference Fanout",
+      "topic_title": "High-Speed Moments",
+      "package_ref_image": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/04-white-powder-impact/image.png"
+    },
+    {
+      "id": "S-16-high-speed-moments/series-reference-fanout/05-spark-impact",
+      "image_id": "05-spark-impact",
+      "package_id": "series-reference-fanout",
+      "topic_id": "S-16-high-speed-moments",
+      "tier": "S",
+      "title": "Spark Impact",
+      "description": "Spark Impact is part of a reference-dependent acrylic cube continuity series.",
+      "i18n": {
+        "en": {
+          "title": "Spark Impact",
+          "description": "Spark Impact is part of a reference-dependent acrylic cube continuity series."
+        },
+        "zh-CN": {
+          "title": "Spark Impact",
+          "description": "Spark Impact：参考图依赖的亚克力方块连续性系列。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 50,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "high-speed",
+          "series"
+        ],
+        "alt": {
+          "en": "High-speed studio image: the same clear acrylic cube with orange sparks skimming past its front edge.",
+          "zh-CN": "高速棚拍图：the same clear acrylic cube with orange sparks skimming past its front edge。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 5,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/05-spark-impact/image.png",
+          "name": "image"
+        },
+        "depends_on": [
+          {
+            "id": "01-reference-rig",
+            "meta_path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/01-reference-rig/meta.json",
+            "image_path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/01-reference-rig/image.png",
+            "ref_role": "preserve acrylic cube identity, black tray, camera angle, lighting, and frozen-particle style",
+            "required_status": "done"
+          }
+        ],
+        "ref_urls": [],
+        "runner_notes": "Queue must wait for 01-reference-rig, then pass its runtime result URL as --ref."
+      },
+      "type": "series",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "high-speed",
+        "photorealism",
+        "series"
+      ],
+      "refs": [
+        "01-reference-rig"
+      ],
+      "image": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/05-spark-impact/image.png",
+      "meta_path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/05-spark-impact/meta.json",
+      "package_path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/package.json",
+      "topic_path": "works/S/S-16-high-speed-moments/topic.json",
+      "package_title": "Reference Fanout",
+      "topic_title": "High-Speed Moments",
+      "package_ref_image": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/05-spark-impact/image.png"
+    },
+    {
+      "id": "S-16-high-speed-moments/series-reference-fanout/06-ice-shard-impact",
+      "image_id": "06-ice-shard-impact",
+      "package_id": "series-reference-fanout",
+      "topic_id": "S-16-high-speed-moments",
+      "tier": "S",
+      "title": "Ice Shard Impact",
+      "description": "Ice Shard Impact is part of a reference-dependent acrylic cube continuity series.",
+      "i18n": {
+        "en": {
+          "title": "Ice Shard Impact",
+          "description": "Ice Shard Impact is part of a reference-dependent acrylic cube continuity series."
+        },
+        "zh-CN": {
+          "title": "Ice Shard Impact",
+          "description": "Ice Shard Impact：参考图依赖的亚克力方块连续性系列。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 60,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "high-speed",
+          "series"
+        ],
+        "alt": {
+          "en": "High-speed studio image: the same clear acrylic cube surrounded by flying translucent ice shards.",
+          "zh-CN": "高速棚拍图：the same clear acrylic cube surrounded by flying translucent ice shards。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 6,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/06-ice-shard-impact/image.png",
+          "name": "image"
+        },
+        "depends_on": [
+          {
+            "id": "01-reference-rig",
+            "meta_path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/01-reference-rig/meta.json",
+            "image_path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/01-reference-rig/image.png",
+            "ref_role": "preserve acrylic cube identity, black tray, camera angle, lighting, and frozen-particle style",
+            "required_status": "done"
+          }
+        ],
+        "ref_urls": [],
+        "runner_notes": "Queue must wait for 01-reference-rig, then pass its runtime result URL as --ref."
+      },
+      "type": "series",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "high-speed",
+        "photorealism",
+        "series"
+      ],
+      "refs": [
+        "01-reference-rig"
+      ],
+      "image": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/06-ice-shard-impact/image.png",
+      "meta_path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/06-ice-shard-impact/meta.json",
+      "package_path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/package.json",
+      "topic_path": "works/S/S-16-high-speed-moments/topic.json",
+      "package_title": "Reference Fanout",
+      "topic_title": "High-Speed Moments",
+      "package_ref_image": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/06-ice-shard-impact/image.png"
+    },
+    {
+      "id": "S-16-high-speed-moments/series-reference-fanout/07-ink-ribbon-impact",
+      "image_id": "07-ink-ribbon-impact",
+      "package_id": "series-reference-fanout",
+      "topic_id": "S-16-high-speed-moments",
+      "tier": "S",
+      "title": "Ink Ribbon Impact",
+      "description": "Ink Ribbon Impact is part of a reference-dependent acrylic cube continuity series.",
+      "i18n": {
+        "en": {
+          "title": "Ink Ribbon Impact",
+          "description": "Ink Ribbon Impact is part of a reference-dependent acrylic cube continuity series."
+        },
+        "zh-CN": {
+          "title": "Ink Ribbon Impact",
+          "description": "Ink Ribbon Impact：参考图依赖的亚克力方块连续性系列。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 70,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "high-speed",
+          "series"
+        ],
+        "alt": {
+          "en": "High-speed studio image: the same clear acrylic cube wrapped by a black ink ribbon suspended in waterlike arcs.",
+          "zh-CN": "高速棚拍图：the same clear acrylic cube wrapped by a black ink ribbon suspended in waterlike arcs。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 7,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/07-ink-ribbon-impact/image.png",
+          "name": "image"
+        },
+        "depends_on": [
+          {
+            "id": "01-reference-rig",
+            "meta_path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/01-reference-rig/meta.json",
+            "image_path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/01-reference-rig/image.png",
+            "ref_role": "preserve acrylic cube identity, black tray, camera angle, lighting, and frozen-particle style",
+            "required_status": "done"
+          }
+        ],
+        "ref_urls": [],
+        "runner_notes": "Queue must wait for 01-reference-rig, then pass its runtime result URL as --ref."
+      },
+      "type": "series",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "high-speed",
+        "photorealism",
+        "series"
+      ],
+      "refs": [
+        "01-reference-rig"
+      ],
+      "image": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/07-ink-ribbon-impact/image.png",
+      "meta_path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/07-ink-ribbon-impact/meta.json",
+      "package_path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/package.json",
+      "topic_path": "works/S/S-16-high-speed-moments/topic.json",
+      "package_title": "Reference Fanout",
+      "topic_title": "High-Speed Moments",
+      "package_ref_image": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/07-ink-ribbon-impact/image.png"
+    },
+    {
+      "id": "S-16-high-speed-moments/series-reference-fanout/08-gold-dust-impact",
+      "image_id": "08-gold-dust-impact",
+      "package_id": "series-reference-fanout",
+      "topic_id": "S-16-high-speed-moments",
+      "tier": "S",
+      "title": "Gold Dust Impact",
+      "description": "Gold Dust Impact is part of a reference-dependent acrylic cube continuity series.",
+      "i18n": {
+        "en": {
+          "title": "Gold Dust Impact",
+          "description": "Gold Dust Impact is part of a reference-dependent acrylic cube continuity series."
+        },
+        "zh-CN": {
+          "title": "Gold Dust Impact",
+          "description": "Gold Dust Impact：参考图依赖的亚克力方块连续性系列。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 80,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "high-speed",
+          "series"
+        ],
+        "alt": {
+          "en": "High-speed studio image: the same clear acrylic cube surrounded by a burst of fine gold dust.",
+          "zh-CN": "高速棚拍图：the same clear acrylic cube surrounded by a burst of fine gold dust。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 8,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/08-gold-dust-impact/image.png",
+          "name": "image"
+        },
+        "depends_on": [
+          {
+            "id": "01-reference-rig",
+            "meta_path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/01-reference-rig/meta.json",
+            "image_path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/01-reference-rig/image.png",
+            "ref_role": "preserve acrylic cube identity, black tray, camera angle, lighting, and frozen-particle style",
+            "required_status": "done"
+          }
+        ],
+        "ref_urls": [],
+        "runner_notes": "Queue must wait for 01-reference-rig, then pass its runtime result URL as --ref."
+      },
+      "type": "series",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "high-speed",
+        "photorealism",
+        "series"
+      ],
+      "refs": [
+        "01-reference-rig"
+      ],
+      "image": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/08-gold-dust-impact/image.png",
+      "meta_path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/08-gold-dust-impact/meta.json",
+      "package_path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/package.json",
+      "topic_path": "works/S/S-16-high-speed-moments/topic.json",
+      "package_title": "Reference Fanout",
+      "topic_title": "High-Speed Moments",
+      "package_ref_image": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/08-gold-dust-impact/image.png"
+    },
+    {
+      "id": "S-16-high-speed-moments/series-reference-fanout/09-blue-liquid-impact",
+      "image_id": "09-blue-liquid-impact",
+      "package_id": "series-reference-fanout",
+      "topic_id": "S-16-high-speed-moments",
+      "tier": "S",
+      "title": "Blue Liquid Impact",
+      "description": "Blue Liquid Impact is part of a reference-dependent acrylic cube continuity series.",
+      "i18n": {
+        "en": {
+          "title": "Blue Liquid Impact",
+          "description": "Blue Liquid Impact is part of a reference-dependent acrylic cube continuity series."
+        },
+        "zh-CN": {
+          "title": "Blue Liquid Impact",
+          "description": "Blue Liquid Impact：参考图依赖的亚克力方块连续性系列。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 90,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "high-speed",
+          "series"
+        ],
+        "alt": {
+          "en": "High-speed studio image: the same clear acrylic cube splashed by electric blue liquid droplets.",
+          "zh-CN": "高速棚拍图：the same clear acrylic cube splashed by electric blue liquid droplets。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 9,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/09-blue-liquid-impact/image.png",
+          "name": "image"
+        },
+        "depends_on": [
+          {
+            "id": "01-reference-rig",
+            "meta_path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/01-reference-rig/meta.json",
+            "image_path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/01-reference-rig/image.png",
+            "ref_role": "preserve acrylic cube identity, black tray, camera angle, lighting, and frozen-particle style",
+            "required_status": "done"
+          }
+        ],
+        "ref_urls": [],
+        "runner_notes": "Queue must wait for 01-reference-rig, then pass its runtime result URL as --ref."
+      },
+      "type": "series",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "high-speed",
+        "photorealism",
+        "series"
+      ],
+      "refs": [
+        "01-reference-rig"
+      ],
+      "image": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/09-blue-liquid-impact/image.png",
+      "meta_path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/09-blue-liquid-impact/meta.json",
+      "package_path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/package.json",
+      "topic_path": "works/S/S-16-high-speed-moments/topic.json",
+      "package_title": "Reference Fanout",
+      "topic_title": "High-Speed Moments",
+      "package_ref_image": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/09-blue-liquid-impact/image.png"
+    },
+    {
+      "id": "S-16-high-speed-moments/series-reference-fanout/10-smoke-ring-impact",
+      "image_id": "10-smoke-ring-impact",
+      "package_id": "series-reference-fanout",
+      "topic_id": "S-16-high-speed-moments",
+      "tier": "S",
+      "title": "Smoke Ring Impact",
+      "description": "Smoke Ring Impact is part of a reference-dependent acrylic cube continuity series.",
+      "i18n": {
+        "en": {
+          "title": "Smoke Ring Impact",
+          "description": "Smoke Ring Impact is part of a reference-dependent acrylic cube continuity series."
+        },
+        "zh-CN": {
+          "title": "Smoke Ring Impact",
+          "description": "Smoke Ring Impact：参考图依赖的亚克力方块连续性系列。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 100,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "high-speed",
+          "series"
+        ],
+        "alt": {
+          "en": "High-speed studio image: the same clear acrylic cube framed by a pale gray smoke ring crossing the front face.",
+          "zh-CN": "高速棚拍图：the same clear acrylic cube framed by a pale gray smoke ring crossing the front face。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 10,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/10-smoke-ring-impact/image.png",
+          "name": "image"
+        },
+        "depends_on": [
+          {
+            "id": "01-reference-rig",
+            "meta_path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/01-reference-rig/meta.json",
+            "image_path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/01-reference-rig/image.png",
+            "ref_role": "preserve acrylic cube identity, black tray, camera angle, lighting, and frozen-particle style",
+            "required_status": "done"
+          }
+        ],
+        "ref_urls": [],
+        "runner_notes": "Queue must wait for 01-reference-rig, then pass its runtime result URL as --ref."
+      },
+      "type": "series",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "high-speed",
+        "photorealism",
+        "series"
+      ],
+      "refs": [
+        "01-reference-rig"
+      ],
+      "image": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/10-smoke-ring-impact/image.png",
+      "meta_path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/10-smoke-ring-impact/meta.json",
+      "package_path": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/package.json",
+      "topic_path": "works/S/S-16-high-speed-moments/topic.json",
+      "package_title": "Reference Fanout",
+      "topic_title": "High-Speed Moments",
+      "package_ref_image": "works/S/S-16-high-speed-moments/packages/series-reference-fanout/images/10-smoke-ring-impact/image.png"
     },
     {
       "id": "S-19-sem-microscopy/single-pollen-micro-city/pollen-micro-city",

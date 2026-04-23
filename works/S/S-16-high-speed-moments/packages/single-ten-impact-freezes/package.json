@@ -1,0 +1,111 @@
+{
+  "id": "single-ten-impact-freezes",
+  "type": "single",
+  "title": "Ten Independent Impact Freezes",
+  "description": "Ten independent high-speed studio images designed to exercise the 10-concurrency queue path from prompted meta to finished images.",
+  "creative_direction": "Queue validation package: ten independent high-speed macro impact prompts share one black studio lighting language so the runner can fill all 10 concurrent slots. This is not a continuity series and uses no reference images.",
+  "cover_image": "images/01-milk-crown/image.png",
+  "generation_plan": {
+    "status": "prompted",
+    "execution": "parallel",
+    "runner": "image2gen",
+    "images": [
+      "images/01-milk-crown/meta.json",
+      "images/02-ink-bloom/meta.json",
+      "images/03-orange-peel-burst/meta.json",
+      "images/04-ceramic-chip/meta.json",
+      "images/05-coffee-splash/meta.json",
+      "images/06-ice-cube-impact/meta.json",
+      "images/07-powder-burst/meta.json",
+      "images/08-berry-split/meta.json",
+      "images/09-metal-spark/meta.json",
+      "images/10-water-balloon/meta.json"
+    ],
+    "ref_strategy": "No image-to-image refs. Each meta is an independent single image under the same topic, allowing the queue to fill 10 concurrent workers.",
+    "index_policy": "Only status=done images with image.png are included in works/index.json."
+  },
+  "i18n": {
+    "en": {
+      "title": "Ten Independent Impact Freezes",
+      "description": "Ten independent high-speed studio images for testing the full queued generation path."
+    },
+    "zh-CN": {
+      "title": "十张独立高速定格",
+      "description": "十张独立高速棚拍图，用来验证完整队列生成链路。"
+    }
+  },
+  "display": {
+    "featured": true,
+    "sort_order": 20,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "high-speed",
+      "photorealism"
+    ]
+  },
+  "images": [
+    {
+      "id": "01-milk-crown",
+      "title": "Milk Crown",
+      "image": "images/01-milk-crown/image.png",
+      "meta": "images/01-milk-crown/meta.json"
+    },
+    {
+      "id": "02-ink-bloom",
+      "title": "Ink Bloom",
+      "image": "images/02-ink-bloom/image.png",
+      "meta": "images/02-ink-bloom/meta.json"
+    },
+    {
+      "id": "03-orange-peel-burst",
+      "title": "Orange Peel Burst",
+      "image": "images/03-orange-peel-burst/image.png",
+      "meta": "images/03-orange-peel-burst/meta.json"
+    },
+    {
+      "id": "04-ceramic-chip",
+      "title": "Ceramic Chip",
+      "image": "images/04-ceramic-chip/image.png",
+      "meta": "images/04-ceramic-chip/meta.json"
+    },
+    {
+      "id": "05-coffee-splash",
+      "title": "Coffee Splash",
+      "image": "images/05-coffee-splash/image.png",
+      "meta": "images/05-coffee-splash/meta.json"
+    },
+    {
+      "id": "06-ice-cube-impact",
+      "title": "Ice Cube Impact",
+      "image": "images/06-ice-cube-impact/image.png",
+      "meta": "images/06-ice-cube-impact/meta.json"
+    },
+    {
+      "id": "07-powder-burst",
+      "title": "Powder Burst",
+      "image": "images/07-powder-burst/image.png",
+      "meta": "images/07-powder-burst/meta.json"
+    },
+    {
+      "id": "08-berry-split",
+      "title": "Berry Split",
+      "image": "images/08-berry-split/image.png",
+      "meta": "images/08-berry-split/meta.json"
+    },
+    {
+      "id": "09-metal-spark",
+      "title": "Metal Spark",
+      "image": "images/09-metal-spark/image.png",
+      "meta": "images/09-metal-spark/meta.json"
+    },
+    {
+      "id": "10-water-balloon",
+      "title": "Water Balloon",
+      "image": "images/10-water-balloon/image.png",
+      "meta": "images/10-water-balloon/meta.json"
+    }
+  ]
+}

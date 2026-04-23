@@ -1,0 +1,64 @@
+{
+  "prompt": "Scene:\nSame black studio macro setup and high-speed flash language as the reference image: pure black background, glossy black surface, cool blue rim light, crisp suspended particles.\n\nSubject:\nA red apple centered in frame at the instant a small fast projectile has just passed through it, with a clean tunnel, juice mist, tiny peel fragments, and pulp particles frozen midair. The projectile itself is not visible.\n\nImportant details:\nPhotorealistic high-speed photography, millionth-of-a-second freeze, macro lens, razor-sharp fragments, realistic apple skin texture, rim-lit droplets and pulp particles, black reflective tray, no gore.\n\nUse case:\nSecond image in a high-speed impact series, preserving the same lighting and freeze-frame visual language while changing subject. Square crop-safe gallery card.\n\nConstraints:\nUse the reference for studio lighting and frozen-particle style only. No text, no watermark, no logo, no hands, no weapon visible, no blood, no cartoon style, preserve exact 1:1 aspect ratio.",
+  "id": "02-apple-puncture",
+  "title": "Apple Puncture",
+  "description": "Apple Puncture freezes a physical impact in a controlled black studio.",
+  "type": "series",
+  "image": "image.png",
+  "aspect_ratio": "1:1",
+  "tags": [
+    "high-speed",
+    "photorealism",
+    "series"
+  ],
+  "refs": [
+    "01-water-crown"
+  ],
+  "status": "prompted",
+  "generation": {
+    "order": 2,
+    "mode": "image",
+    "model": "gpt-image-2",
+    "output": {
+      "path": "works/S/S-16-high-speed-moments/packages/series-impact-triptych/images/02-apple-puncture/image.png",
+      "name": "image"
+    },
+    "depends_on": [
+      {
+        "id": "01-water-crown",
+        "meta_path": "works/S/S-16-high-speed-moments/packages/series-impact-triptych/images/01-water-crown/meta.json",
+        "image_path": "works/S/S-16-high-speed-moments/packages/series-impact-triptych/images/01-water-crown/image.png",
+        "ref_role": "preserve black studio background, flash duration look, rim-lit particles, and macro freeze-frame style",
+        "required_status": "done"
+      }
+    ],
+    "ref_urls": [],
+    "runner_notes": "Queue must inject dependency output URLs into ref_urls before execution; image2gen --ref accepts URLs, not local paths."
+  },
+  "i18n": {
+    "en": {
+      "title": "Apple Puncture",
+      "description": "Apple Puncture freezes a physical impact in a controlled black studio."
+    },
+    "zh-CN": {
+      "title": "苹果穿刺瞬间",
+      "description": "苹果穿刺瞬间在黑色棚拍中定格高速物理冲击。"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 20,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "high-speed",
+      "photorealism"
+    ],
+    "alt": {
+      "en": "A photorealistic high-speed studio image titled Apple Puncture.",
+      "zh-CN": "苹果穿刺瞬间的写实高速棚拍图像。"
+    }
+  }
+}
