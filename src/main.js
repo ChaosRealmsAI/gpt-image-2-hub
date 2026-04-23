@@ -3,6 +3,7 @@ import './styles.css';
 const DATA_URL = './works/index.json';
 const LANG_KEY = 'prompt-atlas-lang';
 const VIEW_MODE_KEY = 'prompt-atlas-view-mode';
+const BATCH_SIZE = 12;
 
 const UI = {
   'zh-CN': {
@@ -21,6 +22,8 @@ const UI = {
     viewModeCollapsed: '封面',
     openOriginal: '新窗口预览',
     download: '下载原图',
+    close: '关闭',
+    foot: 'GPT Image 2 Hub · AI 生图灵感图鉴',
   },
   en: {
     all: 'All',
@@ -38,13 +41,26 @@ const UI = {
     viewModeCollapsed: 'Cover',
     openOriginal: 'Open original',
     download: 'Download',
+    close: 'Close',
+    foot: 'GPT Image 2 Hub · AI image inspiration atlas',
   },
 };
 
 const LANGS = [
-  { id: 'zh-CN', label: '简体中文' },
-  { id: 'en', label: 'English' },
+  { id: 'zh-CN' },
+  { id: 'en' },
 ];
+
+const LANG_LABELS = {
+  'zh-CN': {
+    'zh-CN': '简体中文',
+    en: 'Chinese',
+  },
+  en: {
+    'zh-CN': 'English',
+    en: 'English',
+  },
+};
 
 const state = {
   data: null,
@@ -54,11 +70,15 @@ const state = {
   search: '',
   modal: null,
   promptCache: new Map(),
+  renderedCount: 0,
+  batchScrollY: 0,
 };
 
 let topicMap = new Map();
 let packageMap = new Map();
 let peersMap = new Map();
+let batchObserver = null;
+let currentBatchList = [];
 let suppressHash = false;
 
 const app = document.querySelector('#app');
@@ -82,8 +102,8 @@ function t(key) {
   return (UI[state.lang] || UI['zh-CN'])[key] || UI['zh-CN'][key] || key;
 }
 
-function isZh() {
-  return state.lang === 'zh-CN';
+function langLabel(langId) {
+  return LANG_LABELS[langId]?.[state.lang] || LANG_LABELS[langId]?.en || langId;
 }
 
 function localized(item, field) {
@@ -96,11 +116,6 @@ function localized(item, field) {
 
 function titleOf(image) {
   return localized(image, 'title') || image.title || image.id;
-}
-
-function secondaryTitleOf(image) {
-  if (isZh()) return image?.i18n?.en?.title || image.title || '';
-  return image?.i18n?.['zh-CN']?.title || image.title || '';
 }
 
 function topicLabel(topic) {
@@ -120,6 +135,12 @@ function tagLabel(tag) {
 function imageUrl(path) {
   if (!path) return '';
   return `./${String(path).replace(/^\.?\//, '')}`;
+}
+
+function imageVariantUrl(path, width) {
+  if (!path) return '';
+  const withoutExt = String(path).replace(/\.(png|jpg|jpeg|webp)$/i, '');
+  return `./${withoutExt.replace(/^\.?\//, '')}.w${width}.webp`;
 }
 
 function ratio(value) {
@@ -203,14 +224,14 @@ function renderShell() {
             <div class="lang-dd" id="lang-dd">
               <button class="lang-dd-trigger" id="lang-dd-trigger" type="button" aria-haspopup="listbox" aria-expanded="false">
                 <svg class="lang-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                <span class="lang-dd-label" id="lang-dd-label">${esc(LANGS.find((l) => l.id === state.lang)?.label || '简体中文')}</span>
+                <span class="lang-dd-label" id="lang-dd-label">${esc(langLabel(state.lang))}</span>
                 <svg class="lang-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
               </button>
               <ul class="lang-dd-menu" id="lang-dd-menu" role="listbox">
                 ${LANGS.map((lang) => `
                   <li class="lang-dd-option ${lang.id === state.lang ? 'active' : ''}" data-lang="${esc(lang.id)}" role="option" aria-selected="${lang.id === state.lang}">
                     <span class="lang-dd-dot"></span>
-                    <span class="lang-dd-name">${esc(lang.label)}</span>
+                    <span class="lang-dd-name">${esc(langLabel(lang.id))}</span>
                     ${lang.id === state.lang ? `<svg class="lang-dd-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>` : ''}
                   </li>
                 `).join('')}
@@ -237,13 +258,13 @@ function renderShell() {
         </div>
 
         <section class="waterfall" id="waterfall" aria-label="works"></section>
-        <div class="foot">✨ GPT Image 2 Hub · AI 生图灵感图鉴</div>
+        <div class="foot">${esc(t('foot'))}</div>
       </main>
     </div>
 
     <div class="modal-scrim" id="scrim" aria-hidden="true">
       <div class="modal" role="dialog" aria-modal="true">
-        <button class="modal-close" id="m-close" type="button" aria-label="关闭">
+        <button class="modal-close" id="m-close" type="button" aria-label="${esc(t('close'))}">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
         </button>
         <div class="modal-media">
@@ -263,7 +284,6 @@ function renderShell() {
             <div class="series-dots" id="m-dots"></div>
           </div>
           <h1 class="modal-title" id="m-title"></h1>
-          <p class="modal-en" id="m-en"></p>
           <div class="modal-pills" id="m-pills"></div>
           <div class="tag-cloud" id="m-tags"></div>
           <div class="prompt-head">
@@ -290,7 +310,7 @@ function renderShell() {
 
     <div class="toast" id="toast">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-      <span id="toast-text">已复制</span>
+      <span id="toast-text">${esc(t('copied'))}</span>
     </div>
   `;
 }
@@ -352,14 +372,9 @@ function filteredImages() {
     const pack = packageOf(image);
     const hay = [
       titleOf(image),
-      image?.i18n?.en?.title,
-      image?.title,
       packageLabel(pack),
-      pack?.i18n?.en?.title,
-      image.package_title,
       topicLabel(topic),
-      topic?.i18n?.en?.title,
-      image.topic_title,
+      ...(state.lang === 'en' ? [image.image_id || image.id] : []),
       ...(image.tags || []).map((tag) => `${tag} ${tagLabel(tag)}`),
     ].filter(Boolean).join(' ').toLowerCase();
     return hay.includes(q);
@@ -385,14 +400,13 @@ function filteredImages() {
 function renderCard(image) {
   const peers = isSeries(image) ? peersOf(image) : null;
   const primaryTitle = titleOf(image);
-  const secondaryTitle = secondaryTitleOf(image);
   const packageTitle = packageLabel(packageOf(image));
   const isCollapsedSeries = peers && peers.length > 1 && state.viewMode === 'collapsed';
   return `
     <article class="card ${isCollapsedSeries ? 'is-stack' : ''}" data-id="${esc(image.id)}" style="--hue:${hashHue(image.id)}">
       ${isCollapsedSeries ? '<span class="stack-layer stack-2" aria-hidden="true"></span><span class="stack-layer stack-1" aria-hidden="true"></span>' : ''}
       <div class="cover" style="--ar:${ratio(image.aspect_ratio)}">
-        <img src="${esc(imageUrl(image.image))}" alt="${esc(image.display?.alt?.[state.lang] || primaryTitle)}" loading="lazy" onerror="this.classList.add('failed')" />
+        <img src="${esc(imageVariantUrl(image.image, 400))}" srcset="${esc(imageVariantUrl(image.image, 400))} 400w, ${esc(imageVariantUrl(image.image, 1600))} 1600w" sizes="(max-width: 720px) 50vw, (max-width: 1280px) 33vw, 400px" alt="${esc(image.display?.alt?.[state.lang] || primaryTitle)}" loading="lazy" decoding="async" onerror="this.classList.add('failed')" />
         <div class="cover-placeholder">🎨</div>
         ${peers && peers.length > 1 ? `
           <span class="series-badge" title="${esc(`${packageTitle} · ${peers.length}`)}">
@@ -402,7 +416,6 @@ function renderCard(image) {
         ` : ''}
         <div class="card-overlay">
           <div class="card-title">${esc(primaryTitle)}</div>
-          <div class="card-en">${esc(secondaryTitle)}</div>
         </div>
         <button class="mini-btn" data-copy="${esc(image.id)}" type="button" title="${esc(t('copy'))}" aria-label="${esc(t('copy'))}">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
@@ -415,10 +428,59 @@ function renderCard(image) {
 function renderGallery() {
   const waterfall = $('#waterfall');
   if (!waterfall) return;
+  if (batchObserver) batchObserver.disconnect();
   const list = filteredImages();
-  waterfall.innerHTML = list.length
-    ? list.map(renderCard).join('')
-    : `<div class="empty">${esc(t('empty'))}</div>`;
+  currentBatchList = list;
+  state.renderedCount = 0;
+  state.batchScrollY = window.scrollY;
+  if (!list.length) {
+    waterfall.innerHTML = `<div class="empty">${esc(t('empty'))}</div>`;
+    return;
+  }
+  waterfall.innerHTML = '';
+  appendBatch(list);
+  ensureSentinel(list);
+}
+
+function appendBatch(list) {
+  const waterfall = $('#waterfall');
+  if (!waterfall) return;
+  const start = state.renderedCount;
+  const end = Math.min(start + BATCH_SIZE, list.length);
+  if (start >= end) return;
+
+  const sentinel = $('#batch-sentinel');
+  if (sentinel) sentinel.remove();
+
+  waterfall.insertAdjacentHTML('beforeend', list.slice(start, end).map(renderCard).join(''));
+  state.renderedCount = end;
+  state.batchScrollY = window.scrollY;
+
+  if (end < list.length) {
+    waterfall.insertAdjacentHTML('beforeend', '<div id="batch-sentinel" aria-hidden="true"></div>');
+    observeSentinel(list);
+  } else if (batchObserver) {
+    batchObserver.disconnect();
+  }
+}
+
+function observeSentinel(list) {
+  const sentinel = $('#batch-sentinel');
+  if (!sentinel) return;
+  if (batchObserver) batchObserver.disconnect();
+  batchObserver = new IntersectionObserver((entries) => {
+    if (
+      entries.some((entry) => entry.isIntersecting)
+      && Math.abs(window.scrollY - state.batchScrollY) > 40
+    ) {
+      appendBatch(list);
+    }
+  }, { rootMargin: '400px 0px' });
+  batchObserver.observe(sentinel);
+}
+
+function ensureSentinel(list) {
+  if (state.renderedCount < list.length) observeSentinel(list);
 }
 
 async function loadPrompt(image) {
@@ -450,13 +512,12 @@ async function openModal(id, options = {}) {
   const topic = topicOf(image);
   const peers = isSeries(image) ? peersOf(image) : null;
   const primaryTitle = titleOf(image);
-  const secondaryTitle = secondaryTitleOf(image);
   const src = imageUrl(image.image);
+  const modalSrc = imageVariantUrl(image.image, 1600);
 
-  $('#m-img').src = src;
+  $('#m-img').src = modalSrc;
   $('#m-img').alt = image.display?.alt?.[state.lang] || primaryTitle;
   $('#m-title').textContent = primaryTitle;
-  $('#m-en').textContent = secondaryTitle;
   $('#m-prompt').textContent = state.promptCache.get(image.id) || t('loading');
   $('#m-open').href = src;
   $('#m-download').href = src;
@@ -686,6 +747,15 @@ function bindEvents() {
       closeModal({ keepHash: true });
     }
   });
+
+  window.addEventListener('scroll', () => {
+    const sentinel = $('#batch-sentinel');
+    if (!sentinel || !currentBatchList.length) return;
+    if (Math.abs(window.scrollY - state.batchScrollY) <= 40) return;
+    if (sentinel.getBoundingClientRect().top <= window.innerHeight + 400) {
+      appendBatch(currentBatchList);
+    }
+  }, { passive: true });
 }
 
 async function boot() {

@@ -325,7 +325,7 @@
   "stats": {
     "topic_count": 23,
     "package_count": 29,
-    "image_count": 117
+    "image_count": 122
   },
   "topics": [
     {
@@ -917,7 +917,7 @@
         ]
       },
       "package_count": 2,
-      "image_count": 4,
+      "image_count": 5,
       "packages": [
         "series-facade-preservation",
         "single-render-studies"
@@ -1195,7 +1195,7 @@
         ]
       },
       "package_count": 1,
-      "image_count": 6,
+      "image_count": 7,
       "packages": [
         "single-identity-lock-studies"
       ],
@@ -1235,7 +1235,7 @@
         ]
       },
       "package_count": 1,
-      "image_count": 2,
+      "image_count": 5,
       "packages": [
         "single-knowledge-reconstructions"
       ],
@@ -2059,9 +2059,10 @@
         ]
       },
       "cover_image": "works/topics/sketch-to-photoreal-render/packages/series-facade-preservation/images/01-pencil-facade-reference/image.png",
-      "image_count": 2,
+      "image_count": 3,
       "images": [
         "sketch-to-photoreal-render/series-facade-preservation/01-pencil-facade-reference",
+        "sketch-to-photoreal-render/series-facade-preservation/03-rain-night-render",
         "sketch-to-photoreal-render/series-facade-preservation/04-interior-courtyard-render"
       ],
       "package_path": "works/topics/sketch-to-photoreal-render/packages/series-facade-preservation/package.json",
@@ -2436,13 +2437,14 @@
         ]
       },
       "cover_image": "works/topics/virtual-try-on-identity-lock/packages/single-identity-lock-studies/images/studio-capsule-lock/image.png",
-      "image_count": 6,
+      "image_count": 7,
       "images": [
         "virtual-try-on-identity-lock/single-identity-lock-studies/studio-capsule-lock",
         "virtual-try-on-identity-lock/single-identity-lock-studies/runway-season-lock",
         "virtual-try-on-identity-lock/single-identity-lock-studies/outdoor-light-lock",
         "virtual-try-on-identity-lock/single-identity-lock-studies/sportswear-lock",
         "virtual-try-on-identity-lock/single-identity-lock-studies/eveningwear-lock",
+        "virtual-try-on-identity-lock/single-identity-lock-studies/heritage-textile-lock",
         "virtual-try-on-identity-lock/single-identity-lock-studies/streetwear-layer-lock"
       ],
       "package_path": "works/topics/virtual-try-on-identity-lock/packages/single-identity-lock-studies/package.json",
@@ -2482,10 +2484,13 @@
         ]
       },
       "cover_image": "works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/flatpack-nightclub/image.png",
-      "image_count": 2,
+      "image_count": 5,
       "images": [
         "world-knowledge-reconstruction/single-knowledge-reconstructions/flatpack-nightclub",
-        "world-knowledge-reconstruction/single-knowledge-reconstructions/desktop-ui-archive"
+        "world-knowledge-reconstruction/single-knowledge-reconstructions/desktop-ui-archive",
+        "world-knowledge-reconstruction/single-knowledge-reconstructions/konbini-aisle",
+        "world-knowledge-reconstruction/single-knowledge-reconstructions/minecraft-port-town",
+        "world-knowledge-reconstruction/single-knowledge-reconstructions/subway-transfer-hall"
       ],
       "package_path": "works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/package.json",
       "topic_path": "works/topics/world-knowledge-reconstruction/topic.json"
@@ -7981,6 +7986,78 @@
       "package_ref_image": "works/topics/sketch-to-photoreal-render/packages/series-facade-preservation/images/01-pencil-facade-reference/image.png"
     },
     {
+      "id": "sketch-to-photoreal-render/series-facade-preservation/03-rain-night-render",
+      "image_id": "03-rain-night-render",
+      "package_id": "series-facade-preservation",
+      "topic_id": "sketch-to-photoreal-render",
+      "topic_slug": "sketch-to-photoreal-render",
+      "title": "Rain Night Render",
+      "description": "A rainy blue-hour photoreal render that keeps the reference facade structure intact.",
+      "i18n": {
+        "en": {
+          "title": "Rain Night Render",
+          "description": "A rainy blue-hour photoreal render that keeps the reference facade structure intact."
+        },
+        "zh-CN": {
+          "title": "雨夜渲染",
+          "description": "一张雨后蓝调时刻照片级效果图,保持参考立面结构不漂移。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 30,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "photorealism",
+          "editing-workflow"
+        ],
+        "alt": {
+          "en": "A rainy night photoreal render of the same corner apartment facade.",
+          "zh-CN": "同一街角公寓立面的雨夜照片级效果图。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 3,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/topics/sketch-to-photoreal-render/packages/series-facade-preservation/images/03-rain-night-render/image.png",
+          "name": "image"
+        },
+        "depends_on": [
+          {
+            "id": "01-pencil-facade-reference",
+            "meta_path": "works/topics/sketch-to-photoreal-render/packages/series-facade-preservation/images/01-pencil-facade-reference/meta.json",
+            "image_path": "works/topics/sketch-to-photoreal-render/packages/series-facade-preservation/images/01-pencil-facade-reference/image.png",
+            "ref_role": "primary",
+            "required_status": "done"
+          }
+        ],
+        "ref_urls": [],
+        "runner_notes": "Use the pencil facade reference to preserve layout under rainy night lighting."
+      },
+      "type": "series",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "multi-image-reference",
+        "photorealism",
+        "editing-workflow",
+        "series"
+      ],
+      "refs": [],
+      "image": "works/topics/sketch-to-photoreal-render/packages/series-facade-preservation/images/03-rain-night-render/image.png",
+      "meta_path": "works/topics/sketch-to-photoreal-render/packages/series-facade-preservation/images/03-rain-night-render/meta.json",
+      "package_path": "works/topics/sketch-to-photoreal-render/packages/series-facade-preservation/package.json",
+      "topic_path": "works/topics/sketch-to-photoreal-render/topic.json",
+      "package_title": "Facade Preservation",
+      "topic_title": "Sketch to Photoreal Render",
+      "package_ref_image": "works/topics/sketch-to-photoreal-render/packages/series-facade-preservation/images/03-rain-night-render/image.png"
+    },
+    {
       "id": "sketch-to-photoreal-render/series-facade-preservation/04-interior-courtyard-render",
       "image_id": "04-interior-courtyard-render",
       "package_id": "series-facade-preservation",
@@ -10027,6 +10104,70 @@
       "package_ref_image": "works/topics/virtual-try-on-identity-lock/packages/single-identity-lock-studies/images/eveningwear-lock/image.png"
     },
     {
+      "id": "virtual-try-on-identity-lock/single-identity-lock-studies/heritage-textile-lock",
+      "image_id": "heritage-textile-lock",
+      "package_id": "single-identity-lock-studies",
+      "topic_id": "virtual-try-on-identity-lock",
+      "topic_slug": "virtual-try-on-identity-lock",
+      "title": "Heritage Textile Lock",
+      "description": "A textile-rich try-on board preserving one model through ornate craft-inspired garments.",
+      "i18n": {
+        "en": {
+          "title": "Heritage Textile Lock",
+          "description": "A textile-rich try-on board preserving one model through ornate craft-inspired garments."
+        },
+        "zh-CN": {
+          "title": "织物工艺锁定",
+          "description": "一张织物细节丰富的试衣板,在工艺感服装变化中保持同一模特。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 70,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "virtual-try-on",
+          "micro-texture"
+        ],
+        "alt": {
+          "en": "A textile archive-style board with one model repeated in ornate woven garments.",
+          "zh-CN": "一张织物档案风格试衣板,同一模特穿着多套精细织物服装。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 7,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/topics/virtual-try-on-identity-lock/packages/single-identity-lock-studies/images/heritage-textile-lock/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "Independent textile try-on board for dense pattern and identity preservation."
+      },
+      "type": "single",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "virtual-try-on",
+        "identity-consistency",
+        "micro-texture",
+        "single"
+      ],
+      "refs": [],
+      "image": "works/topics/virtual-try-on-identity-lock/packages/single-identity-lock-studies/images/heritage-textile-lock/image.png",
+      "meta_path": "works/topics/virtual-try-on-identity-lock/packages/single-identity-lock-studies/images/heritage-textile-lock/meta.json",
+      "package_path": "works/topics/virtual-try-on-identity-lock/packages/single-identity-lock-studies/package.json",
+      "topic_path": "works/topics/virtual-try-on-identity-lock/topic.json",
+      "package_title": "Identity Lock Studies",
+      "topic_title": "Virtual Try-On Identity Lock",
+      "package_ref_image": "works/topics/virtual-try-on-identity-lock/packages/single-identity-lock-studies/images/heritage-textile-lock/image.png"
+    },
+    {
       "id": "virtual-try-on-identity-lock/single-identity-lock-studies/streetwear-layer-lock",
       "image_id": "streetwear-layer-lock",
       "package_id": "single-identity-lock-studies",
@@ -10223,6 +10364,207 @@
       "package_title": "Knowledge Reconstructions",
       "topic_title": "World Knowledge Reconstruction",
       "package_ref_image": "works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/desktop-ui-archive/image.png"
+    },
+    {
+      "id": "world-knowledge-reconstruction/single-knowledge-reconstructions/konbini-aisle",
+      "image_id": "konbini-aisle",
+      "package_id": "single-knowledge-reconstructions",
+      "topic_id": "world-knowledge-reconstruction",
+      "topic_slug": "world-knowledge-reconstruction",
+      "title": "Konbini Aisle",
+      "description": "A Japanese convenience-store interior reconstructed through shelf density, refrigerator placement, counter logic, and small retail details.",
+      "i18n": {
+        "en": {
+          "title": "Konbini Aisle",
+          "description": "A Japanese convenience-store interior reconstructed through shelf density, refrigerator placement, counter logic, and small retail details."
+        },
+        "zh-CN": {
+          "title": "便利店过道",
+          "description": "通过货架密度、冷柜位置、收银台逻辑和小型零售细节还原日本便利店内部。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 30,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "photorealism",
+          "world-knowledge",
+          "structured-layout",
+          "single"
+        ],
+        "alt": {
+          "en": "A brightly lit Japanese convenience-store aisle with bento coolers, magazine racks, dense shelves, and a compact checkout area.",
+          "zh-CN": "明亮的日本便利店过道,包含便当冷柜、杂志架、密集货架和紧凑收银区。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 3,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/konbini-aisle/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "Independent single image testing cultural retail layout and merchandise knowledge."
+      },
+      "type": "single",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "photorealism",
+        "world-knowledge",
+        "structured-layout",
+        "commercial-mockup",
+        "single"
+      ],
+      "refs": [],
+      "image": "works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/konbini-aisle/image.png",
+      "meta_path": "works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/konbini-aisle/meta.json",
+      "package_path": "works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/package.json",
+      "topic_path": "works/topics/world-knowledge-reconstruction/topic.json",
+      "package_title": "Knowledge Reconstructions",
+      "topic_title": "World Knowledge Reconstruction",
+      "package_ref_image": "works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/konbini-aisle/image.png"
+    },
+    {
+      "id": "world-knowledge-reconstruction/single-knowledge-reconstructions/minecraft-port-town",
+      "image_id": "minecraft-port-town",
+      "package_id": "single-knowledge-reconstructions",
+      "topic_id": "world-knowledge-reconstruction",
+      "topic_slug": "world-knowledge-reconstruction",
+      "title": "Voxel Port Town",
+      "description": "A block-building sandbox port settlement reconstructed through voxel material rules, terrain logic, and navigable game-world layout.",
+      "i18n": {
+        "en": {
+          "title": "Voxel Port Town",
+          "description": "A block-building sandbox port settlement reconstructed through voxel material rules, terrain logic, and navigable game-world layout."
+        },
+        "zh-CN": {
+          "title": "方块港口小镇",
+          "description": "通过体素材质规则、地形逻辑和可导航布局还原方块建造沙盒世界中的港口聚落。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 40,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "style-transfer",
+          "world-knowledge",
+          "structured-layout",
+          "single"
+        ],
+        "alt": {
+          "en": "An isometric voxel port town with blocky docks, farms, houses, cliffs, trees, and connected paths at golden hour.",
+          "zh-CN": "金色时刻的等距体素港口小镇,有方块码头、农田、房屋、峭壁、树木和连通路径。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 4,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/minecraft-port-town/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "Independent single image testing voxel game-world reconstruction without official branding."
+      },
+      "type": "single",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "style-transfer",
+        "world-knowledge",
+        "structured-layout",
+        "miniature-world",
+        "single"
+      ],
+      "refs": [],
+      "image": "works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/minecraft-port-town/image.png",
+      "meta_path": "works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/minecraft-port-town/meta.json",
+      "package_path": "works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/package.json",
+      "topic_path": "works/topics/world-knowledge-reconstruction/topic.json",
+      "package_title": "Knowledge Reconstructions",
+      "topic_title": "World Knowledge Reconstruction",
+      "package_ref_image": "works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/minecraft-port-town/image.png"
+    },
+    {
+      "id": "world-knowledge-reconstruction/single-knowledge-reconstructions/subway-transfer-hall",
+      "image_id": "subway-transfer-hall",
+      "package_id": "single-knowledge-reconstructions",
+      "topic_id": "world-knowledge-reconstruction",
+      "topic_slug": "world-knowledge-reconstruction",
+      "title": "Subway Transfer Hall",
+      "description": "A dense underground transfer concourse reconstructed through fare gates, route bands, tactile paving, escalators, and passenger-flow logic.",
+      "i18n": {
+        "en": {
+          "title": "Subway Transfer Hall",
+          "description": "A dense underground transfer concourse reconstructed through fare gates, route bands, tactile paving, escalators, and passenger-flow logic."
+        },
+        "zh-CN": {
+          "title": "地铁换乘大厅",
+          "description": "通过闸机、线路色带、盲道、扶梯和客流逻辑还原密集地下换乘空间。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 50,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "photorealism",
+          "structured-layout",
+          "world-knowledge",
+          "single"
+        ],
+        "alt": {
+          "en": "A photoreal underground subway transfer hall with route-color bands, fare gates, tactile paving, escalators, and commuter flows.",
+          "zh-CN": "写实地下地铁换乘大厅,包含线路色带、闸机、盲道、扶梯和通勤客流。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 5,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/subway-transfer-hall/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "Independent single image testing transit wayfinding and public-infrastructure layout."
+      },
+      "type": "single",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "photorealism",
+        "structured-layout",
+        "world-knowledge",
+        "reasoning-composition",
+        "single"
+      ],
+      "refs": [],
+      "image": "works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/subway-transfer-hall/image.png",
+      "meta_path": "works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/subway-transfer-hall/meta.json",
+      "package_path": "works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/package.json",
+      "topic_path": "works/topics/world-knowledge-reconstruction/topic.json",
+      "package_title": "Knowledge Reconstructions",
+      "topic_title": "World Knowledge Reconstruction",
+      "package_ref_image": "works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/subway-transfer-hall/image.png"
     }
   ]
 }
