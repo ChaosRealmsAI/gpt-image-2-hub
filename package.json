@@ -6,7 +6,7 @@
   "private": false,
   "scripts": {
     "dev": "vite --host 127.0.0.1",
-    "build": "npm run works:index && vite build",
+    "build": "npm run works:index && npm run images:optimize && vite build",
     "preview": "vite preview --host 127.0.0.1",
     "works:validate": "node tools/works.js validate",
     "works:index": "node tools/works.js build-index",
@@ -15,9 +15,11 @@
     "works:generate": "node tools/works.js generate",
     "works:queue": "node tools/works.js queue",
     "works:scan": "node tools/works.js scan",
+    "images:optimize": "node tools/images-optimize.js",
     "check:public": "node tools/works.js check-public"
   },
   "devDependencies": {
+    "sharp": "^0.34.5",
     "vite": "^6.0.0"
   },
   "engines": {

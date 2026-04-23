@@ -21,7 +21,27 @@ function worksPlugin() {
     closeBundle() {
       const outDir = path.join(root, 'dist', 'works');
       fs.rmSync(outDir, { recursive: true, force: true });
-      fs.cpSync(worksDir, outDir, { recursive: true });
+
+      function copyFiltered(src, dst) {
+        for (const entry of fs.readdirSync(src, { withFileTypes: true })) {
+          const sourcePath = path.join(src, entry.name);
+          const targetPath = path.join(dst, entry.name);
+
+          if (entry.isDirectory()) {
+            fs.mkdirSync(targetPath, { recursive: true });
+            copyFiltered(sourcePath, targetPath);
+            continue;
+          }
+
+          const ext = path.extname(entry.name).toLowerCase();
+          if (ext === '.png' || ext === '.jpg' || ext === '.jpeg') continue;
+
+          fs.mkdirSync(path.dirname(targetPath), { recursive: true });
+          fs.copyFileSync(sourcePath, targetPath);
+        }
+      }
+
+      copyFiltered(worksDir, outDir);
     },
   };
 }
