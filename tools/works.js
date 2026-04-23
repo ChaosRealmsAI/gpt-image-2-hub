@@ -40,7 +40,7 @@ Usage:
   node tools/works.js build-index
   node tools/works.js check-public
   node tools/works.js generate <works/.../meta.json>
-  node tools/works.js queue [--concurrency 10] [--limit n] [--retry failed|running] [--with-deps] [--topic id] [--package id] [--dry-run]
+  node tools/works.js queue [--concurrency 10] [--limit n] [--retry failed|running] [--with-deps] [--topic id] [--package id] [--dry-run] [--no-loop] [--max-rounds 20]
   node tools/works.js scan [--topic id] [--package id] [--problems] [--strict] [--json]
   node tools/works.js list [--todo-only] [--with-works]
   node tools/works.js show <item-id>
@@ -991,6 +991,65 @@ function runImageTask(task, refUrls, runDir, runState) {
 }
 
 async function runQueue(args) {
+  // PID lock: ensure single-instance queue globally (no double-dispatch)
+  const lockFile = path.join(ROOT, 'tmp', '.queue.pid');
+  fs.mkdirSync(path.dirname(lockFile), { recursive: true });
+  if (fileExists(lockFile)) {
+    const existingPid = parseInt(fs.readFileSync(lockFile, 'utf8').trim(), 10);
+    if (Number.isFinite(existingPid)) {
+      try {
+        process.kill(existingPid, 0);
+        console.error(`queue: another instance already running (pid=${existingPid}) · exit.\n`
+          + `  · to adopt the existing queue, wait for it to finish\n`
+          + `  · to force start (dangerous), remove ${rel(lockFile)} manually`);
+        process.exitCode = 1;
+        return;
+      } catch { /* stale lock - remove below */ }
+    }
+    fs.unlinkSync(lockFile);
+  }
+  fs.writeFileSync(lockFile, String(process.pid));
+  const releaseLock = () => { try { fs.unlinkSync(lockFile); } catch { /* gone */ } };
+  process.on('exit', releaseLock);
+  process.on('SIGINT', () => { releaseLock(); process.exit(130); });
+  process.on('SIGTERM', () => { releaseLock(); process.exit(143); });
+
+  // auto-loop: keep polling for new prompted/failed/running tasks until queue drains
+  // disable with --no-loop
+  const autoLoop = !args.includes('--no-loop');
+  const maxRounds = intArg(args, '--max-rounds', 20);
+  // when looping, default-retry failed+running so newly-stuck tasks get a second chance
+  const effectiveArgs = autoLoop && !args.includes('--retry')
+    ? [...args, '--retry', 'failed']
+    : args;
+
+  let round = 0;
+  let totalSucceeded = 0;
+  let totalFailed = 0;
+  let lastBlocked = 0;
+
+  while (round < maxRounds) {
+    round++;
+    const summary = await runQueueRound(effectiveArgs, round);
+    totalSucceeded += summary.succeeded;
+    totalFailed += summary.failed;
+    lastBlocked = summary.blocked;
+    if (!autoLoop) break;
+    if (summary.initialTasks === 0) break;
+    // re-scan: anything still pending / failed / running means try again
+    const remaining = loadMetaTasks(effectiveArgs).filter((t) => ['prompted', 'failed', 'running'].includes(t.meta.status));
+    if (remaining.length === 0) {
+      console.log(`queue auto-loop: all tasks settled after round ${round}`);
+      break;
+    }
+    console.log(`queue auto-loop: round ${round} done · ${remaining.length} still need attention · starting round ${round + 1}`);
+  }
+
+  console.log(`queue overall: rounds=${round} succeeded=${totalSucceeded} failed=${totalFailed} blocked=${lastBlocked}`);
+  releaseLock();
+}
+
+async function runQueueRound(args, round) {
   const concurrency = intArg(args, '--concurrency', 10);
   const limit = args.includes('--limit') ? intArg(args, '--limit', 1) : null;
   const dryRun = args.includes('--dry-run');
@@ -1004,14 +1063,15 @@ async function runQueue(args) {
   const runDir = path.join(ROOT, 'tmp', 'queue-runs', new Date().toISOString().replace(/[:.]/g, '-'));
   const runState = {
     started_at: new Date().toISOString(),
+    round,
     concurrency,
     dry_run: dryRun,
     tasks: {},
   };
 
   if (!tasks.length) {
-    console.log('queue: no prompted tasks');
-    return;
+    console.log(`queue round ${round}: no prompted tasks`);
+    return { succeeded: 0, failed: 0, blocked: 0, initialTasks: 0 };
   }
   fs.mkdirSync(runDir, { recursive: true });
 
@@ -1070,7 +1130,7 @@ async function runQueue(args) {
   writeQueueLog(runDir, runState);
   buildIndex();
   console.log([
-    `queue complete: succeeded=${runState.summary.succeeded}`,
+    `queue round ${round} complete: succeeded=${runState.summary.succeeded}`,
     `failed=${runState.summary.failed}`,
     `blocked=${runState.summary.blocked}`,
     `log ${rel(path.join(runDir, 'run.json'))}`,
@@ -1078,6 +1138,12 @@ async function runQueue(args) {
   if (!allowIncomplete && (runState.summary.failed || runState.summary.blocked)) {
     process.exitCode = 1;
   }
+  return {
+    succeeded: runState.summary.succeeded,
+    failed: runState.summary.failed,
+    blocked: runState.summary.blocked,
+    initialTasks: tasks.length,
+  };
 }
 
 function checkPublic() {
