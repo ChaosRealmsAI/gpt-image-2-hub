@@ -3,7 +3,6 @@ import './styles.css';
 const DATA_URL = './works/index.json';
 const LANG_KEY = 'prompt-atlas-lang';
 const VIEW_MODE_KEY = 'prompt-atlas-view-mode';
-const BATCH_SIZE = 12;
 
 const UI = {
   'zh-CN': {
@@ -22,6 +21,9 @@ const UI = {
     viewModeCollapsed: '封面',
     openOriginal: '新窗口预览',
     download: '下载原图',
+    showAllTopics: '展开全部',
+    showLessTopics: '收起',
+    randomTopic: '随机分类',
     close: '关闭',
     foot: 'GPT Image 2 Hub · AI 生图灵感图鉴',
   },
@@ -41,6 +43,9 @@ const UI = {
     viewModeCollapsed: 'Cover',
     openOriginal: 'Open original',
     download: 'Download',
+    showAllTopics: 'Show all',
+    showLessTopics: 'Show less',
+    randomTopic: 'Random topic',
     close: 'Close',
     foot: 'GPT Image 2 Hub · AI image inspiration atlas',
   },
@@ -67,18 +72,15 @@ const state = {
   lang: normalizeLang(localStorage.getItem(LANG_KEY) || 'zh-CN'),
   viewMode: localStorage.getItem(VIEW_MODE_KEY) === 'expanded' ? 'expanded' : 'collapsed',
   activeTopic: 'all',
+  topicTabsExpanded: false,
   search: '',
   modal: null,
   promptCache: new Map(),
-  renderedCount: 0,
-  batchScrollY: 0,
 };
 
 let topicMap = new Map();
 let packageMap = new Map();
 let peersMap = new Map();
-let batchObserver = null;
-let currentBatchList = [];
 let suppressHash = false;
 
 const app = document.querySelector('#app');
@@ -198,18 +200,12 @@ function shuffleImages(images) {
 function renderShell() {
   app.innerHTML = `
     <div class="app">
-      <aside class="sidebar">
-        <a class="brand" href="./" aria-label="home">
-          <span class="brand-mark"></span>
-          <span class="brand-name">GPT Image 2 Hub</span>
-        </a>
-
-        <div class="section-label">${esc(t('sectionTopics'))}</div>
-        <nav class="topics" id="topics-nav" aria-label="topics"></nav>
-      </aside>
-
       <main class="main">
         <header class="topbar">
+          <a class="brand" href="./" aria-label="home">
+            <span class="brand-mark"></span>
+            <span class="brand-name">GPT Image 2 Hub</span>
+          </a>
           <label class="search-box">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
             <input id="search" placeholder="${esc(t('searchPh'))}" value="${esc(state.search)}" />
@@ -239,6 +235,18 @@ function renderShell() {
             </div>
           </div>
         </header>
+
+        <div class="topic-tabs">
+          <div class="section-label">${esc(t('sectionTopics'))}</div>
+          <nav class="topics" id="topics-nav" aria-label="topics"></nav>
+          <div class="topic-actions">
+            <button class="topic-action-btn topic-random" id="topics-random" type="button">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3h5v5"/><path d="M4 20 21 3"/><path d="M21 16v5h-5"/><path d="M15 15 21 21"/><path d="M4 4l5 5"/></svg>
+              <span>${esc(t('randomTopic'))}</span>
+            </button>
+            <button class="topic-action-btn topics-toggle" id="topics-toggle" type="button" hidden></button>
+          </div>
+        </div>
 
         <div class="filter-bar" id="filter-bar-anchor">
           <div class="filter-title" id="filter-title"></div>
@@ -340,6 +348,34 @@ function renderTopicsNav() {
       <span class="topic-count">${item.count}</span>
     </button>
   `).join('');
+  syncTopicsLayout();
+}
+
+function syncTopicsLayout() {
+  const nav = $('#topics-nav');
+  const toggle = $('#topics-toggle');
+  if (!nav || !toggle) return;
+
+  const items = [...nav.querySelectorAll('.topic-item')];
+  items.forEach((item) => item.classList.remove('topic-item-hidden'));
+
+  const rows = [];
+  for (const item of items) {
+    const top = item.offsetTop;
+    let rowIndex = rows.findIndex((value) => Math.abs(value - top) <= 2);
+    if (rowIndex === -1) {
+      rows.push(top);
+      rowIndex = rows.length - 1;
+    }
+    if (!state.topicTabsExpanded && rowIndex >= 2) item.classList.add('topic-item-hidden');
+  }
+
+  const needsToggle = rows.length > 2;
+  toggle.hidden = !needsToggle;
+  toggle.textContent = needsToggle
+    ? t(state.topicTabsExpanded ? 'showLessTopics' : 'showAllTopics')
+    : '';
+  nav.classList.toggle('is-expanded', state.topicTabsExpanded || !needsToggle);
 }
 
 function renderFilterTitle() {
@@ -428,59 +464,12 @@ function renderCard(image) {
 function renderGallery() {
   const waterfall = $('#waterfall');
   if (!waterfall) return;
-  if (batchObserver) batchObserver.disconnect();
   const list = filteredImages();
-  currentBatchList = list;
-  state.renderedCount = 0;
-  state.batchScrollY = window.scrollY;
   if (!list.length) {
     waterfall.innerHTML = `<div class="empty">${esc(t('empty'))}</div>`;
     return;
   }
-  waterfall.innerHTML = '';
-  appendBatch(list);
-  ensureSentinel(list);
-}
-
-function appendBatch(list) {
-  const waterfall = $('#waterfall');
-  if (!waterfall) return;
-  const start = state.renderedCount;
-  const end = Math.min(start + BATCH_SIZE, list.length);
-  if (start >= end) return;
-
-  const sentinel = $('#batch-sentinel');
-  if (sentinel) sentinel.remove();
-
-  waterfall.insertAdjacentHTML('beforeend', list.slice(start, end).map(renderCard).join(''));
-  state.renderedCount = end;
-  state.batchScrollY = window.scrollY;
-
-  if (end < list.length) {
-    waterfall.insertAdjacentHTML('beforeend', '<div id="batch-sentinel" aria-hidden="true"></div>');
-    observeSentinel(list);
-  } else if (batchObserver) {
-    batchObserver.disconnect();
-  }
-}
-
-function observeSentinel(list) {
-  const sentinel = $('#batch-sentinel');
-  if (!sentinel) return;
-  if (batchObserver) batchObserver.disconnect();
-  batchObserver = new IntersectionObserver((entries) => {
-    if (
-      entries.some((entry) => entry.isIntersecting)
-      && Math.abs(window.scrollY - state.batchScrollY) > 40
-    ) {
-      appendBatch(list);
-    }
-  }, { rootMargin: '400px 0px' });
-  batchObserver.observe(sentinel);
-}
-
-function ensureSentinel(list) {
-  if (state.renderedCount < list.length) observeSentinel(list);
+  waterfall.innerHTML = list.map(renderCard).join('');
 }
 
 async function loadPrompt(image) {
@@ -647,10 +636,24 @@ function topicExists(id) {
   return id === 'all' || (state.data?.topics || []).some((topic) => topic.id === id);
 }
 
+function pickRandomTopicId() {
+  const topics = (state.data?.topics || []).map((topic) => topic.id).filter(Boolean);
+  if (!topics.length) return 'all';
+  const pool = topics.length > 1 ? topics.filter((id) => id !== state.activeTopic) : topics;
+  return pool[Math.floor(Math.random() * pool.length)] || topics[0];
+}
+
 function setActiveTopic(id, options = {}) {
   if (!topicExists(id)) return false;
   state.activeTopic = id;
   renderTopicsNav();
+  if (options.expandIfHidden) {
+    const activeButton = $('#topics-nav .topic-item.active');
+    if (activeButton?.classList.contains('topic-item-hidden')) {
+      state.topicTabsExpanded = true;
+      syncTopicsLayout();
+    }
+  }
   renderFilterTitle();
   renderGallery();
   if (options.scrollTop) window.scrollTo(0, 0);
@@ -663,7 +666,7 @@ function applyHashRoute() {
   if (hash.startsWith('#t-')) {
     closeModal({ keepHash: true });
     const topicId = decodeURIComponent(hash.slice(3).split('/')[0] || '');
-    setActiveTopic(topicId, { scrollTop: true });
+    setActiveTopic(topicId, { expandIfHidden: true, scrollTop: true });
     return;
   }
 
@@ -680,6 +683,17 @@ function bindEvents() {
     const topicItem = event.target.closest('.topic-item');
     if (topicItem) {
       setActiveTopic(topicItem.dataset.topic);
+      return;
+    }
+
+    if (event.target.closest('#topics-toggle')) {
+      state.topicTabsExpanded = !state.topicTabsExpanded;
+      syncTopicsLayout();
+      return;
+    }
+
+    if (event.target.closest('#topics-random')) {
+      setActiveTopic(pickRandomTopicId(), { expandIfHidden: true });
       return;
     }
 
@@ -787,14 +801,9 @@ function bindEvents() {
     applyHashRoute();
   });
 
-  window.addEventListener('scroll', () => {
-    const sentinel = $('#batch-sentinel');
-    if (!sentinel || !currentBatchList.length) return;
-    if (Math.abs(window.scrollY - state.batchScrollY) <= 40) return;
-    if (sentinel.getBoundingClientRect().top <= window.innerHeight + 400) {
-      appendBatch(currentBatchList);
-    }
-  }, { passive: true });
+  window.addEventListener('resize', () => {
+    syncTopicsLayout();
+  });
 }
 
 async function boot() {
