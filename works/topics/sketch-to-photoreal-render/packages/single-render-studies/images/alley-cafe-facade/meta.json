@@ -13,7 +13,7 @@
     "world-knowledge"
   ],
   "refs": [],
-  "status": "failed",
+  "status": "done",
   "generation": {
     "order": 4,
     "mode": "image",
@@ -24,13 +24,7 @@
     },
     "depends_on": [],
     "ref_urls": [],
-    "runner_notes": "Independent single image converting a narrow cafe storefront sketch into a layout-faithful photoreal facade.",
-    "last_error": {
-      "reason": "❌ fetch failed",
-      "retryable": true,
-      "output_path": "works/topics/sketch-to-photoreal-render/packages/single-render-studies/images/alley-cafe-facade/image.png",
-      "checked_at": "2026-04-23T07:18:53.124Z"
-    }
+    "runner_notes": "Independent single image converting a narrow cafe storefront sketch into a layout-faithful photoreal facade."
   },
   "i18n": {
     "en": {

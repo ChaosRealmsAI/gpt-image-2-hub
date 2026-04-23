@@ -15,7 +15,7 @@
     "single"
   ],
   "refs": [],
-  "status": "running",
+  "status": "failed",
   "generation": {
     "order": 7,
     "mode": "image",
@@ -26,7 +26,13 @@
     },
     "depends_on": [],
     "ref_urls": [],
-    "runner_notes": "Independent vertical poster study for moon-bridge architectural composition."
+    "runner_notes": "Independent vertical poster study for moon-bridge architectural composition.",
+    "last_error": {
+      "reason": "poll 超时 240s",
+      "retryable": true,
+      "output_path": "works/topics/new-chinese-ink-poster/packages/single-ink-poster-studies/images/07-moon-bridge/image.png",
+      "checked_at": "2026-04-23T07:51:35.384Z"
+    }
   },
   "i18n": {
     "en": {

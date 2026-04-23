@@ -1,0 +1,63 @@
+{
+  "prompt": "Scene:\nA square standalone composition for Banksy Street Satire built as a complete one-shot study rather than a reference-dependent variant. The framing should be strong and direct, with a clean lighting plan, intentional tonal control, and enough detail density to reward inspection without losing first-glance clarity.\n\nSubject:\nTranslate the theme into a single decisive hero concept. Use A Prompt Atlas theme for Banksy Street Satire, testing reasoning-composition, style-transfer with GPT Image 2. as fuel, but do not repeat the series composition. The subject should feel self-sufficient, with a different staging logic, different object hierarchy, and a fresh center of gravity.\n\nImportant details:\nThis image should test the theme from another angle while still meeting the same bar for structure and style. Use reasoning-composition, style-transfer to keep it disciplined. The hard part is the theme needs concept, composition, and finish to arrive in one image. Success means the image should read as difficult, coherent, and immediately persuasive.\n\nUse case:\nBanksy Street Satire single study 5/8, independent hero interpretation.\n\nConstraints:\nNo readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, avoid accidental continuity with the series camera setup, avoid empty background filler, avoid generic stock composition, and avoid weak focal hierarchy.",
+  "id": "hero-study",
+  "title": "Hero Study",
+  "description": "An independent hero image that interprets Banksy Street Satire through a fresh composition and decisive focal hierarchy.",
+  "type": "single",
+  "image": "image.png",
+  "aspect_ratio": "1:1",
+  "tags": [
+    "single",
+    "reasoning-composition",
+    "style-transfer",
+    "editorial-illustration"
+  ],
+  "refs": [],
+  "status": "failed",
+  "generation": {
+    "order": 1,
+    "mode": "image",
+    "model": "gpt-image-2",
+    "output": {
+      "path": "works/topics/banksy-street-satire/packages/single-independent-studies/images/hero-study/image.png",
+      "name": "image"
+    },
+    "depends_on": [],
+    "ref_urls": [],
+    "runner_notes": "Independent single-image hero study.",
+    "last_error": {
+      "reason": "❌ task failed: no image data URI found in content: 非常抱歉，该提示可能违反了关于与第三方内容相似性的防护限制。如果你认为此判断有误，请重试或修改提示语。",
+      "retryable": true,
+      "output_path": "works/topics/banksy-street-satire/packages/single-independent-studies/images/hero-study/image.png",
+      "checked_at": "2026-04-23T08:08:11.699Z"
+    }
+  },
+  "i18n": {
+    "en": {
+      "title": "Hero Study",
+      "description": "An independent hero image that interprets Banksy Street Satire through a fresh composition and decisive focal hierarchy."
+    },
+    "zh-CN": {
+      "title": "主视觉研究",
+      "description": "以全新构图和明确焦点独立演绎 Banksy 街头讽刺 · stencil 涂鸦 的主视觉单图。"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 10,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "single",
+      "reasoning-composition",
+      "style-transfer",
+      "editorial-illustration"
+    ],
+    "alt": {
+      "en": "An independent hero interpretation of Banksy Street Satire.",
+      "zh-CN": "对 Banksy 街头讽刺 · stencil 涂鸦 的独立主视觉演绎。"
+    }
+  }
+}

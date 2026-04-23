@@ -1,0 +1,65 @@
+{
+  "prompt": "Scene:\nCreate a second square image that clearly derives from the reference frame for Banksy Street Satire. Keep the same camera distance, silhouette balance, major shape rhythm, and negative-space architecture, but shift the material treatment and public context so the continuity is obvious while the result still feels newly observed.\n\nSubject:\nReuse the base subject logic from image 01 and reinterpret it through a sharper material or environmental change inspired by a frontier visual study centered on reasoning-composition, style-transfer. The same focal subject should remain dominant, while supporting details show how the theme behaves under a new condition rather than becoming a different concept.\n\nImportant details:\nThe continuity rule matters more than novelty: preserve the reference composition grammar, then layer in a controlled variation. Draw from A Prompt Atlas theme for Banksy Street Satire, testing reasoning-composition, style-transfer with GPT Image 2. and keep the theme legible with stronger texture contrast, secondary storytelling cues, and one decisive formal shift. avoid the usual failure modes in consistency, layout, and detail rendering\n\nUse case:\nBanksy Street Satire series study 2/8, continuity variation with one major controlled shift.\n\nConstraints:\nNo readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, keep the reference silhouette logic intact, avoid introducing a new camera angle, avoid replacing the core subject, and avoid noisy background distractions.",
+  "id": "02-material-shift",
+  "title": "Material Shift",
+  "description": "A reference-dependent variation that preserves the baseline composition while changing the material or surface logic.",
+  "type": "series",
+  "image": "image.png",
+  "aspect_ratio": "1:1",
+  "tags": [
+    "series",
+    "reasoning-composition",
+    "style-transfer",
+    "editorial-illustration"
+  ],
+  "refs": [],
+  "status": "prompted",
+  "generation": {
+    "order": 2,
+    "mode": "image",
+    "model": "gpt-image-2",
+    "output": {
+      "path": "works/topics/banksy-street-satire/packages/series-core-continuity/images/02-material-shift/image.png",
+      "name": "image"
+    },
+    "depends_on": [
+      {
+        "id": "01-reference-frame",
+        "meta_path": "works/topics/banksy-street-satire/packages/series-core-continuity/images/01-reference-frame/meta.json",
+        "image_path": "works/topics/banksy-street-satire/packages/series-core-continuity/images/01-reference-frame/image.png",
+        "ref_role": "primary",
+        "required_status": "done"
+      }
+    ],
+    "ref_urls": [],
+    "runner_notes": "Uses image 01 as the primary reference for material continuity."
+  },
+  "i18n": {
+    "en": {
+      "title": "Material Shift",
+      "description": "A reference-dependent variation that preserves the baseline composition while changing the material or surface logic."
+    },
+    "zh-CN": {
+      "title": "材质变体",
+      "description": "保持基准构图不变，通过材质与表面语言完成变化。"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 20,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "series",
+      "reasoning-composition",
+      "style-transfer",
+      "editorial-illustration"
+    ],
+    "alt": {
+      "en": "A continuity variation for Banksy Street Satire that shifts materials while preserving the same composition.",
+      "zh-CN": "在保持同一构图的前提下，通过材质变化演绎 Banksy 街头讽刺 · stencil 涂鸦 的连续变体。"
+    }
+  }
+}

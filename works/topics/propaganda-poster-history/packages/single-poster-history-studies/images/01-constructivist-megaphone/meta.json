@@ -15,7 +15,7 @@
     "single"
   ],
   "refs": [],
-  "status": "prompted",
+  "status": "failed",
   "generation": {
     "order": 1,
     "mode": "image",
@@ -26,7 +26,13 @@
     },
     "depends_on": [],
     "ref_urls": [],
-    "runner_notes": "Independent single image for constructivist poster-layout study."
+    "runner_notes": "Independent single image for constructivist poster-layout study.",
+    "last_error": {
+      "reason": "❌ fetch failed",
+      "retryable": true,
+      "output_path": "works/topics/propaganda-poster-history/packages/single-poster-history-studies/images/01-constructivist-megaphone/image.png",
+      "checked_at": "2026-04-23T07:52:49.324Z"
+    }
   },
   "i18n": {
     "en": {

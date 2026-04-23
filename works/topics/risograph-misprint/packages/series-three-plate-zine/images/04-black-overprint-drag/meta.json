@@ -13,7 +13,7 @@
     "series"
   ],
   "refs": [],
-  "status": "prompted",
+  "status": "failed",
   "generation": {
     "order": 4,
     "mode": "image",
@@ -32,7 +32,13 @@
       }
     ],
     "ref_urls": [],
-    "runner_notes": "Use the reference poster to preserve layout while adding heavy black overprint and ink drag."
+    "runner_notes": "Use the reference poster to preserve layout while adding heavy black overprint and ink drag.",
+    "last_error": {
+      "reason": "poll 超时 240s",
+      "retryable": true,
+      "output_path": "works/topics/risograph-misprint/packages/series-three-plate-zine/images/04-black-overprint-drag/image.png",
+      "checked_at": "2026-04-23T07:57:23.753Z"
+    }
   },
   "i18n": {
     "en": {

@@ -1,0 +1,63 @@
+{
+  "prompt": "Scene:\nA square 1:1 composition that feels like a flagship reference image for the Banksy Street Satire theme. Keep the camera clear, the framing deliberate, and the lighting controlled so the scene reads instantly at gallery thumbnail size while still holding dense detail up close. The atmosphere should embody a frontier visual study centered on reasoning-composition, style-transfer, with a disciplined palette, clear foreground-midground-background separation, and tactile surfaces that feel believable rather than decorative.\n\nSubject:\nBuild one central motif that can anchor later variations: A Prompt Atlas theme for Banksy Street Satire, testing reasoning-composition, style-transfer with GPT Image 2.. Arrange the primary subject, supporting objects, and negative space so the silhouette map is memorable and reusable. The image should communicate the theme without text, leaning on the strongest symbolic and material clues available in the subject matter.\n\nImportant details:\nProtect the core visual grammar: the theme needs concept, composition, and finish to arrive in one image. Composition should feel intentional, not random. Use the capability mix of reasoning-composition, style-transfer to keep structure and style coherent. Success means the image should read as difficult, coherent, and immediately persuasive. Avoid clichés or generic stock-photo staging.\n\nUse case:\nBanksy Street Satire series study 1/8, the baseline reference image for downstream continuity.\n\nConstraints:\nNo readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, avoid collage-like clutter, avoid empty corners, avoid muddy lighting, avoid unrelated props, and avoid visual ambiguity that weakens the central motif.",
+  "id": "01-reference-frame",
+  "title": "Reference Frame",
+  "description": "The baseline composition that establishes the visual language for the Banksy Street Satire continuity series.",
+  "type": "series",
+  "image": "image.png",
+  "aspect_ratio": "1:1",
+  "tags": [
+    "series",
+    "reasoning-composition",
+    "style-transfer",
+    "editorial-illustration"
+  ],
+  "refs": [],
+  "status": "failed",
+  "generation": {
+    "order": 1,
+    "mode": "image",
+    "model": "gpt-image-2",
+    "output": {
+      "path": "works/topics/banksy-street-satire/packages/series-core-continuity/images/01-reference-frame/image.png",
+      "name": "image"
+    },
+    "depends_on": [],
+    "ref_urls": [],
+    "runner_notes": "Root reference image for the continuity fanout series.",
+    "last_error": {
+      "reason": "❌ task failed: no image data URI found in content: 非常抱歉，该提示可能违反了关于与第三方内容相似性的防护限制。如果你认为此判断有误，请重试或修改提示语。",
+      "retryable": true,
+      "output_path": "works/topics/banksy-street-satire/packages/series-core-continuity/images/01-reference-frame/image.png",
+      "checked_at": "2026-04-23T08:07:52.193Z"
+    }
+  },
+  "i18n": {
+    "en": {
+      "title": "Reference Frame",
+      "description": "The baseline composition that establishes the visual language for the Banksy Street Satire continuity series."
+    },
+    "zh-CN": {
+      "title": "基准画面",
+      "description": "为 Banksy 街头讽刺 · stencil 涂鸦 连续系列建立视觉语言的基准构图。"
+    }
+  },
+  "display": {
+    "featured": true,
+    "sort_order": 10,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "series",
+      "reasoning-composition",
+      "style-transfer",
+      "editorial-illustration"
+    ],
+    "alt": {
+      "en": "Reference image establishing the baseline visual language for Banksy Street Satire.",
+      "zh-CN": "为 Banksy 街头讽刺 · stencil 涂鸦 建立基础视觉语言的基准图像。"
+    }
+  }
+}

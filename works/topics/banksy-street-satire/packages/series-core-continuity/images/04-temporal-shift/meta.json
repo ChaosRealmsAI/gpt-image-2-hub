@@ -1,0 +1,65 @@
+{
+  "prompt": "Scene:\nProduce a fourth and final square variation for Banksy Street Satire that keeps the baseline composition recognizable while shifting the atmosphere toward a quieter, more distilled endpoint. The lighting can move toward dusk, studio isolation, residue, or aftermath, but the underlying spatial map should still match the reference.\n\nSubject:\nThe same core motif from image 01 should persist, now expressed with restrained supporting elements and more emphasis on mood, surface wear, or aftermath detail. Let the scene feel resolved rather than crowded, as if it is the final state in a tightly controlled visual experiment.\n\nImportant details:\nMaintain the exact compositional DNA of the series while simplifying what surrounds it. This closing image should show that the theme survives multiple transformations without losing identity. Keep the strongest theme cues from A Prompt Atlas theme for Banksy Street Satire, testing reasoning-composition, style-transfer with GPT Image 2. and avoid sentimentality. avoid the usual failure modes in consistency, layout, and detail rendering\n\nUse case:\nBanksy Street Satire series study 4/8, continuity variation with a distilled closing mood.\n\nConstraints:\nNo readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, keep the same reference structure, avoid dramatic new props, avoid abrupt genre changes, avoid decorative haze, and avoid anything that weakens the feeling of a resolved final variation.",
+  "id": "04-temporal-shift",
+  "title": "Temporal Shift",
+  "description": "A reference-dependent closing variation that preserves the baseline composition while shifting time, atmosphere, or aftermath.",
+  "type": "series",
+  "image": "image.png",
+  "aspect_ratio": "1:1",
+  "tags": [
+    "series",
+    "reasoning-composition",
+    "style-transfer",
+    "editorial-illustration"
+  ],
+  "refs": [],
+  "status": "prompted",
+  "generation": {
+    "order": 4,
+    "mode": "image",
+    "model": "gpt-image-2",
+    "output": {
+      "path": "works/topics/banksy-street-satire/packages/series-core-continuity/images/04-temporal-shift/image.png",
+      "name": "image"
+    },
+    "depends_on": [
+      {
+        "id": "01-reference-frame",
+        "meta_path": "works/topics/banksy-street-satire/packages/series-core-continuity/images/01-reference-frame/meta.json",
+        "image_path": "works/topics/banksy-street-satire/packages/series-core-continuity/images/01-reference-frame/image.png",
+        "ref_role": "primary",
+        "required_status": "done"
+      }
+    ],
+    "ref_urls": [],
+    "runner_notes": "Uses image 01 as the primary reference for atmospheric continuity."
+  },
+  "i18n": {
+    "en": {
+      "title": "Temporal Shift",
+      "description": "A reference-dependent closing variation that preserves the baseline composition while shifting time, atmosphere, or aftermath."
+    },
+    "zh-CN": {
+      "title": "时间变体",
+      "description": "保持基准构图，通过时间、氛围或余波感完成收束。"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 40,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "series",
+      "reasoning-composition",
+      "style-transfer",
+      "editorial-illustration"
+    ],
+    "alt": {
+      "en": "A final continuity variation for Banksy Street Satire that changes atmosphere or time while preserving the same visual structure.",
+      "zh-CN": "在保持视觉结构一致的前提下，以时间或氛围变化收束 Banksy 街头讽刺 · stencil 涂鸦 连续系列。"
+    }
+  }
+}

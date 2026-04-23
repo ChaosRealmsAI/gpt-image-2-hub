@@ -1,0 +1,63 @@
+{
+  "prompt": "Scene:\nCreate an independent square study for Banksy Street Satire that moves closer to the tactile, process, or detail layer of the subject. Use intimate framing, precise light falloff, and crisp material rendering so the image feels observant and specific rather than theatrical.\n\nSubject:\nChoose one smaller but revealing slice of the theme and let it carry the whole image. The subject can be a tool, fragment, gesture, residue, interface, specimen, or crafted surface, as long as it still signals Banksy Street Satire clearly without explanatory text.\n\nImportant details:\nPrioritize material specificity, micro-storytelling, and disciplined composition. Pull the scene away from broad spectacle and into exact evidence. The image should still respect a frontier visual study centered on reasoning-composition, style-transfer and echo the challenge named in the theme needs concept, composition, and finish to arrive in one image, but through detail rather than scale.\n\nUse case:\nBanksy Street Satire single study 6/8, independent close-detail interpretation.\n\nConstraints:\nNo readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, avoid shallow prop piles, avoid overblown bokeh, avoid muddy textures, and avoid losing the theme in abstract close-up noise.",
+  "id": "detail-study",
+  "title": "Detail Study",
+  "description": "An independent close-detail study that conveys Banksy Street Satire through materials, traces, or crafted surfaces.",
+  "type": "single",
+  "image": "image.png",
+  "aspect_ratio": "1:1",
+  "tags": [
+    "single",
+    "reasoning-composition",
+    "style-transfer",
+    "editorial-illustration"
+  ],
+  "refs": [],
+  "status": "failed",
+  "generation": {
+    "order": 2,
+    "mode": "image",
+    "model": "gpt-image-2",
+    "output": {
+      "path": "works/topics/banksy-street-satire/packages/single-independent-studies/images/detail-study/image.png",
+      "name": "image"
+    },
+    "depends_on": [],
+    "ref_urls": [],
+    "runner_notes": "Independent single-image detail study.",
+    "last_error": {
+      "reason": "❌ task failed: no image data URI found in content: 非常抱歉，该提示可能违反了关于与第三方内容相似性的防护限制。如果你认为此判断有误，请重试或修改提示语。",
+      "retryable": true,
+      "output_path": "works/topics/banksy-street-satire/packages/single-independent-studies/images/detail-study/image.png",
+      "checked_at": "2026-04-23T08:07:58.354Z"
+    }
+  },
+  "i18n": {
+    "en": {
+      "title": "Detail Study",
+      "description": "An independent close-detail study that conveys Banksy Street Satire through materials, traces, or crafted surfaces."
+    },
+    "zh-CN": {
+      "title": "细节研究",
+      "description": "通过材质、痕迹或工艺表面独立呈现 Banksy 街头讽刺 · stencil 涂鸦 的细节单图。"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 20,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "single",
+      "reasoning-composition",
+      "style-transfer",
+      "editorial-illustration"
+    ],
+    "alt": {
+      "en": "A detail-led independent study for Banksy Street Satire.",
+      "zh-CN": "以细节为主导的 Banksy 街头讽刺 · stencil 涂鸦 独立研究图像。"
+    }
+  }
+}

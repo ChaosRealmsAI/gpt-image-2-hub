@@ -1,0 +1,58 @@
+{
+  "id": "single-independent-studies",
+  "type": "single",
+  "title": "Banksy Satire Independent Studies",
+  "description": "Four independent single-image studies that test Banksy Street Satire through distinct staging strategies without reference dependencies.",
+  "creative_direction": "Independent studies for Banksy Street Satire: one hero image, one detail-led study, one systems-oriented composition, and one wider contextual scene.",
+  "cover_image": "images/hero-study/image.png",
+  "i18n": {
+    "en": {
+      "title": "Banksy Satire Independent Studies",
+      "description": "Four independent single-image studies that test Banksy Street Satire through distinct staging strategies without reference dependencies."
+    },
+    "zh-CN": {
+      "title": "街头讽刺 单图研究",
+      "description": "四张彼此独立的单图研究，从不同构图策略测试 Banksy 街头讽刺 · stencil 涂鸦。"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 20,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "single",
+      "reasoning-composition",
+      "style-transfer",
+      "editorial-illustration"
+    ]
+  },
+  "images": [
+    {
+      "id": "hero-study",
+      "title": "Hero Study",
+      "image": "images/hero-study/image.png",
+      "meta": "images/hero-study/meta.json"
+    },
+    {
+      "id": "detail-study",
+      "title": "Detail Study",
+      "image": "images/detail-study/image.png",
+      "meta": "images/detail-study/meta.json"
+    },
+    {
+      "id": "system-study",
+      "title": "System Study",
+      "image": "images/system-study/image.png",
+      "meta": "images/system-study/meta.json"
+    },
+    {
+      "id": "context-study",
+      "title": "Context Study",
+      "image": "images/context-study/image.png",
+      "meta": "images/context-study/meta.json"
+    }
+  ]
+}

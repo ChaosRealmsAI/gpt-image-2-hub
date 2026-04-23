@@ -13,7 +13,7 @@
     "single"
   ],
   "refs": [],
-  "status": "failed",
+  "status": "done",
   "generation": {
     "order": 3,
     "mode": "image",
@@ -24,13 +24,7 @@
     },
     "depends_on": [],
     "ref_urls": [],
-    "runner_notes": "Independent single image testing datacenter-office HUD and route logic.",
-    "last_error": {
-      "reason": "❌ fetch failed",
-      "retryable": true,
-      "output_path": "works/topics/hitman-office-level/packages/single-office-level-studies/images/datacenter-heist-hud/image.png",
-      "checked_at": "2026-04-23T07:48:59.848Z"
-    }
+    "runner_notes": "Independent single image testing datacenter-office HUD and route logic."
   },
   "i18n": {
     "en": {

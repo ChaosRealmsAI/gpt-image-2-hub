@@ -1,0 +1,65 @@
+{
+  "prompt": "Scene:\nGenerate a third square continuation for Banksy Street Satire, again preserving the reference framing and composition map while raising the social or narrative stakes. The image should feel like the same visual system encountering a denser human, cultural, or environmental layer, with crisp depth and disciplined lighting.\n\nSubject:\nKeep the reference subject structure stable, but add a more complex interaction around it: crowd logic, surrounding artifacts, or situational tension that still leaves the original motif unmistakable. The viewer should recognize the lineage immediately before discovering the new narrative charge.\n\nImportant details:\nHonor the same primary contour language from image 01. Use the theme's hardest promise, the theme needs concept, composition, and finish to arrive in one image, as the guide. Lean on reasoning-composition, style-transfer so the scene stays readable even with added complexity. the image should read as difficult, coherent, and immediately persuasive\n\nUse case:\nBanksy Street Satire series study 3/8, continuity variation with denser narrative pressure.\n\nConstraints:\nNo readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, preserve the same dominant subject identity, avoid chaotic crowding, avoid posterized mush, avoid flat empty walls unless they serve the composition, and avoid breaking the reference continuity.",
+  "id": "03-social-shift",
+  "title": "Social Shift",
+  "description": "A reference-dependent variation that keeps the same core composition but adds stronger narrative or public-world pressure.",
+  "type": "series",
+  "image": "image.png",
+  "aspect_ratio": "1:1",
+  "tags": [
+    "series",
+    "reasoning-composition",
+    "style-transfer",
+    "editorial-illustration"
+  ],
+  "refs": [],
+  "status": "prompted",
+  "generation": {
+    "order": 3,
+    "mode": "image",
+    "model": "gpt-image-2",
+    "output": {
+      "path": "works/topics/banksy-street-satire/packages/series-core-continuity/images/03-social-shift/image.png",
+      "name": "image"
+    },
+    "depends_on": [
+      {
+        "id": "01-reference-frame",
+        "meta_path": "works/topics/banksy-street-satire/packages/series-core-continuity/images/01-reference-frame/meta.json",
+        "image_path": "works/topics/banksy-street-satire/packages/series-core-continuity/images/01-reference-frame/image.png",
+        "ref_role": "primary",
+        "required_status": "done"
+      }
+    ],
+    "ref_urls": [],
+    "runner_notes": "Uses image 01 as the primary reference for narrative continuity."
+  },
+  "i18n": {
+    "en": {
+      "title": "Social Shift",
+      "description": "A reference-dependent variation that keeps the same core composition but adds stronger narrative or public-world pressure."
+    },
+    "zh-CN": {
+      "title": "叙事变体",
+      "description": "保持核心构图一致，同时加入更强的叙事与社会语境压力。"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 30,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "series",
+      "reasoning-composition",
+      "style-transfer",
+      "editorial-illustration"
+    ],
+    "alt": {
+      "en": "A continuity variation for Banksy Street Satire with added narrative or social complexity.",
+      "zh-CN": "在同一视觉框架中加入更强叙事与社会层次的 Banksy 街头讽刺 · stencil 涂鸦 连续变体。"
+    }
+  }
+}

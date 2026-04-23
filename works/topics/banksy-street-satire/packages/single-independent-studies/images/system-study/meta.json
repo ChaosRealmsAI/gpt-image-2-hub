@@ -1,0 +1,63 @@
+{
+  "prompt": "Scene:\nGenerate a square standalone study for Banksy Street Satire with a stronger systems or diagrammatic sensibility, while remaining image-first and visually rich. The composition should feel organized, layered, and easy to parse from edge to edge, with clean spatial logic and intentional grouping.\n\nSubject:\nReframe the theme as a controlled arrangement of parts, evidence, steps, or comparative states. The subject should reveal structure, reasoning, or transformation without relying on readable text. Let the viewer understand the system through placement, scale, and contrast.\n\nImportant details:\nThe strongest cue here is clarity. Use reasoning-composition, style-transfer to balance complexity with legibility. Let A Prompt Atlas theme for Banksy Street Satire, testing reasoning-composition, style-transfer with GPT Image 2. influence the content, but keep the output visually disciplined and suitable for research-gallery viewing. avoid the usual failure modes in consistency, layout, and detail rendering\n\nUse case:\nBanksy Street Satire single study 7/8, independent systems-oriented interpretation.\n\nConstraints:\nNo readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, avoid cluttered infographics, avoid illegible tiny artifacts, avoid flat unlived geometry, and avoid losing visual hierarchy.",
+  "id": "system-study",
+  "title": "System Study",
+  "description": "An independent systems-oriented study that organizes Banksy Street Satire into a clear visual logic without readable text.",
+  "type": "single",
+  "image": "image.png",
+  "aspect_ratio": "1:1",
+  "tags": [
+    "single",
+    "reasoning-composition",
+    "style-transfer",
+    "editorial-illustration"
+  ],
+  "refs": [],
+  "status": "failed",
+  "generation": {
+    "order": 3,
+    "mode": "image",
+    "model": "gpt-image-2",
+    "output": {
+      "path": "works/topics/banksy-street-satire/packages/single-independent-studies/images/system-study/image.png",
+      "name": "image"
+    },
+    "depends_on": [],
+    "ref_urls": [],
+    "runner_notes": "Independent single-image systems study.",
+    "last_error": {
+      "reason": "❌ task failed: no image data URI found in content: 非常抱歉，该提示可能违反了关于与第三方内容相似性的防护限制。如果你认为此判断有误，请重试或修改提示语。",
+      "retryable": true,
+      "output_path": "works/topics/banksy-street-satire/packages/single-independent-studies/images/system-study/image.png",
+      "checked_at": "2026-04-23T08:08:19.424Z"
+    }
+  },
+  "i18n": {
+    "en": {
+      "title": "System Study",
+      "description": "An independent systems-oriented study that organizes Banksy Street Satire into a clear visual logic without readable text."
+    },
+    "zh-CN": {
+      "title": "系统研究",
+      "description": "以更强的组织逻辑独立呈现 Banksy 街头讽刺 · stencil 涂鸦 的系统化单图。"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 30,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "single",
+      "reasoning-composition",
+      "style-transfer",
+      "editorial-illustration"
+    ],
+    "alt": {
+      "en": "A systems-oriented independent study for Banksy Street Satire.",
+      "zh-CN": "强调系统组织逻辑的 Banksy 街头讽刺 · stencil 涂鸦 独立研究图像。"
+    }
+  }
+}

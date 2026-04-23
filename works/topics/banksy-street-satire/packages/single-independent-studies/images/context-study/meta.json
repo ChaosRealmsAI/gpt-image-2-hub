@@ -1,0 +1,63 @@
+{
+  "prompt": "Scene:\nMake a final independent square study for Banksy Street Satire that places the concept in a wider contextual environment. The image should have enough room to breathe while still keeping a clear focal path, with controlled atmosphere, grounded materials, and carefully shaped negative space.\n\nSubject:\nSituate the theme inside a believable place, ritual, or scenario that makes the stakes feel real. The main subject should remain unmistakable, but the surrounding environment should now do more of the storytelling, showing what kind of world this theme belongs to.\n\nImportant details:\nUse the final single to broaden the atlas without repeating earlier shots. Keep the most persuasive qualities from the theme needs concept, composition, and finish to arrive in one image and the success bar from the image should read as difficult, coherent, and immediately persuasive. The result should feel finished, specific, and exhibition-ready rather than like a sketch.\n\nUse case:\nBanksy Street Satire single study 8/8, independent contextual interpretation.\n\nConstraints:\nNo readable text, no watermark, no logos, preserve exact 1:1 aspect ratio, avoid generic scenic filler, avoid confused focal points, avoid empty theatrical smoke, and avoid any environmental detail that contradicts the theme.",
+  "id": "context-study",
+  "title": "Context Study",
+  "description": "An independent contextual scene that places Banksy Street Satire inside a wider and more believable environment.",
+  "type": "single",
+  "image": "image.png",
+  "aspect_ratio": "1:1",
+  "tags": [
+    "single",
+    "reasoning-composition",
+    "style-transfer",
+    "editorial-illustration"
+  ],
+  "refs": [],
+  "status": "failed",
+  "generation": {
+    "order": 4,
+    "mode": "image",
+    "model": "gpt-image-2",
+    "output": {
+      "path": "works/topics/banksy-street-satire/packages/single-independent-studies/images/context-study/image.png",
+      "name": "image"
+    },
+    "depends_on": [],
+    "ref_urls": [],
+    "runner_notes": "Independent single-image contextual study.",
+    "last_error": {
+      "reason": "❌ task failed: no image data URI found in content: 非常抱歉，该提示可能违反了关于与第三方内容相似性的防护限制。如果你认为此判断有误，请重试或修改提示语。",
+      "retryable": true,
+      "output_path": "works/topics/banksy-street-satire/packages/single-independent-studies/images/context-study/image.png",
+      "checked_at": "2026-04-23T08:08:11.482Z"
+    }
+  },
+  "i18n": {
+    "en": {
+      "title": "Context Study",
+      "description": "An independent contextual scene that places Banksy Street Satire inside a wider and more believable environment."
+    },
+    "zh-CN": {
+      "title": "场景研究",
+      "description": "将 Banksy 街头讽刺 · stencil 涂鸦 放入更完整、更可信环境中的独立场景单图。"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 40,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "single",
+      "reasoning-composition",
+      "style-transfer",
+      "editorial-illustration"
+    ],
+    "alt": {
+      "en": "A wider contextual independent study for Banksy Street Satire.",
+      "zh-CN": "将 Banksy 街头讽刺 · stencil 涂鸦 放入更宽广语境中的独立研究图像。"
+    }
+  }
+}
