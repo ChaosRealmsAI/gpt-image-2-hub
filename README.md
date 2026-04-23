@@ -42,6 +42,7 @@ The frontend never reads private todo data. It fetches `works/index.json`, then 
 - Use `single` for independent images under one topic. Use `series` only for intentional continuity or reference-dependent images.
 - `generation.output.path` is the exact repo-relative output image path.
 - `generation.depends_on` declares series dependencies. Independent images use an empty array.
+- Failed queue attempts write a public-safe `generation.last_error`; private task ids and temporary URLs stay in ignored `tmp/queue-runs/`.
 - `display.alt.en` and `display.alt.zh-CN` are required for every image.
 - `tags` are stable English slugs; display labels live in `works/tags.json`.
 - Do not put `task_id`, temporary `url`, `local_path`, internal scores, or evaluation notes in public works JSON.
@@ -51,10 +52,11 @@ The frontend never reads private todo data. It fetches `works/index.json`, then 
 ```bash
 npm run works:validate
 npm run works:index
-npm run works:scaffold -- A-13 single object-memory --title "Object Memory" --image object-memory
-npm run works:generate -- works/S/S-19-sem-microscopy/packages/single-pollen-micro-city/images/pollen-micro-city/meta.json
+npm run works:scaffold -- high-speed-freeze single impact-study --title "Impact Study" --image water-crown
+npm run works:generate -- works/topics/high-speed-freeze/packages/single-impact-studies/images/water-crown/meta.json
+npm run works:scan -- --problems
 npm run works:queue -- --concurrency 10
-npm run works:sync -- A-13
+npm run works:sync -- high-speed-freeze
 npm run check:public
 ```
 
@@ -62,7 +64,7 @@ npm run check:public
 
 For normal production, write `meta.json` files with `status: prompted`, then run `npm run works:queue -- --concurrency 10`. The queue scans `works/**/meta.json`, starts up to 10 ready image jobs, respects `generation.depends_on`, writes each `image.png` to `generation.output.path`, changes successful tasks to `done`, changes failed tasks to `failed`, stores private run logs in ignored `tmp/queue-runs/`, and rebuilds `works/index.json`.
 
-Use `--dry-run` first to see which tasks are ready and which are blocked by dependencies.
+Use `works:scan` and `--dry-run` first to see which tasks are done, ready, failed, running, missing outputs, or blocked by dependencies. `npm run works:scan -- --strict` exits nonzero unless every task is `done` or `skipped`.
 
 ## Frontend
 
@@ -78,6 +80,7 @@ The gallery supports:
 
 ```bash
 npm run works:validate
+npm run works:scan -- --strict
 npm run works:index
 npm run build
 npm run check:public

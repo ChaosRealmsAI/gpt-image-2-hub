@@ -14,6 +14,7 @@
     "works:scaffold": "node tools/works.js scaffold-package",
     "works:generate": "node tools/works.js generate",
     "works:queue": "node tools/works.js queue",
+    "works:scan": "node tools/works.js scan",
     "check:public": "node tools/works.js check-public"
   },
   "devDependencies": {

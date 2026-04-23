@@ -12,6 +12,18 @@
         "zh-CN": "水晶球"
       }
     },
+    "data-visualization": {
+      "labels": {
+        "en": "Data visualization",
+        "zh-CN": "数据可视化"
+      }
+    },
+    "editorial-illustration": {
+      "labels": {
+        "en": "Editorial illustration",
+        "zh-CN": "编辑插画"
+      }
+    },
     "grayscale": {
       "labels": {
         "en": "Grayscale",
@@ -36,10 +48,28 @@
         "zh-CN": "微缩世界"
       }
     },
+    "optical-illusion": {
+      "labels": {
+        "en": "Optical illusion",
+        "zh-CN": "视觉错觉"
+      }
+    },
+    "pattern": {
+      "labels": {
+        "en": "Pattern",
+        "zh-CN": "图案"
+      }
+    },
     "photorealism": {
       "labels": {
         "en": "Photorealism",
         "zh-CN": "写实摄影"
+      }
+    },
+    "reasoning-composition": {
+      "labels": {
+        "en": "Reasoning composition",
+        "zh-CN": "推理构图"
       }
     },
     "scientific-realism": {
@@ -64,6 +94,24 @@
       "labels": {
         "en": "Single image",
         "zh-CN": "单图"
+      }
+    },
+    "structured-layout": {
+      "labels": {
+        "en": "Structured layout",
+        "zh-CN": "结构版式"
+      }
+    },
+    "tessellation": {
+      "labels": {
+        "en": "Tessellation",
+        "zh-CN": "无缝拼贴"
+      }
+    },
+    "thinking-mode": {
+      "labels": {
+        "en": "Thinking mode",
+        "zh-CN": "推理图像"
       }
     },
     "time-split": {

@@ -29,7 +29,7 @@ function worksPlugin() {
 export default defineConfig({
   root,
   base: './',
-  publicDir: false,
+  publicDir: 'public',
   plugins: [worksPlugin()],
   build: {
     outDir: 'dist',

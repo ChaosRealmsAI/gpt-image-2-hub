@@ -41,6 +41,7 @@ Usage:
   node tools/works.js check-public
   node tools/works.js generate <works/.../meta.json>
   node tools/works.js queue [--concurrency 10] [--limit n] [--retry failed] [--topic id] [--package id] [--dry-run]
+  node tools/works.js scan [--topic id] [--package id] [--problems] [--strict] [--json]
   node tools/works.js list [--todo-only] [--with-works]
   node tools/works.js show <item-id>
   node tools/works.js sync <item-id>
@@ -50,9 +51,10 @@ Examples:
   node tools/works.js validate
   node tools/works.js build-index
   node tools/works.js check-public
-  node tools/works.js generate works/S/S-19-sem-microscopy/packages/single-pollen-micro-city/images/pollen-micro-city/meta.json
+  node tools/works.js generate works/topics/high-speed-freeze/packages/single-impact-studies/images/water-crown/meta.json
+  node tools/works.js scan --strict
   node tools/works.js queue --concurrency 10
-  node tools/works.js scaffold-package A-13 single object-memory --title "Object Memory" --image object-memory
+  node tools/works.js scaffold-package high-speed-freeze single impact-study --title "Impact Study" --image water-crown
 `);
 }
 
@@ -94,12 +96,6 @@ function slugify(input) {
     .replace(/^-|-$/g, '');
 }
 
-function tierIdFromItemId(id) {
-  const m = String(id).match(/^([A-Z])-/);
-  if (!m) throw new Error(`Cannot infer tier from id: ${id}`);
-  return m[1];
-}
-
 function todo() {
   if (!fileExists(TODO_PATH)) {
     throw new Error(`Private todo not found: ${rel(TODO_PATH)}. Public mode supports validate/build-index/check-public only.`);
@@ -112,29 +108,26 @@ function optionalTodo() {
 }
 
 function findItem(data, id) {
-  for (const tier of data.tiers || []) {
-    for (const item of tier.items || []) {
-      if (item.id === id) return { tier, item };
-    }
+  for (const item of data.topics || []) {
+    if (item.id === id || item.slug === id || item.legacy_id === id) return { item };
   }
   return null;
 }
 
 function allItems(data) {
-  const out = [];
-  for (const tier of data.tiers || []) {
-    for (const item of tier.items || []) out.push({ tier, item });
-  }
-  return out;
+  return (data.topics || []).map((item) => ({ item }));
 }
 
 function topicSlugFor(item) {
-  return item.works?.topic_slug || `${item.id}-${slugify(item.name.split('·')[0] || item.name)}`;
+  return item.production?.works?.topic_slug
+    || item.works?.topic_slug
+    || item.slug
+    || item.id
+    || slugify(item.name || item.title);
 }
 
 function topicPathFor(item) {
-  const tier = tierIdFromItemId(item.id);
-  return path.join(WORKS_ROOT, tier, topicSlugFor(item), 'topic.json');
+  return path.join(WORKS_ROOT, 'topics', topicSlugFor(item), 'topic.json');
 }
 
 function rel(file) {
@@ -152,11 +145,11 @@ function walkFiles(dir, predicate, out = []) {
 }
 
 function topicFiles() {
-  return walkFiles(WORKS_ROOT, (file) => path.basename(file) === 'topic.json').sort();
+  return walkFiles(path.join(WORKS_ROOT, 'topics'), (file) => path.basename(file) === 'topic.json').sort();
 }
 
 function metaFiles() {
-  return walkFiles(WORKS_ROOT, (file) => path.basename(file) === 'meta.json').sort();
+  return walkFiles(path.join(WORKS_ROOT, 'topics'), (file) => path.basename(file) === 'meta.json').sort();
 }
 
 function assertNoForbiddenFields(value, file, errors, trail = []) {
@@ -364,23 +357,26 @@ function syncItem(id) {
   if (!found) throw new Error(`Item not found: ${id}`);
   const works = scanTopic(found.item);
   if (!works) throw new Error(`No topic found for ${id}. Expected ${rel(topicPathFor(found.item))}`);
-  const existingNote = found.item.works?.note;
-  found.item.works = {
+  const existingNote = found.item.production?.works?.note || found.item.works?.note;
+  const nextWorks = {
     ...works,
     note: existingNote || 'Synced from works/.',
   };
+  if (found.item.production) found.item.production.works = nextWorks;
+  else found.item.works = nextWorks;
   writeJson(TODO_PATH, data);
   console.log(`synced ${id}: ${works.package_count} packages, ${works.image_count} images`);
 }
 
 function validateItem(item, errors) {
-  if (!item.works) return;
+  const itemWorks = item.production?.works || item.works;
+  if (!itemWorks) return;
   const works = scanTopic(item);
   if (!works) {
     errors.push(`${item.id}: works present but topic missing`);
     return;
   }
-  const expected = item.works;
+  const expected = itemWorks;
   for (const key of ['package_count', 'series_package_count', 'single_package_count', 'image_count']) {
     if ((expected[key] || 0) !== (works[key] || 0)) {
       errors.push(`${item.id}: works.${key}=${expected[key]} but scanned=${works[key]}`);
@@ -477,7 +473,7 @@ function validate(id) {
 function topicTodoItemByTopicPath(data, topicPath) {
   if (!data) return null;
   const topicRel = rel(topicPath);
-  return allItems(data).find(({ item }) => item.works?.topic_path === topicRel)?.item || null;
+  return allItems(data).find(({ item }) => (item.production?.works || item.works)?.topic_path === topicRel)?.item || null;
 }
 
 function imageEntryForIndex(topic, topicPath, pkg, pkgPath, imageRef, meta, metaPath) {
@@ -489,7 +485,7 @@ function imageEntryForIndex(topic, topicPath, pkg, pkgPath, imageRef, meta, meta
     image_id: meta.id,
     package_id: pkg.id,
     topic_id: topic.id,
-    tier: topic.id.split('-')[0],
+    topic_slug: topic.slug || topic.id,
     title: meta.title,
     description: meta.description,
     i18n: meta.i18n || {},
@@ -551,7 +547,7 @@ function buildIndex() {
       const indexedPkg = {
         id: pkg.id,
         topic_id: topic.id,
-        tier: topic.id.split('-')[0],
+        topic_slug: topic.slug || topic.id,
         type: pkg.type,
         title: pkg.title,
         description: pkg.description,
@@ -571,9 +567,10 @@ function buildIndex() {
 
     topics.push({
       id: topic.id,
-      todo_id: item?.id || topic.id.split('-').slice(0, 2).join('-'),
-      tier: topic.id.split('-')[0],
+      slug: topic.slug || topic.id,
+      todo_id: item?.id || item?.legacy_id || topic.id,
       title: topic.title,
+      short_title: topic.short_title,
       description: topic.description,
       i18n: topic.i18n || {},
       display: topic.display || {},
@@ -671,14 +668,21 @@ function parseImageUrl(text) {
   return matches.length ? matches[matches.length - 1][0] : null;
 }
 
-function loadQueueTasks(args) {
-  const retry = getArg(args, '--retry', '');
+function failureSummary(output, code, outputPath) {
+  const text = String(output);
+  const timeout = text.match(/poll 超时 \d+s|timeout|timed out/i)?.[0] || null;
+  const errorLine = text.split('\n').reverse().find((line) => /❌|error|failed|timeout|超时/i.test(line)) || null;
+  return {
+    reason: timeout || errorLine || (code === 0 ? 'missing output image' : `image2gen exited ${code}`),
+    retryable: true,
+    output_path: rel(outputPath),
+    checked_at: new Date().toISOString(),
+  };
+}
+
+function loadMetaTasks(args) {
   const topicFilter = getArg(args, '--topic', '');
   const packageFilter = getArg(args, '--package', '');
-  const allowedStatuses = new Set(['prompted']);
-  if (retry === 'failed') allowedStatuses.add('failed');
-  if (retry === 'running') allowedStatuses.add('running');
-
   const tasks = [];
   for (const metaPath of metaFiles()) {
     const meta = readJson(metaPath);
@@ -691,7 +695,6 @@ function loadQueueTasks(args) {
     const topic = fileExists(topicPath) ? readJson(topicPath) : {};
     if (topicFilter && topic.id !== topicFilter) continue;
     if (packageFilter && pkg.id !== packageFilter) continue;
-    if (!allowedStatuses.has(meta.status)) continue;
     tasks.push({
       metaPath,
       metaRel,
@@ -707,6 +710,139 @@ function loadQueueTasks(args) {
       || (a.meta.generation?.order || 0) - (b.meta.generation?.order || 0)
       || a.meta.id.localeCompare(b.meta.id);
   });
+}
+
+function loadQueueTasks(args) {
+  const retry = getArg(args, '--retry', '');
+  const allowedStatuses = new Set(['prompted']);
+  if (retry === 'failed') allowedStatuses.add('failed');
+  if (retry === 'running') allowedStatuses.add('running');
+  return loadMetaTasks(args).filter((task) => allowedStatuses.has(task.meta.status));
+}
+
+function dependencyScanState(task) {
+  const blockers = [];
+  const refs = [];
+  for (const dep of task.meta.generation?.depends_on || []) {
+    const depName = dep.id || dep.meta_path || '?';
+    if (!dep.meta_path) {
+      blockers.push(`${depName} missing meta_path`);
+      continue;
+    }
+    const depMetaPath = path.join(ROOT, dep.meta_path);
+    if (!fileExists(depMetaPath)) {
+      blockers.push(`${depName} missing meta`);
+      continue;
+    }
+    const depMeta = readJson(depMetaPath);
+    const depImagePath = dep.image_path
+      ? path.join(ROOT, dep.image_path)
+      : path.join(path.dirname(depMetaPath), depMeta.image || 'image.png');
+    if (depMeta.status !== 'done') {
+      blockers.push(`${depName} status=${depMeta.status || 'unknown'}`);
+      continue;
+    }
+    if (!fileExists(depImagePath)) {
+      blockers.push(`${depName} done but missing ${rel(depImagePath)}`);
+      continue;
+    }
+    refs.push(dep.image_path || rel(depImagePath));
+  }
+  return { blockers, refs };
+}
+
+function taskHealth(task) {
+  const errors = [];
+  validateGenerationObject(task.metaRel, task.meta, errors);
+  const imageExists = fileExists(task.outputPath);
+  const deps = dependencyScanState(task);
+  let state = 'invalid';
+  let reason = errors[0] || '';
+  const status = task.meta.status || 'unknown';
+
+  if (!errors.length) {
+    if (status === 'done') {
+      state = imageExists ? 'done' : 'missing_image';
+      reason = imageExists ? '' : `status=done but missing ${rel(task.outputPath)}`;
+    } else if (status === 'failed') {
+      state = 'failed';
+      reason = task.meta.generation?.last_error?.reason || 'failed without generation.last_error';
+    } else if (status === 'running') {
+      state = imageExists ? 'running_with_output' : 'running';
+      reason = imageExists
+        ? `status=running but output exists at ${rel(task.outputPath)}`
+        : 'status=running; retry with --retry running if no queue is active';
+    } else if (status === 'skipped') {
+      state = 'skipped';
+      reason = 'intentionally not queued';
+    } else if (status === 'prompted') {
+      state = deps.blockers.length ? 'blocked' : 'ready';
+      reason = deps.blockers.join('; ');
+    }
+  }
+
+  return {
+    state,
+    status,
+    image_exists: imageExists,
+    dependency_count: task.meta.generation?.depends_on?.length || 0,
+    ready_ref_count: deps.refs.length,
+    retryable: Boolean(task.meta.generation?.last_error?.retryable),
+    meta_path: task.metaRel,
+    output_path: rel(task.outputPath),
+    reason,
+    errors,
+  };
+}
+
+function scanQueue(args) {
+  const json = args.includes('--json');
+  const problemsOnly = args.includes('--problems');
+  const strict = args.includes('--strict');
+  const tasks = loadMetaTasks(args);
+  const rows = tasks.map((task) => taskHealth(task));
+  const counts = {
+    total: rows.length,
+    done: 0,
+    ready: 0,
+    blocked: 0,
+    failed: 0,
+    running: 0,
+    running_with_output: 0,
+    missing_image: 0,
+    skipped: 0,
+    invalid: 0,
+  };
+  for (const row of rows) {
+    if (row.state in counts) counts[row.state] += 1;
+  }
+  const unfinished = rows.filter((row) => !['done', 'skipped'].includes(row.state));
+
+  if (json) {
+    console.log(JSON.stringify({ counts, rows }, null, 2));
+  } else {
+    console.log([
+      `scan: total=${counts.total}`,
+      `done=${counts.done}`,
+      `ready=${counts.ready}`,
+      `blocked=${counts.blocked}`,
+      `failed=${counts.failed}`,
+      `running=${counts.running + counts.running_with_output}`,
+      `missing=${counts.missing_image}`,
+      `skipped=${counts.skipped}`,
+      `invalid=${counts.invalid}`,
+    ].join(' '));
+    for (const row of rows) {
+      if (problemsOnly && ['done', 'skipped'].includes(row.state)) continue;
+      const reason = row.reason ? `\t${row.reason}` : '';
+      const retry = row.retryable ? '\tretryable=true' : '';
+      console.log(`${row.state}\tstatus=${row.status}\timage=${row.image_exists ? 'yes' : 'no'}\tdeps=${row.ready_ref_count}/${row.dependency_count}\t${row.meta_path}${retry}${reason}`);
+    }
+  }
+
+  if (strict && unfinished.length) {
+    process.exitCode = 1;
+  }
 }
 
 function dependencyState(task, resultUrls) {
@@ -747,6 +883,7 @@ function runImageTask(task, refUrls, runDir, runState) {
     const latest = readJson(task.metaPath);
     latest.status = 'running';
     latest.generation.ref_urls = [];
+    delete latest.generation.last_error;
     writeJson(task.metaPath, latest);
 
     const outputPath = path.join(ROOT, latest.generation.output.path);
@@ -786,6 +923,8 @@ function runImageTask(task, refUrls, runDir, runState) {
       const succeeded = code === 0 && fileExists(outputPath);
       current.status = succeeded ? 'done' : 'failed';
       current.generation.ref_urls = [];
+      if (succeeded) delete current.generation.last_error;
+      else current.generation.last_error = failureSummary(output, code, outputPath);
       writeJson(task.metaPath, current);
 
       const logPath = path.join(runDir, `${task.meta.id}.log`);
@@ -812,10 +951,12 @@ async function runQueue(args) {
   const concurrency = intArg(args, '--concurrency', 10);
   const limit = args.includes('--limit') ? intArg(args, '--limit', 1) : null;
   const dryRun = args.includes('--dry-run');
+  const allowIncomplete = args.includes('--allow-incomplete');
   const tasks = loadQueueTasks(args).slice(0, limit || undefined);
   const pending = new Map(tasks.map((task) => [task.metaRel, task]));
   const running = new Set();
   const blocked = new Map();
+  const completed = [];
   const resultUrls = new Map();
   const runDir = path.join(ROOT, 'tmp', 'queue-runs', new Date().toISOString().replace(/[:.]/g, '-'));
   const runState = {
@@ -858,6 +999,7 @@ async function runQueue(args) {
         if (!pending.has(task.metaRel)) continue;
         pending.delete(task.metaRel);
         const promise = runImageTask(task, refUrls, runDir, runState).then((result) => {
+          completed.push(result);
           running.delete(promise);
           if (result.succeeded && result.resultUrl) resultUrls.set(result.task.metaRel, result.resultUrl);
           schedule();
@@ -874,9 +1016,25 @@ async function runQueue(args) {
   });
 
   runState.done_at = new Date().toISOString();
+  runState.summary = {
+    succeeded: completed.filter((result) => result.succeeded).length,
+    failed: completed.filter((result) => !result.succeeded).length,
+    blocked: pending.size,
+  };
+  if (pending.size) {
+    runState.blocked = Object.fromEntries([...blocked.entries()]);
+  }
   writeQueueLog(runDir, runState);
   buildIndex();
-  console.log(`queue complete: log ${rel(path.join(runDir, 'run.json'))}`);
+  console.log([
+    `queue complete: succeeded=${runState.summary.succeeded}`,
+    `failed=${runState.summary.failed}`,
+    `blocked=${runState.summary.blocked}`,
+    `log ${rel(path.join(runDir, 'run.json'))}`,
+  ].join(' '));
+  if (!allowIncomplete && (runState.summary.failed || runState.summary.blocked)) {
+    process.exitCode = 1;
+  }
 }
 
 function checkPublic() {
@@ -927,9 +1085,8 @@ function scaffoldPackage(args) {
   const found = findItem(data, id);
   if (!found) throw new Error(`Item not found: ${id}`);
   const item = found.item;
-  const tier = tierIdFromItemId(id);
   const topicSlug = topicSlugFor(item);
-  const topicDir = path.join(WORKS_ROOT, tier, topicSlug);
+  const topicDir = path.join(WORKS_ROOT, 'topics', topicSlug);
   const topicPath = path.join(topicDir, 'topic.json');
   const title = getArg(args, '--title', packageSlug.split('-').map((s) => s[0]?.toUpperCase() + s.slice(1)).join(' '));
   const count = Number(getArg(args, '--count', type === 'series' ? '3' : '1'));
@@ -943,16 +1100,17 @@ function scaffoldPackage(args) {
     ? readJson(topicPath)
     : {
         id: topicSlug,
-        title: item.name,
-      description: item.example || item.dimension || '',
+        slug: topicSlug,
+        title: item.title || item.name,
+      description: item.description || item.example || item.dimension || '',
       i18n: {
         en: {
-          title: item.name,
-          description: item.example || item.dimension || '',
+          title: item.i18n?.en?.title || item.title || item.name,
+          description: item.i18n?.en?.description || item.description || item.example || item.dimension || '',
         },
         'zh-CN': {
-          title: item.name,
-          description: item.example || item.dimension || '',
+          title: item.i18n?.['zh-CN']?.title || item.name || item.title,
+          description: item.i18n?.['zh-CN']?.description || item.example || item.dimension || '',
         },
       },
       display: {
@@ -1074,6 +1232,7 @@ async function main() {
   else if (command === 'build-index') buildIndex();
   else if (command === 'check-public') checkPublic();
   else if (command === 'generate') generateImage(args);
+  else if (command === 'scan') scanQueue(args);
   else if (command === 'queue') await runQueue(args);
   else if (command === 'scaffold-package') scaffoldPackage(args);
   else throw new Error(`Unknown command: ${command}`);

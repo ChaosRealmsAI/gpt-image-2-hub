@@ -29,6 +29,29 @@ Closed source:
 
 Use the private todo only as a planning source. The frontend must work from public `works/index.json` alone.
 
+## Agent Flow 0 · Maintain Todo
+
+`todo/atlas-todo.json` is private but important. It is the planning ledger for future production; do not delete it, overwrite it wholesale, or stage it for git.
+
+When using todo:
+
+1. Read the existing topic entry first.
+2. Preserve all existing fields unless the task explicitly asks for a schema change.
+3. After creating public works data, update only the matching topic's production status fields when needed:
+   - `production.works.topic_path`
+   - `production.works.package_count`
+   - `production.works.image_count`
+   - `production.works.packages`
+   - `status` if the user wants todo progress tracked
+4. Never copy private fields into public `works/` JSON:
+   - `research_value`
+   - `spectacle_score`
+   - `difficulty`
+   - `evaluation`
+   - internal notes
+   - source document paths
+5. If todo is missing, do not invent private history. Work from existing public `works/` data and say todo was unavailable.
+
 ## Agent Flow 1 · Write Meta
 
 When asked to prepare work, create complete `meta.json` task files first; do not start by running image generation.
@@ -44,25 +67,36 @@ When asked to prepare work, create complete `meta.json` task files first; do not
    - Independent single images use `[]`.
    - True series images declare prior reference images with `id`, `meta_path`, `image_path`, `ref_role`, and `required_status: done`.
 7. Keep `generation.ref_urls: []` in committed files. The queue injects runtime URLs privately.
-8. Run `npm run works:validate`.
+8. Run:
+
+```bash
+npm run works:validate
+npm run works:scan -- --problems
+```
 
 ## Agent Flow 2 · Run Queue
 
 When asked to generate images, use the queue instead of hand-running one meta at a time.
 
-1. Preview:
+1. Scan current state:
+
+```bash
+npm run works:scan -- --problems
+```
+
+2. Preview:
 
 ```bash
 npm run works:queue -- --dry-run --concurrency 10
 ```
 
-2. Run:
+3. Run:
 
 ```bash
 npm run works:queue -- --concurrency 10
 ```
 
-The queue scans `works/**/meta.json`, starts up to 10 ready `image2gen` CLI jobs in parallel, respects `generation.depends_on`, passes runtime dependency URLs as `--ref`, writes each `image.png` to `generation.output.path`, marks success as `done`, marks failure as `failed`, writes private run logs under ignored `tmp/queue-runs/`, and rebuilds `works/index.json`.
+The queue scans `works/**/meta.json`, starts up to 10 ready `image2gen` CLI jobs in parallel, respects `generation.depends_on`, passes runtime dependency URLs as `--ref`, writes each `image.png` to `generation.output.path`, marks success as `done`, marks failure as `failed`, writes private run logs under ignored `tmp/queue-runs/`, and rebuilds `works/index.json`. A queue run exits nonzero when any selected task fails or remains blocked. Use `npm run works:scan -- --strict` to verify that the full selected surface is complete.
 
 ## Required Commands
 
@@ -70,6 +104,7 @@ Run from this public project root:
 
 ```bash
 npm run works:validate
+npm run works:scan -- --problems
 npm run works:index
 npm run build
 npm run check:public
@@ -78,7 +113,7 @@ npm run check:public
 For image generation:
 
 ```bash
-npm run works:generate -- works/{tier}/{topic}/packages/{package}/images/{image}/meta.json
+npm run works:generate -- works/topics/{theme}/packages/{package}/images/{image}/meta.json
 ```
 
 The generator reads `meta.json.prompt`, writes `image.png` to the same image directory, and does not write internal API fields into public metadata.
@@ -91,6 +126,15 @@ npm run works:queue -- --concurrency 10
 
 The queue scans prompted metadata, respects dependencies, writes images to `generation.output.path`, marks success as `done`, marks failure as `failed`, stores private logs in ignored `tmp/queue-runs/`, and rebuilds `works/index.json`.
 
+For production health checks:
+
+```bash
+npm run works:scan -- --problems
+npm run works:scan -- --strict
+```
+
+`works:scan` reports `done`, `ready`, `blocked`, `failed`, `running`, `missing_image`, `skipped`, and `invalid` tasks. Strict mode exits nonzero unless every task is `done` or `skipped`.
+
 ## Metadata Rules
 
 - Every image directory contains `meta.json`; `image.png` exists after generation succeeds.
@@ -102,6 +146,7 @@ The queue scans prompted metadata, respects dependencies, writes images to `gene
   - `failed`: previous run failed and can be retried.
   - `skipped`: intentionally not queued.
 - `meta.json.generation` is required and must include `order`, `output.path`, `depends_on`, and `ref_urls`.
+- If a queue run fails, `generation.last_error` should summarize the public-safe reason, retryability, and expected output path. Private task ids and temporary URLs stay only in `tmp/queue-runs/`.
 - Series references are declared in `generation.depends_on`; queues inject dependency result URLs into `generation.ref_urls` at runtime before calling `image2gen --ref`. Do not commit temporary URLs.
 - Prompt text remains English.
 - Every public topic, package, and image has `i18n.en` and `i18n.zh-CN`.
@@ -114,6 +159,7 @@ The queue scans prompted metadata, respects dependencies, writes images to `gene
 
 ```bash
 npm run works:validate
+npm run works:scan -- --strict
 npm run works:index
 npm run build
 npm run check:public
@@ -121,3 +167,11 @@ git status --short
 ```
 
 Do not stage `todo/`, `prototype/`, `research-materials/`, private logs, or API output URLs.
+
+## Failure Handling
+
+- If `works:scan` reports `blocked`, inspect `generation.depends_on`; do not manually paste URLs into committed meta.
+- If `works:scan` reports `failed`, retry with `npm run works:queue -- --retry failed --concurrency 10` after checking `generation.last_error`.
+- If `works:scan` reports `running` and no queue is active, retry with `npm run works:queue -- --retry running --concurrency 10`.
+- If `works:scan` reports `missing_image`, either restore the image, set status back to `prompted`, or mark it `skipped` with a clear reason.
+- A complete production run is not complete until `npm run works:scan -- --strict` passes.

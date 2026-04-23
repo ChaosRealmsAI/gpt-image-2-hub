@@ -140,6 +140,30 @@
         },
         "runner_notes": {
           "type": "string"
+        },
+        "last_error": {
+          "type": "object",
+          "required": [
+            "reason",
+            "retryable",
+            "output_path",
+            "checked_at"
+          ],
+          "properties": {
+            "reason": {
+              "type": "string"
+            },
+            "retryable": {
+              "type": "boolean"
+            },
+            "output_path": {
+              "type": "string"
+            },
+            "checked_at": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": true
         }
       },
       "additionalProperties": true

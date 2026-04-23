@@ -53,7 +53,9 @@
         "execution": {
           "enum": [
             "single",
-            "sequential"
+            "sequential",
+            "parallel",
+            "fanout"
           ]
         },
         "runner": {
