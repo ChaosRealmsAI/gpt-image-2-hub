@@ -175,6 +175,13 @@ function buildIndexes() {
   }
 }
 
+function shuffleImages(images) {
+  for (let i = images.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [images[i], images[j]] = [images[j], images[i]];
+  }
+}
+
 function renderShell() {
   app.innerHTML = `
     <div class="app">
@@ -195,10 +202,10 @@ function renderShell() {
             <input id="search" placeholder="${esc(t('searchPh'))}" value="${esc(state.search)}" />
           </label>
           <div class="top-right">
-            <a class="icon-btn" href="https://github.com" target="_blank" rel="noopener" aria-label="github">
+            <a class="icon-btn" href="https://github.com/ChaosRealmsAI/gpt-image-2-hub" target="_blank" rel="noopener" aria-label="github">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.38 7.86 10.9.58.1.79-.25.79-.55 0-.28-.01-1.02-.02-2-3.2.69-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.76 2.69 1.25 3.34.95.1-.74.4-1.25.72-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.18A11 11 0 0 1 12 6.8c.98 0 1.97.13 2.89.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.73.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.41-5.27 5.69.41.36.78 1.06.78 2.14 0 1.55-.02 2.8-.02 3.18 0 .3.21.66.8.55A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
             </a>
-            <a class="icon-btn" href="https://x.com" target="_blank" rel="noopener" aria-label="x">
+            <a class="icon-btn" href="https://x.com/WYuxuan60660" target="_blank" rel="noopener" aria-label="x">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             </a>
             <div class="lang-dd" id="lang-dd">
@@ -699,6 +706,7 @@ async function boot() {
   if (!response.ok) throw new Error(`HTTP ${response.status}`);
   state.data = await response.json();
   buildIndexes();
+  shuffleImages(state.data.images || []);
   applyLang();
 
   if (location.hash.startsWith('#m-')) {
