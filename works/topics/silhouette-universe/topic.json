@@ -3,35 +3,38 @@
   "slug": "silhouette-universe",
   "title": "Silhouette Universe",
   "short_title": "Silhouette Universe",
-  "description": "A Prompt Atlas theme for Silhouette Universe, testing structured-layout, reasoning-composition with GPT Image 2.",
+  "description": "A Prompt Atlas theme for symbolic compositions where a crisp black silhouette becomes a container for an entire narrative world.",
   "i18n": {
     "en": {
       "title": "Silhouette Universe",
-      "description": "A Prompt Atlas theme for Silhouette Universe, testing structured-layout, reasoning-composition with GPT Image 2."
+      "short_title": "Silhouette Universe",
+      "description": "A Prompt Atlas theme for symbolic compositions where a crisp black silhouette becomes a container for an entire narrative world."
     },
     "zh-CN": {
       "title": "Silhouette Universe · 剪影宇宙",
-      "description": "Silhouette Universe · 剪影宇宙：黑色剪影(塔 / 门 / 骷髅)里塞入完整叙事世界 · 城市 / 河流 / 人物 / 天气分层"
+      "short_title": "剪影宇宙",
+      "description": "测试黑色剪影作为叙事容器的象征性构图,让塔、门和骷髅轮廓内部承载完整世界。"
     }
   },
   "display": {
-    "featured": false,
-    "sort_order": 200,
+    "featured": true,
+    "sort_order": 20,
     "audiences": [
       "gallery",
       "research"
     ],
     "tags": [
+      "editorial-illustration",
       "structured-layout",
       "reasoning-composition"
     ]
   },
   "packages": [
     {
-      "id": "single-theme-studies",
+      "id": "single-silhouette-studies",
       "type": "single",
-      "title": "Theme Studies",
-      "path": "packages/single-theme-studies/package.json"
+      "title": "Silhouette Studies",
+      "path": "packages/single-silhouette-studies/package.json"
     }
   ]
 }

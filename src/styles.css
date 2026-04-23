@@ -545,10 +545,12 @@ body.modal-open { overflow: hidden; }
 .nav-arrow svg { width: 20px; height: 20px; }
 
 .modal-side {
-  padding: 28px 30px;
+  position: relative;
+  padding: 28px 30px 84px;
   display: flex; flex-direction: column;
-  overflow-y: auto;
   max-height: 92vh;
+  min-height: 0;
+  overflow: hidden;
   background: #0f0f14;
 }
 
@@ -662,6 +664,8 @@ body.modal-open { overflow: hidden; }
 .copy-big svg { width: 13px; height: 13px; }
 
 .prompt-text {
+  flex: 1;
+  min-height: 0;
   background: #08080c;
   border: 1px solid rgba(255,255,255,0.06);
   border-radius: 12px;
@@ -671,15 +675,15 @@ body.modal-open { overflow: hidden; }
   line-height: 1.62;
   color: rgba(255,255,255,0.82);
   white-space: pre-wrap; word-break: break-word;
-  max-height: 260px;
   overflow-y: auto;
   margin-bottom: 0;
 }
 
 .modal-actions {
+  position: absolute;
+  right: 24px; bottom: 22px;
   display: flex; gap: 10px;
-  margin-top: 16px;
-  flex-wrap: wrap;
+  z-index: 12;
 }
 .modal-action {
   display: inline-flex; align-items: center; gap: 8px;

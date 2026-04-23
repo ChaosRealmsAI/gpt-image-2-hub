@@ -323,9 +323,9 @@
     }
   },
   "stats": {
-    "topic_count": 11,
-    "package_count": 14,
-    "image_count": 47
+    "topic_count": 12,
+    "package_count": 15,
+    "image_count": 50
   },
   "topics": [
     {
@@ -482,6 +482,45 @@
         "single-impact-studies"
       ],
       "topic_path": "works/topics/high-speed-freeze/topic.json"
+    },
+    {
+      "id": "silhouette-universe",
+      "slug": "silhouette-universe",
+      "todo_id": "silhouette-universe",
+      "title": "Silhouette Universe",
+      "short_title": "Silhouette Universe",
+      "description": "A Prompt Atlas theme for symbolic compositions where a crisp black silhouette becomes a container for an entire narrative world.",
+      "i18n": {
+        "en": {
+          "title": "Silhouette Universe",
+          "short_title": "Silhouette Universe",
+          "description": "A Prompt Atlas theme for symbolic compositions where a crisp black silhouette becomes a container for an entire narrative world."
+        },
+        "zh-CN": {
+          "title": "Silhouette Universe · 剪影宇宙",
+          "short_title": "剪影宇宙",
+          "description": "测试黑色剪影作为叙事容器的象征性构图,让塔、门和骷髅轮廓内部承载完整世界。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 20,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "editorial-illustration",
+          "structured-layout",
+          "reasoning-composition"
+        ]
+      },
+      "package_count": 1,
+      "image_count": 3,
+      "packages": [
+        "single-silhouette-studies"
+      ],
+      "topic_path": "works/topics/silhouette-universe/topic.json"
     },
     {
       "id": "sixteen-reference-fusion",
@@ -969,6 +1008,47 @@
       ],
       "package_path": "works/topics/high-speed-freeze/packages/single-impact-studies/package.json",
       "topic_path": "works/topics/high-speed-freeze/topic.json"
+    },
+    {
+      "id": "single-silhouette-studies",
+      "topic_id": "silhouette-universe",
+      "topic_slug": "silhouette-universe",
+      "type": "single",
+      "title": "Silhouette Studies",
+      "description": "Three independent silhouette-as-container studies: the black outline holds a full narrative world inside — tower, doorway, and skull each framing a different universe.",
+      "creative_direction": "Each image uses a different iconic silhouette (tower / doorway / skull) as a narrative container. The outline stays crisp and solid black; the inside carries an entire scene with its own color temperature that contrasts the outside field.",
+      "i18n": {
+        "en": {
+          "title": "Silhouette Studies",
+          "description": "Three independent silhouette-as-container studies: the black outline holds a full narrative world inside — tower, doorway, and skull each framing a different universe."
+        },
+        "zh-CN": {
+          "title": "剪影单图研究",
+          "description": "三张独立的剪影容器研究: 黑色轮廓内部装入完整叙事世界,塔、门和骷髅分别框住不同宇宙。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 20,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "editorial-illustration",
+          "structured-layout",
+          "single"
+        ]
+      },
+      "cover_image": "works/topics/silhouette-universe/packages/single-silhouette-studies/images/tower-at-dusk/image.png",
+      "image_count": 3,
+      "images": [
+        "silhouette-universe/single-silhouette-studies/tower-at-dusk",
+        "silhouette-universe/single-silhouette-studies/doorway-threshold",
+        "silhouette-universe/single-silhouette-studies/skull-memento"
+      ],
+      "package_path": "works/topics/silhouette-universe/packages/single-silhouette-studies/package.json",
+      "topic_path": "works/topics/silhouette-universe/topic.json"
     },
     {
       "id": "series-reference-fusion-atlas",
@@ -2489,6 +2569,213 @@
       "package_title": "Impact Studies",
       "topic_title": "High-Speed Freeze",
       "package_ref_image": "works/topics/high-speed-freeze/packages/single-impact-studies/images/powder-ring/image.png"
+    },
+    {
+      "id": "silhouette-universe/single-silhouette-studies/tower-at-dusk",
+      "image_id": "tower-at-dusk",
+      "package_id": "single-silhouette-studies",
+      "topic_id": "silhouette-universe",
+      "topic_slug": "silhouette-universe",
+      "title": "Tower at Dusk",
+      "description": "A black tower silhouette containing a complete cool-blue dusk city against a warm orange sky.",
+      "i18n": {
+        "en": {
+          "title": "Tower at Dusk",
+          "description": "A black tower silhouette containing a complete cool-blue dusk city against a warm orange sky."
+        },
+        "zh-CN": {
+          "title": "黄昏之塔",
+          "description": "黑色塔形剪影内部容纳一座冷蓝黄昏城市,外部是暖橘薄雾天空。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 10,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "editorial-illustration",
+          "structured-layout",
+          "reasoning-composition",
+          "single",
+          "grayscale"
+        ],
+        "alt": {
+          "en": "A tower-shaped silhouette filled with an entire dusk cityscape — windows, rivers, and lanterns glowing inside the black outline.",
+          "zh-CN": "塔形黑色剪影内部装着一整座黄昏城市,窗户、河流、灯笼在轮廓内闪耀。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 1,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/topics/silhouette-universe/packages/single-silhouette-studies/images/tower-at-dusk/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "Independent single image for the silhouette universe theme."
+      },
+      "type": "single",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "editorial-illustration",
+        "structured-layout",
+        "reasoning-composition",
+        "frontier-creative-composition",
+        "single",
+        "grayscale"
+      ],
+      "refs": [],
+      "image": "works/topics/silhouette-universe/packages/single-silhouette-studies/images/tower-at-dusk/image.png",
+      "meta_path": "works/topics/silhouette-universe/packages/single-silhouette-studies/images/tower-at-dusk/meta.json",
+      "package_path": "works/topics/silhouette-universe/packages/single-silhouette-studies/package.json",
+      "topic_path": "works/topics/silhouette-universe/topic.json",
+      "package_title": "Silhouette Studies",
+      "topic_title": "Silhouette Universe",
+      "package_ref_image": "works/topics/silhouette-universe/packages/single-silhouette-studies/images/tower-at-dusk/image.png"
+    },
+    {
+      "id": "silhouette-universe/single-silhouette-studies/doorway-threshold",
+      "image_id": "doorway-threshold",
+      "package_id": "single-silhouette-studies",
+      "topic_id": "silhouette-universe",
+      "topic_slug": "silhouette-universe",
+      "title": "Doorway Threshold",
+      "description": "A black arched doorway silhouette containing a forest, mountains, stars, and a galaxy on a white poster field.",
+      "i18n": {
+        "en": {
+          "title": "Doorway Threshold",
+          "description": "A black arched doorway silhouette containing a forest, mountains, stars, and a galaxy on a white poster field."
+        },
+        "zh-CN": {
+          "title": "门槛异界",
+          "description": "白色海报画布上,黑色拱门剪影内部容纳森林、远山、星空和银河。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 20,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "editorial-illustration",
+          "structured-layout",
+          "reasoning-composition",
+          "single",
+          "grayscale"
+        ],
+        "alt": {
+          "en": "A black arched doorway silhouette containing an otherworldly landscape — forest, stars, and galaxies pressed into the outline.",
+          "zh-CN": "拱门黑色剪影内部装着异世界 — 森林、星空、银河压进门框轮廓里。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 2,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/topics/silhouette-universe/packages/single-silhouette-studies/images/doorway-threshold/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "Independent single image for the silhouette universe theme."
+      },
+      "type": "single",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "editorial-illustration",
+        "structured-layout",
+        "reasoning-composition",
+        "frontier-creative-composition",
+        "single",
+        "grayscale"
+      ],
+      "refs": [],
+      "image": "works/topics/silhouette-universe/packages/single-silhouette-studies/images/doorway-threshold/image.png",
+      "meta_path": "works/topics/silhouette-universe/packages/single-silhouette-studies/images/doorway-threshold/meta.json",
+      "package_path": "works/topics/silhouette-universe/packages/single-silhouette-studies/package.json",
+      "topic_path": "works/topics/silhouette-universe/topic.json",
+      "package_title": "Silhouette Studies",
+      "topic_title": "Silhouette Universe",
+      "package_ref_image": "works/topics/silhouette-universe/packages/single-silhouette-studies/images/doorway-threshold/image.png"
+    },
+    {
+      "id": "silhouette-universe/single-silhouette-studies/skull-memento",
+      "image_id": "skull-memento",
+      "package_id": "single-silhouette-studies",
+      "topic_id": "silhouette-universe",
+      "topic_slug": "silhouette-universe",
+      "title": "Skull Memento",
+      "description": "A black skull profile silhouette containing a full Victorian funeral narrative on aged parchment.",
+      "i18n": {
+        "en": {
+          "title": "Skull Memento",
+          "description": "A black skull profile silhouette containing a full Victorian funeral narrative on aged parchment."
+        },
+        "zh-CN": {
+          "title": "骷髅纪念",
+          "description": "做旧羊皮纸上,黑色侧面骷髅剪影内部容纳一整场维多利亚葬礼叙事。"
+        }
+      },
+      "display": {
+        "featured": false,
+        "sort_order": 30,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "editorial-illustration",
+          "structured-layout",
+          "reasoning-composition",
+          "single",
+          "grayscale"
+        ],
+        "alt": {
+          "en": "A profile skull silhouette holds a full Victorian funeral scene inside — caskets, mourners, and crows tucked into its outline.",
+          "zh-CN": "侧面骷髅剪影内部装着一场维多利亚葬礼 — 灵柩、送葬队、乌鸦在头骨轮廓里铺开。"
+        }
+      },
+      "status": "done",
+      "generation": {
+        "order": 3,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/topics/silhouette-universe/packages/single-silhouette-studies/images/skull-memento/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "Independent single image for the silhouette universe theme."
+      },
+      "type": "single",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "editorial-illustration",
+        "structured-layout",
+        "reasoning-composition",
+        "frontier-creative-composition",
+        "single",
+        "grayscale"
+      ],
+      "refs": [],
+      "image": "works/topics/silhouette-universe/packages/single-silhouette-studies/images/skull-memento/image.png",
+      "meta_path": "works/topics/silhouette-universe/packages/single-silhouette-studies/images/skull-memento/meta.json",
+      "package_path": "works/topics/silhouette-universe/packages/single-silhouette-studies/package.json",
+      "topic_path": "works/topics/silhouette-universe/topic.json",
+      "package_title": "Silhouette Studies",
+      "topic_title": "Silhouette Universe",
+      "package_ref_image": "works/topics/silhouette-universe/packages/single-silhouette-studies/images/skull-memento/image.png"
     },
     {
       "id": "sixteen-reference-fusion/series-reference-fusion-atlas/01-sixteen-source-board",
