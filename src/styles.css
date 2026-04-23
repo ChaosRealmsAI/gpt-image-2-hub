@@ -83,7 +83,6 @@ button, input, select, a { font: inherit; color: inherit; background: none; bord
   position: relative;
   border: none; background: transparent;
 }
-.topic-item svg { width: 18px; height: 18px; flex-shrink: 0; opacity: 0.78; }
 .topic-item:hover { background: rgba(255,255,255,0.04); color: var(--text); }
 .topic-item.active {
   background: var(--grad-nav-active);
@@ -94,7 +93,6 @@ button, input, select, a { font: inherit; color: inherit; background: none; bord
   width: 3px; border-radius: 0 3px 3px 0;
   background: var(--grad-brand);
 }
-.topic-item.active svg { opacity: 1; color: var(--purple); }
 
 .topic-item { padding-right: 10px; }
 .topic-item .topic-count {
