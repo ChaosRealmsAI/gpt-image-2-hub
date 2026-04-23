@@ -447,7 +447,18 @@
         }
       },
       "status": "done",
-      "generation": null,
+      "generation": {
+        "order": 1,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/A/A-03-crystal-ball-narrative/packages/series-crystal-ball-seasons/images/01-spring-oracle/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "No reference image required. Queue can run this image directly from prompt."
+      },
       "type": "series",
       "aspect_ratio": "1:1",
       "tags": [
@@ -500,7 +511,18 @@
         }
       },
       "status": "done",
-      "generation": null,
+      "generation": {
+        "order": 1,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/A/A-13-mirror-worlds/packages/series-three-eras/images/01-victorian-parlor/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "No reference image required. Queue can run this image directly from prompt."
+      },
       "type": "series",
       "aspect_ratio": "16:9",
       "tags": [
@@ -554,7 +576,18 @@
         }
       },
       "status": "done",
-      "generation": null,
+      "generation": {
+        "order": 1,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/A/A-13-mirror-worlds/packages/series-three-eras/images/02-neon-apartment/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "No reference image required. Queue can run this image directly from prompt."
+      },
       "type": "series",
       "aspect_ratio": "16:9",
       "tags": [
@@ -610,7 +643,18 @@
         }
       },
       "status": "done",
-      "generation": null,
+      "generation": {
+        "order": 1,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/A/A-13-mirror-worlds/packages/series-three-eras/images/03-desert-observatory/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "No reference image required. Queue can run this image directly from prompt."
+      },
       "type": "series",
       "aspect_ratio": "16:9",
       "tags": [
@@ -667,7 +711,18 @@
         }
       },
       "status": "done",
-      "generation": null,
+      "generation": {
+        "order": 1,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/A/A-13-mirror-worlds/packages/single-timeline-collision/images/timeline-collision-hero/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "No reference image required. Queue can run this image directly from prompt."
+      },
       "type": "single",
       "aspect_ratio": "16:9",
       "tags": [
@@ -721,7 +776,18 @@
         }
       },
       "status": "done",
-      "generation": null,
+      "generation": {
+        "order": 1,
+        "mode": "image",
+        "model": "gpt-image-2",
+        "output": {
+          "path": "works/S/S-19-sem-microscopy/packages/single-pollen-micro-city/images/pollen-micro-city/image.png",
+          "name": "image"
+        },
+        "depends_on": [],
+        "ref_urls": [],
+        "runner_notes": "No reference image required. Queue can run this image directly from prompt."
+      },
       "type": "single",
       "aspect_ratio": "1:1",
       "tags": [

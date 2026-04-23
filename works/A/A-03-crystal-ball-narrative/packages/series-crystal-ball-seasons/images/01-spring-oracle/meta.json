@@ -13,6 +13,19 @@
     "series"
   ],
   "refs": [],
+  "status": "done",
+  "generation": {
+    "order": 1,
+    "mode": "image",
+    "model": "gpt-image-2",
+    "output": {
+      "path": "works/A/A-03-crystal-ball-narrative/packages/series-crystal-ball-seasons/images/01-spring-oracle/image.png",
+      "name": "image"
+    },
+    "depends_on": [],
+    "ref_urls": [],
+    "runner_notes": "No reference image required. Queue can run this image directly from prompt."
+  },
   "i18n": {
     "en": {
       "title": "Spring Oracle",

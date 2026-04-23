@@ -38,6 +38,12 @@ Rules:
 - `image` is the only layer that owns prompt and generation result.
 - Every image directory must contain exactly one `image.png` and one `meta.json`.
 - `meta.json.prompt` is the first field. Do not create `prompt.md`.
+- `meta.json.status` is required. Use `prompted`, `running`, `done`, `failed`, or `skipped`.
+- `meta.json.generation` is required. It must make the image runnable by a queue without extra decisions:
+  - `order`: execution order inside the package.
+  - `output.path`: repo-relative output image path.
+  - `depends_on[]`: prior image refs, including `meta_path`, `image_path`, `ref_role`, and `required_status`.
+  - `ref_urls[]`: queue-injected public URLs for `image2gen --ref`; local paths are not passed as refs.
 - Do not put `single/` or `series/` directly under tier. That belongs to package metadata and package slug.
 - Public `meta.json` should only contain prompt, title, short description, image path, aspect ratio, tags, and refs. Do not put API task ids, temporary URLs, local absolute paths, scores, or internal evaluation notes in public works JSON.
 - `title` and `description` are the English fallback. Every public `topic.json`, `package.json`, and `meta.json` also has `i18n` with at least `en` and `zh-CN`.
@@ -46,6 +52,7 @@ Rules:
 - Every image `meta.json` has `display.alt.en` and `display.alt.zh-CN` for gallery cards, SEO, and accessibility.
 - `tags` are stable English slugs. Human-readable labels live in `new/works/tags.json`.
 - Frontends should read `new/works/index.json`, not recursively scan the directory at runtime.
+- Frontends should only show images that are `status: done` and have `image.png`; prompted series tasks stay out of `works/index.json` until generated.
 
 Quality rule:
 

@@ -16,6 +16,34 @@
     "01-spring-oracle",
     "02-autumn-oracle"
   ],
+  "status": "prompted",
+  "generation": {
+    "order": 3,
+    "mode": "image",
+    "model": "gpt-image-2",
+    "output": {
+      "path": "works/A/A-03-crystal-ball-narrative/packages/series-crystal-ball-seasons/images/03-winter-oracle/image.png",
+      "name": "image"
+    },
+    "depends_on": [
+      {
+        "id": "01-spring-oracle",
+        "meta_path": "works/A/A-03-crystal-ball-narrative/packages/series-crystal-ball-seasons/images/01-spring-oracle/meta.json",
+        "image_path": "works/A/A-03-crystal-ball-narrative/packages/series-crystal-ball-seasons/images/01-spring-oracle/image.png",
+        "ref_role": "preserve base crystal ball object identity and brass stand",
+        "required_status": "done"
+      },
+      {
+        "id": "02-autumn-oracle",
+        "meta_path": "works/A/A-03-crystal-ball-narrative/packages/series-crystal-ball-seasons/images/02-autumn-oracle/meta.json",
+        "image_path": "works/A/A-03-crystal-ball-narrative/packages/series-crystal-ball-seasons/images/02-autumn-oracle/image.png",
+        "ref_role": "preserve continued series composition and internal-world refraction behavior",
+        "required_status": "done"
+      }
+    ],
+    "ref_urls": [],
+    "runner_notes": "Queue must inject dependency output URLs into ref_urls before execution; image2gen --ref accepts URLs, not local paths."
+  },
   "i18n": {
     "en": {
       "title": "Winter Oracle",

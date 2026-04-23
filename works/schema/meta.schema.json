@@ -13,6 +13,8 @@
     "aspect_ratio",
     "tags",
     "refs",
+    "status",
+    "generation",
     "i18n",
     "display"
   ],
@@ -49,6 +51,98 @@
     },
     "refs": {
       "type": "array"
+    },
+    "status": {
+      "enum": [
+        "prompted",
+        "running",
+        "done",
+        "failed",
+        "skipped"
+      ]
+    },
+    "generation": {
+      "type": "object",
+      "required": [
+        "order",
+        "mode",
+        "model",
+        "output",
+        "depends_on",
+        "ref_urls"
+      ],
+      "properties": {
+        "order": {
+          "type": "number"
+        },
+        "mode": {
+          "enum": [
+            "image"
+          ]
+        },
+        "model": {
+          "type": "string"
+        },
+        "output": {
+          "type": "object",
+          "required": [
+            "path",
+            "name"
+          ],
+          "properties": {
+            "path": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": true
+        },
+        "depends_on": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "meta_path",
+              "image_path",
+              "ref_role",
+              "required_status"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "meta_path": {
+                "type": "string"
+              },
+              "image_path": {
+                "type": "string"
+              },
+              "ref_role": {
+                "type": "string"
+              },
+              "required_status": {
+                "enum": [
+                  "done"
+                ]
+              }
+            },
+            "additionalProperties": true
+          }
+        },
+        "ref_urls": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "runner_notes": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
     },
     "i18n": {
       "$ref": "topic.schema.json#/$defs/i18n"

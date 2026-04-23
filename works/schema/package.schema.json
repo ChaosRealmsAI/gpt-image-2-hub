@@ -10,6 +10,7 @@
     "description",
     "creative_direction",
     "cover_image",
+    "generation_plan",
     "i18n",
     "display",
     "images"
@@ -35,6 +36,44 @@
     },
     "cover_image": {
       "type": "string"
+    },
+    "generation_plan": {
+      "type": "object",
+      "required": [
+        "status",
+        "execution",
+        "runner",
+        "images",
+        "ref_strategy",
+        "index_policy"
+      ],
+      "properties": {
+        "status": {
+          "type": "string"
+        },
+        "execution": {
+          "enum": [
+            "single",
+            "sequential"
+          ]
+        },
+        "runner": {
+          "type": "string"
+        },
+        "images": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "ref_strategy": {
+          "type": "string"
+        },
+        "index_policy": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
     },
     "i18n": {
       "$ref": "topic.schema.json#/$defs/i18n"

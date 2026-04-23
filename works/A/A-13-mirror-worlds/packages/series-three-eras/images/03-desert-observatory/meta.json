@@ -17,6 +17,19 @@
     "01-victorian-parlor",
     "02-neon-apartment"
   ],
+  "status": "done",
+  "generation": {
+    "order": 1,
+    "mode": "image",
+    "model": "gpt-image-2",
+    "output": {
+      "path": "works/A/A-13-mirror-worlds/packages/series-three-eras/images/03-desert-observatory/image.png",
+      "name": "image"
+    },
+    "depends_on": [],
+    "ref_urls": [],
+    "runner_notes": "No reference image required. Queue can run this image directly from prompt."
+  },
   "i18n": {
     "en": {
       "title": "Desert Observatory",

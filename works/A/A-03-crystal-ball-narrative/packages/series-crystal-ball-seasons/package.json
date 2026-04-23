@@ -46,5 +46,17 @@
       "image": "images/03-winter-oracle/image.png",
       "meta": "images/03-winter-oracle/meta.json"
     }
-  ]
+  ],
+  "generation_plan": {
+    "status": "partially_done",
+    "execution": "sequential",
+    "runner": "image2gen",
+    "images": [
+      "images/01-spring-oracle/meta.json",
+      "images/02-autumn-oracle/meta.json",
+      "images/03-winter-oracle/meta.json"
+    ],
+    "ref_strategy": "Run images by generation.order. For each dependency, wait until required_status=done, take the dependency result URL from the private run log, inject it into generation.ref_urls, then pass each URL as --ref. Local image_path is for dependency checks only because image2gen --ref requires URLs.",
+    "index_policy": "Only meta.status=done images with an existing image.png are included in works/index.json and the frontend."
+  }
 }

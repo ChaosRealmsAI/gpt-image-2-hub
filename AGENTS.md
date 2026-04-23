@@ -52,11 +52,20 @@ The generator reads `meta.json.prompt`, writes `image.png` to the same image dir
 
 - Every image directory contains `image.png` and `meta.json`.
 - `meta.json.prompt` is the first field.
+- `meta.json.status` is required:
+  - `prompted`: prompt is ready for the queue, image may not exist yet.
+  - `running`: queue has claimed the image.
+  - `done`: `image.png` exists and can be indexed by the frontend.
+  - `failed`: previous run failed and can be retried.
+  - `skipped`: intentionally not queued.
+- `meta.json.generation` is required and must include `order`, `output.path`, `depends_on`, and `ref_urls`.
+- Series references are declared in `generation.depends_on`; queues inject dependency result URLs into `generation.ref_urls` before calling `image2gen --ref`.
 - Prompt text remains English.
 - Every public topic, package, and image has `i18n.en` and `i18n.zh-CN`.
 - Every image has `display.alt.en` and `display.alt.zh-CN`.
 - Tags are English slugs. Labels are centralized in `works/tags.json`.
 - Frontend reads `works/index.json`; do not make the frontend depend on private todo.
+- `works/index.json` includes only `status: done` images with existing `image.png`.
 
 ## Before Committing
 

@@ -30,6 +30,7 @@ const FORBIDDEN_PUBLIC_FIELDS = new Set([
   'size_bytes',
 ]);
 const REQUIRED_PROMPT_SECTIONS = ['Scene:', 'Subject:', 'Important details:', 'Use case:', 'Constraints:'];
+const VALID_IMAGE_STATUS = new Set(['prompted', 'running', 'done', 'failed', 'skipped']);
 
 function usage() {
   console.log(`works · public gallery and private production maintenance
@@ -218,6 +219,45 @@ function validatePromptSections(file, prompt, errors) {
   }
 }
 
+function validateGenerationObject(file, meta, errors) {
+  if (!VALID_IMAGE_STATUS.has(meta.status)) {
+    errors.push(`${file}: status must be one of ${[...VALID_IMAGE_STATUS].join(', ')}`);
+  }
+  if (!meta.generation || typeof meta.generation !== 'object' || Array.isArray(meta.generation)) {
+    errors.push(`${file}: missing generation`);
+    return;
+  }
+  const generation = meta.generation;
+  if (!Number.isFinite(generation.order)) errors.push(`${file}: generation.order must be a number`);
+  if (generation.mode !== 'image') errors.push(`${file}: generation.mode must be image`);
+  if (typeof generation.model !== 'string' || !generation.model.trim()) errors.push(`${file}: missing generation.model`);
+  if (typeof generation.output?.path !== 'string' || !generation.output.path.trim()) {
+    errors.push(`${file}: missing generation.output.path`);
+  }
+  if (typeof generation.output?.name !== 'string' || !generation.output.name.trim()) {
+    errors.push(`${file}: missing generation.output.name`);
+  }
+  if (!Array.isArray(generation.depends_on)) errors.push(`${file}: generation.depends_on must be an array`);
+  if (!Array.isArray(generation.ref_urls)) errors.push(`${file}: generation.ref_urls must be an array`);
+
+  const metaDir = path.dirname(path.join(ROOT, file));
+  const expectedOutput = rel(path.join(metaDir, meta.image || 'image.png'));
+  if (generation.output?.path && generation.output.path !== expectedOutput) {
+    errors.push(`${file}: generation.output.path must match image path ${expectedOutput}`);
+  }
+  for (const dep of generation.depends_on || []) {
+    for (const field of ['id', 'meta_path', 'image_path', 'ref_role', 'required_status']) {
+      if (typeof dep[field] !== 'string' || !dep[field].trim()) {
+        errors.push(`${file}: dependency missing ${field}`);
+      }
+    }
+    if (dep.required_status !== 'done') errors.push(`${file}: dependency ${dep.id || '?'} required_status must be done`);
+    if (dep.meta_path && !fileExists(path.join(ROOT, dep.meta_path))) {
+      errors.push(`${file}: dependency meta missing ${dep.meta_path}`);
+    }
+  }
+}
+
 function validateTagManifest(errors) {
   const tags = readJsonIfExists(TAGS_PATH, null);
   if (!tags) return;
@@ -342,7 +382,7 @@ function validateItem(item, errors) {
       if (fileExists(metaPath)) {
         const meta = readJson(metaPath);
         if (!image.image && meta.image) imagePath = path.join(path.dirname(metaPath), meta.image);
-        for (const field of ['prompt', 'id', 'title', 'description', 'type', 'image', 'aspect_ratio', 'tags', 'refs']) {
+        for (const field of ['prompt', 'id', 'title', 'description', 'type', 'image', 'aspect_ratio', 'tags', 'refs', 'status', 'generation']) {
           if (!(field in meta)) errors.push(`${rel(metaPath)}: missing ${field}`);
         }
         const firstKey = Object.keys(meta)[0];
@@ -351,13 +391,11 @@ function validateItem(item, errors) {
         validateLocalizedObject(rel(metaPath), meta, errors);
         validateDisplayObject(rel(metaPath), meta, errors, true);
         validatePromptSections(rel(metaPath), meta.prompt, errors);
-        if (meta.status === 'prompted' && !meta.generation?.depends_on) {
-          errors.push(`${rel(metaPath)}: prompted series image must declare generation.depends_on`);
-        }
+        validateGenerationObject(rel(metaPath), meta, errors);
       }
       if (!fileExists(imagePath)) {
         const meta = fileExists(metaPath) ? readJson(metaPath) : {};
-        if (meta.status !== 'prompted') errors.push(`${item.id}/${pkg.package_slug}/${image.id}: missing image.png`);
+        if (!['prompted', 'failed', 'skipped'].includes(meta.status)) errors.push(`${item.id}/${pkg.package_slug}/${image.id}: missing image.png`);
       }
     }
   }
@@ -476,7 +514,7 @@ function buildIndex() {
         if (!fileExists(metaPath)) continue;
         const meta = readJson(metaPath);
         const imagePath = path.join(path.dirname(metaPath), meta.image || 'image.png');
-        if (!fileExists(imagePath)) continue;
+        if (meta.status !== 'done' || !fileExists(imagePath)) continue;
         const indexed = imageEntryForIndex(topic, topicPath, pkg, pkgPath, imageRef, meta, metaPath);
         images.push(indexed);
         packageImages.push(indexed.id);
@@ -582,7 +620,6 @@ function checkPublic() {
     /^api\//,
     /^docs\//,
     /^frontend\//,
-    /^src\//,
     /^spec\//,
     /^\.claude\//,
   ];

@@ -15,6 +15,27 @@
   "refs": [
     "01-spring-oracle"
   ],
+  "status": "prompted",
+  "generation": {
+    "order": 2,
+    "mode": "image",
+    "model": "gpt-image-2",
+    "output": {
+      "path": "works/A/A-03-crystal-ball-narrative/packages/series-crystal-ball-seasons/images/02-autumn-oracle/image.png",
+      "name": "image"
+    },
+    "depends_on": [
+      {
+        "id": "01-spring-oracle",
+        "meta_path": "works/A/A-03-crystal-ball-narrative/packages/series-crystal-ball-seasons/images/01-spring-oracle/meta.json",
+        "image_path": "works/A/A-03-crystal-ball-narrative/packages/series-crystal-ball-seasons/images/01-spring-oracle/image.png",
+        "ref_role": "preserve crystal ball object identity, brass stand, tabletop position, camera angle, and lighting",
+        "required_status": "done"
+      }
+    ],
+    "ref_urls": [],
+    "runner_notes": "Queue must inject dependency output URLs into ref_urls before execution; image2gen --ref accepts URLs, not local paths."
+  },
   "i18n": {
     "en": {
       "title": "Autumn Oracle",
