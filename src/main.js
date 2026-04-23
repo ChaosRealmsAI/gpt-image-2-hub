@@ -4,14 +4,6 @@ const DATA_URL = './works/index.json';
 const LANG_KEY = 'prompt-atlas-lang';
 const VIEW_MODE_KEY = 'prompt-atlas-view-mode';
 
-const TOPIC_ICONS = {
-  'crystal-ball-narrative': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="10" r="6"/><path d="M8 16l-2 5h12l-2-5"/></svg>',
-  'high-speed-freeze': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="4" x2="12" y2="7"/><line x1="12" y1="17" x2="12" y2="20"/></svg>',
-  'tessellation-pattern': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>',
-};
-
-const GENERIC_TOPIC_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 8h8v8H8z"/></svg>';
-
 const UI = {
   'zh-CN': {
     all: '全部',
@@ -310,13 +302,11 @@ function topicItems() {
       id: 'all',
       label: t('all'),
       count: images.length,
-      icon: GENERIC_TOPIC_ICON,
     },
     ...(state.data?.topics || []).map((topic) => ({
       id: topic.id,
       label: topicLabel(topic),
       count: Number(topic.image_count || images.filter((image) => image.topic_id === topic.id).length),
-      icon: TOPIC_ICONS[topic.id] || GENERIC_TOPIC_ICON,
     })),
   ];
 }
@@ -326,7 +316,6 @@ function renderTopicsNav() {
   if (!nav) return;
   nav.innerHTML = topicItems().map((item) => `
     <button class="topic-item ${item.id === state.activeTopic ? 'active' : ''}" data-topic="${esc(item.id)}" type="button">
-      ${item.icon}
       <span>${esc(item.label)}</span>
       <span class="topic-count">${item.count}</span>
     </button>
