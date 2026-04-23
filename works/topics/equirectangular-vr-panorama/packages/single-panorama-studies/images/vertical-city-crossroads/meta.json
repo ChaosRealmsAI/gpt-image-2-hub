@@ -13,7 +13,7 @@
     "single"
   ],
   "refs": [],
-  "status": "failed",
+  "status": "done",
   "generation": {
     "order": 7,
     "mode": "image",
@@ -24,13 +24,7 @@
     },
     "depends_on": [],
     "ref_urls": [],
-    "runner_notes": "Independent 2:1 panorama with no reference dependencies.",
-    "last_error": {
-      "reason": "poll 超时 240s",
-      "retryable": true,
-      "output_path": "works/topics/equirectangular-vr-panorama/packages/single-panorama-studies/images/vertical-city-crossroads/image.png",
-      "checked_at": "2026-04-23T07:16:02.648Z"
-    }
+    "runner_notes": "Independent 2:1 panorama with no reference dependencies."
   },
   "i18n": {
     "en": {

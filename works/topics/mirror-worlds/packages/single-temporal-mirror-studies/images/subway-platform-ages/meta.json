@@ -13,7 +13,7 @@
     "single"
   ],
   "refs": [],
-  "status": "prompted",
+  "status": "failed",
   "generation": {
     "order": 2,
     "mode": "image",
@@ -24,7 +24,13 @@
     },
     "depends_on": [],
     "ref_urls": [],
-    "runner_notes": "Independent single image testing same-person ages across a reflective subway platform."
+    "runner_notes": "Independent single image testing same-person ages across a reflective subway platform.",
+    "last_error": {
+      "reason": "poll 超时 240s",
+      "retryable": true,
+      "output_path": "works/topics/mirror-worlds/packages/single-temporal-mirror-studies/images/subway-platform-ages/image.png",
+      "checked_at": "2026-04-23T07:47:03.937Z"
+    }
   },
   "i18n": {
     "en": {

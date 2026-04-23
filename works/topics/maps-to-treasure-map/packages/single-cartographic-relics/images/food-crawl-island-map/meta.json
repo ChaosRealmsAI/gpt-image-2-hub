@@ -14,7 +14,7 @@
     "frontier-creative-composition"
   ],
   "refs": [],
-  "status": "prompted",
+  "status": "failed",
   "generation": {
     "order": 4,
     "mode": "image",
@@ -25,7 +25,13 @@
     },
     "depends_on": [],
     "ref_urls": [],
-    "runner_notes": "Independent single study for turning an urban food-crawl route into a tactile souvenir treasure map."
+    "runner_notes": "Independent single study for turning an urban food-crawl route into a tactile souvenir treasure map.",
+    "last_error": {
+      "reason": "❌ fetch failed",
+      "retryable": true,
+      "output_path": "works/topics/maps-to-treasure-map/packages/single-cartographic-relics/images/food-crawl-island-map/image.png",
+      "checked_at": "2026-04-23T07:41:41.664Z"
+    }
   },
   "i18n": {
     "en": {

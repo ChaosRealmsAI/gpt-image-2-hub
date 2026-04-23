@@ -50,6 +50,7 @@ button, input, select, a { font: inherit; color: inherit; background: none; bord
   position: sticky; top: 0;
   height: 100vh;
   display: flex; flex-direction: column;
+  overflow-y: auto;
   background: var(--sidebar);
   border-right: 1px solid var(--border);
   padding: 22px 16px;
@@ -71,7 +72,13 @@ button, input, select, a { font: inherit; color: inherit; background: none; bord
   white-space: nowrap;
 }
 
-.topics { display: flex; flex-direction: column; gap: 2px; list-style: none; }
+.topics {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  list-style: none;
+  padding-bottom: 8px;
+}
 .topic-item {
   display: flex; align-items: center; gap: 12px;
   padding: 10px 14px;
@@ -114,6 +121,16 @@ button, input, select, a { font: inherit; color: inherit; background: none; bord
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
+
+.sidebar .brand,
+.sidebar .section-label {
+  position: sticky;
+  z-index: 1;
+  background: var(--sidebar);
+}
+
+.sidebar .brand { top: 0; padding-top: 4px; }
+.sidebar .section-label { top: 56px; padding-top: 10px; }
 
 /* ============ MAIN ============ */
 .main { min-width: 0; display: flex; flex-direction: column; }

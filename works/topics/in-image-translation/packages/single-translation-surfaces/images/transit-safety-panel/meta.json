@@ -13,7 +13,7 @@
     "single"
   ],
   "refs": [],
-  "status": "failed",
+  "status": "done",
   "generation": {
     "order": 3,
     "mode": "image",
@@ -24,13 +24,7 @@
     },
     "depends_on": [],
     "ref_urls": [],
-    "runner_notes": "Independent single image testing translated public safety copy with icon alignment.",
-    "last_error": {
-      "reason": "poll 超时 240s",
-      "retryable": true,
-      "output_path": "works/topics/in-image-translation/packages/single-translation-surfaces/images/transit-safety-panel/image.png",
-      "checked_at": "2026-04-23T07:17:40.712Z"
-    }
+    "runner_notes": "Independent single image testing translated public safety copy with icon alignment."
   },
   "i18n": {
     "en": {

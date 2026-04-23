@@ -13,7 +13,7 @@
     "series"
   ],
   "refs": [],
-  "status": "failed",
+  "status": "done",
   "generation": {
     "order": 1,
     "mode": "image",
@@ -24,13 +24,7 @@
     },
     "depends_on": [],
     "ref_urls": [],
-    "runner_notes": "Root source poster for multilingual in-image translation fanout.",
-    "last_error": {
-      "reason": "poll 超时 240s",
-      "retryable": true,
-      "output_path": "works/topics/in-image-translation/packages/series-poster-localization/images/01-english-source-poster/image.png",
-      "checked_at": "2026-04-23T07:17:27.076Z"
-    }
+    "runner_notes": "Root source poster for multilingual in-image translation fanout."
   },
   "i18n": {
     "en": {
