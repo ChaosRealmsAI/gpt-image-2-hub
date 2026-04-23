@@ -2,7 +2,7 @@
 
 A curated atlas of GPT Image 2 generations. Every work ships with its full prompt — copy and remix.
 
-**100 topics · 123 packages · 709 works** · [简体中文](./README.zh-CN.md)
+**104 topics · 128 packages · 780 works** · [简体中文](./README.zh-CN.md)
 
 ## [2D and 3D Medium Collision](https://gpt-image-2-hub-seven.vercel.app/#t-2d-3d-medium-collision)
 
@@ -54,23 +54,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-2d-3d-medium-collision%2Fsingle-medium-collision-studies%2Fcollage-astronaut-orange">Collage Astronaut Orange</a></b>
 
 </td>
-</tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-2d-3d-medium-collision%2Fseries-crayon-apple-carrier%2F04-water-balloon-strain"><img src="./works/topics/2d-3d-medium-collision/packages/series-crayon-apple-carrier/images/04-water-balloon-strain/image.w400.webp" width="100%" alt="A crayon figure holds a sagging blue water balloon that casts a soft tinted shadow across the paper."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-2d-3d-medium-collision%2Fseries-crayon-apple-carrier%2F04-water-balloon-strain">Water Balloon Strain</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-2d-3d-medium-collision%2Fsingle-medium-collision-studies%2Fblueprint-hand-crystal"><img src="./works/topics/2d-3d-medium-collision/packages/single-medium-collision-studies/images/blueprint-hand-crystal/image.w400.webp" width="100%" alt="A cyan blueprint hand drawing supports a real transparent quartz cluster with refracted white linework inside."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-2d-3d-medium-collision%2Fsingle-medium-collision-studies%2Fblueprint-hand-crystal">Blueprint Hand Crystal</a></b>
-
-</td>
-<td width="33%"></td>
 </tr>
 </table>
 
@@ -125,23 +108,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-abstract-expressionism-study%2Fsingle-abstract-expressionism-studies%2Fgesture-architecture"><img src="./works/topics/abstract-expressionism-study/packages/single-abstract-expressionism-studies/images/gesture-architecture/image.w400.webp" width="100%" alt="Gesture Architecture for Abstract Expressionism Study."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-abstract-expressionism-study%2Fsingle-abstract-expressionism-studies%2Fgesture-architecture">Gesture Architecture</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-abstract-expressionism-study%2Fsingle-abstract-expressionism-studies%2Fmuseum-wall-hang"><img src="./works/topics/abstract-expressionism-study/packages/single-abstract-expressionism-studies/images/museum-wall-hang/image.w400.webp" width="100%" alt="Museum Wall Hang for Abstract Expressionism Study."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-abstract-expressionism-study%2Fsingle-abstract-expressionism-studies%2Fmuseum-wall-hang">Museum Wall Hang</a></b>
-
-</td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [Ambigram Readability](https://gpt-image-2-hub-seven.vercel.app/#t-ambigram-readability)
@@ -195,23 +161,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-ambigram-readability%2Fsingle-ambigram-studies%2Focean-river-calligraphy"><img src="./works/topics/ambigram-readability/packages/single-ambigram-studies/images/ocean-river-calligraphy/image.w400.webp" width="100%" alt="An indigo ink calligraphy ambigram on watercolor paper, intended to read OCEAN upright and RIVER when rotated."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-ambigram-readability%2Fsingle-ambigram-studies%2Focean-river-calligraphy">Ocean River Calligraphy</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-ambigram-readability%2Fsingle-ambigram-studies%2Ftime-mind-coin"><img src="./works/topics/ambigram-readability/packages/single-ambigram-studies/images/time-mind-coin/image.w400.webp" width="100%" alt="An antique brass coin with raised ambigram lettering intended to read TIME upright and MIND after rotation."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-ambigram-readability%2Fsingle-ambigram-studies%2Ftime-mind-coin">Time Mind Coin</a></b>
-
-</td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [Anamorphic Perspective Art](https://gpt-image-2-hub-seven.vercel.app/#t-anamorphic-perspective-art)
@@ -252,6 +201,13 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <tr>
 <td width="33%" valign="top" align="center">
 
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-ancient-book-restoration%2Fsingle-ancient-book-restoration-studies%2Fsurface-hero"><img src="./works/topics/ancient-book-restoration/packages/single-ancient-book-restoration-studies/images/surface-hero/image.w400.webp" width="100%" alt="Surface Hero for Ancient Book Restoration."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-ancient-book-restoration%2Fsingle-ancient-book-restoration-studies%2Fsurface-hero">Surface Hero</a></b>
+
+</td>
+<td width="33%" valign="top" align="center">
+
 <a href="https://gpt-image-2-hub-seven.vercel.app/#m-ancient-book-restoration%2Fsingle-ancient-book-restoration-studies%2Fmacro-study"><img src="./works/topics/ancient-book-restoration/packages/single-ancient-book-restoration-studies/images/macro-study/image.w400.webp" width="100%" alt="Macro Study for Ancient Book Restoration."/></a>
 
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-ancient-book-restoration%2Fsingle-ancient-book-restoration-studies%2Fmacro-study">Macro Study</a></b>
@@ -264,6 +220,8 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-ancient-book-restoration%2Fsingle-ancient-book-restoration-studies%2Fside-light-study">Side Light Study</a></b>
 
 </td>
+</tr>
+<tr>
 <td width="33%" valign="top" align="center">
 
 <a href="https://gpt-image-2-hub-seven.vercel.app/#m-ancient-book-restoration%2Fsingle-ancient-book-restoration-studies%2Fprocess-trace"><img src="./works/topics/ancient-book-restoration/packages/single-ancient-book-restoration-studies/images/process-trace/image.w400.webp" width="100%" alt="Process Trace for Ancient Book Restoration."/></a>
@@ -271,8 +229,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-ancient-book-restoration%2Fsingle-ancient-book-restoration-studies%2Fprocess-trace">Process Trace</a></b>
 
 </td>
-</tr>
-<tr>
 <td width="33%" valign="top" align="center">
 
 <a href="https://gpt-image-2-hub-seven.vercel.app/#m-ancient-book-restoration%2Fsingle-ancient-book-restoration-studies%2Fspecimen-table"><img src="./works/topics/ancient-book-restoration/packages/single-ancient-book-restoration-studies/images/specimen-table/image.w400.webp" width="100%" alt="Specimen Table for Ancient Book Restoration."/></a>
@@ -285,13 +241,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <a href="https://gpt-image-2-hub-seven.vercel.app/#m-ancient-book-restoration%2Fsingle-ancient-book-restoration-studies%2Fatmospheric-view"><img src="./works/topics/ancient-book-restoration/packages/single-ancient-book-restoration-studies/images/atmospheric-view/image.w400.webp" width="100%" alt="氛围场景 for Ancient Book Restoration."/></a>
 
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-ancient-book-restoration%2Fsingle-ancient-book-restoration-studies%2Fatmospheric-view">氛围场景</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-ancient-book-restoration%2Fsingle-ancient-book-restoration-studies%2Fsignature-material"><img src="./works/topics/ancient-book-restoration/packages/single-ancient-book-restoration-studies/images/signature-material/image.w400.webp" width="100%" alt="Signature Material for Ancient Book Restoration."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-ancient-book-restoration%2Fsingle-ancient-book-restoration-studies%2Fsignature-material">Signature Material</a></b>
 
 </td>
 </tr>
@@ -348,23 +297,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-annotated-map-design%2Fsingle-annotated-map-design-studies%2Fexploded-system"><img src="./works/topics/annotated-map-design/packages/single-annotated-map-design-studies/images/exploded-system/image.w400.webp" width="100%" alt="Exploded System for Annotated Map Design."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-annotated-map-design%2Fsingle-annotated-map-design-studies%2Fexploded-system">Exploded System</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-annotated-map-design%2Fsingle-annotated-map-design-studies%2Ffinal-plate"><img src="./works/topics/annotated-map-design/packages/single-annotated-map-design-studies/images/final-plate/image.w400.webp" width="100%" alt="Final Plate for Annotated Map Design."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-annotated-map-design%2Fsingle-annotated-map-design-studies%2Ffinal-plate">Final Plate</a></b>
-
-</td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [Architectural Drawing Board](https://gpt-image-2-hub-seven.vercel.app/#t-architectural-drawing-board)
@@ -412,22 +344,11 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-architectural-drawing-board%2Fsingle-architectural-drawing-board-studies%2Fexploded-system"><img src="./works/topics/architectural-drawing-board/packages/single-architectural-drawing-board-studies/images/exploded-system/image.w400.webp" width="100%" alt="Exploded System for Architectural Drawing Board."/></a>
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-architectural-drawing-board%2Fsingle-architectural-drawing-board-studies%2Fmaterial-callout"><img src="./works/topics/architectural-drawing-board/packages/single-architectural-drawing-board-studies/images/material-callout/image.w400.webp" width="100%" alt="材质标注 for Architectural Drawing Board."/></a>
 
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-architectural-drawing-board%2Fsingle-architectural-drawing-board-studies%2Fexploded-system">Exploded System</a></b>
-
-</td>
-</tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-architectural-drawing-board%2Fsingle-architectural-drawing-board-studies%2Ffinal-plate"><img src="./works/topics/architectural-drawing-board/packages/single-architectural-drawing-board-studies/images/final-plate/image.w400.webp" width="100%" alt="Final Plate for Architectural Drawing Board."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-architectural-drawing-board%2Fsingle-architectural-drawing-board-studies%2Ffinal-plate">Final Plate</a></b>
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-architectural-drawing-board%2Fsingle-architectural-drawing-board-studies%2Fmaterial-callout">材质标注</a></b>
 
 </td>
-<td width="33%"></td>
-<td width="33%"></td>
 </tr>
 </table>
 
@@ -482,23 +403,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-archive-aesthetic-file%2Fsingle-archive-aesthetic-file-studies%2Fsystem-board"><img src="./works/topics/archive-aesthetic-file/packages/single-archive-aesthetic-file-studies/images/system-board/image.w400.webp" width="100%" alt="System Board for Archive Aesthetic File."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-archive-aesthetic-file%2Fsingle-archive-aesthetic-file-studies%2Fsystem-board">System Board</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-archive-aesthetic-file%2Fsingle-archive-aesthetic-file-studies%2Fsignature-layout"><img src="./works/topics/archive-aesthetic-file/packages/single-archive-aesthetic-file-studies/images/signature-layout/image.w400.webp" width="100%" alt="Signature Layout for Archive Aesthetic File."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-archive-aesthetic-file%2Fsingle-archive-aesthetic-file-studies%2Fsignature-layout">Signature Layout</a></b>
-
-</td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [Art Nouveau Poster](https://gpt-image-2-hub-seven.vercel.app/#t-art-nouveau-poster)
@@ -532,6 +436,13 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <tr>
 <td width="33%" valign="top" align="center">
 
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-art-nouveau-poster%2Fsingle-application-studies%2F04-experimental-study"><img src="./works/topics/art-nouveau-poster/packages/single-application-studies/images/04-experimental-study/image.w400.webp" width="100%" alt="Experimental Study image for Art Nouveau Poster."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-art-nouveau-poster%2Fsingle-application-studies%2F04-experimental-study">Experimental Study</a></b>
+
+</td>
+<td width="33%" valign="top" align="center">
+
 <a href="https://gpt-image-2-hub-seven.vercel.app/#m-art-nouveau-poster%2Fsingle-application-studies%2F05-material-study"><img src="./works/topics/art-nouveau-poster/packages/single-application-studies/images/05-material-study/image.w400.webp" width="100%" alt="Material Study image for Art Nouveau Poster."/></a>
 
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-art-nouveau-poster%2Fsingle-application-studies%2F05-material-study">Material Study</a></b>
@@ -542,13 +453,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <a href="https://gpt-image-2-hub-seven.vercel.app/#m-art-nouveau-poster%2Fsingle-application-studies%2F06-context-study"><img src="./works/topics/art-nouveau-poster/packages/single-application-studies/images/06-context-study/image.w400.webp" width="100%" alt="Context Study image for Art Nouveau Poster."/></a>
 
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-art-nouveau-poster%2Fsingle-application-studies%2F06-context-study">Context Study</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-art-nouveau-poster%2Fsingle-application-studies%2F08-hero-study"><img src="./works/topics/art-nouveau-poster/packages/single-application-studies/images/08-hero-study/image.w400.webp" width="100%" alt="Hero Study image for Art Nouveau Poster."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-art-nouveau-poster%2Fsingle-application-studies%2F08-hero-study">Hero Study</a></b>
 
 </td>
 </tr>
@@ -569,11 +473,20 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 </td>
 <td width="33%" valign="top" align="center">
 
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-audubon-specimen-atlas%2Fsingle-audubon-specimen-studies%2Fmacro-study"><img src="./works/topics/audubon-specimen-atlas/packages/single-audubon-specimen-studies/images/macro-study/image.w400.webp" width="100%" alt="Macro Study for Audubon Specimen Atlas."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-audubon-specimen-atlas%2Fsingle-audubon-specimen-studies%2Fmacro-study">Macro Study</a></b>
+
+</td>
+<td width="33%" valign="top" align="center">
+
 <a href="https://gpt-image-2-hub-seven.vercel.app/#m-audubon-specimen-atlas%2Fsingle-audubon-specimen-studies%2Fside-light-study"><img src="./works/topics/audubon-specimen-atlas/packages/single-audubon-specimen-studies/images/side-light-study/image.w400.webp" width="100%" alt="Side Light Study for Audubon Specimen Atlas."/></a>
 
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-audubon-specimen-atlas%2Fsingle-audubon-specimen-studies%2Fside-light-study">Side Light Study</a></b>
 
 </td>
+</tr>
+<tr>
 <td width="33%" valign="top" align="center">
 
 <a href="https://gpt-image-2-hub-seven.vercel.app/#m-audubon-specimen-atlas%2Fsingle-audubon-specimen-studies%2Fmotion-moment"><img src="./works/topics/audubon-specimen-atlas/packages/single-audubon-specimen-studies/images/motion-moment/image.w400.webp" width="100%" alt="Motion Moment for Audubon Specimen Atlas."/></a>
@@ -581,8 +494,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-audubon-specimen-atlas%2Fsingle-audubon-specimen-studies%2Fmotion-moment">Motion Moment</a></b>
 
 </td>
-</tr>
-<tr>
 <td width="33%" valign="top" align="center">
 
 <a href="https://gpt-image-2-hub-seven.vercel.app/#m-audubon-specimen-atlas%2Fsingle-audubon-specimen-studies%2Flow-light-atlas"><img src="./works/topics/audubon-specimen-atlas/packages/single-audubon-specimen-studies/images/low-light-atlas/image.w400.webp" width="100%" alt="Low-Light Atlas for Audubon Specimen Atlas."/></a>
@@ -597,24 +508,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-audubon-specimen-atlas%2Fsingle-audubon-specimen-studies%2Fspecimen-table">Specimen Table</a></b>
 
 </td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-audubon-specimen-atlas%2Fsingle-audubon-specimen-studies%2Fatmospheric-view"><img src="./works/topics/audubon-specimen-atlas/packages/single-audubon-specimen-studies/images/atmospheric-view/image.w400.webp" width="100%" alt="Atmospheric View for Audubon Specimen Atlas."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-audubon-specimen-atlas%2Fsingle-audubon-specimen-studies%2Fatmospheric-view">Atmospheric View</a></b>
-
-</td>
-</tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-audubon-specimen-atlas%2Fsingle-audubon-specimen-studies%2Fsignature-frame"><img src="./works/topics/audubon-specimen-atlas/packages/single-audubon-specimen-studies/images/signature-frame/image.w400.webp" width="100%" alt="Signature Frame for Audubon Specimen Atlas."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-audubon-specimen-atlas%2Fsingle-audubon-specimen-studies%2Fsignature-frame">Signature Frame</a></b>
-
-</td>
-<td width="33%"></td>
-<td width="33%"></td>
 </tr>
 </table>
 
@@ -640,13 +533,20 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 </td>
 <td width="33%" valign="top" align="center">
 
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-automotive-concept-art%2Fsingle-automotive-concept-art-studies%2Fmaterial-pass"><img src="./works/topics/automotive-concept-art/packages/single-automotive-concept-art-studies/images/material-pass/image.w400.webp" width="100%" alt="Material Pass for Automotive Concept Art."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-automotive-concept-art%2Fsingle-automotive-concept-art-studies%2Fmaterial-pass">Material Pass</a></b>
+
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top" align="center">
+
 <a href="https://gpt-image-2-hub-seven.vercel.app/#m-automotive-concept-art%2Fsingle-automotive-concept-art-studies%2Fstudio-turn"><img src="./works/topics/automotive-concept-art/packages/single-automotive-concept-art-studies/images/studio-turn/image.w400.webp" width="100%" alt="Studio Turn for Automotive Concept Art."/></a>
 
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-automotive-concept-art%2Fsingle-automotive-concept-art-studies%2Fstudio-turn">Studio Turn</a></b>
 
 </td>
-</tr>
-<tr>
 <td width="33%" valign="top" align="center">
 
 <a href="https://gpt-image-2-hub-seven.vercel.app/#m-automotive-concept-art%2Fsingle-automotive-concept-art-studies%2Fscale-comparison"><img src="./works/topics/automotive-concept-art/packages/single-automotive-concept-art-studies/images/scale-comparison/image.w400.webp" width="100%" alt="Scale Comparison for Automotive Concept Art."/></a>
@@ -661,24 +561,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-automotive-concept-art%2Fsingle-automotive-concept-art-studies%2Fdetail-closeup">Detail Closeup</a></b>
 
 </td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-automotive-concept-art%2Fsingle-automotive-concept-art-studies%2Fenvironment-presentation"><img src="./works/topics/automotive-concept-art/packages/single-automotive-concept-art-studies/images/environment-presentation/image.w400.webp" width="100%" alt="环境展示 for Automotive Concept Art."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-automotive-concept-art%2Fsingle-automotive-concept-art-studies%2Fenvironment-presentation">环境展示</a></b>
-
-</td>
-</tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-automotive-concept-art%2Fsingle-automotive-concept-art-studies%2Fsignature-render"><img src="./works/topics/automotive-concept-art/packages/single-automotive-concept-art-studies/images/signature-render/image.w400.webp" width="100%" alt="Signature Render for Automotive Concept Art."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-automotive-concept-art%2Fsingle-automotive-concept-art-studies%2Fsignature-render">Signature Render</a></b>
-
-</td>
-<td width="33%"></td>
-<td width="33%"></td>
 </tr>
 </table>
 
@@ -704,13 +586,20 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 </td>
 <td width="33%" valign="top" align="center">
 
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-book-series-design%2Fsingle-book-series-design-studies%2Fdesk-review"><img src="./works/topics/book-series-design/packages/single-book-series-design-studies/images/desk-review/image.w400.webp" width="100%" alt="Desk Review for Book Series Design."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-book-series-design%2Fsingle-book-series-design-studies%2Fdesk-review">Desk Review</a></b>
+
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top" align="center">
+
 <a href="https://gpt-image-2-hub-seven.vercel.app/#m-book-series-design%2Fsingle-book-series-design-studies%2Fmaterial-closeup"><img src="./works/topics/book-series-design/packages/single-book-series-design-studies/images/material-closeup/image.w400.webp" width="100%" alt="Material Closeup for Book Series Design."/></a>
 
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-book-series-design%2Fsingle-book-series-design-studies%2Fmaterial-closeup">Material Closeup</a></b>
 
 </td>
-</tr>
-<tr>
 <td width="33%" valign="top" align="center">
 
 <a href="https://gpt-image-2-hub-seven.vercel.app/#m-book-series-design%2Fsingle-book-series-design-studies%2Farchive-sheet"><img src="./works/topics/book-series-design/packages/single-book-series-design-studies/images/archive-sheet/image.w400.webp" width="100%" alt="Archive Sheet for Book Series Design."/></a>
@@ -725,24 +614,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-book-series-design%2Fsingle-book-series-design-studies%2Fretail-presentation">陈列展示</a></b>
 
 </td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-book-series-design%2Fsingle-book-series-design-studies%2Fsystem-board"><img src="./works/topics/book-series-design/packages/single-book-series-design-studies/images/system-board/image.w400.webp" width="100%" alt="System Board for Book Series Design."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-book-series-design%2Fsingle-book-series-design-studies%2Fsystem-board">System Board</a></b>
-
-</td>
-</tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-book-series-design%2Fsingle-book-series-design-studies%2Fsignature-layout"><img src="./works/topics/book-series-design/packages/single-book-series-design-studies/images/signature-layout/image.w400.webp" width="100%" alt="Signature Layout for Book Series Design."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-book-series-design%2Fsingle-book-series-design-studies%2Fsignature-layout">Signature Layout</a></b>
-
-</td>
-<td width="33%"></td>
-<td width="33%"></td>
 </tr>
 </table>
 
@@ -768,13 +639,20 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 </td>
 <td width="33%" valign="top" align="center">
 
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-brand-artist-collab-mockup%2Fsingle-collab-proposal-studies%2Fphone-dot-gallery"><img src="./works/topics/brand-artist-collab-mockup/packages/single-collab-proposal-studies/images/phone-dot-gallery/image.w400.webp" width="100%" alt="A gallery-lit smartphone collaboration mockup with dot-pattern product, box, and poster."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-brand-artist-collab-mockup%2Fsingle-collab-proposal-studies%2Fphone-dot-gallery">Phone Dot Gallery</a></b>
+
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top" align="center">
+
 <a href="https://gpt-image-2-hub-seven.vercel.app/#m-brand-artist-collab-mockup%2Fsingle-collab-proposal-studies%2Fsneaker-animation-case"><img src="./works/topics/brand-artist-collab-mockup/packages/single-collab-proposal-studies/images/sneaker-animation-case/image.w400.webp" width="100%" alt="A collector sneaker mockup with hand-painted landscape motifs on the shoe, drawer box, and poster."/></a>
 
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-brand-artist-collab-mockup%2Fsingle-collab-proposal-studies%2Fsneaker-animation-case">Sneaker Animation Case</a></b>
 
 </td>
-</tr>
-<tr>
 <td width="33%" valign="top" align="center">
 
 <a href="https://gpt-image-2-hub-seven.vercel.app/#m-brand-artist-collab-mockup%2Fsingle-collab-proposal-studies%2Fperfume-calligraphy-counter"><img src="./works/topics/brand-artist-collab-mockup/packages/single-collab-proposal-studies/images/perfume-calligraphy-counter/image.w400.webp" width="100%" alt="A luxury fragrance mockup with a glass bottle, embossed carton, and abstract ink poster."/></a>
@@ -789,24 +667,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-brand-artist-collab-mockup%2Fsingle-collab-proposal-studies%2Fcoffee-riso-launch-kit">Coffee Riso Launch Kit</a></b>
 
 </td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-brand-artist-collab-mockup%2Fsingle-collab-proposal-studies%2Fbike-ceramic-pop"><img src="./works/topics/brand-artist-collab-mockup/packages/single-collab-proposal-studies/images/bike-ceramic-pop/image.w400.webp" width="100%" alt="An electric bike showroom mockup with ceramic-pop frame details, packaging, and wall poster."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-brand-artist-collab-mockup%2Fsingle-collab-proposal-studies%2Fbike-ceramic-pop">Bike Ceramic Pop</a></b>
-
-</td>
-</tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-brand-artist-collab-mockup%2Fsingle-collab-proposal-studies%2Fheadphones-paper-cut-display"><img src="./works/topics/brand-artist-collab-mockup/packages/single-collab-proposal-studies/images/headphones-paper-cut-display/image.w400.webp" width="100%" alt="A premium headphone mockup with layered paper-cut details on the product, case, and poster."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-brand-artist-collab-mockup%2Fsingle-collab-proposal-studies%2Fheadphones-paper-cut-display">Headphones Paper Cut Display</a></b>
-
-</td>
-<td width="33%"></td>
-<td width="33%"></td>
 </tr>
 </table>
 
@@ -861,23 +721,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-brand-identity-mockup-set%2Fsingle-brand-identity-mockup-set-studies%2Fsystem-board"><img src="./works/topics/brand-identity-mockup-set/packages/single-brand-identity-mockup-set-studies/images/system-board/image.w400.webp" width="100%" alt="System Board for Brand Identity Mockup Set."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-brand-identity-mockup-set%2Fsingle-brand-identity-mockup-set-studies%2Fsystem-board">System Board</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-brand-identity-mockup-set%2Fsingle-brand-identity-mockup-set-studies%2Fsignature-mockup"><img src="./works/topics/brand-identity-mockup-set/packages/single-brand-identity-mockup-set-studies/images/signature-mockup/image.w400.webp" width="100%" alt="Signature Mockup for Brand Identity Mockup Set."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-brand-identity-mockup-set%2Fsingle-brand-identity-mockup-set-studies%2Fsignature-mockup">Signature Mockup</a></b>
-
-</td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [Character Turnaround](https://gpt-image-2-hub-seven.vercel.app/#t-character-turnaround)
@@ -888,11 +731,27 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <tr>
 <td width="33%" valign="top" align="center">
 
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-character-turnaround%2Fseries-courier-variant-turnarounds%2F01-reference-courier-sheet"><img src="./works/topics/character-turnaround/packages/series-courier-variant-turnarounds/images/01-reference-courier-sheet/image.w400.webp" width="100%" alt="A clean concept-art sheet showing the same courier in front, three-quarter, side, and back views."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-character-turnaround%2Fseries-courier-variant-turnarounds%2F01-reference-courier-sheet">Reference Courier Sheet</a></b>
+
+</td>
+<td width="33%" valign="top" align="center">
+
 <a href="https://gpt-image-2-hub-seven.vercel.app/#m-character-turnaround%2Fsingle-turnaround-sheet-studies%2Farcology-medic-turnaround"><img src="./works/topics/character-turnaround/packages/single-turnaround-sheet-studies/images/arcology-medic-turnaround/image.w400.webp" width="100%" alt="A clinical concept-art sheet showing an arcology medic from four consistent angles."/></a>
 
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-character-turnaround%2Fsingle-turnaround-sheet-studies%2Farcology-medic-turnaround">Arcology Medic Turnaround</a></b>
 
 </td>
+<td width="33%" valign="top" align="center">
+
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-character-turnaround%2Fseries-courier-variant-turnarounds%2F02-arctic-expedition-sheet"><img src="./works/topics/character-turnaround/packages/series-courier-variant-turnarounds/images/02-arctic-expedition-sheet/image.w400.webp" width="100%" alt="The same courier appears in four turnaround views wearing insulated arctic expedition equipment."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-character-turnaround%2Fseries-courier-variant-turnarounds%2F02-arctic-expedition-sheet">Arctic Expedition Sheet</a></b>
+
+</td>
+</tr>
+<tr>
 <td width="33%" valign="top" align="center">
 
 <a href="https://gpt-image-2-hub-seven.vercel.app/#m-character-turnaround%2Fsingle-turnaround-sheet-studies%2Freef-salvager-turnaround"><img src="./works/topics/character-turnaround/packages/single-turnaround-sheet-studies/images/reef-salvager-turnaround/image.w400.webp" width="100%" alt="A four-view character sheet of a reef salvager with flotation gear, braces, and marine workwear."/></a>
@@ -902,22 +761,18 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 </td>
 <td width="33%" valign="top" align="center">
 
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-character-turnaround%2Fseries-courier-variant-turnarounds%2F03-desert-scout-sheet"><img src="./works/topics/character-turnaround/packages/series-courier-variant-turnarounds/images/03-desert-scout-sheet/image.w400.webp" width="100%" alt="The same courier is shown in four views wearing a desert scout outfit with heat shields and a hydration rig."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-character-turnaround%2Fseries-courier-variant-turnarounds%2F03-desert-scout-sheet">Desert Scout Sheet</a></b>
+
+</td>
+<td width="33%" valign="top" align="center">
+
 <a href="https://gpt-image-2-hub-seven.vercel.app/#m-character-turnaround%2Fsingle-turnaround-sheet-studies%2Flunar-botanist-turnaround"><img src="./works/topics/character-turnaround/packages/single-turnaround-sheet-studies/images/lunar-botanist-turnaround/image.w400.webp" width="100%" alt="A four-view character sheet of a lunar botanist with seed canisters, greenhouse tools, and magnetic boots."/></a>
 
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-character-turnaround%2Fsingle-turnaround-sheet-studies%2Flunar-botanist-turnaround">Lunar Botanist Turnaround</a></b>
 
 </td>
-</tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-character-turnaround%2Fsingle-turnaround-sheet-studies%2Fvolcanic-envoy-turnaround"><img src="./works/topics/character-turnaround/packages/single-turnaround-sheet-studies/images/volcanic-envoy-turnaround/image.w400.webp" width="100%" alt="A four-view character sheet of a volcanic envoy wearing engineered cloak panels, basalt beads, and heat-resistant boots."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-character-turnaround%2Fsingle-turnaround-sheet-studies%2Fvolcanic-envoy-turnaround">Volcanic Envoy Turnaround</a></b>
-
-</td>
-<td width="33%"></td>
-<td width="33%"></td>
 </tr>
 </table>
 
@@ -972,23 +827,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-claymation-style%2Fsingle-claymation-style-studies%2Fenvironment-presentation"><img src="./works/topics/claymation-style/packages/single-claymation-style-studies/images/environment-presentation/image.w400.webp" width="100%" alt="环境展示 for Claymation Style."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-claymation-style%2Fsingle-claymation-style-studies%2Fenvironment-presentation">环境展示</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-claymation-style%2Fsingle-claymation-style-studies%2Fsignature-render"><img src="./works/topics/claymation-style/packages/single-claymation-style-studies/images/signature-render/image.w400.webp" width="100%" alt="Signature Render for Claymation Style."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-claymation-style%2Fsingle-claymation-style-studies%2Fsignature-render">Signature Render</a></b>
-
-</td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [Complex Optics Materials](https://gpt-image-2-hub-seven.vercel.app/#t-complex-optics-materials)
@@ -1041,23 +879,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-complex-optics-materials%2Fsingle-complex-optics-materials-studies%2Fatmospheric-view">氛围场景</a></b>
 
 </td>
-</tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-complex-optics-materials%2Fsingle-complex-optics-materials-studies%2Fstructure-closeup"><img src="./works/topics/complex-optics-materials/packages/single-complex-optics-materials-studies/images/structure-closeup/image.w400.webp" width="100%" alt="Structure Closeup for Complex Optics Materials."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-complex-optics-materials%2Fsingle-complex-optics-materials-studies%2Fstructure-closeup">Structure Closeup</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-complex-optics-materials%2Fsingle-complex-optics-materials-studies%2Fsignature-material"><img src="./works/topics/complex-optics-materials/packages/single-complex-optics-materials-studies/images/signature-material/image.w400.webp" width="100%" alt="Signature Material for Complex Optics Materials."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-complex-optics-materials%2Fsingle-complex-optics-materials-studies%2Fsignature-material">Signature Material</a></b>
-
-</td>
-<td width="33%"></td>
 </tr>
 </table>
 
@@ -1112,17 +933,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-conversational-editing-workflow%2Fsingle-editing-scenarios%2Fgallery-layout-correction"><img src="./works/topics/conversational-editing-workflow/packages/single-editing-scenarios/images/gallery-layout-correction/image.w400.webp" width="100%" alt="A corrected gallery wall with a larger central frame, cooler lighting, and a removed label plaque."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-conversational-editing-workflow%2Fsingle-editing-scenarios%2Fgallery-layout-correction">Gallery Layout Correction</a></b>
-
-</td>
-<td width="33%"></td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [Courtroom Sketch](https://gpt-image-2-hub-seven.vercel.app/#t-courtroom-sketch)
@@ -1176,23 +986,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-courtroom-sketch%2Fsingle-courtroom-sketch-studies%2Fgesture-architecture"><img src="./works/topics/courtroom-sketch/packages/single-courtroom-sketch-studies/images/gesture-architecture/image.w400.webp" width="100%" alt="Gesture Architecture for Courtroom Sketch."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-courtroom-sketch%2Fsingle-courtroom-sketch-studies%2Fgesture-architecture">Gesture Architecture</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-courtroom-sketch%2Fsingle-courtroom-sketch-studies%2Fmuseum-wall-hang"><img src="./works/topics/courtroom-sketch/packages/single-courtroom-sketch-studies/images/museum-wall-hang/image.w400.webp" width="100%" alt="Museum Wall Hang for Courtroom Sketch."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-courtroom-sketch%2Fsingle-courtroom-sketch-studies%2Fmuseum-wall-hang">Museum Wall Hang</a></b>
-
-</td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [Crystal Ball Narrative](https://gpt-image-2-hub-seven.vercel.app/#t-crystal-ball-narrative)
@@ -1222,17 +1015,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-crystal-ball-narrative%2Fseries-oracle-seasons%2F03-autumn-oracle">Autumn Oracle</a></b>
 
 </td>
-</tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-crystal-ball-narrative%2Fseries-oracle-seasons%2F04-winter-oracle"><img src="./works/topics/crystal-ball-narrative/packages/series-oracle-seasons/images/04-winter-oracle/image.w400.webp" width="100%" alt="Winter Oracle is part of a reference-dependent crystal ball continuity series."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-crystal-ball-narrative%2Fseries-oracle-seasons%2F04-winter-oracle">Winter Oracle</a></b>
-
-</td>
-<td width="33%"></td>
-<td width="33%"></td>
 </tr>
 </table>
 
@@ -1287,23 +1069,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-cute-blind-box-figurine%2Fsingle-cute-blind-box-figurine-studies%2Fenvironment-presentation"><img src="./works/topics/cute-blind-box-figurine/packages/single-cute-blind-box-figurine-studies/images/environment-presentation/image.w400.webp" width="100%" alt="环境展示 for Cute Blind Box Figurine."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-cute-blind-box-figurine%2Fsingle-cute-blind-box-figurine-studies%2Fenvironment-presentation">环境展示</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-cute-blind-box-figurine%2Fsingle-cute-blind-box-figurine-studies%2Fsignature-render"><img src="./works/topics/cute-blind-box-figurine/packages/single-cute-blind-box-figurine-studies/images/signature-render/image.w400.webp" width="100%" alt="Signature Render for Cute Blind Box Figurine."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-cute-blind-box-figurine%2Fsingle-cute-blind-box-figurine-studies%2Fsignature-render">Signature Render</a></b>
-
-</td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [Dashboard Data Visualization](https://gpt-image-2-hub-seven.vercel.app/#t-dashboard-data-visualization)
@@ -1356,17 +1121,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-dashboard-data-visualization%2Fsingle-dashboard-data-visualization-studies%2Fmaterial-callout">材质标注</a></b>
 
 </td>
-</tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-dashboard-data-visualization%2Fsingle-dashboard-data-visualization-studies%2Fexploded-system"><img src="./works/topics/dashboard-data-visualization/packages/single-dashboard-data-visualization-studies/images/exploded-system/image.w400.webp" width="100%" alt="Exploded System for Dashboard Data Visualization."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-dashboard-data-visualization%2Fsingle-dashboard-data-visualization-studies%2Fexploded-system">Exploded System</a></b>
-
-</td>
-<td width="33%"></td>
-<td width="33%"></td>
 </tr>
 </table>
 
@@ -1421,17 +1175,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-eight-panel-consistency-comic%2Fseries-launch-comic%2F04-subway-reveal-page"><img src="./works/topics/eight-panel-consistency-comic/packages/series-launch-comic/images/04-subway-reveal-page/image.w400.webp" width="100%" alt="An eight-panel subway reveal comic preserving the same hero and glowing orb."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-eight-panel-consistency-comic%2Fseries-launch-comic%2F04-subway-reveal-page">Subway Reveal Page</a></b>
-
-</td>
-<td width="33%"></td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [Equirectangular VR Panorama](https://gpt-image-2-hub-seven.vercel.app/#t-equirectangular-vr-panorama)
@@ -1484,23 +1227,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-equirectangular-vr-panorama%2Fsingle-panorama-studies%2Fretro-space-habitat">Retro Space Habitat</a></b>
 
 </td>
-</tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-equirectangular-vr-panorama%2Fsingle-panorama-studies%2Fvertical-city-crossroads"><img src="./works/topics/equirectangular-vr-panorama/packages/single-panorama-studies/images/vertical-city-crossroads/image.w400.webp" width="100%" alt="A 2:1 VR panorama at the center of a dense vertical city crossroads at dusk."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-equirectangular-vr-panorama%2Fsingle-panorama-studies%2Fvertical-city-crossroads">Vertical City Crossroads</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-equirectangular-vr-panorama%2Fsingle-panorama-studies%2Faurora-ice-cavern"><img src="./works/topics/equirectangular-vr-panorama/packages/single-panorama-studies/images/aurora-ice-cavern/image.w400.webp" width="100%" alt="A 2:1 VR panorama inside an aurora-lit ice cavern with transparent arches and frozen pools."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-equirectangular-vr-panorama%2Fsingle-panorama-studies%2Faurora-ice-cavern">Aurora Ice Cavern</a></b>
-
-</td>
-<td width="33%"></td>
 </tr>
 </table>
 
@@ -1555,23 +1281,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-escher-impossible-geometry%2Fsingle-impossible-geometry-studies%2Fcube-lattice-paradox"><img src="./works/topics/escher-impossible-geometry/packages/single-impossible-geometry-studies/images/cube-lattice-paradox/image.w400.webp" width="100%" alt="An isometric cube lattice with impossible depth ordering, drawn as a black-and-white engraving."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-escher-impossible-geometry%2Fsingle-impossible-geometry-studies%2Fcube-lattice-paradox">Cube Lattice Paradox</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-escher-impossible-geometry%2Fsingle-impossible-geometry-studies%2Fdual-gravity-plaza"><img src="./works/topics/escher-impossible-geometry/packages/single-impossible-geometry-studies/images/dual-gravity-plaza/image.w400.webp" width="100%" alt="An impossible stone plaza where two gravity directions meet at one architectural edge."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-escher-impossible-geometry%2Fsingle-impossible-geometry-studies%2Fdual-gravity-plaza">Dual Gravity Plaza</a></b>
-
-</td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [Fantasy Handdrawn Map](https://gpt-image-2-hub-seven.vercel.app/#t-fantasy-handdrawn-map)
@@ -1596,32 +1305,32 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-fantasy-handdrawn-map%2Fsingle-fantasy-handdrawn-map-studies%2Fblack-brush-choir"><img src="./works/topics/fantasy-handdrawn-map/packages/single-fantasy-handdrawn-map-studies/images/black-brush-choir/image.w400.webp" width="100%" alt="Black Brush Choir for Fantasy Handdrawn Map."/></a>
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-fantasy-handdrawn-map%2Fsingle-fantasy-handdrawn-map-studies%2Ffractured-figure-surge"><img src="./works/topics/fantasy-handdrawn-map/packages/single-fantasy-handdrawn-map-studies/images/fractured-figure-surge/image.w400.webp" width="100%" alt="Fractured Figure Surge for Fantasy Handdrawn Map."/></a>
 
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-fantasy-handdrawn-map%2Fsingle-fantasy-handdrawn-map-studies%2Fblack-brush-choir">Black Brush Choir</a></b>
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-fantasy-handdrawn-map%2Fsingle-fantasy-handdrawn-map-studies%2Ffractured-figure-surge">Fractured Figure Surge</a></b>
 
 </td>
 </tr>
 <tr>
 <td width="33%" valign="top" align="center">
 
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-fantasy-handdrawn-map%2Fsingle-fantasy-handdrawn-map-studies%2Fblack-brush-choir"><img src="./works/topics/fantasy-handdrawn-map/packages/single-fantasy-handdrawn-map-studies/images/black-brush-choir/image.w400.webp" width="100%" alt="Black Brush Choir for Fantasy Handdrawn Map."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-fantasy-handdrawn-map%2Fsingle-fantasy-handdrawn-map-studies%2Fblack-brush-choir">Black Brush Choir</a></b>
+
+</td>
+<td width="33%" valign="top" align="center">
+
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-fantasy-handdrawn-map%2Fsingle-fantasy-handdrawn-map-studies%2Fstudio-floor-afterimage"><img src="./works/topics/fantasy-handdrawn-map/packages/single-fantasy-handdrawn-map-studies/images/studio-floor-afterimage/image.w400.webp" width="100%" alt="Studio Floor Afterimage for Fantasy Handdrawn Map."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-fantasy-handdrawn-map%2Fsingle-fantasy-handdrawn-map-studies%2Fstudio-floor-afterimage">Studio Floor Afterimage</a></b>
+
+</td>
+<td width="33%" valign="top" align="center">
+
 <a href="https://gpt-image-2-hub-seven.vercel.app/#m-fantasy-handdrawn-map%2Fsingle-fantasy-handdrawn-map-studies%2Fimpasto-weather"><img src="./works/topics/fantasy-handdrawn-map/packages/single-fantasy-handdrawn-map-studies/images/impasto-weather/image.w400.webp" width="100%" alt="厚涂天气 for Fantasy Handdrawn Map."/></a>
 
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-fantasy-handdrawn-map%2Fsingle-fantasy-handdrawn-map-studies%2Fimpasto-weather">厚涂天气</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-fantasy-handdrawn-map%2Fsingle-fantasy-handdrawn-map-studies%2Fgesture-architecture"><img src="./works/topics/fantasy-handdrawn-map/packages/single-fantasy-handdrawn-map-studies/images/gesture-architecture/image.w400.webp" width="100%" alt="Gesture Architecture for Fantasy Handdrawn Map."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-fantasy-handdrawn-map%2Fsingle-fantasy-handdrawn-map-studies%2Fgesture-architecture">Gesture Architecture</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-fantasy-handdrawn-map%2Fsingle-fantasy-handdrawn-map-studies%2Fmuseum-wall-hang"><img src="./works/topics/fantasy-handdrawn-map/packages/single-fantasy-handdrawn-map-studies/images/museum-wall-hang/image.w400.webp" width="100%" alt="Museum Wall Hang for Fantasy Handdrawn Map."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-fantasy-handdrawn-map%2Fsingle-fantasy-handdrawn-map-studies%2Fmuseum-wall-hang">Museum Wall Hang</a></b>
 
 </td>
 </tr>
@@ -1678,23 +1387,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-fictional-celebrity-snapshot%2Fsingle-fictional-snapshots%2Fchef-legend-gas-station"><img src="./works/topics/fictional-celebrity-snapshot/packages/single-fictional-snapshots/images/chef-legend-gas-station/image.w400.webp" width="100%" alt="A square roadside phone snapshot through a windshield of a fictional chef-like celebrity eating noodles."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-fictional-celebrity-snapshot%2Fsingle-fictional-snapshots%2Fchef-legend-gas-station">Chef Legend Gas Station</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-fictional-celebrity-snapshot%2Fsingle-fictional-snapshots%2Findie-actor-rainy-bus"><img src="./works/topics/fictional-celebrity-snapshot/packages/single-fictional-snapshots/images/indie-actor-rainy-bus/image.w400.webp" width="100%" alt="A square rainy bus-stop phone snapshot of a fictional indie-actor-like person waiting on a bench."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-fictional-celebrity-snapshot%2Fsingle-fictional-snapshots%2Findie-actor-rainy-bus">Indie Actor Rainy Bus</a></b>
-
-</td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [Fictional IP Poster](https://gpt-image-2-hub-seven.vercel.app/#t-fictional-ip-poster)
@@ -1747,23 +1439,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-fictional-ip-poster%2Fsingle-fictional-release-posters%2Fsalt-city-noir-poster">Salt City Noir Poster</a></b>
 
 </td>
-</tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-fictional-ip-poster%2Fseries-neon-railway-saga%2F04-premiere-wall-poster"><img src="./works/topics/fictional-ip-poster/packages/series-neon-railway-saga/images/04-premiere-wall-poster/image.w400.webp" width="100%" alt="A rainy city wall covered with fictional NEON RAILWAY premiere posters."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-fictional-ip-poster%2Fseries-neon-railway-saga%2F04-premiere-wall-poster">Premiere Wall Poster</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-fictional-ip-poster%2Fsingle-fictional-release-posters%2Fmoon-gardeners-poster"><img src="./works/topics/fictional-ip-poster/packages/single-fictional-release-posters/images/moon-gardeners-poster/image.w400.webp" width="100%" alt="A fictional MOON GARDENERS poster showing gardeners tending glowing plants on the moon."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-fictional-ip-poster%2Fsingle-fictional-release-posters%2Fmoon-gardeners-poster">Moon Gardeners Poster</a></b>
-
-</td>
-<td width="33%"></td>
 </tr>
 </table>
 
@@ -1818,23 +1493,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-fictional-symbol-system%2Fseries-inscription-grammar%2F04-codex-fragment"><img src="./works/topics/fictional-symbol-system/packages/series-inscription-grammar/images/04-codex-fragment/image.w400.webp" width="100%" alt="A torn codex page filled with systematic invented glyph columns and ritual diagrams."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-fictional-symbol-system%2Fseries-inscription-grammar%2F04-codex-fragment">Codex Fragment</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-fictional-symbol-system%2Fsingle-decoder-artifacts%2Fgame-ui-cipher"><img src="./works/topics/fictional-symbol-system/packages/single-decoder-artifacts/images/game-ui-cipher/image.w400.webp" width="100%" alt="A glowing ancient-machine cipher interface made from consistent invented glyph tiles."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-fictional-symbol-system%2Fsingle-decoder-artifacts%2Fgame-ui-cipher">Game UI Cipher</a></b>
-
-</td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [Film Photography Style Atlas](https://gpt-image-2-hub-seven.vercel.app/#t-film-photography-style-atlas)
@@ -1843,6 +1501,13 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 <table>
 <tr>
+<td width="33%" valign="top" align="center">
+
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-film-photography-style-atlas%2Fsingle-film-photography-style-studies%2Fhero-shot"><img src="./works/topics/film-photography-style-atlas/packages/single-film-photography-style-studies/images/hero-shot/image.w400.webp" width="100%" alt="Hero Shot for Film Photography Style Atlas."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-film-photography-style-atlas%2Fsingle-film-photography-style-studies%2Fhero-shot">Hero Shot</a></b>
+
+</td>
 <td width="33%" valign="top" align="center">
 
 <a href="https://gpt-image-2-hub-seven.vercel.app/#m-film-photography-style-atlas%2Fsingle-film-photography-style-studies%2Fmacro-study"><img src="./works/topics/film-photography-style-atlas/packages/single-film-photography-style-studies/images/macro-study/image.w400.webp" width="100%" alt="Macro Study for Film Photography Style Atlas."/></a>
@@ -1857,6 +1522,8 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-film-photography-style-atlas%2Fsingle-film-photography-style-studies%2Fside-light-study">Side Light Study</a></b>
 
 </td>
+</tr>
+<tr>
 <td width="33%" valign="top" align="center">
 
 <a href="https://gpt-image-2-hub-seven.vercel.app/#m-film-photography-style-atlas%2Fsingle-film-photography-style-studies%2Fmotion-moment"><img src="./works/topics/film-photography-style-atlas/packages/single-film-photography-style-studies/images/motion-moment/image.w400.webp" width="100%" alt="Motion Moment for Film Photography Style Atlas."/></a>
@@ -1864,8 +1531,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-film-photography-style-atlas%2Fsingle-film-photography-style-studies%2Fmotion-moment">Motion Moment</a></b>
 
 </td>
-</tr>
-<tr>
 <td width="33%" valign="top" align="center">
 
 <a href="https://gpt-image-2-hub-seven.vercel.app/#m-film-photography-style-atlas%2Fsingle-film-photography-style-studies%2Flow-light-atlas"><img src="./works/topics/film-photography-style-atlas/packages/single-film-photography-style-studies/images/low-light-atlas/image.w400.webp" width="100%" alt="Low-Light Atlas for Film Photography Style Atlas."/></a>
@@ -1880,24 +1545,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-film-photography-style-atlas%2Fsingle-film-photography-style-studies%2Fspecimen-table">Specimen Table</a></b>
 
 </td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-film-photography-style-atlas%2Fsingle-film-photography-style-studies%2Fatmospheric-view"><img src="./works/topics/film-photography-style-atlas/packages/single-film-photography-style-studies/images/atmospheric-view/image.w400.webp" width="100%" alt="Atmospheric View for Film Photography Style Atlas."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-film-photography-style-atlas%2Fsingle-film-photography-style-studies%2Fatmospheric-view">Atmospheric View</a></b>
-
-</td>
-</tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-film-photography-style-atlas%2Fsingle-film-photography-style-studies%2Fsignature-frame"><img src="./works/topics/film-photography-style-atlas/packages/single-film-photography-style-studies/images/signature-frame/image.w400.webp" width="100%" alt="Signature Frame for Film Photography Style Atlas."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-film-photography-style-atlas%2Fsingle-film-photography-style-studies%2Fsignature-frame">Signature Frame</a></b>
-
-</td>
-<td width="33%"></td>
-<td width="33%"></td>
 </tr>
 </table>
 
@@ -1952,23 +1599,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-film-storyboard-sequence%2Fseries-rain-alley-storyboards%2F04-tunnel-escape-board"><img src="./works/topics/film-storyboard-sequence/packages/series-rain-alley-storyboards/images/04-tunnel-escape-board/image.w400.webp" width="100%" alt="A six-panel pencil storyboard finale showing the hooded courier escaping through a wet service tunnel."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-film-storyboard-sequence%2Fseries-rain-alley-storyboards%2F04-tunnel-escape-board">Tunnel Escape Board</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-film-storyboard-sequence%2Fsingle-production-storyboards%2F04-kitchen-dolly-drama"><img src="./works/topics/film-storyboard-sequence/packages/single-production-storyboards/images/04-kitchen-dolly-drama/image.w400.webp" width="100%" alt="A six-panel pencil storyboard of a quiet kitchen drama with dolly arrows and camera blocking."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-film-storyboard-sequence%2Fsingle-production-storyboards%2F04-kitchen-dolly-drama">Kitchen Dolly Drama</a></b>
-
-</td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [Fluid Smoke Explosion](https://gpt-image-2-hub-seven.vercel.app/#t-fluid-smoke-explosion)
@@ -2021,23 +1651,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-fluid-smoke-explosion%2Fsingle-fluid-smoke-explosion-studies%2Fspecimen-table">Specimen Table</a></b>
 
 </td>
-</tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-fluid-smoke-explosion%2Fsingle-fluid-smoke-explosion-studies%2Fatmospheric-view"><img src="./works/topics/fluid-smoke-explosion/packages/single-fluid-smoke-explosion-studies/images/atmospheric-view/image.w400.webp" width="100%" alt="Atmospheric View for Fluid Smoke Explosion."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-fluid-smoke-explosion%2Fsingle-fluid-smoke-explosion-studies%2Fatmospheric-view">Atmospheric View</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-fluid-smoke-explosion%2Fsingle-fluid-smoke-explosion-studies%2Fsignature-frame"><img src="./works/topics/fluid-smoke-explosion/packages/single-fluid-smoke-explosion-studies/images/signature-frame/image.w400.webp" width="100%" alt="Signature Frame for Fluid Smoke Explosion."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-fluid-smoke-explosion%2Fsingle-fluid-smoke-explosion-studies%2Fsignature-frame">Signature Frame</a></b>
-
-</td>
-<td width="33%"></td>
 </tr>
 </table>
 
@@ -2092,23 +1705,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-food-cross-section-atlas%2Fsingle-food-cross-section-studies%2Fatmospheric-view"><img src="./works/topics/food-cross-section-atlas/packages/single-food-cross-section-studies/images/atmospheric-view/image.w400.webp" width="100%" alt="Atmospheric View for Food Cross-Section Atlas."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-food-cross-section-atlas%2Fsingle-food-cross-section-studies%2Fatmospheric-view">Atmospheric View</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-food-cross-section-atlas%2Fsingle-food-cross-section-studies%2Fsignature-frame"><img src="./works/topics/food-cross-section-atlas/packages/single-food-cross-section-studies/images/signature-frame/image.w400.webp" width="100%" alt="Signature Frame for Food Cross-Section Atlas."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-food-cross-section-atlas%2Fsingle-food-cross-section-studies%2Fsignature-frame">Signature Frame</a></b>
-
-</td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [Forensic Scene Reconstruction](https://gpt-image-2-hub-seven.vercel.app/#t-forensic-scene-reconstruction)
@@ -2149,29 +1745,18 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 </td>
 <td width="33%" valign="top" align="center">
 
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-forensic-scene-reconstruction%2Fsingle-forensic-scene-reconstruction-studies%2Fevidence-table"><img src="./works/topics/forensic-scene-reconstruction/packages/single-forensic-scene-reconstruction-studies/images/evidence-table/image.w400.webp" width="100%" alt="Evidence Table for Forensic Scene Reconstruction."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-forensic-scene-reconstruction%2Fsingle-forensic-scene-reconstruction-studies%2Fevidence-table">Evidence Table</a></b>
+
+</td>
+<td width="33%" valign="top" align="center">
+
 <a href="https://gpt-image-2-hub-seven.vercel.app/#m-forensic-scene-reconstruction%2Fsingle-forensic-scene-reconstruction-studies%2Fdetail-callout"><img src="./works/topics/forensic-scene-reconstruction/packages/single-forensic-scene-reconstruction-studies/images/detail-callout/image.w400.webp" width="100%" alt="Detail Callout for Forensic Scene Reconstruction."/></a>
 
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-forensic-scene-reconstruction%2Fsingle-forensic-scene-reconstruction-studies%2Fdetail-callout">Detail Callout</a></b>
 
 </td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-forensic-scene-reconstruction%2Fsingle-forensic-scene-reconstruction-studies%2Fspatial-model"><img src="./works/topics/forensic-scene-reconstruction/packages/single-forensic-scene-reconstruction-studies/images/spatial-model/image.w400.webp" width="100%" alt="Spatial Model for Forensic Scene Reconstruction."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-forensic-scene-reconstruction%2Fsingle-forensic-scene-reconstruction-studies%2Fspatial-model">Spatial Model</a></b>
-
-</td>
-</tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-forensic-scene-reconstruction%2Fsingle-forensic-scene-reconstruction-studies%2Ffinal-reconstruction"><img src="./works/topics/forensic-scene-reconstruction/packages/single-forensic-scene-reconstruction-studies/images/final-reconstruction/image.w400.webp" width="100%" alt="Final Reconstruction for Forensic Scene Reconstruction."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-forensic-scene-reconstruction%2Fsingle-forensic-scene-reconstruction-studies%2Ffinal-reconstruction">Final Reconstruction</a></b>
-
-</td>
-<td width="33%"></td>
-<td width="33%"></td>
 </tr>
 </table>
 
@@ -2226,23 +1811,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-fractal-generative-art%2Fsingle-fractal-generative-art-studies%2Fsystem-study"><img src="./works/topics/fractal-generative-art/packages/single-fractal-generative-art-studies/images/system-study/image.w400.webp" width="100%" alt="System Study for Fractal Generative Art."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-fractal-generative-art%2Fsingle-fractal-generative-art-studies%2Fsystem-study">System Study</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-fractal-generative-art%2Fsingle-fractal-generative-art-studies%2Fsignature-study"><img src="./works/topics/fractal-generative-art/packages/single-fractal-generative-art-studies/images/signature-study/image.w400.webp" width="100%" alt="Signature Study for Fractal Generative Art."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-fractal-generative-art%2Fsingle-fractal-generative-art-studies%2Fsignature-study">Signature Study</a></b>
-
-</td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [Ghibli Countergenre](https://gpt-image-2-hub-seven.vercel.app/#t-ghibli-countergenre)
@@ -2296,23 +1864,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-ghibli-countergenre%2Fseries-launch-lullaby%2F04-ascent-over-rice-clouds"><img src="./works/topics/ghibli-countergenre/packages/series-launch-lullaby/images/04-ascent-over-rice-clouds/image.w400.webp" width="100%" alt="The same launch rocket rises above a watercolor valley while the pad disappears into bright exhaust."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-ghibli-countergenre%2Fseries-launch-lullaby%2F04-ascent-over-rice-clouds">Ascent Over Rice Clouds</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-ghibli-countergenre%2Fsingle-countergenre-studies%2F04-orbital-mission-control-meadow"><img src="./works/topics/ghibli-countergenre/packages/single-countergenre-studies/images/04-orbital-mission-control-meadow/image.w400.webp" width="100%" alt="A sunlit hand-painted mission control room where engineers quietly supervise orbital operations."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-ghibli-countergenre%2Fsingle-countergenre-studies%2F04-orbital-mission-control-meadow">Orbital Mission Control Meadow</a></b>
-
-</td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [Glowing Anatomy Overlay](https://gpt-image-2-hub-seven.vercel.app/#t-glowing-anatomy-overlay)
@@ -2365,23 +1916,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-glowing-anatomy-overlay%2Fsingle-performance-overlays%2F06-tennis-serve-overlay">Tennis Serve Overlay</a></b>
 
 </td>
-</tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-glowing-anatomy-overlay%2Fsingle-performance-overlays%2F07-rower-chain-overlay"><img src="./works/topics/glowing-anatomy-overlay/packages/single-performance-overlays/images/07-rower-chain-overlay/image.w400.webp" width="100%" alt="An indoor rower in drive phase with glowing kinetic-chain, breath, heart, muscle, and joint-load overlays."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-glowing-anatomy-overlay%2Fsingle-performance-overlays%2F07-rower-chain-overlay">Rower Chain Overlay</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-glowing-anatomy-overlay%2Fsingle-performance-overlays%2F08-sprinter-start-overlay"><img src="./works/topics/glowing-anatomy-overlay/packages/single-performance-overlays/images/08-sprinter-start-overlay/image.w400.webp" width="100%" alt="A sprinter launching from blocks with glowing force arrows, acceleration traces, muscle activation, breath, heart, and joint-stress overlays."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-glowing-anatomy-overlay%2Fsingle-performance-overlays%2F08-sprinter-start-overlay">Sprinter Start Overlay</a></b>
-
-</td>
-<td width="33%"></td>
 </tr>
 </table>
 
@@ -2466,23 +2000,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-hitman-office-level%2Fseries-corporate-stealth-map%2F04-afterhours-extraction"><img src="./works/topics/hitman-office-level/packages/series-corporate-stealth-map/images/04-afterhours-extraction/image.w400.webp" width="100%" alt="The same office stealth map at night with green extraction route, amber search cones, security icons, and a data-drive HUD slot."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-hitman-office-level%2Fseries-corporate-stealth-map%2F04-afterhours-extraction">Afterhours Extraction</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-hitman-office-level%2Fsingle-office-level-studies%2Fopen-office-briefing-map"><img src="./works/topics/hitman-office-level/packages/single-office-level-studies/images/open-office-briefing-map/image.w400.webp" width="100%" alt="A glass-table mission briefing map of an open office, with route arrows, sound rings, patrol loops, and objective STEAL GPT-6."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-hitman-office-level%2Fsingle-office-level-studies%2Fopen-office-briefing-map">Open Office Briefing Map</a></b>
-
-</td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [Hyperreal Diorama Cube](https://gpt-image-2-hub-seven.vercel.app/#t-hyperreal-diorama-cube)
@@ -2535,23 +2052,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-hyperreal-diorama-cube%2Fsingle-diorama-cube-studies%2F06-megacity-subway-core">Megacity Subway Core</a></b>
 
 </td>
-</tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-hyperreal-diorama-cube%2Fsingle-diorama-cube-studies%2F07-volcanic-vineyard-core"><img src="./works/topics/hyperreal-diorama-cube/packages/single-diorama-cube-studies/images/07-volcanic-vineyard-core/image.w400.webp" width="100%" alt="A volcanic vineyard diorama cube with vines above roots, ash soil, basalt, water pockets, and lava depth."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-hyperreal-diorama-cube%2Fsingle-diorama-cube-studies%2F07-volcanic-vineyard-core">Volcanic Vineyard Core</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-hyperreal-diorama-cube%2Fsingle-diorama-cube-studies%2F08-desert-oasis-core"><img src="./works/topics/hyperreal-diorama-cube/packages/single-diorama-cube-studies/images/08-desert-oasis-core/image.w400.webp" width="100%" alt="A desert oasis diorama cube showing palms and a pool above dune layers, roots, salt, and aquifer water."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-hyperreal-diorama-cube%2Fsingle-diorama-cube-studies%2F08-desert-oasis-core">Desert Oasis Core</a></b>
-
-</td>
-<td width="33%"></td>
 </tr>
 </table>
 
@@ -2606,23 +2106,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-ikea-instruction-world%2Fsingle-manual-worlds%2Ffriendship-shelf-system"><img src="./works/topics/ikea-instruction-world/packages/single-manual-worlds/images/friendship-shelf-system/image.w400.webp" width="100%" alt="A square instruction page showing friendship assembled as a modular shelf with repair patches."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-ikea-instruction-world%2Fsingle-manual-worlds%2Ffriendship-shelf-system">Friendship Shelf System</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-ikea-instruction-world%2Fsingle-manual-worlds%2Fweekend-camping-module"><img src="./works/topics/ikea-instruction-world/packages/single-manual-worlds/images/weekend-camping-module/image.w400.webp" width="100%" alt="A square camping instruction sheet where tent parts and landscape pieces assemble into a campsite."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-ikea-instruction-world%2Fsingle-manual-worlds%2Fweekend-camping-module">Weekend Camping Module</a></b>
-
-</td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [In-Image Translation](https://gpt-image-2-hub-seven.vercel.app/#t-in-image-translation)
@@ -2676,23 +2159,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-in-image-translation%2Fseries-poster-localization%2F04-arabic-localized-poster"><img src="./works/topics/in-image-translation/packages/series-poster-localization/images/04-arabic-localized-poster/image.w400.webp" width="100%" alt="The hydration infographic poster translated into Arabic with preserved visual hierarchy."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-in-image-translation%2Fseries-poster-localization%2F04-arabic-localized-poster">Arabic Localized Poster</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-in-image-translation%2Fsingle-translation-surfaces%2Fapp-onboarding-board"><img src="./works/topics/in-image-translation/packages/single-translation-surfaces/images/app-onboarding-board/image.w400.webp" width="100%" alt="Four mobile onboarding screens localized into German with repeated button labels."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-in-image-translation%2Fsingle-translation-surfaces%2Fapp-onboarding-board">App Onboarding Board</a></b>
-
-</td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [Jewelry CAD Wearable Set](https://gpt-image-2-hub-seven.vercel.app/#t-jewelry-cad-wearable-set)
@@ -2733,29 +2199,18 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 </td>
 <td width="33%" valign="top" align="center">
 
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-jewelry-cad-wearable-set%2Fsingle-jewelry-cad-wearable-set-studies%2Fscale-comparison"><img src="./works/topics/jewelry-cad-wearable-set/packages/single-jewelry-cad-wearable-set-studies/images/scale-comparison/image.w400.webp" width="100%" alt="Scale Comparison for Jewelry CAD Wearable Set."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-jewelry-cad-wearable-set%2Fsingle-jewelry-cad-wearable-set-studies%2Fscale-comparison">Scale Comparison</a></b>
+
+</td>
+<td width="33%" valign="top" align="center">
+
 <a href="https://gpt-image-2-hub-seven.vercel.app/#m-jewelry-cad-wearable-set%2Fsingle-jewelry-cad-wearable-set-studies%2Fdetail-closeup"><img src="./works/topics/jewelry-cad-wearable-set/packages/single-jewelry-cad-wearable-set-studies/images/detail-closeup/image.w400.webp" width="100%" alt="Detail Closeup for Jewelry CAD Wearable Set."/></a>
 
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-jewelry-cad-wearable-set%2Fsingle-jewelry-cad-wearable-set-studies%2Fdetail-closeup">Detail Closeup</a></b>
 
 </td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-jewelry-cad-wearable-set%2Fsingle-jewelry-cad-wearable-set-studies%2Fenvironment-presentation"><img src="./works/topics/jewelry-cad-wearable-set/packages/single-jewelry-cad-wearable-set-studies/images/environment-presentation/image.w400.webp" width="100%" alt="环境展示 for Jewelry CAD Wearable Set."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-jewelry-cad-wearable-set%2Fsingle-jewelry-cad-wearable-set-studies%2Fenvironment-presentation">环境展示</a></b>
-
-</td>
-</tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-jewelry-cad-wearable-set%2Fsingle-jewelry-cad-wearable-set-studies%2Fsignature-render"><img src="./works/topics/jewelry-cad-wearable-set/packages/single-jewelry-cad-wearable-set-studies/images/signature-render/image.w400.webp" width="100%" alt="Signature Render for Jewelry CAD Wearable Set."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-jewelry-cad-wearable-set%2Fsingle-jewelry-cad-wearable-set-studies%2Fsignature-render">Signature Render</a></b>
-
-</td>
-<td width="33%"></td>
-<td width="33%"></td>
 </tr>
 </table>
 
@@ -2810,23 +2265,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-json-business-card%2Fsingle-code-object-cards%2Fholographic-startup-card"><img src="./works/topics/json-business-card/packages/single-code-object-cards/images/holographic-startup-card/image.w400.webp" width="100%" alt="A holographic foil business card with readable JSON syntax highlighting."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-json-business-card%2Fsingle-code-object-cards%2Fholographic-startup-card">Holographic Startup Card</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-json-business-card%2Fsingle-code-object-cards%2Fterminal-window-card"><img src="./works/topics/json-business-card/packages/single-code-object-cards/images/terminal-window-card/image.w400.webp" width="100%" alt="A terminal-inspired black business card with readable green JSON."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-json-business-card%2Fsingle-code-object-cards%2Fterminal-window-card">Terminal Window Card</a></b>
-
-</td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [Latte Art Atlas](https://gpt-image-2-hub-seven.vercel.app/#t-latte-art-atlas)
@@ -2851,13 +2289,20 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 </td>
 <td width="33%" valign="top" align="center">
 
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-latte-art-atlas%2Fsingle-latte-art-studies%2Fside-light-study"><img src="./works/topics/latte-art-atlas/packages/single-latte-art-studies/images/side-light-study/image.w400.webp" width="100%" alt="Side Light Study for Latte Art Atlas."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-latte-art-atlas%2Fsingle-latte-art-studies%2Fside-light-study">Side Light Study</a></b>
+
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top" align="center">
+
 <a href="https://gpt-image-2-hub-seven.vercel.app/#m-latte-art-atlas%2Fsingle-latte-art-studies%2Fmotion-moment"><img src="./works/topics/latte-art-atlas/packages/single-latte-art-studies/images/motion-moment/image.w400.webp" width="100%" alt="Motion Moment for Latte Art Atlas."/></a>
 
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-latte-art-atlas%2Fsingle-latte-art-studies%2Fmotion-moment">Motion Moment</a></b>
 
 </td>
-</tr>
-<tr>
 <td width="33%" valign="top" align="center">
 
 <a href="https://gpt-image-2-hub-seven.vercel.app/#m-latte-art-atlas%2Fsingle-latte-art-studies%2Flow-light-atlas"><img src="./works/topics/latte-art-atlas/packages/single-latte-art-studies/images/low-light-atlas/image.w400.webp" width="100%" alt="Low-Light Atlas for Latte Art Atlas."/></a>
@@ -2872,24 +2317,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-latte-art-atlas%2Fsingle-latte-art-studies%2Fspecimen-table">Specimen Table</a></b>
 
 </td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-latte-art-atlas%2Fsingle-latte-art-studies%2Fatmospheric-view"><img src="./works/topics/latte-art-atlas/packages/single-latte-art-studies/images/atmospheric-view/image.w400.webp" width="100%" alt="Atmospheric View for Latte Art Atlas."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-latte-art-atlas%2Fsingle-latte-art-studies%2Fatmospheric-view">Atmospheric View</a></b>
-
-</td>
-</tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-latte-art-atlas%2Fsingle-latte-art-studies%2Fsignature-frame"><img src="./works/topics/latte-art-atlas/packages/single-latte-art-studies/images/signature-frame/image.w400.webp" width="100%" alt="Signature Frame for Latte Art Atlas."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-latte-art-atlas%2Fsingle-latte-art-studies%2Fsignature-frame">Signature Frame</a></b>
-
-</td>
-<td width="33%"></td>
-<td width="33%"></td>
 </tr>
 </table>
 
@@ -2924,6 +2351,13 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <tr>
 <td width="33%" valign="top" align="center">
 
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-lego-scene-rebuild%2Fsingle-lego-scene-rebuild-studies%2Fstudio-turn"><img src="./works/topics/lego-scene-rebuild/packages/single-lego-scene-rebuild-studies/images/studio-turn/image.w400.webp" width="100%" alt="Studio Turn for Lego Scene Rebuild."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-lego-scene-rebuild%2Fsingle-lego-scene-rebuild-studies%2Fstudio-turn">Studio Turn</a></b>
+
+</td>
+<td width="33%" valign="top" align="center">
+
 <a href="https://gpt-image-2-hub-seven.vercel.app/#m-lego-scene-rebuild%2Fsingle-lego-scene-rebuild-studies%2Fscale-comparison"><img src="./works/topics/lego-scene-rebuild/packages/single-lego-scene-rebuild-studies/images/scale-comparison/image.w400.webp" width="100%" alt="Scale Comparison for Lego Scene Rebuild."/></a>
 
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-lego-scene-rebuild%2Fsingle-lego-scene-rebuild-studies%2Fscale-comparison">Scale Comparison</a></b>
@@ -2934,13 +2368,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <a href="https://gpt-image-2-hub-seven.vercel.app/#m-lego-scene-rebuild%2Fsingle-lego-scene-rebuild-studies%2Fdetail-closeup"><img src="./works/topics/lego-scene-rebuild/packages/single-lego-scene-rebuild-studies/images/detail-closeup/image.w400.webp" width="100%" alt="Detail Closeup for Lego Scene Rebuild."/></a>
 
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-lego-scene-rebuild%2Fsingle-lego-scene-rebuild-studies%2Fdetail-closeup">Detail Closeup</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-lego-scene-rebuild%2Fsingle-lego-scene-rebuild-studies%2Fenvironment-presentation"><img src="./works/topics/lego-scene-rebuild/packages/single-lego-scene-rebuild-studies/images/environment-presentation/image.w400.webp" width="100%" alt="环境展示 for Lego Scene Rebuild."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-lego-scene-rebuild%2Fsingle-lego-scene-rebuild-studies%2Fenvironment-presentation">环境展示</a></b>
 
 </td>
 </tr>
@@ -2966,7 +2393,36 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-long-exposure-light-painting%2Fsingle-long-exposure-light-painting-studies%2Fmacro-study">Macro Study</a></b>
 
 </td>
-<td width="33%"></td>
+<td width="33%" valign="top" align="center">
+
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-long-exposure-light-painting%2Fsingle-long-exposure-light-painting-studies%2Fside-light-study"><img src="./works/topics/long-exposure-light-painting/packages/single-long-exposure-light-painting-studies/images/side-light-study/image.w400.webp" width="100%" alt="Side Light Study for Long-Exposure Light Painting."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-long-exposure-light-painting%2Fsingle-long-exposure-light-painting-studies%2Fside-light-study">Side Light Study</a></b>
+
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top" align="center">
+
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-long-exposure-light-painting%2Fsingle-long-exposure-light-painting-studies%2Fmotion-moment"><img src="./works/topics/long-exposure-light-painting/packages/single-long-exposure-light-painting-studies/images/motion-moment/image.w400.webp" width="100%" alt="Motion Moment for Long-Exposure Light Painting."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-long-exposure-light-painting%2Fsingle-long-exposure-light-painting-studies%2Fmotion-moment">Motion Moment</a></b>
+
+</td>
+<td width="33%" valign="top" align="center">
+
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-long-exposure-light-painting%2Fsingle-long-exposure-light-painting-studies%2Flow-light-atlas"><img src="./works/topics/long-exposure-light-painting/packages/single-long-exposure-light-painting-studies/images/low-light-atlas/image.w400.webp" width="100%" alt="Low-Light Atlas for Long-Exposure Light Painting."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-long-exposure-light-painting%2Fsingle-long-exposure-light-painting-studies%2Flow-light-atlas">Low-Light Atlas</a></b>
+
+</td>
+<td width="33%" valign="top" align="center">
+
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-long-exposure-light-painting%2Fsingle-long-exposure-light-painting-studies%2Fspecimen-table"><img src="./works/topics/long-exposure-light-painting/packages/single-long-exposure-light-painting-studies/images/specimen-table/image.w400.webp" width="100%" alt="Specimen Table for Long-Exposure Light Painting."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-long-exposure-light-painting%2Fsingle-long-exposure-light-painting-studies%2Fspecimen-table">Specimen Table</a></b>
+
+</td>
 </tr>
 </table>
 
@@ -3021,23 +2477,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-macro-real-texture%2Fsingle-macro-real-texture-studies%2Fstructure-closeup"><img src="./works/topics/macro-real-texture/packages/single-macro-real-texture-studies/images/structure-closeup/image.w400.webp" width="100%" alt="Structure Closeup for Macro Real Texture."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-macro-real-texture%2Fsingle-macro-real-texture-studies%2Fstructure-closeup">Structure Closeup</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-macro-real-texture%2Fsingle-macro-real-texture-studies%2Fsignature-material"><img src="./works/topics/macro-real-texture/packages/single-macro-real-texture-studies/images/signature-material/image.w400.webp" width="100%" alt="Signature Material for Macro Real Texture."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-macro-real-texture%2Fsingle-macro-real-texture-studies%2Fsignature-material">Signature Material</a></b>
-
-</td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [Magazine Spread Layout](https://gpt-image-2-hub-seven.vercel.app/#t-magazine-spread-layout)
@@ -3090,23 +2529,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-magazine-spread-layout%2Fsingle-magazine-spread-layout-studies%2Fretail-presentation">陈列展示</a></b>
 
 </td>
-</tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-magazine-spread-layout%2Fsingle-magazine-spread-layout-studies%2Fsystem-board"><img src="./works/topics/magazine-spread-layout/packages/single-magazine-spread-layout-studies/images/system-board/image.w400.webp" width="100%" alt="System Board for Magazine Spread Layout."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-magazine-spread-layout%2Fsingle-magazine-spread-layout-studies%2Fsystem-board">System Board</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-magazine-spread-layout%2Fsingle-magazine-spread-layout-studies%2Fsignature-layout"><img src="./works/topics/magazine-spread-layout/packages/single-magazine-spread-layout-studies/images/signature-layout/image.w400.webp" width="100%" alt="Signature Layout for Magazine Spread Layout."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-magazine-spread-layout%2Fsingle-magazine-spread-layout-studies%2Fsignature-layout">Signature Layout</a></b>
-
-</td>
-<td width="33%"></td>
 </tr>
 </table>
 
@@ -3161,23 +2583,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-makeup-stage-evolution%2Fsingle-makeup-stage-evolution-studies%2Fsculpted-finish"><img src="./works/topics/makeup-stage-evolution/packages/single-makeup-stage-evolution-studies/images/sculpted-finish/image.w400.webp" width="100%" alt="Sculpted Finish for Makeup Stage Evolution."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-makeup-stage-evolution%2Fsingle-makeup-stage-evolution-studies%2Fsculpted-finish">Sculpted Finish</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-makeup-stage-evolution%2Fsingle-makeup-stage-evolution-studies%2Fsignature-look"><img src="./works/topics/makeup-stage-evolution/packages/single-makeup-stage-evolution-studies/images/signature-look/image.w400.webp" width="100%" alt="Signature Look for Makeup Stage Evolution."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-makeup-stage-evolution%2Fsingle-makeup-stage-evolution-studies%2Fsignature-look">Signature Look</a></b>
-
-</td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [Mandala Precision Geometry](https://gpt-image-2-hub-seven.vercel.app/#t-mandala-precision-geometry)
@@ -3230,23 +2635,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-mandala-precision-geometry%2Fsingle-mandala-studies%2F06-botanical-healing-mandala">Botanical Healing Mandala</a></b>
 
 </td>
-</tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-mandala-precision-geometry%2Fsingle-mandala-studies%2F07-black-gold-engraved-mandala"><img src="./works/topics/mandala-precision-geometry/packages/single-mandala-studies/images/07-black-gold-engraved-mandala/image.w400.webp" width="100%" alt="A centered engraved mandala in black vellum and gold with dense radial filigree."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-mandala-precision-geometry%2Fsingle-mandala-studies%2F07-black-gold-engraved-mandala">Black Gold Engraved Mandala</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-mandala-precision-geometry%2Fsingle-mandala-studies%2F08-architectural-floor-rose"><img src="./works/topics/mandala-precision-geometry/packages/single-mandala-studies/images/08-architectural-floor-rose/image.w400.webp" width="100%" alt="A monumental stone floor rose photographed from directly above with precise concentric geometry."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-mandala-precision-geometry%2Fsingle-mandala-studies%2F08-architectural-floor-rose">Architectural Floor Rose</a></b>
-
-</td>
-<td width="33%"></td>
 </tr>
 </table>
 
@@ -3301,23 +2689,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-maps-to-treasure-map%2Fseries-hutong-parchment%2F04-travel-keepsake-map"><img src="./works/topics/maps-to-treasure-map/packages/series-hutong-parchment/images/04-travel-keepsake-map/image.w400.webp" width="100%" alt="A framed travel keepsake treasure map preserves the same hutong route topology."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-maps-to-treasure-map%2Fseries-hutong-parchment%2F04-travel-keepsake-map">Travel Keepsake Map</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-maps-to-treasure-map%2Fsingle-cartographic-relics%2Ffood-crawl-island-map"><img src="./works/topics/maps-to-treasure-map/packages/single-cartographic-relics/images/food-crawl-island-map/image.w400.webp" width="100%" alt="A parchment food-crawl treasure map connects market stalls around alleys and a canal."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-maps-to-treasure-map%2Fsingle-cartographic-relics%2Ffood-crawl-island-map">Food Crawl Island Map</a></b>
-
-</td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [Material Swaps](https://gpt-image-2-hub-seven.vercel.app/#t-material-swaps)
@@ -3371,17 +2742,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-material-swaps%2Fsingle-material-impossibilities%2Fsalt-crystal-sneaker"><img src="./works/topics/material-swaps/packages/single-material-impossibilities/images/salt-crystal-sneaker/image.w400.webp" width="100%" alt="A modern low-top sneaker made from translucent white salt crystals."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-material-swaps%2Fsingle-material-impossibilities%2Fsalt-crystal-sneaker">Salt Crystal Sneaker</a></b>
-
-</td>
-<td width="33%"></td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [Medical Anatomy Illustration](https://gpt-image-2-hub-seven.vercel.app/#t-medical-anatomy-illustration)
@@ -3406,13 +2766,20 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 </td>
 <td width="33%" valign="top" align="center">
 
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-medical-anatomy-illustration%2Fsingle-medical-anatomy-illustration-studies%2Fprocess-sequence"><img src="./works/topics/medical-anatomy-illustration/packages/single-medical-anatomy-illustration-studies/images/process-sequence/image.w400.webp" width="100%" alt="Process Sequence for Medical Anatomy Illustration."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-medical-anatomy-illustration%2Fsingle-medical-anatomy-illustration-studies%2Fprocess-sequence">Process Sequence</a></b>
+
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top" align="center">
+
 <a href="https://gpt-image-2-hub-seven.vercel.app/#m-medical-anatomy-illustration%2Fsingle-medical-anatomy-illustration-studies%2Fannotation-cluster"><img src="./works/topics/medical-anatomy-illustration/packages/single-medical-anatomy-illustration-studies/images/annotation-cluster/image.w400.webp" width="100%" alt="Annotation Cluster for Medical Anatomy Illustration."/></a>
 
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-medical-anatomy-illustration%2Fsingle-medical-anatomy-illustration-studies%2Fannotation-cluster">Annotation Cluster</a></b>
 
 </td>
-</tr>
-<tr>
 <td width="33%" valign="top" align="center">
 
 <a href="https://gpt-image-2-hub-seven.vercel.app/#m-medical-anatomy-illustration%2Fsingle-medical-anatomy-illustration-studies%2Fcomparison-board"><img src="./works/topics/medical-anatomy-illustration/packages/single-medical-anatomy-illustration-studies/images/comparison-board/image.w400.webp" width="100%" alt="Comparison Board for Medical Anatomy Illustration."/></a>
@@ -3425,13 +2792,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <a href="https://gpt-image-2-hub-seven.vercel.app/#m-medical-anatomy-illustration%2Fsingle-medical-anatomy-illustration-studies%2Fmaterial-callout"><img src="./works/topics/medical-anatomy-illustration/packages/single-medical-anatomy-illustration-studies/images/material-callout/image.w400.webp" width="100%" alt="材质标注 for Medical Anatomy Illustration."/></a>
 
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-medical-anatomy-illustration%2Fsingle-medical-anatomy-illustration-studies%2Fmaterial-callout">材质标注</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-medical-anatomy-illustration%2Fsingle-medical-anatomy-illustration-studies%2Fexploded-system"><img src="./works/topics/medical-anatomy-illustration/packages/single-medical-anatomy-illustration-studies/images/exploded-system/image.w400.webp" width="100%" alt="Exploded System for Medical Anatomy Illustration."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-medical-anatomy-illustration%2Fsingle-medical-anatomy-illustration-studies%2Fexploded-system">Exploded System</a></b>
 
 </td>
 </tr>
@@ -3488,23 +2848,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-michelin-plate-hero-shot%2Fsingle-fine-dining-hero-studies%2F07-oyster-pearl-minimalism"><img src="./works/topics/michelin-plate-hero-shot/packages/single-fine-dining-hero-studies/images/07-oyster-pearl-minimalism/image.w400.webp" width="100%" alt="A minimalist white plate with three dressed oysters and pearl-like garnishes on black marble."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-michelin-plate-hero-shot%2Fsingle-fine-dining-hero-studies%2F07-oyster-pearl-minimalism">Oyster Pearl Minimalism</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-michelin-plate-hero-shot%2Fsingle-fine-dining-hero-studies%2F08-chocolate-orchid-sphere"><img src="./works/topics/michelin-plate-hero-shot/packages/single-fine-dining-hero-studies/images/08-chocolate-orchid-sphere/image.w400.webp" width="100%" alt="A plated dark chocolate sphere dessert with orchid petals and vanilla accents on a white plate."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-michelin-plate-hero-shot%2Fsingle-fine-dining-hero-studies%2F08-chocolate-orchid-sphere">Chocolate Orchid Sphere</a></b>
-
-</td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [Micro-Engraved Jewelry](https://gpt-image-2-hub-seven.vercel.app/#t-micro-engraved-jewelry)
@@ -3557,23 +2900,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-micro-engraved-jewelry%2Fsingle-micro-inscription-studies%2Fwatch-gear-initials">Watch Gear Initials</a></b>
 
 </td>
-</tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-micro-engraved-jewelry%2Fseries-inner-ring-inscription%2F04-retail-macro"><img src="./works/topics/micro-engraved-jewelry/packages/series-inner-ring-inscription/images/04-retail-macro/image.w400.webp" width="100%" alt="A retail macro ring photo showing the tiny inner engraving MAYA 2026."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-micro-engraved-jewelry%2Fseries-inner-ring-inscription%2F04-retail-macro">Retail Macro</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-micro-engraved-jewelry%2Fsingle-micro-inscription-studies%2Fstamp-perforation-message"><img src="./works/topics/micro-engraved-jewelry/packages/single-micro-inscription-studies/images/stamp-perforation-message/image.w400.webp" width="100%" alt="A stamp perforation edge hides the tiny readable message MEET AT 8 beside a silver bracelet."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-micro-engraved-jewelry%2Fsingle-micro-inscription-studies%2Fstamp-perforation-message">Stamp Perforation Message</a></b>
-
-</td>
-<td width="33%"></td>
 </tr>
 </table>
 
@@ -3628,23 +2954,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-micro-macro-infographic%2Fsingle-scale-comparison-studies%2Fskin-desert-dunes"><img src="./works/topics/micro-macro-infographic/packages/single-scale-comparison-studies/images/skin-desert-dunes/image.w400.webp" width="100%" alt="A square warm infographic comparing skin pores and ridges with desert dune contours."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-micro-macro-infographic%2Fsingle-scale-comparison-studies%2Fskin-desert-dunes">Skin Desert Dunes</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-micro-macro-infographic%2Fsingle-scale-comparison-studies%2Fdiatom-space-station"><img src="./works/topics/micro-macro-infographic/packages/single-scale-comparison-studies/images/diatom-space-station/image.w400.webp" width="100%" alt="A square blueprint-style infographic comparing a diatom shell with a radial orbital space station."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-micro-macro-infographic%2Fsingle-scale-comparison-studies%2Fdiatom-space-station">Diatom Space Station</a></b>
-
-</td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [Mirror Worlds](https://gpt-image-2-hub-seven.vercel.app/#t-mirror-worlds)
@@ -3697,23 +3006,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-mirror-worlds%2Fsingle-temporal-mirror-studies%2Fwedding-mirror-room">Wedding Mirror Room</a></b>
 
 </td>
-</tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-mirror-worlds%2Fseries-life-stage-living-room%2F04-seasonal-apartment-loop"><img src="./works/topics/mirror-worlds/packages/series-life-stage-living-room/images/04-seasonal-apartment-loop/image.w400.webp" width="100%" alt="Eight ages of the same woman occupy one apartment divided by seasonal light."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-mirror-worlds%2Fseries-life-stage-living-room%2F04-seasonal-apartment-loop">Seasonal Apartment Loop</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-mirror-worlds%2Fsingle-temporal-mirror-studies%2Frooftop-time-split"><img src="./works/topics/mirror-worlds/packages/single-temporal-mirror-studies/images/rooftop-time-split/image.w400.webp" width="100%" alt="The same man appears at six ages across a rooftop divided by changing light."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-mirror-worlds%2Fsingle-temporal-mirror-studies%2Frooftop-time-split">Rooftop Time Split</a></b>
-
-</td>
-<td width="33%"></td>
 </tr>
 </table>
 
@@ -3768,23 +3060,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-multi-era-album-covers%2Fsingle-era-cover-sets%2Focean-static-set"><img src="./works/topics/multi-era-album-covers/packages/single-era-cover-sets/images/ocean-static-set/image.w400.webp" width="100%" alt="Six fictional album covers combining ocean waves and radio static motifs."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-multi-era-album-covers%2Fsingle-era-cover-sets%2Focean-static-set">Ocean Static Set</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-multi-era-album-covers%2Fsingle-era-cover-sets%2Fneon-orchard-set"><img src="./works/topics/multi-era-album-covers/packages/single-era-cover-sets/images/neon-orchard-set/image.w400.webp" width="100%" alt="Six fictional album covers reinterpreting a neon orchard motif across eras."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-multi-era-album-covers%2Fsingle-era-cover-sets%2Fneon-orchard-set">Neon Orchard Set</a></b>
-
-</td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [Multi-Script Poster](https://gpt-image-2-hub-seven.vercel.app/#t-multi-script-poster)
@@ -3837,23 +3112,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-multi-script-poster%2Fsingle-global-script-posters%2F06-clinic-service-board">Clinic Service Board</a></b>
 
 </td>
-</tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-multi-script-poster%2Fsingle-global-script-posters%2F07-rail-passenger-notice"><img src="./works/topics/multi-script-poster/packages/single-global-script-posters/images/07-rail-passenger-notice/image.w400.webp" width="100%" alt="A railway station notice board with multilingual rule cards and official icons."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-multi-script-poster%2Fsingle-global-script-posters%2F07-rail-passenger-notice">Rail Passenger Notice</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-multi-script-poster%2Fsingle-global-script-posters%2F08-summit-program-map"><img src="./works/topics/multi-script-poster/packages/single-global-script-posters/images/08-summit-program-map/image.w400.webp" width="100%" alt="A summit program poster with multilingual schedule tracks and a radial venue map."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-multi-script-poster%2Fsingle-global-script-posters%2F08-summit-program-map">Summit Program Map</a></b>
-
-</td>
-<td width="33%"></td>
 </tr>
 </table>
 
@@ -3908,23 +3166,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-museum-exploded-view%2Fseries-bronze-ding-atlas%2F04-bilingual-museum-plate"><img src="./works/topics/museum-exploded-view/packages/series-bronze-ding-atlas/images/04-bilingual-museum-plate/image.w400.webp" width="100%" alt="A bilingual museum plate showing a bronze ding with numbered callouts and material notes."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-museum-exploded-view%2Fseries-bronze-ding-atlas%2F04-bilingual-museum-plate">Bilingual Museum Plate</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-museum-exploded-view%2Fsingle-artifact-exploded-studies%2Farmored-helmet-layers"><img src="./works/topics/museum-exploded-view/packages/single-artifact-exploded-studies/images/armored-helmet-layers/image.w400.webp" width="100%" alt="A museum diagram of a helmet split into shell, liner, rivets, cheek guards, and strap layers."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-museum-exploded-view%2Fsingle-artifact-exploded-studies%2Farmored-helmet-layers">Armored Helmet Layers</a></b>
-
-</td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [Natural History Infographic](https://gpt-image-2-hub-seven.vercel.app/#t-natural-history-infographic)
@@ -3972,22 +3213,11 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-natural-history-infographic%2Fsingle-natural-history-infographic-studies%2Fexploded-system"><img src="./works/topics/natural-history-infographic/packages/single-natural-history-infographic-studies/images/exploded-system/image.w400.webp" width="100%" alt="Exploded System for Natural History Infographic."/></a>
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-natural-history-infographic%2Fsingle-natural-history-infographic-studies%2Fmaterial-callout"><img src="./works/topics/natural-history-infographic/packages/single-natural-history-infographic-studies/images/material-callout/image.w400.webp" width="100%" alt="材质标注 for Natural History Infographic."/></a>
 
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-natural-history-infographic%2Fsingle-natural-history-infographic-studies%2Fexploded-system">Exploded System</a></b>
-
-</td>
-</tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-natural-history-infographic%2Fsingle-natural-history-infographic-studies%2Ffinal-plate"><img src="./works/topics/natural-history-infographic/packages/single-natural-history-infographic-studies/images/final-plate/image.w400.webp" width="100%" alt="Final Plate for Natural History Infographic."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-natural-history-infographic%2Fsingle-natural-history-infographic-studies%2Ffinal-plate">Final Plate</a></b>
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-natural-history-infographic%2Fsingle-natural-history-infographic-studies%2Fmaterial-callout">材质标注</a></b>
 
 </td>
-<td width="33%"></td>
-<td width="33%"></td>
 </tr>
 </table>
 
@@ -4042,23 +3272,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-natural-wonder-photography%2Fsingle-natural-wonder-photography-studies%2Fatmospheric-view"><img src="./works/topics/natural-wonder-photography/packages/single-natural-wonder-photography-studies/images/atmospheric-view/image.w400.webp" width="100%" alt="Atmospheric View for Natural Wonder Photography."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-natural-wonder-photography%2Fsingle-natural-wonder-photography-studies%2Fatmospheric-view">Atmospheric View</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-natural-wonder-photography%2Fsingle-natural-wonder-photography-studies%2Fsignature-frame"><img src="./works/topics/natural-wonder-photography/packages/single-natural-wonder-photography-studies/images/signature-frame/image.w400.webp" width="100%" alt="Signature Frame for Natural Wonder Photography."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-natural-wonder-photography%2Fsingle-natural-wonder-photography-studies%2Fsignature-frame">Signature Frame</a></b>
-
-</td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [Neural Network Self-Explanation](https://gpt-image-2-hub-seven.vercel.app/#t-neural-network-self-explanation)
@@ -4111,23 +3324,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-neural-network-self-explanation%2Fsingle-ai-self-explanations%2F06-feedback-alignment-studio">Feedback Alignment Studio</a></b>
 
 </td>
-</tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-neural-network-self-explanation%2Fsingle-ai-self-explanations%2F07-vision-language-bridge"><img src="./works/topics/neural-network-self-explanation/packages/single-ai-self-explanations/images/07-vision-language-bridge/image.w400.webp" width="100%" alt="A dark gallery installation linking image tiles to token clusters with luminous cross-modal bridges."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-neural-network-self-explanation%2Fsingle-ai-self-explanations%2F07-vision-language-bridge">Vision Language Bridge</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-neural-network-self-explanation%2Fsingle-ai-self-explanations%2F08-memory-retrieval-library"><img src="./works/topics/neural-network-self-explanation/packages/single-ai-self-explanations/images/08-memory-retrieval-library/image.w400.webp" width="100%" alt="A warm library installation where a query sphere retrieves selected memory blocks and assembles context ribbons."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-neural-network-self-explanation%2Fsingle-ai-self-explanations%2F08-memory-retrieval-library">Memory Retrieval Library</a></b>
-
-</td>
-<td width="33%"></td>
 </tr>
 </table>
 
@@ -4182,23 +3378,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-new-chinese-ink-poster%2Fsingle-ink-poster-studies%2F07-moon-bridge"><img src="./works/topics/new-chinese-ink-poster/packages/single-ink-poster-studies/images/07-moon-bridge/image.w400.webp" width="100%" alt="A vertical ink travel poster with a moon bridge, reflection, pale mountains, and a centered Chinese title."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-new-chinese-ink-poster%2Fsingle-ink-poster-studies%2F07-moon-bridge">Moon Bridge</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-new-chinese-ink-poster%2Fsingle-ink-poster-studies%2F08-snow-pavilion"><img src="./works/topics/new-chinese-ink-poster/packages/single-ink-poster-studies/images/08-snow-pavilion/image.w400.webp" width="100%" alt="A quiet winter ink poster with a tiny snow pavilion, pale mountains, and a readable vertical Chinese title."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-new-chinese-ink-poster%2Fsingle-ink-poster-studies%2F08-snow-pavilion">Snow Pavilion</a></b>
-
-</td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [New Yorker Editorial](https://gpt-image-2-hub-seven.vercel.app/#t-new-yorker-editorial)
@@ -4251,23 +3430,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-new-yorker-editorial%2Fsingle-editorial-studies%2F03-flooded-boardroom">Flooded Boardroom</a></b>
 
 </td>
-</tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-new-yorker-editorial%2Fseries-cover-metaphors%2F04-climate-umbrella"><img src="./works/topics/new-yorker-editorial/packages/series-cover-metaphors/images/04-climate-umbrella/image.w400.webp" width="100%" alt="A hand-drawn magazine cover with a commuter holding an umbrella shaped like a tiny greenhouse."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-new-yorker-editorial%2Fseries-cover-metaphors%2F04-climate-umbrella">Climate Umbrella</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-new-yorker-editorial%2Fsingle-editorial-studies%2F04-magazine-cover-mockup"><img src="./works/topics/new-yorker-editorial/packages/single-editorial-studies/images/04-magazine-cover-mockup/image.w400.webp" width="100%" alt="A clean design-table mockup of a fictional editorial magazine cover with blank typography."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-new-yorker-editorial%2Fsingle-editorial-studies%2F04-magazine-cover-mockup">Magazine Cover Mockup</a></b>
-
-</td>
-<td width="33%"></td>
 </tr>
 </table>
 
@@ -4322,17 +3484,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-nine-expression-portrait-grid%2Fsingle-expression-grid-studies%2F04-wedding-emotion-study"><img src="./works/topics/nine-expression-portrait-grid/packages/single-expression-grid-studies/images/04-wedding-emotion-study/image.w400.webp" width="100%" alt="A bridal nine-cell portrait grid showing the same bride through varied wedding-day emotions."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-nine-expression-portrait-grid%2Fsingle-expression-grid-studies%2F04-wedding-emotion-study">Wedding Emotion Study</a></b>
-
-</td>
-<td width="33%"></td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [Object Boardroom](https://gpt-image-2-hub-seven.vercel.app/#t-object-boardroom)
@@ -4385,23 +3536,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-object-boardroom%2Fsingle-object-negotiations%2Fscissors-merger-table">Scissors Merger Table</a></b>
 
 </td>
-</tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-object-boardroom%2Fseries-executive-table%2F04-key-chair"><img src="./works/topics/object-boardroom/packages/series-executive-table/images/04-key-chair/image.w400.webp" width="100%" alt="A worn brass key in a midnight blue suit sits at the head chair of a glossy boardroom table."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-object-boardroom%2Fseries-executive-table%2F04-key-chair">Key Chair</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-object-boardroom%2Fsingle-object-negotiations%2Fumbrella-crisis-seat"><img src="./works/topics/object-boardroom/packages/single-object-negotiations/images/umbrella-crisis-seat/image.w400.webp" width="100%" alt="A closed black umbrella in a tailored suit sits in the executive chair of a rainy glass boardroom."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-object-boardroom%2Fsingle-object-negotiations%2Fumbrella-crisis-seat">Umbrella Crisis Seat</a></b>
-
-</td>
-<td width="33%"></td>
 </tr>
 </table>
 
@@ -4456,23 +3590,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-octane-keyshot-render%2Fsingle-octane-keyshot-render-studies%2Fenvironment-presentation"><img src="./works/topics/octane-keyshot-render/packages/single-octane-keyshot-render-studies/images/environment-presentation/image.w400.webp" width="100%" alt="环境展示 for Octane KeyShot Render."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-octane-keyshot-render%2Fsingle-octane-keyshot-render-studies%2Fenvironment-presentation">环境展示</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-octane-keyshot-render%2Fsingle-octane-keyshot-render-studies%2Fsignature-render"><img src="./works/topics/octane-keyshot-render/packages/single-octane-keyshot-render-studies/images/signature-render/image.w400.webp" width="100%" alt="Signature Render for Octane KeyShot Render."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-octane-keyshot-render%2Fsingle-octane-keyshot-render-studies%2Fsignature-render">Signature Render</a></b>
-
-</td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [Old Newspaper Front Page](https://gpt-image-2-hub-seven.vercel.app/#t-old-newspaper-front-page)
@@ -4525,23 +3642,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-old-newspaper-front-page%2Fsingle-old-newspaper-front-page-studies%2Fretail-presentation">陈列展示</a></b>
 
 </td>
-</tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-old-newspaper-front-page%2Fsingle-old-newspaper-front-page-studies%2Fsystem-board"><img src="./works/topics/old-newspaper-front-page/packages/single-old-newspaper-front-page-studies/images/system-board/image.w400.webp" width="100%" alt="System Board for Old Newspaper Front Page."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-old-newspaper-front-page%2Fsingle-old-newspaper-front-page-studies%2Fsystem-board">System Board</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-old-newspaper-front-page%2Fsingle-old-newspaper-front-page-studies%2Fsignature-layout"><img src="./works/topics/old-newspaper-front-page/packages/single-old-newspaper-front-page-studies/images/signature-layout/image.w400.webp" width="100%" alt="Signature Layout for Old Newspaper Front Page."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-old-newspaper-front-page%2Fsingle-old-newspaper-front-page-studies%2Fsignature-layout">Signature Layout</a></b>
-
-</td>
-<td width="33%"></td>
 </tr>
 </table>
 
@@ -4596,23 +3696,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-orbital-earth-photography%2Fsingle-orbital-earth-photography-studies%2Fatmospheric-view"><img src="./works/topics/orbital-earth-photography/packages/single-orbital-earth-photography-studies/images/atmospheric-view/image.w400.webp" width="100%" alt="Atmospheric View for Orbital Earth Photography."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-orbital-earth-photography%2Fsingle-orbital-earth-photography-studies%2Fatmospheric-view">Atmospheric View</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-orbital-earth-photography%2Fsingle-orbital-earth-photography-studies%2Fsignature-frame"><img src="./works/topics/orbital-earth-photography/packages/single-orbital-earth-photography-studies/images/signature-frame/image.w400.webp" width="100%" alt="Signature Frame for Orbital Earth Photography."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-orbital-earth-photography%2Fsingle-orbital-earth-photography-studies%2Fsignature-frame">Signature Frame</a></b>
-
-</td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [Painting Character OOTD](https://gpt-image-2-hub-seven.vercel.app/#t-painting-character-ootd)
@@ -4666,23 +3749,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-painting-character-ootd%2Fseries-renaissance-ootd-grid%2F04-studio-athleisure"><img src="./works/topics/painting-character-ootd/packages/series-renaissance-ootd-grid/images/04-studio-athleisure/image.w400.webp" width="100%" alt="The same painted Renaissance sitter wearing elevated athleisure in a daylight studio nine-panel grid."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-painting-character-ootd%2Fseries-renaissance-ootd-grid%2F04-studio-athleisure">Studio Athleisure</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-painting-character-ootd%2Fsingle-art-history-ootd-studies%2F04-romantic-cloud-coat"><img src="./works/topics/painting-character-ootd/packages/single-art-history-ootd-studies/images/04-romantic-cloud-coat/image.w400.webp" width="100%" alt="A Romantic painted wanderer wearing technical outerwear in a storm-lit nine-panel outfit grid."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-painting-character-ootd%2Fsingle-art-history-ootd-studies%2F04-romantic-cloud-coat">Romantic Cloud Coat</a></b>
-
-</td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [PCB Board Layout](https://gpt-image-2-hub-seven.vercel.app/#t-pcb-board-layout)
@@ -4691,6 +3757,13 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 <table>
 <tr>
+<td width="33%" valign="top" align="center">
+
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-pcb-board-layout%2Fsingle-pcb-board-layout-studies%2Foverview-plate"><img src="./works/topics/pcb-board-layout/packages/single-pcb-board-layout-studies/images/overview-plate/image.w400.webp" width="100%" alt="Overview Plate for PCB Board Layout."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-pcb-board-layout%2Fsingle-pcb-board-layout-studies%2Foverview-plate">Overview Plate</a></b>
+
+</td>
 <td width="33%" valign="top" align="center">
 
 <a href="https://gpt-image-2-hub-seven.vercel.app/#m-pcb-board-layout%2Fsingle-pcb-board-layout-studies%2Fcutaway-panel"><img src="./works/topics/pcb-board-layout/packages/single-pcb-board-layout-studies/images/cutaway-panel/image.w400.webp" width="100%" alt="Cutaway Panel for PCB Board Layout."/></a>
@@ -4705,6 +3778,8 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-pcb-board-layout%2Fsingle-pcb-board-layout-studies%2Fprocess-sequence">Process Sequence</a></b>
 
 </td>
+</tr>
+<tr>
 <td width="33%" valign="top" align="center">
 
 <a href="https://gpt-image-2-hub-seven.vercel.app/#m-pcb-board-layout%2Fsingle-pcb-board-layout-studies%2Fannotation-cluster"><img src="./works/topics/pcb-board-layout/packages/single-pcb-board-layout-studies/images/annotation-cluster/image.w400.webp" width="100%" alt="Annotation Cluster for PCB Board Layout."/></a>
@@ -4712,8 +3787,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-pcb-board-layout%2Fsingle-pcb-board-layout-studies%2Fannotation-cluster">Annotation Cluster</a></b>
 
 </td>
-</tr>
-<tr>
 <td width="33%" valign="top" align="center">
 
 <a href="https://gpt-image-2-hub-seven.vercel.app/#m-pcb-board-layout%2Fsingle-pcb-board-layout-studies%2Fcomparison-board"><img src="./works/topics/pcb-board-layout/packages/single-pcb-board-layout-studies/images/comparison-board/image.w400.webp" width="100%" alt="Comparison Board for PCB Board Layout."/></a>
@@ -4728,24 +3801,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-pcb-board-layout%2Fsingle-pcb-board-layout-studies%2Fmaterial-callout">材质标注</a></b>
 
 </td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-pcb-board-layout%2Fsingle-pcb-board-layout-studies%2Fexploded-system"><img src="./works/topics/pcb-board-layout/packages/single-pcb-board-layout-studies/images/exploded-system/image.w400.webp" width="100%" alt="Exploded System for PCB Board Layout."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-pcb-board-layout%2Fsingle-pcb-board-layout-studies%2Fexploded-system">Exploded System</a></b>
-
-</td>
-</tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-pcb-board-layout%2Fsingle-pcb-board-layout-studies%2Ffinal-plate"><img src="./works/topics/pcb-board-layout/packages/single-pcb-board-layout-studies/images/final-plate/image.w400.webp" width="100%" alt="Final Plate for PCB Board Layout."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-pcb-board-layout%2Fsingle-pcb-board-layout-studies%2Ffinal-plate">Final Plate</a></b>
-
-</td>
-<td width="33%"></td>
-<td width="33%"></td>
 </tr>
 </table>
 
@@ -4755,6 +3810,13 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 <table>
 <tr>
+<td width="33%" valign="top" align="center">
+
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-precision-mechanical-exploded-view%2Fsingle-precision-mechanical-exploded-view-studies%2Foverview-plate"><img src="./works/topics/precision-mechanical-exploded-view/packages/single-precision-mechanical-exploded-view-studies/images/overview-plate/image.w400.webp" width="100%" alt="Overview Plate for Precision Mechanical Exploded View."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-precision-mechanical-exploded-view%2Fsingle-precision-mechanical-exploded-view-studies%2Foverview-plate">Overview Plate</a></b>
+
+</td>
 <td width="33%" valign="top" align="center">
 
 <a href="https://gpt-image-2-hub-seven.vercel.app/#m-precision-mechanical-exploded-view%2Fsingle-precision-mechanical-exploded-view-studies%2Fcutaway-panel"><img src="./works/topics/precision-mechanical-exploded-view/packages/single-precision-mechanical-exploded-view-studies/images/cutaway-panel/image.w400.webp" width="100%" alt="Cutaway Panel for Precision Mechanical Exploded View."/></a>
@@ -4769,6 +3831,8 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-precision-mechanical-exploded-view%2Fsingle-precision-mechanical-exploded-view-studies%2Fprocess-sequence">Process Sequence</a></b>
 
 </td>
+</tr>
+<tr>
 <td width="33%" valign="top" align="center">
 
 <a href="https://gpt-image-2-hub-seven.vercel.app/#m-precision-mechanical-exploded-view%2Fsingle-precision-mechanical-exploded-view-studies%2Fannotation-cluster"><img src="./works/topics/precision-mechanical-exploded-view/packages/single-precision-mechanical-exploded-view-studies/images/annotation-cluster/image.w400.webp" width="100%" alt="Annotation Cluster for Precision Mechanical Exploded View."/></a>
@@ -4776,8 +3840,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-precision-mechanical-exploded-view%2Fsingle-precision-mechanical-exploded-view-studies%2Fannotation-cluster">Annotation Cluster</a></b>
 
 </td>
-</tr>
-<tr>
 <td width="33%" valign="top" align="center">
 
 <a href="https://gpt-image-2-hub-seven.vercel.app/#m-precision-mechanical-exploded-view%2Fsingle-precision-mechanical-exploded-view-studies%2Fcomparison-board"><img src="./works/topics/precision-mechanical-exploded-view/packages/single-precision-mechanical-exploded-view-studies/images/comparison-board/image.w400.webp" width="100%" alt="Comparison Board for Precision Mechanical Exploded View."/></a>
@@ -4792,24 +3854,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-precision-mechanical-exploded-view%2Fsingle-precision-mechanical-exploded-view-studies%2Fmaterial-callout">材质标注</a></b>
 
 </td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-precision-mechanical-exploded-view%2Fsingle-precision-mechanical-exploded-view-studies%2Fexploded-system"><img src="./works/topics/precision-mechanical-exploded-view/packages/single-precision-mechanical-exploded-view-studies/images/exploded-system/image.w400.webp" width="100%" alt="Exploded System for Precision Mechanical Exploded View."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-precision-mechanical-exploded-view%2Fsingle-precision-mechanical-exploded-view-studies%2Fexploded-system">Exploded System</a></b>
-
-</td>
-</tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-precision-mechanical-exploded-view%2Fsingle-precision-mechanical-exploded-view-studies%2Ffinal-plate"><img src="./works/topics/precision-mechanical-exploded-view/packages/single-precision-mechanical-exploded-view-studies/images/final-plate/image.w400.webp" width="100%" alt="Final Plate for Precision Mechanical Exploded View."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-precision-mechanical-exploded-view%2Fsingle-precision-mechanical-exploded-view-studies%2Ffinal-plate">Final Plate</a></b>
-
-</td>
-<td width="33%"></td>
-<td width="33%"></td>
 </tr>
 </table>
 
@@ -4864,23 +3908,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-product-packaging-studio-mockup%2Fsingle-product-packaging-studio-mockup-studies%2Fsystem-board"><img src="./works/topics/product-packaging-studio-mockup/packages/single-product-packaging-studio-mockup-studies/images/system-board/image.w400.webp" width="100%" alt="System Board for Product Packaging Studio Mockup."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-product-packaging-studio-mockup%2Fsingle-product-packaging-studio-mockup-studies%2Fsystem-board">System Board</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-product-packaging-studio-mockup%2Fsingle-product-packaging-studio-mockup-studies%2Fsignature-mockup"><img src="./works/topics/product-packaging-studio-mockup/packages/single-product-packaging-studio-mockup-studies/images/signature-mockup/image.w400.webp" width="100%" alt="Signature Mockup for Product Packaging Studio Mockup."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-product-packaging-studio-mockup%2Fsingle-product-packaging-studio-mockup-studies%2Fsignature-mockup">Signature Mockup</a></b>
-
-</td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [Propaganda Poster History](https://gpt-image-2-hub-seven.vercel.app/#t-propaganda-poster-history)
@@ -4933,23 +3960,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-propaganda-poster-history%2Fsingle-poster-history-studies%2F06-public-health-modernist">Public Health Modernist</a></b>
 
 </td>
-</tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-propaganda-poster-history%2Fsingle-poster-history-studies%2F07-woodcut-crowd-march"><img src="./works/topics/propaganda-poster-history/packages/single-poster-history-studies/images/07-woodcut-crowd-march/image.w400.webp" width="100%" alt="A rough red-and-black woodcut poster study showing anonymous marchers with blank banners."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-propaganda-poster-history%2Fsingle-poster-history-studies%2F07-woodcut-crowd-march">Woodcut Crowd March</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-propaganda-poster-history%2Fsingle-poster-history-studies%2F08-civil-defense-broadcast"><img src="./works/topics/propaganda-poster-history/packages/single-poster-history-studies/images/08-civil-defense-broadcast/image.w400.webp" width="100%" alt="A mid-century civil-defense style poster study with radio waves, shelter icons, and unreadable instruction bands."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-propaganda-poster-history%2Fsingle-poster-history-studies%2F08-civil-defense-broadcast">Civil Defense Broadcast</a></b>
-
-</td>
-<td width="33%"></td>
 </tr>
 </table>
 
@@ -5004,23 +4014,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-pseudo-real-documents%2Fsingle-document-specimens%2Fhotel-invoice-folio"><img src="./works/topics/pseudo-real-documents/packages/single-document-specimens/images/hotel-invoice-folio/image.w400.webp" width="100%" alt="A fictional ATLAS HOTEL guest folio specimen with a zero total, red specimen stamp, and crisp invoice table."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-pseudo-real-documents%2Fsingle-document-specimens%2Fhotel-invoice-folio">Hotel Invoice Folio</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-pseudo-real-documents%2Fsingle-document-specimens%2Ftrain-seat-reservation"><img src="./works/topics/pseudo-real-documents/packages/single-document-specimens/images/train-seat-reservation/image.w400.webp" width="100%" alt="A fictional rail seat reservation card clipped to a train tray, showing TRAIN T26, CAR 05, SEAT 08A, and SAMPLE ONLY."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-pseudo-real-documents%2Fsingle-document-specimens%2Ftrain-seat-reservation">Train Seat Reservation</a></b>
-
-</td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [Risograph Misprint](https://gpt-image-2-hub-seven.vercel.app/#t-risograph-misprint)
@@ -5073,17 +4066,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-risograph-misprint%2Fsingle-riso-print-studies%2Faquarium-flyer-misprint">Aquarium Flyer Misprint</a></b>
 
 </td>
-</tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-risograph-misprint%2Fsingle-riso-print-studies%2Fstreet-cat-comic-page"><img src="./works/topics/risograph-misprint/packages/single-riso-print-studies/images/street-cat-comic-page/image.w400.webp" width="100%" alt="A wordless six-panel Risograph comic page about a street cat with visible ink misregistration."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-risograph-misprint%2Fsingle-riso-print-studies%2Fstreet-cat-comic-page">Street Cat Comic Page</a></b>
-
-</td>
-<td width="33%"></td>
-<td width="33%"></td>
 </tr>
 </table>
 
@@ -5138,23 +4120,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-scientific-paper-figure%2Fsingle-scientific-paper-figure-studies%2Fexploded-system"><img src="./works/topics/scientific-paper-figure/packages/single-scientific-paper-figure-studies/images/exploded-system/image.w400.webp" width="100%" alt="Exploded System for Scientific Paper Figure."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-scientific-paper-figure%2Fsingle-scientific-paper-figure-studies%2Fexploded-system">Exploded System</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-scientific-paper-figure%2Fsingle-scientific-paper-figure-studies%2Ffinal-plate"><img src="./works/topics/scientific-paper-figure/packages/single-scientific-paper-figure-studies/images/final-plate/image.w400.webp" width="100%" alt="Final Plate for Scientific Paper Figure."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-scientific-paper-figure%2Fsingle-scientific-paper-figure-studies%2Ffinal-plate">Final Plate</a></b>
-
-</td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [SEM Microscopy](https://gpt-image-2-hub-seven.vercel.app/#t-sem-microscopy)
@@ -5207,23 +4172,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-sem-microscopy%2Fsingle-sem-specimen-plates%2Fdiatom-glass-lattice">Diatom Glass Lattice</a></b>
 
 </td>
-</tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-sem-microscopy%2Fsingle-sem-specimen-plates%2Fgecko-toe-setae"><img src="./works/topics/sem-microscopy/packages/single-sem-specimen-plates/images/gecko-toe-setae/image.w400.webp" width="100%" alt="A grayscale SEM-style view of gecko toe setae branching into fine tips."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-sem-microscopy%2Fsingle-sem-specimen-plates%2Fgecko-toe-setae">Gecko Toe Setae</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-sem-microscopy%2Fsingle-sem-specimen-plates%2Fmicrochip-fracture"><img src="./works/topics/sem-microscopy/packages/single-sem-specimen-plates/images/microchip-fracture/image.w400.webp" width="100%" alt="A SEM-style fractured microchip cross-section with layered interconnects."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-sem-microscopy%2Fsingle-sem-specimen-plates%2Fmicrochip-fracture">Microchip Fracture</a></b>
-
-</td>
-<td width="33%"></td>
 </tr>
 </table>
 
@@ -5308,17 +4256,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-sixteen-reference-fusion%2Fseries-reference-fusion-atlas%2F04-room-memory-fusion"><img src="./works/topics/sixteen-reference-fusion/packages/series-reference-fusion-atlas/images/04-room-memory-fusion/image.w400.webp" width="100%" alt="A canal-side memory room fusing coat, scarf, compass, cat, bicycle, and bridge cues."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-sixteen-reference-fusion%2Fseries-reference-fusion-atlas%2F04-room-memory-fusion">Room Memory Fusion</a></b>
-
-</td>
-<td width="33%"></td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [Sketch to Photoreal Render](https://gpt-image-2-hub-seven.vercel.app/#t-sketch-to-photoreal-render)
@@ -5371,17 +4308,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-sketch-to-photoreal-render%2Fseries-facade-preservation%2F04-interior-courtyard-render">Interior Courtyard Render</a></b>
 
 </td>
-</tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-sketch-to-photoreal-render%2Fsingle-render-studies%2Falley-cafe-facade"><img src="./works/topics/sketch-to-photoreal-render/packages/single-render-studies/images/alley-cafe-facade/image.w400.webp" width="100%" alt="A narrow cafe storefront sketch becomes a photoreal alley facade with matching door and windows."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-sketch-to-photoreal-render%2Fsingle-render-studies%2Falley-cafe-facade">Alley Cafe Facade</a></b>
-
-</td>
-<td width="33%"></td>
-<td width="33%"></td>
 </tr>
 </table>
 
@@ -5496,23 +4422,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-symmetric-hdr-architecture%2Fsingle-symmetric-hdr-architecture-studies%2Fatmospheric-view"><img src="./works/topics/symmetric-hdr-architecture/packages/single-symmetric-hdr-architecture-studies/images/atmospheric-view/image.w400.webp" width="100%" alt="Atmospheric View for Symmetric HDR Architecture."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-symmetric-hdr-architecture%2Fsingle-symmetric-hdr-architecture-studies%2Fatmospheric-view">Atmospheric View</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-symmetric-hdr-architecture%2Fsingle-symmetric-hdr-architecture-studies%2Fsignature-frame"><img src="./works/topics/symmetric-hdr-architecture/packages/single-symmetric-hdr-architecture-studies/images/signature-frame/image.w400.webp" width="100%" alt="Signature Frame for Symmetric HDR Architecture."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-symmetric-hdr-architecture%2Fsingle-symmetric-hdr-architecture-studies%2Fsignature-frame">Signature Frame</a></b>
-
-</td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [Tarot Card Deck](https://gpt-image-2-hub-seven.vercel.app/#t-tarot-card-deck)
@@ -5546,6 +4455,13 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <tr>
 <td width="33%" valign="top" align="center">
 
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-tarot-card-deck%2Fsingle-tarot-card-deck-studies%2Fblack-brush-choir"><img src="./works/topics/tarot-card-deck/packages/single-tarot-card-deck-studies/images/black-brush-choir/image.w400.webp" width="100%" alt="Black Brush Choir for Tarot Card Deck."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-tarot-card-deck%2Fsingle-tarot-card-deck-studies%2Fblack-brush-choir">Black Brush Choir</a></b>
+
+</td>
+<td width="33%" valign="top" align="center">
+
 <a href="https://gpt-image-2-hub-seven.vercel.app/#m-tarot-card-deck%2Fsingle-tarot-card-deck-studies%2Fstudio-floor-afterimage"><img src="./works/topics/tarot-card-deck/packages/single-tarot-card-deck-studies/images/studio-floor-afterimage/image.w400.webp" width="100%" alt="Studio Floor Afterimage for Tarot Card Deck."/></a>
 
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-tarot-card-deck%2Fsingle-tarot-card-deck-studies%2Fstudio-floor-afterimage">Studio Floor Afterimage</a></b>
@@ -5558,24 +4474,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-tarot-card-deck%2Fsingle-tarot-card-deck-studies%2Fimpasto-weather">厚涂天气</a></b>
 
 </td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-tarot-card-deck%2Fsingle-tarot-card-deck-studies%2Fgesture-architecture"><img src="./works/topics/tarot-card-deck/packages/single-tarot-card-deck-studies/images/gesture-architecture/image.w400.webp" width="100%" alt="Gesture Architecture for Tarot Card Deck."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-tarot-card-deck%2Fsingle-tarot-card-deck-studies%2Fgesture-architecture">Gesture Architecture</a></b>
-
-</td>
-</tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-tarot-card-deck%2Fsingle-tarot-card-deck-studies%2Fmuseum-wall-hang"><img src="./works/topics/tarot-card-deck/packages/single-tarot-card-deck-studies/images/museum-wall-hang/image.w400.webp" width="100%" alt="Museum Wall Hang for Tarot Card Deck."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-tarot-card-deck%2Fsingle-tarot-card-deck-studies%2Fmuseum-wall-hang">Museum Wall Hang</a></b>
-
-</td>
-<td width="33%"></td>
-<td width="33%"></td>
 </tr>
 </table>
 
@@ -5630,23 +4528,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-tattoo-flash-sheet%2Fsingle-parlor-flash-studies%2F07-pet-memorial-charms"><img src="./works/topics/tattoo-flash-sheet/packages/single-parlor-flash-studies/images/07-pet-memorial-charms/image.w400.webp" width="100%" alt="A calm tattoo flash sheet of paw prints, pet cameos, toys, and other memorial-themed charms."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-tattoo-flash-sheet%2Fsingle-parlor-flash-studies%2F07-pet-memorial-charms">Pet Memorial Charms</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-tattoo-flash-sheet%2Fsingle-parlor-flash-studies%2F08-city-pop-flash-board"><img src="./works/topics/tattoo-flash-sheet/packages/single-parlor-flash-studies/images/08-city-pop-flash-board/image.w400.webp" width="100%" alt="A modern white tattoo flash sheet of sneakers, bodega cats, subway tokens, and other city-pop motifs."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-tattoo-flash-sheet%2Fsingle-parlor-flash-studies%2F08-city-pop-flash-board">City Pop Flash Board</a></b>
-
-</td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [Telescope Nebula Galaxy](https://gpt-image-2-hub-seven.vercel.app/#t-telescope-nebula-galaxy)
@@ -5700,23 +4581,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-telescope-nebula-galaxy%2Fsingle-telescope-nebula-galaxy-studies%2Fatmospheric-view"><img src="./works/topics/telescope-nebula-galaxy/packages/single-telescope-nebula-galaxy-studies/images/atmospheric-view/image.w400.webp" width="100%" alt="Atmospheric View for Telescope Nebula Galaxy."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-telescope-nebula-galaxy%2Fsingle-telescope-nebula-galaxy-studies%2Fatmospheric-view">Atmospheric View</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-telescope-nebula-galaxy%2Fsingle-telescope-nebula-galaxy-studies%2Fsignature-frame"><img src="./works/topics/telescope-nebula-galaxy/packages/single-telescope-nebula-galaxy-studies/images/signature-frame/image.w400.webp" width="100%" alt="Signature Frame for Telescope Nebula Galaxy."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-telescope-nebula-galaxy%2Fsingle-telescope-nebula-galaxy-studies%2Fsignature-frame">Signature Frame</a></b>
-
-</td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [Tessellation Pattern](https://gpt-image-2-hub-seven.vercel.app/#t-tessellation-pattern)
@@ -5746,17 +4610,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-tessellation-pattern%2Fseries-living-tiles%2F03-moth-lattice">Moth Lattice</a></b>
 
 </td>
-</tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-tessellation-pattern%2Fseries-living-tiles%2F04-city-lattice"><img src="./works/topics/tessellation-pattern/packages/series-living-tiles/images/04-city-lattice/image.w400.webp" width="100%" alt="A miniature city map variation of the same seamless tessellation."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-tessellation-pattern%2Fseries-living-tiles%2F04-city-lattice">City Lattice</a></b>
-
-</td>
-<td width="33%"></td>
-<td width="33%"></td>
 </tr>
 </table>
 
@@ -5811,23 +4664,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-thematic-subway-map%2Fsingle-knowledge-transit-maps%2F07-world-cuisine-lines"><img src="./works/topics/thematic-subway-map/packages/single-knowledge-transit-maps/images/07-world-cuisine-lines/image.w400.webp" width="100%" alt="A food-culture subway map linking cuisine families through colorful ingredient and technique route lines."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-thematic-subway-map%2Fsingle-knowledge-transit-maps%2F07-world-cuisine-lines">World Cuisine Lines</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-thematic-subway-map%2Fsingle-knowledge-transit-maps%2F08-startup-growth-transit"><img src="./works/topics/thematic-subway-map/packages/single-knowledge-transit-maps/images/08-startup-growth-transit/image.w400.webp" width="100%" alt="A startup growth subway map with product, research, engineering, fundraising, and retention lines meeting at decision hubs."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-thematic-subway-map%2Fsingle-knowledge-transit-maps%2F08-startup-growth-transit">Startup Growth Transit</a></b>
-
-</td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [Thinking Mode](https://gpt-image-2-hub-seven.vercel.app/#t-thinking-mode)
@@ -5881,17 +4717,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-thinking-mode%2Fseries-market-reasoning%2F04-sentiment-newsroom"><img src="./works/topics/thinking-mode/packages/series-market-reasoning/images/04-sentiment-newsroom/image.w400.webp" width="100%" alt="An editorial newsroom map showing sentiment signals moving through trend mountains."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-thinking-mode%2Fseries-market-reasoning%2F04-sentiment-newsroom">Sentiment Newsroom</a></b>
-
-</td>
-<td width="33%"></td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [Tilt-Shift Miniature World](https://gpt-image-2-hub-seven.vercel.app/#t-tilt-shift-miniature-world)
@@ -5919,6 +4744,29 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <a href="https://gpt-image-2-hub-seven.vercel.app/#m-tilt-shift-miniature-world%2Fsingle-tilt-shift-miniature-world-studies%2Fworkshop-interior"><img src="./works/topics/tilt-shift-miniature-world/packages/single-tilt-shift-miniature-world-studies/images/workshop-interior/image.w400.webp" width="100%" alt="Workshop Interior for Tilt-Shift Miniature World."/></a>
 
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-tilt-shift-miniature-world%2Fsingle-tilt-shift-miniature-world-studies%2Fworkshop-interior">Workshop Interior</a></b>
+
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top" align="center">
+
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-tilt-shift-miniature-world%2Fsingle-tilt-shift-miniature-world-studies%2Ftransit-snapshot"><img src="./works/topics/tilt-shift-miniature-world/packages/single-tilt-shift-miniature-world-studies/images/transit-snapshot/image.w400.webp" width="100%" alt="Transit Snapshot for Tilt-Shift Miniature World."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-tilt-shift-miniature-world%2Fsingle-tilt-shift-miniature-world-studies%2Ftransit-snapshot">Transit Snapshot</a></b>
+
+</td>
+<td width="33%" valign="top" align="center">
+
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-tilt-shift-miniature-world%2Fsingle-tilt-shift-miniature-world-studies%2Fnight-window"><img src="./works/topics/tilt-shift-miniature-world/packages/single-tilt-shift-miniature-world-studies/images/night-window/image.w400.webp" width="100%" alt="Night Window for Tilt-Shift Miniature World."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-tilt-shift-miniature-world%2Fsingle-tilt-shift-miniature-world-studies%2Fnight-window">Night Window</a></b>
+
+</td>
+<td width="33%" valign="top" align="center">
+
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-tilt-shift-miniature-world%2Fsingle-tilt-shift-miniature-world-studies%2Fmarket-table"><img src="./works/topics/tilt-shift-miniature-world/packages/single-tilt-shift-miniature-world-studies/images/market-table/image.w400.webp" width="100%" alt="Market Table for Tilt-Shift Miniature World."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-tilt-shift-miniature-world%2Fsingle-tilt-shift-miniature-world-studies%2Fmarket-table">Market Table</a></b>
 
 </td>
 </tr>
@@ -5975,22 +4823,111 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
+</table>
+
+## [Type Specimen Book](https://gpt-image-2-hub-seven.vercel.app/#t-type-specimen-book)
+
+> A Prompt Atlas theme for Type Specimen Book, testing text-rendering with GPT Image 2.
+
+<table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-time-space-contrast%2Fseries-scholar-tech-desk%2F04-handheld-battle-game"><img src="./works/topics/time-space-contrast/packages/series-scholar-tech-desk/images/04-handheld-battle-game/image.w400.webp" width="100%" alt="The same historical scholar concentrates on a handheld game console at an old wooden writing desk."/></a>
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-type-specimen-book%2Fsingle-type-specimen-book-studies%2Fhero-spread"><img src="./works/topics/type-specimen-book/packages/single-type-specimen-book-studies/images/hero-spread/image.w400.webp" width="100%" alt="Hero Spread for Type Specimen Book."/></a>
 
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-time-space-contrast%2Fseries-scholar-tech-desk%2F04-handheld-battle-game">Handheld Battle Game</a></b>
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-type-specimen-book%2Fsingle-type-specimen-book-studies%2Fhero-spread">Hero Spread</a></b>
 
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-time-space-contrast%2Fsingle-historical-tech-collisions%2F04-republican-laptop-studio"><img src="./works/topics/time-space-contrast/packages/single-historical-tech-collisions/images/04-republican-laptop-studio/image.w400.webp" width="100%" alt="A 1930s Shanghai-style photographer studies glass negatives beside a glowing modern laptop."/></a>
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-type-specimen-book%2Fsingle-type-specimen-book-studies%2Fvariant-grid"><img src="./works/topics/type-specimen-book/packages/single-type-specimen-book-studies/images/variant-grid/image.w400.webp" width="100%" alt="Variant Grid for Type Specimen Book."/></a>
 
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-time-space-contrast%2Fsingle-historical-tech-collisions%2F04-republican-laptop-studio">Republican Laptop Studio</a></b>
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-type-specimen-book%2Fsingle-type-specimen-book-studies%2Fvariant-grid">Variant Grid</a></b>
 
 </td>
-<td width="33%"></td>
+<td width="33%" valign="top" align="center">
+
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-type-specimen-book%2Fsingle-type-specimen-book-studies%2Fdesk-review"><img src="./works/topics/type-specimen-book/packages/single-type-specimen-book-studies/images/desk-review/image.w400.webp" width="100%" alt="Desk Review for Type Specimen Book."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-type-specimen-book%2Fsingle-type-specimen-book-studies%2Fdesk-review">Desk Review</a></b>
+
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top" align="center">
+
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-type-specimen-book%2Fsingle-type-specimen-book-studies%2Fmaterial-closeup"><img src="./works/topics/type-specimen-book/packages/single-type-specimen-book-studies/images/material-closeup/image.w400.webp" width="100%" alt="Material Closeup for Type Specimen Book."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-type-specimen-book%2Fsingle-type-specimen-book-studies%2Fmaterial-closeup">Material Closeup</a></b>
+
+</td>
+<td width="33%" valign="top" align="center">
+
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-type-specimen-book%2Fsingle-type-specimen-book-studies%2Farchive-sheet"><img src="./works/topics/type-specimen-book/packages/single-type-specimen-book-studies/images/archive-sheet/image.w400.webp" width="100%" alt="Archive Sheet for Type Specimen Book."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-type-specimen-book%2Fsingle-type-specimen-book-studies%2Farchive-sheet">Archive Sheet</a></b>
+
+</td>
+<td width="33%" valign="top" align="center">
+
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-type-specimen-book%2Fsingle-type-specimen-book-studies%2Fretail-presentation"><img src="./works/topics/type-specimen-book/packages/single-type-specimen-book-studies/images/retail-presentation/image.w400.webp" width="100%" alt="陈列展示 for Type Specimen Book."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-type-specimen-book%2Fsingle-type-specimen-book-studies%2Fretail-presentation">陈列展示</a></b>
+
+</td>
+</tr>
+</table>
+
+## [UI Screenshot Prototype](https://gpt-image-2-hub-seven.vercel.app/#t-ui-screenshot-prototype)
+
+> A Prompt Atlas theme for UI Screenshot Prototype, testing structured-layout, style-transfer with GPT Image 2.
+
+<table>
+<tr>
+<td width="33%" valign="top" align="center">
+
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-ui-screenshot-prototype%2Fsingle-ui-screenshot-prototype-studies%2Fhero-spread"><img src="./works/topics/ui-screenshot-prototype/packages/single-ui-screenshot-prototype-studies/images/hero-spread/image.w400.webp" width="100%" alt="Hero Spread for UI Screenshot Prototype."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-ui-screenshot-prototype%2Fsingle-ui-screenshot-prototype-studies%2Fhero-spread">Hero Spread</a></b>
+
+</td>
+<td width="33%" valign="top" align="center">
+
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-ui-screenshot-prototype%2Fsingle-ui-screenshot-prototype-studies%2Fvariant-grid"><img src="./works/topics/ui-screenshot-prototype/packages/single-ui-screenshot-prototype-studies/images/variant-grid/image.w400.webp" width="100%" alt="Variant Grid for UI Screenshot Prototype."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-ui-screenshot-prototype%2Fsingle-ui-screenshot-prototype-studies%2Fvariant-grid">Variant Grid</a></b>
+
+</td>
+<td width="33%" valign="top" align="center">
+
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-ui-screenshot-prototype%2Fsingle-ui-screenshot-prototype-studies%2Fdesk-review"><img src="./works/topics/ui-screenshot-prototype/packages/single-ui-screenshot-prototype-studies/images/desk-review/image.w400.webp" width="100%" alt="Desk Review for UI Screenshot Prototype."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-ui-screenshot-prototype%2Fsingle-ui-screenshot-prototype-studies%2Fdesk-review">Desk Review</a></b>
+
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top" align="center">
+
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-ui-screenshot-prototype%2Fsingle-ui-screenshot-prototype-studies%2Fmaterial-closeup"><img src="./works/topics/ui-screenshot-prototype/packages/single-ui-screenshot-prototype-studies/images/material-closeup/image.w400.webp" width="100%" alt="Material Closeup for UI Screenshot Prototype."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-ui-screenshot-prototype%2Fsingle-ui-screenshot-prototype-studies%2Fmaterial-closeup">Material Closeup</a></b>
+
+</td>
+<td width="33%" valign="top" align="center">
+
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-ui-screenshot-prototype%2Fsingle-ui-screenshot-prototype-studies%2Farchive-sheet"><img src="./works/topics/ui-screenshot-prototype/packages/single-ui-screenshot-prototype-studies/images/archive-sheet/image.w400.webp" width="100%" alt="Archive Sheet for UI Screenshot Prototype."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-ui-screenshot-prototype%2Fsingle-ui-screenshot-prototype-studies%2Farchive-sheet">Archive Sheet</a></b>
+
+</td>
+<td width="33%" valign="top" align="center">
+
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-ui-screenshot-prototype%2Fsingle-ui-screenshot-prototype-studies%2Fretail-presentation"><img src="./works/topics/ui-screenshot-prototype/packages/single-ui-screenshot-prototype-studies/images/retail-presentation/image.w400.webp" width="100%" alt="陈列展示 for UI Screenshot Prototype."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-ui-screenshot-prototype%2Fsingle-ui-screenshot-prototype-studies%2Fretail-presentation">陈列展示</a></b>
+
+</td>
 </tr>
 </table>
 
@@ -6019,6 +4956,59 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <a href="https://gpt-image-2-hub-seven.vercel.app/#m-ultra-long-scroll-painting%2Fsingle-scroll-studies%2Flifetime-river-scroll"><img src="./works/topics/ultra-long-scroll-painting/packages/single-scroll-studies/images/lifetime-river-scroll/image.w400.webp" width="100%" alt="A vertical river scroll where scenes from one life connect along the same river."/></a>
 
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-ultra-long-scroll-painting%2Fsingle-scroll-studies%2Flifetime-river-scroll">Lifetime River Scroll</a></b>
+
+</td>
+</tr>
+</table>
+
+## [Underwater Bubble Light](https://gpt-image-2-hub-seven.vercel.app/#t-underwater-bubble-light)
+
+> A Prompt Atlas theme for Underwater Bubble Light, testing photorealism, physics-materials with GPT Image 2.
+
+<table>
+<tr>
+<td width="33%" valign="top" align="center">
+
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-underwater-bubble-light%2Fsingle-underwater-bubble-light-studies%2Fhero-shot"><img src="./works/topics/underwater-bubble-light/packages/single-underwater-bubble-light-studies/images/hero-shot/image.w400.webp" width="100%" alt="Hero Shot for Underwater Bubble Light."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-underwater-bubble-light%2Fsingle-underwater-bubble-light-studies%2Fhero-shot">Hero Shot</a></b>
+
+</td>
+<td width="33%" valign="top" align="center">
+
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-underwater-bubble-light%2Fsingle-underwater-bubble-light-studies%2Fmacro-study"><img src="./works/topics/underwater-bubble-light/packages/single-underwater-bubble-light-studies/images/macro-study/image.w400.webp" width="100%" alt="Macro Study for Underwater Bubble Light."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-underwater-bubble-light%2Fsingle-underwater-bubble-light-studies%2Fmacro-study">Macro Study</a></b>
+
+</td>
+<td width="33%" valign="top" align="center">
+
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-underwater-bubble-light%2Fsingle-underwater-bubble-light-studies%2Fside-light-study"><img src="./works/topics/underwater-bubble-light/packages/single-underwater-bubble-light-studies/images/side-light-study/image.w400.webp" width="100%" alt="Side Light Study for Underwater Bubble Light."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-underwater-bubble-light%2Fsingle-underwater-bubble-light-studies%2Fside-light-study">Side Light Study</a></b>
+
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top" align="center">
+
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-underwater-bubble-light%2Fsingle-underwater-bubble-light-studies%2Fmotion-moment"><img src="./works/topics/underwater-bubble-light/packages/single-underwater-bubble-light-studies/images/motion-moment/image.w400.webp" width="100%" alt="Motion Moment for Underwater Bubble Light."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-underwater-bubble-light%2Fsingle-underwater-bubble-light-studies%2Fmotion-moment">Motion Moment</a></b>
+
+</td>
+<td width="33%" valign="top" align="center">
+
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-underwater-bubble-light%2Fsingle-underwater-bubble-light-studies%2Flow-light-atlas"><img src="./works/topics/underwater-bubble-light/packages/single-underwater-bubble-light-studies/images/low-light-atlas/image.w400.webp" width="100%" alt="Low-Light Atlas for Underwater Bubble Light."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-underwater-bubble-light%2Fsingle-underwater-bubble-light-studies%2Flow-light-atlas">Low-Light Atlas</a></b>
+
+</td>
+<td width="33%" valign="top" align="center">
+
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-underwater-bubble-light%2Fsingle-underwater-bubble-light-studies%2Fspecimen-table"><img src="./works/topics/underwater-bubble-light/packages/single-underwater-bubble-light-studies/images/specimen-table/image.w400.webp" width="100%" alt="Specimen Table for Underwater Bubble Light."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-underwater-bubble-light%2Fsingle-underwater-bubble-light-studies%2Fspecimen-table">Specimen Table</a></b>
 
 </td>
 </tr>
@@ -6105,23 +5095,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-virtual-try-on-identity-lock%2Fsingle-identity-lock-studies%2Fheritage-textile-lock"><img src="./works/topics/virtual-try-on-identity-lock/packages/single-identity-lock-studies/images/heritage-textile-lock/image.w400.webp" width="100%" alt="A textile archive-style board with one model repeated in ornate woven garments."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-virtual-try-on-identity-lock%2Fsingle-identity-lock-studies%2Fheritage-textile-lock">Heritage Textile Lock</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-virtual-try-on-identity-lock%2Fsingle-identity-lock-studies%2Fstreetwear-layer-lock"><img src="./works/topics/virtual-try-on-identity-lock/packages/single-identity-lock-studies/images/streetwear-layer-lock/image.w400.webp" width="100%" alt="A streetwear contact sheet showing the same model in eight layered outfit variations."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-virtual-try-on-identity-lock%2Fsingle-identity-lock-studies%2Fstreetwear-layer-lock">Streetwear Layer Lock</a></b>
-
-</td>
-<td width="33%"></td>
-</tr>
 </table>
 
 ## [Wes Anderson Language](https://gpt-image-2-hub-seven.vercel.app/#t-wes-anderson-language)
@@ -6155,6 +5128,13 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <tr>
 <td width="33%" valign="top" align="center">
 
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-wes-anderson-language%2Fsingle-pastel-transfer-studies%2F02-spring-travel-platform"><img src="./works/topics/wes-anderson-language/packages/single-pastel-transfer-studies/images/02-spring-travel-platform/image.w400.webp" width="100%" alt="A pastel railway platform arranged symmetrically around a family holding parcels during a fictional travel rush."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-wes-anderson-language%2Fsingle-pastel-transfer-studies%2F02-spring-travel-platform">Spring Travel Platform</a></b>
+
+</td>
+<td width="33%" valign="top" align="center">
+
 <a href="https://gpt-image-2-hub-seven.vercel.app/#m-wes-anderson-language%2Fseries-axis-institutions%2F03-rail-ticket-hall"><img src="./works/topics/wes-anderson-language/packages/series-axis-institutions/images/03-rail-ticket-hall/image.w400.webp" width="100%" alt="A centered pastel rail ticket hall with the same clerk, mirrored luggage stacks, blank boards, and a small train doorway."/></a>
 
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-wes-anderson-language%2Fseries-axis-institutions%2F03-rail-ticket-hall">Rail Ticket Hall</a></b>
@@ -6167,24 +5147,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-wes-anderson-language%2Fsingle-pastel-transfer-studies%2F03-orbital-launch-breakfast">Orbital Launch Breakfast</a></b>
 
 </td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-wes-anderson-language%2Fseries-axis-institutions%2F04-launch-control"><img src="./works/topics/wes-anderson-language/packages/series-axis-institutions/images/04-launch-control/image.w400.webp" width="100%" alt="A pastel miniature launch-control room with a central clerk at analog consoles and a tiny centered rocket beyond the window."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-wes-anderson-language%2Fseries-axis-institutions%2F04-launch-control">Launch Control</a></b>
-
-</td>
-</tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-wes-anderson-language%2Fsingle-pastel-transfer-studies%2F04-archive-product-shelf"><img src="./works/topics/wes-anderson-language/packages/single-pastel-transfer-studies/images/04-archive-product-shelf/image.w400.webp" width="100%" alt="A symmetrical pastel archive shelf filled with fictional blank-label packages and a central shop archivist."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-wes-anderson-language%2Fsingle-pastel-transfer-studies%2F04-archive-product-shelf">Archive Product Shelf</a></b>
-
-</td>
-<td width="33%"></td>
-<td width="33%"></td>
 </tr>
 </table>
 
@@ -6239,22 +5201,58 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 
 </td>
 </tr>
+</table>
+
+## [X-Ray Art Photography](https://gpt-image-2-hub-seven.vercel.app/#t-xray-art-photography)
+
+> A Prompt Atlas theme for X-Ray Art Photography, testing photorealism, style-transfer, optical-illusion-geometry with GPT Image 2.
+
+<table>
 <tr>
 <td width="33%" valign="top" align="center">
 
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-world-knowledge-reconstruction%2Fsingle-knowledge-reconstructions%2Fparis-apartment-cutaway"><img src="./works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/paris-apartment-cutaway/image.w400.webp" width="100%" alt="A cutaway Parisian Haussmann apartment building with limestone facade, iron balconies, mansard roof, stacked rooms, and service stairs."/></a>
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-xray-art-photography%2Fsingle-xray-art-photography-studies%2Fhero-shot"><img src="./works/topics/xray-art-photography/packages/single-xray-art-photography-studies/images/hero-shot/image.w400.webp" width="100%" alt="Hero Shot for X-Ray Art Photography."/></a>
 
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-world-knowledge-reconstruction%2Fsingle-knowledge-reconstructions%2Fparis-apartment-cutaway">Paris Apartment Cutaway</a></b>
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-xray-art-photography%2Fsingle-xray-art-photography-studies%2Fhero-shot">Hero Shot</a></b>
 
 </td>
 <td width="33%" valign="top" align="center">
 
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-world-knowledge-reconstruction%2Fsingle-knowledge-reconstructions%2Fmuseum-egypt-gallery"><img src="./works/topics/world-knowledge-reconstruction/packages/single-knowledge-reconstructions/images/museum-egypt-gallery/image.w400.webp" width="100%" alt="A quiet ancient Egypt museum gallery with vitrines, stone artifacts, blank label panels, controlled spotlights, and clear visitor paths."/></a>
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-xray-art-photography%2Fsingle-xray-art-photography-studies%2Fmacro-study"><img src="./works/topics/xray-art-photography/packages/single-xray-art-photography-studies/images/macro-study/image.w400.webp" width="100%" alt="Macro Study for X-Ray Art Photography."/></a>
 
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-world-knowledge-reconstruction%2Fsingle-knowledge-reconstructions%2Fmuseum-egypt-gallery">Museum Egypt Gallery</a></b>
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-xray-art-photography%2Fsingle-xray-art-photography-studies%2Fmacro-study">Macro Study</a></b>
 
 </td>
-<td width="33%"></td>
+<td width="33%" valign="top" align="center">
+
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-xray-art-photography%2Fsingle-xray-art-photography-studies%2Fside-light-study"><img src="./works/topics/xray-art-photography/packages/single-xray-art-photography-studies/images/side-light-study/image.w400.webp" width="100%" alt="Side Light Study for X-Ray Art Photography."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-xray-art-photography%2Fsingle-xray-art-photography-studies%2Fside-light-study">Side Light Study</a></b>
+
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top" align="center">
+
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-xray-art-photography%2Fsingle-xray-art-photography-studies%2Fmotion-moment"><img src="./works/topics/xray-art-photography/packages/single-xray-art-photography-studies/images/motion-moment/image.w400.webp" width="100%" alt="Motion Moment for X-Ray Art Photography."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-xray-art-photography%2Fsingle-xray-art-photography-studies%2Fmotion-moment">Motion Moment</a></b>
+
+</td>
+<td width="33%" valign="top" align="center">
+
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-xray-art-photography%2Fsingle-xray-art-photography-studies%2Fspecimen-table"><img src="./works/topics/xray-art-photography/packages/single-xray-art-photography-studies/images/specimen-table/image.w400.webp" width="100%" alt="Specimen Table for X-Ray Art Photography."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-xray-art-photography%2Fsingle-xray-art-photography-studies%2Fspecimen-table">Specimen Table</a></b>
+
+</td>
+<td width="33%" valign="top" align="center">
+
+<a href="https://gpt-image-2-hub-seven.vercel.app/#m-xray-art-photography%2Fsingle-xray-art-photography-studies%2Fatmospheric-view"><img src="./works/topics/xray-art-photography/packages/single-xray-art-photography-studies/images/atmospheric-view/image.w400.webp" width="100%" alt="Atmospheric View for X-Ray Art Photography."/></a>
+
+<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-xray-art-photography%2Fsingle-xray-art-photography-studies%2Fatmospheric-view">Atmospheric View</a></b>
+
+</td>
 </tr>
 </table>
 
@@ -6308,23 +5306,6 @@ A curated atlas of GPT Image 2 generations. Every work ships with its full promp
 <b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-y2k-vaporwave-crt%2Fsingle-crt-era-studies%2Fliquid-metal-interface">Liquid Metal Interface</a></b>
 
 </td>
-</tr>
-<tr>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-y2k-vaporwave-crt%2Fsingle-crt-era-studies%2Fglitch-fashion-still"><img src="./works/topics/y2k-vaporwave-crt/packages/single-crt-era-studies/images/glitch-fashion-still/image.w400.webp" width="100%" alt="An anonymous model in iridescent Y2K fashion standing in a neon mall corridor with controlled CRT glitch slices."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-y2k-vaporwave-crt%2Fsingle-crt-era-studies%2Fglitch-fashion-still">Glitch Fashion Still</a></b>
-
-</td>
-<td width="33%" valign="top" align="center">
-
-<a href="https://gpt-image-2-hub-seven.vercel.app/#m-y2k-vaporwave-crt%2Fsingle-crt-era-studies%2Fafter-hours-mall-atrium"><img src="./works/topics/y2k-vaporwave-crt/packages/single-crt-era-studies/images/after-hours-mall-atrium/image.w400.webp" width="100%" alt="An empty neon mall atrium with chrome fountain spheres, palm reflections, and stacked CRT televisions glowing after hours."/></a>
-
-<b><a href="https://gpt-image-2-hub-seven.vercel.app/#m-y2k-vaporwave-crt%2Fsingle-crt-era-studies%2Fafter-hours-mall-atrium">After Hours Mall Atrium</a></b>
-
-</td>
-<td width="33%"></td>
 </tr>
 </table>
 

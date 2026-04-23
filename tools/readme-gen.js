@@ -7,6 +7,7 @@ const THIS_FILE = fileURLToPath(import.meta.url);
 const ROOT = path.resolve(path.dirname(THIS_FILE), '..');
 const INDEX_PATH = path.join(ROOT, 'works/index.json');
 const SITE_URL = 'https://gpt-image-2-hub-seven.vercel.app';
+const TIERS = [9, 6, 3];
 
 const STR = {
   en: {
@@ -58,6 +59,10 @@ function imageHref(imageId) {
   return `${SITE_URL}/#m-${encodeURIComponent(imageId)}`;
 }
 
+function tierLimit(count) {
+  return TIERS.find((n) => count >= n) ?? 0;
+}
+
 function render(lang) {
   const idx = readIndex();
   const s = STR[lang];
@@ -76,16 +81,20 @@ function render(lang) {
   lines.push(`${s.stats(idx.stats?.topic_count || 0, idx.stats?.package_count || 0, idx.stats?.image_count || 0)} · ${s.langToggle}`);
   lines.push('');
 
-  const topicsWithImages = topics.filter((t) => (imagesByTopic.get(t.id) || []).length > 0);
+  const topicsWithImages = topics.filter((t) => tierLimit((imagesByTopic.get(t.id) || []).length) > 0);
 
   for (const topic of topicsWithImages) {
     const topicTitle = localized(topic, 'title', lang);
     const topicDesc = localized(topic, 'description', lang);
-    const imgs = (imagesByTopic.get(topic.id) || []).slice().sort((a, b) => {
-      const ao = Number(a.generation?.order ?? 0);
-      const bo = Number(b.generation?.order ?? 0);
-      return ao - bo || String(a.id).localeCompare(String(b.id));
-    });
+    const originalCount = (imagesByTopic.get(topic.id) || []).length;
+    const imgs = (imagesByTopic.get(topic.id) || [])
+      .slice()
+      .sort((a, b) => {
+        const ao = Number(a.generation?.order ?? 0);
+        const bo = Number(b.generation?.order ?? 0);
+        return ao - bo || String(a.id).localeCompare(String(b.id));
+      })
+      .slice(0, tierLimit(originalCount));
 
     lines.push(`## [${topicTitle}](${topicHref(topic.id)})`);
     lines.push('');
