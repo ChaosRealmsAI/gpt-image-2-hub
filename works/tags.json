@@ -6,6 +6,12 @@
         "zh-CN": "电影感"
       }
     },
+    "crystal-ball": {
+      "labels": {
+        "en": "Crystal ball",
+        "zh-CN": "水晶球"
+      }
+    },
     "grayscale": {
       "labels": {
         "en": "Grayscale",
@@ -22,6 +28,12 @@
       "labels": {
         "en": "Micro texture",
         "zh-CN": "微观纹理"
+      }
+    },
+    "miniature-world": {
+      "labels": {
+        "en": "Miniature world",
+        "zh-CN": "微缩世界"
       }
     },
     "photorealism": {

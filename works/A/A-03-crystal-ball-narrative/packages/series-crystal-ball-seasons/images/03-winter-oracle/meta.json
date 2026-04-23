@@ -1,0 +1,45 @@
+{
+  "prompt": "Scene:\nSame dark walnut oracle table, same black velvet cloth, same antique library background, same candle placement on the left, and same cool moonbeam from the right as the reference images.\n\nSubject:\nThe same transparent crystal ball from the reference images, centered on the same antique brass three-claw stand with engraved moon phases. Preserve sphere size, camera angle, tabletop position, brass color, and glass highlight pattern. Inside the ball, replace the autumn world with a complete miniature winter world: a frozen river, snow-covered black pines, a tiny warm cabin, a single trail of footprints, and pale blue aurora light refracted through the sphere.\n\nImportant details:\nPhotorealistic macro still life, accurate glass refraction, realistic ice and snow texture, crisp caustics on the velvet cloth, subtle internal reflections, cold blue-white palette inside the ball with the same warm candle reflection outside. The winter scene must appear suspended within the glass volume, not as an external background.\n\nUse case:\nFinal image in a three-image object-continuity series for a public gallery, proving consistent crystal ball identity across changing internal story worlds. Square crop-safe composition.\n\nConstraints:\nPRESERVE the crystal ball, brass stand, table, camera angle, and lighting from the reference images. No readable text, no watermark, no logos, no extra crystal balls, no human hands, no cartoon style, no excessive fantasy glow, preserve exact 1:1 aspect ratio.",
+  "id": "03-winter-oracle",
+  "title": "Winter Oracle",
+  "description": "The same crystal ball holds a winter cabin, frozen river, and blue aurora light.",
+  "type": "series",
+  "image": "image.png",
+  "aspect_ratio": "1:1",
+  "tags": [
+    "crystal-ball",
+    "miniature-world",
+    "photorealism",
+    "series"
+  ],
+  "refs": [
+    "01-spring-oracle",
+    "02-autumn-oracle"
+  ],
+  "i18n": {
+    "en": {
+      "title": "Winter Oracle",
+      "description": "The same crystal ball holds a winter cabin, frozen river, and blue aurora light."
+    },
+    "zh-CN": {
+      "title": "冬日预言球",
+      "description": "同一颗水晶球中出现冬夜小屋、冰封河流和蓝色极光。"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 30,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "crystal-ball",
+      "miniature-world"
+    ],
+    "alt": {
+      "en": "The same crystal ball contains a tiny winter cabin beside a frozen river.",
+      "zh-CN": "同一颗水晶球内部有冰封河流旁的冬夜小屋。"
+    }
+  }
+}

@@ -75,6 +75,12 @@
         "zh-CN": "电影感"
       }
     },
+    "crystal-ball": {
+      "labels": {
+        "en": "Crystal ball",
+        "zh-CN": "水晶球"
+      }
+    },
     "grayscale": {
       "labels": {
         "en": "Grayscale",
@@ -91,6 +97,12 @@
       "labels": {
         "en": "Micro texture",
         "zh-CN": "微观纹理"
+      }
+    },
+    "miniature-world": {
+      "labels": {
+        "en": "Miniature world",
+        "zh-CN": "微缩世界"
       }
     },
     "photorealism": {
@@ -131,11 +143,46 @@
     }
   },
   "stats": {
-    "topic_count": 2,
-    "package_count": 3,
-    "image_count": 5
+    "topic_count": 3,
+    "package_count": 4,
+    "image_count": 6
   },
   "topics": [
+    {
+      "id": "A-03-crystal-ball-narrative",
+      "todo_id": "A-03",
+      "tier": "A",
+      "title": "Crystal Ball Narrative",
+      "description": "Prompt works that compress a complete story world into a single crystal ball, using refraction, scale, and miniature scenes.",
+      "i18n": {
+        "en": {
+          "title": "Crystal Ball Narrative",
+          "description": "Prompt works that compress a complete story world into a single crystal ball, using refraction, scale, and miniature scenes."
+        },
+        "zh-CN": {
+          "title": "水晶球叙事",
+          "description": "把完整叙事世界压缩进一颗水晶球，通过折射、尺度和微缩场景呈现。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 30,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "crystal-ball",
+          "miniature-world"
+        ]
+      },
+      "package_count": 1,
+      "image_count": 1,
+      "packages": [
+        "series-crystal-ball-seasons"
+      ],
+      "topic_path": "works/A/A-03-crystal-ball-narrative/topic.json"
+    },
     {
       "id": "A-13-mirror-worlds",
       "todo_id": "A-13",
@@ -209,6 +256,44 @@
     }
   ],
   "packages": [
+    {
+      "id": "series-crystal-ball-seasons",
+      "topic_id": "A-03-crystal-ball-narrative",
+      "tier": "A",
+      "type": "series",
+      "title": "Crystal Ball Seasons",
+      "description": "A three-image series that keeps one crystal ball, brass claw stand, and dark oracle table consistent while the miniature world inside changes across seasons.",
+      "creative_direction": "Series package focused on object continuity and refractive storytelling: same crystal ball and tabletop setup, different seasonal narrative worlds inside the sphere.",
+      "i18n": {
+        "en": {
+          "title": "Crystal Ball Seasons",
+          "description": "A three-image series that keeps one crystal ball, brass claw stand, and dark oracle table consistent while the miniature world inside changes across seasons."
+        },
+        "zh-CN": {
+          "title": "水晶球四季叙事",
+          "description": "三张图保持同一颗水晶球、黄铜爪形底座和深色占卜桌不变，只改变球内的季节微缩世界。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 10,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "crystal-ball",
+          "series"
+        ]
+      },
+      "cover_image": "works/A/A-03-crystal-ball-narrative/packages/series-crystal-ball-seasons/images/01-spring-oracle/image.png",
+      "image_count": 1,
+      "images": [
+        "A-03-crystal-ball-narrative/series-crystal-ball-seasons/01-spring-oracle"
+      ],
+      "package_path": "works/A/A-03-crystal-ball-narrative/packages/series-crystal-ball-seasons/package.json",
+      "topic_path": "works/A/A-03-crystal-ball-narrative/topic.json"
+    },
     {
       "id": "series-three-eras",
       "topic_id": "A-13-mirror-worlds",
@@ -328,6 +413,59 @@
   ],
   "images": [
     {
+      "id": "A-03-crystal-ball-narrative/series-crystal-ball-seasons/01-spring-oracle",
+      "image_id": "01-spring-oracle",
+      "package_id": "series-crystal-ball-seasons",
+      "topic_id": "A-03-crystal-ball-narrative",
+      "tier": "A",
+      "title": "Spring Oracle",
+      "description": "A spring miniature world appears inside a crystal ball on an antique oracle table.",
+      "i18n": {
+        "en": {
+          "title": "Spring Oracle",
+          "description": "A spring miniature world appears inside a crystal ball on an antique oracle table."
+        },
+        "zh-CN": {
+          "title": "春日预言球",
+          "description": "一座春日微缩世界出现在古董占卜桌上的水晶球内部。"
+        }
+      },
+      "display": {
+        "featured": true,
+        "sort_order": 10,
+        "audiences": [
+          "gallery",
+          "research"
+        ],
+        "tags": [
+          "crystal-ball",
+          "miniature-world"
+        ],
+        "alt": {
+          "en": "A photorealistic crystal ball containing a tiny spring landscape on a dark oracle table.",
+          "zh-CN": "一颗写实水晶球位于深色占卜桌上，球内有春日微缩景观。"
+        }
+      },
+      "status": "done",
+      "generation": null,
+      "type": "series",
+      "aspect_ratio": "1:1",
+      "tags": [
+        "crystal-ball",
+        "miniature-world",
+        "photorealism",
+        "series"
+      ],
+      "refs": [],
+      "image": "works/A/A-03-crystal-ball-narrative/packages/series-crystal-ball-seasons/images/01-spring-oracle/image.png",
+      "meta_path": "works/A/A-03-crystal-ball-narrative/packages/series-crystal-ball-seasons/images/01-spring-oracle/meta.json",
+      "package_path": "works/A/A-03-crystal-ball-narrative/packages/series-crystal-ball-seasons/package.json",
+      "topic_path": "works/A/A-03-crystal-ball-narrative/topic.json",
+      "package_title": "Crystal Ball Seasons",
+      "topic_title": "Crystal Ball Narrative",
+      "package_ref_image": "works/A/A-03-crystal-ball-narrative/packages/series-crystal-ball-seasons/images/01-spring-oracle/image.png"
+    },
+    {
       "id": "A-13-mirror-worlds/series-three-eras/01-victorian-parlor",
       "image_id": "01-victorian-parlor",
       "package_id": "series-three-eras",
@@ -361,6 +499,8 @@
           "zh-CN": "同一位女性的三个年龄阶段出现在电影感维多利亚客厅中。"
         }
       },
+      "status": "done",
+      "generation": null,
       "type": "series",
       "aspect_ratio": "16:9",
       "tags": [
@@ -413,6 +553,8 @@
           "zh-CN": "同一位虚构女性的三个年龄阶段出现在雨夜霓虹公寓中。"
         }
       },
+      "status": "done",
+      "generation": null,
       "type": "series",
       "aspect_ratio": "16:9",
       "tags": [
@@ -467,6 +609,8 @@
           "zh-CN": "同一位女性的三个年龄阶段出现在黎明沙漠天文台中。"
         }
       },
+      "status": "done",
+      "generation": null,
       "type": "series",
       "aspect_ratio": "16:9",
       "tags": [
@@ -522,6 +666,8 @@
           "zh-CN": "同一位女性的三个人生阶段在折叠镜厅时间线中相遇。"
         }
       },
+      "status": "done",
+      "generation": null,
       "type": "single",
       "aspect_ratio": "16:9",
       "tags": [
@@ -574,6 +720,8 @@
           "zh-CN": "一颗带尖刺和孔洞结构的灰阶扫描电镜风格花粉粒，位于深色样品台上。"
         }
       },
+      "status": "done",
+      "generation": null,
       "type": "single",
       "aspect_ratio": "1:1",
       "tags": [

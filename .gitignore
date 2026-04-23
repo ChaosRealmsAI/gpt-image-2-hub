@@ -1,32 +1,29 @@
 # Public repository allowlist.
-# Everything is private by default except the static gallery, public works data, and local tooling under new/.
+# Everything is private by default except the static gallery, public works data, and local tooling.
 
 *
 
 !.gitignore
-!new/
+!AGENTS.md
+!README.md
+!package.json
+!package-lock.json
+!vite.config.js
+!index.html
+!src/
+!src/**
+!tools/
+!tools/**
+!works/
+!works/**
 
-new/*
-!new/AGENTS.md
-!new/README.md
-!new/package.json
-!new/package-lock.json
-!new/vite.config.js
-!new/index.html
-!new/src/
-!new/src/**
-!new/tools/
-!new/tools/**
-!new/works/
-!new/works/**
-
-# Local/generated state inside the public project root.
-new/node_modules/
-new/dist/
-new/.vite/
-new/*.log
+# Local/generated state.
+node_modules/
+dist/
+.vite/
+*.log
 
 # Closed source local inputs.
-new/todo/
-new/prototype/
-new/research-materials/
+todo/
+prototype/
+research-materials/

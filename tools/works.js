@@ -351,8 +351,14 @@ function validateItem(item, errors) {
         validateLocalizedObject(rel(metaPath), meta, errors);
         validateDisplayObject(rel(metaPath), meta, errors, true);
         validatePromptSections(rel(metaPath), meta.prompt, errors);
+        if (meta.status === 'prompted' && !meta.generation?.depends_on) {
+          errors.push(`${rel(metaPath)}: prompted series image must declare generation.depends_on`);
+        }
       }
-      if (!fileExists(imagePath)) errors.push(`${item.id}/${pkg.package_slug}/${image.id}: missing image.png`);
+      if (!fileExists(imagePath)) {
+        const meta = fileExists(metaPath) ? readJson(metaPath) : {};
+        if (meta.status !== 'prompted') errors.push(`${item.id}/${pkg.package_slug}/${image.id}: missing image.png`);
+      }
     }
   }
 }
@@ -422,6 +428,8 @@ function imageEntryForIndex(topic, topicPath, pkg, pkgPath, imageRef, meta, meta
     description: meta.description,
     i18n: meta.i18n || {},
     display: meta.display || {},
+    status: meta.status || 'done',
+    generation: meta.generation || null,
     type: meta.type || pkg.type,
     aspect_ratio: meta.aspect_ratio,
     tags: meta.tags || [],
@@ -467,6 +475,8 @@ function buildIndex() {
         const metaPath = path.join(pkgDir, metaRel);
         if (!fileExists(metaPath)) continue;
         const meta = readJson(metaPath);
+        const imagePath = path.join(path.dirname(metaPath), meta.image || 'image.png');
+        if (!fileExists(imagePath)) continue;
         const indexed = imageEntryForIndex(topic, topicPath, pkg, pkgPath, imageRef, meta, metaPath);
         images.push(indexed);
         packageImages.push(indexed.id);
@@ -578,7 +588,7 @@ function checkPublic() {
   ];
   try {
     const tracked = execFileSync('git', ['ls-files'], {
-      cwd: path.resolve(ROOT, '..'),
+      cwd: ROOT,
       encoding: 'utf8',
     }).split('\n').filter(Boolean);
     for (const file of tracked) {

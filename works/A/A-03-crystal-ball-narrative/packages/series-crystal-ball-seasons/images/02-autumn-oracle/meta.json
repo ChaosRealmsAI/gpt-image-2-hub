@@ -1,0 +1,44 @@
+{
+  "prompt": "Scene:\nSame dark walnut oracle table, same black velvet cloth, same warm candle on the left, same cool moonbeam from the right, same quiet library background and shallow blur as the reference image.\n\nSubject:\nThe same transparent crystal ball from the reference image, centered in frame on the same antique brass three-claw stand with engraved moon phases. Preserve the sphere size, camera angle, tabletop position, brass patina, and lighting. Inside the ball, replace the spring world with a complete miniature autumn world: a copper-leaf forest, a tiny stone road, a small lantern procession, falling leaves, and a distant red sunset compressed by glass refraction.\n\nImportant details:\nPhotorealistic macro still life, 85mm lens, accurate glass refraction and caustics, warm copper and amber tones inside the ball balanced with the same blue moon rim light outside. The autumn world must be physically inside the crystal, with distorted edges and realistic internal reflections. Maintain object identity from the reference.\n\nUse case:\nSecond image in a three-image series, showing the same crystal ball object while the internal narrative world changes season. Square crop-safe gallery card.\n\nConstraints:\nPRESERVE the crystal ball, brass stand, table, camera angle, and lighting from the reference image. No readable text, no watermark, no logos, no extra crystal balls, no human hands, no cartoon style, preserve exact 1:1 aspect ratio.",
+  "id": "02-autumn-oracle",
+  "title": "Autumn Oracle",
+  "description": "The same crystal ball contains an autumn procession beneath copper leaves.",
+  "type": "series",
+  "image": "image.png",
+  "aspect_ratio": "1:1",
+  "tags": [
+    "crystal-ball",
+    "miniature-world",
+    "photorealism",
+    "series"
+  ],
+  "refs": [
+    "01-spring-oracle"
+  ],
+  "i18n": {
+    "en": {
+      "title": "Autumn Oracle",
+      "description": "The same crystal ball contains an autumn procession beneath copper leaves."
+    },
+    "zh-CN": {
+      "title": "秋日预言球",
+      "description": "同一颗水晶球中出现铜色落叶下的秋日灯队。"
+    }
+  },
+  "display": {
+    "featured": false,
+    "sort_order": 20,
+    "audiences": [
+      "gallery",
+      "research"
+    ],
+    "tags": [
+      "crystal-ball",
+      "miniature-world"
+    ],
+    "alt": {
+      "en": "The same crystal ball holds a tiny autumn forest and lantern procession.",
+      "zh-CN": "同一颗水晶球内部有秋日树林和微型灯队。"
+    }
+  }
+}
