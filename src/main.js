@@ -643,11 +643,36 @@ function applyLang() {
   if (state.modal) openModal(state.modal.id);
 }
 
-function setActiveTopic(id) {
+function topicExists(id) {
+  return id === 'all' || (state.data?.topics || []).some((topic) => topic.id === id);
+}
+
+function setActiveTopic(id, options = {}) {
+  if (!topicExists(id)) return false;
   state.activeTopic = id;
   renderTopicsNav();
   renderFilterTitle();
   renderGallery();
+  if (options.scrollTop) window.scrollTo(0, 0);
+  return true;
+}
+
+function applyHashRoute() {
+  const hash = location.hash || '';
+
+  if (hash.startsWith('#t-')) {
+    closeModal({ keepHash: true });
+    const topicId = decodeURIComponent(hash.slice(3).split('/')[0] || '');
+    setActiveTopic(topicId, { scrollTop: true });
+    return;
+  }
+
+  if (hash.startsWith('#m-')) {
+    openModal(decodeURIComponent(hash.slice(3)), { fromHash: true });
+    return;
+  }
+
+  closeModal({ keepHash: true });
 }
 
 function bindEvents() {
@@ -759,11 +784,7 @@ function bindEvents() {
 
   window.addEventListener('hashchange', () => {
     if (suppressHash) return;
-    if (location.hash.startsWith('#m-')) {
-      openModal(decodeURIComponent(location.hash.slice(3)), { fromHash: true });
-    } else {
-      closeModal({ keepHash: true });
-    }
+    applyHashRoute();
   });
 
   window.addEventListener('scroll', () => {
@@ -785,10 +806,7 @@ async function boot() {
   buildIndexes();
   shuffleImages(state.data.images || []);
   applyLang();
-
-  if (location.hash.startsWith('#m-')) {
-    openModal(decodeURIComponent(location.hash.slice(3)), { fromHash: true });
-  }
+  applyHashRoute();
 }
 
 function renderLoading() {
