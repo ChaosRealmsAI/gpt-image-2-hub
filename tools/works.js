@@ -40,7 +40,7 @@ Usage:
   node tools/works.js build-index
   node tools/works.js check-public
   node tools/works.js generate <works/.../meta.json>
-  node tools/works.js queue [--concurrency 10] [--limit n] [--retry failed|running] [--with-deps] [--topic id] [--package id] [--dry-run] [--no-loop] [--max-rounds 20]
+  node tools/works.js queue [--concurrency 10] [--limit n] [--retry failed|running] [--with-deps] [--topic id] [--package id] [--dry-run] [--no-loop] [--max-rounds 20] [--max-attempts 2]
   node tools/works.js scan [--topic id] [--package id] [--problems] [--strict] [--json]
   node tools/works.js list [--todo-only] [--with-works]
   node tools/works.js show <item-id>
@@ -615,6 +615,17 @@ function intArg(args, name, fallback) {
   return value;
 }
 
+function nonNegativeIntArg(args, name, fallback) {
+  const raw = getArg(args, name, String(fallback));
+  const value = Number(raw);
+  if (!Number.isInteger(value) || value < 0) throw new Error(`${name} must be a non-negative integer`);
+  return value;
+}
+
+function queueLimitArg(args) {
+  return args.includes('--limit') ? nonNegativeIntArg(args, '--limit', 1) : null;
+}
+
 function generateImage(args) {
   const metaArg = args[0];
   if (!metaArg) throw new Error('Usage: generate <works/.../meta.json>');
@@ -736,12 +747,20 @@ function loadMetaTasks(args) {
 function loadQueueTasks(args) {
   const retry = getArg(args, '--retry', '');
   const withDeps = args.includes('--with-deps');
+  const maxAttempts = intArg(args, '--max-attempts', 2);
   const allowedStatuses = new Set(['prompted']);
   if (retry === 'failed') allowedStatuses.add('failed');
   if (retry === 'running') allowedStatuses.add('running');
   const allTasks = loadMetaTasks(args);
   const byMetaPath = new Map(allTasks.map((task) => [task.metaRel, task]));
-  const selected = new Map(allTasks.filter((task) => allowedStatuses.has(task.meta.status)).map((task) => [task.metaRel, task]));
+  // filter: allowed status AND (for failed) attempt_count < maxAttempts
+  // prevents endless retry of unfixable prompts (e.g. IP/safety-blocked)
+  const selected = new Map(allTasks.filter((task) => {
+    if (!allowedStatuses.has(task.meta.status)) return false;
+    const attempts = task.meta.generation?.attempt_count ?? 0;
+    if (task.meta.status === 'failed' && attempts >= maxAttempts) return false;
+    return true;
+  }).map((task) => [task.metaRel, task]));
 
   if (withDeps) {
     const visitDeps = (task) => {
@@ -926,6 +945,7 @@ function runImageTask(task, refUrls, runDir, runState) {
     const latest = readJson(task.metaPath);
     latest.status = 'running';
     latest.generation.ref_urls = [];
+    latest.generation.attempt_count = (latest.generation.attempt_count ?? 0) + 1;
     delete latest.generation.last_error;
     writeJson(task.metaPath, latest);
 
@@ -1028,33 +1048,49 @@ async function runQueue(args) {
   let totalFailed = 0;
   let lastBlocked = 0;
 
-  while (round < maxRounds) {
-    round++;
-    const summary = await runQueueRound(effectiveArgs, round);
-    totalSucceeded += summary.succeeded;
-    totalFailed += summary.failed;
-    lastBlocked = summary.blocked;
-    if (!autoLoop) break;
-    if (summary.initialTasks === 0) break;
-    // re-scan: anything still pending / failed / running means try again
-    const remaining = loadMetaTasks(effectiveArgs).filter((t) => ['prompted', 'failed', 'running'].includes(t.meta.status));
-    if (remaining.length === 0) {
-      console.log(`queue auto-loop: all tasks settled after round ${round}`);
-      break;
+  try {
+    while (round < maxRounds) {
+      round++;
+      const summary = await runQueueRound(effectiveArgs, round);
+      totalSucceeded += summary.succeeded;
+      totalFailed += summary.failed;
+      lastBlocked = summary.blocked;
+      if (!autoLoop) break;
+      if (summary.initialTasks === 0) break;
+      // re-scan: anything still pending / failed / running means try again
+      const remaining = loadMetaTasks(effectiveArgs).filter((t) => ['prompted', 'failed', 'running'].includes(t.meta.status));
+      if (remaining.length === 0) {
+        console.log(`queue auto-loop: all tasks settled after round ${round}`);
+        break;
+      }
+      console.log(`queue auto-loop: round ${round} done · ${remaining.length} still need attention · starting round ${round + 1}`);
     }
-    console.log(`queue auto-loop: round ${round} done · ${remaining.length} still need attention · starting round ${round + 1}`);
-  }
 
-  console.log(`queue overall: rounds=${round} succeeded=${totalSucceeded} failed=${totalFailed} blocked=${lastBlocked}`);
-  releaseLock();
+    console.log(`queue overall: rounds=${round} succeeded=${totalSucceeded} failed=${totalFailed} blocked=${lastBlocked}`);
+
+    const limit = queueLimitArg(args);
+    const shouldOptimize = !args.includes('--dry-run') && limit !== 0 && lastBlocked === 0;
+    if (shouldOptimize) {
+      console.log('\nqueue drained · running images:optimize for new png...');
+      try {
+        const { optimizeImages } = await import('./images-optimize.js');
+        await optimizeImages();
+        console.log('optimize done · new webp ready');
+      } catch (error) {
+        console.warn(`queue drained · images:optimize failed: ${error instanceof Error ? error.message : error}`);
+      }
+    }
+  } finally {
+    releaseLock();
+  }
 }
 
 async function runQueueRound(args, round) {
   const concurrency = intArg(args, '--concurrency', 10);
-  const limit = args.includes('--limit') ? intArg(args, '--limit', 1) : null;
+  const limit = queueLimitArg(args);
   const dryRun = args.includes('--dry-run');
   const allowIncomplete = args.includes('--allow-incomplete');
-  const tasks = loadQueueTasks(args).slice(0, limit || undefined);
+  const tasks = limit === null ? loadQueueTasks(args) : loadQueueTasks(args).slice(0, limit);
   const pending = new Map(tasks.map((task) => [task.metaRel, task]));
   const running = new Set();
   const blocked = new Map();
@@ -1091,7 +1127,7 @@ async function runQueueRound(args, round) {
     console.log(`queue dry-run: tasks=${tasks.length} ready=${ready.length} blocked=${blocked.size} concurrency=${concurrency}`);
     for (const { task, refUrls } of ready) console.log(`ready\trefs=${refUrls.length}\t${task.metaRel}`);
     for (const [file, reasons] of blocked) console.log(`blocked\t${file}\t${reasons.join('; ')}`);
-    return;
+    return { succeeded: 0, failed: 0, blocked: blocked.size, initialTasks: tasks.length };
   }
 
   await new Promise((resolve) => {
